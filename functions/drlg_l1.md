@@ -12,7 +12,7 @@
 //
 // PSX ref: 0x8013CF64
 // PSX sig: void LoadL1Dungeon__FPcii(char *sFileName, int vx, int vy)
-void __fastcall drlg_l1_load_dun(char *dun_path, int player_col, int player_row);
+void __fastcall drlg_l1_load_dun(char *dun_path, int view_col, int view_row);
 ```
 
 ## 0x40AF65
@@ -30,7 +30,7 @@ void __fastcall drlg_l1_load_dun(char *dun_path, int player_col, int player_row)
 //
 // PSX ref: 0x8013D138
 // PSX sig: void LoadPreL1Dungeon__FPcii(char *sFileName, int vx, int vy)
-void __fastcall drlg_l1_preload_dun(char *dun_path, int unused_player_col, int unused_player_row);
+void __fastcall drlg_l1_preload_dun(char *dun_path, int view_col, int view_row);
 ```
 
 ## 0x40B229
