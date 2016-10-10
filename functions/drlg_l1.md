@@ -110,6 +110,16 @@ void drlg_l1_init_shadows();
 
 ## 0x40B881
 
+### drlg_l1_place_miniset
+
+```c
+// drlg_l1_place_miniset places the given miniset of tile IDs.
+//
+// PSX ref: 0x8013C5A0
+// PSX sig: int DRLG_PlaceMiniSet__FPCUciiiiiii(unsigned char *miniset, int tmin, int tmax, int cx, int cy, int setview, int noquad, int ldir)
+int __fastcall drlg_l1_place_miniset(uint8_t *miniset, int tmin, int tmax, int cx, int cy, bool32_t set_view, int noquad, int ldir);
+```
+
 ## 0x40BAF6
 
 ## 0x40BB18
