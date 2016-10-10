@@ -130,6 +130,17 @@ int __fastcall drlg_l1_place_miniset(uint8_t *miniset, int tmin, int tmax, int c
 
 ## 0x40BD9D
 
+### drlg_l1_generate_room
+
+```c
+// drlg_l1_generate_room generates a room of the given dimensions at the
+// spcified coordinates.
+//
+// PSX ref: 0x8013D4CC
+// PSX sig: void L5roomGen__Fiiiii(int x, int y, int w, int h, int dir)
+void __fastcall drlg_l1_generate_room(int qcol_start, int qrow_start, int qcol_count, int qrow_count, int dir);
+```
+
 ## 0x40BFA4
 
 ## 0x40C008
@@ -156,6 +167,17 @@ int __fastcall drlg_l1_place_miniset(uint8_t *miniset, int tmin, int tmax, int c
 
 ## 0x40CD86
 
+### drlg_l1_generate_chamber
+
+```c
+// drlg_l1_generate_chamber generates a chamber at the given coordiates with
+// columns on the specified sides.
+//
+// PSX ref: 0x8013E6B4
+// PSX sig: void DRLG_L5GChamber__Fiiiiii(int sx, int sy, int topflag, int bottomflag, int leftflag, int rightflag)
+void __fastcall drlg_l1_generate_chamber(int qcol_start, int qrow_start, bool32_t top_right, bool32_t bottom_left, bool32_t top_left, bool32_t bottom_right);
+```
+
 ## 0x40CEC7
 
 ## 0x40CF17
@@ -163,6 +185,17 @@ int __fastcall drlg_l1_place_miniset(uint8_t *miniset, int tmin, int tmax, int c
 ## 0x40CF9C
 
 ## 0x40D00B
+
+### drlg_l1_init_FTVR
+
+```c
+// drlg_l1_init_FTVR initiates fish tank virtual reality by adding transparency
+// to concealing walls.
+//
+// PSX ref: 0x8013FCE4
+// PSX sig: void DRLG_L5FTVR__Fiiiii(int i, int j, int x, int y, int d)
+void __fastcall drlg_l1_init_FTVR(int qcol, int qrow, int col, int row, int direction);
+```
 
 ## 0x40D1FB
 
