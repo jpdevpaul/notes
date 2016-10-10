@@ -153,11 +153,53 @@ void __fastcall drlg_l1_generate_room(int qcol_start, int qrow_start, int qcol_c
 
 ## 0x40C23C
 
+### drlg_l1_get_horiz_wall_space
+
+```c
+// drlg_l1_get_horiz_wall_space returns the number of horizontal wall tiles
+// that fit at the given coordinate.
+//
+// PSX ref: 0x8013DD70
+// PSX sig: int L5HWallOk__Fii(int i, int j)
+int __fastcall drlg_l1_get_horiz_wall_space(int qcol, int qrow);
+```
+
 ## 0x40C2DC
+
+### drlg_l1_get_vert_wall_space
+
+```c
+// drlg_l1_get_vert_wall_space returns the number of vertical wall tiles that
+// fit at the given coordinate.
+//
+// PSX ref: 0x8013DEAC
+// PSX sig: int L5VWallOk__Fii(int i, int j)
+int __fastcall drlg_l1_get_vert_wall_space(int qcol, int qrow);
+```
 
 ## 0x40C35B
 
+### drlg_l1_add_horiz_wall
+
+```c
+// drlg_l1_add_horiz_wall adds a horizontal wall based on the given tile ID.
+//
+// PSX ref: 0x8013DFF4
+// PSX sig: void L5HorizWall__Fiici(int i, int j, char p, int dx)
+void __fastcall drlg_l1_add_horiz_wall(int qcol, int qrow, l1_tile_id tile_id, int qcol_count);
+```
+
 ## 0x40C449
+
+### drlg_l1_add_vert_wall
+
+```c
+// drlg_l1_add_vert_wall adds a vertical wall based on the given tile ID.
+//
+// PSX ref: 0x8013E22C
+// PSX sig: void L5VertWall__Fiici(int i, int j, char p, int dy)
+void __fastcall drlg_l1_add_vert_wall(int qcol, int qrow, l1_tile_id tile_id, int qrow_count);
+```
 
 ## 0x40C551
 
@@ -180,7 +222,28 @@ void __fastcall drlg_l1_generate_chamber(int qcol_start, int qrow_start, bool32_
 
 ## 0x40CEC7
 
+### drlg_l1_generate_hall
+
+```c
+// drlg_l1_generate_hall generates a hall of columns and arches.
+//
+// PSX ref: 0x8013E974
+// PSX sig: void DRLG_L5GHall__Fiiii(int x1, int y1, int x2, int y2)
+void __fastcall drlg_l1_generate_hall(int qcol_start, int qrow_start, int qcol_end, int qrow_end);
+```
+
 ## 0x40CF17
+
+### drlg_l1_init_quest_dun
+
+```c
+// drlg_l1_init_quest_dun initializes tile IDs based on the loaded quest
+// dungeon file.
+//
+// PSX ref: 0x8013F4F8
+// PSX sig: void DRLG_L5SetRoom__Fii(int rx1, int ry1)
+void __fastcall drlg_l1_init_quest_dun(int qcol_start, int qrow_start);
+```
 
 ## 0x40CF9C
 
