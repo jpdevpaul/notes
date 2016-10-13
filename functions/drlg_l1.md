@@ -128,6 +128,16 @@ int __fastcall drlg_l1_place_miniset(uint8_t *miniset, int tmin, int tmax, int c
 
 ## 0x40BD66
 
+### drlg_l1_add_room
+
+```c
+// drlg_l1_add_room adds walls for a room at the given area.
+//
+// PSX ref: 0x8013D3CC
+// PSX sig: void L5drawRoom__Fiiii(int x, int y, int w, int h)
+void __fastcall drlg_l1_add_room(int qcol_start, int qrow_start, int qcol_count, int qrow_count);
+```
+
 ## 0x40BD9D
 
 ### drlg_l1_generate_room
@@ -142,6 +152,16 @@ void __fastcall drlg_l1_generate_room(int qcol_start, int qrow_start, int qcol_c
 ```
 
 ## 0x40BFA4
+
+### drlg_l1_is_area_empty
+
+```c
+// drlg_l1_is_area_empty reports whether the given area is empty.
+//
+// PSX ref: 0x8013D438
+// PSX sig: unsigned char L5checkRoom__Fiiii(int x, int y, int width, int height)
+bool32_t __fastcall drlg_l1_is_area_empty(int qcol_start, int qrow_start, int qcol_count, int qrow_count);
+```
 
 ## 0x40C008
 

@@ -15,7 +15,7 @@ Each function has been categorised based on their original source file, as summa
 | [debug.cpp](debug.md)           | `0x4086F4`    | `0x4087B0`  | 66% (2/3 functions)      |
 | [diablo.cpp](diablo.md)         | `0x4087B1`    | `0x40ACAC`  | 11% (4/35 functions)     |
 | [doom.cpp](doom.md)             | `0x40ACAD`    | `0x40ADD5`  | 14% (1/7 functions)      |
-| [drlg_l1.cpp](drlg_l1.md)       | `0x40ADD6`    | `0x40D356`  | 50% (19/38 functions)    |
+| [drlg_l1.cpp](drlg_l1.md)       | `0x40ADD6`    | `0x40D356`  | 55% (21/38 functions)    |
 | [drlg_l2.cpp](drlg_l2.md)       | `0x40D357`    | `0x40FF80`  | 0% (0/35 functions)      |
 | [drlg_l3.cpp](drlg_l3.md)       | `0x40FF81`    | `0x412654`  | 0% (0/34 functions)      |
 | [drlg_l4.cpp](drlg_l4.md)       | `0x412655`    | `0x415097`  | 0% (0/35 functions)      |
