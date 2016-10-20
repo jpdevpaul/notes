@@ -17,6 +17,16 @@ void __fastcall drlg_l1_load_dun(char *dun_path, int view_col, int view_row);
 
 ## 0x40AF65
 
+### drlg_l1_randomize_stone_floor
+
+```c
+// drlg_l1_randomize_stone_floor randomizes floor tiles.
+//
+// PSX ref: 0x8013CAC4
+// PSX sig: void DRLG_L1Floor__Fv()
+void drlg_l1_randomize_stone_floor();
+```
+
 ## 0x40AFB3
 
 ## 0x40B0A5
@@ -164,6 +174,16 @@ bool32_t __fastcall drlg_l1_is_area_empty(int qcol_start, int qrow_start, int qc
 ```
 
 ## 0x40C008
+
+### drlg_l1_get_area
+
+```c
+// drlg_l1_get_area returns the number of walls on the map.
+//
+// PSX ref: 0x8013DB9C
+// PSX sig: long L5GetArea__Fv()
+int drlg_l1_get_area();
+```
 
 ## 0x40C02A
 
