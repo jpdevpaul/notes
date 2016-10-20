@@ -1,5 +1,35 @@
 # drlg_l2.cpp
 
+## 0x484858
+
+### Area_Min
+
+```c
+// PSX ref: 0x8011BE7C
+// PSX def: int Area_Min
+int Area_Min;
+```
+
+## 0x48485C
+
+### Room_Max
+
+```c
+// PSX ref: 0x8011BE80
+// PSX def: int Room_Max
+int Room_Max;
+```
+
+## 0x484860
+
+### Room_Min
+
+```c
+// PSX ref: 0x8011BE84
+// PSX def: int Room_Min
+int Room_Min;
+```
+
 ## 0x484864
 
 ### Dir_Xadd
