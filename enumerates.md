@@ -749,6 +749,15 @@ References:
 
 ```c
 // Quest levels.
+//
+// PSX def:
+//    typedef enum _setlevels {
+//       SL_SKELKING = 1,
+//       SL_BONECHAMB = 2,
+//       SL_MAZE = 3,
+//       SL_POISONWATER = 4,
+//       SL_VILEBETRAYER = 5,
+//    } _setlevels;
 typedef enum {
     QUEST_LEVEL_NONE                    = 0,
     QUEST_LEVEL_SKELETON_KINGS_LAIR     = 1,

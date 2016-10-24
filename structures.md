@@ -41,6 +41,17 @@ typedef struct {
 
 ```c
 // A Shadow contains the shadows for a 2x2 block of base tile IDs.
+//
+// PSX def:
+//    typedef struct ShadowStruct {
+//       unsigned char strig;
+//       unsigned char s1;
+//       unsigned char s2;
+//       unsigned char s3;
+//       unsigned char nv1;
+//       unsigned char nv2;
+//       unsigned char nv3;
+//    } ShadowStruct;
 typedef struct {
     // 2x2 block of base tile IDs.
     l1_tile_id base_bottom;

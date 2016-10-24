@@ -33,7 +33,11 @@ Anyone interested in contributing to the project may do so in whichever way they
 1. Provide ideas on how to better structure the information
 2. Point out mistakes or inconsistencies in the notes
 3. Improve the existing notes
-4. Add documentation for new function declarations, global variable declarations, structure definitions or enumerate definitions of the Diablo 1 game engine.
+4. Add documentation for
+	- function declarations (e.g. [drlg_l1_place_door](https://github.com/sanctuary/notes/blob/master/functions/drlg_l1.md#0x40b56f))
+	- global variable declarations (e.g. [cathedral_stairway_down_piece_ids](https://github.com/sanctuary/notes/blob/master/data/trigs.md#0x4b3008))
+	- structure definitions (e.g. [Shadow](https://github.com/sanctuary/notes/blob/master/structures.md#shadow))
+	- enumerate definitions (e.g. [quest_level](https://github.com/sanctuary/notes/blob/master/enumerates.md#quest_level))
 5. ...
 
 ## Credits
