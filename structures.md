@@ -37,6 +37,28 @@ typedef struct {
 } Point;
 ```
 
+## Portal
+
+```c
+// A Portal represents a portal between two levels.
+//
+// PSX def:
+//    typedef struct DPortal {
+//       unsigned char x;
+//       unsigned char y;
+//       unsigned char level;
+//       unsigned char ltype;
+//       unsigned char setlvl;
+//    } DPortal;
+typedef struct {
+    int8_t col
+    int8_t row
+    int8_t dlvl
+    dtype dtype
+    quest_level quest_lvl
+} Portal;
+```
+
 ## Shadow
 
 ```c
