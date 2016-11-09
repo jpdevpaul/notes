@@ -2,6 +2,17 @@
 
 ## 0x40ADD6
 
+### drlg_l1_reset_maps
+
+```c
+// drlg_l1_reset_maps resets the dungeon flag, player, NPC, dead, object,
+// item, missile and arch maps.
+//
+// PSX ref: 0x8013CEAC
+// PSX def: void DRLG_Init_Globals__Fv()
+void drlg_l1_reset_maps()
+```
+
 ## 0x40AE79
 
 ### drlg_l1_load_dun
@@ -29,7 +40,27 @@ void drlg_l1_randomize_stone_floor();
 
 ## 0x40AFB3
 
+### drlg_l1_init_piece_id_map
+
+```c
+// drlg_l1_init_piece_id_map initializes the dungeon piece ID map.
+//
+// PSX ref: 0x8013CBA8
+// PSX def: void DRLG_L1Pass3__Fv()
+void drlg_l1_init_piece_id_map();
+```
+
 ## 0x40B0A5
+
+### drlg_l1_init_arches
+
+```c
+// drlg_l1_init_arches initializes arches.
+//
+// PSX ref: 0x8013CF5C
+// PSX def: void DRLG_InitL1Vals__Fv()
+void drlg_l1_init_arches();
+```
 
 ## 0x40B160
 
@@ -132,9 +163,39 @@ int __fastcall drlg_l1_place_miniset(uint8_t *miniset, int tmin, int tmax, int c
 
 ## 0x40BAF6
 
+### drlg_l1_reset
+
+```c
+// drlg_l1_reset resets the tile ID and the dungeon flag maps.
+//
+// PSX ref: 0x8013D2F8
+// PSX def: void InitL5Dungeon__Fv()
+void drlg_l1_reset();
+```
+
 ## 0x40BB18
 
+### drlg_l1_clear_flags
+
+```c
+// drlg_l1_clear_flags clears the dungeon generation flags 0x40.
+//
+// PSX ref: 0x8013D37C
+// PSX def: void L5ClearFlags__Fv()
+void drlg_l1_clear_flags();
+```
+
 ## 0x40BB33
+
+### drlg_l1_generate_first_room
+
+```c
+// drlg_l1_generate_first_room generates the first room of the dungeon.
+//
+// PSX ref: 0x8013D7FC
+// PSX def: void L5firstRoom__Fv()
+void drlg_l1_generate_first_room();
+```
 
 ## 0x40BD66
 
@@ -187,9 +248,42 @@ int drlg_l1_get_area();
 
 ## 0x40C02A
 
+### drlg_l1_init_dmap
+
+```c
+// drlg_l1_init_dmap initializes a dungeon tile ID map of twice the size of
+// the dungeon, repeating each tile in blocks of 4.
+//
+// PSX ref: 0x8013DBFC
+// PSX def: void L5makeDungeon__Fv()
+//
+// NOTE: The dmap (double map) seems to be unused.
+void drlg_l1_init_dmap();
+```
+
 ## 0x40C06E
 
+### drlg_l1_generate_pattern
+
+```c
+// drlg_l1_generate_pattern replaces tile ID patterns based on a lookup table.
+//
+// PSX ref: 0x8013DC88
+// PSX def: void L5makeDmt__Fv()
+void drlg_l1_generate_pattern();
+```
+
 ## 0x40C0E0
+
+### drlg_l1_add_wall
+
+```c
+// drlg_l1_add_wall adds wall, arch or bar tile IDs.
+//
+// PSX ref: 0x8013E458
+// PSX def: void L5AddWall__Fv()
+void drlg_l1_add_wall();
+```
 
 ## 0x40C23C
 
@@ -243,9 +337,39 @@ void __fastcall drlg_l1_add_vert_wall(int qcol, int qrow, l1_tile_id tile_id, in
 
 ## 0x40C551
 
+### drlg_l1_fix_tiles
+
+```c
+// drlg_l1_fix_tiles fixes tile IDs of wall edges.
+//
+// PSX ref: 0x8013EA28
+// PSX def: void L5tileFix__Fv()
+void drlg_l1_fix_tiles();
+```
+
 ## 0x40C8C0
 
+### drlg_l1_decorate
+
+```c
+// drlg_l1_decorate decorates the dungeon with tapestry tile IDs.
+//
+// PSX ref: 0x8013F2EC
+// PSX def: void DRLG_L5Subs__Fv()
+void drlg_l1_decorate();
+```
+
 ## 0x40C99D
+
+### drlg_l1_generate_chambers
+
+```c
+// drlg_l1_generate_chamber generates chambers.
+//
+// PSX ref: 0x8013F5F8
+// PSX def: void L5FillChambers__Fv()
+void drlg_l1_generate_chambers();
+```
 
 ## 0x40CD86
 
@@ -287,20 +411,41 @@ void __fastcall drlg_l1_init_quest_dun(int qcol_start, int qrow_start);
 
 ## 0x40CF9C
 
-## 0x40D00B
-
-### drlg_l1_init_FTVR
+### drlg_l1_floor_transparency
 
 ```c
-// drlg_l1_init_FTVR initiates fish tank virtual reality by adding transparency
-// to concealing walls.
+// drlg_l1_floor_transparency adds transparency to concealing walls.
+//
+// PSX ref: 0x8014016C
+// PSX def: void DRLG_L5FloodTVal__Fv()
+void drlg_l1_floor_transparency();
+```
+
+## 0x40D00B
+
+### drlg_l1_floor_transparency_recursive
+
+```c
+// drlg_l1_floor_transparency_recursive recursively adds transparency to
+// concealing walls.
 //
 // PSX ref: 0x8013FCE4
 // PSX sig: void DRLG_L5FTVR__Fiiiii(int i, int j, int x, int y, int d)
-void __fastcall drlg_l1_init_FTVR(int qcol, int qrow, int col, int row, int direction);
+void __fastcall drlg_l1_floor_transparency_recursive(int qcol, int qrow, int col, int row, int direction);
 ```
 
 ## 0x40D1FB
+
+### drlg_l1_fix_transparency
+
+```c
+// drlg_l1_fix_transparency fixes transparency close to dirt tile IDs after
+// dungeon generation.
+//
+// PSX ref: 0x80140264
+// PSX def: void DRLG_L5TransFix__Fv()
+void drlg_l1_fix_transparency();
+```
 
 ## 0x40D283
 
@@ -315,3 +460,13 @@ void drlg_l1_fix_dirt();
 ```
 
 ## 0x40D2EF
+
+### drlg_l1_fix_corners
+
+```c
+// drlg_l1_fix_corners fixes corner and arch tile IDs after dungeon generation.
+//
+// PSX ref: 0x80140824
+// PSX def: void DRLG_L5CornerFix__Fv()
+void drlg_l1_fix_corners();
+```

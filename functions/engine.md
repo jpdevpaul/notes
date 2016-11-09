@@ -66,6 +66,9 @@
 
 ```c
 // engine_set_seed sets the global seed to x.
+//
+// PSX ref: 0x8003DACC
+// PSX def: void SetRndSeed__Fl(long s)
 void __fastcall engine_set_seed(int32_t x);
 ```
 
@@ -80,6 +83,9 @@ References:
 // engine_rand returns a non-negative pseudo-random integer in [0, 2^31), using
 // the Borland C/C++ pseudo-random number generator algorithm with a multiplier
 // of 0x15A4E35 and an increment of 1.
+//
+// PSX ref: 0x8003DADC
+// PSX def: long GetRndSeed__Fv()
 int32_t engine_rand();
 ```
 
@@ -94,6 +100,9 @@ References:
 // engine_rand_cap returns a capped non-negative pseudo-random integer in
 // [0, max), using the Borland C/C++ pseudo-random number generator algorithm
 // with a multiplier of 0x15A4E35 and an increment of 1.
+//
+// PSX ref: 0x8003DB24
+// PSX def: long ENG_random__Fl(long v)
 int32_t __fastcall engine_rand_cap(int unused, int32_t max);
 ```
 

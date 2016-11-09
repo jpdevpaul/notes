@@ -15,7 +15,7 @@ Each function has been categorised based on their original source file, as summa
 | [debug.cpp](debug.md)           | `0x4086F4`    | `0x4087B0`  | 66% (2/3 functions)      |
 | [diablo.cpp](diablo.md)         | `0x4087B1`    | `0x40ACAC`  | 11% (4/35 functions)     |
 | [doom.cpp](doom.md)             | `0x40ACAD`    | `0x40ADD5`  | 14% (1/7 functions)      |
-| [drlg_l1.cpp](drlg_l1.md)       | `0x40ADD6`    | `0x40D356`  | 60% (23/38 functions)    |
+| [drlg_l1.cpp](drlg_l1.md)       | `0x40ADD6`    | `0x40D356`  | 100% (38/38 functions)   |
 | [drlg_l2.cpp](drlg_l2.md)       | `0x40D357`    | `0x40FF80`  | 0% (0/35 functions)      |
 | [drlg_l3.cpp](drlg_l3.md)       | `0x40FF81`    | `0x412654`  | 0% (0/34 functions)      |
 | [drlg_l4.cpp](drlg_l4.md)       | `0x412655`    | `0x415097`  | 0% (0/35 functions)      |
@@ -27,7 +27,7 @@ Each function has been categorised based on their original source file, as summa
 | [error.cpp](error.md)           | `0x41804E`    | `0x4182AC`  | 33% (1/3 functions)      |
 | [exception.cpp](exception.md)   | `0x4182AD`    | `0x418865`  | 0% (0/12 functions)      |
 | [gamemenu.cpp](gamemenu.md)     | `0x418866`    | `0x418C8A`  | 0% (0/23 functions)      |
-| [gendung.cpp](gendung.md)       | `0x418C8B`    | `0x419E8A`  | 0% (0/22 functions)      |
+| [gendung.cpp](gendung.md)       | `0x418C8B`    | `0x419E8A`  | 4% (1/22 functions)      |
 | [gmenu.cpp](gmenu.md)           | `0x419E8B`    | `0x41A552`  | 10% (2/20 functions)     |
 | [help.cpp](help.md)             | `0x41A553`    | `0x41A7B2`  | 16% (1/6 functions)      |
 | [init.cpp](init.md)             | `0x41A7B3`    | `0x41B18F`  | 47% (9/19 functions)     |

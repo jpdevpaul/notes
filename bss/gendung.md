@@ -21,6 +21,9 @@ References:
 
 ```c
 // tile_id_map contains the tile IDs of the map.
+//
+// PSX ref: 0x800E40C4
+// PSX def: unsigned short dungeon[48][48]
 int8_t tile_id_map[40][40];
 ```
 
@@ -84,6 +87,9 @@ References:
 
 ```c
 // dlvl specifies the active dungeon level of the current game.
+//
+// PSX ref: 0x8011C10C
+// PSX def: unsigned char currlevel
 int8_t dlvl;
 ```
 

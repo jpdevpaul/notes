@@ -16,6 +16,16 @@
 
 ## 0x41944A
 
+### gendung_init_transparency
+
+```c
+// gendung_init_transparency initializes transparency.
+//
+// PSX ref: 0x8015A070
+// PSX def: void DRLG_InitTrans__Fv()
+void gendung_init_transparency();
+```
+
 ## 0x419477
 
 ## 0x4194D0
