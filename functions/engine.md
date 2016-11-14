@@ -162,6 +162,9 @@ void __fastcall engine_mem_free(void *ptr);
 
 ```c
 // engine_mem_load_file returns the contents of the given file.
+//
+// PSX ref: 0x80074E9C
+// PSX def: unsigned char* GRL_LoadFileInMemSig__FPCcPUl(char *Name, unsigned long *Len)
 void * __fastcall engine_mem_load_file(char *file_path, int *size);
 ```
 

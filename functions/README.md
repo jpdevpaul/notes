@@ -27,7 +27,7 @@ Each function has been categorised based on their original source file, as summa
 | [error.cpp](error.md)           | `0x41804E`    | `0x4182AC`  | 33% (1/3 functions)      |
 | [exception.cpp](exception.md)   | `0x4182AD`    | `0x418865`  | 0% (0/12 functions)      |
 | [gamemenu.cpp](gamemenu.md)     | `0x418866`    | `0x418C8A`  | 0% (0/23 functions)      |
-| [gendung.cpp](gendung.md)       | `0x418C8B`    | `0x419E8A`  | 4% (1/22 functions)      |
+| [gendung.cpp](gendung.md)       | `0x418C8B`    | `0x419E8A`  | 18% (4/22 functions)     |
 | [gmenu.cpp](gmenu.md)           | `0x419E8B`    | `0x41A552`  | 10% (2/20 functions)     |
 | [help.cpp](help.md)             | `0x41A553`    | `0x41A7B2`  | 16% (1/6 functions)      |
 | [init.cpp](init.md)             | `0x41A7B3`    | `0x41B18F`  | 47% (9/19 functions)     |
@@ -55,7 +55,7 @@ Each function has been categorised based on their original source file, as summa
 | [player.cpp](player.md)         | `0x44A8E6`    | `0x450D32`  | 0% (0/92 functions)      |
 | [plrmsg.cpp](plrmsg.md)         | `0x450D33`    | `0x450FFD`  | 12% (1/8 functions)      |
 | [portal.cpp](portal.md)         | `0x450FFE`    | `0x45138D`  | 0% (0/13 functions)      |
-| [quests.cpp](quests.md)         | `0x45138E`    | `0x452830`  | 4% (1/25 functions)      |
+| [quests.cpp](quests.md)         | `0x45138E`    | `0x452830`  | 8% (2/25 functions)      |
 | [restricted.cpp](restricted.md) | `0x452831`    | `0x452974`  | 33% (1/3 functions)      |
 | [scrollrt.cpp](scrollrt.md)     | `0x452975`    | `0x456624`  | 9% (3/31 functions)      |
 | [setmaps.cpp](setmaps.md)       | `0x456625`    | `0x456A15`  | 0% (0/6 functions)       |

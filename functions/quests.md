@@ -8,6 +8,18 @@
 
 ## 0x451831
 
+### quests_is_active
+
+```c
+// quests_is_active reports whether the given quest is active.
+//
+// PSX ref: 0x80067B70
+// PSX def: unsigned char QuestStatus__Fi(int i)
+//
+// NOTE: quest_num and quest_id are equivalent, as indicated by this function.
+bool32_t __fastcall quests_is_active(quest_id quest_num);
+```
+
 ## 0x451871
 
 ## 0x451BEA
