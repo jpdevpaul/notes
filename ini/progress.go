@@ -3,8 +3,11 @@ package main
 import (
 	"flag"
 	"fmt"
+	"io"
 	"log"
+	"os"
 	"sort"
+	"text/tabwriter"
 
 	"github.com/mewkiz/pkg/errutil"
 	"gopkg.in/ini.v1"
@@ -14,14 +17,22 @@ func main() {
 	flag.Parse()
 	paths := flag.Args()
 	sort.Strings(paths)
+	const s = `
+| Source path                                                                  | PSX progress             | Windows progress     | Macintosh progress   |
+|------------------------------------------------------------------------------|--------------------------|----------------------|----------------------|
+`
+	const padding = 0
+	w := tabwriter.NewWriter(os.Stdout, 0, 0, padding, ' ', 0)
+	fmt.Print(s[1:])
 	for _, path := range paths {
-		if err := progress(path); err != nil {
+		if err := progress(w, path); err != nil {
 			log.Fatal(err)
 		}
 	}
+	w.Flush()
 }
 
-func progress(path string) error {
+func progress(w io.Writer, path string) error {
 	file, err := ini.Load(path)
 	if err != nil {
 		return errutil.Err(err)
@@ -55,12 +66,9 @@ func progress(path string) error {
 		}
 		total++
 	}
-	const format = `
-| [%s](%s) | %d%% (%d/%d PSX functions) | %d%% (%d/%d Windows functions) | %d%% (%d/%d Macintosh functions) |
-`
 	psxPercent := int(100 * (float64(npsx) / float64(total)))
 	winPercent := int(100 * (float64(nwin) / float64(total)))
 	macPercent := int(100 * (float64(nmac) / float64(total)))
-	fmt.Printf(format[1:], path, path, psxPercent, npsx, total, winPercent, nwin, total, macPercent, nmac, total)
+	fmt.Fprintf(w, "| [%s](%s) \t| %d%% (%d/%d functions) \t| %d%% (%d/%d functions) \t| %d%% (%d/%d functions) \t|\n", path, path, psxPercent, npsx, total, winPercent, nwin, total, macPercent, nmac, total)
 	return nil
 }

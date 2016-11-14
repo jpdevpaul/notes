@@ -1,147 +1,149 @@
-| [diabpsx/glibdev/source/gal.c](diabpsx/glibdev/source/gal.c)                 | 100% (70/70 PSX functions)   | 0% (0/70 Windows functions) | 0% (0/70 Macintosh functions)  |
-| [diabpsx/glibdev/source/gmain.c](diabpsx/glibdev/source/gmain.c)             | 100% (1/1 PSX functions)     | 0% (0/1 Windows functions)  | 0% (0/1 Macintosh functions)   |
-| [diabpsx/glibdev/source/gutils.c](diabpsx/glibdev/source/gutils.c)           | 100% (6/6 PSX functions)     | 0% (0/6 Windows functions)  | 0% (0/6 Macintosh functions)   |
-| [diabpsx/glibdev/source/psx/gdebug.c](diabpsx/glibdev/source/psx/gdebug.c)   | 100% (9/9 PSX functions)     | 0% (0/9 Windows functions)  | 0% (0/9 Macintosh functions)   |
-| [diabpsx/glibdev/source/psx/gsys.c](diabpsx/glibdev/source/psx/gsys.c)       | 100% (7/7 PSX functions)     | 0% (0/7 Windows functions)  | 0% (0/7 Macintosh functions)   |
-| [diabpsx/glibdev/source/psx/gtimsys.c](diabpsx/glibdev/source/psx/gtimsys.c) | 100% (3/3 PSX functions)     | 0% (0/3 Windows functions)  | 0% (0/3 Macintosh functions)   |
-| [diabpsx/glibdev/source/psx/vrip.c](diabpsx/glibdev/source/psx/vrip.c)       | 100% (2/2 PSX functions)     | 0% (0/2 Windows functions)  | 0% (0/2 Macintosh functions)   |
-| [diabpsx/glibdev/source/tasker.c](diabpsx/glibdev/source/tasker.c)           | 100% (41/41 PSX functions)   | 0% (0/41 Windows functions) | 0% (0/41 Macintosh functions)  |
-| [diabpsx/glibdev/source/tick.c](diabpsx/glibdev/source/tick.c)               | 100% (7/7 PSX functions)     | 0% (0/7 Windows functions)  | 0% (0/7 Macintosh functions)   |
-| [diabpsx/psxsrc/async.cpp](diabpsx/psxsrc/async.cpp)                         | 100% (6/6 PSX functions)     | 0% (0/6 Windows functions)  | 0% (0/6 Macintosh functions)   |
-| [diabpsx/psxsrc/attract.cpp](diabpsx/psxsrc/attract.cpp)                     | 100% (3/3 PSX functions)     | 0% (0/3 Windows functions)  | 0% (0/3 Macintosh functions)   |
-| [diabpsx/psxsrc/biglump.cpp](diabpsx/psxsrc/biglump.cpp)                     | 100% (17/17 PSX functions)   | 0% (0/17 Windows functions) | 0% (0/17 Macintosh functions)  |
-| [diabpsx/psxsrc/bird.cpp](diabpsx/psxsrc/bird.cpp)                           | 100% (26/26 PSX functions)   | 0% (0/26 Windows functions) | 0% (0/26 Macintosh functions)  |
-| [diabpsx/psxsrc/block.cpp](diabpsx/psxsrc/block.cpp)                         | 100% (50/50 PSX functions)   | 0% (0/50 Windows functions) | 0% (0/50 Macintosh functions)  |
-| [diabpsx/psxsrc/block.h](diabpsx/psxsrc/block.h)                             | 100% (11/11 PSX functions)   | 0% (0/11 Windows functions) | 0% (0/11 Macintosh functions)  |
-| [diabpsx/psxsrc/cardcore.cpp](diabpsx/psxsrc/cardcore.cpp)                   | 100% (21/21 PSX functions)   | 0% (0/21 Windows functions) | 0% (0/21 Macintosh functions)  |
-| [diabpsx/psxsrc/cdio.cpp](diabpsx/psxsrc/cdio.cpp)                           | 100% (9/9 PSX functions)     | 0% (0/9 Windows functions)  | 0% (0/9 Macintosh functions)   |
-| [diabpsx/psxsrc/corefmv.cpp](diabpsx/psxsrc/corefmv.cpp)                     | 100% (2/2 PSX functions)     | 0% (0/2 Windows functions)  | 0% (0/2 Macintosh functions)   |
-| [diabpsx/psxsrc/cplayer.cpp](diabpsx/psxsrc/cplayer.cpp)                     | 100% (12/12 PSX functions)   | 0% (0/12 Windows functions) | 0% (0/12 Macintosh functions)  |
-| [diabpsx/psxsrc/cplayer.h](diabpsx/psxsrc/cplayer.h)                         | 100% (6/6 PSX functions)     | 0% (0/6 Windows functions)  | 0% (0/6 Macintosh functions)   |
-| [diabpsx/psxsrc/credits.cpp](diabpsx/psxsrc/credits.cpp)                     | 100% (6/6 PSX functions)     | 0% (0/6 Windows functions)  | 0% (0/6 Macintosh functions)   |
-| [diabpsx/psxsrc/ctrl.cpp](diabpsx/psxsrc/ctrl.cpp)                           | 100% (17/17 PSX functions)   | 0% (0/17 Windows functions) | 0% (0/17 Macintosh functions)  |
-| [diabpsx/psxsrc/datio.cpp](diabpsx/psxsrc/datio.cpp)                         | 100% (7/7 PSX functions)     | 0% (0/7 Windows functions)  | 0% (0/7 Macintosh functions)   |
-| [diabpsx/psxsrc/davel.cpp](diabpsx/psxsrc/davel.cpp)                         | 100% (29/29 PSX functions)   | 0% (0/29 Windows functions) | 0% (0/29 Macintosh functions)  |
-| [diabpsx/psxsrc/daveo.cpp](diabpsx/psxsrc/daveo.cpp)                         | 100% (14/14 PSX functions)   | 0% (0/14 Windows functions) | 0% (0/14 Macintosh functions)  |
-| [diabpsx/psxsrc/decomp.cpp](diabpsx/psxsrc/decomp.cpp)                       | 100% (6/6 PSX functions)     | 0% (0/6 Windows functions)  | 0% (0/6 Macintosh functions)   |
-| [diabpsx/psxsrc/dialog.cpp](diabpsx/psxsrc/dialog.cpp)                       | 100% (9/9 PSX functions)     | 0% (0/9 Windows functions)  | 0% (0/9 Macintosh functions)   |
-| [diabpsx/psxsrc/dialog.h](diabpsx/psxsrc/dialog.h)                           | 100% (5/5 PSX functions)     | 0% (0/5 Windows functions)  | 0% (0/5 Macintosh functions)   |
-| [diabpsx/psxsrc/dlg.cpp](diabpsx/psxsrc/dlg.cpp)                             | 100% (25/25 PSX functions)   | 0% (0/25 Windows functions) | 0% (0/25 Macintosh functions)  |
-| [diabpsx/psxsrc/fe.cpp](diabpsx/psxsrc/fe.cpp)                               | 100% (41/41 PSX functions)   | 0% (0/41 Windows functions) | 0% (0/41 Macintosh functions)  |
-| [diabpsx/psxsrc/fileio.cpp](diabpsx/psxsrc/fileio.cpp)                       | 100% (15/15 PSX functions)   | 0% (0/15 Windows functions) | 0% (0/15 Macintosh functions)  |
-| [diabpsx/psxsrc/fmv.cpp](diabpsx/psxsrc/fmv.cpp)                             | 100% (43/43 PSX functions)   | 0% (0/43 Windows functions) | 0% (0/43 Macintosh functions)  |
-| [diabpsx/psxsrc/gameonly.cpp](diabpsx/psxsrc/gameonly.cpp)                   | 100% (1/1 PSX functions)     | 0% (0/1 Windows functions)  | 0% (0/1 Macintosh functions)   |
-| [diabpsx/psxsrc/garyl.cpp](diabpsx/psxsrc/garyl.cpp)                         | 100% (3/3 PSX functions)     | 0% (0/3 Windows functions)  | 0% (0/3 Macintosh functions)   |
-| [diabpsx/psxsrc/glue.cpp](diabpsx/psxsrc/glue.cpp)                           | 100% (25/25 PSX functions)   | 0% (0/25 Windows functions) | 0% (0/25 Macintosh functions)  |
-| [diabpsx/psxsrc/gman.cpp](diabpsx/psxsrc/gman.cpp)                           | 100% (60/60 PSX functions)   | 0% (0/60 Windows functions) | 0% (0/60 Macintosh functions)  |
-| [diabpsx/psxsrc/gman.h](diabpsx/psxsrc/gman.h)                               | 100% (20/20 PSX functions)   | 0% (0/20 Windows functions) | 0% (0/20 Macintosh functions)  |
-| [diabpsx/psxsrc/gpanel.cpp](diabpsx/psxsrc/gpanel.cpp)                       | 100% (10/10 PSX functions)   | 0% (0/10 Windows functions) | 0% (0/10 Macintosh functions)  |
-| [diabpsx/psxsrc/gpuq.cpp](diabpsx/psxsrc/gpuq.cpp)                           | 100% (7/7 PSX functions)     | 0% (0/7 Windows functions)  | 0% (0/7 Macintosh functions)   |
-| [diabpsx/psxsrc/graham.cpp](diabpsx/psxsrc/graham.cpp)                       | 100% (2/2 PSX functions)     | 0% (0/2 Windows functions)  | 0% (0/2 Macintosh functions)   |
-| [diabpsx/psxsrc/kanji.cpp](diabpsx/psxsrc/kanji.cpp)                         | 100% (18/18 PSX functions)   | 0% (0/18 Windows functions) | 0% (0/18 Macintosh functions)  |
-| [diabpsx/psxsrc/lambo.cpp](diabpsx/psxsrc/lambo.cpp)                         | 100% (2/2 PSX functions)     | 0% (0/2 Windows functions)  | 0% (0/2 Macintosh functions)   |
-| [diabpsx/psxsrc/loading.cpp](diabpsx/psxsrc/loading.cpp)                     | 100% (11/11 PSX functions)   | 0% (0/11 Windows functions) | 0% (0/11 Macintosh functions)  |
-| [diabpsx/psxsrc/lznp.cpp](diabpsx/psxsrc/lznp.cpp)                           | 100% (1/1 PSX functions)     | 0% (0/1 Windows functions)  | 0% (0/1 Macintosh functions)   |
-| [diabpsx/psxsrc/main.cpp](diabpsx/psxsrc/main.cpp)                           | 100% (5/5 PSX functions)     | 0% (0/5 Windows functions)  | 0% (0/5 Macintosh functions)   |
-| [diabpsx/psxsrc/mem.cpp](diabpsx/psxsrc/mem.cpp)                             | 100% (4/4 PSX functions)     | 0% (0/4 Windows functions)  | 0% (0/4 Macintosh functions)   |
-| [diabpsx/psxsrc/memcard.cpp](diabpsx/psxsrc/memcard.cpp)                     | 100% (16/16 PSX functions)   | 0% (0/16 Windows functions) | 0% (0/16 Macintosh functions)  |
-| [diabpsx/psxsrc/monsview.cpp](diabpsx/psxsrc/monsview.cpp)                   | 100% (1/1 PSX functions)     | 0% (0/1 Windows functions)  | 0% (0/1 Macintosh functions)   |
-| [diabpsx/psxsrc/options.cpp](diabpsx/psxsrc/options.cpp)                     | 100% (25/25 PSX functions)   | 0% (0/25 Windows functions) | 0% (0/25 Macintosh functions)  |
-| [diabpsx/psxsrc/overlay.cpp](diabpsx/psxsrc/overlay.cpp)                     | 100% (14/14 PSX functions)   | 0% (0/14 Windows functions) | 0% (0/14 Macintosh functions)  |
-| [diabpsx/psxsrc/padfuncs.cpp](diabpsx/psxsrc/padfuncs.cpp)                   | 100% (40/40 PSX functions)   | 0% (0/40 Windows functions) | 0% (0/40 Macintosh functions)  |
-| [diabpsx/psxsrc/pads.cpp](diabpsx/psxsrc/pads.cpp)                           | 100% (11/11 PSX functions)   | 0% (0/11 Windows functions) | 0% (0/11 Macintosh functions)  |
-| [diabpsx/psxsrc/pads.h](diabpsx/psxsrc/pads.h)                               | 100% (11/11 PSX functions)   | 0% (0/11 Windows functions) | 0% (0/11 Macintosh functions)  |
-| [diabpsx/psxsrc/pak.cpp](diabpsx/psxsrc/pak.cpp)                             | 100% (4/4 PSX functions)     | 0% (0/4 Windows functions)  | 0% (0/4 Macintosh functions)   |
-| [diabpsx/psxsrc/pause.cpp](diabpsx/psxsrc/pause.cpp)                         | 100% (26/26 PSX functions)   | 0% (0/26 Windows functions) | 0% (0/26 Macintosh functions)  |
-| [diabpsx/psxsrc/pcio.cpp](diabpsx/psxsrc/pcio.cpp)                           | 100% (7/7 PSX functions)     | 0% (0/7 Windows functions)  | 0% (0/7 Macintosh functions)   |
-| [diabpsx/psxsrc/pregame.cpp](diabpsx/psxsrc/pregame.cpp)                     | 100% (1/1 PSX functions)     | 0% (0/1 Windows functions)  | 0% (0/1 Macintosh functions)   |
-| [diabpsx/psxsrc/presonly.cpp](diabpsx/psxsrc/presonly.cpp)                   | 100% (1/1 PSX functions)     | 0% (0/1 Windows functions)  | 0% (0/1 Macintosh functions)   |
-| [diabpsx/psxsrc/primpool.cpp](diabpsx/psxsrc/primpool.cpp)                   | 100% (19/19 PSX functions)   | 0% (0/19 Windows functions) | 0% (0/19 Macintosh functions)  |
-| [diabpsx/psxsrc/primpool.h](diabpsx/psxsrc/primpool.h)                       | 100% (7/7 PSX functions)     | 0% (0/7 Windows functions)  | 0% (0/7 Macintosh functions)   |
-| [diabpsx/psxsrc/printy.cpp](diabpsx/psxsrc/printy.cpp)                       | 100% (13/13 PSX functions)   | 0% (0/13 Windows functions) | 0% (0/13 Macintosh functions)  |
-| [diabpsx/psxsrc/printy.h](diabpsx/psxsrc/printy.h)                           | 100% (5/5 PSX functions)     | 0% (0/5 Windows functions)  | 0% (0/5 Macintosh functions)   |
-| [diabpsx/psxsrc/prof.cpp](diabpsx/psxsrc/prof.cpp)                           | 100% (10/10 PSX functions)   | 0% (0/10 Windows functions) | 0% (0/10 Macintosh functions)  |
-| [diabpsx/psxsrc/psxhelp.cpp](diabpsx/psxsrc/psxhelp.cpp)                     | 100% (9/9 PSX functions)     | 0% (0/9 Windows functions)  | 0% (0/9 Macintosh functions)   |
-| [diabpsx/psxsrc/psxmsg.cpp](diabpsx/psxsrc/psxmsg.cpp)                       | 100% (15/15 PSX functions)   | 0% (0/15 Windows functions) | 0% (0/15 Macintosh functions)  |
-| [diabpsx/psxsrc/scratch.cpp](diabpsx/psxsrc/scratch.cpp)                     | 100% (17/17 PSX functions)   | 0% (0/17 Windows functions) | 0% (0/17 Macintosh functions)  |
-| [diabpsx/psxsrc/sndbank.cpp](diabpsx/psxsrc/sndbank.cpp)                     | 100% (12/12 PSX functions)   | 0% (0/12 Windows functions) | 0% (0/12 Macintosh functions)  |
-| [diabpsx/psxsrc/spltargt.cpp](diabpsx/psxsrc/spltargt.cpp)                   | 100% (14/14 PSX functions)   | 0% (0/14 Windows functions) | 0% (0/14 Macintosh functions)  |
-| [diabpsx/psxsrc/spltargt.h](diabpsx/psxsrc/spltargt.h)                       | 100% (1/1 PSX functions)     | 0% (0/1 Windows functions)  | 0% (0/1 Macintosh functions)   |
-| [diabpsx/psxsrc/stream.cpp](diabpsx/psxsrc/stream.cpp)                       | 100% (21/21 PSX functions)   | 0% (0/21 Windows functions) | 0% (0/21 Macintosh functions)  |
-| [diabpsx/psxsrc/sysinit.cpp](diabpsx/psxsrc/sysinit.cpp)                     | 100% (4/4 PSX functions)     | 0% (0/4 Windows functions)  | 0% (0/4 Macintosh functions)   |
-| [diabpsx/psxsrc/sysobj.cpp](diabpsx/psxsrc/sysobj.cpp)                       | 100% (4/4 PSX functions)     | 0% (0/4 Windows functions)  | 0% (0/4 Macintosh functions)   |
-| [diabpsx/psxsrc/tims.cpp](diabpsx/psxsrc/tims.cpp)                           | 100% (1/1 PSX functions)     | 0% (0/1 Windows functions)  | 0% (0/1 Macintosh functions)   |
-| [diabpsx/psxsrc/titlescr.cpp](diabpsx/psxsrc/titlescr.cpp)                   | 100% (2/2 PSX functions)     | 0% (0/2 Windows functions)  | 0% (0/2 Macintosh functions)   |
-| [diabpsx/psxsrc/tmalloc.cpp](diabpsx/psxsrc/tmalloc.cpp)                     | 100% (4/4 PSX functions)     | 0% (0/4 Windows functions)  | 0% (0/4 Macintosh functions)   |
-| [diabpsx/psxsrc/tony.cpp](diabpsx/psxsrc/tony.cpp)                           | 100% (17/17 PSX functions)   | 0% (0/17 Windows functions) | 0% (0/17 Macintosh functions)  |
-| [diabpsx/psxsrc/tutils.h](diabpsx/psxsrc/tutils.h)                           | 100% (10/10 PSX functions)   | 0% (0/10 Windows functions) | 0% (0/10 Macintosh functions)  |
-| [diabpsx/psxsrc/vid.cpp](diabpsx/psxsrc/vid.cpp)                             | 100% (13/13 PSX functions)   | 0% (0/13 Windows functions) | 0% (0/13 Macintosh functions)  |
-| [diabpsx/source/automap.cpp](diabpsx/source/automap.cpp)                     | 100% (17/17 PSX functions)   | 0% (0/17 Windows functions) | 0% (0/17 Macintosh functions)  |
-| [diabpsx/source/choosem.cpp](diabpsx/source/choosem.cpp)                     | 100% (7/7 PSX functions)     | 0% (0/7 Windows functions)  | 0% (0/7 Macintosh functions)   |
-| [diabpsx/source/compmap.cpp](diabpsx/source/compmap.cpp)                     | 100% (16/16 PSX functions)   | 0% (0/16 Windows functions) | 0% (0/16 Macintosh functions)  |
-| [diabpsx/source/compmap.h](diabpsx/source/compmap.h)                         | 100% (6/6 PSX functions)     | 0% (0/6 Windows functions)  | 0% (0/6 Macintosh functions)   |
-| [diabpsx/source/control.cpp](diabpsx/source/control.cpp)                     | 100% (38/38 PSX functions)   | 0% (0/38 Windows functions) | 0% (0/38 Macintosh functions)  |
-| [diabpsx/source/coreauto.cpp](diabpsx/source/coreauto.cpp)                   | 100% (2/2 PSX functions)     | 0% (0/2 Windows functions)  | 0% (0/2 Macintosh functions)   |
-| [diabpsx/source/coreinv.cpp](diabpsx/source/coreinv.cpp)                     | 100% (1/1 PSX functions)     | 0% (0/1 Windows functions)  | 0% (0/1 Macintosh functions)   |
-| [diabpsx/source/coremon.cpp](diabpsx/source/coremon.cpp)                     | 100% (17/17 PSX functions)   | 0% (0/17 Windows functions) | 0% (0/17 Macintosh functions)  |
-| [diabpsx/source/cursor.cpp](diabpsx/source/cursor.cpp)                       | 100% (9/9 PSX functions)     | 0% (0/9 Windows functions)  | 0% (0/9 Macintosh functions)   |
-| [diabpsx/source/dead.cpp](diabpsx/source/dead.cpp)                           | 100% (2/2 PSX functions)     | 0% (0/2 Windows functions)  | 0% (0/2 Macintosh functions)   |
-| [diabpsx/source/diablo.cpp](diabpsx/source/diablo.cpp)                       | 100% (33/33 PSX functions)   | 0% (0/33 Windows functions) | 0% (0/33 Macintosh functions)  |
-| [diabpsx/source/dpiece.cpp](diabpsx/source/dpiece.cpp)                       | 100% (20/20 PSX functions)   | 0% (0/20 Windows functions) | 0% (0/20 Macintosh functions)  |
-| [diabpsx/source/drlg_l1.cpp](diabpsx/source/drlg_l1.cpp)                     | 100% (40/40 PSX functions)   | 0% (0/40 Windows functions) | 0% (0/40 Macintosh functions)  |
-| [diabpsx/source/drlg_l2.cpp](diabpsx/source/drlg_l2.cpp)                     | 100% (36/36 PSX functions)   | 0% (0/36 Windows functions) | 0% (0/36 Macintosh functions)  |
-| [diabpsx/source/drlg_l3.cpp](diabpsx/source/drlg_l3.cpp)                     | 100% (37/37 PSX functions)   | 0% (0/37 Windows functions) | 0% (0/37 Macintosh functions)  |
-| [diabpsx/source/drlg_l4.cpp](diabpsx/source/drlg_l4.cpp)                     | 100% (36/36 PSX functions)   | 0% (0/36 Windows functions) | 0% (0/36 Macintosh functions)  |
-| [diabpsx/source/effects.cpp](diabpsx/source/effects.cpp)                     | 100% (20/20 PSX functions)   | 0% (0/20 Windows functions) | 0% (0/20 Macintosh functions)  |
-| [diabpsx/source/engine.cpp](diabpsx/source/engine.cpp)                       | 100% (8/8 PSX functions)     | 0% (0/8 Windows functions)  | 0% (0/8 Macintosh functions)   |
-| [diabpsx/source/error.cpp](diabpsx/source/error.cpp)                         | 100% (3/3 PSX functions)     | 0% (0/3 Windows functions)  | 0% (0/3 Macintosh functions)   |
-| [diabpsx/source/gamemenu.cpp](diabpsx/source/gamemenu.cpp)                   | 100% (1/1 PSX functions)     | 0% (0/1 Windows functions)  | 0% (0/1 Macintosh functions)   |
-| [diabpsx/source/gameover.cpp](diabpsx/source/gameover.cpp)                   | 100% (4/4 PSX functions)     | 0% (0/4 Windows functions)  | 0% (0/4 Macintosh functions)   |
-| [diabpsx/source/gamepad.cpp](diabpsx/source/gamepad.cpp)                     | 100% (37/37 PSX functions)   | 0% (0/37 Windows functions) | 0% (0/37 Macintosh functions)  |
-| [diabpsx/source/gendung.cpp](diabpsx/source/gendung.cpp)                     | 100% (16/16 PSX functions)   | 0% (0/16 Windows functions) | 0% (0/16 Macintosh functions)  |
-| [diabpsx/source/gwin.cpp](diabpsx/source/gwin.cpp)                           | 100% (5/5 PSX functions)     | 0% (0/5 Windows functions)  | 0% (0/5 Macintosh functions)   |
-| [diabpsx/source/interfac.cpp](diabpsx/source/interfac.cpp)                   | 100% (2/2 PSX functions)     | 0% (0/2 Windows functions)  | 0% (0/2 Macintosh functions)   |
-| [diabpsx/source/inv.cpp](diabpsx/source/inv.cpp)                             | 100% (51/51 PSX functions)   | 0% (0/51 Windows functions) | 0% (0/51 Macintosh functions)  |
-| [diabpsx/source/itemdat.cpp](diabpsx/source/itemdat.cpp)                     | 100% (1/1 PSX functions)     | 0% (0/1 Windows functions)  | 0% (0/1 Macintosh functions)   |
-| [diabpsx/source/items.cpp](diabpsx/source/items.cpp)                         | 100% (106/106 PSX functions) | 0% (0/106 Windows functions)| 0% (0/106 Macintosh functions) |
-| [diabpsx/source/lang.cpp](diabpsx/source/lang.cpp)                           | 100% (9/9 PSX functions)     | 0% (0/9 Windows functions)  | 0% (0/9 Macintosh functions)   |
-| [diabpsx/source/lighting.cpp](diabpsx/source/lighting.cpp)                   | 100% (28/28 PSX functions)   | 0% (0/28 Windows functions) | 0% (0/28 Macintosh functions)  |
-| [diabpsx/source/loadsave.cpp](diabpsx/source/loadsave.cpp)                   | 100% (23/23 PSX functions)   | 0% (0/23 Windows functions) | 0% (0/23 Macintosh functions)  |
-| [diabpsx/source/minitext.cpp](diabpsx/source/minitext.cpp)                   | 100% (11/11 PSX functions)   | 0% (0/11 Windows functions) | 0% (0/11 Macintosh functions)  |
-| [diabpsx/source/misdat.cpp](diabpsx/source/misdat.cpp)                       | 100% (2/2 PSX functions)     | 0% (0/2 Windows functions)  | 0% (0/2 Macintosh functions)   |
-| [diabpsx/source/misprint.cpp](diabpsx/source/misprint.cpp)                   | 100% (31/31 PSX functions)   | 0% (0/31 Windows functions) | 0% (0/31 Macintosh functions)  |
-| [diabpsx/source/missiles.cpp](diabpsx/source/missiles.cpp)                   | 100% (114/114 PSX functions) | 0% (0/114 Windows functions)| 0% (0/114 Macintosh functions) |
-| [diabpsx/source/mlist.cpp](diabpsx/source/mlist.cpp)                         | 100% (5/5 PSX functions)     | 0% (0/5 Windows functions)  | 0% (0/5 Macintosh functions)   |
-| [diabpsx/source/monster.cpp](diabpsx/source/monster.cpp)                     | 100% (105/105 PSX functions) | 0% (0/105 Windows functions)| 0% (0/105 Macintosh functions) |
-| [diabpsx/source/msg.cpp](diabpsx/source/msg.cpp)                             | 100% (109/109 PSX functions) | 0% (0/109 Windows functions)| 0% (0/109 Macintosh functions) |
-| [diabpsx/source/multi.cpp](diabpsx/source/multi.cpp)                         | 100% (5/5 PSX functions)     | 0% (0/5 Windows functions)  | 0% (0/5 Macintosh functions)   |
-| [diabpsx/source/objects.cpp](diabpsx/source/objects.cpp)                     | 100% (93/93 PSX functions)   | 0% (0/93 Windows functions) | 0% (0/93 Macintosh functions)  |
-| [diabpsx/source/objprint.cpp](diabpsx/source/objprint.cpp)                   | 100% (24/24 PSX functions)   | 0% (0/24 Windows functions) | 0% (0/24 Macintosh functions)  |
-| [diabpsx/source/palette.cpp](diabpsx/source/palette.cpp)                     | 100% (13/13 PSX functions)   | 0% (0/13 Windows functions) | 0% (0/13 Macintosh functions)  |
-| [diabpsx/source/pfile.cpp](diabpsx/source/pfile.cpp)                         | 100% (3/3 PSX functions)     | 0% (0/3 Windows functions)  | 0% (0/3 Macintosh functions)   |
-| [diabpsx/source/player.cpp](diabpsx/source/player.cpp)                       | 100% (130/130 PSX functions) | 0% (0/130 Windows functions)| 0% (0/130 Macintosh functions) |
-| [diabpsx/source/portal.cpp](diabpsx/source/portal.cpp)                       | 100% (10/10 PSX functions)   | 0% (0/10 Windows functions) | 0% (0/10 Macintosh functions)  |
-| [diabpsx/source/preauto.cpp](diabpsx/source/preauto.cpp)                     | 100% (2/2 PSX functions)     | 0% (0/2 Windows functions)  | 0% (0/2 Macintosh functions)   |
-| [diabpsx/source/preinv.cpp](diabpsx/source/preinv.cpp)                       | 100% (1/1 PSX functions)     | 0% (0/1 Windows functions)  | 0% (0/1 Macintosh functions)   |
-| [diabpsx/source/premiss.cpp](diabpsx/source/premiss.cpp)                     | 100% (1/1 PSX functions)     | 0% (0/1 Windows functions)  | 0% (0/1 Macintosh functions)   |
-| [diabpsx/source/premon.cpp](diabpsx/source/premon.cpp)                       | 100% (19/19 PSX functions)   | 0% (0/19 Windows functions) | 0% (0/19 Macintosh functions)  |
-| [diabpsx/source/premsg.cpp](diabpsx/source/premsg.cpp)                       | 100% (3/3 PSX functions)     | 0% (0/3 Windows functions)  | 0% (0/3 Macintosh functions)   |
-| [diabpsx/source/preobj.cpp](diabpsx/source/preobj.cpp)                       | 100% (61/61 PSX functions)   | 0% (0/61 Windows functions) | 0% (0/61 Macintosh functions)  |
-| [diabpsx/source/preport.cpp](diabpsx/source/preport.cpp)                     | 100% (1/1 PSX functions)     | 0% (0/1 Windows functions)  | 0% (0/1 Macintosh functions)   |
-| [diabpsx/source/prequest.cpp](diabpsx/source/prequest.cpp)                   | 100% (9/9 PSX functions)     | 0% (0/9 Windows functions)  | 0% (0/9 Macintosh functions)   |
-| [diabpsx/source/prestore.cpp](diabpsx/source/prestore.cpp)                   | 100% (2/2 PSX functions)     | 0% (0/2 Windows functions)  | 0% (0/2 Macintosh functions)   |
-| [diabpsx/source/pretrigs.cpp](diabpsx/source/pretrigs.cpp)                   | 100% (9/9 PSX functions)     | 0% (0/9 Windows functions)  | 0% (0/9 Macintosh functions)   |
-| [diabpsx/source/quests.cpp](diabpsx/source/quests.cpp)                       | 100% (20/20 PSX functions)   | 0% (0/20 Windows functions) | 0% (0/20 Macintosh functions)  |
-| [diabpsx/source/scrollrt.cpp](diabpsx/source/scrollrt.cpp)                   | 100% (2/2 PSX functions)     | 0% (0/2 Windows functions)  | 0% (0/2 Macintosh functions)   |
-| [diabpsx/source/setmaps.cpp](diabpsx/source/setmaps.cpp)                     | 100% (6/6 PSX functions)     | 0% (0/6 Windows functions)  | 0% (0/6 Macintosh functions)   |
-| [diabpsx/source/sound.cpp](diabpsx/source/sound.cpp)                         | 100% (9/9 PSX functions)     | 0% (0/9 Windows functions)  | 0% (0/9 Macintosh functions)   |
-| [diabpsx/source/spells.cpp](diabpsx/source/spells.cpp)                       | 100% (6/6 PSX functions)     | 0% (0/6 Windows functions)  | 0% (0/6 Macintosh functions)   |
-| [diabpsx/source/stores.cpp](diabpsx/source/stores.cpp)                       | 100% (97/97 PSX functions)   | 0% (0/97 Windows functions) | 0% (0/97 Macintosh functions)  |
-| [diabpsx/source/storm.cpp](diabpsx/source/storm.cpp)                         | 100% (2/2 PSX functions)     | 0% (0/2 Windows functions)  | 0% (0/2 Macintosh functions)   |
-| [diabpsx/source/storm.h](diabpsx/source/storm.h)                             | 100% (1/1 PSX functions)     | 0% (0/1 Windows functions)  | 0% (0/1 Macintosh functions)   |
-| [diabpsx/source/testcode.cpp](diabpsx/source/testcode.cpp)                   | 100% (2/2 PSX functions)     | 0% (0/2 Windows functions)  | 0% (0/2 Macintosh functions)   |
-| [diabpsx/source/themes.cpp](diabpsx/source/themes.cpp)                       | 100% (31/31 PSX functions)   | 0% (0/31 Windows functions) | 0% (0/31 Macintosh functions)  |
-| [diabpsx/source/town.cpp](diabpsx/source/town.cpp)                           | 100% (8/8 PSX functions)     | 0% (0/8 Windows functions)  | 0% (0/8 Macintosh functions)   |
-| [diabpsx/source/towners.cpp](diabpsx/source/towners.cpp)                     | 100% (33/33 PSX functions)   | 0% (0/33 Windows functions) | 0% (0/33 Macintosh functions)  |
-| [diabpsx/source/trigs.cpp](diabpsx/source/trigs.cpp)                         | 100% (22/22 PSX functions)   | 0% (0/22 Windows functions) | 0% (0/22 Macintosh functions)  |
-| [diabpsx/source/version.cpp](diabpsx/source/version.cpp)                     | 100% (5/5 PSX functions)     | 0% (0/5 Windows functions)  | 0% (0/5 Macintosh functions)   |
+| Source path                                                                  | PSX progress             | Windows progress     | Macintosh progress   |
+|------------------------------------------------------------------------------|--------------------------|----------------------|----------------------|
+| [diabpsx/glibdev/source/gal.c](diabpsx/glibdev/source/gal.c)                 | 100% (70/70 functions)   | 0% (0/70 functions)  | 0% (0/70 functions)  |
+| [diabpsx/glibdev/source/gmain.c](diabpsx/glibdev/source/gmain.c)             | 100% (1/1 functions)     | 0% (0/1 functions)   | 0% (0/1 functions)   |
+| [diabpsx/glibdev/source/gutils.c](diabpsx/glibdev/source/gutils.c)           | 100% (6/6 functions)     | 0% (0/6 functions)   | 0% (0/6 functions)   |
+| [diabpsx/glibdev/source/psx/gdebug.c](diabpsx/glibdev/source/psx/gdebug.c)   | 100% (9/9 functions)     | 0% (0/9 functions)   | 0% (0/9 functions)   |
+| [diabpsx/glibdev/source/psx/gsys.c](diabpsx/glibdev/source/psx/gsys.c)       | 100% (7/7 functions)     | 0% (0/7 functions)   | 0% (0/7 functions)   |
+| [diabpsx/glibdev/source/psx/gtimsys.c](diabpsx/glibdev/source/psx/gtimsys.c) | 100% (3/3 functions)     | 0% (0/3 functions)   | 0% (0/3 functions)   |
+| [diabpsx/glibdev/source/psx/vrip.c](diabpsx/glibdev/source/psx/vrip.c)       | 100% (2/2 functions)     | 0% (0/2 functions)   | 0% (0/2 functions)   |
+| [diabpsx/glibdev/source/tasker.c](diabpsx/glibdev/source/tasker.c)           | 100% (41/41 functions)   | 0% (0/41 functions)  | 0% (0/41 functions)  |
+| [diabpsx/glibdev/source/tick.c](diabpsx/glibdev/source/tick.c)               | 100% (7/7 functions)     | 0% (0/7 functions)   | 0% (0/7 functions)   |
+| [diabpsx/psxsrc/async.cpp](diabpsx/psxsrc/async.cpp)                         | 100% (6/6 functions)     | 0% (0/6 functions)   | 0% (0/6 functions)   |
+| [diabpsx/psxsrc/attract.cpp](diabpsx/psxsrc/attract.cpp)                     | 100% (3/3 functions)     | 0% (0/3 functions)   | 0% (0/3 functions)   |
+| [diabpsx/psxsrc/biglump.cpp](diabpsx/psxsrc/biglump.cpp)                     | 100% (17/17 functions)   | 0% (0/17 functions)  | 0% (0/17 functions)  |
+| [diabpsx/psxsrc/bird.cpp](diabpsx/psxsrc/bird.cpp)                           | 100% (26/26 functions)   | 0% (0/26 functions)  | 0% (0/26 functions)  |
+| [diabpsx/psxsrc/block.cpp](diabpsx/psxsrc/block.cpp)                         | 100% (50/50 functions)   | 0% (0/50 functions)  | 0% (0/50 functions)  |
+| [diabpsx/psxsrc/block.h](diabpsx/psxsrc/block.h)                             | 100% (11/11 functions)   | 0% (0/11 functions)  | 0% (0/11 functions)  |
+| [diabpsx/psxsrc/cardcore.cpp](diabpsx/psxsrc/cardcore.cpp)                   | 100% (21/21 functions)   | 0% (0/21 functions)  | 0% (0/21 functions)  |
+| [diabpsx/psxsrc/cdio.cpp](diabpsx/psxsrc/cdio.cpp)                           | 100% (9/9 functions)     | 0% (0/9 functions)   | 0% (0/9 functions)   |
+| [diabpsx/psxsrc/corefmv.cpp](diabpsx/psxsrc/corefmv.cpp)                     | 100% (2/2 functions)     | 0% (0/2 functions)   | 0% (0/2 functions)   |
+| [diabpsx/psxsrc/cplayer.cpp](diabpsx/psxsrc/cplayer.cpp)                     | 100% (12/12 functions)   | 0% (0/12 functions)  | 0% (0/12 functions)  |
+| [diabpsx/psxsrc/cplayer.h](diabpsx/psxsrc/cplayer.h)                         | 100% (6/6 functions)     | 0% (0/6 functions)   | 0% (0/6 functions)   |
+| [diabpsx/psxsrc/credits.cpp](diabpsx/psxsrc/credits.cpp)                     | 100% (6/6 functions)     | 0% (0/6 functions)   | 0% (0/6 functions)   |
+| [diabpsx/psxsrc/ctrl.cpp](diabpsx/psxsrc/ctrl.cpp)                           | 100% (17/17 functions)   | 0% (0/17 functions)  | 0% (0/17 functions)  |
+| [diabpsx/psxsrc/datio.cpp](diabpsx/psxsrc/datio.cpp)                         | 100% (7/7 functions)     | 0% (0/7 functions)   | 0% (0/7 functions)   |
+| [diabpsx/psxsrc/davel.cpp](diabpsx/psxsrc/davel.cpp)                         | 100% (29/29 functions)   | 0% (0/29 functions)  | 0% (0/29 functions)  |
+| [diabpsx/psxsrc/daveo.cpp](diabpsx/psxsrc/daveo.cpp)                         | 100% (14/14 functions)   | 0% (0/14 functions)  | 0% (0/14 functions)  |
+| [diabpsx/psxsrc/decomp.cpp](diabpsx/psxsrc/decomp.cpp)                       | 100% (6/6 functions)     | 0% (0/6 functions)   | 0% (0/6 functions)   |
+| [diabpsx/psxsrc/dialog.cpp](diabpsx/psxsrc/dialog.cpp)                       | 100% (9/9 functions)     | 0% (0/9 functions)   | 0% (0/9 functions)   |
+| [diabpsx/psxsrc/dialog.h](diabpsx/psxsrc/dialog.h)                           | 100% (5/5 functions)     | 0% (0/5 functions)   | 0% (0/5 functions)   |
+| [diabpsx/psxsrc/dlg.cpp](diabpsx/psxsrc/dlg.cpp)                             | 100% (25/25 functions)   | 0% (0/25 functions)  | 0% (0/25 functions)  |
+| [diabpsx/psxsrc/fe.cpp](diabpsx/psxsrc/fe.cpp)                               | 100% (41/41 functions)   | 0% (0/41 functions)  | 0% (0/41 functions)  |
+| [diabpsx/psxsrc/fileio.cpp](diabpsx/psxsrc/fileio.cpp)                       | 100% (15/15 functions)   | 0% (0/15 functions)  | 0% (0/15 functions)  |
+| [diabpsx/psxsrc/fmv.cpp](diabpsx/psxsrc/fmv.cpp)                             | 100% (43/43 functions)   | 0% (0/43 functions)  | 0% (0/43 functions)  |
+| [diabpsx/psxsrc/gameonly.cpp](diabpsx/psxsrc/gameonly.cpp)                   | 100% (1/1 functions)     | 0% (0/1 functions)   | 0% (0/1 functions)   |
+| [diabpsx/psxsrc/garyl.cpp](diabpsx/psxsrc/garyl.cpp)                         | 100% (3/3 functions)     | 0% (0/3 functions)   | 0% (0/3 functions)   |
+| [diabpsx/psxsrc/glue.cpp](diabpsx/psxsrc/glue.cpp)                           | 100% (25/25 functions)   | 0% (0/25 functions)  | 0% (0/25 functions)  |
+| [diabpsx/psxsrc/gman.cpp](diabpsx/psxsrc/gman.cpp)                           | 100% (60/60 functions)   | 0% (0/60 functions)  | 0% (0/60 functions)  |
+| [diabpsx/psxsrc/gman.h](diabpsx/psxsrc/gman.h)                               | 100% (20/20 functions)   | 0% (0/20 functions)  | 0% (0/20 functions)  |
+| [diabpsx/psxsrc/gpanel.cpp](diabpsx/psxsrc/gpanel.cpp)                       | 100% (10/10 functions)   | 0% (0/10 functions)  | 0% (0/10 functions)  |
+| [diabpsx/psxsrc/gpuq.cpp](diabpsx/psxsrc/gpuq.cpp)                           | 100% (7/7 functions)     | 0% (0/7 functions)   | 0% (0/7 functions)   |
+| [diabpsx/psxsrc/graham.cpp](diabpsx/psxsrc/graham.cpp)                       | 100% (2/2 functions)     | 0% (0/2 functions)   | 0% (0/2 functions)   |
+| [diabpsx/psxsrc/kanji.cpp](diabpsx/psxsrc/kanji.cpp)                         | 100% (18/18 functions)   | 0% (0/18 functions)  | 0% (0/18 functions)  |
+| [diabpsx/psxsrc/lambo.cpp](diabpsx/psxsrc/lambo.cpp)                         | 100% (2/2 functions)     | 0% (0/2 functions)   | 0% (0/2 functions)   |
+| [diabpsx/psxsrc/loading.cpp](diabpsx/psxsrc/loading.cpp)                     | 100% (11/11 functions)   | 0% (0/11 functions)  | 0% (0/11 functions)  |
+| [diabpsx/psxsrc/lznp.cpp](diabpsx/psxsrc/lznp.cpp)                           | 100% (1/1 functions)     | 0% (0/1 functions)   | 0% (0/1 functions)   |
+| [diabpsx/psxsrc/main.cpp](diabpsx/psxsrc/main.cpp)                           | 100% (5/5 functions)     | 0% (0/5 functions)   | 0% (0/5 functions)   |
+| [diabpsx/psxsrc/mem.cpp](diabpsx/psxsrc/mem.cpp)                             | 100% (4/4 functions)     | 0% (0/4 functions)   | 0% (0/4 functions)   |
+| [diabpsx/psxsrc/memcard.cpp](diabpsx/psxsrc/memcard.cpp)                     | 100% (16/16 functions)   | 0% (0/16 functions)  | 0% (0/16 functions)  |
+| [diabpsx/psxsrc/monsview.cpp](diabpsx/psxsrc/monsview.cpp)                   | 100% (1/1 functions)     | 0% (0/1 functions)   | 0% (0/1 functions)   |
+| [diabpsx/psxsrc/options.cpp](diabpsx/psxsrc/options.cpp)                     | 100% (25/25 functions)   | 0% (0/25 functions)  | 0% (0/25 functions)  |
+| [diabpsx/psxsrc/overlay.cpp](diabpsx/psxsrc/overlay.cpp)                     | 100% (14/14 functions)   | 0% (0/14 functions)  | 0% (0/14 functions)  |
+| [diabpsx/psxsrc/padfuncs.cpp](diabpsx/psxsrc/padfuncs.cpp)                   | 100% (40/40 functions)   | 0% (0/40 functions)  | 0% (0/40 functions)  |
+| [diabpsx/psxsrc/pads.cpp](diabpsx/psxsrc/pads.cpp)                           | 100% (11/11 functions)   | 0% (0/11 functions)  | 0% (0/11 functions)  |
+| [diabpsx/psxsrc/pads.h](diabpsx/psxsrc/pads.h)                               | 100% (11/11 functions)   | 0% (0/11 functions)  | 0% (0/11 functions)  |
+| [diabpsx/psxsrc/pak.cpp](diabpsx/psxsrc/pak.cpp)                             | 100% (4/4 functions)     | 0% (0/4 functions)   | 0% (0/4 functions)   |
+| [diabpsx/psxsrc/pause.cpp](diabpsx/psxsrc/pause.cpp)                         | 100% (26/26 functions)   | 0% (0/26 functions)  | 0% (0/26 functions)  |
+| [diabpsx/psxsrc/pcio.cpp](diabpsx/psxsrc/pcio.cpp)                           | 100% (7/7 functions)     | 0% (0/7 functions)   | 0% (0/7 functions)   |
+| [diabpsx/psxsrc/pregame.cpp](diabpsx/psxsrc/pregame.cpp)                     | 100% (1/1 functions)     | 0% (0/1 functions)   | 0% (0/1 functions)   |
+| [diabpsx/psxsrc/presonly.cpp](diabpsx/psxsrc/presonly.cpp)                   | 100% (1/1 functions)     | 0% (0/1 functions)   | 0% (0/1 functions)   |
+| [diabpsx/psxsrc/primpool.cpp](diabpsx/psxsrc/primpool.cpp)                   | 100% (19/19 functions)   | 0% (0/19 functions)  | 0% (0/19 functions)  |
+| [diabpsx/psxsrc/primpool.h](diabpsx/psxsrc/primpool.h)                       | 100% (7/7 functions)     | 0% (0/7 functions)   | 0% (0/7 functions)   |
+| [diabpsx/psxsrc/printy.cpp](diabpsx/psxsrc/printy.cpp)                       | 100% (13/13 functions)   | 0% (0/13 functions)  | 0% (0/13 functions)  |
+| [diabpsx/psxsrc/printy.h](diabpsx/psxsrc/printy.h)                           | 100% (5/5 functions)     | 0% (0/5 functions)   | 0% (0/5 functions)   |
+| [diabpsx/psxsrc/prof.cpp](diabpsx/psxsrc/prof.cpp)                           | 100% (10/10 functions)   | 0% (0/10 functions)  | 0% (0/10 functions)  |
+| [diabpsx/psxsrc/psxhelp.cpp](diabpsx/psxsrc/psxhelp.cpp)                     | 100% (9/9 functions)     | 0% (0/9 functions)   | 0% (0/9 functions)   |
+| [diabpsx/psxsrc/psxmsg.cpp](diabpsx/psxsrc/psxmsg.cpp)                       | 100% (15/15 functions)   | 0% (0/15 functions)  | 0% (0/15 functions)  |
+| [diabpsx/psxsrc/scratch.cpp](diabpsx/psxsrc/scratch.cpp)                     | 100% (17/17 functions)   | 0% (0/17 functions)  | 0% (0/17 functions)  |
+| [diabpsx/psxsrc/sndbank.cpp](diabpsx/psxsrc/sndbank.cpp)                     | 100% (12/12 functions)   | 0% (0/12 functions)  | 0% (0/12 functions)  |
+| [diabpsx/psxsrc/spltargt.cpp](diabpsx/psxsrc/spltargt.cpp)                   | 100% (14/14 functions)   | 0% (0/14 functions)  | 0% (0/14 functions)  |
+| [diabpsx/psxsrc/spltargt.h](diabpsx/psxsrc/spltargt.h)                       | 100% (1/1 functions)     | 0% (0/1 functions)   | 0% (0/1 functions)   |
+| [diabpsx/psxsrc/stream.cpp](diabpsx/psxsrc/stream.cpp)                       | 100% (21/21 functions)   | 0% (0/21 functions)  | 0% (0/21 functions)  |
+| [diabpsx/psxsrc/sysinit.cpp](diabpsx/psxsrc/sysinit.cpp)                     | 100% (4/4 functions)     | 0% (0/4 functions)   | 0% (0/4 functions)   |
+| [diabpsx/psxsrc/sysobj.cpp](diabpsx/psxsrc/sysobj.cpp)                       | 100% (4/4 functions)     | 0% (0/4 functions)   | 0% (0/4 functions)   |
+| [diabpsx/psxsrc/tims.cpp](diabpsx/psxsrc/tims.cpp)                           | 100% (1/1 functions)     | 0% (0/1 functions)   | 0% (0/1 functions)   |
+| [diabpsx/psxsrc/titlescr.cpp](diabpsx/psxsrc/titlescr.cpp)                   | 100% (2/2 functions)     | 0% (0/2 functions)   | 0% (0/2 functions)   |
+| [diabpsx/psxsrc/tmalloc.cpp](diabpsx/psxsrc/tmalloc.cpp)                     | 100% (4/4 functions)     | 0% (0/4 functions)   | 0% (0/4 functions)   |
+| [diabpsx/psxsrc/tony.cpp](diabpsx/psxsrc/tony.cpp)                           | 100% (17/17 functions)   | 0% (0/17 functions)  | 0% (0/17 functions)  |
+| [diabpsx/psxsrc/tutils.h](diabpsx/psxsrc/tutils.h)                           | 100% (10/10 functions)   | 0% (0/10 functions)  | 0% (0/10 functions)  |
+| [diabpsx/psxsrc/vid.cpp](diabpsx/psxsrc/vid.cpp)                             | 100% (13/13 functions)   | 0% (0/13 functions)  | 0% (0/13 functions)  |
+| [diabpsx/source/automap.cpp](diabpsx/source/automap.cpp)                     | 100% (17/17 functions)   | 0% (0/17 functions)  | 0% (0/17 functions)  |
+| [diabpsx/source/choosem.cpp](diabpsx/source/choosem.cpp)                     | 100% (7/7 functions)     | 0% (0/7 functions)   | 0% (0/7 functions)   |
+| [diabpsx/source/compmap.cpp](diabpsx/source/compmap.cpp)                     | 100% (16/16 functions)   | 0% (0/16 functions)  | 0% (0/16 functions)  |
+| [diabpsx/source/compmap.h](diabpsx/source/compmap.h)                         | 100% (6/6 functions)     | 0% (0/6 functions)   | 0% (0/6 functions)   |
+| [diabpsx/source/control.cpp](diabpsx/source/control.cpp)                     | 100% (38/38 functions)   | 0% (0/38 functions)  | 0% (0/38 functions)  |
+| [diabpsx/source/coreauto.cpp](diabpsx/source/coreauto.cpp)                   | 100% (2/2 functions)     | 0% (0/2 functions)   | 0% (0/2 functions)   |
+| [diabpsx/source/coreinv.cpp](diabpsx/source/coreinv.cpp)                     | 100% (1/1 functions)     | 0% (0/1 functions)   | 0% (0/1 functions)   |
+| [diabpsx/source/coremon.cpp](diabpsx/source/coremon.cpp)                     | 100% (17/17 functions)   | 0% (0/17 functions)  | 0% (0/17 functions)  |
+| [diabpsx/source/cursor.cpp](diabpsx/source/cursor.cpp)                       | 100% (9/9 functions)     | 0% (0/9 functions)   | 0% (0/9 functions)   |
+| [diabpsx/source/dead.cpp](diabpsx/source/dead.cpp)                           | 100% (2/2 functions)     | 0% (0/2 functions)   | 0% (0/2 functions)   |
+| [diabpsx/source/diablo.cpp](diabpsx/source/diablo.cpp)                       | 100% (33/33 functions)   | 0% (0/33 functions)  | 0% (0/33 functions)  |
+| [diabpsx/source/dpiece.cpp](diabpsx/source/dpiece.cpp)                       | 100% (20/20 functions)   | 0% (0/20 functions)  | 0% (0/20 functions)  |
+| [diabpsx/source/drlg_l1.cpp](diabpsx/source/drlg_l1.cpp)                     | 100% (40/40 functions)   | 0% (0/40 functions)  | 0% (0/40 functions)  |
+| [diabpsx/source/drlg_l2.cpp](diabpsx/source/drlg_l2.cpp)                     | 100% (36/36 functions)   | 0% (0/36 functions)  | 0% (0/36 functions)  |
+| [diabpsx/source/drlg_l3.cpp](diabpsx/source/drlg_l3.cpp)                     | 100% (37/37 functions)   | 0% (0/37 functions)  | 0% (0/37 functions)  |
+| [diabpsx/source/drlg_l4.cpp](diabpsx/source/drlg_l4.cpp)                     | 100% (36/36 functions)   | 0% (0/36 functions)  | 0% (0/36 functions)  |
+| [diabpsx/source/effects.cpp](diabpsx/source/effects.cpp)                     | 100% (20/20 functions)   | 0% (0/20 functions)  | 0% (0/20 functions)  |
+| [diabpsx/source/engine.cpp](diabpsx/source/engine.cpp)                       | 100% (8/8 functions)     | 0% (0/8 functions)   | 0% (0/8 functions)   |
+| [diabpsx/source/error.cpp](diabpsx/source/error.cpp)                         | 100% (3/3 functions)     | 0% (0/3 functions)   | 0% (0/3 functions)   |
+| [diabpsx/source/gamemenu.cpp](diabpsx/source/gamemenu.cpp)                   | 100% (1/1 functions)     | 0% (0/1 functions)   | 0% (0/1 functions)   |
+| [diabpsx/source/gameover.cpp](diabpsx/source/gameover.cpp)                   | 100% (4/4 functions)     | 0% (0/4 functions)   | 0% (0/4 functions)   |
+| [diabpsx/source/gamepad.cpp](diabpsx/source/gamepad.cpp)                     | 100% (37/37 functions)   | 0% (0/37 functions)  | 0% (0/37 functions)  |
+| [diabpsx/source/gendung.cpp](diabpsx/source/gendung.cpp)                     | 100% (16/16 functions)   | 0% (0/16 functions)  | 0% (0/16 functions)  |
+| [diabpsx/source/gwin.cpp](diabpsx/source/gwin.cpp)                           | 100% (5/5 functions)     | 0% (0/5 functions)   | 0% (0/5 functions)   |
+| [diabpsx/source/interfac.cpp](diabpsx/source/interfac.cpp)                   | 100% (2/2 functions)     | 0% (0/2 functions)   | 0% (0/2 functions)   |
+| [diabpsx/source/inv.cpp](diabpsx/source/inv.cpp)                             | 100% (51/51 functions)   | 0% (0/51 functions)  | 0% (0/51 functions)  |
+| [diabpsx/source/itemdat.cpp](diabpsx/source/itemdat.cpp)                     | 100% (1/1 functions)     | 0% (0/1 functions)   | 0% (0/1 functions)   |
+| [diabpsx/source/items.cpp](diabpsx/source/items.cpp)                         | 100% (106/106 functions) | 0% (0/106 functions) | 0% (0/106 functions) |
+| [diabpsx/source/lang.cpp](diabpsx/source/lang.cpp)                           | 100% (9/9 functions)     | 0% (0/9 functions)   | 0% (0/9 functions)   |
+| [diabpsx/source/lighting.cpp](diabpsx/source/lighting.cpp)                   | 100% (28/28 functions)   | 0% (0/28 functions)  | 0% (0/28 functions)  |
+| [diabpsx/source/loadsave.cpp](diabpsx/source/loadsave.cpp)                   | 100% (23/23 functions)   | 0% (0/23 functions)  | 0% (0/23 functions)  |
+| [diabpsx/source/minitext.cpp](diabpsx/source/minitext.cpp)                   | 100% (11/11 functions)   | 0% (0/11 functions)  | 0% (0/11 functions)  |
+| [diabpsx/source/misdat.cpp](diabpsx/source/misdat.cpp)                       | 100% (2/2 functions)     | 0% (0/2 functions)   | 0% (0/2 functions)   |
+| [diabpsx/source/misprint.cpp](diabpsx/source/misprint.cpp)                   | 100% (31/31 functions)   | 0% (0/31 functions)  | 0% (0/31 functions)  |
+| [diabpsx/source/missiles.cpp](diabpsx/source/missiles.cpp)                   | 100% (114/114 functions) | 0% (0/114 functions) | 0% (0/114 functions) |
+| [diabpsx/source/mlist.cpp](diabpsx/source/mlist.cpp)                         | 100% (5/5 functions)     | 0% (0/5 functions)   | 0% (0/5 functions)   |
+| [diabpsx/source/monster.cpp](diabpsx/source/monster.cpp)                     | 100% (105/105 functions) | 0% (0/105 functions) | 0% (0/105 functions) |
+| [diabpsx/source/msg.cpp](diabpsx/source/msg.cpp)                             | 100% (109/109 functions) | 0% (0/109 functions) | 0% (0/109 functions) |
+| [diabpsx/source/multi.cpp](diabpsx/source/multi.cpp)                         | 100% (5/5 functions)     | 0% (0/5 functions)   | 0% (0/5 functions)   |
+| [diabpsx/source/objects.cpp](diabpsx/source/objects.cpp)                     | 100% (93/93 functions)   | 0% (0/93 functions)  | 0% (0/93 functions)  |
+| [diabpsx/source/objprint.cpp](diabpsx/source/objprint.cpp)                   | 100% (24/24 functions)   | 0% (0/24 functions)  | 0% (0/24 functions)  |
+| [diabpsx/source/palette.cpp](diabpsx/source/palette.cpp)                     | 100% (13/13 functions)   | 0% (0/13 functions)  | 0% (0/13 functions)  |
+| [diabpsx/source/pfile.cpp](diabpsx/source/pfile.cpp)                         | 100% (3/3 functions)     | 0% (0/3 functions)   | 0% (0/3 functions)   |
+| [diabpsx/source/player.cpp](diabpsx/source/player.cpp)                       | 100% (130/130 functions) | 0% (0/130 functions) | 0% (0/130 functions) |
+| [diabpsx/source/portal.cpp](diabpsx/source/portal.cpp)                       | 100% (10/10 functions)   | 0% (0/10 functions)  | 0% (0/10 functions)  |
+| [diabpsx/source/preauto.cpp](diabpsx/source/preauto.cpp)                     | 100% (2/2 functions)     | 0% (0/2 functions)   | 0% (0/2 functions)   |
+| [diabpsx/source/preinv.cpp](diabpsx/source/preinv.cpp)                       | 100% (1/1 functions)     | 0% (0/1 functions)   | 0% (0/1 functions)   |
+| [diabpsx/source/premiss.cpp](diabpsx/source/premiss.cpp)                     | 100% (1/1 functions)     | 0% (0/1 functions)   | 0% (0/1 functions)   |
+| [diabpsx/source/premon.cpp](diabpsx/source/premon.cpp)                       | 100% (19/19 functions)   | 0% (0/19 functions)  | 0% (0/19 functions)  |
+| [diabpsx/source/premsg.cpp](diabpsx/source/premsg.cpp)                       | 100% (3/3 functions)     | 0% (0/3 functions)   | 0% (0/3 functions)   |
+| [diabpsx/source/preobj.cpp](diabpsx/source/preobj.cpp)                       | 100% (61/61 functions)   | 0% (0/61 functions)  | 0% (0/61 functions)  |
+| [diabpsx/source/preport.cpp](diabpsx/source/preport.cpp)                     | 100% (1/1 functions)     | 0% (0/1 functions)   | 0% (0/1 functions)   |
+| [diabpsx/source/prequest.cpp](diabpsx/source/prequest.cpp)                   | 100% (9/9 functions)     | 0% (0/9 functions)   | 0% (0/9 functions)   |
+| [diabpsx/source/prestore.cpp](diabpsx/source/prestore.cpp)                   | 100% (2/2 functions)     | 0% (0/2 functions)   | 0% (0/2 functions)   |
+| [diabpsx/source/pretrigs.cpp](diabpsx/source/pretrigs.cpp)                   | 100% (9/9 functions)     | 0% (0/9 functions)   | 0% (0/9 functions)   |
+| [diabpsx/source/quests.cpp](diabpsx/source/quests.cpp)                       | 100% (20/20 functions)   | 0% (0/20 functions)  | 0% (0/20 functions)  |
+| [diabpsx/source/scrollrt.cpp](diabpsx/source/scrollrt.cpp)                   | 100% (2/2 functions)     | 0% (0/2 functions)   | 0% (0/2 functions)   |
+| [diabpsx/source/setmaps.cpp](diabpsx/source/setmaps.cpp)                     | 100% (6/6 functions)     | 0% (0/6 functions)   | 0% (0/6 functions)   |
+| [diabpsx/source/sound.cpp](diabpsx/source/sound.cpp)                         | 100% (9/9 functions)     | 0% (0/9 functions)   | 0% (0/9 functions)   |
+| [diabpsx/source/spells.cpp](diabpsx/source/spells.cpp)                       | 100% (6/6 functions)     | 0% (0/6 functions)   | 0% (0/6 functions)   |
+| [diabpsx/source/stores.cpp](diabpsx/source/stores.cpp)                       | 100% (97/97 functions)   | 0% (0/97 functions)  | 0% (0/97 functions)  |
+| [diabpsx/source/storm.cpp](diabpsx/source/storm.cpp)                         | 100% (2/2 functions)     | 0% (0/2 functions)   | 0% (0/2 functions)   |
+| [diabpsx/source/storm.h](diabpsx/source/storm.h)                             | 100% (1/1 functions)     | 0% (0/1 functions)   | 0% (0/1 functions)   |
+| [diabpsx/source/testcode.cpp](diabpsx/source/testcode.cpp)                   | 100% (2/2 functions)     | 0% (0/2 functions)   | 0% (0/2 functions)   |
+| [diabpsx/source/themes.cpp](diabpsx/source/themes.cpp)                       | 100% (31/31 functions)   | 0% (0/31 functions)  | 0% (0/31 functions)  |
+| [diabpsx/source/town.cpp](diabpsx/source/town.cpp)                           | 100% (8/8 functions)     | 0% (0/8 functions)   | 0% (0/8 functions)   |
+| [diabpsx/source/towners.cpp](diabpsx/source/towners.cpp)                     | 100% (33/33 functions)   | 0% (0/33 functions)  | 0% (0/33 functions)  |
+| [diabpsx/source/trigs.cpp](diabpsx/source/trigs.cpp)                         | 100% (22/22 functions)   | 0% (0/22 functions)  | 0% (0/22 functions)  |
+| [diabpsx/source/version.cpp](diabpsx/source/version.cpp)                     | 100% (5/5 functions)     | 0% (0/5 functions)   | 0% (0/5 functions)   |
