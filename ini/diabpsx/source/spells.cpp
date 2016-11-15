@@ -27,4 +27,3 @@ mac_109  =
 psx_jp   = 0x80077AB8
 win_109b =
 mac_109  =
-

@@ -77,4 +77,3 @@ mac_109  =
 psx_jp   = 0x8015BBC8
 win_109b =
 mac_109  =
-
