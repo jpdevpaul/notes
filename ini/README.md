@@ -1,6 +1,6 @@
 | Source path                                                          | PSX progress               | Windows progress       | Macintosh progress    |
 |----------------------------------------------------------------------|----------------------------|------------------------|-----------------------|
-| Total                                                                | 100% (2688/2688 functions) | 1% (31/2688 functions) | 0% (0/2688 functions) |
+| Total                                                                | 100% (2688/2688 functions) | 2% (64/2688 functions) | 0% (0/2688 functions) |
 | [glibdev/source/gal.c](diabpsx/glibdev/source/gal.c)                 | 100% (70/70 functions)     | 0% (0/70 functions)    | 0% (0/70 functions)   |
 | [glibdev/source/gmain.c](diabpsx/glibdev/source/gmain.c)             | 100% (1/1 functions)       | 0% (0/1 functions)     | 0% (0/1 functions)    |
 | [glibdev/source/gutils.c](diabpsx/glibdev/source/gutils.c)           | 100% (6/6 functions)       | 0% (0/6 functions)     | 0% (0/6 functions)    |
@@ -145,6 +145,6 @@
 | [source/testcode.cpp](diabpsx/source/testcode.cpp)                   | 100% (2/2 functions)       | 0% (0/2 functions)     | 0% (0/2 functions)    |
 | [source/themes.cpp](diabpsx/source/themes.cpp)                       | 100% (31/31 functions)     | 100% (31/31 functions) | 0% (0/31 functions)   |
 | [source/town.cpp](diabpsx/source/town.cpp)                           | 100% (8/8 functions)       | 0% (0/8 functions)     | 0% (0/8 functions)    |
-| [source/towners.cpp](diabpsx/source/towners.cpp)                     | 100% (33/33 functions)     | 0% (0/33 functions)    | 0% (0/33 functions)   |
+| [source/towners.cpp](diabpsx/source/towners.cpp)                     | 100% (33/33 functions)     | 100% (33/33 functions) | 0% (0/33 functions)   |
 | [source/trigs.cpp](diabpsx/source/trigs.cpp)                         | 100% (22/22 functions)     | 0% (0/22 functions)    | 0% (0/22 functions)   |
 | [source/version.cpp](diabpsx/source/version.cpp)                     | 100% (5/5 functions)       | 0% (0/5 functions)     | 0% (0/5 functions)    |
