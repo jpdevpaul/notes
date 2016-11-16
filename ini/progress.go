@@ -25,6 +25,10 @@ func main() {
 	fmt.Fprintln(w, "|-\t|-\t|-\t|\t|\t")
 	var npsxtotal, nwintotal, nmactotal, total int
 	for _, path := range paths {
+		if strings.HasPrefix(path, "diabpsx/glibdev/") {
+			// Ignore glibdev source files as they are PSX specific.
+			continue
+		}
 		npsx, nwin, nmac, n, err := progress(w, path)
 		if err != nil {
 			log.Fatal(err)
