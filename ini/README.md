@@ -1,6 +1,6 @@
 | Source path                                        | PSX progress               | Windows progress        | Macintosh progress    |
 |----------------------------------------------------|----------------------------|-------------------------|-----------------------|
-| Total                                              | 100% (2542/2542 functions) | 4% (102/2542 functions) | 0% (0/2542 functions) |
+| Total                                              | 100% (2542/2542 functions) | 5% (135/2542 functions) | 0% (0/2542 functions) |
 | [psxsrc/async.cpp](diabpsx/psxsrc/async.cpp)       | 100% (6/6 functions)       | 0% (0/6 functions)      | 0% (0/6 functions)    |
 | [psxsrc/attract.cpp](diabpsx/psxsrc/attract.cpp)   | 100% (3/3 functions)       | 0% (0/3 functions)      | 0% (0/3 functions)    |
 | [psxsrc/biglump.cpp](diabpsx/psxsrc/biglump.cpp)   | 100% (17/17 functions)     | 0% (0/17 functions)     | 0% (0/17 functions)   |
@@ -97,7 +97,7 @@
 | [source/interfac.cpp](diabpsx/source/interfac.cpp) | 100% (2/2 functions)       | 0% (0/2 functions)      | 0% (0/2 functions)    |
 | [source/inv.cpp](diabpsx/source/inv.cpp)           | 100% (51/51 functions)     | 0% (0/51 functions)     | 0% (0/51 functions)   |
 | [source/itemdat.cpp](diabpsx/source/itemdat.cpp)   | 100% (1/1 functions)       | 0% (0/1 functions)      | 0% (0/1 functions)    |
-| [source/items.cpp](diabpsx/source/items.cpp)       | 100% (106/106 functions)   | 0% (0/106 functions)    | 0% (0/106 functions)  |
+| [source/items.cpp](diabpsx/source/items.cpp)       | 100% (106/106 functions)   | 31% (33/106 functions)  | 0% (0/106 functions)  |
 | [source/lang.cpp](diabpsx/source/lang.cpp)         | 100% (9/9 functions)       | 0% (0/9 functions)      | 0% (0/9 functions)    |
 | [source/lighting.cpp](diabpsx/source/lighting.cpp) | 100% (28/28 functions)     | 0% (0/28 functions)     | 0% (0/28 functions)   |
 | [source/loadsave.cpp](diabpsx/source/loadsave.cpp) | 100% (23/23 functions)     | 0% (0/23 functions)     | 0% (0/23 functions)   |

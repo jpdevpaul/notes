@@ -1,46 +1,46 @@
 [InitItemGFX__Fv]
 psx_jp   = 0x8003E24C
-win_109b =
+win_109b = 0x0041F096
 mac_109  =
 
 [ItemPlace__Fii]
 psx_jp   = 0x8003E254
-win_109b =
+win_109b = 0x0041F0E8
 mac_109  =
 
 [AddInitItems__Fv]
 psx_jp   = 0x8003E2F0
-win_109b =
+win_109b = 0x0041F13A
 mac_109  =
 
 [InitItems__Fb]
 psx_jp   = 0x8003E4F8
-win_109b =
+win_109b = 0x0041F24E
 mac_109  =
 
 [CalcPlrItemVals__FiUc]
 psx_jp   = 0x8003E6B0
-win_109b =
+win_109b = 0x0041F320
 mac_109  =
 
 [CalcPlrScrolls__Fi]
 psx_jp   = 0x8003F130
-win_109b =
+win_109b = 0x0041F953
 mac_109  =
 
 [CalcPlrStaff__FP12PlayerStruct]
 psx_jp   = 0x8003F4B0
-win_109b =
+win_109b = 0x0041FA4A
 mac_109  =
 
 [CalcSelfItems__Fi]
 psx_jp   = 0x8003F57C
-win_109b =
+win_109b = 0x0041FA97
 mac_109  =
 
 [ItemMinStats__FPC12PlayerStructPC10ItemStruct]
 psx_jp   = 0x8003F6DC
-win_109b =
+win_109b = 0x0041FBF6
 mac_109  =
 
 [SetItemMinStats__FPC12PlayerStructP10ItemStruct]
@@ -50,122 +50,122 @@ mac_109  =
 
 [CalcPlrItemMin__Fi]
 psx_jp   = 0x8003F754
-win_109b =
+win_109b = 0x0041FB91
 mac_109  =
 
 [CalcPlrBookVals__Fi]
 psx_jp   = 0x8003F834
-win_109b =
+win_109b = 0x0041FC2C
 mac_109  =
 
 [CalcPlrInv__FiUc]
 psx_jp   = 0x8003FB18
-win_109b =
+win_109b = 0x0041FD3E
 mac_109  =
 
 [SetPlrHandItem__FP10ItemStructi]
 psx_jp   = 0x8003FBC8
-win_109b =
+win_109b = 0x0041FD98
 mac_109  =
 
 [GetPlrHandSeed__FP10ItemStruct]
 psx_jp   = 0x8003FCE0
-win_109b =
+win_109b = 0x0041FE98
 mac_109  =
 
 [GetGoldSeed__FiP10ItemStruct]
 psx_jp   = 0x8003FD0C
-win_109b =
+win_109b = 0x0041FEA4
 mac_109  =
 
 [SetPlrHandSeed__FP10ItemStructi]
 psx_jp   = 0x8003FE74
-win_109b =
+win_109b = 0x0041FF16
 mac_109  =
 
 [SetPlrHandGoldCurs__FP10ItemStruct]
 psx_jp   = 0x8003FE7C
-win_109b =
+win_109b = 0x0041FF19
 mac_109  =
 
 [CreatePlrItems__Fi]
 psx_jp   = 0x8003FEAC
-win_109b =
+win_109b = 0x0041FF4E
 mac_109  =
 
 [ItemSpaceOk__Fii]
 psx_jp   = 0x8004040C
-win_109b =
+win_109b = 0x004200F8
 mac_109  =
 
 [GetItemSpace__Fiic]
 psx_jp   = 0x8004068C
-win_109b =
+win_109b = 0x004201F2
 mac_109  =
 
 [GetSuperItemSpace__Fiic]
 psx_jp   = 0x800408A4
-win_109b =
+win_109b = 0x004202E8
 mac_109  =
 
 [GetSuperItemLoc__FiiRiT2]
 psx_jp   = 0x800409FC
-win_109b =
+win_109b = 0x00420376
 mac_109  =
 
 [CalcItemValue__Fi]
 psx_jp   = 0x80040AC4
-win_109b =
+win_109b = 0x004203E0
 mac_109  =
 
 [GetBookSpell__Fii]
 psx_jp   = 0x80040B7C
-win_109b =
+win_109b = 0x0042042C
 mac_109  =
 
 [GetStaffPower__FiiiUc]
 psx_jp   = 0x80040DDC
-win_109b =
+win_109b = 0x00420514
 mac_109  =
 
 [GetStaffSpell__FiiUc]
 psx_jp   = 0x80040FC4
-win_109b =
+win_109b = 0x004206E5
 mac_109  =
 
 [GetItemAttrs__Fiii]
 psx_jp   = 0x8004129C
-win_109b =
+win_109b = 0x0042084A
 mac_109  =
 
 [RndPL__Fii]
 psx_jp   = 0x8004180C
-win_109b =
+win_109b = 0x00420B17
 mac_109  =
 
 [PLVal__Fiiiii]
 psx_jp   = 0x80041840
-win_109b =
+win_109b = 0x00420B28
 mac_109  =
 
 [SaveItemPower__Fiiiiiii]
 psx_jp   = 0x800418B4
-win_109b =
+win_109b = 0x00420B68
 mac_109  =
 
 [GetItemPower__FiiilUc]
 psx_jp   = 0x80042FE4
-win_109b =
+win_109b = 0x004215EF
 mac_109  =
 
 [GetItemBonus__FiiiiUc]
 psx_jp   = 0x80043434
-win_109b =
+win_109b = 0x0042191C
 mac_109  =
 
 [SetupItem__Fi]
 psx_jp   = 0x80043530
-win_109b =
+win_109b = 0x004219C1
 mac_109  =
 
 [RndItem__Fi]
