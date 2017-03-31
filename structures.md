@@ -24,6 +24,102 @@ typedef struct {
 } GossipData;
 ```
 
+## Item
+
+```c
+// Item describes in-game state of any game item.
+typedef struct
+{
+    uint random_seed;
+    uint16_t unknown;
+    uint16_t reserved_0;
+    item_type type;
+    int row;
+    int col;
+    int drop_anim_update;
+    void *drop_cel_data;
+    int drop_frame_count;
+    int drop_cur_frame;
+    int drop_width;
+    int drop_x_offset;
+    int inactive;
+    item_drop_state drop_state;
+    uint8_t reserved_1;
+    uint16_t reserved_2;
+    int draw_quest_item;
+    int is_identified;
+    item_quality quality;
+    char unindentified_name[64];
+    char full_name[64];
+    item_equip_type equip_type;
+    item_category category;
+    uint8_t reserved_3;
+    item_inv_graphics_id inv_graphics_id;
+    int unindentified_price; // also represents number of gold pieces for item `gold`
+    int full_price;
+    int min_attack_damage;
+    int max_attack_damage;
+    int armor_class;
+    item_special_effect special_effect_flags; // bitmask
+    item_code code;
+    spell_id staff_spell_id;
+    int cur_staff_charges;
+    int max_staff_charges;
+    int cur_durability;
+    int max_durability; // if it equals 255 then item is indestructible
+    int percent_dmg_done_bonus;
+    int to_hit_bonus;
+    int armor_class_percent_bonus;
+    int strength_bonus;
+    int magic_bonus;
+    int dexterity_bonus;
+    int vitality_bonus;
+    int fire_resistance_bonus;
+    int lightning_resistance_bonus;
+    int magic_resistance_bonus;
+    int mana_bonus; // in Q26.6 fixed-point format (each displayed mana point equals 64)
+    int life_bonus; // in Q26.6 fixed-point format (each displayed health point equals 64)
+    int attack_damage_bonus;
+    int damage_taken_bonus;
+    int light_radius_bonus; // measured in 10% chunks
+    uint8_t spell_level_bonus;
+    uint8_t held_in_hand;
+    int16_t reserved_4;
+    unique_item_id unique_id;
+    int fire_damage_min;
+    int fire_damage_max;
+    int lightning_damage_min;
+    int lightning_damage_max;
+    int armor_penetration;
+    item_effect_type prefix_effect_type;
+    item_effect_type suffix_effect_type;
+    int16_t reserved_5;
+    int prefix_price;
+    int prefix_price_multiplier;
+    int suffix_price;
+    int suffix_price_multiplier;
+    uint8_t required_strength;
+    uint8_t reguired_magic;
+    uint8_t required_dexterity;
+    uint8_t required_vitality;
+    int is_equippable;
+    item_id id;
+    int reserved_6;
+} Item;
+```
+
+References:
+* https://github.com/sanctuary/notes/blob/master/enumerates.md#item_category
+* https://github.com/sanctuary/notes/blob/master/enumerates.md#item_code
+* https://github.com/sanctuary/notes/blob/master/enumerates.md#item_drop_state
+* https://github.com/sanctuary/notes/blob/master/enumerates.md#item_effect_type
+* https://github.com/sanctuary/notes/blob/master/enumerates.md#item_equip_type
+* https://github.com/sanctuary/notes/blob/master/enumerates.md#item_id
+* https://github.com/sanctuary/notes/blob/master/enumerates.md#item_inv_graphics_id
+* https://github.com/sanctuary/notes/blob/master/enumerates.md#item_quality
+* https://github.com/sanctuary/notes/blob/master/enumerates.md#item_special_effect
+* https://github.com/sanctuary/notes/blob/master/enumerates.md#item_type
+
 References:
 * https://github.com/sanctuary/notes/blob/master/enumerates.md#speech_id
 
