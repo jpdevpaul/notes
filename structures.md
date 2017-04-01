@@ -24,87 +24,151 @@ typedef struct {
 } GossipData;
 ```
 
+References:
+* https://github.com/sanctuary/notes/blob/master/enumerates.md#speech_id
+
 ## Item
 
 ```c
 // Item describes in-game state of any game item.
-typedef struct
+typedef struct // size = 0x170
 {
-    uint random_seed;
-    uint16_t unknown;
-    uint16_t reserved_0;
+    // offset 0000 (4 bytes)
+    uint seed;
+    // offset 0004 (2 bytes)
+    uint16_t CF;
+    // offset 0008 (4 bytes)
     item_type type;
-    int row;
+    // offset 000C (4 bytes)
     int col;
+    // offset 0010 (4 bytes)
+    int row;
+    // offset 0014 (4 bytes)
     int drop_anim_update;
+    // offset 0018 (4 bytes)
     void *drop_cel_data;
+    // offset 001C (4 bytes)
     int drop_frame_count;
-    int drop_cur_frame;
+    // offset 0020 (4 bytes)
+    int cur_drop_frame;
+    // offset 0024 (4 bytes)
     int drop_width;
+    // offset 0028 (4 bytes)
     int drop_x_offset;
-    int inactive;
+    // offset 002C (4 bytes)
+    int inactive; // unused in win 1.09b, used in win 1.00 debug.
+    // offset 0030 (1 byte)
     item_drop_state drop_state;
-    uint8_t reserved_1;
-    uint16_t reserved_2;
-    int draw_quest_item;
-    int is_identified;
+    // offset 0034 (4 bytes)
+    bool32_t draw_quest_item;
+    // offset 0038 (1 byte)
+    bool32_t is_identified;
+    // offset 003C (1 byte)
     item_quality quality;
+    // offset 003D (64 bytes)
     char unindentified_name[64];
+    // offset 007D (64 bytes)
     char full_name[64];
+    // offset 00BD (1 byte)
     item_equip_type equip_type;
+    // offset 00BE (1 byte)
     item_category category;
-    uint8_t reserved_3;
+    // offset 00C0 (4 bytes)
     item_inv_graphics_id inv_graphics_id;
+    // offset 00C4 (4 bytes)
     int unindentified_price; // also represents number of gold pieces for item `gold`
+    // offset 00C8 (4 bytes)
     int full_price;
+    // offset 00CC (4 bytes)
     int min_attack_damage;
+    // offset 00D0 (4 bytes)
     int max_attack_damage;
+    // offset 00D4 (4 bytes)
     int armor_class;
+    // offset 00D8 (4 bytes)
     item_special_effect special_effect_flags; // bitmask
+    // offset 00DC (4 bytes)
     item_code code;
-    spell_id staff_spell_id;
+    // offset 00E0 (4 bytes)
+    spell_id item_spell_id;
+    // offset 00E4 (4 bytes)
     int cur_staff_charges;
+    // offset 00E8 (4 bytes)
     int max_staff_charges;
+    // offset 00EC (4 bytes)
     int cur_durability;
+    // offset 00F0 (4 bytes)
     int max_durability; // if it equals 255 then item is indestructible
-    int percent_dmg_done_bonus;
+    // offset 00F4 (4 bytes)
+    int attack_damage_percent_bonus;
+    // offset 00F8 (4 bytes)
     int to_hit_bonus;
+    // offset 00FC (4 bytes)
     int armor_class_percent_bonus;
+    // offset 0100 (4 bytes)
     int strength_bonus;
+    // offset 0104 (4 bytes)
     int magic_bonus;
+    // offset 0108 (4 bytes)
     int dexterity_bonus;
+    // offset 010C (4 bytes)
     int vitality_bonus;
+    // offset 0110 (4 bytes)
     int fire_resistance_bonus;
+    // offset 0114 (4 bytes)
     int lightning_resistance_bonus;
+    // offset 0118 (4 bytes)
     int magic_resistance_bonus;
+    // offset 011C (4 bytes)
     int mana_bonus; // in Q26.6 fixed-point format (each displayed mana point equals 64)
+    // offset 0120 (4 bytes)
     int life_bonus; // in Q26.6 fixed-point format (each displayed health point equals 64)
+    // offset 0124 (4 bytes)
     int attack_damage_bonus;
+    // offset 0128 (4 bytes)
     int damage_taken_bonus;
+    // offset 012C (4 bytes)
     int light_radius_bonus; // measured in 10% chunks
+    // offset 0130 (1 byte)
     uint8_t spell_level_bonus;
-    uint8_t held_in_hand;
-    int16_t reserved_4;
+    // offset 0131 (1 byte)
+    bool8_t held_in_hand;
+    // offset 0134 (4 byte)
     unique_item_id unique_id;
+    // offset 0138 (4 byte)
     int fire_damage_min;
+    // offset 013C (4 byte)
     int fire_damage_max;
+    // offset 0140 (4 byte)
     int lightning_damage_min;
+    // offset 0144 (4 byte)
     int lightning_damage_max;
+    // offset 0148 (4 byte)
     int armor_penetration;
+    // offset 014C (4 byte)
     item_effect_type prefix_effect_type;
+    // offset 014D (4 byte)
     item_effect_type suffix_effect_type;
-    int16_t reserved_5;
+    // offset 0150 (4 byte)
     int prefix_price;
+    // offset 0154 (4 byte)
     int prefix_price_multiplier;
+    // offset 0158 (4 byte)
     int suffix_price;
+    // offset 015C (4 byte)
     int suffix_price_multiplier;
+    // offset 0160 (1 byte)
     uint8_t required_strength;
-    uint8_t reguired_magic;
+    // offset 0161 (1 byte)
+    uint8_t reguied_magic;
+    // offset 0162 (1 byte)
     uint8_t required_dexterity;
+    // offset 0163 (1 byte)
     uint8_t required_vitality;
-    int is_equippable;
+    // offset 0164 (1 byte)
+    bool32_t is_equippable;
+    // offset 0168 (4 byte)
     item_id id;
-    int reserved_6;
 } Item;
 ```
 
@@ -119,9 +183,6 @@ References:
 * https://github.com/sanctuary/notes/blob/master/enumerates.md#item_quality
 * https://github.com/sanctuary/notes/blob/master/enumerates.md#item_special_effect
 * https://github.com/sanctuary/notes/blob/master/enumerates.md#item_type
-
-References:
-* https://github.com/sanctuary/notes/blob/master/enumerates.md#speech_id
 
 ## Point
 
