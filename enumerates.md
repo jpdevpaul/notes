@@ -191,7 +191,7 @@ typedef enum {
     ITEM_EFFECT_TYPE_DURABILITY_PERCENT_MINUS               = 36,
     ITEM_EFFECT_TYPE_INDESTRUCTIBLE                         = 37,
     ITEM_EFFECT_TYPE_LIGHT_RADIUS_PLUS                      = 38,
-    ITEM_EFFECT_TYPE_LIGHT_RADIUS_MINUS                     = 39
+    ITEM_EFFECT_TYPE_LIGHT_RADIUS_MINUS                     = 39,
     ITEM_EFFECT_TYPE_FIRE_ARROWS                            = 42,
     ITEM_EFFECT_TYPE_LIGHTNING_ARROWS                       = 43,
     ITEM_EFFECT_TYPE_CUSTOM_GRAPHICS                        = 44,
@@ -566,7 +566,7 @@ typedef enum {
     ITEM_SPECIAL_EFFECT_FIRE_DAMAGE_BONUS           = 0x10      ,
     ITEM_SPECIAL_EFFECT_LIGHTNING_DAMAGE_BONUS      = 0x20      ,
     ITEM_SPECIAL_EFFECT_CONSTANTLY_LOSE_HIT_POINTS  = 0x40      ,
-    ITEM_SPECIAL_EFFECT_UNKNOWN_1                   = 0x80h     , // unused
+    ITEM_SPECIAL_EFFECT_UNKNOWN_1                   = 0x80      , // unused
     ITEM_SPECIAL_EFFECT_USER_CANT_HEAL              = 0x100     ,
     ITEM_SPECIAL_EFFECT_UNKNOWN_2                   = 0x200     , // unused
     ITEM_SPECIAL_EFFECT_UNKNOWN_3                   = 0x400     , // unused

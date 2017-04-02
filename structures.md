@@ -208,11 +208,11 @@ typedef struct {
 //       unsigned char setlvl;
 //    } DPortal;
 typedef struct {
-    int8_t col
-    int8_t row
-    int8_t dlvl
-    dtype dtype
-    quest_level quest_lvl
+    int8_t col;
+    int8_t row;
+    int8_t dlvl;
+    dtype dtype;
+    quest_level quest_lvl;
 } Portal;
 ```
 
