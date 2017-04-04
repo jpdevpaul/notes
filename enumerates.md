@@ -98,7 +98,7 @@ typedef enum {
 ```
 
 References:
-* https://github.com/sanctuary/notes/blob/master/data/structures.md#Item
+* https://github.com/sanctuary/notes/blob/master/structures.md#item
 
 ## item_code
 
@@ -134,7 +134,7 @@ typedef enum {
 ```
 
 References:
-* https://github.com/sanctuary/notes/blob/master/data/structures.md#Item
+* https://github.com/sanctuary/notes/blob/master/structures.md#item
 
 ## item_drop_state
 
@@ -148,7 +148,7 @@ typedef enum {
 ```
 
 References:
-* https://github.com/sanctuary/notes/blob/master/data/structures.md#Item
+* https://github.com/sanctuary/notes/blob/master/structures.md#item
 
 ## item_effect_type
 
@@ -230,7 +230,7 @@ typedef enum {
 ```
 
 References:
-* https://github.com/sanctuary/notes/blob/master/data/structures.md#Item
+* https://github.com/sanctuary/notes/blob/master/structures.md#item
 
 ## item_equip_type
 
@@ -251,7 +251,7 @@ typedef enum {
 ```
 
 References:
-* https://github.com/sanctuary/notes/blob/master/data/structures.md#Item
+* https://github.com/sanctuary/notes/blob/master/structures.md#item
 
 ## item_id
 
@@ -420,7 +420,7 @@ typedef enum {
 
 References:
 * https://github.com/sanctuary/notes/blob/master/data/items.md#item_data
-* https://github.com/sanctuary/notes/blob/master/data/structures.md#Item
+* https://github.com/sanctuary/notes/blob/master/structures.md#item
 
 ## item_inv_graphics_id
 
@@ -537,7 +537,7 @@ typedef enum {
 ```
 
 References:
-* https://github.com/sanctuary/notes/blob/master/data/structures.md#Item
+* https://github.com/sanctuary/notes/blob/master/structures.md#item
 
 ## item_quality
 
@@ -551,7 +551,7 @@ typedef enum {
 ```
 
 References:
-* https://github.com/sanctuary/notes/blob/master/data/structures.md#Item
+* https://github.com/sanctuary/notes/blob/master/structures.md#item
 
 ## item_special_effect
 
@@ -595,7 +595,7 @@ typedef enum {
 ```
 
 References:
-* https://github.com/sanctuary/notes/blob/master/data/structures.md#Item
+* https://github.com/sanctuary/notes/blob/master/structures.md#item
 
 ## item_type
 
@@ -622,7 +622,7 @@ typedef enum {
 ```
 
 References:
-* https://github.com/sanctuary/notes/blob/master/data/structures.md#Item
+* https://github.com/sanctuary/notes/blob/master/structures.md#item
 
 ## l1_tile_id
 
