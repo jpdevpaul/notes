@@ -27,7 +27,7 @@ bool32_t loadsave_load_bool();
 // loadsave_load_player loads the next player from the active save.
 //
 // References:
-//    * https://github.com/sanctuary/notes/blob/master/structs.cpp#player
+//    * https://github.com/sanctuary/notes/blob/master/structs.h#player
 void __fastcall loadsave_load_player(int player_num);
 
 // address: 0x426BA9
@@ -35,7 +35,7 @@ void __fastcall loadsave_load_player(int player_num);
 // loadsave_load_monster loads the next monster from the active save.
 //
 // References:
-//    * https://github.com/sanctuary/notes/blob/master/structs.cpp#monster
+//    * https://github.com/sanctuary/notes/blob/master/structs.h#monster
 void __fastcall loadsave_load_monster(int monster_num);
 
 // address: 0x426BDE
@@ -43,7 +43,7 @@ void __fastcall loadsave_load_monster(int monster_num);
 // loadsave_load_missile loads the next missile from the active save.
 //
 // References:
-//    * https://github.com/sanctuary/notes/blob/master/structs.cpp#missile
+//    * https://github.com/sanctuary/notes/blob/master/structs.h#missile
 void __fastcall loadsave_load_missile(int missile_num);
 
 // address: 0x426C08
@@ -51,7 +51,7 @@ void __fastcall loadsave_load_missile(int missile_num);
 // loadsave_load_object loads the next object from the active save.
 //
 // References:
-//    * https://github.com/sanctuary/notes/blob/master/structs.cpp#object
+//    * https://github.com/sanctuary/notes/blob/master/structs.h#object
 void __fastcall loadsave_load_object(int object_num);
 
 // address: 0x426C2A
@@ -59,7 +59,7 @@ void __fastcall loadsave_load_object(int object_num);
 // loadsave_load_item loads the next item from the active save.
 //
 // References:
-//    * https://github.com/sanctuary/notes/blob/master/structs.cpp#item
+//    * https://github.com/sanctuary/notes/blob/master/structs.h#item
 void __fastcall loadsave_load_item(int item_num);
 
 // address: 0x426C5F
@@ -68,7 +68,7 @@ void __fastcall loadsave_load_item(int item_num);
 // from the active save.
 //
 // References:
-//    * https://github.com/sanctuary/notes/blob/master/structs.cpp#item
+//    * https://github.com/sanctuary/notes/blob/master/structs.h#item
 void __fastcall loadsave_load_griswold_premium_item(int griswold_premium_item_num);
 
 // address: 0x426C89
@@ -77,7 +77,7 @@ void __fastcall loadsave_load_griswold_premium_item(int griswold_premium_item_nu
 // dlvl, quest dtype, and quest doom timer from the active save.
 //
 // References:
-//    * https://github.com/sanctuary/notes/blob/master/structs.cpp#quest
+//    * https://github.com/sanctuary/notes/blob/master/structs.h#quest
 void __fastcall loadsave_load_quest(int quest_num);
 
 // address: 0x426CDE

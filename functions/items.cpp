@@ -168,8 +168,8 @@ void __fastcall items_gen_seed(int player_num, int32_t *item_seed);
 //         never drop.
 //
 // References:
-//    * https://github.com/sanctuary/notes/blob/master/enums.cpp#item_id
-//    * https://github.com/sanctuary/notes/blob/master/enums.cpp#unique_item_id
+//    * https://github.com/sanctuary/notes/blob/master/enums.h#item_id
+//    * https://github.com/sanctuary/notes/blob/master/enums.h#unique_item_id
 int __fastcall items_get_rand_loot_id_from_monster(int monster_num);
 
 // address: 0x421B32

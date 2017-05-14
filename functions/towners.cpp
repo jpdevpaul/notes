@@ -4,8 +4,8 @@
 // the given towner ID.
 //
 // References:
-//    * https://github.com/sanctuary/notes/blob/master/bss/towners.cpp#towners
-//    * https://github.com/sanctuary/notes/blob/master/enums.cpp#towner_id
+//    * https://github.com/sanctuary/notes/blob/master/bss/towners.h#towners
+//    * https://github.com/sanctuary/notes/blob/master/enums.h#towner_id
 int __fastcall towners_get_num_from_id(towner_id towner_id);
 
 // address: 0x4601C1
