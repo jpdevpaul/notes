@@ -6,7 +6,7 @@ The aim of this project is to organize and cross-reference a collection of notes
 
 The notes are currently organized into the following categories.
 
-* [Functions](functions/README.md): function declarations.
+* [Functions](funcs/README.md): function declarations.
 * [Global variables (read-only)](rdata/README.md): global variable declarations in the read-only data section.
 * [Global variables (read-write)](data/README.md): global variable declarations in the read-write data section.
 * [Global variables (uninitialized)](bss/README.md): global variable declarations in the uninitialized data section.
@@ -18,7 +18,7 @@ The notes are currently organized into the following categories.
 
 | Category                                          | Progess                        |
 |---------------------------------------------------|--------------------------------|
-| [Functions](functions/README.md)                  | 12% (243/1955 functions)       |
+| [Functions](funcs/README.md)                      | 12% (243/1955 functions)       |
 | [Global variables (read-only)](rdata/README.md)   | 94% (26804/28372 bytes)        |
 | [Global variables (read-write)](data/README.md)   | 95% (187436/196860 bytes)      |
 | [Global variables (uninitialized)](bss/README.md) | 22% (468048/2048516 bytes)     |
@@ -34,7 +34,7 @@ Anyone interested in contributing to the project may do so in whichever way they
 2. Point out mistakes or inconsistencies in the notes
 3. Improve the existing notes
 4. Add documentation for
-	- function declarations (e.g. [drlg_l1_place_door](https://github.com/sanctuary/notes/blob/master/functions/drlg_l1.cpp#0x40b56f))
+	- function declarations (e.g. [drlg_l1_place_door](https://github.com/sanctuary/notes/blob/master/funcs/drlg_l1.cpp#0x40b56f))
 	- global variable declarations (e.g. [cathedral_stairway_down_piece_ids](https://github.com/sanctuary/notes/blob/master/data/trigs.cpp#0x4b3008))
 	- structure definitions (e.g. [Shadow](https://github.com/sanctuary/notes/blob/master/structs.h#shadow))
 	- enumerate definitions (e.g. [quest_level](https://github.com/sanctuary/notes/blob/master/enums.h#quest_level))
