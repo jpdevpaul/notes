@@ -1083,6 +1083,19 @@ typedef enum {
 References:
 * https://github.com/sanctuary/notes/blob/master/data/quests.md#quest_data
 
+## quest_state
+```c
+typedef enum {
+    QUEST_STATE_INACTIVE    = 0,
+    QUEST_STATE_WAITING     = 1,
+    QUEST_STATE_ACTIVE      = 2,
+    QUEST_STATE_COMPLETE    = 4,
+} quest_state;
+```
+
+References:
+* https://github.com/sanctuary/notes/blob/master/data/quests.md#quest_data
+
 ## quest_level
 
 ```c
