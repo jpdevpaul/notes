@@ -1,10 +1,5 @@
-# exception.cpp
-
-## 0x47A480
-
-### str_47A480
-
-```c
+// address: 0x47A480
+//
 // "*unknown*"
 const char str_47A480[10];
-```
+

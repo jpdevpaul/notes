@@ -1,10 +1,5 @@
-# log.cpp
-
-## 0x47F070
-
-### log_inf
-
-```c
+// address: 0x47F070
+//
 // +Infinity
 float log_inf;
-```
+

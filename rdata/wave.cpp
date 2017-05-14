@@ -1,10 +1,5 @@
-# wave.cpp
-
-## 0x4802D4
-
-### wave_inf
-
-```c
+// address: 0x4802D4
+//
 // +Infinity
 float wave_inf;
-```
+

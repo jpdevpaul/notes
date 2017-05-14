@@ -1,31 +1,18 @@
-# control.cpp
-
-## 0x479424
-
-### smaltext_frame_from_font_index
-
-```c
+// address: 0x479424
+//
 // smaltext_frame_from_font_index maps from font index to smaltext.cel frame
 // number.
 int8_t smaltext_frame_from_font_index[127];
-```
 
-## 0x4794A4
-
-### smaltext_character_width_from_frame
-
-```c
+// address: 0x4794A4
+//
 // smaltext_character_width_from_frame maps from smaltext.cel frame number to
 // character width. Note, the character width may be distinct from the frame
 // width, which is 13 for every smaltext.cel frame.
 int8_t smaltext_character_width_from_frame[68];
-```
 
-## 0x4794E8
-
-### screen_offset_from_nlines_and_line_nr
-
-```c
+// address: 0x4794E8
+//
 // screen_offset_from_nlines_and_line_nr maps from line count and line number
 // pairs to screen offsets within the description box. The mapping is as
 // follows:
@@ -51,24 +38,16 @@ int8_t smaltext_character_width_from_frame[68];
 //       * 4th line: 177x442
 //       * 5th line: 177x453
 int32_t screen_offset_from_nlines_and_line_nr[5][5];
-```
 
-## 0x47954C
-
-### font_index_from_ascii
-
-```c
+// address: 0x47954C
+//
 // font_index_from_ascii maps ASCII character code to font index, as used by the
 // small, medium and large sized fonts; which corresponds to smaltext.cel,
 // medtexts.cel and bigtgold.cel respectively.
 int8_t font_index_from_ascii[256];
-```
 
-## 0x479650
-
-### double_80_0
-
-```c
+// address: 0x479650
+//
 // 80.0
 double double_80_0;
-```
+

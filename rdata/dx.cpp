@@ -1,10 +1,5 @@
-# dx.cpp
-
-## 0x47A464
-
-### dx_inf
-
-```c
+// address: 0x47A464
+//
 // +Infinity
 float dx_inf;
-```
+

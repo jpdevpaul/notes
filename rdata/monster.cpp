@@ -1,10 +1,5 @@
-# monster.cpp
-
-## 0x47F130
-
-### monster_inf
-
-```c
+// address: 0x47F130
+//
 // +Infinity
 float monster_inf;
-```
+

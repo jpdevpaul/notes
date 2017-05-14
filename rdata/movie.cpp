@@ -1,10 +1,5 @@
-# movie.cpp
-
-## 0x47F144
-
-### movie_inf
-
-```c
+// address: 0x47F144
+//
 // +Infinity
 float movie_inf;
-```
+

@@ -1,13 +1,8 @@
-# talk.cpp
-
-## 0x47F278
-
-### speech_data
-
-```c
+// address: 0x47F278
+//
 // speech_data contains the data related to each speech ID.
+//
+// References:
+//    * https://github.com/sanctuary/notes/blob/master/enums.h#speech_id
 Speech speech_data[259];
-```
 
-References:
-* https://github.com/sanctuary/notes/blob/master/enumerates.md#speech_id

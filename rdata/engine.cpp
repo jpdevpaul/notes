@@ -1,10 +1,5 @@
-# engine.cpp
-
-## 0x47A474
-
-### engine_inf
-
-```c
+// address: 0x47A474
+//
 // +Infinity
 float engine_inf;
-```
+

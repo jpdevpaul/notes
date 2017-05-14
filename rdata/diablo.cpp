@@ -1,37 +1,20 @@
-# diablo.cpp
-
-## 0x479BF8
-
-### diablo_inf
-
-```c
+// address: 0x479BF8
+//
 // +Infinity
 float diablo_inf;
-```
 
-## 0x479BFC
-
-### str_479BFC
-
-```c
+// address: 0x479BFC
+//
 // "dd_emulate"
 const char str_479BFC[11];
-```
 
-## 0x479C08
-
-### str_479C08
-
-```c
+// address: 0x479C08
+//
 // "dd_backbuf"
 const char str_479C08[11];
-```
 
-## 0x479C14
-
-### str_479C14
-
-```c
+// address: 0x479C14
+//
 // "ds_noduplicates"
 const char str_479C14[16];
-```
+

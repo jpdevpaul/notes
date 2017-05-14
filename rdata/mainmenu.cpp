@@ -1,10 +1,5 @@
-# mainmenu.cpp
-
-## 0x47F074
-
-### mainmenu_inf
-
-```c
+// address: 0x47F074
+//
 // +Infinity
 float mainmenu_inf;
-```
+

@@ -1,10 +1,5 @@
-# mpqapi.cpp
-
-## 0x47F148
-
-### mpqapi_inf
-
-```c
+// address: 0x47F148
+//
 // +Infinity
 float mpqapi_inf;
-```
+

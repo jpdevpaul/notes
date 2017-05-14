@@ -1,10 +1,5 @@
-# interfac.cpp
-
-## 0x47AE40
-
-### interfac_inf
-
-```c
+// address: 0x47AE40
+//
 // +Infinity
 float interfac_inf;
-```
+

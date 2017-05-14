@@ -1,10 +1,5 @@
-# dthread.cpp
-
-## 0x47A460
-
-### dthread_inf
-
-```c
+// address: 0x47A460
+//
 // +Infinity
 float dthread_inf;
-```
+

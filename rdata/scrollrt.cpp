@@ -1,19 +1,10 @@
-# scrollrt.cpp
-
-## 0x47F238
-
-### scrollrt_inf
-
-```c
+// address: 0x47F238
+//
 // +Infinity
 float scrollrt_inf;
-```
 
-## 0x47F23C
-
-### str_47F23C
-
-```c
+// address: 0x47F23C
+//
 // "unknown action"
 const char str_47F23C[15];
-```
+

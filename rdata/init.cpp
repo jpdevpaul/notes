@@ -1,28 +1,15 @@
-# init.cpp
-
-## 0x47AE20
-
-### init_inf
-
-```c
+// address: 0x47AE20
+//
 // +Infinity
 float init_inf;
-```
 
-## 0x47AE24
-
-### str_47AE24
-
-```c
+// address: 0x47AE24
+//
 // "DIABLO"
 const char str_47AE24[7];
-```
 
-## 0x47AE2C
-
-### str_47AE2C
-
-```c
+// address: 0x47AE2C
+//
 // "ScreenSaveActive"
 const char str_47AE2C[17];
-```
+

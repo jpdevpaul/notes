@@ -1,10 +1,5 @@
-# track.cpp
-
-## 0x4802D0
-
-### track_inf
-
-```c
+// address: 0x4802D0
+//
 // +Infinity
 float track_inf;
-```
+

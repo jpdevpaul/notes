@@ -1,10 +1,5 @@
-# msgcmd.cpp
-
-## 0x47F150
-
-### msgcmd_inf
-
-```c
+// address: 0x47F150
+//
 // +Infinity
 float msgcmd_inf;
-```
+
