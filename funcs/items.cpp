@@ -335,14 +335,10 @@ void items_draw_unique_item_box();
 //
 // TODO: add documentation.
 
-/* TODO: uncomment when the Item struct has been added to structs.h.
-
 // address: 0x4241D7
 //
 // items_is_equipable reports whether the given item is equipable.
 bool32_t __fastcall items_is_equipable(Item *item);
-
-*/
 
 // address: 0x42421C
 //
