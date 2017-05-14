@@ -1,256 +1,147 @@
-# towners.cpp
-
-## 0x4B2724
-
-### towner_anim_seq
-
-```c
+// address: 0x4B2724
+//
 // towner_anim_seq specifies the animation frame sequence of a given NPC.
+//
+// References:
+//    * https://github.com/sanctuary/notes/blob/master/enums.h#towner_anim_seq_id
 int8_t towner_anim_seq[148][6];
-```
 
-References:
-* https://github.com/sanctuary/notes/blob/master/enumerates.md#towner_anim_seq_id
-
-## 0x4B2A9C
-
-### cow_start_col
-
-```c
+// address: 0x4B2A9C
+//
 // cow_start_col specifies the start columns of the cows in Tristram.
 int cow_start_col[3];
-```
 
-## 0x4B2AA8
-
-### cow_start_row
-
-```c
+// address: 0x4B2AA8
+//
 // cow_start_row specifies the start rows of the cows in Tristram.
 int cow_start_row[3];
-```
 
-## 0x4B2AB4
-
-### cow_start_direction
-
-```c
+// address: 0x4B2AB4
+//
 // cow_start_direction specifies the start directions of the cows in Tristram.
 direction cow_start_direction[3];
-```
 
-## 0x4B2AC0
-
-### cow_col_delta_from_direction
-
-```c
+// address: 0x4B2AC0
+//
 // cow_col_delta_from_direction maps from direction to column delta, which is
 // used when placing cows in Tristram. A single cow may require space of up to
 // three tiles when being placed on the map.
 int cow_col_delta_from_direction[8];
-```
 
-## 0x4B2AE0
-
-### cow_row_delta_from_direction
-
-```c
+// address: 0x4B2AE0
+//
 // cow_row_delta_from_direction maps from direction to row delta, which is used
 // when placing cows in Tristram. A single cow may require space of up to three
 // tiles when being placed on the map.
 int cow_row_delta_from_direction[8];
-```
 
-## 0x4B2B00
-
-### gossip_data
-
-```c
+// address: 0x4B2B00
+//
 // gossip_data contains the data related to quest gossip for each towner ID.
+//
+// References:
+//    * https://github.com/sanctuary/notes/blob/master/enums.h#towner_id
+//    * https://github.com/sanctuary/notes/blob/master/structs.h#gossipdata
 GossipData gossip_data[10];
-```
 
-References:
-* https://github.com/sanctuary/notes/blob/master/enumerates.md#towner_id
-* https://github.com/sanctuary/notes/blob/master/structures.md#gossipdata
-
-## 0x4B2DC0
-
-### cow_active_sfx_id
-
-```c
+// address: 0x4B2DC0
+//
 // cow_active_sfx_id specifies the active sound effect ID for interacting with
 // cows.
 sfx_id cow_active_sfx_id;
-```
 
-## 0x4B2DC4
-
-### str_4B2DC4
-
-```c
+// address: 0x4B2DC4
+//
 // "Griswold the Blacksmith"
 const char str_4B2DC4[24];
-```
 
-## 0x4B2DDC
-
-### str_4B2DDC
-
-```c
+// address: 0x4B2DDC
+//
 // `Towners\Smith\SmithN.CEL`
 const char str_4B2DDC[25];
-```
 
-## 0x4B2DF8
-
-### str_4B2DF8
-
-```c
+// address: 0x4B2DF8
+//
 // "Ogden the Tavern owner"
 const char str_4B2DF8[23];
-```
 
-## 0x4B2E10
-
-### str_4B2E10
-
-```c
+// address: 0x4B2E10
+//
 // `Towners\TwnF\TwnFN.CEL`
 const char str_4B2E10[23];
-```
 
-## 0x4B2E28
-
-### str_4B2E28
-
-```c
+// address: 0x4B2E28
+//
 // "Wounded Townsman"
 const char str_4B2E28[17];
-```
 
-## 0x4B2E3C
-
-### str_4B2E3C
-
-```c
+// address: 0x4B2E3C
+//
 // `Towners\Butch\Deadguy.CEL`
 const char str_4B2E3C[26];
-```
 
-## 0x4B2E58
-
-### str_4B2E58
-
-```c
+// address: 0x4B2E58
+//
 // "Adria the Witch"
 const char str_4B2E58[16];
-```
 
-## 0x4B2E68
-
-### str_4B2E68
-
-```c
+// address: 0x4B2E68
+//
 // `Towners\TownWmn1\Witch.CEL`
 const char str_4B2E68[27];
-```
 
-## 0x4B2E84
-
-### str_4B2E84
-
-```c
+// address: 0x4B2E84
+//
 // "Gillian the Barmaid"
 const char str_4B2E84[20];
-```
 
-## 0x4B2E98
-
-### str_4B2E98
-
-```c
+// address: 0x4B2E98
+//
 // `Towners\TownWmn1\WmnN.CEL`
 const char str_4B2E98[26];
-```
 
-## 0x4B2EB4
-
-### str_4B2EB4
-
-```c
+// address: 0x4B2EB4
+//
 // `Towners\TownBoy\PegKid1.CEL`
 const char str_4B2EB4[28];
-```
 
-## 0x4B2ED0
-
-### str_4B2ED0
-
-```c
+// address: 0x4B2ED0
+//
 // "Pepin the Healer"
 const char str_4B2ED0[17];
-```
 
-## 0x4B2EE4
-
-### str_4B2EE4
-
-```c
+// address: 0x4B2EE4
+//
 // `Towners\Healer\Healer.CEL`
 const char str_4B2EE4[26];
-```
 
-## 0x4B2F00
-
-### str_4B2F00
-
-```c
+// address: 0x4B2F00
+//
 // "Cain the Elder"
 const char str_4B2F00[15];
-```
 
-## 0x4B2F10
-
-### str_4B2F10
-
-```c
+// address: 0x4B2F10
+//
 // `Towners\Strytell\Strytell.CEL`
 const char str_4B2F10[30];
-```
 
-## 0x4B2F30
-
-### str_4B2F30
-
-```c
+// address: 0x4B2F30
+//
 // `Towners\Drunk\TwnDrunk.CEL`
 const char str_4B2F30[27];
-```
 
-## 0x4B2F4C
-
-### str_4B2F4C
-
-```c
+// address: 0x4B2F4C
+//
 // "Cow"
 const char str_4B2F4C[4];
-```
 
-## 0x4B2F50
-
-### str_4B2F50
-
-```c
+// address: 0x4B2F50
+//
 // `Towners\Animals\Cow.CEL`
 const char str_4B2F50[24];
-```
 
-## 0x4B2F68
-
-### str_4B2F68
-
-```c
+// address: 0x4B2F68
+//
 // "Slain Townsman"
 const char str_4B2F68[15];
-```
+

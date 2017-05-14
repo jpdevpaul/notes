@@ -1,766 +1,425 @@
-# player.cpp
-
-## 0x4A1138
-
-### str_4A1138
-
-```c
+// address: 0x4A1138
+//
 // `PlrGFX\%s\%s\%s%s.CL2`
 const char str_4A1138[22];
-```
 
-## 0x4A1150
-
-### str_4A1150
-
-```c
+// address: 0x4A1150
+//
 // "FM"
 const char str_4A1150[3];
-```
 
-## 0x4A1154
-
-### str_4A1154
-
-```c
+// address: 0x4A1154
+//
 // "QM"
 const char str_4A1154[3];
-```
 
-## 0x4A1158
-
-### str_4A1158
-
-```c
+// address: 0x4A1158
+//
 // "DT"
 const char str_4A1158[3];
-```
 
-## 0x4A115C
-
-### str_4A115C
-
-```c
+// address: 0x4A115C
+//
 // "BL"
 const char str_4A115C[3];
-```
 
-## 0x4A1160
-
-### str_4A1160
-
-```c
+// address: 0x4A1160
+//
 // "PLR:2"
 const char str_4A1160[6];
-```
 
-## 0x4A1168
-
-### str_4A1168
-
-```c
+// address: 0x4A1168
+//
 // "LM"
 const char str_4A1168[3];
-```
 
-## 0x4A116C
-
-### str_4A116C
-
-```c
+// address: 0x4A116C
+//
 // "ST"
 const char str_4A116C[3];
-```
 
-## 0x4A1170
-
-### str_4A1170
-
-```c
+// address: 0x4A1170
+//
 // "AS"
 const char str_4A1170[3];
-```
 
-## 0x4A1174
-
-### str_4A1174
-
-```c
+// address: 0x4A1174
+//
 // "WL"
 const char str_4A1174[3];
-```
 
-## 0x4A1178
-
-### str_4A1178
-
-```c
+// address: 0x4A1178
+//
 // "AW"
 const char str_4A1178[3];
-```
 
-## 0x4A117C
-
-### str_4A117C
-
-```c
+// address: 0x4A117C
+//
 // "AT"
 const char str_4A117C[3];
-```
 
-## 0x4A1180
-
-### str_4A1180
-
-```c
+// address: 0x4A1180
+//
 // "HT"
 const char str_4A1180[3];
-```
 
-## 0x4A1184
-
-### str_4A1184
-
-```c
+// address: 0x4A1184
+//
 // "%c%c%c"
 const char str_4A1184[7];
-```
 
-## 0x4A118C
-
-### str_4A118C
-
-```c
+// address: 0x4A118C
+//
 // "LoadPlrGFX: illegal player %d"
 const char str_4A118C[30];
-```
 
-## 0x4A11AC
-
-### str_4A11AC
-
-```c
+// address: 0x4A11AC
+//
 // "InitPlayerGFX: illegal player %d"
 const char str_4A11AC[33];
-```
 
-## 0x4A11D0
-
-### str_4A11D0
-
-```c
+// address: 0x4A11D0
+//
 // "InitPlrGFXMem: illegal player %d"
 const char str_4A11D0[33];
-```
 
-## 0x4A11F4
-
-### str_4A11F4
-
-```c
+// address: 0x4A11F4
+//
 // "FreePlayerGFX: illegal player %d"
 const char str_4A11F4[33];
-```
 
-## 0x4A1218
-
-### str_4A1218
-
-```c
+// address: 0x4A1218
+//
 // "NewPlrAnim: illegal player %d"
 const char str_4A1218[30];
-```
 
-## 0x4A1238
-
-### str_4A1238
-
-```c
+// address: 0x4A1238
+//
 // "ClearPlrPVars: illegal player %d"
 const char str_4A1238[33];
-```
 
-## 0x4A125C
-
-### str_4A125C
-
-```c
+// address: 0x4A125C
+//
 // "SetPlrAnims: illegal player %d"
 const char str_4A125C[31];
-```
 
-## 0x4A127C
-
-### str_4A127C
-
-```c
+// address: 0x4A127C
+//
 // "CreatePlayer: illegal player %d"
 const char str_4A127C[32];
-```
 
-## 0x4A129C
-
-### str_4A129C
-
-```c
+// address: 0x4A129C
+//
 // "NextPlrLevel: illegal player %d"
 const char str_4A129C[32];
-```
 
-## 0x4A12BC
-
-### str_4A12BC
-
-```c
+// address: 0x4A12BC
+//
 // "AddPlrExperience: illegal player %d"
 const char str_4A12BC[36];
-```
 
-## 0x4A12E0
-
-### str_4A12E0
-
-```c
+// address: 0x4A12E0
+//
 // "InitPlayer: illegal player %d"
 const char str_4A12E0[30];
-```
 
-## 0x4A1300
-
-### str_4A1300
-
-```c
+// address: 0x4A1300
+//
 // "PlrDirOK: illegal player %d"
 const char str_4A1300[28];
-```
 
-## 0x4A131C
-
-### str_4A131C
-
-```c
+// address: 0x4A131C
+//
 // "SetPlayerOld: illegal player %d"
 const char str_4A131C[32];
-```
 
-## 0x4A133C
-
-### str_4A133C
-
-```c
+// address: 0x4A133C
+//
 // "FixPlayerLocation: illegal player %d"
 const char str_4A133C[37];
-```
 
-## 0x4A1364
-
-### str_4A1364
-
-```c
+// address: 0x4A1364
+//
 // "StartStand: illegal player %d"
 const char str_4A1364[30];
-```
 
-## 0x4A1384
-
-### str_4A1384
-
-```c
+// address: 0x4A1384
+//
 // "StartWalkStand: illegal player %d"
 const char str_4A1384[34];
-```
 
-## 0x4A13A8
-
-### str_4A13A8
-
-```c
+// address: 0x4A13A8
+//
 // "PM_ChangeLightOff: illegal player %d"
 const char str_4A13A8[37];
-```
 
-## 0x4A13D0
-
-### str_4A13D0
-
-```c
+// address: 0x4A13D0
+//
 // "PM_ChangeOffset: illegal player %d"
 const char str_4A13D0[35];
-```
 
-## 0x4A13F4
-
-### str_4A13F4
-
-```c
+// address: 0x4A13F4
+//
 // "StartWalk: illegal player %d"
 const char str_4A13F4[29];
-```
 
-## 0x4A1414
-
-### str_4A1414
-
-```c
+// address: 0x4A1414
+//
 // "StartWalk2: illegal player %d"
 const char str_4A1414[30];
-```
 
-## 0x4A1434
-
-### str_4A1434
-
-```c
+// address: 0x4A1434
+//
 // "StartWalk3: illegal player %d"
 const char str_4A1434[30];
-```
 
-## 0x4A1454
-
-### str_4A1454
-
-```c
+// address: 0x4A1454
+//
 // "StartAttack: illegal player %d"
 const char str_4A1454[31];
-```
 
-## 0x4A1474
-
-### str_4A1474
-
-```c
+// address: 0x4A1474
+//
 // "StartRangeAttack: illegal player %d"
 const char str_4A1474[36];
-```
 
-## 0x4A1498
-
-### str_4A1498
-
-```c
+// address: 0x4A1498
+//
 // "StartPlrBlock: illegal player %d"
 const char str_4A1498[33];
-```
 
-## 0x4A14BC
-
-### str_4A14BC
-
-```c
+// address: 0x4A14BC
+//
 // "StartSpell: illegal player %d"
 const char str_4A14BC[30];
-```
 
-## 0x4A14DC
-
-### str_4A14DC
-
-```c
+// address: 0x4A14DC
+//
 // "FixPlrWalkTags: illegal player %d"
 const char str_4A14DC[34];
-```
 
-## 0x4A1500
-
-### str_4A1500
-
-```c
+// address: 0x4A1500
+//
 // "StartPlrHit: illegal player %d"
 const char str_4A1500[31];
-```
 
-## 0x4A1520
-
-### str_4A1520
-
-```c
+// address: 0x4A1520
+//
 // "StartPlayerKill: illegal player %d"
 const char str_4A1520[35];
-```
 
-## 0x4A1544
-
-### str_4A1544
-
-```c
+// address: 0x4A1544
+//
 // "PlrDeadItem: illegal player %d"
 const char str_4A1544[31];
-```
 
-## 0x4A1564
-
-### str_4A1564
-
-```c
+// address: 0x4A1564
+//
 // "DropHalfPlayersGold: illegal player %d"
 const char str_4A1564[39];
-```
 
-## 0x4A158C
-
-### str_4A158C
-
-```c
+// address: 0x4A158C
+//
 // "StartNewLvl"
 const char str_4A158C[12];
-```
 
-## 0x4A1598
-
-### str_4A1598
-
-```c
+// address: 0x4A1598
+//
 // "StartNewLvl: illegal player %d"
 const char str_4A1598[31];
-```
 
-## 0x4A15B8
-
-### str_4A15B8
-
-```c
+// address: 0x4A15B8
+//
 // "RestartTownLvl: illegal player %d"
 const char str_4A15B8[34];
-```
 
-## 0x4A15DC
-
-### str_4A15DC
-
-```c
+// address: 0x4A15DC
+//
 // "PM_DoWalk: illegal player %d"
 const char str_4A15DC[29];
-```
 
-## 0x4A15FC
-
-### str_4A15FC
-
-```c
+// address: 0x4A15FC
+//
 // "PM_DoWalk2: illegal player %d"
 const char str_4A15FC[30];
-```
 
-## 0x4A161C
-
-### str_4A161C
-
-```c
+// address: 0x4A161C
+//
 // "PM_DoWalk3: illegal player %d"
 const char str_4A161C[30];
-```
 
-## 0x4A163C
-
-### str_4A163C
-
-```c
+// address: 0x4A163C
+//
 // "WeaponDur: illegal player %d"
 const char str_4A163C[29];
-```
 
-## 0x4A165C
-
-### str_4A165C
-
-```c
+// address: 0x4A165C
+//
 // "PlrHitMonst: illegal player %d"
 const char str_4A165C[31];
-```
 
-## 0x4A167C
-
-### str_4A167C
-
-```c
+// address: 0x4A167C
+//
 // "PlrHitMonst: illegal monster %d"
 const char str_4A167C[32];
-```
 
-## 0x4A169C
-
-### str_4A169C
-
-```c
+// address: 0x4A169C
+//
 // "PlrHitPlr: illegal attacking player %d"
 const char str_4A169C[39];
-```
 
-## 0x4A16C4
-
-### str_4A16C4
-
-```c
+// address: 0x4A16C4
+//
 // "PlrHitPlr: illegal target player %d"
 const char str_4A16C4[36];
-```
 
-## 0x4A16E8
-
-### str_4A16E8
-
-```c
+// address: 0x4A16E8
+//
 // "PM_DoAttack: illegal player %d"
 const char str_4A16E8[31];
-```
 
-## 0x4A1708
-
-### str_4A1708
-
-```c
+// address: 0x4A1708
+//
 // "PM_DoRangeAttack: illegal player %d"
 const char str_4A1708[36];
-```
 
-## 0x4A172C
-
-### str_4A172C
-
-```c
+// address: 0x4A172C
+//
 // "ShieldDur: illegal player %d"
 const char str_4A172C[29];
-```
 
-## 0x4A174C
-
-### str_4A174C
-
-```c
+// address: 0x4A174C
+//
 // "PM_DoBlock: illegal player %d"
 const char str_4A174C[30];
-```
 
-## 0x4A176C
-
-### str_4A176C
-
-```c
+// address: 0x4A176C
+//
 // "PM_DoSpell: illegal player %d"
 const char str_4A176C[30];
-```
 
-## 0x4A178C
-
-### str_4A178C
-
-```c
+// address: 0x4A178C
+//
 // "PM_DoGotHit: illegal player %d"
 const char str_4A178C[31];
-```
 
-## 0x4A17AC
-
-### str_4A17AC
-
-```c
+// address: 0x4A17AC
+//
 // "ArmorDur: illegal player %d"
 const char str_4A17AC[28];
-```
 
-## 0x4A17C8
-
-### str_4A17C8
-
-```c
+// address: 0x4A17C8
+//
 // "PM_DoDeath: illegal player %d"
 const char str_4A17C8[30];
-```
 
-## 0x4A17E8
-
-### str_4A17E8
-
-```c
+// address: 0x4A17E8
+//
 // "CheckNewPath: illegal player %d"
 const char str_4A17E8[32];
-```
 
-## 0x4A1808
-
-### str_4A1808
-
-```c
+// address: 0x4A1808
+//
 // "PlrDeathModeOK: illegal player %d"
 const char str_4A1808[34];
-```
 
-## 0x4A182C
-
-### str_4A182C
-
-```c
+// address: 0x4A182C
+//
 // "ValidatePlayer: illegal player %d"
 const char str_4A182C[34];
-```
 
-## 0x4A1850
-
-### str_4A1850
-
-```c
+// address: 0x4A1850
+//
 // "ProcessPlayers: illegal player %d"
 const char str_4A1850[34];
-```
 
-## 0x4A1874
-
-### str_4A1874
-
-```c
+// address: 0x4A1874
+//
 // "ClrPlrPath: illegal player %d"
 const char str_4A1874[30];
-```
 
-## 0x4A1894
-
-### str_4A1894
-
-```c
+// address: 0x4A1894
+//
 // "MakePlrPath: illegal player %d"
 const char str_4A1894[31];
-```
 
-## 0x4A18B4
-
-### str_4A18B4
-
-```c
+// address: 0x4A18B4
+//
 // "CheckPlrSpell: illegal player %d"
 const char str_4A18B4[33];
-```
 
-## 0x4A18D8
-
-### str_4A18D8
-
-```c
+// address: 0x4A18D8
+//
 // "SyncPlrAnim"
 const char str_4A18D8[12];
-```
 
-## 0x4A18E4
-
-### str_4A18E4
-
-```c
+// address: 0x4A18E4
+//
 // "SyncPlrAnim: illegal player %d"
 const char str_4A18E4[31];
-```
 
-## 0x4A1904
-
-### str_4A1904
-
-```c
+// address: 0x4A1904
+//
 // "SyncInitPlr: illegal player %d"
 const char str_4A1904[31];
-```
 
-## 0x4A1924
-
-### str_4A1924
-
-```c
+// address: 0x4A1924
+//
 // "CheckStats: illegal player %d"
 const char str_4A1924[30];
-```
 
-## 0x4A1944
-
-### str_4A1944
-
-```c
+// address: 0x4A1944
+//
 // "ModifyPlrStr: illegal player %d"
 const char str_4A1944[32];
-```
 
-## 0x4A1964
-
-### str_4A1964
-
-```c
+// address: 0x4A1964
+//
 // "ModifyPlrMag: illegal player %d"
 const char str_4A1964[32];
-```
 
-## 0x4A1984
-
-### str_4A1984
-
-```c
+// address: 0x4A1984
+//
 // "ModifyPlrDex: illegal player %d"
 const char str_4A1984[32];
-```
 
-## 0x4A19A4
-
-### str_4A19A4
-
-```c
+// address: 0x4A19A4
+//
 // "ModifyPlrVit: illegal player %d"
 const char str_4A19A4[32];
-```
 
-## 0x4A19C4
-
-### str_4A19C4
-
-```c
+// address: 0x4A19C4
+//
 // "SetPlayerHitPoints: illegal player %d"
 const char str_4A19C4[38];
-```
 
-## 0x4A19EC
-
-### str_4A19EC
-
-```c
+// address: 0x4A19EC
+//
 // "SetPlrStr: illegal player %d"
 const char str_4A19EC[29];
-```
 
-## 0x4A1A0C
-
-### str_4A1A0C
-
-```c
+// address: 0x4A1A0C
+//
 // "SetPlrMag: illegal player %d"
 const char str_4A1A0C[29];
-```
 
-## 0x4A1A2C
-
-### str_4A1A2C
-
-```c
+// address: 0x4A1A2C
+//
 // "SetPlrDex: illegal player %d"
 const char str_4A1A2C[29];
-```
 
-## 0x4A1A4C
-
-### str_4A1A4C
-
-```c
+// address: 0x4A1A4C
+//
 // "SetPlrVit: illegal player %d"
 const char str_4A1A4C[29];
-```
 
-## 0x4A1A6C
-
-### str_4A1A6C
-
-```c
+// address: 0x4A1A6C
+//
 // "InitDungMsgs: illegal player %d"
 const char str_4A1A6C[32];
-```
 
-## 0x4A1A8C
-
-### str_4A1A8C
-
-```c
+// address: 0x4A1A8C
+//
 // "PlayDungMsgs: illegal player %d"
 const char str_4A1A8C[32];
-```
+

@@ -1,157 +1,88 @@
-# setmaps.cpp
-
-## 0x4A210C
-
-### quest_level_names
-
-```c
+// address: 0x4A210C
+//
 // quest_level_names maps from quest level to quest level names.
+//
+// References:
+//    * https://github.com/sanctuary/notes/blob/master/enums.h#quest_level
 char *quest_level_names[6];
-```
 
-References:
-* https://github.com/sanctuary/notes/blob/master/enumerates.md#quest_level
-
-## 0x4A2124
-
-### str_4A2124
-
-```c
+// address: 0x4A2124
+//
 // "Archbishop Lazarus' Lair"
 const char str_4A2124[25];
-```
 
-## 0x4A2140
-
-### str_4A2140
-
-```c
+// address: 0x4A2140
+//
 // "Bone Chamber"
 const char str_4A2140[13];
-```
 
-## 0x4A2150
-
-### str_4A2150
-
-```c
+// address: 0x4A2150
+//
 // "Skeleton King's Lair"
 const char str_4A2150[21];
-```
 
-## 0x4A2168
-
-### str_4A2168
-
-```c
+// address: 0x4A2168
+//
 // "ObjIndex: Active object not found at (%d,%d)"
 const char str_4A2168[45];
-```
 
-## 0x4A2198
-
-### str_4A2198
-
-```c
+// address: 0x4A2198
+//
 // `Levels\L1Data\SklKng2.DUN`
 const char str_4A2198[26];
-```
 
-## 0x4A21B4
-
-### str_4A21B4
-
-```c
+// address: 0x4A21B4
+//
 // `Levels\L1Data\SklKng1.DUN`
 const char str_4A21B4[26];
-```
 
-## 0x4A21D0
-
-### str_4A21D0
-
-```c
+// address: 0x4A21D0
+//
 // `Levels\L2Data\L2_2.pal`
 const char str_4A21D0[23];
-```
 
-## 0x4A21E8
-
-### str_4A21E8
-
-```c
+// address: 0x4A21E8
+//
 // `Levels\L2Data\Bonecha1.DUN`
 const char str_4A21E8[27];
-```
 
-## 0x4A2204
-
-### str_4A2204
-
-```c
+// address: 0x4A2204
+//
 // `Levels\L2Data\Bonecha2.DUN`
 const char str_4A2204[27];
-```
 
-## 0x4A2220
-
-### str_4A2220
-
-```c
+// address: 0x4A2220
+//
 // `Levels\L1Data\L1_5.pal`
 const char str_4A2220[23];
-```
 
-## 0x4A2238
-
-### str_4A2238
-
-```c
+// address: 0x4A2238
+//
 // `Levels\L1Data\Lv1MazeB.DUN`
 const char str_4A2238[27];
-```
 
-## 0x4A2254
-
-### str_4A2254
-
-```c
+// address: 0x4A2254
+//
 // `Levels\L1Data\Lv1MazeA.DUN`
 const char str_4A2254[27];
-```
 
-## 0x4A2270
-
-### str_4A2270
-
-```c
+// address: 0x4A2270
+//
 // `Levels\L3Data\Foulwatr.DUN`
 const char str_4A2270[27];
-```
 
-## 0x4A228C
-
-### str_4A228C
-
-```c
+// address: 0x4A228C
+//
 // `Levels\L1Data\L1_2.pal`
 const char str_4A228C[23];
-```
 
-## 0x4A22A4
-
-### str_4A22A4
-
-```c
+// address: 0x4A22A4
+//
 // `Levels\L1Data\Vile2.DUN`
 const char str_4A22A4[24];
-```
 
-## 0x4A22BC
-
-### str_4A22BC
-
-```c
+// address: 0x4A22BC
+//
 // `Levels\L1Data\Vile1.DUN`
 const char str_4A22BC[24];
-```
+

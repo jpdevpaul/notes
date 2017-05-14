@@ -1,202 +1,113 @@
-# quests.cpp
-
-## 0x4A1AE0
-
-### quest_data
-
-```c
+// address: 0x4A1AE0
+//
 // quest_data contains the data related to each quest ID.
+//
+// References:
+//    * https://github.com/sanctuary/notes/blob/master/enums.h#quest_id
 QuestData quest_data[16];
-```
 
-References:
-* https://github.com/sanctuary/notes/blob/master/enumerates.md#quest_id
-
-## 0x4A1C70
-
-### str_4A1C70
-
-```c
+// address: 0x4A1C70
+//
 // "Unholy Altar"
 const char str_4A1C70[13];
-```
 
-## 0x4A1C80
-
-### str_4A1C80
-
-```c
+// address: 0x4A1C80
+//
 // "A Dark Passage"
 const char str_4A1C80[15];
-```
 
-## 0x4A1C90
-
-### str_4A1C90
-
-```c
+// address: 0x4A1C90
+//
 // "Maze"
 const char str_4A1C90[5];
-```
 
-## 0x4A1C98
-
-### str_4A1C98
-
-```c
+// address: 0x4A1C98
+//
 // "King Leoric's Tomb"
 const char str_4A1C98[19];
-```
 
-## 0x4A1CAC
-
-### str_4A1CAC
-
-```c
+// address: 0x4A1CAC
+//
 // "Archbishop Lazarus"
 const char str_4A1CAC[19];
-```
 
-## 0x4A1CC0
-
-### str_4A1CC0
-
-```c
+// address: 0x4A1CC0
+//
 // "The Chamber of Bone"
 const char str_4A1CC0[20];
-```
 
-## 0x4A1CD4
-
-### str_4A1CD4
-
-```c
+// address: 0x4A1CD4
+//
 // "Poisoned Water Supply"
 const char str_4A1CD4[22];
-```
 
-## 0x4A1CEC
-
-### str_4A1CEC
-
-```c
+// address: 0x4A1CEC
+//
 // "The Curse of King Leoric"
 const char str_4A1CEC[25];
-```
 
-## 0x4A1D08
-
-### str_4A1D08
-
-```c
+// address: 0x4A1D08
+//
 // "Valor"
 const char str_4A1D08[6];
-```
 
-## 0x4A1D10
-
-### str_4A1D10
-
-```c
+// address: 0x4A1D10
+//
 // "Halls of the Blind"
 const char str_4A1D10[19];
-```
 
-## 0x4A1D24
-
-### str_4A1D24
-
-```c
+// address: 0x4A1D24
+//
 // "Ogden's Sign"
 const char str_4A1D24[13];
-```
 
-## 0x4A1D34
-
-### str_4A1D34
-
-```c
+// address: 0x4A1D34
+//
 // "Gharbad The Weak"
 const char str_4A1D34[17];
-```
 
-## 0x4A1D48
-
-### str_4A1D48
-
-```c
+// address: 0x4A1D48
+//
 // "The Magic Rock"
 const char str_4A1D48[15];
-```
 
-## 0x4A1D58
-
-### str_4A1D58
-
-```c
+// address: 0x4A1D58
+//
 // "Levels\L3Data\L3pwater.pal"
 const char str_4A1D58[27];
-```
 
-## 0x4A1D74
-
-### str_4A1D74
-
-```c
+// address: 0x4A1D74
+//
 // "To %s"
 const char str_4A1D74[6];
-```
 
-## 0x4A1D7C
-
-### str_4A1D7C
-
-```c
+// address: 0x4A1D7C
+//
 // "Levels\L4Data\Warlord2.DUN"
 const char str_4A1D7C[27];
-```
 
-## 0x4A1D98
-
-### str_4A1D98
-
-```c
+// address: 0x4A1D98
+//
 // "Levels\L2Data\Bonestr1.DUN"
 const char str_4A1D98[27];
-```
 
-## 0x4A1DB4
-
-### str_4A1DB4
-
-```c
+// address: 0x4A1DB4
+//
 // "Levels\L2Data\Blind1.DUN"
 const char str_4A1DB4[25];
-```
 
-## 0x4A1DD0
-
-### str_4A1DD0
-
-```c
+// address: 0x4A1DD0
+//
 // "Levels\L3Data\L3pfoul.pal"
 const char str_4A1DD0[26];
-```
 
-## 0x4A1DEC
-
-### str_4A1DEC
-
-```c
+// address: 0x4A1DEC
+//
 // "Close Quest Log"
 const char str_4A1DEC[16];
-```
 
-## 0x4A1DFC
-
-### str_4A1DFC
-
-```c
+// address: 0x4A1DFC
+//
 // "Quest Log"
 const char str_4A1DFC[10];
-```
+

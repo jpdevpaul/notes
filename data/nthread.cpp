@@ -1,64 +1,35 @@
-# nthread.cpp
-
-## 0x49F208
-
-### str_49F208
-
-```c
+// address: 0x49F208
+//
 // "%s:\n%s"
 const char str_49F208[7];
-```
 
-## 0x49F210
-
-### str_49F210
-
-```c
+// address: 0x49F210
+//
 // "SNetSendTurn"
 const char str_49F210[13];
-```
 
-## 0x49F220
-
-### str_49F220
-
-```c
+// address: 0x49F220
+//
 // "SNetGetTurnsInTransit"
 const char str_49F220[22];
-```
 
-## 0x49F238
-
-### str_49F238
-
-```c
+// address: 0x49F238
+//
 // "SNetReceiveTurns"
 const char str_49F238[17];
-```
 
-## 0x49F24C
-
-### str_49F24C
-
-```c
+// address: 0x49F24C
+//
 // "nthread2:\n%s"
 const char str_49F24C[13];
-```
 
-## 0x49F25C
-
-### str_49F25C
-
-```c
+// address: 0x49F25C
+//
 // "SNetGetProviderCaps:\n%s"
 const char str_49F25C[24];
-```
 
-## 0x49F274
-
-### str_49F274
-
-```c
+// address: 0x49F274
+//
 // "nthread3:\n(%s)"
 const char str_49F274[15];
-```
+

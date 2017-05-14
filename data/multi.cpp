@@ -1,136 +1,75 @@
-# multi.cpp
-
-## 0x49F08C
-
-### str_49F08C
-
-```c
+// address: 0x49F08C
+//
 // "SNetSendMessage0"
 const char str_49F08C[17];
-```
 
-## 0x49F0A0
-
-### str_49F0A0
-
-```c
+// address: 0x49F0A0
+//
 // "SNetSendMessage"
 const char str_49F0A0[16];
-```
 
-## 0x49F0B0
-
-### str_49F0B0
-
-```c
+// address: 0x49F0B0
+//
 // "Player '%s' killed Diablo and left the game!"
 const char str_49F0B0[45];
-```
 
-## 0x49F0E0
-
-### str_49F0E0
-
-```c
+// address: 0x49F0E0
+//
 // "Player '%s' dropped due to timeout"
 const char str_49F0E0[35];
-```
 
-## 0x49F104
-
-### str_49F104
-
-```c
+// address: 0x49F104
+//
 // "Player '%s' just left the game"
 const char str_49F104[31];
-```
 
-## 0x49F124
-
-### str_49F124
-
-```c
+// address: 0x49F124
+//
 // "SNetReceiveMsg"
 const char str_49F124[15];
-```
 
-## 0x49F134
-
-### str_49F134
-
-```c
+// address: 0x49F134
+//
 // "SNetSendMessage2"
 const char str_49F134[17];
-```
 
-## 0x49F148
-
-### str_49F148
-
-```c
+// address: 0x49F148
+//
 // "SNetRegisterEventHandler:\n%s"
 const char str_49F148[29];
-```
 
-## 0x49F168
-
-### str_49F168
-
-```c
+// address: 0x49F168
+//
 // "SNetGetGameInfo2"
 const char str_49F168[17];
-```
 
-## 0x49F17C
-
-### str_49F17C
-
-```c
+// address: 0x49F17C
+//
 // "SNetGetGameInfo1"
 const char str_49F17C[17];
-```
 
-## 0x49F190
-
-### str_49F190
-
-```c
+// address: 0x49F190
+//
 // "Diablo Retail"
 const char str_49F190[14];
-```
 
-## 0x49F1A0
-
-### str_49F1A0
-
-```c
+// address: 0x49F1A0
+//
 // "SNetCreateGame1:\n%s"
 const char str_49F1A0[20];
-```
 
-## 0x49F1B4
-
-### str_49F1B4
-
-```c
+// address: 0x49F1B4
+//
 // "local"
 const char str_49F1B4[6];
-```
 
-## 0x49F1BC
-
-### str_49F1BC
-
-```c
+// address: 0x49F1BC
+//
 // "Network upgrade failed"
 const char str_49F1BC[23];
-```
 
-## 0x49F1D4
-
-### str_49F1D4
-
-```c
+// address: 0x49F1D4
+//
 // "Player '%s' (level %d) is already in the game"
 const char str_49F1D4[46];
-```
+
