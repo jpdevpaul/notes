@@ -1,0 +1,2 @@
+* search for unnecessary references (those which a type aware documentation generation tool would add cross-references for anyways).
+* search and replace int with int32_t
