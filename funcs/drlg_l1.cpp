@@ -1,3 +1,5 @@
+#include "types.h"
+
 // address: 0x40ADD6
 //
 // drlg_l1_reset_maps resets the dungeon flag, player, NPC, dead, object,
@@ -5,7 +7,7 @@
 //
 // PSX ref: 0x8013CEAC
 // PSX def: void DRLG_Init_Globals__Fv()
-void drlg_l1_reset_maps()
+void drlg_l1_reset_maps();
 
 // address: 0x40AE79
 //

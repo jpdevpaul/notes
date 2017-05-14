@@ -1,3 +1,5 @@
+#include "types.h"
+
 // address: 0x479424
 //
 // smaltext_frame_from_font_index maps from font index to smaltext.cel frame
@@ -50,4 +52,3 @@ int8_t font_index_from_ascii[256];
 //
 // 80.0
 double double_80_0;
-

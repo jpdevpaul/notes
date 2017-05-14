@@ -1,8 +1,12 @@
+#include "types.h"
+
 // address: 0x69F10C
 //
 // ndialogue_lines specifies the number of lines in the active store owner
 // dialogue.
 int ndialogue_lines;
+
+/* TODO: uncomment when the Item struct has been added to structs.h.
 
 // address: 0x69F118
 //
@@ -25,11 +29,15 @@ Item player_items[48];
 // adria_items contains the items for sale by Adria.
 Item adria_items[20];
 
+*/
+
 // address: 0x6A6BBC
 //
 // ngriswold_premium_items specifies the number of premium items sold by
 // Griswold.
 int ngriswold_premium_items;
+
+/* TODO: uncomment when the Item struct has been added to structs.h.
 
 // address: 0x6A6BC0
 //
@@ -46,3 +54,4 @@ Item item_base_gold;
 // griswold_basic_items contains the basic items for sale by Griswold.
 Item griswold_basic_items[20];
 
+*/

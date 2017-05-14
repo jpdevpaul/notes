@@ -1,3 +1,5 @@
+#include "types.h"
+
 // address: 0x52D208
 //
 // npc_num_map contains the NPC numbers of the map. The NPC number represents a
@@ -57,8 +59,8 @@ int32_t piece_id_map[112][112];
 // dtype specifies the active dungeon type of the current game.
 //
 // References:
-//    * https://github.com/sanctuary/notes/blob/master/enums.h#dtype
-dtype dtype;
+//    * https://github.com/sanctuary/notes/blob/master/enums.h#dungeon_type
+dungeon_type dtype;
 
 // address: 0x5BB1EE
 //
@@ -102,11 +104,11 @@ int8_t item_num_map[112][112];
 
 // address: 0x5CCB10
 //
-// quest_level specifies the active quest level of the current game.
+// quest_lvl specifies the active quest level of the current game.
 //
 // References:
 //    * https://github.com/sanctuary/notes/blob/master/enums.h#quest_level
-quest_level quest_level;
+quest_level quest_lvl;
 
 // address: 0x5CF350
 //

@@ -1,3 +1,5 @@
+#include "types.h"
+
 // address: 0x47F078
 //
 // medtexts_frame_from_font_index maps from font index to medtexts.cel frame
@@ -10,4 +12,3 @@ int8_t medtexts_frame_from_font_index[127];
 // character width. Note, the character width may be distinct from the frame
 // width, which is 22 for every medtexts.cel frame.
 int8_t medtexts_character_width_from_frame[56];
-

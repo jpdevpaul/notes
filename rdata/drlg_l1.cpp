@@ -1,3 +1,5 @@
+#include "types.h"
+
 // address: 0x479C24
 //
 // l1_shadow contains shadows for 2x2 blocks of base tile IDs on layout 1.
@@ -31,4 +33,3 @@ l1_tile_id l1_base[207];
 // References:
 //    * https://github.com/sanctuary/graphics/blob/master/l1/tiles/README.md
 l1_tile_id l1_plain[207];
-

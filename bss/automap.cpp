@@ -1,3 +1,5 @@
+#include "types.h"
+
 // address: 0x4B7E48
 //
 // automap_enabled specifies whether the automap is enabled.

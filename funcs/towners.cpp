@@ -1,3 +1,5 @@
+#include "types.h"
+
 // address: 0x46019B
 //
 // towners_get_num_from_id returns the towner number (towners array index) of

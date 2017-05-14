@@ -1,3 +1,5 @@
+#include "types.h"
+
 // address: 0x426564
 //
 // TODO: add documentation.
@@ -74,7 +76,7 @@ void __fastcall loadsave_load_griswold_premium_item(int griswold_premium_item_nu
 // address: 0x426C89
 //
 // loadsave_load_quest loads the next quest, quest start coordinates, quest
-// dlvl, quest dtype, and quest doom timer from the active save.
+// dlvl, quest dungeon type, and quest doom timer from the active save.
 //
 // References:
 //    * https://github.com/sanctuary/notes/blob/master/structs.h#quest

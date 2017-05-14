@@ -2,4 +2,3 @@
 //
 // +Infinity
 float interfac_inf;
-

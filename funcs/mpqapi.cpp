@@ -1,3 +1,5 @@
+#include "types.h"
+
 // address: 0x43AE90
 //
 // j_mpqapi_cpp_init initializes the C++ runtime of mpqapi.cpp.

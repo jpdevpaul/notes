@@ -1,3 +1,5 @@
+#include "types.h"
+
 // address: 0x41B190
 //
 // TODO: add documentation.

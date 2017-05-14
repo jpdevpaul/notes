@@ -1,3 +1,5 @@
+#include "types.h"
+
 // address: 0x45138E
 //
 // TODO: add documentation.

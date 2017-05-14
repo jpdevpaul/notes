@@ -2,4 +2,3 @@
 //
 // +Infinity
 float monster_inf;
-

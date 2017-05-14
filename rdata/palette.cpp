@@ -6,12 +6,12 @@ float palette_inf;
 // address: 0x47F170
 //
 // "Gamma Correction"
-const char str_47F170[17];
+const char str_47F170[17] = {};
 
 // address: 0x47F184
 //
 // "Color Cycling"
-const char str_47F184[14];
+const char str_47F184[14] = {};
 
 // address: 0x47F198
 //
@@ -27,4 +27,3 @@ double double_0_00390625;
 //
 // 0.01
 double double_0_01;
-

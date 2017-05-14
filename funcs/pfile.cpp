@@ -1,3 +1,5 @@
+#include "types.h"
+
 // address: 0x4498EC
 //
 // j_pfile_cpp_init initializes the C++ runtime of pfile.cpp.
@@ -106,10 +108,15 @@ void __fastcall pfile_get_save_path(char *save_path, int size, int save_num);
 //
 // TODO: add documentation.
 
+
+/* TODO: uncomment when the HeroInfo struct has been added to structs.h.
+
 // address: 0x44A356
 //
 // pfile_delete_save deletes the save file of the given character.
 bool32_t __stdcall pfile_delete_save(HeroInfo *hero_info);
+
+*/
 
 // address: 0x44A3A0
 //

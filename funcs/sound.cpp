@@ -1,3 +1,5 @@
+#include "types.h"
+
 // address: 0x456CBB
 //
 // TODO: add documentation.
@@ -39,10 +41,14 @@ void __fastcall sound_stop(bool32_t force_stop);
 //
 // TODO: add documentation.
 
+/* TODO: uncomment when the SoundFile struct has been added to structs.h.
+
 // address: 0x457060
 //
 // sound_cleanup_file terminates and releases the given sound file.
 void __fastcall sound_cleanup_file(SoundFile *sound_file);
+
+*/
 
 // address: 0x45708B
 //

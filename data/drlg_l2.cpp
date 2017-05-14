@@ -1,3 +1,5 @@
+#include "types.h"
+
 // address: 0x484858
 //
 // PSX ref: 0x8011BE7C
@@ -721,15 +723,14 @@ int Patterns[100][10];
 // address: 0x4860E8
 //
 // `Levels\L2Data\Bonestr2.DUN`
-const char str_4860E8[27];
+const char str_4860E8[27] = {};
 
 // address: 0x486104
 //
 // `Levels\L2Data\Blood1.DUN`
-const char str_486104[25];
+const char str_486104[25] = {};
 
 // address: 0x486120
 //
 // `Levels\L2Data\Blind2.DUN`
-const char str_486120[25];
-
+const char str_486120[25] = {};

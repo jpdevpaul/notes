@@ -2,4 +2,3 @@
 //
 // +Infinity
 float hero_inf;
-

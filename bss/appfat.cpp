@@ -1,3 +1,5 @@
+#include "types.h"
+
 // address: 0x4B7934
 //
 // error_buf is a temporary buffer for formatted error messages.
@@ -13,4 +15,3 @@ bool32_t terminating;
 //
 // cleanup_thread_id stores the thread id of the last callee to appfat_cleanup.
 int32_t cleanup_thread_id;
-

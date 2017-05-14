@@ -1,3 +1,5 @@
+#include "types.h"
+
 // address: 0x4087B1
 //
 // TODO: add documentation.
@@ -48,11 +50,18 @@ void __fastcall diablo_parse_flags(char *args);
 //
 // TODO: add documentation.
 
+
+/* TODO: uncomment when the HMODULE struct has been added. Include windows.h
+   from types.h? Or create a minimal windows.h locally for the specific types
+   which are used in Diablo.
+
 // address: 0x408DF4
 //
 // diablo_reload_process reloads the diablo.exe process in order to obstruct
 // debugging attempts.
 void __fastcall diablo_reload_process(HMODULE hModule);
+
+*/
 
 // address: 0x408FCF
 //

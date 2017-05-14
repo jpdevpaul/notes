@@ -2,4 +2,3 @@
 //
 // +Infinity
 float multi_inf;
-

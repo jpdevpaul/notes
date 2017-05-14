@@ -1,3 +1,5 @@
+#include "types.h"
+
 // address: 0x47AE60
 //
 // inv_screen_pos maps from inventory slot to screen position. The inventory
@@ -23,4 +25,3 @@
 // References:
 //    * https://raw.githubusercontent.com/sanctuary/graphics/master/inventory.png
 Point inv_screen_pos[73];
-

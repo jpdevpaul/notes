@@ -2,4 +2,3 @@
 //
 // +Infinity
 float effects_inf;
-

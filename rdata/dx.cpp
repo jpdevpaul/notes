@@ -2,4 +2,3 @@
 //
 // +Infinity
 float dx_inf;
-

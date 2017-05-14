@@ -1,3 +1,5 @@
+#include "types.h"
+
 // address: 0x40102A
 //
 // appfat_get_error_string returns a formatted error message based on the given
@@ -25,7 +27,7 @@ char * appfat_get_last_error();
 //
 // appfat_terminate_message_box terminates the game and displays an error
 // message box.
-void __noreturn appfat_terminate_message_box(char *format, ...);
+void __attribute__((noreturn)) appfat_terminate_message_box(char *format, ...);
 
 // address: 0x401975
 //
@@ -55,16 +57,26 @@ void __fastcall appfat_DD_assert(uint32_t error_code, int log_line_nr, char *log
 // box.
 void __fastcall appfat_DS_assert(uint32_t error_code, int log_line_nr, char *log_file_path);
 
+/* TODO: uncomment when the HWND struct has been added. Include windows.h
+   from types.h? Or create a minimal windows.h locally for the specific types
+   which are used in Diablo.
+
 // address: 0x401AAB
 //
 // appfat_centre_dialog_box centres the given dialog box.
 void __fastcall appfat_centre_dialog_box(HWND hDlg);
 
+*/
+
 // address: 0x401B3D
 //
 // appfat_terminate_dialog_box terminates the game and displays an error dialog
 // box based on the given template id.
-void __fastcall __noreturn appfat_terminate_dialog_box(int template_id, uint32_t error_code, char *log_file_path, int log_line_nr);
+void __fastcall __attribute__((noreturn)) appfat_terminate_dialog_box(int template_id, uint32_t error_code, char *log_file_path, int log_line_nr);
+
+/* TODO: uncomment when the HWND struct has been added. Include windows.h
+   from types.h? Or create a minimal windows.h locally for the specific types
+   which are used in Diablo.
 
 // address: 0x401BCA
 //
@@ -77,6 +89,8 @@ bool32_t __stdcall appfat_dialog_func(HWND hDlg, UINT uMsg, WPARAM wParam, char 
 // appfat_set_dialog_text sets the text of the given dialog.
 void __fastcall appfat_set_dialog_text(HWND hDlg, char *text);
 
+*/
+
 // address: 0x401C2E
 //
 // appfat_dialog_box displays an error dialog box based on the given template id
@@ -87,13 +101,13 @@ void __fastcall appfat_dialog_box(template_id template_id, uint32_t error_code, 
 //
 // appfat_terminate_file_error_dialog terminates the game with a file not found
 // error dialog.
-void __fastcall __noreturn appfat_terminate_file_error_dialog(char *error);
+void __fastcall __attribute__((noreturn)) appfat_terminate_file_error_dialog(char *error);
 
 // address: 0x401CE1
 //
 // appfat_terminate_disk_space_error_dialog terminates the game with an out of
 // disk space error dialog.
-void __fastcall __noreturn appfat_terminate_disk_space_error_dialog(char *error);
+void __fastcall __attribute__((noreturn)) appfat_terminate_disk_space_error_dialog(char *error);
 
 // address: 0x401D1D
 //
@@ -105,5 +119,4 @@ bool32_t appfat_terminate_insert_cd_error_dialog();
 //
 // appfat_terminate_directory_error_dialog terminates the game with a read-only
 // directory error dialog.
-void __fastcall __noreturn appfat_terminate_directory_error_dialog(char *error);
-
+void __fastcall __attribute__((noreturn)) appfat_terminate_directory_error_dialog(char *error);

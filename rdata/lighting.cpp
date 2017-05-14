@@ -22,4 +22,3 @@ double double_8_0;
 //
 // 15.0
 double double_15_0;
-

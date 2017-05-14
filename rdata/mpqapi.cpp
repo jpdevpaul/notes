@@ -2,4 +2,3 @@
 //
 // +Infinity
 float mpqapi_inf;
-

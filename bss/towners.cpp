@@ -1,3 +1,5 @@
+#include "types.h"
+
 // address: 0x6AAC18
 //
 // has_greeted specifies whether an NPC has recently greeted the player.
@@ -38,8 +40,11 @@ bool32_t has_initialized_wirt;
 // cow_cel points to the contents of "towners/animals/cow.cel".
 void *cow_cel;
 
+/* TODO: uncomment when the Towner struct has been added to structs.h.
+
 // address: 0x6AAC38
 //
 // towners contains the NPCs in Tristram of the current game.
 Towner towners[16];
 
+*/

@@ -2,4 +2,3 @@
 //
 // +Infinity
 float log_inf;
-

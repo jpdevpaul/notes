@@ -1,3 +1,5 @@
+#include "types.h"
+
 // address: 0x4283C0
 //
 // missiles_get_spell_damage retrieves the min and max spell damage of the

@@ -1,3 +1,5 @@
+#include "types.h"
+
 // address: 0x457A01
 //
 // stores_init initializes the resources used by store owners.
@@ -211,11 +213,15 @@ void stores_talk_pepin_buy();
 // stores_talk_cain initiates a dialogue with Cain.
 void stores_talk_cain();
 
+/* TODO: uncomment when the Item struct has been added to structs.h.
+
 // address: 0x459C8E
 //
 // stores_is_unidentified reports whether the given item is magical and
 // unidentified (i.e. it may be identified).
 bool32_t __fastcall stores_is_unidentified(Item *item);
+
+*/
 
 // address: 0x459CA2
 //

@@ -1,3 +1,5 @@
+#include "types.h"
+
 // address: 0x525720
 //
 // visible_tile_squares specifies whether tile squares are visible. In the

@@ -2,4 +2,3 @@
 //
 // +Infinity
 float dthread_inf;
-
