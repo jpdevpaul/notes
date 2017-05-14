@@ -1,24 +1,33 @@
-# plrmsg.cpp
+// address: 0x450D33
+//
+// TODO: add documentation.
 
-## 0x450D33
+// address: 0x450D6A
+//
+// TODO: add documentation.
 
-## 0x450D6A
+// address: 0x450DB3
+//
+// TODO: add documentation.
 
-## 0x450DB3
+// address: 0x450DFA
+//
+// TODO: add documentation.
 
-## 0x450DFA
+// address: 0x450E64
+//
+// TODO: add documentation.
 
-## 0x450E64
+// address: 0x450E8E
+//
+// TODO: add documentation.
 
-## 0x450E8E
-
-## 0x450EAA
-
-### plrmsg_draw
-
-```c
+// address: 0x450EAA
+//
 // plrmsg_draw renders player messages on screen.
 void plrmsg_draw();
-```
 
-## 0x450F37
+// address: 0x450F37
+//
+// TODO: add documentation.
+

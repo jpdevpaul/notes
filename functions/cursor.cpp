@@ -1,33 +1,38 @@
-# cursor.cpp
-
-## 0x40740A
-
-### cursor_load_graphics
-
-```c
+// address: 0x40740A
+//
 // cursor_load_graphics loads cursor graphics.
 void cursor_load_graphics();
-```
 
-## 0x407420
-
-### cursor_cleanup
-
-```c
+// address: 0x407420
+//
 // cursor_cleanup releases the resources used by the cursor.
 void cursor_cleanup();
-```
 
-## 0x407437
+// address: 0x407437
+//
+// TODO: add documentation.
 
-## 0x40746B
+// address: 0x40746B
+//
+// TODO: add documentation.
 
-## 0x40748E
+// address: 0x40748E
+//
+// TODO: add documentation.
 
-## 0x407493
+// address: 0x407493
+//
+// TODO: add documentation.
 
-## 0x4074D0
+// address: 0x4074D0
+//
+// TODO: add documentation.
 
-## 0x4075FD
+// address: 0x4075FD
+//
+// TODO: add documentation.
 
-## 0x407729
+// address: 0x407729
+//
+// TODO: add documentation.
+

@@ -1,73 +1,92 @@
-# sound.cpp
+// address: 0x456CBB
+//
+// TODO: add documentation.
 
-## 0x456CBB
+// address: 0x456CC0
+//
+// TODO: add documentation.
 
-## 0x456CC0
-
-## 0x456CCB
-
-### sound_stop
-
-```c
+// address: 0x456CCB
+//
 // sound_stop stops the sounds from playing on all audio channels.
 void __fastcall sound_stop(bool32_t force_stop);
-```
 
-## 0x456D22
+// address: 0x456D22
+//
+// TODO: add documentation.
 
-## 0x456D34
+// address: 0x456D34
+//
+// TODO: add documentation.
 
-## 0x456D60
+// address: 0x456D60
+//
+// TODO: add documentation.
 
-## 0x456E39
+// address: 0x456E39
+//
+// TODO: add documentation.
 
-## 0x456E74
+// address: 0x456E74
+//
+// TODO: add documentation.
 
-## 0x456F07
+// address: 0x456F07
+//
+// TODO: add documentation.
 
-## 0x457003
+// address: 0x457003
+//
+// TODO: add documentation.
 
-## 0x457060
-
-### sound_cleanup_file
-
-```c
+// address: 0x457060
+//
 // sound_cleanup_file terminates and releases the given sound file.
 void __fastcall sound_cleanup_file(SoundFile *sound_file);
-```
 
-## 0x45708B
+// address: 0x45708B
+//
+// TODO: add documentation.
 
-## 0x45712B
+// address: 0x45712B
+//
+// TODO: add documentation.
 
-## 0x45717C
+// address: 0x45717C
+//
+// TODO: add documentation.
 
-## 0x45727E
+// address: 0x45727E
+//
+// TODO: add documentation.
 
-## 0x4572FF
-
-### sound_cleanup
-
-```c
+// address: 0x4572FF
+//
 // sound_cleanup terminates the sound system.
 void sound_cleanup();
-```
 
-## 0x457358
+// address: 0x457358
+//
+// TODO: add documentation.
 
-## 0x457367
-
-### sound_stop_music
-
-```c
+// address: 0x457367
+//
 // sound_stop_music stops the background music playback.
 void sound_stop_music();
-```
 
-## 0x457393
+// address: 0x457393
+//
+// TODO: add documentation.
 
-## 0x4573FE
+// address: 0x4573FE
+//
+// TODO: add documentation.
 
-## 0x457418
+// address: 0x457418
+//
+// TODO: add documentation.
 
-## 0x45743B
+// address: 0x45743B
+//
+// TODO: add documentation.
+

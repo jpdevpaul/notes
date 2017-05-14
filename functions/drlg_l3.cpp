@@ -1,69 +1,136 @@
-# drlg_l3.cpp
+// address: 0x40FF81
+//
+// TODO: add documentation.
 
-## 0x40FF81
+// address: 0x40FFEC
+//
+// TODO: add documentation.
 
-## 0x40FFEC
+// address: 0x410105
+//
+// TODO: add documentation.
 
-## 0x410105
+// address: 0x410215
+//
+// TODO: add documentation.
 
-## 0x410215
+// address: 0x41027D
+//
+// TODO: add documentation.
 
-## 0x41027D
+// address: 0x4102F1
+//
+// TODO: add documentation.
 
-## 0x4102F1
+// address: 0x410344
+//
+// TODO: add documentation.
 
-## 0x410344
+// address: 0x4103A1
+//
+// TODO: add documentation.
 
-## 0x4103A1
+// address: 0x41044E
+//
+// TODO: add documentation.
 
-## 0x41044E
+// address: 0x41087F
+//
+// TODO: add documentation.
 
-## 0x41087F
+// address: 0x4108B5
+//
+// TODO: add documentation.
 
-## 0x4108B5
+// address: 0x4109F0
+//
+// TODO: add documentation.
 
-## 0x4109F0
+// address: 0x410BC0
+//
+// TODO: add documentation.
 
-## 0x410BC0
+// address: 0x410BF4
+//
+// TODO: add documentation.
 
-## 0x410BF4
+// address: 0x410C65
+//
+// TODO: add documentation.
 
-## 0x410C65
+// address: 0x410CC4
+//
+// TODO: add documentation.
 
-## 0x410CC4
+// address: 0x410EDB
+//
+// TODO: add documentation.
 
-## 0x410EDB
+// address: 0x410EFC
+//
+// TODO: add documentation.
 
-## 0x410EFC
+// address: 0x410F1F
+//
+// TODO: add documentation.
 
-## 0x410F1F
+// address: 0x410FAD
+//
+// TODO: add documentation.
 
-## 0x410FAD
+// address: 0x411614
+//
+// TODO: add documentation.
 
-## 0x411614
+// address: 0x411772
+//
+// TODO: add documentation.
 
-## 0x411772
+// address: 0x41189C
+//
+// TODO: add documentation.
 
-## 0x41189C
+// address: 0x4119E0
+//
+// TODO: add documentation.
 
-## 0x4119E0
+// address: 0x411A74
+//
+// TODO: add documentation.
 
-## 0x411A74
+// address: 0x411C83
+//
+// TODO: add documentation.
 
-## 0x411C83
+// address: 0x411E0E
+//
+// TODO: add documentation.
 
-## 0x411E0E
+// address: 0x41223E
+//
+// TODO: add documentation.
 
-## 0x41223E
+// address: 0x41228A
+//
+// TODO: add documentation.
 
-## 0x41228A
+// address: 0x4122CE
+//
+// TODO: add documentation.
 
-## 0x4122CE
+// address: 0x41231A
+//
+// TODO: add documentation.
 
-## 0x41231A
+// address: 0x41235E
+//
+// TODO: add documentation.
 
-## 0x41235E
+// address: 0x412466
+//
+// TODO: add documentation.
 
-## 0x412466
+// address: 0x4125B0
+//
+// TODO: add documentation.
 
-## 0x4125B0

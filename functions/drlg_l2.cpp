@@ -1,71 +1,140 @@
-# drlg_l2.cpp
+// address: 0x40D357
+//
+// TODO: add documentation.
 
-## 0x40D357
+// address: 0x40D379
+//
+// TODO: add documentation.
 
-## 0x40D379
+// address: 0x40D4CC
+//
+// TODO: add documentation.
 
-## 0x40D4CC
+// address: 0x40D501
+//
+// TODO: add documentation.
 
-## 0x40D501
+// address: 0x40D6C1
+//
+// TODO: add documentation.
 
-## 0x40D6C1
+// address: 0x40D7B3
+//
+// TODO: add documentation.
 
-## 0x40D7B3
+// address: 0x40D888
+//
+// TODO: add documentation.
 
-## 0x40D888
+// address: 0x40D94F
+//
+// TODO: add documentation.
 
-## 0x40D94F
+// address: 0x40D9A4
+//
+// TODO: add documentation.
 
-## 0x40D9A4
+// address: 0x40D9B6
+//
+// TODO: add documentation.
 
-## 0x40D9B6
+// address: 0x40E074
+//
+// TODO: add documentation.
 
-## 0x40E074
+// address: 0x40E2D1
+//
+// TODO: add documentation.
 
-## 0x40E2D1
+// address: 0x40E49C
+//
+// TODO: add documentation.
 
-## 0x40E49C
+// address: 0x40E59C
+//
+// TODO: add documentation.
 
-## 0x40E59C
+// address: 0x40E66B
+//
+// TODO: add documentation.
 
-## 0x40E66B
+// address: 0x40E6F0
+//
+// TODO: add documentation.
 
-## 0x40E6F0
+// address: 0x40E74F
+//
+// TODO: add documentation.
 
-## 0x40E74F
+// address: 0x40E8A4
+//
+// TODO: add documentation.
 
-## 0x40E8A4
+// address: 0x40ECF9
+//
+// TODO: add documentation.
 
-## 0x40ECF9
+// address: 0x40EE1D
+//
+// TODO: add documentation.
 
-## 0x40EE1D
+// address: 0x40EEAC
+//
+// TODO: add documentation.
 
-## 0x40EEAC
+// address: 0x40EF09
+//
+// TODO: add documentation.
 
-## 0x40EF09
+// address: 0x40F265
+//
+// TODO: add documentation.
 
-## 0x40F265
+// address: 0x40F2BD
+//
+// TODO: add documentation.
 
-## 0x40F2BD
+// address: 0x40F2D0
+//
+// TODO: add documentation.
 
-## 0x40F2D0
+// address: 0x40F459
+//
+// TODO: add documentation.
 
-## 0x40F459
+// address: 0x40F9B1
+//
+// TODO: add documentation.
 
-## 0x40F9B1
+// address: 0x40F9EE
+//
+// TODO: add documentation.
 
-## 0x40F9EE
+// address: 0x40FA10
+//
+// TODO: add documentation.
 
-## 0x40FA10
+// address: 0x40FA97
+//
+// TODO: add documentation.
 
-## 0x40FA97
+// address: 0x40FB6C
+//
+// TODO: add documentation.
 
-## 0x40FB6C
+// address: 0x40FBDB
+//
+// TODO: add documentation.
 
-## 0x40FBDB
+// address: 0x40FDCB
+//
+// TODO: add documentation.
 
-## 0x40FDCB
+// address: 0x40FE53
+//
+// TODO: add documentation.
 
-## 0x40FE53
+// address: 0x40FEBF
+//
+// TODO: add documentation.
 
-## 0x40FEBF

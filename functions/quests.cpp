@@ -1,16 +1,17 @@
-# quests.cpp
+// address: 0x45138E
+//
+// TODO: add documentation.
 
-## 0x45138E
+// address: 0x45155C
+//
+// TODO: add documentation.
 
-## 0x45155C
+// address: 0x45178F
+//
+// TODO: add documentation.
 
-## 0x45178F
-
-## 0x451831
-
-### quests_is_active
-
-```c
+// address: 0x451831
+//
 // quests_is_active reports whether the given quest is active.
 //
 // PSX ref: 0x80067B70
@@ -18,53 +19,89 @@
 //
 // NOTE: quest_num and quest_id are equivalent, as indicated by this function.
 bool32_t __fastcall quests_is_active(quest_id quest_num);
-```
 
-## 0x451871
+// address: 0x451871
+//
+// TODO: add documentation.
 
-## 0x451BEA
+// address: 0x451BEA
+//
+// TODO: add documentation.
 
-## 0x451C11
+// address: 0x451C11
+//
+// TODO: add documentation.
 
-## 0x451C32
+// address: 0x451C32
+//
+// TODO: add documentation.
 
-## 0x451CC2
+// address: 0x451CC2
+//
+// TODO: add documentation.
 
-## 0x451D7C
+// address: 0x451D7C
+//
+// TODO: add documentation.
 
-## 0x451E08
+// address: 0x451E08
+//
+// TODO: add documentation.
 
-## 0x451E94
+// address: 0x451E94
+//
+// TODO: add documentation.
 
-## 0x451F20
+// address: 0x451F20
+//
+// TODO: add documentation.
 
-## 0x451FB1
+// address: 0x451FB1
+//
+// TODO: add documentation.
 
-## 0x452064
+// address: 0x452064
+//
+// TODO: add documentation.
 
-## 0x45209D
+// address: 0x45209D
+//
+// TODO: add documentation.
 
-## 0x452159
+// address: 0x452159
+//
+// TODO: add documentation.
 
-## 0x45247F
+// address: 0x45247F
+//
+// TODO: add documentation.
 
-## 0x4525CD
-
-### quests_draw_quest_log
-
-```c
+// address: 0x4525CD
+//
 // quests_draw renders the quest log on screen.
 void quests_draw_quest_log();
-```
 
-## 0x452659
+// address: 0x452659
+//
+// TODO: add documentation.
 
-## 0x4526C9
+// address: 0x4526C9
+//
+// TODO: add documentation.
 
-## 0x452710
+// address: 0x452710
+//
+// TODO: add documentation.
 
-## 0x45275A
+// address: 0x45275A
+//
+// TODO: add documentation.
 
-## 0x45279C
+// address: 0x45279C
+//
+// TODO: add documentation.
 
-## 0x4527F1
+// address: 0x4527F1
+//
+// TODO: add documentation.
+

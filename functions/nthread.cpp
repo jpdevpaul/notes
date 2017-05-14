@@ -1,38 +1,61 @@
-# nthread.cpp
+// address: 0x440DAE
+//
+// TODO: add documentation.
 
-## 0x440DAE
+// address: 0x440DB3
+//
+// TODO: add documentation.
 
-## 0x440DB3
+// address: 0x440DBE
+//
+// TODO: add documentation.
 
-## 0x440DBE
+// address: 0x440DC8
+//
+// TODO: add documentation.
 
-## 0x440DC8
+// address: 0x440DD4
+//
+// TODO: add documentation.
 
-## 0x440DD4
+// address: 0x440DE0
+//
+// TODO: add documentation.
 
-## 0x440DE0
+// address: 0x440DEC
+//
+// TODO: add documentation.
 
-## 0x440DEC
+// address: 0x440E28
+//
+// TODO: add documentation.
 
-## 0x440E28
+// address: 0x440EAA
+//
+// TODO: add documentation.
 
-## 0x440EAA
+// address: 0x440F56
+//
+// TODO: add documentation.
 
-## 0x440F56
+// address: 0x440F61
+//
+// TODO: add documentation.
 
-## 0x440F61
+// address: 0x4410CF
+//
+// TODO: add documentation.
 
-## 0x4410CF
-
-## 0x441145
-
-### nthread_cleanup
-
-```c
+// address: 0x441145
+//
 // nthread_cleanup terminates the networking thread.
 void nthread_cleanup();
-```
 
-## 0x4411C4
+// address: 0x4411C4
+//
+// TODO: add documentation.
 
-## 0x4411EF
+// address: 0x4411EF
+//
+// TODO: add documentation.
+

@@ -1,15 +1,28 @@
-# hero.cpp
+// address: 0x448755
+//
+// TODO: add documentation.
 
-## 0x448755
+// address: 0x44875A
+//
+// TODO: add documentation.
 
-## 0x44875A
+// address: 0x448765
+//
+// TODO: add documentation.
 
-## 0x448765
+// address: 0x448953
+//
+// TODO: add documentation.
 
-## 0x448953
+// address: 0x448A5E
+//
+// TODO: add documentation.
 
-## 0x448A5E
+// address: 0x448AD0
+//
+// TODO: add documentation.
 
-## 0x448AD0
+// address: 0x448D48
+//
+// TODO: add documentation.
 
-## 0x448D48

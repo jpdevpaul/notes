@@ -1,295 +1,588 @@
-# monster.cpp
+// address: 0x430FDF
+//
+// TODO: add documentation.
+
+// address: 0x430FE4
+//
+// TODO: add documentation.
+
+// address: 0x430FEF
+//
+// TODO: add documentation.
+
+// address: 0x43107B
+//
+// TODO: add documentation.
+
+// address: 0x4310CF
+//
+// TODO: add documentation.
+
+// address: 0x43114F
+//
+// TODO: add documentation.
+
+// address: 0x4313F9
+//
+// TODO: add documentation.
+
+// address: 0x4316AE
+//
+// TODO: add documentation.
+
+// address: 0x4316E7
+//
+// TODO: add documentation.
+
+// address: 0x431A6B
+//
+// TODO: add documentation.
+
+// address: 0x431B10
+//
+// TODO: add documentation.
+
+// address: 0x431B5D
+//
+// TODO: add documentation.
+
+// address: 0x431B99
+//
+// TODO: add documentation.
+
+// address: 0x432088
+//
+// TODO: add documentation.
+
+// address: 0x4322FA
+//
+// TODO: add documentation.
+
+// address: 0x432585
+//
+// TODO: add documentation.
+
+// address: 0x432637
+//
+// TODO: add documentation.
+
+// address: 0x43283D
+//
+// TODO: add documentation.
+
+// address: 0x43290E
+//
+// TODO: add documentation.
+
+// address: 0x432A4D
+//
+// TODO: add documentation.
+
+// address: 0x432A71
+//
+// TODO: add documentation.
+
+// address: 0x432AC1
+//
+// TODO: add documentation.
+
+// address: 0x432AFF
+//
+// TODO: add documentation.
+
+// address: 0x432B26
+//
+// TODO: add documentation.
+
+// address: 0x432B5C
+//
+// TODO: add documentation.
+
+// address: 0x432E15
+//
+// TODO: add documentation.
+
+// address: 0x432E3D
+//
+// TODO: add documentation.
+
+// address: 0x432E9D
+//
+// TODO: add documentation.
+
+// address: 0x432F29
+//
+// TODO: add documentation.
+
+// address: 0x432F4F
+//
+// TODO: add documentation.
+
+// address: 0x432FBC
+//
+// TODO: add documentation.
+
+// address: 0x43308F
+//
+// TODO: add documentation.
+
+// address: 0x4331AA
+//
+// TODO: add documentation.
+
+// address: 0x4332F6
+//
+// TODO: add documentation.
+
+// address: 0x433367
+//
+// TODO: add documentation.
+
+// address: 0x4333EF
+//
+// TODO: add documentation.
+
+// address: 0x433480
+//
+// TODO: add documentation.
+
+// address: 0x4334F4
+//
+// TODO: add documentation.
+
+// address: 0x43355C
+//
+// TODO: add documentation.
+
+// address: 0x43361B
+//
+// TODO: add documentation.
+
+// address: 0x4336E5
+//
+// TODO: add documentation.
+
+// address: 0x43385A
+//
+// TODO: add documentation.
+
+// address: 0x433A4C
+//
+// TODO: add documentation.
+
+// address: 0x433BCC
+//
+// TODO: add documentation.
+
+// address: 0x433DC2
+//
+// TODO: add documentation.
+
+// address: 0x433FC7
+//
+// TODO: add documentation.
+
+// address: 0x434045
+//
+// TODO: add documentation.
+
+// address: 0x4340E0
+//
+// TODO: add documentation.
+
+// address: 0x4341AD
+//
+// TODO: add documentation.
+
+// address: 0x434272
+//
+// TODO: add documentation.
+
+// address: 0x43430A
+//
+// TODO: add documentation.
+
+// address: 0x434374
+//
+// TODO: add documentation.
+
+// address: 0x4343F3
+//
+// TODO: add documentation.
+
+// address: 0x434509
+//
+// TODO: add documentation.
+
+// address: 0x4345FC
+//
+// TODO: add documentation.
+
+// address: 0x434722
+//
+// TODO: add documentation.
+
+// address: 0x43482C
+//
+// TODO: add documentation.
+
+// address: 0x434C3B
+//
+// TODO: add documentation.
+
+// address: 0x434DBD
+//
+// TODO: add documentation.
+
+// address: 0x434EB2
+//
+// TODO: add documentation.
+
+// address: 0x434FC7
+//
+// TODO: add documentation.
+
+// address: 0x43507E
+//
+// TODO: add documentation.
+
+// address: 0x4350E3
+//
+// TODO: add documentation.
+
+// address: 0x435165
+//
+// TODO: add documentation.
+
+// address: 0x4351F5
+//
+// TODO: add documentation.
+
+// address: 0x43547A
+//
+// TODO: add documentation.
+
+// address: 0x4355BB
+//
+// TODO: add documentation.
+
+// address: 0x43561E
+//
+// TODO: add documentation.
+
+// address: 0x435697
+//
+// TODO: add documentation.
+
+// address: 0x43575C
+//
+// TODO: add documentation.
+
+// address: 0x4357DF
+//
+// TODO: add documentation.
+
+// address: 0x4358EC
+//
+// TODO: add documentation.
+
+// address: 0x43596B
+//
+// TODO: add documentation.
+
+// address: 0x435A14
+//
+// TODO: add documentation.
+
+// address: 0x435A62
+//
+// TODO: add documentation.
+
+// address: 0x435BB5
+//
+// TODO: add documentation.
+
+// address: 0x435DA8
+//
+// TODO: add documentation.
+
+// address: 0x435EB5
+//
+// TODO: add documentation.
+
+// address: 0x435F35
+//
+// TODO: add documentation.
+
+// address: 0x435FBA
+//
+// TODO: add documentation.
+
+// address: 0x435FDB
+//
+// TODO: add documentation.
+
+// address: 0x4360B1
+//
+// TODO: add documentation.
+
+// address: 0x4361F7
+//
+// TODO: add documentation.
+
+// address: 0x436331
+//
+// TODO: add documentation.
+
+// address: 0x4363F9
+//
+// TODO: add documentation.
+
+// address: 0x43668F
+//
+// TODO: add documentation.
+
+// address: 0x4368F7
+//
+// TODO: add documentation.
+
+// address: 0x436A38
+//
+// TODO: add documentation.
+
+// address: 0x436B60
+//
+// TODO: add documentation.
+
+// address: 0x436DC8
+//
+// TODO: add documentation.
+
+// address: 0x436FEC
+//
+// TODO: add documentation.
+
+// address: 0x4371D7
+//
+// TODO: add documentation.
+
+// address: 0x437285
+//
+// TODO: add documentation.
+
+// address: 0x437520
+//
+// TODO: add documentation.
+
+// address: 0x437528
+//
+// TODO: add documentation.
+
+// address: 0x4376B3
+//
+// TODO: add documentation.
+
+// address: 0x4376BD
+//
+// TODO: add documentation.
+
+// address: 0x4376C8
+//
+// TODO: add documentation.
+
+// address: 0x4376D3
+//
+// TODO: add documentation.
+
+// address: 0x437957
+//
+// TODO: add documentation.
+
+// address: 0x437A8B
+//
+// TODO: add documentation.
+
+// address: 0x437D93
+//
+// TODO: add documentation.
+
+// address: 0x437DA2
+//
+// TODO: add documentation.
+
+// address: 0x437DB1
+//
+// TODO: add documentation.
+
+// address: 0x437DC0
+//
+// TODO: add documentation.
+
+// address: 0x437DCF
+//
+// TODO: add documentation.
+
+// address: 0x4380DE
+//
+// TODO: add documentation.
+
+// address: 0x4380E9
+//
+// TODO: add documentation.
+
+// address: 0x438304
+//
+// TODO: add documentation.
+
+// address: 0x43862D
+//
+// TODO: add documentation.
+
+// address: 0x43891F
+//
+// TODO: add documentation.
+
+// address: 0x438C79
+//
+// TODO: add documentation.
+
+// address: 0x438D7E
+//
+// TODO: add documentation.
+
+// address: 0x438EC2
+//
+// TODO: add documentation.
+
+// address: 0x439016
+//
+// TODO: add documentation.
+
+// address: 0x439196
+//
+// TODO: add documentation.
+
+// address: 0x439253
+//
+// TODO: add documentation.
+
+// address: 0x439338
+//
+// TODO: add documentation.
+
+// address: 0x439419
+//
+// TODO: add documentation.
+
+// address: 0x43947E
+//
+// TODO: add documentation.
+
+// address: 0x4397C5
+//
+// TODO: add documentation.
+
+// address: 0x439831
+//
+// TODO: add documentation.
+
+// address: 0x439A32
+//
+// TODO: add documentation.
 
-## 0x430FDF
+// address: 0x439A57
+//
+// TODO: add documentation.
 
-## 0x430FE4
+// address: 0x439A71
+//
+// TODO: add documentation.
 
-## 0x430FEF
+// address: 0x439BE0
+//
+// TODO: add documentation.
 
-## 0x43107B
+// address: 0x439BFA
+//
+// TODO: add documentation.
 
-## 0x4310CF
+// address: 0x439D75
+//
+// TODO: add documentation.
 
-## 0x43114F
+// address: 0x439EA8
+//
+// TODO: add documentation.
 
-## 0x4313F9
+// address: 0x439F92
+//
+// TODO: add documentation.
 
-## 0x4316AE
+// address: 0x43A13A
+//
+// TODO: add documentation.
 
-## 0x4316E7
+// address: 0x43A1C1
+//
+// TODO: add documentation.
 
-## 0x431A6B
+// address: 0x43A45E
+//
+// TODO: add documentation.
 
-## 0x431B10
+// address: 0x43A547
+//
+// TODO: add documentation.
 
-## 0x431B5D
+// address: 0x43A613
+//
+// TODO: add documentation.
 
-## 0x431B99
+// address: 0x43A73B
+//
+// TODO: add documentation.
 
-## 0x432088
+// address: 0x43A760
+//
+// TODO: add documentation.
 
-## 0x4322FA
+// address: 0x43A77B
+//
+// TODO: add documentation.
 
-## 0x432585
+// address: 0x43A828
+//
+// TODO: add documentation.
 
-## 0x432637
+// address: 0x43A879
+//
+// TODO: add documentation.
 
-## 0x43283D
+// address: 0x43A979
+//
+// TODO: add documentation.
 
-## 0x43290E
+// address: 0x43AA0C
+//
+// TODO: add documentation.
 
-## 0x432A4D
+// address: 0x43AADA
+//
+// TODO: add documentation.
 
-## 0x432A71
+// address: 0x43AC0C
+//
+// TODO: add documentation.
 
-## 0x432AC1
+// address: 0x43AC43
+//
+// TODO: add documentation.
 
-## 0x432AFF
+// address: 0x43ACB5
+//
+// TODO: add documentation.
 
-## 0x432B26
+// address: 0x43ACCE
+//
+// TODO: add documentation.
 
-## 0x432B5C
-
-## 0x432E15
-
-## 0x432E3D
-
-## 0x432E9D
-
-## 0x432F29
-
-## 0x432F4F
-
-## 0x432FBC
-
-## 0x43308F
-
-## 0x4331AA
-
-## 0x4332F6
-
-## 0x433367
-
-## 0x4333EF
-
-## 0x433480
-
-## 0x4334F4
-
-## 0x43355C
-
-## 0x43361B
-
-## 0x4336E5
-
-## 0x43385A
-
-## 0x433A4C
-
-## 0x433BCC
-
-## 0x433DC2
-
-## 0x433FC7
-
-## 0x434045
-
-## 0x4340E0
-
-## 0x4341AD
-
-## 0x434272
-
-## 0x43430A
-
-## 0x434374
-
-## 0x4343F3
-
-## 0x434509
-
-## 0x4345FC
-
-## 0x434722
-
-## 0x43482C
-
-## 0x434C3B
-
-## 0x434DBD
-
-## 0x434EB2
-
-## 0x434FC7
-
-## 0x43507E
-
-## 0x4350E3
-
-## 0x435165
-
-## 0x4351F5
-
-## 0x43547A
-
-## 0x4355BB
-
-## 0x43561E
-
-## 0x435697
-
-## 0x43575C
-
-## 0x4357DF
-
-## 0x4358EC
-
-## 0x43596B
-
-## 0x435A14
-
-## 0x435A62
-
-## 0x435BB5
-
-## 0x435DA8
-
-## 0x435EB5
-
-## 0x435F35
-
-## 0x435FBA
-
-## 0x435FDB
-
-## 0x4360B1
-
-## 0x4361F7
-
-## 0x436331
-
-## 0x4363F9
-
-## 0x43668F
-
-## 0x4368F7
-
-## 0x436A38
-
-## 0x436B60
-
-## 0x436DC8
-
-## 0x436FEC
-
-## 0x4371D7
-
-## 0x437285
-
-## 0x437520
-
-## 0x437528
-
-## 0x4376B3
-
-## 0x4376BD
-
-## 0x4376C8
-
-## 0x4376D3
-
-## 0x437957
-
-## 0x437A8B
-
-## 0x437D93
-
-## 0x437DA2
-
-## 0x437DB1
-
-## 0x437DC0
-
-## 0x437DCF
-
-## 0x4380DE
-
-## 0x4380E9
-
-## 0x438304
-
-## 0x43862D
-
-## 0x43891F
-
-## 0x438C79
-
-## 0x438D7E
-
-## 0x438EC2
-
-## 0x439016
-
-## 0x439196
-
-## 0x439253
-
-## 0x439338
-
-## 0x439419
-
-## 0x43947E
-
-## 0x4397C5
-
-## 0x439831
-
-## 0x439A32
-
-## 0x439A57
-
-## 0x439A71
-
-## 0x439BE0
-
-## 0x439BFA
-
-## 0x439D75
-
-## 0x439EA8
-
-## 0x439F92
-
-## 0x43A13A
-
-## 0x43A1C1
-
-## 0x43A45E
-
-## 0x43A547
-
-## 0x43A613
-
-## 0x43A73B
-
-## 0x43A760
-
-## 0x43A77B
-
-## 0x43A828
-
-## 0x43A879
-
-## 0x43A979
-
-## 0x43AA0C
-
-## 0x43AADA
-
-## 0x43AC0C
-
-## 0x43AC43
-
-## 0x43ACB5
-
-## 0x43ACCE

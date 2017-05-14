@@ -1,45 +1,88 @@
-# palette.cpp
+// address: 0x448DF5
+//
+// TODO: add documentation.
 
-## 0x448DF5
+// address: 0x448DFA
+//
+// TODO: add documentation.
 
-## 0x448DFA
+// address: 0x448E05
+//
+// TODO: add documentation.
 
-## 0x448E05
+// address: 0x448E33
+//
+// TODO: add documentation.
 
-## 0x448E33
+// address: 0x448EAB
+//
+// TODO: add documentation.
 
-## 0x448EAB
+// address: 0x448F20
+//
+// TODO: add documentation.
 
-## 0x448F20
+// address: 0x448FC9
+//
+// TODO: add documentation.
 
-## 0x448FC9
+// address: 0x449025
+//
+// TODO: add documentation.
 
-## 0x449025
+// address: 0x44906C
+//
+// TODO: add documentation.
 
-## 0x44906C
+// address: 0x449097
+//
+// TODO: add documentation.
 
-## 0x449097
+// address: 0x4490D0
+//
+// TODO: add documentation.
 
-## 0x4490D0
+// address: 0x449107
+//
+// TODO: add documentation.
 
-## 0x449107
+// address: 0x4491D0
+//
+// TODO: add documentation.
 
-## 0x4491D0
+// address: 0x449209
+//
+// TODO: add documentation.
 
-## 0x449209
+// address: 0x44923E
+//
+// TODO: add documentation.
 
-## 0x44923E
+// address: 0x449245
+//
+// TODO: add documentation.
 
-## 0x449245
+// address: 0x4492B0
+//
+// TODO: add documentation.
 
-## 0x4492B0
+// address: 0x449306
+//
+// TODO: add documentation.
 
-## 0x449306
+// address: 0x449336
+//
+// TODO: add documentation.
 
-## 0x449336
+// address: 0x449398
+//
+// TODO: add documentation.
 
-## 0x449398
+// address: 0x4493C6
+//
+// TODO: add documentation.
 
-## 0x4493C6
+// address: 0x4493CC
+//
+// TODO: add documentation.
 
-## 0x4493CC

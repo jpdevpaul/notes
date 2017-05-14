@@ -1,92 +1,141 @@
-# items.cpp
-
-## 0x41F096
-
-### items_load_drop_graphics
-
-```c
+// address: 0x41F096
+//
 // items_load_drop_graphics loads item drop graphics and initializes the
 // tracking of dropped unique items.
 void items_load_drop_graphics();
-```
 
-## 0x41F0E8
+// address: 0x41F0E8
+//
+// TODO: add documentation.
 
-## 0x41F13A
+// address: 0x41F13A
+//
+// TODO: add documentation.
 
-## 0x41F24E
+// address: 0x41F24E
+//
+// TODO: add documentation.
 
-## 0x41F320
+// address: 0x41F320
+//
+// TODO: add documentation.
 
-## 0x41F953
+// address: 0x41F953
+//
+// TODO: add documentation.
 
-## 0x41FA4A
+// address: 0x41FA4A
+//
+// TODO: add documentation.
 
-## 0x41FA97
+// address: 0x41FA97
+//
+// TODO: add documentation.
 
-## 0x41FB91
+// address: 0x41FB91
+//
+// TODO: add documentation.
 
-## 0x41FBF6
+// address: 0x41FBF6
+//
+// TODO: add documentation.
 
-## 0x41FC2C
+// address: 0x41FC2C
+//
+// TODO: add documentation.
 
-## 0x41FD3E
+// address: 0x41FD3E
+//
+// TODO: add documentation.
 
-## 0x41FD98
+// address: 0x41FD98
+//
+// TODO: add documentation.
 
-## 0x41FE98
+// address: 0x41FE98
+//
+// TODO: add documentation.
 
-## 0x41FEA4
-
-### items_gen_seed
-
-```c
+// address: 0x41FEA4
+//
 // items_gen_seed generates a seed for the given item, distinct from the seed
 // values of all other active items.
 void __fastcall items_gen_seed(int player_num, int32_t *item_seed);
-```
 
-## 0x41FF16
+// address: 0x41FF16
+//
+// TODO: add documentation.
 
-## 0x41FF19
+// address: 0x41FF19
+//
+// TODO: add documentation.
 
-## 0x41FF4E
+// address: 0x41FF4E
+//
+// TODO: add documentation.
 
-## 0x4200F8
+// address: 0x4200F8
+//
+// TODO: add documentation.
 
-## 0x4201F2
+// address: 0x4201F2
+//
+// TODO: add documentation.
 
-## 0x4202E8
+// address: 0x4202E8
+//
+// TODO: add documentation.
 
-## 0x420376
+// address: 0x420376
+//
+// TODO: add documentation.
 
-## 0x4203E0
+// address: 0x4203E0
+//
+// TODO: add documentation.
 
-## 0x42042C
+// address: 0x42042C
+//
+// TODO: add documentation.
 
-## 0x420514
+// address: 0x420514
+//
+// TODO: add documentation.
 
-## 0x4206E5
+// address: 0x4206E5
+//
+// TODO: add documentation.
 
-## 0x42084A
+// address: 0x42084A
+//
+// TODO: add documentation.
 
-## 0x420B17
+// address: 0x420B17
+//
+// TODO: add documentation.
 
-## 0x420B28
+// address: 0x420B28
+//
+// TODO: add documentation.
 
-## 0x420B68
+// address: 0x420B68
+//
+// TODO: add documentation.
 
-## 0x4215EF
+// address: 0x4215EF
+//
+// TODO: add documentation.
 
-## 0x42191C
+// address: 0x42191C
+//
+// TODO: add documentation.
 
-## 0x4219C1
+// address: 0x4219C1
+//
+// TODO: add documentation.
 
-## 0x421A4B
-
-### items_get_rand_loot_id_from_monster
-
-```c
+// address: 0x421A4B
+//
 // items_get_rand_loot_id_from_monster returns the loot ID of a random item
 // drop from the monster.
 //
@@ -117,189 +166,317 @@ void __fastcall items_gen_seed(int player_num, int32_t *item_seed);
 //         or double chance of dropping.
 //       - In single player, items with the Resurrect or the Heal Other spell
 //         never drop.
+//
+// References:
+//    * https://github.com/sanctuary/notes/blob/master/enums.cpp#item_id
+//    * https://github.com/sanctuary/notes/blob/master/enums.cpp#unique_item_id
 int __fastcall items_get_rand_loot_id_from_monster(int monster_num);
-```
 
-References:
-* https://github.com/sanctuary/notes/blob/master/enumerates.md#item_id
-* https://github.com/sanctuary/notes/blob/master/enumerates.md#unique_item_id
+// address: 0x421B32
+//
+// TODO: add documentation.
 
-## 0x421B32
+// address: 0x421C2A
+//
+// TODO: add documentation.
 
-## 0x421C2A
+// address: 0x421CB7
+//
+// TODO: add documentation.
 
-## 0x421CB7
+// address: 0x421D41
+//
+// TODO: add documentation.
 
-## 0x421D41
+// address: 0x421E11
+//
+// TODO: add documentation.
 
-## 0x421E11
+// address: 0x421F5C
+//
+// TODO: add documentation.
 
-## 0x421F5C
+// address: 0x421FE6
+//
+// TODO: add documentation.
 
-## 0x421FE6
+// address: 0x422024
+//
+// TODO: add documentation.
 
-## 0x422024
+// address: 0x42217A
+//
+// TODO: add documentation.
 
-## 0x42217A
+// address: 0x422290
+//
+// TODO: add documentation.
 
-## 0x422290
+// address: 0x42232B
+//
+// TODO: add documentation.
 
-## 0x42232B
+// address: 0x4223D0
+//
+// TODO: add documentation.
 
-## 0x4223D0
+// address: 0x42243D
+//
+// TODO: add documentation.
 
-## 0x42243D
+// address: 0x4224A6
+//
+// TODO: add documentation.
 
-## 0x4224A6
+// address: 0x42254A
+//
+// TODO: add documentation.
 
-## 0x42254A
+// address: 0x42265C
+//
+// TODO: add documentation.
 
-## 0x42265C
+// address: 0x422795
+//
+// TODO: add documentation.
 
-## 0x422795
+// address: 0x4228B1
+//
+// TODO: add documentation.
 
-## 0x4228B1
+// address: 0x422989
+//
+// TODO: add documentation.
 
-## 0x422989
+// address: 0x422A50
+//
+// TODO: add documentation.
 
-## 0x422A50
+// address: 0x422A84
+//
+// TODO: add documentation.
 
-## 0x422A84
+// address: 0x422ADE
+//
+// TODO: add documentation.
 
-## 0x422ADE
+// address: 0x422BB2
+//
+// TODO: add documentation.
 
-## 0x422BB2
+// address: 0x422BCF
+//
+// TODO: add documentation.
 
-## 0x422BCF
+// address: 0x422BF0
+//
+// TODO: add documentation.
 
-## 0x422BF0
+// address: 0x422C63
+//
+// TODO: add documentation.
 
-## 0x422C63
+// address: 0x422C9C
+//
+// TODO: add documentation.
 
-## 0x422C9C
+// address: 0x422CF6
+//
+// TODO: add documentation.
 
-## 0x422CF6
+// address: 0x422D6C
+//
+// TODO: add documentation.
 
-## 0x422D6C
+// address: 0x422DDD
+//
+// TODO: add documentation.
 
-## 0x422DDD
+// address: 0x422E14
+//
+// TODO: add documentation.
 
-## 0x422E14
+// address: 0x422EF4
+//
+// TODO: add documentation.
 
-## 0x422EF4
+// address: 0x423530
+//
+// TODO: add documentation.
 
-## 0x423530
+// address: 0x42358C
+//
+// TODO: add documentation.
 
-## 0x42358C
+// address: 0x42365B
+//
+// TODO: add documentation.
 
-## 0x42365B
-
-## 0x4236A6
-
-### items_draw_unique_item_box
-
-```c
+// address: 0x4236A6
+//
 // items_draw_unique_item_box renders the unique item box on screen.
 void items_draw_unique_item_box();
-```
 
-## 0x4237DC
+// address: 0x4237DC
+//
+// TODO: add documentation.
 
-## 0x4238D4
+// address: 0x4238D4
+//
+// TODO: add documentation.
 
-## 0x423AE1
+// address: 0x423AE1
+//
+// TODO: add documentation.
 
-## 0x423CE0
+// address: 0x423CE0
+//
+// TODO: add documentation.
 
-## 0x4241D7
-
-### items_is_equipable
-
-```c
+// address: 0x4241D7
+//
 // items_is_equipable reports whether the given item is equipable.
 bool32_t __fastcall items_is_equipable(Item *item);
-```
 
-## 0x42421C
+// address: 0x42421C
+//
+// TODO: add documentation.
 
-## 0x424252
+// address: 0x424252
+//
+// TODO: add documentation.
 
-## 0x4242C1
+// address: 0x4242C1
+//
+// TODO: add documentation.
 
-## 0x4242F5
+// address: 0x4242F5
+//
+// TODO: add documentation.
 
-## 0x424351
+// address: 0x424351
+//
+// TODO: add documentation.
 
-## 0x424420
+// address: 0x424420
+//
+// TODO: add documentation.
 
-## 0x42445F
+// address: 0x42445F
+//
+// TODO: add documentation.
 
-## 0x4244C6
+// address: 0x4244C6
+//
+// TODO: add documentation.
 
-## 0x4245A0
+// address: 0x4245A0
+//
+// TODO: add documentation.
 
-## 0x42466C
+// address: 0x42466C
+//
+// TODO: add documentation.
 
-## 0x4246D2
+// address: 0x4246D2
+//
+// TODO: add documentation.
 
-## 0x424735
+// address: 0x424735
+//
+// TODO: add documentation.
 
-## 0x424795
+// address: 0x424795
+//
+// TODO: add documentation.
 
-## 0x424815
+// address: 0x424815
+//
+// TODO: add documentation.
 
-## 0x4249A4
+// address: 0x4249A4
+//
+// TODO: add documentation.
 
-## 0x424A03
+// address: 0x424A03
+//
+// TODO: add documentation.
 
-## 0x424A9B
+// address: 0x424A9B
+//
+// TODO: add documentation.
 
-## 0x424B49
+// address: 0x424B49
+//
+// TODO: add documentation.
 
-## 0x424BAC
+// address: 0x424BAC
+//
+// TODO: add documentation.
 
-## 0x424C0C
+// address: 0x424C0C
+//
+// TODO: add documentation.
 
-## 0x424D57
-
-### items_create_base_gold
-
-```c
+// address: 0x424D57
+//
 // items_create_base_gold creates the base gold item.
 void items_create_base_gold();
-```
 
-## 0x424D80
+// address: 0x424D80
+//
+// TODO: add documentation.
 
-## 0x424DD1
+// address: 0x424DD1
+//
+// TODO: add documentation.
 
-## 0x424E3C
+// address: 0x424E3C
+//
+// TODO: add documentation.
 
-## 0x424EA1
+// address: 0x424EA1
+//
+// TODO: add documentation.
 
-## 0x424F52
+// address: 0x424F52
+//
+// TODO: add documentation.
 
-## 0x424FB8
+// address: 0x424FB8
+//
+// TODO: add documentation.
 
-## 0x42501F
-
-### items_update_stores_equipable
-
-```c
+// address: 0x42501F
+//
 // items_update_stores_equipable updates the equipability of store owner items.
 void items_update_stores_equipable();
-```
 
-## 0x4250C0
+// address: 0x4250C0
+//
+// TODO: add documentation.
 
-## 0x4250EF
+// address: 0x4250EF
+//
+// TODO: add documentation.
 
-## 0x4251B8
+// address: 0x4251B8
+//
+// TODO: add documentation.
 
-## 0x42526E
+// address: 0x42526E
+//
+// TODO: add documentation.
 
-## 0x425311
+// address: 0x425311
+//
+// TODO: add documentation.
 
-## 0x425357
+// address: 0x425357
+//
+// TODO: add documentation.
 
-## 0x42539E
+// address: 0x42539E
+//
+// TODO: add documentation.
+

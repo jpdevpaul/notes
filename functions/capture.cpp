@@ -1,24 +1,31 @@
-# capture.cpp
-
-## 0x40311B
-
-### capture_screenshot
-
-```c
+// address: 0x40311B
+//
 // capture_screenshot captures a screenshot and stores it within the game
 // directory as "screenXX.pcx". While the screenshot is being taken, the game is
 // paused temporarily as indicated by the red screen.
 void capture_screenshot();
-```
 
-## 0x403204
+// address: 0x403204
+//
+// TODO: add documentation.
 
-## 0x403294
+// address: 0x403294
+//
+// TODO: add documentation.
 
-## 0x4032FD
+// address: 0x4032FD
+//
+// TODO: add documentation.
 
-## 0x40336A
+// address: 0x40336A
+//
+// TODO: add documentation.
 
-## 0x4033A8
+// address: 0x4033A8
+//
+// TODO: add documentation.
 
-## 0x403470
+// address: 0x403470
+//
+// TODO: add documentation.
+

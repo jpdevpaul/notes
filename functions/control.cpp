@@ -1,245 +1,278 @@
-# control.cpp
+// address: 0x4037D4
+//
+// TODO: add documentation.
 
-## 0x4037D4
+// address: 0x40387E
+//
+// TODO: add documentation.
 
-## 0x40387E
+// address: 0x4039C7
+//
+// TODO: add documentation.
 
-## 0x4039C7
-
-## 0x403A8E
-
-### control_draw_speedbook
-
-```c
+// address: 0x403A8E
+//
 // control_draw_speedbook renders the speedbook on screen.
 void control_draw_speedbook();
-```
 
-## 0x403F69
+// address: 0x403F69
+//
+// TODO: add documentation.
 
-## 0x403FAC
+// address: 0x403FAC
+//
+// TODO: add documentation.
 
-## 0x404017
+// address: 0x404017
+//
+// TODO: add documentation.
 
-## 0x4040DA
+// address: 0x4040DA
+//
+// TODO: add documentation.
 
-## 0x404218
+// address: 0x404218
+//
+// TODO: add documentation.
 
-## 0x40424A
+// address: 0x40424A
+//
+// TODO: add documentation.
 
-## 0x404259
+// address: 0x404259
+//
+// TODO: add documentation.
 
-## 0x4042C5
+// address: 0x4042C5
+//
+// TODO: add documentation.
 
-## 0x4042CA
+// address: 0x4042CA
+//
+// TODO: add documentation.
 
-## 0x40431B
+// address: 0x40431B
+//
+// TODO: add documentation.
 
-## 0x40435B
-
-### control_draw_life_orb
-
-```c
+// address: 0x40435B
+//
 // control_draw_life_orb renders the life orb on screen.
 void control_draw_life_orb();
-```
 
-## 0x4043F4
+// address: 0x4043F4
+//
+// TODO: add documentation.
 
-## 0x404475
-
-### control_draw_mana_orb
-
-```c
+// address: 0x404475
+//
 // control_draw_mana_orb renders the mana orb on screen.
 void control_draw_mana_orb();
-```
 
-## 0x4044F6
+// address: 0x4044F6
+//
+// TODO: add documentation.
 
-## 0x40456A
+// address: 0x40456A
+//
+// TODO: add documentation.
 
-## 0x404616
-
-### control_load_graphics
-
-```c
+// address: 0x404616
+//
 // control_load_graphics loads control panel graphics.
 void control_load_graphics();
-```
 
-## 0x404934
+// address: 0x404934
+//
+// TODO: add documentation.
 
-## 0x404959
-
-### control_draw_panel_buttons
-
-```c
+// address: 0x404959
+//
 // control_draw_panel_buttons renders the control panel buttons on screen.
 void control_draw_panel_buttons();
-```
 
-## 0x404A0A
+// address: 0x404A0A
+//
+// TODO: add documentation.
 
-## 0x404B52
+// address: 0x404B52
+//
+// TODO: add documentation.
 
-## 0x404BEB
+// address: 0x404BEB
+//
+// TODO: add documentation.
 
-## 0x404C00
+// address: 0x404C00
+//
+// TODO: add documentation.
 
-## 0x404C74
+// address: 0x404C74
+//
+// TODO: add documentation.
 
-## 0x404CA0
+// address: 0x404CA0
+//
+// TODO: add documentation.
 
-## 0x404FE4
+// address: 0x404FE4
+//
+// TODO: add documentation.
 
-## 0x405181
-
-### control_cleanup
-
-```c
+// address: 0x405181
+//
 // control_cleanup releases the resources used by the control panel.
 void control_cleanup();
-```
 
-## 0x405295
+// address: 0x405295
+//
+// TODO: add documentation.
 
-## 0x4052C8
-
-### control_draw_description_box
-
-```c
+// address: 0x4052C8
+//
 // control_draw_description_box renders the description box on screen.
 void control_draw_description_box();
-```
 
-## 0x4055BC
+// address: 0x4055BC
+//
+// TODO: add documentation.
 
-## 0x405681
+// address: 0x405681
+//
+// TODO: add documentation.
 
-## 0x4056D8
-
-### control_draw_character_screen
-
-```c
+// address: 0x4056D8
+//
 // control_draw_character_screen renders the character screen on screen.
 void control_draw_character_screen();
-```
 
-## 0x406058
+// address: 0x406058
+//
+// TODO: add documentation.
 
-## 0x40610F
+// address: 0x40610F
+//
+// TODO: add documentation.
 
-## 0x4061CA
+// address: 0x4061CA
+//
+// TODO: add documentation.
 
-## 0x406200
+// address: 0x406200
+//
+// TODO: add documentation.
 
-## 0x406234
-
-### control_draw_level_up_button
-
-```c
+// address: 0x406234
+//
 // control_draw_level_up_button renders a level up button on screen.
 void control_draw_level_up_button();
-```
 
-## 0x40627A
+// address: 0x40627A
+//
+// TODO: add documentation.
 
-## 0x406366
+// address: 0x406366
+//
+// TODO: add documentation.
 
-## 0x406408
-
-### control_draw_durability_icons
-
-```c
+// address: 0x406408
+//
 // control_draw_durability_icons renders durability icons on screen.
 void control_draw_durability_icons();
-```
 
-## 0x40648E
+// address: 0x40648E
+//
+// TODO: add documentation.
 
-## 0x406508
-
-### control_draw_red_hue
-
-```c
+// address: 0x406508
+//
 // control_draw_red_hue renders the screen in red hue.
 void control_draw_red_hue();
-```
 
-## 0x406592
-
-### control_get_spell_type
-
-```c
+// address: 0x406592
+//
 // control_get_spell_type returns the spell type of the given spell ID, and
 // report whether is may be cast in town.
 spell_type __fastcall control_get_spell_type(spell_id spell_id, bool32_t check_town);
-```
 
-## 0x406667
-
-### control_draw_spellbook
-
-```c
+// address: 0x406667
+//
 // control_draw_spellbook renders the spellbook on screen.
 void control_draw_spellbook();
-```
 
-## 0x4068F4
+// address: 0x4068F4
+//
+// TODO: add documentation.
 
-## 0x4069B6
+// address: 0x4069B6
+//
+// TODO: add documentation.
 
-## 0x406AF8
-
-### control_get_gold_quantity
-
-```c
+// address: 0x406AF8
+//
 // control_get_gold_quantity returns the gramatically correct quantity for the
 // given amount of gold (i.e. "piece" or "pieces").
 char *__fastcall control_get_gold_quantity(int gold);
-```
 
-## 0x406B08
-
-### control_draw_gold_drop_box
-
-```c
+// address: 0x406B08
+//
 // control_draw_gold_drop_box renders the gold drop box on screen.
 void __fastcall control_draw_gold_drop_box(int amount);
-```
 
-## 0x406C40
+// address: 0x406C40
+//
+// TODO: add documentation.
 
-## 0x406D6E
+// address: 0x406D6E
+//
+// TODO: add documentation.
 
-## 0x406E24
+// address: 0x406E24
+//
+// TODO: add documentation.
 
-## 0x406E6A
-
-### control_draw_talk_panel
-
-```c
+// address: 0x406E6A
+//
 // control_draw_talk_panel renders the talk panel on screen.
 void control_draw_talk_panel();
-```
 
-## 0x407071
+// address: 0x407071
+//
+// TODO: add documentation.
 
-## 0x4070F3
+// address: 0x4070F3
+//
+// TODO: add documentation.
 
-## 0x40714D
+// address: 0x40714D
+//
+// TODO: add documentation.
 
-## 0x4071C0
+// address: 0x4071C0
+//
+// TODO: add documentation.
 
-## 0x4071FA
+// address: 0x4071FA
+//
+// TODO: add documentation.
 
-## 0x407241
+// address: 0x407241
+//
+// TODO: add documentation.
 
-## 0x40725A
+// address: 0x40725A
+//
+// TODO: add documentation.
 
-## 0x40729A
+// address: 0x40729A
+//
+// TODO: add documentation.
 
-## 0x407304
+// address: 0x407304
+//
+// TODO: add documentation.
 
-## 0x4073C2
+// address: 0x4073C2
+//
+// TODO: add documentation.
+

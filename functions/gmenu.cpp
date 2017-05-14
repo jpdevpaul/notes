@@ -1,55 +1,82 @@
-# gmenu.cpp
-
-## 0x419E8B
-
-### gmenu_draw_pause
-
-```c
+// address: 0x419E8B
+//
 // gmenu_draw_pause renders the pause menu on screen.
 void gmenu_draw_pause();
-```
 
-## 0x419EBE
+// address: 0x419EBE
+//
+// TODO: add documentation.
 
-## 0x419F17
+// address: 0x419F17
+//
+// TODO: add documentation.
 
-## 0x419F70
+// address: 0x419F70
+//
+// TODO: add documentation.
 
-## 0x419FE8
+// address: 0x419FE8
+//
+// TODO: add documentation.
 
-## 0x419FF4
+// address: 0x419FF4
+//
+// TODO: add documentation.
 
-## 0x41A04E
+// address: 0x41A04E
+//
+// TODO: add documentation.
 
-## 0x41A0B6
-
-### gmenu_draw
-
-```c
+// address: 0x41A0B6
+//
 // gmenu_draw renders the game menu on screen.
 void gmenu_draw();
-```
 
-## 0x41A145
+// address: 0x41A145
+//
+// TODO: add documentation.
 
-## 0x41A239
+// address: 0x41A239
+//
+// TODO: add documentation.
 
-## 0x41A272
+// address: 0x41A272
+//
+// TODO: add documentation.
 
-## 0x41A2AE
+// address: 0x41A2AE
+//
+// TODO: add documentation.
 
-## 0x41A32A
+// address: 0x41A32A
+//
+// TODO: add documentation.
 
-## 0x41A37A
+// address: 0x41A37A
+//
+// TODO: add documentation.
 
-## 0x41A3D2
+// address: 0x41A3D2
+//
+// TODO: add documentation.
 
-## 0x41A401
+// address: 0x41A401
+//
+// TODO: add documentation.
 
-## 0x41A4B8
+// address: 0x41A4B8
+//
+// TODO: add documentation.
 
-## 0x41A4C6
+// address: 0x41A4C6
+//
+// TODO: add documentation.
 
-## 0x41A508
+// address: 0x41A508
+//
+// TODO: add documentation.
 
-## 0x41A545
+// address: 0x41A545
+//
+// TODO: add documentation.
+

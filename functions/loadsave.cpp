@@ -1,165 +1,162 @@
-# loadsave.cpp
+// address: 0x426564
+//
+// TODO: add documentation.
 
-## 0x426564
-
-## 0x426AE2
-
-### loadsave_load_int8
-
-```c
+// address: 0x426AE2
+//
 // loadsave_load_int8 loads the next 8-bit integer from the active save.
 int8_t loadsave_load_int8();
-```
 
-## 0x426AF0
-
-### loadsave_load_int32
-
-```c
+// address: 0x426AF0
+//
 // loadsave_load_int32 loads the next 32-bit integer from the active save.
 int32_t loadsave_load_int32();
-```
 
-## 0x426B2C
-
-### loadsave_load_int32_2
-
-```c
+// address: 0x426B2C
+//
 // loadsave_load_int32_2 loads the next 32-bit integer from the active save.
 int32_t loadsave_load_int32_2();
-```
 
-## 0x426B68
-
-### loadsave_load_bool
-
-```c
+// address: 0x426B68
+//
 // loadsave_load_bool loads the next 8-bit boolean from the active save.
 bool32_t loadsave_load_bool();
-```
 
-## 0x426B7F
-
-### loadsave_load_player
-
-```c
+// address: 0x426B7F
+//
 // loadsave_load_player loads the next player from the active save.
+//
+// References:
+//    * https://github.com/sanctuary/notes/blob/master/structs.cpp#player
 void __fastcall loadsave_load_player(int player_num);
-```
 
-References:
-* https://github.com/sanctuary/notes/blob/master/structures.md#player
-
-## 0x426BA9
-
-### loadsave_load_monster
-
-```c
+// address: 0x426BA9
+//
 // loadsave_load_monster loads the next monster from the active save.
+//
+// References:
+//    * https://github.com/sanctuary/notes/blob/master/structs.cpp#monster
 void __fastcall loadsave_load_monster(int monster_num);
-```
 
-References:
-* https://github.com/sanctuary/notes/blob/master/structures.md#monster
-
-## 0x426BDE
-
-### loadsave_load_missile
-
-```c
+// address: 0x426BDE
+//
 // loadsave_load_missile loads the next missile from the active save.
+//
+// References:
+//    * https://github.com/sanctuary/notes/blob/master/structs.cpp#missile
 void __fastcall loadsave_load_missile(int missile_num);
-```
 
-References:
-* https://github.com/sanctuary/notes/blob/master/structures.md#missile
-
-## 0x426C08
-
-### loadsave_load_object
-
-```c
+// address: 0x426C08
+//
 // loadsave_load_object loads the next object from the active save.
+//
+// References:
+//    * https://github.com/sanctuary/notes/blob/master/structs.cpp#object
 void __fastcall loadsave_load_object(int object_num);
-```
 
-References:
-* https://github.com/sanctuary/notes/blob/master/structures.md#object
-
-## 0x426C2A
-
-### loadsave_load_item
-
-```c
+// address: 0x426C2A
+//
 // loadsave_load_item loads the next item from the active save.
+//
+// References:
+//    * https://github.com/sanctuary/notes/blob/master/structs.cpp#item
 void __fastcall loadsave_load_item(int item_num);
-```
 
-References:
-* https://github.com/sanctuary/notes/blob/master/structures.md#item
-
-## 0x426C5F
-
-### loadsave_load_griswold_premium_item
-
-```c
+// address: 0x426C5F
+//
 // loadsave_load_griswold_premium_item loads the next Griswold premium item
 // from the active save.
+//
+// References:
+//    * https://github.com/sanctuary/notes/blob/master/structs.cpp#item
 void __fastcall loadsave_load_griswold_premium_item(int griswold_premium_item_num);
-```
 
-References:
-* https://github.com/sanctuary/notes/blob/master/structures.md#item
-
-## 0x426C89
-
-### loadsave_load_quest
-
-```c
+// address: 0x426C89
+//
 // loadsave_load_quest loads the next quest, quest start coordinates, quest
 // dlvl, quest dtype, and quest doom timer from the active save.
+//
+// References:
+//    * https://github.com/sanctuary/notes/blob/master/structs.cpp#quest
 void __fastcall loadsave_load_quest(int quest_num);
-```
 
-References:
-* https://github.com/sanctuary/notes/blob/master/structures.md#quest
+// address: 0x426CDE
+//
+// TODO: add documentation.
 
-## 0x426CDE
+// address: 0x426D00
+//
+// TODO: add documentation.
 
-## 0x426D00
+// address: 0x426D22
+//
+// TODO: add documentation.
 
-## 0x426D22
+// address: 0x426D45
+//
+// TODO: add documentation.
 
-## 0x426D45
+// address: 0x427203
+//
+// TODO: add documentation.
 
-## 0x427203
+// address: 0x427211
+//
+// TODO: add documentation.
 
-## 0x427211
+// address: 0x427258
+//
+// TODO: add documentation.
 
-## 0x427258
+// address: 0x42729F
+//
+// TODO: add documentation.
 
-## 0x42729F
+// address: 0x4272B7
+//
+// TODO: add documentation.
 
-## 0x4272B7
+// address: 0x4272E1
+//
+// TODO: add documentation.
 
-## 0x4272E1
+// address: 0x42730B
+//
+// TODO: add documentation.
 
-## 0x42730B
+// address: 0x427335
+//
+// TODO: add documentation.
 
-## 0x427335
+// address: 0x427357
+//
+// TODO: add documentation.
 
-## 0x427357
+// address: 0x427381
+//
+// TODO: add documentation.
 
-## 0x427381
+// address: 0x4273AB
+//
+// TODO: add documentation.
 
-## 0x4273AB
+// address: 0x427404
+//
+// TODO: add documentation.
 
-## 0x427404
+// address: 0x427426
+//
+// TODO: add documentation.
 
-## 0x427426
+// address: 0x427448
+//
+// TODO: add documentation.
 
-## 0x427448
+// address: 0x42746B
+//
+// TODO: add documentation.
 
-## 0x42746B
+// address: 0x42772F
+//
+// TODO: add documentation.
 
-## 0x42772F

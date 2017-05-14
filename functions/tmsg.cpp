@@ -1,14 +1,13 @@
-# tmsg.cpp
+// address: 0x45E08C
+//
+// TODO: add documentation.
 
-## 0x45E08C
+// address: 0x45E0D7
+//
+// TODO: add documentation.
 
-## 0x45E0D7
-
-## 0x45E12A
-
-### tmsg_cleanup
-
-```c
+// address: 0x45E12A
+//
 // tmsg_cleanup terminates the timed messages system.
 void tmsg_cleanup();
-```
+

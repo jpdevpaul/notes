@@ -1,20 +1,25 @@
-# help.cpp
+// address: 0x41A553
+//
+// TODO: add documentation.
 
-## 0x41A553
-
-## 0x41A565
-
-### help_draw
-
-```c
+// address: 0x41A565
+//
 // help_draw renders the help dialogue on screen.
 void help_draw();
-```
 
-## 0x41A6FA
+// address: 0x41A6FA
+//
+// TODO: add documentation.
 
-## 0x41A773
+// address: 0x41A773
+//
+// TODO: add documentation.
 
-## 0x41A78F
+// address: 0x41A78F
+//
+// TODO: add documentation.
 
-## 0x41A79F
+// address: 0x41A79F
+//
+// TODO: add documentation.
+

@@ -1,275 +1,534 @@
-# missiles.cpp
-
-## 0x4283C0
-
-### missiles_get_spell_damage
-
-```c
+// address: 0x4283C0
+//
 // missiles_get_spell_damage retrieves the min and max spell damage of the
 // given spell.
 void __fastcall missiles_get_spell_damage(spell_id spell_id, int *damage_min, int *damage_max);
-```
 
-## 0x428921
+// address: 0x428921
+//
+// TODO: add documentation.
 
-## 0x42897A
+// address: 0x42897A
+//
+// TODO: add documentation.
 
-## 0x428A99
+// address: 0x428A99
+//
+// TODO: add documentation.
 
-## 0x428AC4
+// address: 0x428AC4
+//
+// TODO: add documentation.
 
-## 0x4290EE
+// address: 0x4290EE
+//
+// TODO: add documentation.
 
-## 0x42977E
+// address: 0x42977E
+//
+// TODO: add documentation.
 
-## 0x4297EE
+// address: 0x4297EE
+//
+// TODO: add documentation.
 
-## 0x4298AD
+// address: 0x4298AD
+//
+// TODO: add documentation.
 
-## 0x429918
+// address: 0x429918
+//
+// TODO: add documentation.
 
-## 0x4299EA
+// address: 0x4299EA
+//
+// TODO: add documentation.
 
-## 0x429A99
+// address: 0x429A99
+//
+// TODO: add documentation.
 
-## 0x429C3B
+// address: 0x429C3B
+//
+// TODO: add documentation.
 
-## 0x429F4E
+// address: 0x429F4E
+//
+// TODO: add documentation.
 
-## 0x42A307
+// address: 0x42A307
+//
+// TODO: add documentation.
 
-## 0x42A5DB
+// address: 0x42A5DB
+//
+// TODO: add documentation.
 
-## 0x42A8D5
+// address: 0x42A8D5
+//
+// TODO: add documentation.
 
-## 0x42A959
+// address: 0x42A959
+//
+// TODO: add documentation.
 
-## 0x42A973
+// address: 0x42A973
+//
+// TODO: add documentation.
 
-## 0x42AA5C
+// address: 0x42AA5C
+//
+// TODO: add documentation.
 
-## 0x42AA89
+// address: 0x42AA89
+//
+// TODO: add documentation.
 
-## 0x42AAF2
+// address: 0x42AAF2
+//
+// TODO: add documentation.
 
-## 0x42AB20
+// address: 0x42AB20
+//
+// TODO: add documentation.
 
-## 0x42AB4E
+// address: 0x42AB4E
+//
+// TODO: add documentation.
 
-## 0x42AC0C
+// address: 0x42AC0C
+//
+// TODO: add documentation.
 
-## 0x42ACD9
+// address: 0x42ACD9
+//
+// TODO: add documentation.
 
-## 0x42ADAA
+// address: 0x42ADAA
+//
+// TODO: add documentation.
 
-## 0x42AE48
+// address: 0x42AE48
+//
+// TODO: add documentation.
 
-## 0x42AF8B
+// address: 0x42AF8B
+//
+// TODO: add documentation.
 
-## 0x42B09A
+// address: 0x42B09A
+//
+// TODO: add documentation.
 
-## 0x42B113
+// address: 0x42B113
+//
+// TODO: add documentation.
 
-## 0x42B159
+// address: 0x42B159
+//
+// TODO: add documentation.
 
-## 0x42B284
+// address: 0x42B284
+//
+// TODO: add documentation.
 
-## 0x42B303
+// address: 0x42B303
+//
+// TODO: add documentation.
 
-## 0x42B3C0
+// address: 0x42B3C0
+//
+// TODO: add documentation.
 
-## 0x42B4E7
+// address: 0x42B4E7
+//
+// TODO: add documentation.
 
-## 0x42B553
+// address: 0x42B553
+//
+// TODO: add documentation.
 
-## 0x42B620
+// address: 0x42B620
+//
+// TODO: add documentation.
 
-## 0x42B711
+// address: 0x42B711
+//
+// TODO: add documentation.
 
-## 0x42B77C
+// address: 0x42B77C
+//
+// TODO: add documentation.
 
-## 0x42B7DF
+// address: 0x42B7DF
+//
+// TODO: add documentation.
 
-## 0x42B9FC
+// address: 0x42B9FC
+//
+// TODO: add documentation.
 
-## 0x42BAC1
+// address: 0x42BAC1
+//
+// TODO: add documentation.
 
-## 0x42BB83
+// address: 0x42BB83
+//
+// TODO: add documentation.
 
-## 0x42BBFA
+// address: 0x42BBFA
+//
+// TODO: add documentation.
 
-## 0x42BC76
+// address: 0x42BC76
+//
+// TODO: add documentation.
 
-## 0x42BE98
+// address: 0x42BE98
+//
+// TODO: add documentation.
 
-## 0x42BECB
+// address: 0x42BECB
+//
+// TODO: add documentation.
 
-## 0x42BEFE
+// address: 0x42BEFE
+//
+// TODO: add documentation.
 
-## 0x42BF3B
+// address: 0x42BF3B
+//
+// TODO: add documentation.
 
-## 0x42BF7A
+// address: 0x42BF7A
+//
+// TODO: add documentation.
 
-## 0x42C08B
+// address: 0x42C08B
+//
+// TODO: add documentation.
 
-## 0x42C167
+// address: 0x42C167
+//
+// TODO: add documentation.
 
-## 0x42C276
+// address: 0x42C276
+//
+// TODO: add documentation.
 
-## 0x42C2EE
+// address: 0x42C2EE
+//
+// TODO: add documentation.
 
-## 0x42C32A
+// address: 0x42C32A
+//
+// TODO: add documentation.
 
-## 0x42C38E
+// address: 0x42C38E
+//
+// TODO: add documentation.
 
-## 0x42C518
+// address: 0x42C518
+//
+// TODO: add documentation.
 
-## 0x42C5DA
+// address: 0x42C5DA
+//
+// TODO: add documentation.
 
-## 0x42C664
+// address: 0x42C664
+//
+// TODO: add documentation.
 
-## 0x42C677
+// address: 0x42C677
+//
+// TODO: add documentation.
 
-## 0x42C6D9
+// address: 0x42C6D9
+//
+// TODO: add documentation.
 
-## 0x42C72C
+// address: 0x42C72C
+//
+// TODO: add documentation.
 
-## 0x42C80C
+// address: 0x42C80C
+//
+// TODO: add documentation.
 
-## 0x42C83F
+// address: 0x42C83F
+//
+// TODO: add documentation.
 
-## 0x42C942
+// address: 0x42C942
+//
+// TODO: add documentation.
 
-## 0x42C993
+// address: 0x42C993
+//
+// TODO: add documentation.
 
-## 0x42CAF5
+// address: 0x42CAF5
+//
+// TODO: add documentation.
 
-## 0x42CB5C
+// address: 0x42CB5C
+//
+// TODO: add documentation.
 
-## 0x42CBA7
+// address: 0x42CBA7
+//
+// TODO: add documentation.
 
-## 0x42CC98
+// address: 0x42CC98
+//
+// TODO: add documentation.
 
-## 0x42CCE9
+// address: 0x42CCE9
+//
+// TODO: add documentation.
 
-## 0x42CD3A
+// address: 0x42CD3A
+//
+// TODO: add documentation.
 
-## 0x42CD6D
+// address: 0x42CD6D
+//
+// TODO: add documentation.
 
-## 0x42CE32
+// address: 0x42CE32
+//
+// TODO: add documentation.
 
-## 0x42CF35
+// address: 0x42CF35
+//
+// TODO: add documentation.
 
-## 0x42CFAD
+// address: 0x42CFAD
+//
+// TODO: add documentation.
 
-## 0x42D098
+// address: 0x42D098
+//
+// TODO: add documentation.
 
-## 0x42D178
+// address: 0x42D178
+//
+// TODO: add documentation.
 
-## 0x42D1AF
+// address: 0x42D1AF
+//
+// TODO: add documentation.
 
-## 0x42D1F3
+// address: 0x42D1F3
+//
+// TODO: add documentation.
 
-## 0x42D226
+// address: 0x42D226
+//
+// TODO: add documentation.
 
-## 0x42D311
+// address: 0x42D311
+//
+// TODO: add documentation.
 
-## 0x42D35B
+// address: 0x42D35B
+//
+// TODO: add documentation.
 
-## 0x42D3DA
+// address: 0x42D3DA
+//
+// TODO: add documentation.
 
-## 0x42D5A3
+// address: 0x42D5A3
+//
+// TODO: add documentation.
 
-## 0x42D67F
+// address: 0x42D67F
+//
+// TODO: add documentation.
 
-## 0x42D680
+// address: 0x42D680
+//
+// TODO: add documentation.
 
-## 0x42D7C7
+// address: 0x42D7C7
+//
+// TODO: add documentation.
 
-## 0x42D7D2
+// address: 0x42D7D2
+//
+// TODO: add documentation.
 
-## 0x42DAD0
+// address: 0x42DAD0
+//
+// TODO: add documentation.
 
-## 0x42DBA1
+// address: 0x42DBA1
+//
+// TODO: add documentation.
 
-## 0x42DE5A
+// address: 0x42DE5A
+//
+// TODO: add documentation.
 
-## 0x42DF42
+// address: 0x42DF42
+//
+// TODO: add documentation.
 
-## 0x42DFAB
+// address: 0x42DFAB
+//
+// TODO: add documentation.
 
-## 0x42E01E
+// address: 0x42E01E
+//
+// TODO: add documentation.
 
-## 0x42E18F
+// address: 0x42E18F
+//
+// TODO: add documentation.
 
-## 0x42E5A7
+// address: 0x42E5A7
+//
+// TODO: add documentation.
 
-## 0x42E79B
+// address: 0x42E79B
+//
+// TODO: add documentation.
 
-## 0x42E820
+// address: 0x42E820
+//
+// TODO: add documentation.
 
-## 0x42E9CB
+// address: 0x42E9CB
+//
+// TODO: add documentation.
 
-## 0x42EAF1
+// address: 0x42EAF1
+//
+// TODO: add documentation.
 
-## 0x42EBBF
+// address: 0x42EBBF
+//
+// TODO: add documentation.
 
-## 0x42EE19
+// address: 0x42EE19
+//
+// TODO: add documentation.
 
-## 0x42EEFD
+// address: 0x42EEFD
+//
+// TODO: add documentation.
 
-## 0x42F0C8
+// address: 0x42F0C8
+//
+// TODO: add documentation.
 
-## 0x42F2C2
+// address: 0x42F2C2
+//
+// TODO: add documentation.
 
-## 0x42F475
+// address: 0x42F475
+//
+// TODO: add documentation.
 
-## 0x42F4A9
+// address: 0x42F4A9
+//
+// TODO: add documentation.
 
-## 0x42F5D6
+// address: 0x42F5D6
+//
+// TODO: add documentation.
 
-## 0x42F692
+// address: 0x42F692
+//
+// TODO: add documentation.
 
-## 0x42F723
+// address: 0x42F723
+//
+// TODO: add documentation.
 
-## 0x42F82C
+// address: 0x42F82C
+//
+// TODO: add documentation.
 
-## 0x42F8EE
+// address: 0x42F8EE
+//
+// TODO: add documentation.
 
-## 0x42F94F
+// address: 0x42F94F
+//
+// TODO: add documentation.
 
-## 0x42FAD0
+// address: 0x42FAD0
+//
+// TODO: add documentation.
 
-## 0x42FC74
+// address: 0x42FC74
+//
+// TODO: add documentation.
 
-## 0x42FDE3
+// address: 0x42FDE3
+//
+// TODO: add documentation.
 
-## 0x42FE20
+// address: 0x42FE20
+//
+// TODO: add documentation.
 
-## 0x42FF0B
+// address: 0x42FF0B
+//
+// TODO: add documentation.
 
-## 0x430154
+// address: 0x430154
+//
+// TODO: add documentation.
 
-## 0x4302A7
+// address: 0x4302A7
+//
+// TODO: add documentation.
 
-## 0x4302B8
+// address: 0x4302B8
+//
+// TODO: add documentation.
 
-## 0x43037E
+// address: 0x43037E
+//
+// TODO: add documentation.
 
-## 0x43045C
+// address: 0x43045C
+//
+// TODO: add documentation.
 
-## 0x4305E2
+// address: 0x4305E2
+//
+// TODO: add documentation.
 
-## 0x43071F
+// address: 0x43071F
+//
+// TODO: add documentation.
 
-## 0x430A98
+// address: 0x430A98
+//
+// TODO: add documentation.
 
-## 0x430C8D
+// address: 0x430C8D
+//
+// TODO: add documentation.
 
-## 0x430CAC
+// address: 0x430CAC
+//
+// TODO: add documentation.
 
-## 0x430DDA
+// address: 0x430DDA
+//
+// TODO: add documentation.
 
-## 0x430F35
+// address: 0x430F35
+//
+// TODO: add documentation.
 
-## 0x430FB9
+// address: 0x430FB9
+//
+// TODO: add documentation.
+

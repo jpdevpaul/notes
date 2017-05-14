@@ -1,34 +1,39 @@
-# interfac.cpp
+// address: 0x41B190
+//
+// TODO: add documentation.
 
-## 0x41B190
+// address: 0x41B195
+//
+// TODO: add documentation.
 
-## 0x41B195
+// address: 0x41B1A0
+//
+// TODO: add documentation.
 
-## 0x41B1A0
-
-## 0x41B1DF
-
-### interfac_inc_progress
-
-```c
+// address: 0x41B1DF
+//
 // interfac_inc_progress increments the loading progress and renders the active
 // cut scene on screen.
 bool32_t interfac_inc_progress();
-```
 
-## 0x41B218
-
-### interfac_draw_cut_scene
-
-```c
+// address: 0x41B218
+//
 // interfac_draw_cut_scene renders the active cut scene on screen.
 void interfac_draw_cut_scene();
-```
 
-## 0x41B28D
+// address: 0x41B28D
+//
+// TODO: add documentation.
 
-## 0x41B2B6
+// address: 0x41B2B6
+//
+// TODO: add documentation.
 
-## 0x41B5F5
+// address: 0x41B5F5
+//
+// TODO: add documentation.
 
-## 0x41B607
+// address: 0x41B607
+//
+// TODO: add documentation.
+

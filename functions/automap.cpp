@@ -1,47 +1,66 @@
-# automap.cpp
-
-## 0x401DA4
-
-### automap_init
-
-```c
+// address: 0x401DA4
+//
 // automap_init initializes the automap.
 void automap_init();
-```
 
-## 0x401DE8
+// address: 0x401DE8
+//
+// TODO: add documentation.
 
-## 0x401EF4
+// address: 0x401EF4
+//
+// TODO: add documentation.
 
-## 0x401F0D
+// address: 0x401F0D
+//
+// TODO: add documentation.
 
-## 0x401F1A
+// address: 0x401F1A
+//
+// TODO: add documentation.
 
-## 0x401F27
+// address: 0x401F27
+//
+// TODO: add documentation.
 
-## 0x401F34
+// address: 0x401F34
+//
+// TODO: add documentation.
 
-## 0x401F41
+// address: 0x401F41
+//
+// TODO: add documentation.
 
-## 0x401F80
+// address: 0x401F80
+//
+// TODO: add documentation.
 
-## 0x401FBD
-
-### automap_draw
-
-```c
+// address: 0x401FBD
+//
 // automap_draw renders the automap on screen.
 void automap_draw();
-```
 
-## 0x402233
+// address: 0x402233
+//
+// TODO: add documentation.
 
-## 0x4029A8
+// address: 0x4029A8
+//
+// TODO: add documentation.
 
-## 0x402D83
+// address: 0x402D83
+//
+// TODO: add documentation.
 
-## 0x402E4A
+// address: 0x402E4A
+//
+// TODO: add documentation.
 
-## 0x402F27
+// address: 0x402F27
+//
+// TODO: add documentation.
 
-## 0x4030DD
+// address: 0x4030DD
+//
+// TODO: add documentation.
+

@@ -1,7 +1,12 @@
-# dead.cpp
+// address: 0x4084A6
+//
+// TODO: add documentation.
 
-## 0x4084A6
+// address: 0x40865C
+//
+// TODO: add documentation.
 
-## 0x40865C
+// address: 0x40867D
+//
+// TODO: add documentation.
 
-## 0x40867D
