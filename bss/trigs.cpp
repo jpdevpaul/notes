@@ -1,1 +1,0 @@
-# trigs.cpp
