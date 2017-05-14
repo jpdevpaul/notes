@@ -1,9 +1,7 @@
-# Structures
-
-## GossipData
-
-```c
 // GossipData specifies the speech IDs for the gossip related to each quest.
+//
+// References:
+//    * https://github.com/sanctuary/notes/blob/master/enumerates.md#speech_id
 typedef struct {
     speech_id the_magic_rock;
     speech_id black_mushroom;
@@ -22,24 +20,13 @@ typedef struct {
     speech_id the_chamber_of_bone;
     speech_id archbishop_lazarus;
 } GossipData;
-```
 
-References:
-* https://github.com/sanctuary/notes/blob/master/enumerates.md#speech_id
-
-## Point
-
-```c
 // A Point is an X, Y coordinate pair. The axes increase right and down.
 typedef struct {
     int32_t x;
     int32_t y;
 } Point;
-```
 
-## Portal
-
-```c
 // A Portal represents a portal between two levels.
 //
 // PSX def:
@@ -57,11 +44,7 @@ typedef struct {
     dtype dtype
     quest_level quest_lvl
 } Portal;
-```
 
-## Shadow
-
-```c
 // A Shadow contains the shadows for a 2x2 block of base tile IDs.
 //
 // PSX def:
@@ -74,6 +57,10 @@ typedef struct {
 //       unsigned char nv2;
 //       unsigned char nv3;
 //    } ShadowStruct;
+//
+// References:
+//    * https://github.com/sanctuary/graphics/blob/master/l1/tiles/base.md
+//    * https://github.com/sanctuary/graphics/blob/master/l2/tiles/base.md
 typedef struct {
     // 2x2 block of base tile IDs.
     l1_tile_id base_bottom;
@@ -85,8 +72,3 @@ typedef struct {
     l1_tile_id shadow_right;
     l1_tile_id shadow_left;
 } Shadow;
-```
-
-References:
-* https://github.com/sanctuary/graphics/blob/master/l1/tiles/base.md
-* https://github.com/sanctuary/graphics/blob/master/l2/tiles/base.md
