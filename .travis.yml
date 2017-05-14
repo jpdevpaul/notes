@@ -1,0 +1,7 @@
+language: cpp
+
+notifications:
+  email: false
+
+install:
+  - make -B
