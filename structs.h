@@ -1,7 +1,7 @@
 // GossipData specifies the speech IDs for the gossip related to each quest.
 //
 // References:
-//    * https://github.com/sanctuary/notes/blob/master/enumerates.md#speech_id
+//    * https://github.com/sanctuary/notes/blob/master/enums.h#speech_id
 typedef struct {
     speech_id the_magic_rock;
     speech_id black_mushroom;
@@ -57,6 +57,9 @@ typedef struct {
 //       unsigned char nv2;
 //       unsigned char nv3;
 //    } ShadowStruct;
+//
+// TODO: Figure out how to fix broken links. Requires graphics files, which may
+// not be put online. Perhaps, add a script to view locally.
 //
 // References:
 //    * https://github.com/sanctuary/graphics/blob/master/l1/tiles/base.md

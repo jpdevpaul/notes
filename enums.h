@@ -68,7 +68,7 @@ typedef enum {
 // Item IDs specify item_data array indices.
 //
 // References:
-//    * https://github.com/sanctuary/notes/blob/master/data/items.md#item_data
+//    * https://github.com/sanctuary/notes/blob/master/data/items.cpp#item_data
 typedef enum {
     ITEM_ID_GOLD                             =   0,
     ITEM_ID_SHORT_SWORD                      =   1,
@@ -257,6 +257,9 @@ typedef enum {
 } item_type;
 
 // Tile IDs for dungeon layout 1.
+//
+// TODO: Figure out how to fix broken link. Requires graphics files, which may
+// not be put online. Perhaps, add a script to view locally.
 //
 // References:
 //    * https://github.com/sanctuary/graphics/blob/master/l1/tiles/README.md
@@ -473,7 +476,7 @@ typedef enum {
 // Missile graphic IDs specify missile_graphic_data array indices.
 //
 // References:
-//    * https://github.com/sanctuary/notes/blob/master/data/missiles.md#missile_graphic_data
+//    * https://github.com/sanctuary/notes/blob/master/data/missiles.cpp#missile_graphic_data
 typedef enum {
     MISSILE_GRAPHIC_ID_ARROW                  =  0, // "missiles/arrows.cl2"
     MISSILE_GRAPHIC_ID_FIRE_BALL              =  1, // "missiles/fireba%i.cl2"
@@ -528,7 +531,7 @@ typedef enum {
 // Monster IDs specify monster_data array indices.
 //
 // References:
-//    * https://github.com/sanctuary/notes/blob/master/data/monsters.md#monster_data
+//    * https://github.com/sanctuary/notes/blob/master/data/monsters.cpp#monster_data
 typedef enum {
     MONSTER_ID_ZOMBIE                  =   0, // monsters/zombie/
     MONSTER_ID_GHOUL                   =   1, // monsters/zombie/
@@ -648,7 +651,7 @@ typedef enum {
 // Pannel button IDs specify panel_buttons array indices.
 //
 // References:
-//    * https://github.com/sanctuary/notes/blob/master/data/control.md#panel_buttons
+//    * https://github.com/sanctuary/notes/blob/master/data/control.cpp#panel_buttons
 typedef enum {
     PANEL_BUTTON_ID_CHARACTER_INFORMATION = 0,
     PANEL_BUTTON_ID_QUESTS_LOG            = 1,
@@ -670,7 +673,7 @@ typedef enum {
 // Quest IDs specify quest_data array indices.
 //
 // References:
-//    * https://github.com/sanctuary/notes/blob/master/data/quests.md#quest_data
+//    * https://github.com/sanctuary/notes/blob/master/data/quests.cpp#quest_data
 typedef enum {
     QUEST_ID_THE_MAGIC_ROCK           =  0,
     QUEST_ID_BLACK_MUSHROOM           =  1,
@@ -703,7 +706,7 @@ typedef enum {
 //    } _setlevels;
 //
 // References:
-//    * https://github.com/sanctuary/notes/blob/master/data/setmaps.md#quest_level_names
+//    * https://github.com/sanctuary/notes/blob/master/data/setmaps.cpp#quest_level_names
 typedef enum {
     QUEST_LEVEL_NONE                    = 0,
     QUEST_LEVEL_SKELETON_KINGS_LAIR     = 1,
@@ -716,7 +719,7 @@ typedef enum {
 // Sound effect IDs specify sfx_data array indices.
 //
 // References:
-//    * https://github.com/sanctuary/notes/blob/master/data/effects.md#sfx_data
+//    * https://github.com/sanctuary/notes/blob/master/data/effects.cpp#sfx_data
 typedef enum {
     SFX_ID_MISC_WALK1_WAV                                                                                  =   0,
     SFX_ID_MISC_WALK2_WAV                                                                                  =   1,
@@ -1581,7 +1584,7 @@ typedef enum {
 // Speech IDs specify speech_data array indices.
 //
 // References:
-//    * https://github.com/sanctuary/notes/blob/master/rdata/talk.md#speech_data
+//    * https://github.com/sanctuary/notes/blob/master/rdata/talk.cpp#speech_data
 typedef enum {
     SPEECH_ID_TOWNERS_STORYT01_WAV_AHH_THE_STORY_OF_OUR_KING_IS_IT                                            =   0,
     SPEECH_ID_TOWNERS_TAVOWN21_WAV_THE_VILLAGE_NEEDS_YOUR_HELP_GOOD_MASTER                                    =   1,
@@ -1848,7 +1851,7 @@ typedef enum {
 // Spell IDs specify spell_data array indices.
 //
 // References:
-//    * https://github.com/sanctuary/notes/blob/master/data/spells.md#spell_data
+//    * https://github.com/sanctuary/notes/blob/master/data/spells.cpp#spell_data
 typedef enum {
     SPELL_ID_NULL            =  0,
     SPELL_ID_FIREBOLT        =  1,
@@ -1924,7 +1927,7 @@ typedef enum {
 // Towner animation sequence IDs specify towner_anim_seq array indices.
 //
 // References:
-//    * https://github.com/sanctuary/notes/blob/master/data/towners.md#towner_anim_seq
+//    * https://github.com/sanctuary/notes/blob/master/data/towners.cpp#towner_anim_seq
 typedef enum {
     TOWNER_ANIM_SEQ_ID_GRISWOLD =  0,
     TOWNER_ANIM_SEQ_ID_PEPIN    =  1,
@@ -2024,7 +2027,7 @@ typedef enum {
 // Unique item IDs specify unique_item_data array indices.
 //
 // References:
-//    * https://github.com/sanctuary/notes/blob/master/rdata/items.md#unique_item_data
+//    * https://github.com/sanctuary/notes/blob/master/rdata/items.cpp#unique_item_data
 typedef enum {
     UNIQUE_ITEM_ID_THE_BUTCHERS_CLEAVER   =  0,
     UNIQUE_ITEM_ID_THE_UNDEAD_CROWN       =  1,
@@ -2122,7 +2125,7 @@ typedef enum {
 // Unique monster IDs specify unique_monster_data array indices.
 //
 // References:
-//    * https://github.com/sanctuary/notes/blob/master/data/monsters.md#unique_monster_data
+//    * https://github.com/sanctuary/notes/blob/master/data/monsters.cpp#unique_monster_data
 typedef enum {
     UNIQUE_MONSTER_ID_GHARBAD_THE_WEAK         =  0, // MONSTER_ID_FLESH_CLAN_MACE
     UNIQUE_MONSTER_ID_SKELETON_KING            =  1, // MONSTER_ID_SKELETON_KING
