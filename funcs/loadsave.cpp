@@ -161,4 +161,3 @@ void __fastcall loadsave_load_quest(int quest_num);
 // address: 0x42772F
 //
 // TODO: add documentation.
-

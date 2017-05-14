@@ -106,4 +106,3 @@ void quests_draw_quest_log();
 // address: 0x4527F1
 //
 // TODO: add documentation.
-

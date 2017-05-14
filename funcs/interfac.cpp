@@ -38,4 +38,3 @@ void interfac_draw_cut_scene();
 // address: 0x41B607
 //
 // TODO: add documentation.
-

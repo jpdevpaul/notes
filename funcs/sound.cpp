@@ -95,4 +95,3 @@ void sound_stop_music();
 // address: 0x45743B
 //
 // TODO: add documentation.
-

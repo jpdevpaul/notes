@@ -10,4 +10,3 @@
 //
 // tmsg_cleanup terminates the timed messages system.
 void tmsg_cleanup();
-

@@ -82,4 +82,3 @@ void effects_cleanup_sfx();
 // address: 0x415EDF
 //
 // TODO: add documentation.
-

@@ -10,4 +10,3 @@
 //
 // error_draw renders the error dialogue on screen.
 void error_draw();
-

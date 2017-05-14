@@ -63,4 +63,3 @@ void automap_draw();
 // address: 0x4030DD
 //
 // TODO: add documentation.
-

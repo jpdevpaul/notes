@@ -11,4 +11,3 @@ void debug_cleanup();
 // address: 0x408721
 //
 // TODO: add documentation.
-

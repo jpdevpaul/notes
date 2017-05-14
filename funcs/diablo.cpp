@@ -152,4 +152,3 @@ void diablo_load_level_graphics();
 // address: 0x40AC6B
 //
 // TODO: add documentation.
-

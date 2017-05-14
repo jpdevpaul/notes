@@ -77,4 +77,3 @@ void __fastcall town_draw(int col, int row);
 // address: 0x45FF83
 //
 // TODO: add documentation.
-

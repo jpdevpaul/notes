@@ -37,4 +37,3 @@ void __fastcall sha1_transform(Sha1Ctx *ctx);
 //
 // sha1_init initializes the given SHA-1 context.
 void __fastcall sha1_init(int ctx_id);
-

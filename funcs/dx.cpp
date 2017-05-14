@@ -74,4 +74,3 @@ void dx_cleanup();
 // address: 0x4158A4
 //
 // TODO: add documentation.
-

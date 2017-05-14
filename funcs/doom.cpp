@@ -26,4 +26,3 @@
 //
 // doom_draw renders a map of the stars on screen.
 void doom_draw();
-

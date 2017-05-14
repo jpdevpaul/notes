@@ -24,4 +24,3 @@ int __fastcall codec_get_encoded_len(int n);
 //
 // codec_encode encodes the given memory buffer in-place.
 void __fastcall codec_encode(void *src_dst, int size, int size_64, char *password);
-

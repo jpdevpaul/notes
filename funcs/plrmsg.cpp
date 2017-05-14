@@ -30,4 +30,3 @@ void plrmsg_draw();
 // address: 0x450F37
 //
 // TODO: add documentation.
-

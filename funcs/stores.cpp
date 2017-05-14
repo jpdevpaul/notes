@@ -432,4 +432,3 @@ void stores_draw();
 // address: 0x45C18A
 //
 // TODO: add documentation.
-

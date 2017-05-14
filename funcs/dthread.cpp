@@ -42,4 +42,3 @@
 //
 // dthread_cleanup terminates the dungeon thread.
 void dthread_cleanup();
-

@@ -277,4 +277,3 @@ void control_draw_talk_panel();
 // address: 0x4073C2
 //
 // TODO: add documentation.
-

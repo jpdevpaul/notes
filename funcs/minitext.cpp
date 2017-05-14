@@ -22,4 +22,3 @@
 //
 // minitext_draw renders a medium sized text message on screen.
 void minitext_draw();
-

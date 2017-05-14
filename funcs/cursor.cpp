@@ -35,4 +35,3 @@ void cursor_cleanup();
 // address: 0x407729
 //
 // TODO: add documentation.
-

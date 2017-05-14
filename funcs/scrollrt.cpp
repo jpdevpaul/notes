@@ -125,4 +125,3 @@ void __fastcall scrollrt_draw_zoomed_game(int col, int row);
 // address: 0x4564F9
 //
 // TODO: add documentation.
-

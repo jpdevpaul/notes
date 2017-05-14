@@ -533,4 +533,3 @@ void __fastcall missiles_get_spell_damage(spell_id spell_id, int *damage_min, in
 // address: 0x430FB9
 //
 // TODO: add documentation.
-

@@ -103,4 +103,3 @@ void gendung_mark_set_piece();
 // address: 0x419E71
 //
 // TODO: add documentation.
-

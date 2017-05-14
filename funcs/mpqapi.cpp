@@ -118,4 +118,3 @@ bool32_t __fastcall mpqapi_set_hidden(char *save_path, bool32_t hidden);
 // address: 0x43BB79
 //
 // TODO: add documentation.
-

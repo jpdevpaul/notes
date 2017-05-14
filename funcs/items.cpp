@@ -485,4 +485,3 @@ void items_update_stores_equipable();
 // address: 0x42539E
 //
 // TODO: add documentation.
-

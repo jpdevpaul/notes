@@ -174,4 +174,3 @@ void __fastcall towners_greeting(speech_id speech_id);
 // address: 0x4617E8
 //
 // TODO: add documentation.
-

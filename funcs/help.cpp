@@ -22,4 +22,3 @@ void help_draw();
 // address: 0x41A79F
 //
 // TODO: add documentation.
-

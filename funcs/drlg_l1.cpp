@@ -318,4 +318,3 @@ void drlg_l1_fix_dirt();
 // PSX ref: 0x80140824
 // PSX def: void DRLG_L5CornerFix__Fv()
 void drlg_l1_fix_corners();
-

@@ -79,4 +79,3 @@ void gmenu_draw();
 // address: 0x41A545
 //
 // TODO: add documentation.
-

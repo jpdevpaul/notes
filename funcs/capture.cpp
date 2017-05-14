@@ -28,4 +28,3 @@ void capture_screenshot();
 // address: 0x403470
 //
 // TODO: add documentation.
-

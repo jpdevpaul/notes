@@ -161,4 +161,3 @@ void inv_draw_belt();
 // address: 0x41F068
 //
 // TODO: add documentation.
-

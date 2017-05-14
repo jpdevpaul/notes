@@ -37,4 +37,3 @@ void encrypt_init_lookup_table();
 // address: 0x41618E
 //
 // TODO: add documentation.
-
