@@ -1,8 +1,3 @@
-# Enumerates
-
-## damage_type
-
-```c
 // Damage types.
 typedef enum {
     DAMAGE_TYPE_NONE      = 0,
@@ -11,22 +6,14 @@ typedef enum {
     DAMAGE_TYPE_MAGIC     = 3,
     DAMAGE_TYPE_ACID      = 4,
 } damage_type;
-```
 
-## drop_rate
-
-```c
 // Drop rates.
 typedef enum {
     DROP_RATE_NEVER   = 0, // never drops.
     DROP_RATE_REGULAR = 1, // regular drop change.
     DROP_RATE_DOUBLE  = 2, // twice as likely to drop.
 } drop_rate;
-```
 
-## dtype
-
-```c
 // Dungeon types.
 typedef enum {
     DTYPE_TRISTRAM  =  0, // dlvl:       0
@@ -36,11 +23,7 @@ typedef enum {
     DTYPE_HELL      =  4, // dlvl: 13 - 16
     DTYPE_NONE      = -1,
 } dtype;
-```
 
-## direction
-
-```c
 // Directions.
 //
 // # Map layout
@@ -81,12 +64,11 @@ typedef enum {
     DIRECTION_SOUTH_EAST = 7,
     DIRECTION_OMNI       = 8, // All directions.
 } direction;
-```
 
-## item_id
-
-```c
 // Item IDs specify item_data array indices.
+//
+// References:
+//    * https://github.com/sanctuary/notes/blob/master/data/items.md#item_data
 typedef enum {
     ITEM_ID_GOLD                             =   0,
     ITEM_ID_SHORT_SWORD                      =   1,
@@ -246,25 +228,14 @@ typedef enum {
     ITEM_ID_BASE_AMULET_QLVL_16              = 155,
     ITEM_ID_NULL_14                          = 156,
 } item_id;
-```
 
-References:
-* https://github.com/sanctuary/notes/blob/master/data/items.md#item_data
-
-## item_quality
-
-```c
 // Item quality levels.
 typedef enum {
     ITEM_QUALITY_NORMAL = 0,
     ITEM_QUALITY_MAGIC  = 1,
     ITEM_QUALITY_UNIQUE = 2,
 } item_quality;
-```
 
-## item_type
-
-```c
 // Item types.
 typedef enum {
     ITEM_TYPE_MISC         =  0, // Potions, scrolls, books and quest items.
@@ -284,12 +255,11 @@ typedef enum {
     ITEM_TYPE_14           = 14, // NOTE: Unused?
     ITEM_TYPE_NONE         = -1,
 } item_type;
-```
 
-## l1_tile_id
-
-```c
 // Tile IDs for dungeon layout 1.
+//
+// References:
+//    * https://github.com/sanctuary/graphics/blob/master/l1/tiles/README.md
 typedef enum {
     L1_TILE_ID_NONE                                    = 0,
     L1_TILE_ID_WALL_SW                                 = 1,
@@ -499,15 +469,11 @@ typedef enum {
     L1_TILE_ID_DIRT_WALL_END_SE_DIRT                   = 205,
     L1_TILE_ID_BROKEN_ENTERANCE_SE_3                   = 206,
 } l1_tile_id;
-```
 
-References:
-* https://github.com/sanctuary/graphics/blob/master/l1/tiles/README.md
-
-## missile_graphic_id
-
-```c
 // Missile graphic IDs specify missile_graphic_data array indices.
+//
+// References:
+//    * https://github.com/sanctuary/notes/blob/master/data/missiles.md#missile_graphic_data
 typedef enum {
     MISSILE_GRAPHIC_ID_ARROW                  =  0, // "missiles/arrows.cl2"
     MISSILE_GRAPHIC_ID_FIRE_BALL              =  1, // "missiles/fireba%i.cl2"
@@ -558,15 +524,11 @@ typedef enum {
     MISSILE_GRAPHIC_ID_NULL                   = 46, // NULL
     MISSILE_GRAPHIC_ID_INVALID                = 47,
 } missile_graphic_id;
-```
 
-References:
-* https://github.com/sanctuary/notes/blob/master/data/missiles.md#missile_graphic_data
-
-## monster_id
-
-```c
 // Monster IDs specify monster_data array indices.
+//
+// References:
+//    * https://github.com/sanctuary/notes/blob/master/data/monsters.md#monster_data
 typedef enum {
     MONSTER_ID_ZOMBIE                  =   0, // monsters/zombie/
     MONSTER_ID_GHOUL                   =   1, // monsters/zombie/
@@ -682,15 +644,11 @@ typedef enum {
     MONSTER_ID_THE_ARCH_LITCH_MALIGNUS = 111, // monsters/darkmage/
     MONSTER_ID_NONE                    =  -1,
 } monster_id;
-```
 
-References:
-* https://github.com/sanctuary/notes/blob/master/data/monsters.md#monster_data
-
-## panel_button_id
-
-```c
 // Pannel button IDs specify panel_buttons array indices.
+//
+// References:
+//    * https://github.com/sanctuary/notes/blob/master/data/control.md#panel_buttons
 typedef enum {
     PANEL_BUTTON_ID_CHARACTER_INFORMATION = 0,
     PANEL_BUTTON_ID_QUESTS_LOG            = 1,
@@ -701,26 +659,18 @@ typedef enum {
     PANEL_BUTTON_ID_SEND_MESSAGE          = 6,
     PANEL_BUTTON_ID_PLAYER_ATTACK         = 7,
 } panel_button_id;
-```
 
-References:
-* https://github.com/sanctuary/notes/blob/master/data/control.md#panel_buttons
-
-## player_class
-
-```c
 // Player classes.
 typedef enum {
     PLAYER_CLASS_WARRIOR  = 0,
     PLAYER_CLASS_ROGUE    = 1,
     PLAYER_CLASS_SORCEROR = 2,
 } player_class;
-```
 
-## quest_id
-
-```c
 // Quest IDs specify quest_data array indices.
+//
+// References:
+//    * https://github.com/sanctuary/notes/blob/master/data/quests.md#quest_data
 typedef enum {
     QUEST_ID_THE_MAGIC_ROCK           =  0,
     QUEST_ID_BLACK_MUSHROOM           =  1,
@@ -740,14 +690,7 @@ typedef enum {
     QUEST_ID_ARCHBISHOP_LAZARUS       = 15,
     QUEST_ID_INVALID                  = -1,
 } quest_id;
-```
 
-References:
-* https://github.com/sanctuary/notes/blob/master/data/quests.md#quest_data
-
-## quest_level
-
-```c
 // Quest levels.
 //
 // PSX def:
@@ -758,6 +701,9 @@ References:
 //       SL_POISONWATER = 4,
 //       SL_VILEBETRAYER = 5,
 //    } _setlevels;
+//
+// References:
+//    * https://github.com/sanctuary/notes/blob/master/data/setmaps.md#quest_level_names
 typedef enum {
     QUEST_LEVEL_NONE                    = 0,
     QUEST_LEVEL_SKELETON_KINGS_LAIR     = 1,
@@ -766,15 +712,11 @@ typedef enum {
     QUEST_LEVEL_POISONED_WATER_SUPPLY   = 4,
     QUEST_LEVEL_ARCHBISHOP_LAZARUS_LAIR = 5,
 } quest_level;
-```
 
-References:
-* https://github.com/sanctuary/notes/blob/master/data/setmaps.md#quest_level_names
-
-## sfx_id
-
-```c
 // Sound effect IDs specify sfx_data array indices.
+//
+// References:
+//    * https://github.com/sanctuary/notes/blob/master/data/effects.md#sfx_data
 typedef enum {
     SFX_ID_MISC_WALK1_WAV                                                                                  =   0,
     SFX_ID_MISC_WALK2_WAV                                                                                  =   1,
@@ -1635,15 +1577,11 @@ typedef enum {
     SFX_ID_MONSTERS_ZHAR02_WAV_ARRRRGH                                                                     = 856,
     SFX_ID_MONSTERS_DIABLOD_WAV                                                                            = 857,
 } sfx_id;
-```
 
-References:
-* https://github.com/sanctuary/notes/blob/master/data/effects.md#sfx_data
-
-## speech_id
-
-```c
 // Speech IDs specify speech_data array indices.
+//
+// References:
+//    * https://github.com/sanctuary/notes/blob/master/rdata/talk.md#speech_data
 typedef enum {
     SPEECH_ID_TOWNERS_STORYT01_WAV_AHH_THE_STORY_OF_OUR_KING_IS_IT                                            =   0,
     SPEECH_ID_TOWNERS_TAVOWN21_WAV_THE_VILLAGE_NEEDS_YOUR_HELP_GOOD_MASTER                                    =   1,
@@ -1906,15 +1844,11 @@ typedef enum {
     SPEECH_ID_TOWNERS_TAVOWN00_WAV_THANK_GOODNESS_YOUVE_RETURNED                                              = 258,
     SPEECH_ID_INVALID                                                                                         =  -1,
 } speech_id;
-```
 
-References:
-* https://github.com/sanctuary/notes/blob/master/rdata/talk.md#speech_data
-
-## spell_id
-
-```c
 // Spell IDs specify spell_data array indices.
+//
+// References:
+//    * https://github.com/sanctuary/notes/blob/master/data/spells.md#spell_data
 typedef enum {
     SPELL_ID_NULL            =  0,
     SPELL_ID_FIREBOLT        =  1,
@@ -1955,14 +1889,7 @@ typedef enum {
     SPELL_ID_BONE_SPIRIT     = 36,
     SPELL_ID_INVALID         = -1,
 } spell_id;
-```
 
-References:
-* https://github.com/sanctuary/notes/blob/master/data/spells.md#spell_data
-
-## spell_type
-
-```c
 // Spell types.
 typedef enum {
     SPELL_TYPE_SKILL   = 0,
@@ -1971,11 +1898,7 @@ typedef enum {
     SPELL_TYPE_CHARGES = 3,
     SPELL_TYPE_INVALID = 4,
 } spell_type;
-```
 
-## template_id
-
-```c
 // Template IDs for error windows.
 typedef enum {
     TEMPLATE_ID_DX_INIT_ERROR              = 104,
@@ -1989,11 +1912,7 @@ typedef enum {
     TEMPLATE_ID_RESTRICTED_USER_ERROR      = 113,
     TEMPLATE_ID_READ_ONLY_DIRECTORY_ERROR  = 114,
 } template_id;
-```
 
-## text_color
-
-```c
 // Text colours.
 typedef enum {
     TEXT_COLOR_GREY = 0,
@@ -2001,12 +1920,11 @@ typedef enum {
     TEXT_COLOR_RED  = 2,
     TEXT_COLOR_GOLD = 3,
 } text_color;
-```
 
-## towner_anim_seq_id
-
-```c
 // Towner animation sequence IDs specify towner_anim_seq array indices.
+//
+// References:
+//    * https://github.com/sanctuary/notes/blob/master/data/towners.md#towner_anim_seq
 typedef enum {
     TOWNER_ANIM_SEQ_ID_GRISWOLD =  0,
     TOWNER_ANIM_SEQ_ID_PEPIN    =  1,
@@ -2016,14 +1934,7 @@ typedef enum {
     TOWNER_ANIM_SEQ_ID_ADRIA    =  5,
     TOWNER_ANIM_SEQ_ID_NONE     = -1,
 } towner_anim_seq_id;
-```
 
-References:
-* https://github.com/sanctuary/notes/blob/master/data/towners.md#towner_anim_seq
-
-## towner_id
-
-```c
 // Towner IDs for NPCs in Tristram.
 typedef enum {
     TOWNER_ID_GRISWOLD         = 0,
@@ -2037,11 +1948,7 @@ typedef enum {
     TOWNER_ID_WIRT             = 8,
     TOWNER_ID_COW              = 9,
 } towner_id;
-```
 
-## unique_base_item
-
-```c
 // Unique base items specify the underlying base items of unique items.
 typedef enum {
     UNIQUE_BASE_ITEM_NONE                  =  0,
@@ -2113,12 +2020,11 @@ typedef enum {
     UNIQUE_BASE_ITEM_STAFF_OF_LAZARUS      = 68,
     UNIQUE_BASE_ITEM_INVALID               = -1,
 } unique_base_item;
-```
 
-## unique_item_id
-
-```c
 // Unique item IDs specify unique_item_data array indices.
+//
+// References:
+//    * https://github.com/sanctuary/notes/blob/master/rdata/items.md#unique_item_data
 typedef enum {
     UNIQUE_ITEM_ID_THE_BUTCHERS_CLEAVER   =  0,
     UNIQUE_ITEM_ID_THE_UNDEAD_CROWN       =  1,
@@ -2212,15 +2118,11 @@ typedef enum {
     UNIQUE_ITEM_ID_RING_OF_ENGAGEMENT     = 89,
     UNIQUE_ITEM_ID_NULL                   = 90,
 } unique_item_id;
-```
 
-References:
-* https://github.com/sanctuary/notes/blob/master/rdata/items.md#unique_item_data
-
-## unique_monster_id
-
-```c
 // Unique monster IDs specify unique_monster_data array indices.
+//
+// References:
+//    * https://github.com/sanctuary/notes/blob/master/data/monsters.md#unique_monster_data
 typedef enum {
     UNIQUE_MONSTER_ID_GHARBAD_THE_WEAK         =  0, // MONSTER_ID_FLESH_CLAN_MACE
     UNIQUE_MONSTER_ID_SKELETON_KING            =  1, // MONSTER_ID_SKELETON_KING
@@ -2321,7 +2223,3 @@ typedef enum {
     UNIQUE_MONSTER_ID_DOOMLOCK                 = 96, // MONSTER_ID_STORM_LORD
     UNIQUE_MONSTER_ID_NULL                     = 97, // MONSTER_ID_NONE
 } unique_monster_id;
-```
-
-References:
-* https://github.com/sanctuary/notes/blob/master/data/monsters.md#unique_monster_data
