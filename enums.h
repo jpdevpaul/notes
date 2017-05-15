@@ -1028,6 +1028,14 @@ typedef enum {
 	QUEST_LEVEL_ARCHBISHOP_LAZARUS_LAIR = 5,
 } quest_level;
 
+// Quest state records the progress of the quest.
+typedef enum {
+	QUEST_STATE_INACTIVE = 0,
+	QUEST_STATE_WAITING  = 1,
+	QUEST_STATE_ACTIVE   = 2,
+	QUEST_STATE_COMPLETE = 3,
+} quest_state;
+
 // Sound effect IDs specify sfx_data array indices.
 //
 // References:
