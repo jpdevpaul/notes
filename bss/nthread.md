@@ -1,1 +1,0 @@
-# nthread.cpp

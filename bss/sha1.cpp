@@ -1,0 +1,13 @@
+#include "types.h"
+
+/* TODO: uncomment when the SHA1Context struct has been added. Include sha1.h
+   from types.h? Or create a minimal sha1.h locally for the specific types which
+   are used in Diablo.
+
+// address: 0x69EFB0
+//
+// sha1_contexts specifies the global SHA-1 contexts, which are used to
+// generate the codec key for save file encoding and decoding.
+SHA1Context sha1_contexts[3];
+
+*/
