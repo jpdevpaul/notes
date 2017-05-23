@@ -24,8 +24,8 @@ typedef struct {
 // Item describes in-game state of any game item.
 //
 // References:
-//    * https://github.com/sanctuary/notes/blob/master/enums.h#item_category
-//    * https://github.com/sanctuary/notes/blob/master/enums.h#item_code
+//    * https://github.com/sanctuary/notes/blob/master/enums.h#item_class
+//    * https://github.com/sanctuary/notes/blob/master/enums.h#item_misc_id
 //    * https://github.com/sanctuary/notes/blob/master/enums.h#item_drop_state
 //    * https://github.com/sanctuary/notes/blob/master/enums.h#item_effect_type
 //    * https://github.com/sanctuary/notes/blob/master/enums.h#item_equip_type
@@ -74,7 +74,7 @@ typedef struct { // size = 0x170
     // offset 00BD (1 byte)
     item_equip_type equip_type;
     // offset 00BE (1 byte)
-    item_category category;
+    item_class _class;
     // offset 00C0 (4 bytes)
     item_inv_graphics_id inv_graphics_id;
     // offset 00C4 (4 bytes)
@@ -90,7 +90,7 @@ typedef struct { // size = 0x170
     // offset 00D8 (4 bytes)
     item_special_effect special_effect_flags; // bitmask
     // offset 00DC (4 bytes)
-    item_code code;
+    item_misc_id misc_id;
     // offset 00E0 (4 bytes)
     spell_id item_spell_id;
     // offset 00E4 (4 bytes)
@@ -172,6 +172,65 @@ typedef struct { // size = 0x170
     // offset 0168 (4 byte)
     item_id id;
 } Item;
+
+// ItemData describes possible basic state a of game item (i.e. state before possibly applying
+// prefix, suffix, unique, effects or spells for books or staves)
+typedef struct // size = 0x4C
+{
+    // offset 0000 (4 bytes)
+    item_drop_rate drop_rate;
+    // offset 0004 (1 byte)
+    item_class _class;
+    // offset 0005 (1 byte)
+    item_equip_type equip_type;
+    // offset 0008 (4 bytes)
+    item_inv_graphics_id inv_graphics_id;
+    // offset 000C (1 byte)
+    item_type type;
+    // offset 000D (1 byte)
+    unique_base_item unique_base_item_id;
+    // offset 0010 (4 bytes)
+    const char *name;
+    // offset 0014 (4 bytes)
+    const char *short_name; // applied if item description becomes too long after adding affixes
+                            // and/or spell
+    // offset 0018 (4 bytes)
+    item_quality quality;
+    // offset 001C (4 bytes)
+    int max_durability;
+    // offset 0020 (4 bytes)
+    int min_attack_damage;
+    // offset 0024 (4 bytes)
+    int max_attack_damage;
+    // offset 0028 (4 bytes)
+    int min_armor_class;
+    // offset 002C (4 bytes)
+    int max_armor_class;
+    // offset 0030 (1 byte)
+    uint8_t required_strength;
+    // offset 0031 (1 byte)
+    uint8_t required_magic;
+    // offset 0032 (1 byte)
+    uint8_t required_dexterity;
+    // offset 0034 (4 bytes)
+    item_special_effect special_effect_flags; // Rarely set, only for undead crown and even this
+                                              // case seems to be redundant due one of its unique
+                                              // item effect
+    // offset 0038 (4 bytes)
+    item_misc_id misc_id;
+    // offset 003C (4 bytes)
+    spell_id spell_id; // Used for charges on Short Staff of Charged Bolt,
+                       // and used for scrolls otherwise.
+    // offset 0040 (4 bytes)
+    bool32_t is_usable; // Set if item could be triggered with right click (e.g. for gold,
+                        // potions, elixirs, books and scrolls). Some unique items do still
+                        // trigger an action on right click even though for them this flag
+                        // is not set.
+    // offset 0044 (4 bytes)
+    int price;
+    // offset 0048 (4 bytes)
+    int max_price; // Unused but for all items is specified higher than price
+} ItemData;
 
 // A Point is an X, Y coordinate pair. The axes increase right and down.
 typedef struct {
