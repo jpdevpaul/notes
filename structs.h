@@ -232,6 +232,49 @@ typedef struct // size = 0x4C
     int max_price; // Unused but for all items is specified higher than price
 } ItemData;
 
+// ItemEffect describes possible effect caused by suffix or prefix of magic item or one of
+// 5 unique item's effects. For some rare effect types min/max values represent different
+// type of parameters.
+typedef struct {
+	item_effect_type type;
+	int32_t min_value;
+	int32_t max_value;
+} ItemEffect;
+
+// ItemAffixData describes effect and properties of affix with listed name.
+//
+// References:
+// * https://github.com/sanctuary/notes/blob/master/rdata/items.cpp#item_prefix_data
+// * https://github.com/sanctuary/notes/blob/master/rdata/items.cpp#item_suffix_data
+typedef struct // size = 0x30
+{
+    // offset 0000 (4 bytes)
+    const char *name;
+    // offset 0004 (12 bytes)
+    ItemEffect effect;
+    // offset 0010 (1 bytes)
+    int8_t quality_level;
+    // offset 0014 (4 bytes)
+    affix_item_type item_type_flags; // bitmask
+    // offset 0018 (4 bytes)
+    int excluded_combination; // contains 0x01 or 0x10. If (suffix | preffix) == 0x11 they will
+                              // never be applied to a single item simultaneously. Also if prefix
+                              // has value 0x01 it also means that it can not be present on a staff
+                              // with a spell.
+    // offset 001C (4 bytes)
+    bool32_t double_chance; // if it is set then there's a twice is likely chance that this affix
+                            // will be generated than if it's not
+    // offset 0020 (4 bytes)
+    bool32_t not_cursed; // cursed affixes are never applied to items sold in town and also have
+                         // lower probability to be applied in other cases.
+    // offset 0024 (4 bytes)
+    int min_price;
+    // offset 0028 (4 bytes)
+    int max_price;
+    // offset 002C (4 bytes)
+    int cost_multiplier;
+} ItemAffixData;
+
 // A Point is an X, Y coordinate pair. The axes increase right and down.
 typedef struct {
 	int32_t x;

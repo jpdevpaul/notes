@@ -568,6 +568,17 @@ typedef enum {
 	ITEM_TYPE_NONE         = -1,
 } item_type;
 
+// Bit flag which is used to determine if affix could be applied to certain type of items.
+// As it can be noted each flag just represents one or more values from `item_type` enumeration.
+typedef enum {
+    AFFIX_ITEM_TYPE_JEWELRY = 0x1     ,
+    AFFIX_ITEM_TYPE_BOW     = 0x10    ,
+    AFFIX_ITEM_TYPE_STAFF   = 0x100   ,
+    AFFIX_ITEM_TYPE_WEAPON  = 0x1000  ,
+    AFFIX_ITEM_TYPE_SHIELD  = 0x10000 ,
+    AFFIX_ITEM_TYPE_ARMOR   = 0x100000,
+} affix_item_type;
+
 // Tile IDs for dungeon layout 1.
 //
 // TODO: Figure out how to fix broken link. Requires graphics files, which may
