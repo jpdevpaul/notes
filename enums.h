@@ -7,12 +7,12 @@ typedef enum {
 	DAMAGE_TYPE_ACID      = 4,
 } damage_type;
 
-// Drop rates.
+// Item drop rates.
 typedef enum {
-	DROP_RATE_NEVER   = 0, // never drops.
-	DROP_RATE_REGULAR = 1, // regular drop change.
-	DROP_RATE_DOUBLE  = 2, // twice as likely to drop.
-} drop_rate;
+	ITEM_DROP_RATE_NEVER   = 0, // never drops.
+	ITEM_DROP_RATE_REGULAR = 1, // regular drop change.
+	ITEM_DROP_RATE_DOUBLE  = 2, // twice as likely to drop.
+} item_drop_rate;
 
 // Dungeon types.
 typedef enum {
@@ -70,45 +70,45 @@ typedef enum {
 // References:
 //    * https://github.com/sanctuary/notes/blob/master/structs.h#item
 typedef enum {
-	ITEM_CATEGORY_NONE                   = 0,
-	ITEM_CATEGORY_WEAPON                 = 1,
-	ITEM_CATEGORY_ARMOR                  = 2,
-	ITEM_CATEGORY_JEWELRY_AND_CONSUMABLE = 3,
-	ITEM_CATEGORY_GOLD                   = 4,
-	ITEM_CATEGORY_QUEST                  = 5,
-} item_category;
+	ITEM_CLASS_NONE                   = 0,
+	ITEM_CLASS_WEAPON                 = 1,
+	ITEM_CLASS_ARMOR                  = 2,
+	ITEM_CLASS_JEWELRY_AND_CONSUMABLE = 3,
+	ITEM_CLASS_GOLD                   = 4,
+	ITEM_CLASS_QUEST                  = 5,
+} item_class;
 
 // Additional item categorization.
 //
 // References:
 //    * https://github.com/sanctuary/notes/blob/master/structs.h#item
 typedef enum {
-	ITEM_CODE_NONE                        =  0, // all non-unique weapons and armor have this code
-	ITEM_CODE_USE_FIRST                   =  1, // unused
-	ITEM_CODE_POTION_OF_FULL_HEALING      =  2,
-	ITEM_CODE_POTION_OF_HEALING           =  3,
-	ITEM_CODE_POTION_OF_MANA              =  6,
-	ITEM_CODE_POTION_OF_FULL_MANA         =  7,
-	ITEM_CODE_ELIXIR_OF_STRENGTH          = 10,
-	ITEM_CODE_ELIXIR_OF_MAGIC             = 11,
-	ITEM_CODE_ELIXIR_OF_DEXTERITY         = 12,
-	ITEM_CODE_ELIXIR_OF_VITALITY          = 13,
-	ITEM_CODE_POTION_OF_REJUVENATION      = 18,
-	ITEM_CODE_POTION_OF_FULL_REJUVENATION = 19,
-	ITEM_CODE_USE_LAST                    = 20, // unused
-	ITEM_CODE_SCROLL                      = 21,
-	ITEM_CODE_SCROLL_WITH_TARGET          = 22,
-	ITEM_CODE_STAFF                       = 23,
-	ITEM_CODE_BOOK                        = 24,
-	ITEM_CODE_RING                        = 25,
-	ITEM_CODE_AMULET                      = 26,
-	ITEM_CODE_UNIQUE                      = 27,
-	ITEM_CODE_POTION_OF_HEALING_SOMETHING = 28, // unused
-	ITEM_CODE_MAP_OF_THE_STARS            = 42,
-	ITEM_CODE_EAR                         = 43,
-	ITEM_CODE_SPECTRAL_ELIXIR             = 44,
-	ITEM_CODE_INVALID                     = -1,
-} item_code;
+	ITEM_MISC_ID_NONE                        =  0, // all non-unique weapons and armor have this code
+	ITEM_MISC_ID_USE_FIRST                   =  1, // unused
+	ITEM_MISC_ID_POTION_OF_FULL_HEALING      =  2,
+	ITEM_MISC_ID_POTION_OF_HEALING           =  3,
+	ITEM_MISC_ID_POTION_OF_MANA              =  6,
+	ITEM_MISC_ID_POTION_OF_FULL_MANA         =  7,
+	ITEM_MISC_ID_ELIXIR_OF_STRENGTH          = 10,
+	ITEM_MISC_ID_ELIXIR_OF_MAGIC             = 11,
+	ITEM_MISC_ID_ELIXIR_OF_DEXTERITY         = 12,
+	ITEM_MISC_ID_ELIXIR_OF_VITALITY          = 13,
+	ITEM_MISC_ID_POTION_OF_REJUVENATION      = 18,
+	ITEM_MISC_ID_POTION_OF_FULL_REJUVENATION = 19,
+	ITEM_MISC_ID_USE_LAST                    = 20, // unused
+	ITEM_MISC_ID_SCROLL                      = 21,
+	ITEM_MISC_ID_SCROLL_WITH_TARGET          = 22,
+	ITEM_MISC_ID_STAFF                       = 23,
+	ITEM_MISC_ID_BOOK                        = 24,
+	ITEM_MISC_ID_RING                        = 25,
+	ITEM_MISC_ID_AMULET                      = 26,
+	ITEM_MISC_ID_UNIQUE                      = 27,
+	ITEM_MISC_ID_POTION_OF_HEALING_SOMETHING = 28, // unused
+	ITEM_MISC_ID_MAP_OF_THE_STARS            = 42,
+	ITEM_MISC_ID_EAR                         = 43,
+	ITEM_MISC_ID_SPECTRAL_ELIXIR             = 44,
+	ITEM_MISC_ID_INVALID                     = -1,
+} item_misc_id;
 
 // TODO: Rethink item_drop_state enum. It probably has to do with animation, and
 // then ITEM_DROP_STATE_GLIMMERING would make sense, as that would be
@@ -567,6 +567,17 @@ typedef enum {
 	ITEM_TYPE_14           = 14, // NOTE: Unused?
 	ITEM_TYPE_NONE         = -1,
 } item_type;
+
+// Bit flag which is used to determine if affix could be applied to certain type of items.
+// As it can be noted each flag just represents one or more values from `item_type` enumeration.
+typedef enum {
+    AFFIX_ITEM_TYPE_JEWELRY = 0x1     ,
+    AFFIX_ITEM_TYPE_BOW     = 0x10    ,
+    AFFIX_ITEM_TYPE_STAFF   = 0x100   ,
+    AFFIX_ITEM_TYPE_WEAPON  = 0x1000  ,
+    AFFIX_ITEM_TYPE_SHIELD  = 0x10000 ,
+    AFFIX_ITEM_TYPE_ARMOR   = 0x100000,
+} affix_item_type;
 
 // Tile IDs for dungeon layout 1.
 //
