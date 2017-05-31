@@ -115,7 +115,7 @@ func progress(w io.Writer, path string) (npsx, nwin, nmac, total int, err error)
 	psxPercent := int(100 * (float64(npsx) / float64(total)))
 	winPercent := int(100 * (float64(nwin) / float64(total)))
 	macPercent := int(100 * (float64(nmac) / float64(total)))
-	shortPath := path[len("diabpsx/"):]
+	shortPath := path[len("diabpsx/") : len(path)-len(".ini")]
 	fmt.Fprintf(w, "| [%s](%s) \t| %d%% (%d/%d functions) \t| %d%% (%d/%d functions) \t| %d%% (%d/%d functions) \t|\t\n", shortPath, path, psxPercent, npsx, total, winPercent, nwin, total, macPercent, nmac, total)
 	return npsx, nwin, nmac, total, nil
 }
