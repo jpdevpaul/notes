@@ -12,7 +12,7 @@ data:
 bss:
 	clang -I ./ -c -m32 bss/*.cpp
 
-.PHONY: all clean
+.PHONY: all clean funcs rdata data bss
 
 clean:
-	rm -f *.o
+	rm -f funcs/*.o rdata/*.o data/*.o bss/*.o
