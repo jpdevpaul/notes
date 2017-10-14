@@ -1,6 +1,12 @@
+#include "types.h"
+
 // address: 0x4619A7
 //
-// TODO: add documentation.
+// trigs_init initializes triggers on the map.
+//
+// PSX ref: 0x80075018
+// PSX def: void InitVPTriggers__Fv()
+void trigs_init();
 
 // address: 0x4619B6
 //

@@ -69,7 +69,7 @@ Each function has been categorised based on their original source file, as summa
 | [town.cpp](town.cpp)             | `0x45E151`    | `0x46019A`  | 15% (3/19 functions)     |
 | [towners.cpp](towners.cpp)       | `0x46019B`    | `0x4618A4`  | 90% (30/33 functions)    |
 | [track.cpp](track.cpp)           | `0x4618A5`    | `0x4619A6`  | 0% (0/5 functions)       |
-| [trigs.cpp](trigs.cpp)           | `0x4619A7`    | `0x462C6C`  | 0% (0/21 functions)      |
+| [trigs.cpp](trigs.cpp)           | `0x4619A7`    | `0x462C6C`  | 4% (1/21 functions)      |
 | [wave.cpp](wave.cpp)             | `0x462C6D`    | `0x46305F`  | 0% (0/18 functions)      |
 | [world.cpp](world.cpp)           | `0x463060`    | `0x469719`  | 0% (0/7 functions)       |
 | _crt.cpp                         | `0x46971A`    | `0x47746F`  | N/A                      |
