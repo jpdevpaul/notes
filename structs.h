@@ -329,3 +329,27 @@ typedef struct {
 	l1_tile_id shadow_right;
 	l1_tile_id shadow_left;
 } Shadow;
+
+// ScreenRow represents a single horizontal line of pixels on the screen.
+//
+// size = 0x300
+typedef struct ScreenRow {
+    // offset 0000 (64 bytes)
+    uint8_t col_unused_1[64];
+    // offset 0040 (640 bytes)
+    uint8_t pixels[640];
+    // offset 02C0 (64 bytes)
+    uint8_t col_unused_2[64];
+} ScreenRow;
+
+// Screen represents the pixels of the screen.
+//
+// size = 0x7B000
+typedef struct {
+    // offset 00000000 (122880 bytes)
+    ScreenRow row_unused_1[160];
+    // offset 0001E000 (368640 bytes)
+    ScreenRow row[480];
+    // offset 00078000 (12288 bytes)
+    ScreenRow row_unused_2[16];
+} Screen;
