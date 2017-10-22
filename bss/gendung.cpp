@@ -21,11 +21,9 @@ int32_t npc_num_map[112][112];
 // PSX ref: 0x800E40C4
 // PSX def: unsigned short dungeon[48][48]
 //
-//
-//
 // References:
 //    * https://github.com/sanctuary/graphics/blob/master/l1/tiles/README.md#tileset-of-dungeon-layout-1
-int8_t tile_id_map[40][40];
+uint8_t tile_id_map[40][40];
 
 // address: 0x539C48
 //
@@ -53,6 +51,13 @@ int8_t dead_map[112][112];
 //
 // piece_id_map contains the piece IDs of each tile on the map.
 int32_t piece_id_map[112][112];
+
+// address: 0x5B70DC
+//
+// tiles specifies the tile definitions of the current dungeon type; (e.g.
+// levels/l1data/l1.til).
+//
+Tile *tiles;
 
 // address: 0x5BB1ED
 //
