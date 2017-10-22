@@ -1,3 +1,23 @@
+// 10 blocks for l1.min, l2.min and l3.min
+// 16 blocks for l4.min and town.min
+const int nblocks = 10;
+
+// A DPiece represents a dungeon piece, which specifies how to arrange frames of
+// a level CEL file in order to form a miniature tile. A dungeon piece consists
+// of 10 or 16 blocks, where each non-empty block is represented by a CEL frame.
+//
+// A block specifies the graphics of a single block in a dungeon piece.
+//
+// Frame number in the level CEL file; or 0 if empty;
+//    block&0x0FFF.
+//
+// Frame type, specifying the CEL decoding algorithm of the frame;
+//    (block&0x7000) >> 12
+typedef struct {
+	// Either 10 or 16 blocks constituting the dungeon piece.
+	uint16_t blocks[nblocks];
+} DPiece;
+
 // GossipData specifies the speech IDs for the gossip related to each quest.
 //
 // References:
