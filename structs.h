@@ -333,7 +333,7 @@ typedef struct {
 // ScreenRow represents a single horizontal line of pixels on the screen.
 //
 // size = 0x300
-typedef struct ScreenRow {
+typedef struct {
     // offset 0000 (64 bytes)
     uint8_t col_unused_1[64];
     // offset 0040 (640 bytes)
