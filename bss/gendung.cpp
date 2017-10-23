@@ -54,16 +54,14 @@ int32_t piece_id_map[112][112];
 
 // address: 0x5B70DC
 //
-// tile_defs specifies the tile definitions of the current dungeon type; (e.g.
+// tile_defs specifies the tile definitions of the active dungeon type; (e.g.
 // levels/l1data/l1.til).
-//
 Tile *tile_defs;
 
 // address: 0x5B70E0
 //
 // dpiece_defs specifies the dungeon piece definitions (a.k.a. miniture tiles)
-// of the current dungeon type; (e.g. levels/l1data/l1.min).
-//
+// of the active dungeon type; (e.g. levels/l1data/l1.min).
 DPiece *dpiece_defs;
 
 // address: 0x5BB1ED
