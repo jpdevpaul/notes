@@ -34,6 +34,20 @@ uint8_t tile_id_map[40][40];
 //    * https://github.com/sanctuary/notes/blob/master/bss/objects.cpp#objects
 int8_t object_num_map[112][112];
 
+// address: 0x53CD4C
+//
+// nlevel_frames specifies the number of frames in the level cel (e.g.
+// "levels/l1data/l1.cel").
+int32_t nlevel_frames;
+
+// address: 0x53CD50
+//
+// tile_id_map_backup contains a backup of the tile IDs of the map.
+//
+// PSX ref: 0x800E52C4
+// PSX def: unsigned char pdungeon[40][40]
+uint8_t tile_id_map_backup[40][40];
+
 // address: 0x53D390
 //
 // dead_map contains the dead numbers (deads array indices) and dead direction
