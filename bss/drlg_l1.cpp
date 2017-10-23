@@ -1,3 +1,5 @@
+#include "types.h"
+
 // TODO: Define l1_flag enum.
 
 // address: 0x527064

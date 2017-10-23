@@ -120,6 +120,38 @@ int8_t item_num_map[112][112];
 //    * https://github.com/sanctuary/notes/blob/master/enums.h#quest_level
 quest_level quest_lvl;
 
+// address: 0x5CF338
+//
+// set_xx specifies the active miniset x-coordinate of the map.
+//
+// PSX ref: 0x8011C0E4
+// PSX def: int setpc_x
+int32_t set_xx;
+
+// address: 0x5CF33C
+//
+// view_x specifies the player viewpoint x-coordinate of the map.
+//
+// PSX ref: 0x8011C114
+// PSX def: int ViewX
+int32_t view_x;
+
+// address: 0x5CF340
+//
+// view_y specifies the player viewpoint y-coordinate of the map.
+//
+// PSX ref: 0x8011C118
+// PSX def: int ViewY
+int32_t view_y;
+
+// address: 0x5CF344
+//
+// set_yy specifies the active miniset y-coordinate of the map.
+//
+// PSX ref: 0x8011C0E8
+// PSX def: int setpc_y
+int32_t set_yy;
+
 // address: 0x5CF350
 //
 // missile_num_map contains the missile numbers (missiles array indices) of the
@@ -128,4 +160,3 @@ quest_level quest_lvl;
 // References:
 //    * https://github.com/sanctuary/notes/blob/master/bss/missiles.cpp#missiles
 int8_t missile_num_map[112][112];
-
