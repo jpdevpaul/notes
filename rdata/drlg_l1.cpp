@@ -36,7 +36,7 @@ l1_tile_id l1_plain[207];
 
 // address: 0x479EC8
 //
-// l1_stair1 is a 4x4 miniset of tile IDs representing a staircase.
+// l1_stair_up1 is a 4x4 miniset of tile IDs representing a staircase going up.
 //
 // Minisets specifies how to arrange tile IDs in order to form set areas of
 // dungeons (e.g. staircases). Below follows a pseudo-code description of the
@@ -54,11 +54,11 @@ l1_tile_id l1_plain[207];
 //       // Tile IDs after transformation.
 //       after [width][height]uint8
 //    }
-uint8_t l1_stair1[34];
+uint8_t l1_stair_up1[34];
 
 // address: 0x479EEC
 //
-// l1_stair2 is a 4x4 miniset of tile IDs representing a staircase.
+// l1_stair_up2 is a 4x4 miniset of tile IDs representing a staircase going up.
 //
 // Minisets specifies how to arrange tile IDs in order to form set areas of
 // dungeons (e.g. staircases). Below follows a pseudo-code description of the
@@ -76,11 +76,12 @@ uint8_t l1_stair1[34];
 //       // Tile IDs after transformation.
 //       after [width][height]uint8
 //    }
-uint8_t l1_stair2[34];
+uint8_t l1_stair_up2[34];
 
 // address: 0x479F10
 //
-// l1_stair3 is a 4x3 miniset of tile IDs representing a staircase.
+// l1_stair_down is a 4x3 miniset of tile IDs representing a staircase going
+// down.
 //
 // Minisets specifies how to arrange tile IDs in order to form set areas of
 // dungeons (e.g. staircases). Below follows a pseudo-code description of the
@@ -98,7 +99,7 @@ uint8_t l1_stair2[34];
 //       // Tile IDs after transformation.
 //       after [width][height]uint8
 //    }
-uint8_t l1_stair3[26];
+uint8_t l1_stair_down[26];
 
 // address: 0x479F2C
 //
@@ -124,8 +125,8 @@ uint8_t l1_candlestick[10];
 
 // address: 0x479F38
 //
-// l1_stair_poison is a 6x6 miniset of tile IDs representing a staircase down to
-// the Poisoned Water Supply.
+// l1_stair_down_poison is a 6x6 miniset of tile IDs representing a staircase
+// going down to the Poisoned Water Supply.
 //
 // Minisets specifies how to arrange tile IDs in order to form set areas of
 // dungeons (e.g. staircases). Below follows a pseudo-code description of the
@@ -143,4 +144,4 @@ uint8_t l1_candlestick[10];
 //       // Tile IDs after transformation.
 //       after [width][height]uint8
 //    }
-uint8_t l1_stair_poison[74];
+uint8_t l1_stair_down_poison[74];
