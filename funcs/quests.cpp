@@ -56,7 +56,11 @@ bool32_t __fastcall quests_is_active(quest_id quest_num);
 
 // address: 0x451F20
 //
-// TODO: add documentation.
+// quests_init_quest_area initializes the given quest area.
+//
+// PSX ref: 0x8015F334
+// PSX def: void DRLG_CheckQuests__Fii(int x, int y)
+void __fastcall quests_init_quest_area(int qcol, int qrow);
 
 // address: 0x451FB1
 //

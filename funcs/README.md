@@ -55,7 +55,7 @@ Each function has been categorised based on their original source file, as summa
 | [player.cpp](player.cpp)         | `0x44A8E6`    | `0x450D32`  | 0% (0/92 functions)      |
 | [plrmsg.cpp](plrmsg.cpp)         | `0x450D33`    | `0x450FFD`  | 12% (1/8 functions)      |
 | [portal.cpp](portal.cpp)         | `0x450FFE`    | `0x45138D`  | 0% (0/13 functions)      |
-| [quests.cpp](quests.cpp)         | `0x45138E`    | `0x452830`  | 8% (2/25 functions)      |
+| [quests.cpp](quests.cpp)         | `0x45138E`    | `0x452830`  | 12% (3/25 functions)     |
 | [restricted.cpp](restricted.cpp) | `0x452831`    | `0x452974`  | 33% (1/3 functions)      |
 | [scrollrt.cpp](scrollrt.cpp)     | `0x452975`    | `0x456624`  | 9% (3/31 functions)      |
 | [setmaps.cpp](setmaps.cpp)       | `0x456625`    | `0x456A15`  | 0% (0/6 functions)       |
