@@ -2,7 +2,7 @@
 
 // address: 0x479C24
 //
-// l1_shadow contains shadows for 2x2 blocks of base tile IDs on layout 1.
+// l1_shadow contains shadows for 2x2 blocks of base tile IDs in the Cathedral.
 //
 // TODO: Figure out how to fix broken link. Requires graphics files, which may
 // not be put online. Perhaps, add a script to view locally.

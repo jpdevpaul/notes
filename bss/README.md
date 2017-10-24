@@ -21,7 +21,7 @@ Each global variable in the uninitialized data section has been categorised base
 | [dx.cpp](dx.cpp)                 | `0x52A510`    | `0x52A54F`  | 12% (8/64 bytes)             |
 | [effects.cpp](effects.cpp)       | `0x52A550`    | `0x52A563`  | 0% (0/20 bytes)              |
 | [encrypt.cpp](encrypt.cpp)       | `0x52A564`    | `0x52B967`  | 0% (0/5124 bytes)            |
-| [engine.cpp](engine.cpp)         | `0x52B968`    | `0x52B99F`  | 50% (28/56 bytes)            |
+| [engine.cpp](engine.cpp)         | `0x52B968`    | `0x52B99F`  | 64% (36/56 bytes)            |
 | [error.cpp](error.cpp)           | `0x52B9A0`    | `0x52B9F3`  | 0% (0/84 bytes)              |
 | [exception.cpp](exception.cpp)   | `0x52B9F4`    | `0x52B9FF`  | 0% (0/12 bytes)              |
 | [gendung.cpp](gendung.cpp)       | `0x52BA00`    | `0x63445F`  | 16% (178855/1084000 bytes)   |

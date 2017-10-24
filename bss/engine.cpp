@@ -1,5 +1,10 @@
 #include "types.h"
 
+// address: 0x52B974
+//
+// initial_seed represents the initial global seed of the game.
+int32_t initial_seed;
+
 // address: 0x52B97C
 //
 // seed represents the global seed of the game.
@@ -18,3 +23,11 @@ int32_t seed;
 CRITICAL_SECTION mem_mutex;
 
 */
+
+// address: 0x52B998
+//
+// seed_count specifies the number of invokations to engine_rand.
+//
+// PSX ref: 0x8011B85C
+// PSX def: int SeedCount
+int32_t seed_count;
