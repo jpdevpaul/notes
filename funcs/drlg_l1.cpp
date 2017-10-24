@@ -168,14 +168,14 @@ int drlg_l1_get_area();
 
 // address: 0x40C02A
 //
-// drlg_l1_init_dmap initializes a dungeon tile ID map of twice the size of
-// the dungeon, repeating each tile in blocks of 4.
+// drlg_l1_init_tile_bit_map initializes a tile ID map of twice the size,
+// repeating each tile in blocks of 4.
 //
 // PSX ref: 0x8013DBFC
 // PSX def: void L5makeDungeon__Fv()
 //
 // NOTE: The dmap (double map) seems to be unused.
-void drlg_l1_init_dmap();
+void drlg_l1_init_tile_bit_map();
 
 // address: 0x40C06E
 //
