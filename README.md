@@ -21,7 +21,7 @@ The notes are currently organized into the following categories.
 |---------------------------------------------------|--------------------------------|
 | [Functions](funcs/README.md)                      | 12% (246/1955 functions)       |
 | [Global variables (read-only)](rdata/README.md)   | 95% (26992/28372 bytes)        |
-| [Global variables (read-write)](data/README.md)   | 95% (187436/196860 bytes)      |
+| [Global variables (read-write)](data/README.md)   | 95% (187452/196860 bytes)      |
 | [Global variables (uninitialized)](bss/README.md) | 23% (477688/2048520 bytes)     |
 | [Storm ordinals](storm.h)                         | 63% (37/58 functions)          |
 

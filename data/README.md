@@ -16,7 +16,7 @@ Each global variable in the data section has been categorised based on their ori
 | [diablo.cpp](diablo.cpp)         | `0x484364`    | `0x4846AF`  | 95% (804/844 bytes)      |
 | [doom.cpp](doom.cpp)             | `0x4846B0`    | `0x4846F7`  | 100% (72/72 bytes)       |
 | pkware.cpp                       | `0x4846F8`    | `0x484777`  | N/A                      |
-| [drlg_l1.cpp](drlg_l1.cpp)       | `0x484778`    | `0x4847D7`  | 83% (80/96 bytes)        |
+| [drlg_l1.cpp](drlg_l1.cpp)       | `0x484778`    | `0x4847D7`  | 100% (96/96 bytes)       |
 | pkware.cpp                       | `0x4847D8`    | `0x484857`  | N/A                      |
 | [drlg_l2.cpp](drlg_l2.cpp)       | `0x484858`    | `0x48613B`  | 100% (6372/6372 bytes)   |
 | pkware.cpp                       | `0x48613C`    | `0x4861BB`  | N/A                      |
