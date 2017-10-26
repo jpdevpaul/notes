@@ -144,11 +144,11 @@ void __fastcall drlg_l1_add_room(int qcol_start, int qrow_start, int qcol_count,
 // address: 0x40BD9D
 //
 // drlg_l1_generate_room generates a room of the given dimensions at the
-// spcified coordinates.
+// specified coordinates.
 //
 // PSX ref: 0x8013D4CC
 // PSX sig: void L5roomGen__Fiiiii(int x, int y, int w, int h, int dir)
-void __fastcall drlg_l1_generate_room(int qcol_start, int qrow_start, int qcol_count, int qrow_count, int dir);
+void __fastcall drlg_l1_generate_room(int qcol_start, int qrow_start, int qcol_count, int qrow_count, bool32_t dir_horiz);
 
 // address: 0x40BFA4
 //
