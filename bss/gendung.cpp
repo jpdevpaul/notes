@@ -142,6 +142,22 @@ quest_level quest_lvl;
 // PSX def: int setpc_x
 int32_t set_xx;
 
+// address: 0x5CF320
+//
+// lvl_view_y specifies the level viewpoint y-coordinate of the map.
+//
+// PSX ref: 0x8011C130
+// PSX def: int LvlViewY
+int32_t lvl_view_y;
+
+// address: 0x5CF324
+//
+// lvl_view_x specifies the level viewpoint x-coordinate of the map.
+//
+// PSX ref: 0x8011C12C
+// PSX def: int LvlViewX
+int32_t lvl_view_x;
+
 // address: 0x5CF33C
 //
 // view_x specifies the player viewpoint x-coordinate of the map.
