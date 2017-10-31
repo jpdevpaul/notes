@@ -10,6 +10,9 @@ void *quest_cel;
 // address: 0x69BD10
 //
 // quests contains the quests of the current game.
+//
+// PSX ref: 0x800DDA40
+// PSX def: QuestStruct quests[16];
 Quest quests[16];
 
 */
