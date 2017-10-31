@@ -1,5 +1,23 @@
 #include "types.h"
 
+// address: 0x52BA00
+//
+// level_frame_types specifies the CEL frame decoder type for each frame of the
+// level CEL (e.g. "levels/l1data/l1.cel").
+//
+// The decoder type may be one of the following.
+//     0x0000 // cel.decodeType0
+//     0x1000 // cel.decodeType1
+//     0x2000 // cel.decodeType2
+//     0x3000 // cel.decodeType3
+//     0x4000 // cel.decodeType4
+//     0x5000 // cel.decodeType5
+//     0x6000 // cel.decodeType6
+//
+// References:
+//    * https://github.com/sanctuary/formats/tree/master/image/cel
+int16_t level_frame_types[2048];
+
 // address: 0x52D208
 //
 // npc_num_map contains the NPC numbers of the map. The NPC number represents a
@@ -94,6 +112,12 @@ dungeon_type dtype;
 // PSX def: unsigned char currlevel
 int8_t dlvl;
 
+// address: 0x5BBAF4
+//
+// level_frame_count specifies the CEL frame occurrence for each frame of the
+// level CEL (e.g. "levels/l1data/l1.cel").
+int32_t level_frame_count[2048];
+
 // address: 0x5BDB0C
 //
 // level_cel points to the contents of the active tileset, which is one of
@@ -133,6 +157,12 @@ int8_t item_num_map[112][112];
 // References:
 //    * https://github.com/sanctuary/notes/blob/master/enums.h#quest_level
 quest_level quest_lvl;
+
+// address: 0x5CCB14
+//
+// level_frame_sizes specifies the size of each frame of the level cel (e.g.
+// "levels/l1data/l1.cel"). Indexed by frame numbers starting at 1.
+int32_t level_frame_sizes[2048];
 
 // address: 0x5CF338
 //
