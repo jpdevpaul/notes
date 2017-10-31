@@ -124,6 +124,9 @@ int8_t transparency_map[112][112];
 //
 // References:
 //    * https://github.com/sanctuary/notes/blob/master/enums.h#dungeon_type
+//
+// PSX ref: 0x8011C10D
+// PSX def: unsigned char leveltype
 dungeon_type dtype;
 
 // address: 0x5BB1EE
