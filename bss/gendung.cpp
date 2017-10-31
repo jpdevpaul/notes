@@ -85,6 +85,14 @@ int8_t dead_map[112][112];
 // coordinate and block number.
 int16_t dpiece_defs_map_1[16][112][112];
 
+// address: 0x5A5590
+//
+// transparency_index specifies the current transparency category.
+//
+// PSX ref: 0x8011C148
+// PSX def: char TransVal
+int8_t transparency_index;
+
 // address: 0x5A5BD8
 //
 // piece_id_map contains the piece IDs of each tile on the map.
@@ -101,6 +109,14 @@ Tile *tile_defs;
 // dpiece_defs specifies the dungeon piece definitions (a.k.a. miniture tiles)
 // of the active dungeon type; (e.g. levels/l1data/l1.min).
 DPiece *dpiece_defs;
+
+// address: 0x5B78EC
+//
+// transparency_map specifies the transparency at each coordinate of the map.
+//
+// PSX ref: 0x800E7A28
+// PSX def: map_info dung_map[112][112] // dTransVal struct member
+int8_t transparency_map[112][112];
 
 // address: 0x5BB1ED
 //
