@@ -137,6 +137,14 @@ dungeon_type dtype;
 // PSX def: unsigned char currlevel
 int8_t dlvl;
 
+// address: 0x5BB1F0
+//
+// transparency_active specifies the active transparency indices.
+//
+// PSX ref: 0x800E7928
+// PSX def: unsigned char TransList[256]
+bool8_t transparency_active[256];
+
 // address: 0x5BBAF4
 //
 // level_frame_count specifies the CEL frame occurrence for each frame of the
