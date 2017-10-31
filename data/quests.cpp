@@ -8,6 +8,9 @@
 //
 // References:
 //    * https://github.com/sanctuary/notes/blob/master/enums.h#quest_id
+//
+// PSX ref: 0x800DD908
+// PSX def: QuestData questlist[16]
 QuestData quest_data[16];
 
 */
