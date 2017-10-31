@@ -79,6 +79,12 @@ uint8_t tile_id_map_backup[40][40];
 //    * https://github.com/sanctuary/notes/blob/master/enums.h#direction
 int8_t dead_map[112][112];
 
+// address: 0x540490
+//
+// dpiece_defs_map_1 specifies the dungeon piece information for a given
+// coordinate and block number.
+int16_t dpiece_defs_map_1[16][112][112];
+
 // address: 0x5A5BD8
 //
 // piece_id_map contains the piece IDs of each tile on the map.
@@ -220,3 +226,9 @@ int32_t set_yy;
 // References:
 //    * https://github.com/sanctuary/notes/blob/master/bss/missiles.cpp#missiles
 int8_t missile_num_map[112][112];
+
+// address: 0x5D2460
+//
+// dpiece_defs_map_2 specifies the dungeon piece information for a given
+// coordinate and block number.
+int16_t dpiece_defs_map_2[16][112][112];
