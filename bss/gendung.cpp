@@ -175,6 +175,22 @@ int8_t player_num_map[112][112];
 // arches.
 int8_t arch_num_map[112][112];
 
+// address: 0x5C690C
+//
+// level_special_cel points to the contents of the active special tileset, which
+// is one of "levels/towndata/towns.cel", "levels/l1data/l1s.cel" or
+// "levels/l2data/l2s.cel".
+void *level_special_cel;
+
+/* TODO: Remove comment when dflag enum is defined.
+
+// address: 0x5C6910
+//
+// dflag_map contains the dungeon flags of the map.
+dflag dflag_map[112][112];
+
+*/
+
 // address: 0x5C9A10
 //
 // item_num_map contains the item numbers (items array indices) of the map.
@@ -196,6 +212,22 @@ quest_level quest_lvl;
 // level_frame_sizes specifies the size of each frame of the level cel (e.g.
 // "levels/l1data/l1.cel"). Indexed by frame numbers starting at 1.
 int32_t level_frame_sizes[2048];
+
+// address: 0x5CF330
+//
+// set_height specifies the height of the active miniset of the map.
+//
+// PSX ref: 0x8011C0F0
+// PSX def: int setpc_h
+int32_t set_height;
+
+// address: 0x5CF334
+//
+// set_width specifies the width of the active miniset of the map.
+//
+// PSX ref: 0x8011C0EC
+// PSX def: int setpc_w
+int32_t set_width;
 
 // address: 0x5CF338
 //
