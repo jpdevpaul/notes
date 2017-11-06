@@ -28,31 +28,63 @@ bool32_t __fastcall quests_is_active(quest_id quest_num);
 
 // address: 0x451BEA
 //
-// TODO: add documentation.
+// quests_init_the_butcher_area initializes the quest area of The Butcher.
+//
+// PSX ref: 0x8015ED8C
+// PSX def: void DrawButcher__Fv()
+void quests_init_the_butcher_area();
 
 // address: 0x451C11
 //
-// TODO: add documentation.
+// quests_init_the_curse_of_king_leoric_area initializes the quest area of The
+// Curse of King Leoric.
+//
+// PSX ref: 0x8015EDD0
+// PSX def: void DrawSkelKing__Fiii(int q, int x, int y)
+void __fastcall quests_init_the_curse_of_king_leoric_area(quest_id quest_id, int xx, int yy);
 
 // address: 0x451C32
 //
-// TODO: add documentation.
+// quests_init_warlord_of_blood_area initializes the quest area of Warlord of
+// Blood.
+//
+// PSX ref: 0x8015EE64
+// PSX def: void DrawWarLord__Fii(int x, int y)
+void __fastcall quests_init_warlord_of_blood_area(int xx, int yy);
 
 // address: 0x451CC2
 //
-// TODO: add documentation.
+// quests_init_the_chamber_of_bone_area initializes the quest area of The
+// Chamber of Bone.
+//
+// PSX ref: 0x8015EF60
+// PSX def: void DrawSChamber__Fiii(int q, int x, int y)
+void __fastcall quests_init_the_chamber_of_bone_area(quest_id quest_id, int xx, int yy);
 
 // address: 0x451D7C
 //
-// TODO: add documentation.
+// quests_init_odgens_sign_area initializes the quest area of Odgen's Sign.
+//
+// PSX ref: 0x8015F09C
+// PSX def: void DrawLTBanner__Fii(int x, int y)
+void __fastcall quests_init_odgens_sign_area(int xx, int yy);
 
 // address: 0x451E08
 //
-// TODO: add documentation.
+// quests_init_halls_of_the_blind_area initializes the quest area of Halls of
+// the Blind.
+//
+// PSX ref: 0x8015F178
+// PSX def: void DrawBlind__Fii(int x, int y)
+void __fastcall quests_init_halls_of_the_blind_area(int xx, int yy);
 
 // address: 0x451E94
 //
-// TODO: add documentation.
+// quests_init_valor_area initializes the quest area of Valor.
+//
+// PSX ref: 0x8015F254
+// PSX def: void DrawBlood__Fii(int x, int y)
+void __fastcall quests_init_valor_area(int xx, int yy);
 
 // address: 0x451F20
 //
@@ -60,7 +92,7 @@ bool32_t __fastcall quests_is_active(quest_id quest_num);
 //
 // PSX ref: 0x8015F334
 // PSX def: void DRLG_CheckQuests__Fii(int x, int y)
-void __fastcall quests_init_quest_area(int qcol, int qrow);
+void __fastcall quests_init_quest_area(int xx, int yy);
 
 // address: 0x451FB1
 //
