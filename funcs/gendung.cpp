@@ -44,7 +44,11 @@ void __fastcall gendung_make_rect_transparent(int qcol_start, int qrow_start, in
 
 // address: 0x4194D0
 //
-// TODO: add documentation.
+// gendung_rect_transparent makes the given rectangle transparent.
+//
+// PSX ref: 0x8015A0E4
+// PSX def: void DRLG_RectTrans__Fiiii(int x1, int y1, int x2, int y2)
+void __fastcall gendung_rect_transparent(int x_start, int y_start, int x_end, int y_end);
 
 // address: 0x419515
 //
