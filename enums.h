@@ -10,7 +10,7 @@ typedef enum {
 // Item drop rates.
 typedef enum {
 	ITEM_DROP_RATE_NEVER   = 0, // never drops.
-	ITEM_DROP_RATE_REGULAR = 1, // regular drop change.
+	ITEM_DROP_RATE_REGULAR = 1, // regular drop chance.
 	ITEM_DROP_RATE_DOUBLE  = 2, // twice as likely to drop.
 } item_drop_rate;
 

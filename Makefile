@@ -15,4 +15,4 @@ bss:
 .PHONY: all clean funcs rdata data bss
 
 clean:
-	rm -f funcs/*.o rdata/*.o data/*.o bss/*.o
+	rm -f funcs/*.o rdata/*.o data/*.o bss/*.o *.o
