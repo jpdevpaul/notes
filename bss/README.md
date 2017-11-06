@@ -11,7 +11,7 @@ Each global variable in the uninitialized data section has been categorised base
 | [cursor.cpp](cursor.cpp)         | `0x4B8C9C`    | `0x4B8CD7`  | 6% (4/60 bytes)              |
 | [dead.cpp](dead.cpp)             | `0x4B8CD8`    | `0x4BD2FB`  | 100% (17956/17956 bytes)     |
 | [debug.cpp](debug.cpp)           | `0x4BD2FC`    | `0x525513`  | 0% (4/426520 bytes)          |
-| [diablo.cpp](diablo.cpp)         | `0x525514`    | `0x52574F`  | 1% (8/572 bytes)             |
+| [diablo.cpp](diablo.cpp)         | `0x525514`    | `0x52574F`  | 2% (12/572 bytes)             |
 | [doom.cpp](doom.cpp)             | `0x525750`    | `0x525763`  | 0% (0/20 bytes)              |
 | [drlg_l1.cpp](drlg_l1.cpp)       | `0x525764`    | `0x5276C7`  | 100% (8036/8036 bytes)       |
 | [drlg_l2.cpp](drlg_l2.cpp)       | `0x5276C8`    | `0x528377`  | 0% (0/3248 bytes)            |
