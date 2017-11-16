@@ -2,51 +2,116 @@
 
 // address: 0x4161FC
 //
-// TODO: add documentation.
+// j_engine_cpp_init_1 initializes the C++ runtime of engine.cpp.
+void j_engine_cpp_init_1();
 
 // address: 0x416201
 //
-// TODO: add documentation.
+// engine_cpp_init_1 initializes the C++ runtime of engine.cpp.
+void engine_cpp_init_1();
 
 // address: 0x41620C
 //
-// TODO: add documentation.
+// engine_cel_decode_frame_content_into_buf decodes the given CEL frame into the
+// specified destination buffer.
+void __fastcall engine_cel_decode_frame_content_into_buf(uint8_t *dst_buf, uint8_t *frame_content, int frame_content_size, int frame_width);
 
 // address: 0x416274
 //
-// TODO: add documentation.
+// engine_cel_decode_frame decodes the given CEL frame to the specified screen
+// coordinate.
+//
+//    x = screen_x - 64
+//    y = screen_y - 160
+//    frameNum = frame - 1
+//
+// Note, the coordinates specify the bottom left corner (verified in game).
+// Note, this function is only used to decode CEL images without frame headers.
+void __fastcall engine_cel_decode_frame(int screen_x, int screen_y, uint8_t *cel_buf, int frame, int frame_width);
 
 // address: 0x4162B8
 //
-// TODO: add documentation.
+// engine_cel_decode_frame_into_buf decodes the given CEL frame into the
+// specified buffer.
+//
+// Note, this function is only used to decode CEL images without frame headers
+// (pentspn2.cel).
+void __fastcall engine_cel_decode_frame_into_buf(uint8_t *dst_buf, uint8_t *cel_buf, int frame, int frame_width);
 
 // address: 0x4162DE
 //
-// TODO: add documentation.
+// engine_cel_decode_frame_with_header decodes the given CEL frame to the
+// specified screen coordinate.
+//
+//    x = screen_x - 64
+//    y = screen_y - 160
+//    frameNum = frame - 1
+//
+// Note, the coordinates specify the bottom left corner.
+//
+// Note, this function is only used to decode CEL images with frame headers.
+void __fastcall engine_cel_decode_frame_with_header(int screen_x, int screen_y, uint8_t *cel_buf, int frame, int frame_width, int always_0, int direction);
 
 // address: 0x416359
 //
-// TODO: add documentation.
+// engine_cel_decode_frame_with_header_into_buf decodes the given CEL frame into
+// the specified buffer.
+//
+// Note, this function is only used to decode CEL images with frame headers
+// (square.cel).
+void __fastcall engine_cel_decode_frame_with_header_into_buf(uint8_t *dst_buf, uint8_t *cel_buf, int frame, int frame_width, int always_0, int direction);
 
 // address: 0x4163AC
 //
-// TODO: add documentation.
+// engine_cel_decode_frame_content_with_light_into_buf decodes the given CEL
+// frame into the specified destination buffer, adding lighting if applicable.
+void __fastcall engine_cel_decode_frame_content_with_light_into_buf(uint8_t *dst_buf, uint8_t *frame_content, int frame_content_size, int frame_width);
+
+/* TODO: uncomment when figuring out how to specify user defined calling conventions.
 
 // address: 0x416423
 //
-// TODO: add documentation.
+// engine_cel_decode_frame_content_with_light_entry_into_buf decodes the given CEL frame into the specified destination buffer with added lighting.
+void __usercall engine_cel_decode_frame_content_with_light_entry_into_buf(uint8_t chunk_size@<cl>, uint8_t *light_entry@<ebx>, uint8_t *dst_buf@<edi>, uint8_t *p@<esi>);
+
+*/
 
 // address: 0x416488
 //
-// TODO: add documentation.
+// engine_cel_decode_frame_content_with_light_and_transparency_into_buf decodes
+// the given CEL frame into the specified destination buffer with added lighting
+// and transparency.
+void __fastcall engine_cel_decode_frame_content_with_light_and_transparency_into_buf(uint8_t *dst_buf, uint8_t *frame_content, int frame_content_size, int frame_width);
 
 // address: 0x416565
 //
-// TODO: add documentation.
+// engine_cel_decode_frame_with_light decodes the given CEL frame to the
+// specified screen coordinate, adding lighting if applicable.
+//
+//    x = screen_x - 64
+//    y = screen_y - 160
+//    frameNum = frame - 1
+//
+// Note, the coordinates specify the bottom left corner.
+//
+// Note, this function is only used to decode CEL images without frame headers
+// (bigtgold.cel).
+void __fastcall engine_cel_decode_frame_with_light(int screen_x, int screen_y, uint8_t *cel_buf, int frame, int frame_width);
 
 // address: 0x4165BD
 //
-// TODO: add documentation.
+// engine_cel_decode_frame_with_header_and_light decodes the given CEL frame to
+// the specified screen coordinate, adding lighting if applicable.
+//
+//    x = screen_x - 64
+//    y = screen_y - 160
+//    frameNum = frame - 1
+//
+// Note, the coordinates specify the bottom left corner.
+//
+// Note, this function is only used to decode CEL images with frame headers
+// (item drops, objects).
+void __fastcall engine_cel_decode_frame_with_header_and_light(int screen_x, int screen_y, uint8_t *cel_buf, int frame, int frame_width, int always_0, int direction);
 
 // address: 0x41664B
 //
