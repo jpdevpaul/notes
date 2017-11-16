@@ -1,5 +1,14 @@
 #include "types.h"
 
+/* TODO: uncomment when HWND struct has been added.
+
+// address: 0x525518
+//
+// hWndParent is the window handle of the game.
+HWND hWndParent;
+
+*/
+
 // address: 0x525720
 //
 // visible_tile_squares specifies whether tile squares are visible. In the
