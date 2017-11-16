@@ -26,6 +26,7 @@ void __fastcall engine_cel_decode_frame_content_into_buf(uint8_t *dst_buf, uint8
 //    frameNum = frame - 1
 //
 // Note, the coordinates specify the bottom left corner (verified in game).
+//
 // Note, this function is only used to decode CEL images without frame headers.
 void __fastcall engine_cel_decode_frame(int screen_x, int screen_y, uint8_t *cel_buf, int frame, int frame_width);
 
@@ -64,14 +65,15 @@ void __fastcall engine_cel_decode_frame_with_header_into_buf(uint8_t *dst_buf, u
 // address: 0x4163AC
 //
 // engine_cel_decode_frame_content_with_light_into_buf decodes the given CEL
-// frame into the specified destination buffer, adding lighting if applicable.
+// frame into the specified destination buffer with added lighting.
 void __fastcall engine_cel_decode_frame_content_with_light_into_buf(uint8_t *dst_buf, uint8_t *frame_content, int frame_content_size, int frame_width);
 
 /* TODO: uncomment when figuring out how to specify user defined calling conventions.
 
 // address: 0x416423
 //
-// engine_cel_decode_frame_content_with_light_entry_into_buf decodes the given CEL frame into the specified destination buffer with added lighting.
+// engine_cel_decode_frame_content_with_light_entry_into_buf decodes the given
+// CEL frame into the specified destination buffer with added lighting.
 void __usercall engine_cel_decode_frame_content_with_light_entry_into_buf(uint8_t chunk_size@<cl>, uint8_t *light_entry@<ebx>, uint8_t *dst_buf@<edi>, uint8_t *p@<esi>);
 
 */
@@ -115,59 +117,167 @@ void __fastcall engine_cel_decode_frame_with_header_and_light(int screen_x, int 
 
 // address: 0x41664B
 //
-// TODO: add documentation.
+// engine_cel_decode_frame_with_header_light_and_transparency_into_buf decodes
+// the given CEL frame into the specified buffer with added lighting and
+// transparency.
+//
+// Note, this function is only used to decode CEL images with frame headers
+// (objcurs.cel, level special).
+void __fastcall engine_cel_decode_frame_with_header_light_and_transparency_into_buf(uint8_t *dst_buf, uint8_t *cel_buf, int frame, int frame_width, int always_0, int direction);
 
 // address: 0x4166BF
 //
-// TODO: add documentation.
+// engine_cel_decode_frame_with_header_and_light_not_equipable decodes the given
+// CEL frame to the specified screen coordinate with added lighting.
+//
+//    x = screen_x - 64
+//    y = screen_y - 160
+//    frameNum = frame - 1
+//
+// Note, the coordinates specify the bottom left corner.
+//
+// Note, this function is only used to decode CEL images with frame headers
+// (objcurs.cel).
+void __fastcall engine_cel_decode_frame_with_header_and_light_not_equipable(int screen_x, int screen_y, uint8_t *cel_buf, int frame, int frame_width, int always_0, int direction, char always_1);
 
 // address: 0x4167DB
 //
-// TODO: add documentation.
+// engine_cel_decode_frame_content_into_buf2 decodes the given CEL frame into
+// the specified destination buffer.
+void __fastcall engine_cel_decode_frame_content_into_buf2(uint8_t *dst_buf, uint8_t *frame_content, int frame_content_size, int frame_width);
 
 // address: 0x41685A
 //
-// TODO: add documentation.
+// engine_cel_decode_frame_with_header2 decodes the given CEL frame to the
+// specified screen coordinate.
+//
+//    x = screen_x - 64
+//    y = screen_y - 160
+//    frameNum = frame - 1
+//
+// Note, the coordinates specify the bottom left corner.
+//
+// Note, this function is only used to decode CEL images with frame headers
+// (objects, objcurs.cel, item drops, towners).
+//
+// Note, D1DrawCursorTown (from RE Notes)
+void __fastcall engine_cel_decode_frame_with_header2(int screen_x, int screen_y, uint8_t *cel_buf, int frame, int frame_width, int a6, int direction);
 
 // address: 0x4168D5
 //
-// TODO: add documentation.
+// engine_cel_decode_frame_with_header_into_buf decodes the given CEL frame into
+// the specified buffer.
+//
+// Note, this function is only used to decode CEL images with frame headers
+// (square.cel).
+void __fastcall engine_cel_decode_frame_with_header_into_buf2(uint8_t *dst_buf, uint8_t *cel_buf, int frame, int frame_width, int a5, int direction);
 
 // address: 0x41692A
 //
-// TODO: add documentation.
+// engine_cel_decode_frame_content_with_light_into_buf2 decodes the given CEL
+// frame into the specified destination buffer with added lighting.
+void __fastcall engine_cel_decode_frame_content_with_light_into_buf2(uint8_t *dst_buf, uint8_t *frame_content, int frame_content_size, int frame_width);
+
+/* TODO: uncomment after figuring out how to handle user defined calling conventions.
 
 // address: 0x4169BC
 //
-// TODO: add documentation.
+// engine_cel_decode_frame_content_with_light_entry_into_buf2 decodes the given
+// CEL frame into the specified destination buffer with added lighting.
+void __usercall engine_cel_decode_frame_content_with_light_entry_into_buf2(uint8_t chunk_size@<cl>, uint8_t *light_entry@<ebx>, uint8_t *dst_buf@<edi>, uint8_t *p@<esi>);
+
+*/
 
 // address: 0x416A21
 //
-// TODO: add documentation.
+// engine_cel_decode_frame_content_with_light_and_transparency_into_buf2 decodes
+// the given CEL frame into the specified destination buffer with added lighting
+// and transparency.
+void __fastcall engine_cel_decode_frame_content_with_light_and_transparency_into_buf2(uint8_t *dst_buf, uint8_t *frame_content, int frame_content_size, int frame_width);
 
 // address: 0x416B19
 //
-// TODO: add documentation.
+// engine_cel_decode_frame_with_header_and_light2 decodes the given CEL frame to
+// the specified screen coordinate, adding lighting if applicable.
+//
+//    x = screen_x - 64
+//    y = screen_y - 160
+//    frameNum = frame - 1
+//
+// Note, the coordinates specify the bottom left corner.
+//
+// Note, this function is only used to decode CEL images with frame headers
+// (item drops, objects).
+//
+// Note, D1DrawObjectBaseDungeon (from RE Notes).
+void __fastcall engine_cel_decode_frame_with_header_and_light2(int screen_x, int screen_y, uint8_t *cel_buf, int frame, int frame_width, int a6, int direction);
 
 // address: 0x416BA9
 //
-// TODO: add documentation.
+// engine_cel_decode_frame_with_header_light_and_transparency_into_buf2 decodes
+// the given CEL frame into the specified buffer with added lighting and
+// transparency.
+//
+// Note, this function is only used to decode CEL images with frame headers
+// (level special).
+//
+// Note, D1DrawArchTile (from RE Notes).
+void __fastcall engine_cel_decode_frame_with_header_light_and_transparency_into_buf2(uint8_t *dst_buf, uint8_t *cel_buf, int frame, int frame_width, int a5, int direction);
 
 // address: 0x416C1B
 //
-// TODO: add documentation.
+// engine_cel_decode_frame_with_header_and_light_not_equipable2 decodes the
+// given CEL frame to the specified screen coordinate with added lighting.
+//
+//    x = screen_x - 64
+//    y = screen_y - 160
+//    frameNum = frame - 1
+//
+// Note, the coordinates specify the bottom left corner.
+//
+// Note, this function is only used to decode CEL images with frame headers (objcurs.cel).
+void __fastcall engine_cel_decode_frame_with_header_and_light_not_equipable2(int screen_x, int screen_y, uint8_t *cel_buf, int frame, int frame_width, int always_0, int direction, char always_1);
 
 // address: 0x416D3C
 //
-// TODO: add documentation.
+// engine_cel_decode_frame_into_rect_of_buf decodes the given CEL frame into a
+// rectangle of the specified buffer.
+//
+// Note, this function is only used to decode CEL images without frame headers
+// (control panel and orbs).
+void __fastcall engine_cel_decode_frame_into_rect_of_buf(uint8_t *dst_buf, int always_0, int dst_height, int dst_width, uint8_t *cel_buf, int frame, int frame_width);
 
 // address: 0x416DC6
 //
-// TODO: add documentation.
+// engine_cel_decode_frame_with_header_and_colour decodes the given CEL frame to
+// the specified screen coordinate and with the specified colour.
+//
+//    x = screen_x - 64
+//    y = screen_y - 160
+//    frameNum = frame - 1
+//
+// Note, the coordinates specify the bottom left corner.
+//
+// Note, this function is only used to decode CEL images with frame headers
+// (objcurs.cel, item drops, objects, towners).
+void __fastcall engine_cel_decode_frame_with_colour(uint8_t colour, int screen_x, int screen_y, uint8_t *cel_buf, int frame, int frame_width, int a7, int direction);
 
 // address: 0x416EC0
 //
-// TODO: add documentation.
+// engine_cel_decode_frame_with_header_and_colour_hilight decodes the given CEL
+// frame to the specified screen coordinate with added colour highlight.
+//
+//    x = screen_x - 64
+//    y = screen_y - 160
+//    frameNum = frame - 1
+//
+// Note, the coordinates specify the bottom left corner.
+//
+// Note, this function is only used to decode CEL images with frame headers
+// (objcurs.cel, item drops, objects, towners).
+//
+// NOTE: D1DrawObjectHilight (from RE Notes).
+void __fastcall engine_cel_decode_frame_with_header_and_colour_highlight(uint8_t colour, int screen_x, int screen_y, uint8_t *cel_buf, int frame, int frame_width, int a7, int direction);
 
 // address: 0x416FEF
 //
