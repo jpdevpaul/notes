@@ -50,7 +50,8 @@ void __fastcall engine_cel_decode_frame_into_buf(uint8_t *dst_buf, uint8_t *cel_
 //
 // Note, the coordinates specify the bottom left corner.
 //
-// Note, this function is only used to decode CEL images with frame headers.
+// Note, this function is only used to decode CEL images with frame headers
+// (objects, item drops, objcurs.cel, towners).
 void __fastcall engine_cel_decode_frame_with_header(int screen_x, int screen_y, uint8_t *cel_buf, int frame, int frame_width, int always_0, int direction);
 
 // address: 0x416359
@@ -138,7 +139,7 @@ void __fastcall engine_cel_decode_frame_with_header_light_and_transparency_into_
 //
 // Note, this function is only used to decode CEL images with frame headers
 // (objcurs.cel).
-void __fastcall engine_cel_decode_frame_with_header_and_light_not_equipable(int screen_x, int screen_y, uint8_t *cel_buf, int frame, int frame_width, int always_0, int direction, char always_1);
+void __fastcall engine_cel_decode_frame_with_header_and_light_not_equipable(int screen_x, int screen_y, uint8_t *cel_buf, int frame, int frame_width, int always_0, int direction, int8_t always_1);
 
 // address: 0x4167DB
 //
@@ -236,7 +237,7 @@ void __fastcall engine_cel_decode_frame_with_header_light_and_transparency_into_
 // Note, the coordinates specify the bottom left corner.
 //
 // Note, this function is only used to decode CEL images with frame headers (objcurs.cel).
-void __fastcall engine_cel_decode_frame_with_header_and_light_not_equipable2(int screen_x, int screen_y, uint8_t *cel_buf, int frame, int frame_width, int always_0, int direction, char always_1);
+void __fastcall engine_cel_decode_frame_with_header_and_light_not_equipable2(int screen_x, int screen_y, uint8_t *cel_buf, int frame, int frame_width, int always_0, int direction, int8_t always_1);
 
 // address: 0x416D3C
 //
