@@ -23,21 +23,37 @@ typedef struct {
 // References:
 //    * https://github.com/sanctuary/notes/blob/master/enums.h#speech_id
 typedef struct {
+	// offset 0000 (4 bytes)
 	speech_id the_magic_rock;
+	// offset 0004 (4 bytes)
 	speech_id black_mushroom;
+	// offset 0008 (4 bytes)
 	speech_id gharbad_the_weak;
+	// offset 000C (4 bytes)
 	speech_id zhar_the_mad;
+	// offset 0010 (4 bytes)
 	speech_id lachdanan;
+	// offset 0014 (4 bytes)
 	speech_id diablo;
+	// offset 0018 (4 bytes)
 	speech_id the_butcher;
+	// offset 001C (4 bytes)
 	speech_id ogdens_sign;
+	// offset 0020 (4 bytes)
 	speech_id halls_of_the_blind;
+	// offset 0024 (4 bytes)
 	speech_id valor;
+	// offset 0028 (4 bytes)
 	speech_id anvil_of_fury;
+	// offset 002C (4 bytes)
 	speech_id warlord_of_blood;
+	// offset 0030 (4 bytes)
 	speech_id the_curse_of_king_leoric;
+	// offset 0034 (4 bytes)
 	speech_id poisoned_water_supply;
+	// offset 0038 (4 bytes)
 	speech_id the_chamber_of_bone;
+	// offset 003C (4 bytes)
 	speech_id archbishop_lazarus;
 } GossipData;
 
@@ -195,8 +211,7 @@ typedef struct { // size = 0x170
 
 // ItemData describes possible basic state a of game item (i.e. state before possibly applying
 // prefix, suffix, unique, effects or spells for books or staves)
-typedef struct // size = 0x4C
-{
+typedef struct { // size = 0x4C
 	// offset 0000 (4 bytes)
 	item_drop_rate drop_rate;
 	// offset 0004 (1 byte)
@@ -266,8 +281,7 @@ typedef struct {
 // References:
 // * https://github.com/sanctuary/notes/blob/master/rdata/items.cpp#item_prefix_data
 // * https://github.com/sanctuary/notes/blob/master/rdata/items.cpp#item_suffix_data
-typedef struct // size = 0x30
-{
+typedef struct { // size = 0x30
 	// offset 0000 (4 bytes)
 	const char *name;
 	// offset 0004 (12 bytes)
@@ -294,6 +308,28 @@ typedef struct // size = 0x30
 	// offset 002C (4 bytes)
 	int cost_multiplier;
 } ItemAffixData;
+
+// MissileGraphicData specifies the different missile animation graphics.
+typedef struct { // size = 0xEC
+	// offset 0000 (1 bytes)
+	missile_graphic_id missile_graphic_id;
+	// offset 0001 (1 bytes)
+	int8_t nanims; // number of animations.
+	// offset 0004 (4 bytes)
+	char *cl2_name;
+	// offset 0008 (4 bytes)
+	uint32_t flags;
+	// offset 000C (64 bytes)
+	void *cl2_from_orientation[16];
+	// offset 004C (64 bytes)
+	void *anim_speed_from_orientation[16];
+	// offset 005C (64 bytes)
+	void *last_frame_from_orientation[16];
+	// offset 006C (64 bytes)
+	void *frame_width_from_orientation[16];
+	// offset 00AC (64 bytes)
+	void *x_offset_from_orientation[16];
+} MissileGraphicData;
 
 // A Point is an X, Y coordinate pair. The axes increase right and down.
 typedef struct {

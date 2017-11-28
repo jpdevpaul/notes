@@ -12,8 +12,6 @@ MissileData missile_data[68];
 
 */
 
-/* TODO: uncomment when the MissileGraphicData struct has been added to structs.h.
-
 // address: 0x4950B8
 //
 // missile_graphic_data contains the data related to each missile graphic ID.
@@ -21,8 +19,6 @@ MissileData missile_data[68];
 // References:
 //    * https://github.com/sanctuary/notes/blob/master/enums.h#missile_graphic_id
 MissileGraphicData missile_graphic_data[47];
-
-*/
 
 // address: 0x497C0C
 //
