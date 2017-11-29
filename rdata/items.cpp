@@ -1,8 +1,5 @@
 #include "types.h"
 
-/* TODO: uncomment when ItemAffixData and UniqueItemData structs has been added
-   to structs.h. ItemAffixData will be added in https://github.com/sanctuary/notes/pull/8
-
 // address: 0x47B0A8
 //
 // item_prefix_data contains the data related to each item prefix.
@@ -12,6 +9,8 @@ ItemAffixData item_prefix_data[84];
 //
 // item_suffix_data contains the data related to each item suffix.
 ItemAffixData item_suffix_data[96];
+
+/* TODO: uncomment when UniqueItemData structs has been added to structs.h.
 
 // address: 0x47D268
 //
