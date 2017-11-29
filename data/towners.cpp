@@ -50,6 +50,9 @@ GossipData gossip_data[10];
 //
 // cow_active_sfx_id specifies the active sound effect ID for interacting with
 // cows.
+//
+// PSX ref: 0x8011B814
+// PSX def: unsigned long CowPlaying
 sfx_id cow_active_sfx_id;
 
 // address: 0x4B2DC4

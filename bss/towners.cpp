@@ -10,8 +10,8 @@ bool32_t has_greeted;
 // cow_active_sfx_index specifies the active index (between 0 and 2) into
 // cow_sfx_id_from_class.
 //
-// References:
-//    * https://github.com/sanctuary/notes/blob/master/rdata/towners.cpp#cow_sfx_id_from_class
+// PSX ref: 0x8011C7C0
+// PSX def: int sgnCowMsg
 int cow_active_sfx_index;
 
 // address: 0x6AAC20
@@ -23,6 +23,9 @@ int ntowners;
 //
 // ncow_clicks specifies the number of consequtive times the player has
 // interacted with a cow.
+//
+// PSX ref: 0x8011C7BC
+// PSX def: unsigned long sgdwCowClicks
 int ncow_clicks;
 
 // address: 0x6AAC28
