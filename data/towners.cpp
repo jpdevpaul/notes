@@ -4,23 +4,32 @@
 //
 // towner_anim_seq specifies the animation frame sequence of a given NPC.
 //
-// References:
-//    * https://github.com/sanctuary/notes/blob/master/enums.h#towner_anim_seq_id
+// PSX ref: 0x800CF7E4
+// PSX def: char AnimOrder[6][148]
 int8_t towner_anim_seq[148][6];
 
 // address: 0x4B2A9C
 //
 // cow_start_col specifies the start columns of the cows in Tristram.
+//
+// PSX ref: 0x800CFB5C
+// PSX def: int TownCowX[3]
 int cow_start_col[3];
 
 // address: 0x4B2AA8
 //
 // cow_start_row specifies the start rows of the cows in Tristram.
+//
+// PSX ref: 0x800CFB68
+// PSX def: int TownCowY[3]
 int cow_start_row[3];
 
 // address: 0x4B2AB4
 //
 // cow_start_direction specifies the start directions of the cows in Tristram.
+//
+// PSX ref: 0x800CFB74
+// PSX def: int TownCowDir[3]
 direction cow_start_direction[3];
 
 // address: 0x4B2AC0
@@ -28,6 +37,9 @@ direction cow_start_direction[3];
 // cow_col_delta_from_direction maps from direction to column delta, which is
 // used when placing cows in Tristram. A single cow may require space of up to
 // three tiles when being placed on the map.
+//
+// PSX ref: 0x800CFB80
+// PSX def: int cowoffx[8]
 int cow_col_delta_from_direction[8];
 
 // address: 0x4B2AE0
@@ -35,15 +47,17 @@ int cow_col_delta_from_direction[8];
 // cow_row_delta_from_direction maps from direction to row delta, which is used
 // when placing cows in Tristram. A single cow may require space of up to three
 // tiles when being placed on the map.
+//
+// PSX ref: 0x800CFBA0
+// PSX def: int cowoffy[8]
 int cow_row_delta_from_direction[8];
 
 // address: 0x4B2B00
 //
 // gossip_data contains the data related to quest gossip for each towner ID.
 //
-// References:
-//    * https://github.com/sanctuary/notes/blob/master/enums.h#towner_id
-//    * https://github.com/sanctuary/notes/blob/master/structs.h#gossipdata
+// PSX ref: 0x800CFBC0
+// PSX def: int Qtalklist[11][16]
 GossipData gossip_data[10];
 
 // address: 0x4B2DC0
