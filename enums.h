@@ -1,3 +1,20 @@
+// Cursor IDs; frame_num+1 of objcurs.cel.
+typedef enum {
+	CURSOR_ID_NONE           = 0,
+	CURSOR_ID_HAND           = 1,
+	CURSOR_ID_IDENTIFY       = 2,
+	CURSOR_ID_ITEM_REPAIR    = 3,
+	CURSOR_ID_STAFF_RECHARGE = 4,
+	CURSOR_ID_TRAP_DISARM    = 5,
+	CURSOR_ID_OIL            = 6,
+	CURSOR_ID_TELEKINESIS    = 7,
+	CURSOR_ID_RESURRECT      = 8,
+	CURSOR_ID_TELEPORT       = 9,
+	CURSOR_ID_HEAL_OTHER     = 10,
+	CURSOR_ID_HOURGLASS      = 11,
+	CURSOR_ID_FIRST_ITEM     = 12,
+} cursor_id;
+
 // Damage types.
 typedef enum {
 	DAMAGE_TYPE_NONE      = 0,
