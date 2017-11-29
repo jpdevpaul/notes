@@ -10,14 +10,10 @@ ItemAffixData item_prefix_data[84];
 // item_suffix_data contains the data related to each item suffix.
 ItemAffixData item_suffix_data[96];
 
-/* TODO: uncomment when UniqueItemData structs has been added to structs.h.
-
 // address: 0x47D268
 //
 // unique_item_data contains the data related to each unique item ID.
 //
-// References:
-//    * https://github.com/sanctuary/notes/blob/master/enums.h#unique_item_id
+// PSX ref: 0x80114364
+// PSX def: UItemStruct UniqueItemList[91]
 UniqueItemData unique_item_data[91];
-
-*/

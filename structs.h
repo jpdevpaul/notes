@@ -431,3 +431,19 @@ typedef struct {
 	// Dungeon piece ID at the bottom of the tile.
 	uint16_t bottom;
 } Tile;
+
+// UniqueItemData describes the properties and effects of a unique item.
+typedef struct { // size = 0x54
+	// offset 0000 (4 bytes)
+	char *name;
+	// offset 0004 (1 bytes)
+	unique_base_item  unique_base_item;
+	// offset 0005 (1 bytes)
+	int8_t quality_lvl;
+	// offset 0006 (1 bytes)
+	int8_t neffects;
+	// offset 0008 (4 bytes)
+	int32_t gold_price;
+	// offset 000C (72 bytes)
+	ItemEffect effects[6];
+} UniqueItemData;
