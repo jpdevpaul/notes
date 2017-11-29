@@ -48,6 +48,9 @@ void *cow_cel;
 // address: 0x6AAC38
 //
 // towners contains the NPCs in Tristram of the current game.
+//
+// PSX ref: 0x800CFE80
+// PSX def: TownerStruct towner[16]
 Towner towners[16];
 
 */

@@ -6,8 +6,8 @@
 //
 // sfx_data contains the data related to each sound effect ID.
 //
-// References:
-//    * https://github.com/sanctuary/notes/blob/master/enums.h#sfx_id
+// PSX ref: 0x800D0AC0
+// PSX def: TSFX sgSFX[992]
 SfxData sfx_data[858];
 
 */
