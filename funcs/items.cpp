@@ -52,11 +52,19 @@ void items_load_drop_graphics();
 
 // address: 0x41FD98
 //
-// TODO: add documentation.
+// items_create_from_item_id creates a new item based on the given item ID.
+//
+// PSX ref: 0x8003FBC8
+// PSX def: void SetPlrHandItem__FP10ItemStructi(struct ItemStruct *h, int idata)
+void __fastcall items_create_from_item_id(Item *item, item_id item_id);
 
 // address: 0x41FE98
 //
-// TODO: add documentation.
+// items_init_item_seed generates a unique seed for the item.
+//
+// PSX ref: 0x8003FCE0
+// PSX def: void GetPlrHandSeed__FP10ItemStruct(struct ItemStruct *h)
+void __fastcall items_init_item_seed(Item *item);
 
 // address: 0x41FEA4
 //
@@ -74,7 +82,12 @@ void __fastcall items_gen_seed(int player_num, int32_t *item_seed);
 
 // address: 0x41FF4E
 //
-// TODO: add documentation.
+// items_create_player_starting_items creates the starting items for the given
+// player.
+//
+// PSX ref: 0x8003FEAC
+// PSX def: void CreatePlrItems__Fi(int p)
+void __fastcall items_create_player_starting_items(int player_num);
 
 // address: 0x4200F8
 //

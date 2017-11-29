@@ -17,13 +17,29 @@ void diablo_cleanup_level();
 //
 // TODO: add documentation.
 
+/* TODO: uncomment once interface_mode enum has been defined.
+
 // address: 0x4088E2
 //
-// TODO: add documentation.
+// diablo_run_game_loop runs the game loop, dispatching events, and processing game state changes.
+//
+// PSX ref: 0x8003840C
+// PSX def: void run_game_loop__FUi(unsigned int uMsg)
+void __fastcall diablo_run_game_loop(interface_mode interface_mode);
+
+*/
+
+/* TODO: uncomment once interface_mode enum has been defined.
 
 // address: 0x408A8C
 //
-// TODO: add documentation.
+// diablo_init_game initializes the resources used for the game.
+//
+// PSX ref: 0x80037FE4
+// PSX def: void start_game__FUi(unsigned int uMsg)
+void __fastcall diablo_init_game(interface_mode interface_mode);
+
+*/
 
 // address: 0x408ADB
 //

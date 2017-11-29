@@ -369,7 +369,11 @@ void player_process();
 
 // address: 0x450AA0
 //
-// TODO: add documentation.
+// player_init_dungeon_msgs initializes the player dungeon messages game state.
+//
+// PSX ref: 0x80067124
+// PSX def: void InitDungMsgs__Fi(int pnum)
+void __fastcall player_init_dungeon_msgs(int player_num);
 
 // address: 0x450AC4
 //

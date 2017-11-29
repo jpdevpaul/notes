@@ -1,6 +1,10 @@
 // address: 0x450FFE
 //
-// TODO: add documentation.
+// portal_init initializes the portals game state.
+//
+// PSX ref: 0x8015E77C
+// PSX def: void InitPortals__Fv()
+void portal_init();
 
 // address: 0x451024
 //

@@ -110,4 +110,8 @@ void gendung_mark_set_piece();
 
 // address: 0x419E71
 //
-// TODO: add documentation.
+// gendung_init_levels initializes the dungeon levels game state.
+//
+// PSX ref: 0x8015BBC8
+// PSX def: void InitLevels__Fv()
+void gendung_init_levels();

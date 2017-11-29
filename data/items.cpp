@@ -1284,18 +1284,13 @@ const char str_48F5F8[6] = {};
 // "Tin"
 const char str_48F600[4] = {};
 
-/* TODO: uncomment when the ItemData struct has been added to structs.h.
-   ItemData will be added in https://github.com/sanctuary/notes/pull/8
-
 // address: 0x48F608
 //
 // item_data contains the data related to each item ID.
 //
-// References:
-//    * https://github.com/sanctuary/notes/blob/master/enums.h#item_id
+// PSX ref: 0x801113A4
+// PSX def: ItemDataStruct AllItemsList[157]
 ItemData item_data[157];
-
-*/
 
 // address: 0x4924A4
 //

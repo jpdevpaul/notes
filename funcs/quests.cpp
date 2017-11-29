@@ -2,7 +2,11 @@
 
 // address: 0x45138E
 //
-// TODO: add documentation.
+// quests_init initializes the quests game state.
+//
+// PSX ref: 0x8015E7DC
+// PSX def: void InitQuests__Fv()
+void quests_init();
 
 // address: 0x45155C
 //

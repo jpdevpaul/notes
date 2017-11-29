@@ -1,3 +1,5 @@
+#include "types.h"
+
 // address: 0x43BBA4
 //
 // TODO: add documentation.
@@ -88,7 +90,11 @@
 
 // address: 0x43C24F
 //
-// TODO: add documentation.
+// msg_is_portal_inactive reports whether the given portal is active.
+//
+// PSX ref: 0x8004F2F0
+// PSX def: unsigned char delta_portal_inited__Fi(int i)
+bool32_t __fastcall msg_is_portal_inactive(int portal_num);
 
 // address: 0x43C25D
 //
