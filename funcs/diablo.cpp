@@ -2,16 +2,21 @@
 
 // address: 0x4087B1
 //
-// TODO: add documentation.
+// j_diablo_cpp_init_1 initializes the C++ runtime of diablo.cpp.
+void j_diablo_cpp_init();
 
 // address: 0x4087B6
 //
-// TODO: add documentation.
+// diablo_cpp_init_1 initializes the C++ runtime of diablo.cpp.
+void diablo_cpp_init();
 
 // address: 0x4087C1
 //
-// diablo_cleanup_level releases the resources of the current level.
-void diablo_cleanup_level();
+// diablo_cleanup_current_level releases the resources of the current level.
+//
+// PSX ref: 0x80037FAC
+// PSX def: void FreeGameMem__Fv()
+void diablo_cleanup_current_level();
 
 // address: 0x408838
 //
@@ -43,11 +48,16 @@ void __fastcall diablo_init_game(interface_mode interface_mode);
 
 // address: 0x408ADB
 //
-// TODO: add documentation.
+// diablo_cleanup releases the resoures used by the game.
+//
+// PSX ref: 0x800380D4
+// PSX def: void free_game__Fv()
+void diablo_cleanup();
 
 // address: 0x408B1E
 //
-// TODO: add documentation.
+// diablo_get_not_running reports whether the game is not running already.
+bool32_t diablo_get_not_running();
 
 // address: 0x408B4A
 //
@@ -147,11 +157,20 @@ void diablo_load_level_graphics();
 
 // address: 0x40A4E1
 //
-// TODO: add documentation.
+// diablo_create_level creates the level, either Tristram or a random dungeon
+// based on the dungeon type and level entry.
+//
+// PSX ref: 0x80038A98
+// PSX def: void CreateLevel__Fi(int lvldir)
+void __fastcall diablo_create_level(int entry);
 
 // address: 0x40A5A4
 //
-// TODO: add documentation.
+// diablo_load_game_level loads the game level.
+//
+// PSX ref: 0x80039270
+// PSX def: void LoadGameLevel__FUci(unsigned char firstflag, int lvldir)
+void __fastcall diablo_load_game_level(bool32_t from_save, int entry);
 
 // address: 0x40AAE3
 //

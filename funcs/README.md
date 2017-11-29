@@ -13,7 +13,7 @@ Each function has been categorised based on their original source file, as summa
 | [cursor.cpp](cursor.cpp)         | `0x40740A`    | `0x4084A5`  | 100% (9/9 functions)     |
 | [dead.cpp](dead.cpp)             | `0x4084A6`    | `0x4086F3`  | 0% (0/3 functions)       |
 | [debug.cpp](debug.cpp)           | `0x4086F4`    | `0x4087B0`  | 66% (2/3 functions)      |
-| [diablo.cpp](diablo.cpp)         | `0x4087B1`    | `0x40ACAC`  | 25% (9/35 functions)     |
+| [diablo.cpp](diablo.cpp)         | `0x4087B1`    | `0x40ACAC`  | 42% (15/35 functions)    |
 | [doom.cpp](doom.cpp)             | `0x40ACAD`    | `0x40ADD5`  | 14% (1/7 functions)      |
 | [drlg_l1.cpp](drlg_l1.cpp)       | `0x40ADD6`    | `0x40D356`  | 100% (38/38 functions)   |
 | [drlg_l2.cpp](drlg_l2.cpp)       | `0x40D357`    | `0x40FF80`  | 0% (0/35 functions)      |
@@ -67,7 +67,7 @@ Each function has been categorised based on their original source file, as summa
 | [themes.cpp](themes.cpp)         | `0x45C870`    | `0x45E08B`  | 0% (0/31 functions)      |
 | [tmsg.cpp](tmsg.cpp)             | `0x45E08C`    | `0x45E150`  | 33% (1/3 functions)      |
 | [town.cpp](town.cpp)             | `0x45E151`    | `0x46019A`  | 15% (3/19 functions)     |
-| [towners.cpp](towners.cpp)       | `0x46019B`    | `0x4618A4`  | 90% (30/33 functions)    |
+| [towners.cpp](towners.cpp)       | `0x46019B`    | `0x4618A4`  | 100% (33/33 functions)   |
 | [track.cpp](track.cpp)           | `0x4618A5`    | `0x4619A6`  | 0% (0/5 functions)       |
 | [trigs.cpp](trigs.cpp)           | `0x4619A7`    | `0x462C6C`  | 4% (1/21 functions)      |
 | [wave.cpp](wave.cpp)             | `0x462C6D`    | `0x46305F`  | 0% (0/18 functions)      |
