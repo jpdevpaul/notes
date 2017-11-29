@@ -252,7 +252,11 @@
 
 // address: 0x44EAC6
 //
-// TODO: add documentation.
+// player_do_spell initiates a spell action for the given player.
+//
+// PSX ref: 0x80063F54
+// PSX def: int PM_DoSpell__FP12PlayerStruct(struct PlayerStruct *ptrplr)
+int __fastcall player_do_spell(int player_num);
 
 // address: 0x44EC06
 //
@@ -280,7 +284,12 @@
 
 // address: 0x44FB32
 //
-// TODO: add documentation.
+// player_process processes any game state changes of the player, since the last
+// game tick.
+//
+// PSX ref: 0x80065168
+// PSX def: void ProcessPlayers__Fv()
+void player_process();
 
 // address: 0x44FD31
 //

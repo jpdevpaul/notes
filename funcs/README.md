@@ -13,7 +13,7 @@ Each function has been categorised based on their original source file, as summa
 | [cursor.cpp](cursor.cpp)         | `0x40740A`    | `0x4084A5`  | 22% (2/9 functions)      |
 | [dead.cpp](dead.cpp)             | `0x4084A6`    | `0x4086F3`  | 0% (0/3 functions)       |
 | [debug.cpp](debug.cpp)           | `0x4086F4`    | `0x4087B0`  | 66% (2/3 functions)      |
-| [diablo.cpp](diablo.cpp)         | `0x4087B1`    | `0x40ACAC`  | 11% (4/35 functions)     |
+| [diablo.cpp](diablo.cpp)         | `0x4087B1`    | `0x40ACAC`  | 20% (7/35 functions)     |
 | [doom.cpp](doom.cpp)             | `0x40ACAD`    | `0x40ADD5`  | 14% (1/7 functions)      |
 | [drlg_l1.cpp](drlg_l1.cpp)       | `0x40ADD6`    | `0x40D356`  | 100% (38/38 functions)   |
 | [drlg_l2.cpp](drlg_l2.cpp)       | `0x40D357`    | `0x40FF80`  | 0% (0/35 functions)      |
@@ -52,7 +52,7 @@ Each function has been categorised based on their original source file, as summa
 | [palette.cpp](palette.cpp)       | `0x448DF5`    | `0x4493D3`  | 0% (0/22 functions)      |
 | [path.cpp](path.cpp)             | `0x4493D4`    | `0x4498EB`  | 0% (0/14 functions)      |
 | [pfile.cpp](pfile.cpp)           | `0x4498EC`    | `0x44A8E5`  | 21% (8/38 functions)     |
-| [player.cpp](player.cpp)         | `0x44A8E6`    | `0x450D32`  | 0% (0/92 functions)      |
+| [player.cpp](player.cpp)         | `0x44A8E6`    | `0x450D32`  | 2% (2/92 functions)      |
 | [plrmsg.cpp](plrmsg.cpp)         | `0x450D33`    | `0x450FFD`  | 12% (1/8 functions)      |
 | [portal.cpp](portal.cpp)         | `0x450FFE`    | `0x45138D`  | 0% (0/13 functions)      |
 | [quests.cpp](quests.cpp)         | `0x45138E`    | `0x452830`  | 40% (10/25 functions)    |
@@ -61,7 +61,7 @@ Each function has been categorised based on their original source file, as summa
 | [setmaps.cpp](setmaps.cpp)       | `0x456625`    | `0x456A15`  | 0% (0/6 functions)       |
 | [sha1.cpp](sha1.cpp)             | `0x456A16`    | `0x456CBA`  | 100% (6/6 functions)     |
 | [sound.cpp](sound.cpp)           | `0x456CBB`    | `0x45744D`  | 18% (4/22 functions)     |
-| [spells.cpp](spells.cpp)         | `0x45744E`    | `0x457A00`  | 0% (0/7 functions)       |
+| [spells.cpp](spells.cpp)         | `0x45744E`    | `0x457A00`  | 42% (3/7 functions)      |
 | [stores.cpp](stores.cpp)         | `0x457A01`    | `0x45C198`  | 32% (31/95 functions)    |
 | [sync.cpp](sync.cpp)             | `0x45C199`    | `0x45C86F`  | 0% (0/9 functions)       |
 | [themes.cpp](themes.cpp)         | `0x45C870`    | `0x45E08B`  | 0% (0/31 functions)      |

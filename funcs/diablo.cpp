@@ -139,15 +139,28 @@ void diablo_load_level_graphics();
 
 // address: 0x40AAE3
 //
-// TODO: add documentation.
+// diablo_game_loop runs the game loop.
+//
+// PSX ref: 0x80039E58
+// PSX def: void game_loop__FUc(unsigned char bStartup)
+void __fastcall diablo_game_loop(bool32_t startup);
 
 // address: 0x40AB33
 //
-// TODO: add documentation.
+// diablo_process_game_logic processes any game state changes, since the last
+// game tick.
+//
+// PSX ref: 0x80039BC8
+// PSX def: void game_logic__Fv()
+void diablo_process_game_logic();
 
 // address: 0x40ABE7
 //
-// TODO: add documentation.
+// diablo_set_timeout_cursor sets the cursor to an hourglass on network timeout.
+//
+// PSX ref: 0x80039DB0
+// PSX def: void timeout_cursor__FUc(unsigned char bTimeout)
+void __fastcall diablo_set_timeout_cursor(bool32_t timeout);
 
 // address: 0x40AC6B
 //

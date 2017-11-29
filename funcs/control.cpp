@@ -15,6 +15,9 @@
 // address: 0x403A8E
 //
 // control_draw_speedbook renders the speedbook on screen.
+//
+// PSX ref: 0x800366D8
+// PSX def: void DrawSpellBook__Fb(bool DrawBg)
 void control_draw_speedbook();
 
 // address: 0x403F69
