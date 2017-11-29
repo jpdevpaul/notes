@@ -149,12 +149,18 @@ void __fastcall towners_stop_interaction(int towner_num);
 //
 // towners_process_logic_griswold processs the logic of Griswold each game tick;
 // stops interaction with distant players.
+//
+// PSX ref: 0x8003B1F0
+// PSX def: void TownBlackSmith__Fv()
 void towners_process_logic_griswold();
 
 // address: 0x460A86
 //
 // towners_process_logic_ogden processs the logic of Ogden each game tick; stops
 // interaction with distant players.
+//
+// PSX ref: 0x8003B27C
+// PSX def: void TownBarOwner__Fv()
 void towners_process_logic_ogden();
 
 // address: 0x460A95
@@ -162,54 +168,81 @@ void towners_process_logic_ogden();
 // towners_process_logic_wounded_townsman processs the logic of the Wounded
 // Townsman each game tick; stops interaction with distant players, and updates
 // quest events.
+//
+// PSX ref: 0x8003B318
+// PSX def: void TownDead__Fv()
 void towners_process_logic_wounded_townsman();
 
 // address: 0x460B0D
 //
 // towners_process_logic_pepin processs the logic of Pepin each game tick; stops
 // interaction with distant players.
+//
+// PSX ref: 0x8003B400
+// PSX def: void TownHealer__Fv()
 void towners_process_logic_pepin();
 
 // address: 0x460B1C
 //
 // towners_process_logic_cain processs the logic of Cain each game tick; stops
 // interaction with distant players.
+//
+// PSX ref: 0x8003B428
+// PSX def: void TownStory__Fv()
 void towners_process_logic_cain();
 
 // address: 0x460B2B
 //
 // towners_process_logic_farnham processs the logic of Farnham each game tick;
 // stops interaction with distant players.
+//
+// PSX ref: 0x8003B450
+// PSX def: void TownDrunk__Fv()
 void towners_process_logic_farnham();
 
 // address: 0x460B3A
 //
 // towners_process_logic_wirt processs the logic of Wirt each game tick; stops
 // interaction with distant players.
+//
+// PSX ref: 0x8003B478
+// PSX def: void TownBoy__Fv()
 void towners_process_logic_wirt();
 
 // address: 0x460B49
 //
 // towners_process_logic_adria processs the logic of Adria each game tick; stops
 // interaction with distant players.
+//
+// PSX ref: 0x8003B4A0
+// PSX def: void TownWitch__Fv()
 void towners_process_logic_adria();
 
 // address: 0x460B58
 //
 // towners_process_logic_gillian processs the logic of Gillain each game tick;
 // stops interaction with distant players.
+//
+// PSX ref: 0x8003B4C8
+// PSX def: void TownBarMaid__Fv()
 void towners_process_logic_gillian();
 
 // address: 0x460B67
 //
 // towners_process_logic_cow processs the logic of the Cows each game tick;
 // stops interaction with distant players.
+//
+// PSX ref: 0x8003B4F0
+// PSX def: void TownCow__Fv()
 void towners_process_logic_cows();
 
 // address: 0x460B76
 //
 // towners_process processes any game state changes of the NPCs, since the last
 // game tick.
+//
+// PSX ref: 0x8003B518
+// PSX def: void ProcessTowners__Fv()
 void towners_process();
 
 // address: 0x460C5C
