@@ -173,8 +173,6 @@ int drlg_l1_get_area();
 //
 // PSX ref: 0x8013DBFC
 // PSX def: void L5makeDungeon__Fv()
-//
-// NOTE: The dmap (double map) seems to be unused.
 void drlg_l1_init_tile_bit_map();
 
 // address: 0x40C06E
