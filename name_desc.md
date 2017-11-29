@@ -43,8 +43,9 @@ y = screen_y-160
 
 Primarily, there are two kinds of maps.
 
-* 112x112 maps where each cell has the in game width of a [dungeon piece](https://godoc.org/github.com/sanctuary/formats/level/min) (64 pixels).
-* 40x40 maps where each cell has the in game width of a tile [tile](https://godoc.org/github.com/sanctuary/formats/level/til) (128 pixels).
+112x112 maps where each cell has the in game width of a [dungeon piece](https://godoc.org/github.com/sanctuary/formats/level/min) (64 pixels).
+
+40x40 maps where each cell has the in game width of a tile [tile](https://godoc.org/github.com/sanctuary/formats/level/til) (128 pixels).
 
 * `x`: x-coordinate on a 112x112 map.
 * `y`: y-coordinate on a 112x112 map.
@@ -95,7 +96,7 @@ Primarily, there are two kinds of maps.
 
 Specifically for dungeon generation, there are additional kinds of maps.
 
-* 80x80 maps represent [tile ID](https://github.com/sanctuary/notes/blob/master/enums.h#l1_tile_id) maps of twice the size, repeating each tile of the original 40x40 map in blocks of 2x2.
+80x80 maps represent [tile ID](https://github.com/sanctuary/notes/blob/master/enums.h#l1_tile_id) maps of twice the size, repeating each tile of the original 40x40 map in blocks of 2x2.
 
 * `dx`: x-coordinate on a 80x80 map.
 * `dy`: y-coordinate on a 80x80 map.
