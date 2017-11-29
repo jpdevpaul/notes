@@ -278,9 +278,21 @@ typedef struct {
 
 // ItemAffixData describes effect and properties of affix with listed name.
 //
-// References:
-// * https://github.com/sanctuary/notes/blob/master/rdata/items.cpp#item_prefix_data
-// * https://github.com/sanctuary/notes/blob/master/rdata/items.cpp#item_suffix_data
+// PSX def:
+//    typedef struct PLStruct {
+//       int PLName;
+//       int PLPower;
+//       int PLParam1;
+//       int PLParam2;
+//       char PLMinLvl;
+//       long PLIType;
+//       unsigned char PLGOE;
+//       unsigned char PLDouble;
+//       unsigned char PLOk;
+//       int PLMinVal;
+//       int PLMaxVal;
+//       int PLMultVal;
+//    } PLStruct;
 typedef struct { // size = 0x30
 	// offset 0000 (4 bytes)
 	const char *name;
