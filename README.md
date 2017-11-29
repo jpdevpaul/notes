@@ -14,6 +14,7 @@ The notes are currently organized into the following categories.
 * [Structures](structs.h): structure definitions.
 * [Enumerates](enums.h): enumerate definitions.
 * [Storm ordinals](storm.h): Storm.dll function declarations based on ordinal numbers.
+* [Variable name descriptions](name_desc.md): description of variable names based on context.
 
 ## Progress
 
