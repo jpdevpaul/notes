@@ -337,7 +337,12 @@ void stores_draw();
 
 // address: 0x45A584
 //
-// TODO: add documentation.
+// stores_escape backs out one level from the current dialogue through an escape
+// key press.
+//
+// PSX ref: 0x800700B4
+// PSX def: void STextESC__Fv()
+void stores_escape();
 
 // address: 0x45A6AF
 //
@@ -381,11 +386,12 @@ void stores_interact_griswold();
 
 // address: 0x45AC14
 //
-// stores_buy_from_griswold buys the selected item from Griswold.
+// stores_interact_griswold_buy_basic buys the selected basic item from
+// Griswold.
 //
 // PSX ref: 0x80070E14
 // PSX def: void S_SBuyEnter__Fv()
-void stores_buy_from_griswold();
+void stores_interact_griswold_buy_basic();
 
 // address: 0x45ACE9
 //
@@ -393,7 +399,12 @@ void stores_buy_from_griswold();
 
 // address: 0x45AD7E
 //
-// TODO: add documentation.
+// stores_interact_griswold_buy_premium buys the selected premium item from
+// Griswold.
+//
+// PSX ref: 0x8007123C
+// PSX def: void S_SPBuyEnter__Fv()
+void stores_interact_griswold_buy_premium();
 
 // address: 0x45AE72
 //
@@ -409,11 +420,11 @@ void stores_buy_from_griswold();
 
 // address: 0x45B160
 //
-// stores_sell_to_griswold sells the selected item to Griswold.
+// stores_interact_griswold_sell sells the selected item to Griswold.
 //
 // PSX ref: 0x80071D44
 // PSX def: void S_SSellEnter__Fv()
-void stores_sell_to_griswold();
+void stores_interact_griswold_sell();
 
 // address: 0x45B1DF
 //
@@ -421,11 +432,11 @@ void stores_sell_to_griswold();
 
 // address: 0x45B2B6
 //
-// stores_repair_at_griswold repairs the selected item at Griswold.
+// stores_interact_griswold_repair repairs the selected item at Griswold.
 //
 // PSX ref: 0x800720C8
 // PSX def: void S_SRepairEnter__Fv()
-void stores_repair_at_griswold();
+void stores_interact_griswold_repair();
 
 // address: 0x45B337
 //
@@ -441,19 +452,19 @@ void stores_interact_adria();
 
 // address: 0x45B457
 //
-// stores_buy_from_adria buys the selected item from Adria.
+// stores_interact_adria_buy buys the selected item from Adria.
 //
 // PSX ref: 0x80072590
 // PSX def: void S_WBuyEnter__Fv()
-void stores_buy_from_adria();
+void stores_interact_adria_buy();
 
 // address: 0x45B52C
 //
-// stores_sell_to_adria sells the selected item to Adria.
+// stores_interact_adria_sell sells the selected item to Adria.
 //
 // PSX ref: 0x80072818
 // PSX def: void S_WSellEnter__Fv()
-void stores_sell_to_adria();
+void stores_interact_adria_sell();
 
 // address: 0x45B5AB
 //
@@ -461,11 +472,11 @@ void stores_sell_to_adria();
 
 // address: 0x45B634
 //
-// stores_recharge_at_adria recharges the selected item at Adria.
+// stores_interact_adria_recharge recharges the selected item at Adria.
 //
 // PSX ref: 0x80072AD4
 // PSX def: void S_WRechargeEnter__Fv()
-void stores_recharge_at_adria();
+void stores_interact_adria_recharge();
 
 // address: 0x45B6B5
 //
@@ -485,23 +496,27 @@ void stores_interact_wirt();
 
 // address: 0x45B895
 //
-// stores_buy_from_wirt buys the selected item from Wirt.
+// stores_interact_wirt_buy buys the selected item from Wirt.
 //
 // PSX ref: 0x8007319C
 // PSX def: void S_BBuyEnter__Fv()
-void stores_buy_from_wirt();
+void stores_interact_wirt_buy();
 
 // address: 0x45B968
 //
-// TODO: add documentation.
+// stores_identify_item identifies the selected item.
+//
+// PSX ref: 0x800733B0
+// PSX def: void StoryIdItem__Fv()
+void stores_identify_item();
 
 // address: 0x45BA57
 //
-// stores_confirm confirms the selected action.
+// stores_interact_confirm confirms the selected action.
 //
 // PSX ref: 0x80073700
 // PSX def: void S_ConfirmEnter__Fv()
-void stores_confirm();
+void stores_interact_confirm();
 
 // address: 0x45BAF7
 //
@@ -513,32 +528,36 @@ void stores_interact_pepin();
 
 // address: 0x45BB9F
 //
-// stores_buy_from_pepin buys the selected item from Pepin.
+// stores_interact_pepin_buy buys the selected item from Pepin.
 //
 // PSX ref: 0x800738B4
 // PSX def: void S_HBuyEnter__Fv()
-void stores_buy_from_pepin();
+void stores_interact_pepin_buy();
 
 // address: 0x45BC74
 //
-// TODO: add documentation.
+// stores_interact_cain interacts with Cain through an enter key press.
+//
+// PSX ref: 0x80073AE8
+// PSX def: void S_StoryEnter__Fv()
+void stores_interact_cain();
 
 // address: 0x45BCCA
 //
-// stores_identify_at_cain identifies the selected item at Cain.
+// stores_interact_cain_identify identifies the selected item at Cain.
 //
 // PSX ref: 0x80073B84
 // PSX def: void S_SIDEnter__Fv()
-void stores_identify_at_cain();
+void stores_interact_cain_identify();
 
 // address: 0x45BD4B
 //
-// stores_listen_to_gossip listens to the stories and gossip that a store owner
+// stores_interact_gossip listens to the stories and gossip that a store owner
 // has to say about a given quest.
 //
 // PSX ref: 0x80073D08
 // PSX def: void S_TalkEnter__Fv()
-void stores_listen_to_gossip();
+void stores_interact_gossip();
 
 // address: 0x45BE4A
 //
@@ -550,7 +569,11 @@ void stores_interact_odgen();
 
 // address: 0x45BE98
 //
-// TODO: add documentation.
+// stores_interact_gillian interacts with Gillian through an enter key press.
+//
+// PSX ref: 0x80073F7C
+// PSX def: void S_BarmaidEnter__Fv()
+void stores_interact_gillian();
 
 // address: 0x45BEE6
 //
