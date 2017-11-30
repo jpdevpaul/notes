@@ -2361,6 +2361,34 @@ typedef enum {
 	SPELL_TYPE_INVALID = 4,
 } spell_type;
 
+// Talk IDs for conversation dialogues.
+typedef enum {
+	TALK_ID_GRISWOLD             = 1,
+	TALK_ID_GRISWOLD_BUY_BASIC   = 2,
+	TALK_ID_GRISWOLD_SELL        = 3,
+	TALK_ID_GRISWOLD_REPAIR      = 4,
+	TALK_ID_ADRIA                = 5,
+	TALK_ID_ADRIA_BUY            = 6,
+	TALK_ID_ADRIA_SELL           = 7,
+	TALK_ID_ADRIA_RECHARGE       = 8,
+	TALK_ID_NOT_ENOUGH_GOLD      = 9,
+	TALK_ID_NOT_ENOUGH_ROOM      = 10,
+	TALK_ID_CONFIRM              = 11,
+	TALK_ID_WIRT                 = 12,
+	TALK_ID_WIRT_BUY             = 13,
+	TALK_ID_PEPIN                = 14,
+	TALK_ID_CAIN                 = 15,
+	TALK_ID_PEPIN_BUY            = 16,
+	TALK_ID_CAIN_IDENTIFY        = 17,
+	TALK_ID_GRISWOLD_BUY_PREMIUM = 18,
+	TALK_ID_GOSSIP               = 19,
+	TALK_ID_SHOW_IDENTIFIED_ITEM = 20,
+	TALK_ID_ODGEN                = 21,
+	TALK_ID_FARNHAM              = 22,
+	TALK_ID_GILLIAN              = 23,
+} talk_id;
+
+
 // Template IDs for error windows.
 typedef enum {
 	TEMPLATE_ID_DX_INIT_ERROR              = 104,

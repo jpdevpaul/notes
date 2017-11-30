@@ -62,7 +62,7 @@ Each function has been categorised based on their original source file, as summa
 | [sha1.cpp](sha1.cpp)             | `0x456A16`    | `0x456CBA`  | 100% (6/6 functions)     |
 | [sound.cpp](sound.cpp)           | `0x456CBB`    | `0x45744D`  | 18% (4/22 functions)     |
 | [spells.cpp](spells.cpp)         | `0x45744E`    | `0x457A00`  | 42% (3/7 functions)      |
-| [stores.cpp](stores.cpp)         | `0x457A01`    | `0x45C198`  | 42% (40/95 functions)    |
+| [stores.cpp](stores.cpp)         | `0x457A01`    | `0x45C198`  | 53% (51/95 functions)    |
 | [sync.cpp](sync.cpp)             | `0x45C199`    | `0x45C86F`  | 0% (0/9 functions)       |
 | [themes.cpp](themes.cpp)         | `0x45C870`    | `0x45E08B`  | 0% (0/31 functions)      |
 | [tmsg.cpp](tmsg.cpp)             | `0x45E08C`    | `0x45E150`  | 33% (1/3 functions)      |

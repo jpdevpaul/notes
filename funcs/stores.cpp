@@ -62,6 +62,9 @@ void stores_cleanup();
 // address: 0x4582B3
 //
 // stores_talk_griswold initiates a dialogue with Griswold.
+//
+// PSX ref: 0x8006AA50
+// PSX def: void S_StartSmith__Fv()
 void stores_talk_griswold();
 
 // address: 0x45837D
@@ -76,6 +79,9 @@ void stores_talk_griswold();
 //
 // stores_talk_griswold_buy_basic initiates a buy basic item dialogue with
 // Griswold.
+//
+// PSX ref: 0x8006ADE0
+// PSX def: void S_StartSBuy__Fv()
 void stores_talk_griswold_buy_basic();
 
 // address: 0x458773
@@ -86,6 +92,9 @@ void stores_talk_griswold_buy_basic();
 //
 // stores_talk_griswold_buy_premium initiates a buy premium item dialogue with
 // Griswold.
+//
+// PSX ref: 0x8006B210
+// PSX def: unsigned char S_StartSPBuy__Fv()
 bool32_t stores_talk_griswold_buy_premium();
 
 // address: 0x458931
@@ -102,6 +111,9 @@ bool32_t __fastcall stores_griswold_wants(int inv_num);
 //
 // stores_talk_griswold_sell initiates a sell player item dialogue with
 // Griswold.
+//
+// PSX ref: 0x8006B70C
+// PSX def: void S_StartSSell__Fv()
 void stores_talk_griswold_sell();
 
 // address: 0x458C0B
@@ -114,6 +126,9 @@ bool32_t __fastcall stores_is_damaged(int inv_num);
 //
 // stores_talk_griswold_repair initiates a repair player item dialogue with
 // Griswold.
+//
+// PSX ref: 0x8006BDD4
+// PSX def: void S_StartSRepair__Fv()
 void stores_talk_griswold_repair();
 
 // address: 0x458E9A
@@ -123,6 +138,9 @@ void stores_talk_griswold_repair();
 // address: 0x458F3D
 //
 // stores_talk_adria initiates a dialogue with Adria.
+//
+// PSX ref: 0x8006C2A4
+// PSX def: void S_StartWitch__Fv()
 void stores_talk_adria();
 
 // address: 0x458FE3
@@ -132,6 +150,9 @@ void stores_talk_adria();
 // address: 0x45909F
 //
 // stores_talk_adria_buy initiates a buy item dialogue with Adria.
+//
+// PSX ref: 0x8006C714
+// PSX def: void S_StartWBuy__Fv()
 void stores_talk_adria_buy();
 
 // address: 0x459169
@@ -150,6 +171,9 @@ bool32_t __fastcall stores_adria_wants(int inv_or_belt_num);
 // address: 0x4591C4
 //
 // stores_talk_adria_sell initiates a sell player item dialogue with Adria.
+//
+// PSX ref: 0x8006CBB4
+// PSX def: void S_StartWSell__Fv()
 void stores_talk_adria_sell();
 
 // address: 0x459431
@@ -165,38 +189,59 @@ bool32_t __fastcall stores_has_used_charges(int inv_num);
 // address: 0x4594E6
 //
 // stores_talk_adria_recharge initiates a recharge staff dialogue with Adria.
+//
+// PSX ref: 0x8006D440
+// PSX def: void S_StartWRecharge__Fv()
 void stores_talk_adria_recharge();
 
 // address: 0x459693
 //
 // stores_talk_not_enough_gold informs the player that they have not enough
 // gold to satisfy the deal.
+//
+// PSX ref: 0x8006D870
+// PSX def: void S_StartNoMoney__Fv()
 void stores_talk_not_enough_gold();
 
 // address: 0x4596CD
 //
 // stores_talk_not_enough_room informs the player that they have not enough
 // room in inventory to complete the trade.
+//
+// PSX ref: 0x8006D8D8
+// PSX def: void S_StartNoRoom__Fv()
 void stores_talk_not_enough_room();
 
 // address: 0x459700
 //
 // stores_talk_confirm asks the player to confirm the deal.
+//
+// PSX ref: 0x8006D9EC
+// PSX def: void S_StartConfirm__Fv()
 void stores_talk_confirm();
 
 // address: 0x459873
 //
 // stores_talk_wirt initiates a dialogue with Wirt.
+//
+// PSX ref: 0x8006DD54
+// PSX def: void S_StartBoy__Fv()
 void stores_talk_wirt();
 
 // address: 0x459930
 //
 // stores_talk_wirt_buy initiates a buy item dialogue with Wirt.
+//
+// PSX ref: 0x8006DEFC
+// PSX def: void S_StartBBoy__Fv()
 void stores_talk_wirt_buy();
 
 // address: 0x4599FD
 //
 // stores_talk_pepin initiates a dialogue with Pepin.
+//
+// PSX ref: 0x8006E130
+// PSX def: void S_StartHealer__Fv()
 void stores_talk_pepin();
 
 // address: 0x459AA5
@@ -206,11 +251,17 @@ void stores_talk_pepin();
 // address: 0x459B55
 //
 // stores_talk_pepin_buy initiates a buy item dialogue with Pepin.
+//
+// PSX ref: 0x8006E4EC
+// PSX def: void S_StartHBuy__Fv()
 void stores_talk_pepin_buy();
 
 // address: 0x459C15
 //
 // stores_talk_cain initiates a dialogue with Cain.
+//
+// PSX ref: 0x8006E624
+// PSX def: void S_StartStory__Fv()
 void stores_talk_cain();
 
 // address: 0x459C8E
@@ -226,35 +277,58 @@ bool32_t __fastcall stores_is_unidentified(Item *item);
 // address: 0x459CE6
 //
 // stores_talk_cain_identify initiates an identify item dialogue with Cain.
+//
+// PSX ref: 0x8006E824
+// PSX def: void S_StartSIdentify__Fv()
 void stores_talk_cain_identify();
 
 // address: 0x459F95
 //
-// TODO: add documentation.
+// stores_talk_show_identified_item shows the identified item to the player.
+//
+// PSX ref: 0x8006F2C4
+// PSX def: void S_StartIdShow__Fv()
+void stores_talk_show_identified_item();
 
 // address: 0x45A046
 //
 // stores_talk_gossip initiates a gossip dialogue with the active NPC.
+//
+// PSX ref: 0x8006F49C
+// PSX def: void S_StartTalk__Fv()
 void stores_talk_gossip();
 
 // address: 0x45A168
 //
 // stores_talk_odgen initiates a dialogue with Odgen.
+//
+// PSX ref: 0x8006F6CC
+// PSX def: void S_StartTavern__Fv()
 void stores_talk_odgen();
 
 // address: 0x45A1EC
 //
 // stores_talk_gillian initiates a dialogue with Gillian.
+//
+// PSX ref: 0x8006F7C4
+// PSX def: void S_StartBarMaid__Fv()
 void stores_talk_gillian();
 
 // address: 0x45A25E
 //
 // stores_talk_farnham initiates a dialogue with Farnham.
+//
+// PSX ref: 0x8006F898
+// PSX def: void S_StartDrunk__Fv()
 void stores_talk_farnham();
 
 // address: 0x45A2D0
 //
-// TODO: add documentation.
+// stores_talk initiates a conversation with the store owner.
+//
+// PSX ref: 0x8006F96C
+// PSX def: void StartStore__Fc(char s)
+void __fastcall stores_talk(talk_id talk_id);
 
 // address: 0x45A48F
 //
@@ -395,7 +469,11 @@ void stores_recharge_at_adria();
 
 // address: 0x45B6B5
 //
-// TODO: add documentation.
+// stores_interact_wirt interacts with Wirt through an enter key press.
+//
+// PSX ref: 0x80072C38
+// PSX def: void S_BoyEnter__Fv()
+void stores_interact_wirt();
 
 // address: 0x45B757
 //
@@ -407,7 +485,11 @@ void stores_recharge_at_adria();
 
 // address: 0x45B895
 //
-// TODO: add documentation.
+// stores_buy_from_wirt buys the selected item from Wirt.
+//
+// PSX ref: 0x8007319C
+// PSX def: void S_BBuyEnter__Fv()
+void stores_buy_from_wirt();
 
 // address: 0x45B968
 //
@@ -415,15 +497,27 @@ void stores_recharge_at_adria();
 
 // address: 0x45BA57
 //
-// TODO: add documentation.
+// stores_confirm confirms the selected action.
+//
+// PSX ref: 0x80073700
+// PSX def: void S_ConfirmEnter__Fv()
+void stores_confirm();
 
 // address: 0x45BAF7
 //
-// TODO: add documentation.
+// stores_interact_pepin interacts with Pepin through an enter key press.
+//
+// PSX ref: 0x8007381C
+// PSX def: void S_HealerEnter__Fv()
+void stores_interact_pepin();
 
 // address: 0x45BB9F
 //
-// TODO: add documentation.
+// stores_buy_from_pepin buys the selected item from Pepin.
+//
+// PSX ref: 0x800738B4
+// PSX def: void S_HBuyEnter__Fv()
+void stores_buy_from_pepin();
 
 // address: 0x45BC74
 //
@@ -431,15 +525,28 @@ void stores_recharge_at_adria();
 
 // address: 0x45BCCA
 //
-// TODO: add documentation.
+// stores_identify_at_cain identifies the selected item at Cain.
+//
+// PSX ref: 0x80073B84
+// PSX def: void S_SIDEnter__Fv()
+void stores_identify_at_cain();
 
 // address: 0x45BD4B
 //
-// TODO: add documentation.
+// stores_listen_to_gossip listens to the stories and gossip that a store owner
+// has to say about a given quest.
+//
+// PSX ref: 0x80073D08
+// PSX def: void S_TalkEnter__Fv()
+void stores_listen_to_gossip();
 
 // address: 0x45BE4A
 //
-// TODO: add documentation.
+// stores_interact_odgen interacts with Odgen through an enter key press.
+//
+// PSX ref: 0x80073F08
+// PSX def: void S_TavernEnter__Fv()
+void stores_interact_odgen();
 
 // address: 0x45BE98
 //
@@ -447,7 +554,11 @@ void stores_recharge_at_adria();
 
 // address: 0x45BEE6
 //
-// TODO: add documentation.
+// stores_interact_farmham interacts with Farnham through an enter key press.
+//
+// PSX ref: 0x80073FF0
+// PSX def: void S_DrunkEnter__Fv()
+void stores_interact_farnham();
 
 // address: 0x45BF34
 //
