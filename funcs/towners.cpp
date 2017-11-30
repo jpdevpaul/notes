@@ -31,7 +31,7 @@ void __fastcall towners_init_anim(int towner_num, void *active_cel, int nframes,
 //
 // PSX ref: 0x8003A04C
 // PSX def: void InitTownerInfo__FilUciiici(int i, long w, unsigned char sel, int t, int x, int y, int ao, int tp)
-void __fastcall towners_place(int towner_num, int frame_width, bool32_t targetable, towner_id towner_id, int col, int row, towner_anim_seq_id towner_anim_seq_id, int unused);
+void __fastcall towners_place(int towner_num, int frame_width, bool32_t selectable, towner_id towner_id, int x, int y, towner_anim_seq_id towner_anim_seq_id, int unused);
 
 // address: 0x4602C4
 //

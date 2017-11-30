@@ -283,7 +283,11 @@ void stores_draw();
 
 // address: 0x45A89B
 //
-// TODO: add documentation.
+// stores_interact_griswold interacts with Griswold through an enter key press.
+//
+// PSX ref: 0x80070570
+// PSX def: void S_SmithEnter__Fv()
+void stores_interact_griswold();
 
 // address: 0x45A904
 //
@@ -303,7 +307,11 @@ void stores_draw();
 
 // address: 0x45AC14
 //
-// TODO: add documentation.
+// stores_buy_from_griswold buys the selected item from Griswold.
+//
+// PSX ref: 0x80070E14
+// PSX def: void S_SBuyEnter__Fv()
+void stores_buy_from_griswold();
 
 // address: 0x45ACE9
 //
@@ -327,7 +335,11 @@ void stores_draw();
 
 // address: 0x45B160
 //
-// TODO: add documentation.
+// stores_sell_to_griswold sells the selected item to Griswold.
+//
+// PSX ref: 0x80071D44
+// PSX def: void S_SSellEnter__Fv()
+void stores_sell_to_griswold();
 
 // address: 0x45B1DF
 //
@@ -335,11 +347,19 @@ void stores_draw();
 
 // address: 0x45B2B6
 //
-// TODO: add documentation.
+// stores_repair_at_griswold repairs the selected item at Griswold.
+//
+// PSX ref: 0x800720C8
+// PSX def: void S_SRepairEnter__Fv()
+void stores_repair_at_griswold()
 
 // address: 0x45B337
 //
-// TODO: add documentation.
+// stores_interact_adria interacts with Adria through an enter key press.
+//
+// PSX ref: 0x8007222C
+// PSX def: void S_WitchEnter__Fv()
+void stores_interact_adria();
 
 // address: 0x45B39F
 //
@@ -347,11 +367,19 @@ void stores_draw();
 
 // address: 0x45B457
 //
-// TODO: add documentation.
+// stores_buy_from_adria buys the selected item from Adria.
+//
+// PSX ref: 0x80072590
+// PSX def: void S_WBuyEnter__Fv()
+void stores_buy_from_adria();
 
 // address: 0x45B52C
 //
-// TODO: add documentation.
+// stores_sell_to_adria sells the selected item to Adria.
+//
+// PSX ref: 0x80072818
+// PSX def: void S_WSellEnter__Fv()
+void stores_sell_to_adria();
 
 // address: 0x45B5AB
 //
@@ -359,7 +387,11 @@ void stores_draw();
 
 // address: 0x45B634
 //
-// TODO: add documentation.
+// stores_recharge_at_adria recharges the selected item at Adria.
+//
+// PSX ref: 0x80072AD4
+// PSX def: void S_WRechargeEnter__Fv()
+void stores_recharge_at_adria();
 
 // address: 0x45B6B5
 //
@@ -419,7 +451,11 @@ void stores_draw();
 
 // address: 0x45BF34
 //
-// TODO: add documentation.
+// stores_interact interacts with the store through an enter key press.
+//
+// PSX ref: 0x80074064
+// PSX def: void STextEnter__Fv()
+void stores_interact();
 
 // address: 0x45C053
 //
