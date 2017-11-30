@@ -425,7 +425,7 @@ void stores_sell_to_griswold();
 //
 // PSX ref: 0x800720C8
 // PSX def: void S_SRepairEnter__Fv()
-void stores_repair_at_griswold()
+void stores_repair_at_griswold();
 
 // address: 0x45B337
 //
