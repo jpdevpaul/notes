@@ -382,7 +382,11 @@ void stores_interact_griswold();
 
 // address: 0x45AB69
 //
-// TODO: add documentation.
+// stores_griswold_buy_basic buys the selected basic item from Griswold.
+//
+// PSX ref: 0x80070B94
+// PSX def: void SmithBuyItem__Fv()
+void stores_griswold_buy_basic();
 
 // address: 0x45AC14
 //
@@ -395,7 +399,11 @@ void stores_interact_griswold_buy_basic();
 
 // address: 0x45ACE9
 //
-// TODO: add documentation.
+// stores_griswold_buy_premium buys the selected premium item from Griswold.
+//
+// PSX ref: 0x80071078
+// PSX def: void SmithBuyPItem__Fv()
+void stores_griswold_buy_premium();
 
 // address: 0x45AD7E
 //
@@ -416,7 +424,11 @@ void stores_interact_griswold_buy_premium();
 
 // address: 0x45B010
 //
-// TODO: add documentation.
+// stores_sell sells the selected item to the store owner.
+//
+// PSX ref: 0x80071A00
+// PSX def: void StoreSellItem__Fv()
+void stores_sell();
 
 // address: 0x45B160
 //
@@ -428,7 +440,11 @@ void stores_interact_griswold_sell();
 
 // address: 0x45B1DF
 //
-// TODO: add documentation.
+// stores_griswold_repair repairs the selected item at Griswold.
+//
+// PSX ref: 0x80071E54
+// PSX def: void SmithRepairItem__Fv()
+void stores_griswold_repair();
 
 // address: 0x45B2B6
 //
@@ -448,7 +464,11 @@ void stores_interact_adria();
 
 // address: 0x45B39F
 //
-// TODO: add documentation.
+// stores_adria_buy buys the selected item from Adria.
+//
+// PSX ref: 0x8007230C
+// PSX def: void WitchBuyItem__Fv()
+void stores_adria_buy();
 
 // address: 0x45B457
 //
@@ -468,7 +488,11 @@ void stores_interact_adria_sell();
 
 // address: 0x45B5AB
 //
-// TODO: add documentation.
+// stores_adria_recharge recharges the selected item at Adria.
+//
+// PSX ref: 0x80072958
+// PSX def: void WitchRechargeItem__Fv()
+void stores_adria_recharge();
 
 // address: 0x45B634
 //
@@ -488,11 +512,19 @@ void stores_interact_wirt();
 
 // address: 0x45B757
 //
-// TODO: add documentation.
+// stores_wirt_buy buys the selected item from Wirt.
+//
+// PSX ref: 0x80072DD0
+// PSX def: void BoyBuyItem__Fv()
+void stores_wirt_buy();
 
 // address: 0x45B791
 //
-// TODO: add documentation.
+// stores_pepin_buy buys the selected item from Pepin.
+//
+// PSX ref: 0x80072E70
+// PSX def: void HealerBuyItem__Fv()
+void stores_pepin_buy();
 
 // address: 0x45B895
 //
@@ -504,11 +536,11 @@ void stores_interact_wirt_buy();
 
 // address: 0x45B968
 //
-// stores_identify_item identifies the selected item.
+// stores_cain_identify identifies the selected item at Cain.
 //
 // PSX ref: 0x800733B0
 // PSX def: void StoryIdItem__Fv()
-void stores_identify_item();
+void stores_cain_identify();
 
 // address: 0x45BA57
 //
