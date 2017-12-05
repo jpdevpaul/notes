@@ -1,15 +1,26 @@
+// Bit flag which is used to determine if affix could be applied to certain type of items.
+// As it can be noted each flag just represents one or more values from `item_type` enumeration.
+typedef enum {
+	AFFIX_ITEM_TYPE_JEWELRY = 0x00000001,
+	AFFIX_ITEM_TYPE_BOW     = 0x00000010,
+	AFFIX_ITEM_TYPE_STAFF   = 0x00000100,
+	AFFIX_ITEM_TYPE_WEAPON  = 0x00001000,
+	AFFIX_ITEM_TYPE_SHIELD  = 0x00010000,
+	AFFIX_ITEM_TYPE_ARMOR   = 0x00100000,
+} affix_item_type;
+
 // Cursor IDs; frame_num+1 of objcurs.cel.
 typedef enum {
-	CURSOR_ID_NONE           = 0,
-	CURSOR_ID_HAND           = 1,
-	CURSOR_ID_IDENTIFY       = 2,
-	CURSOR_ID_ITEM_REPAIR    = 3,
-	CURSOR_ID_STAFF_RECHARGE = 4,
-	CURSOR_ID_TRAP_DISARM    = 5,
-	CURSOR_ID_OIL            = 6,
-	CURSOR_ID_TELEKINESIS    = 7,
-	CURSOR_ID_RESURRECT      = 8,
-	CURSOR_ID_TELEPORT       = 9,
+	CURSOR_ID_NONE           =  0,
+	CURSOR_ID_HAND           =  1,
+	CURSOR_ID_IDENTIFY       =  2,
+	CURSOR_ID_ITEM_REPAIR    =  3,
+	CURSOR_ID_STAFF_RECHARGE =  4,
+	CURSOR_ID_TRAP_DISARM    =  5,
+	CURSOR_ID_OIL            =  6,
+	CURSOR_ID_TELEKINESIS    =  7,
+	CURSOR_ID_RESURRECT      =  8,
+	CURSOR_ID_TELEPORT       =  9,
 	CURSOR_ID_HEAL_OTHER     = 10,
 	CURSOR_ID_HOURGLASS      = 11,
 	CURSOR_ID_FIRST_ITEM     = 12,
@@ -24,12 +35,186 @@ typedef enum {
 	DAMAGE_TYPE_ACID      = 4,
 } damage_type;
 
+// Directions.
+//
+// # Map layout
+//
+//                    (col=0 row=0)
+//                          _
+//                         / \
+//                    r   /   \     c
+//                   o   /     \     o
+//                  w   /       \     l
+//                     /         \
+//    (col=0 row=95)  |           |  (col=95 row=0)
+//                     \         /
+//                      \       /
+//                       \     /
+//                        \   /
+//                         \_/
+//                   (col=95 row=95)
+//
+// # Step based on direction
+//
+//    * South      (col+1, row+1)
+//    * South west (col,   row+1)
+//    * West       (col-1, row+1)
+//    * North west (col-1, row)
+//    * North      (col-1, row-1)
+//    * North east (col,   row-1)
+//    * East       (col+1, row-1)
+//    * South east (col+1, row)
+typedef enum {
+	DIRECTION_SOUTH      = 0,
+	DIRECTION_SOUTH_WEST = 1,
+	DIRECTION_WEST       = 2,
+	DIRECTION_NORTH_WEST = 3,
+	DIRECTION_NORTH      = 4,
+	DIRECTION_NORTH_EAST = 5,
+	DIRECTION_EAST       = 6,
+	DIRECTION_SOUTH_EAST = 7,
+	DIRECTION_OMNI       = 8, // All directions.
+} direction;
+
+// Dungeon types.
+typedef enum {
+	DUNGEON_TYPE_TRISTRAM  = 0, // dlvl:       0
+	DUNGEON_TYPE_CATHEDRAL = 1, // dlvl:  1 -  4
+	DUNGEON_TYPE_CATACOMBS = 2, // dlvl:  5 -  8
+	DUNGEON_TYPE_CAVES     = 3, // dlvl:  9 - 12
+	DUNGEON_TYPE_HELL      = 4, // dlvl: 13 - 16
+	DUNGEON_TYPE_NONE      = -1,
+} dungeon_type;
+
+// Broad item categorization.
+//
+// References:
+//    * https://github.com/sanctuary/notes/blob/master/structs.h#item
+typedef enum {
+	ITEM_CLASS_NONE                   = 0,
+	ITEM_CLASS_WEAPON                 = 1,
+	ITEM_CLASS_ARMOR                  = 2,
+	ITEM_CLASS_JEWELRY_AND_CONSUMABLE = 3,
+	ITEM_CLASS_GOLD                   = 4,
+	ITEM_CLASS_QUEST                  = 5,
+} item_class;
+
 // Item drop rates.
 typedef enum {
 	ITEM_DROP_RATE_NEVER   = 0, // never drops.
 	ITEM_DROP_RATE_REGULAR = 1, // regular drop chance.
 	ITEM_DROP_RATE_DOUBLE  = 2, // twice as likely to drop.
 } item_drop_rate;
+
+// TODO: Rethink item_drop_state enum. It probably has to do with animation, and
+// then ITEM_DROP_STATE_GLIMMERING would make sense, as that would be
+// represented as ANIM_BACK_FORTH, or ANIM_LOOP. Will have to verify how the
+// various values are actually used in game when it comes to animations.
+
+// References:
+//    * https://github.com/sanctuary/notes/blob/master/structs.h#item
+typedef enum {
+	ITEM_DROP_STATE_STARTED    = 0,
+	ITEM_DROP_STATE_COMPLETE   = 1,
+	ITEM_DROP_STATE_GLIMMERING = 2,
+	ITEM_DROP_STATE_UNKNOWN    = 3,
+} item_drop_state;
+
+// Type of effect caused by suffix, prefix of magic item or one of 5 or less
+// effects of unique item.
+//
+// References:
+//    * https://github.com/sanctuary/notes/blob/master/structs.h#item
+typedef enum {
+	ITEM_EFFECT_TYPE_TO_HIT_PLUS                            =  0,
+	ITEM_EFFECT_TYPE_TO_HIT_MINUS                           =  1,
+	ITEM_EFFECT_TYPE_PERCENT_ATTACK_DAMAGE_PLUS             =  2,
+	ITEM_EFFECT_TYPE_PERCENT_ATTACK_DAMAGE_MINUS            =  3,
+	ITEM_EFFECT_TYPE_TO_HIT_AND_PERCENT_ATTACK_DAMAGE_PLUS  =  4,
+	ITEM_EFFECT_TYPE_TO_HIT_AND_PERCENT_ATTACK_DAMAGE_MINUS =  5,
+	ITEM_EFFECT_TYPE_ARMOR_CLASS_PERCENT_PLUS               =  6,
+	ITEM_EFFECT_TYPE_ARMOR_CLASS_PERCENT_MINUS              =  7,
+	ITEM_EFFECT_TYPE_FIRE_RESISTANCE_BONUS                  =  8,
+	ITEM_EFFECT_TYPE_LIGHTNING_RESISTANCE_BONUS             =  9,
+	ITEM_EFFECT_TYPE_MAGIC_RESISTANCE_BONUS                 = 10,
+	ITEM_EFFECT_TYPE_ALL_RESISTANCES_BONUS                  = 11,
+	ITEM_EFFECT_TYPE_SPELL_LEVELS_PLUS                      = 14,
+	ITEM_EFFECT_TYPE_EXTRA_CHARGES                          = 15,
+	ITEM_EFFECT_TYPE_FIRE_DAMAGE_BONUS                      = 16,
+	ITEM_EFFECT_TYPE_LIGHTNING_DAMAGE_BONUS                 = 17,
+	ITEM_EFFECT_TYPE_STRENGTH_PLUS                          = 19,
+	ITEM_EFFECT_TYPE_STRENGTH_MINUS                         = 20,
+	ITEM_EFFECT_TYPE_MAGIC_PLUS                             = 21,
+	ITEM_EFFECT_TYPE_MAGIC_MINUS                            = 22,
+	ITEM_EFFECT_TYPE_DEXTERITY_PLUS                         = 23,
+	ITEM_EFFECT_TYPE_DEXTERITY_MINUS                        = 24,
+	ITEM_EFFECT_TYPE_VITALITY_PLUS                          = 25,
+	ITEM_EFFECT_TYPE_VITALITY_MINUS                         = 26,
+	ITEM_EFFECT_TYPE_ALL_ATTRIBUTES_PLUS                    = 27,
+	ITEM_EFFECT_TYPE_ALL_ATTRIBUTES_MINUS                   = 28,
+	ITEM_EFFECT_TYPE_DAMAGE_TAKEN_PLUS                      = 29,
+	ITEM_EFFECT_TYPE_DAMAGE_TAKEN_MINUS                     = 30,
+	ITEM_EFFECT_TYPE_LIFE_PLUS                              = 31,
+	ITEM_EFFECT_TYPE_LIFE_MINUS                             = 32,
+	ITEM_EFFECT_TYPE_MANA_PLUS                              = 33,
+	ITEM_EFFECT_TYPE_MANA_MINUS                             = 34,
+	ITEM_EFFECT_TYPE_DURABILITY_PERCENT_PLUS                = 35,
+	ITEM_EFFECT_TYPE_DURABILITY_PERCENT_MINUS               = 36,
+	ITEM_EFFECT_TYPE_INDESTRUCTIBLE                         = 37,
+	ITEM_EFFECT_TYPE_LIGHT_RADIUS_PLUS                      = 38,
+	ITEM_EFFECT_TYPE_LIGHT_RADIUS_MINUS                     = 39,
+	ITEM_EFFECT_TYPE_FIRE_ARROWS                            = 42,
+	ITEM_EFFECT_TYPE_LIGHTNING_ARROWS                       = 43,
+	ITEM_EFFECT_TYPE_CUSTOM_GRAPHICS                        = 44,
+	ITEM_EFFECT_TYPE_THORNS                                 = 45,
+	ITEM_EFFECT_TYPE_NO_MANA                                = 46,
+	ITEM_EFFECT_TYPE_USER_CANT_HEAL                         = 47,
+	ITEM_EFFECT_TYPE_ABSORBS_HALF_OF_TRAP_DAMAGE            = 52,
+	ITEM_EFFECT_TYPE_KNOCKBACK                              = 53,
+	ITEM_EFFECT_TYPE_HIT_MONSTER_DOESNT_HEAL                = 54,
+	ITEM_EFFECT_TYPE_STEAL_MANA                             = 55,
+	ITEM_EFFECT_TYPE_STEAL_LIFE                             = 56,
+	ITEM_EFFECT_TYPE_DAMAGES_TARGETS_ARMOR                  = 57,
+	ITEM_EFFECT_TYPE_FASTER_ATTACK                          = 58,
+	ITEM_EFFECT_TYPE_FASTER_HIT_RECOVERY                    = 59,
+	ITEM_EFFECT_TYPE_FAST_BLOCK                             = 60,
+	ITEM_EFFECT_TYPE_ATTACK_DAMAGE_PLUS                     = 61,
+	ITEM_EFFECT_TYPE_RANDOM_SPEED_ARROWS                    = 62,
+	ITEM_EFFECT_TYPE_CUSTOM_ATTACK_DAMAGE                   = 63, // used for Butcher's Cleaver
+	ITEM_EFFECT_TYPE_CUSTOM_DURABILITY                      = 64,
+	ITEM_EFFECT_TYPE_NO_STRENGTH_REQUIREMENT                = 65,
+	ITEM_EFFECT_TYPE_SET_SPELL_ID_AND_CHARGES               = 66, // (most likely erroneously) sets current spell charges to spell_id
+	ITEM_EFFECT_TYPE_FASTER_ATTACK_SWING                    = 67,
+	ITEM_EFFECT_TYPE_MAKE_WEAPON_ONE_HANDED                 = 68,
+	ITEM_EFFECT_TYPE_3X_DAMAGE_VS_DEMONS                    = 69,
+	ITEM_EFFECT_TYPE_ALL_RESISTANCES_EQUAL_0                = 70,
+	ITEM_EFFECT_TYPE_CONSTANTLY_LOSE_HIT_POINTS             = 72,
+	ITEM_EFFECT_TYPE_LIFE_STEAL_RANDOM                      = 73, // in range 0-12.5%, used for The Undead Crown
+	ITEM_EFFECT_TYPE_INFRAVISION                            = 74,
+	ITEM_EFFECT_TYPE_CUSTOM_ARMOR_CLASS                     = 75,
+	ITEM_EFFECT_TYPE_ARMOR_CLASS_ADDED_TO_LIFE              = 76,
+	ITEM_EFFECT_TYPE_10_PERCENT_MANA_ADDED_TO_ARMOR         = 77,
+	ITEM_EFFECT_TYPE_FIRE_RESISTANCE_BASED_ON_CLVL          = 78,
+	ITEM_EFFECT_TYPE_ARMOR_CLASS_MINUS                      = 79,
+	ITEM_EFFECT_TYPE_INVALID                                = -1,
+} item_effect_type;
+
+// Enumeration describing in which slot item could be equipped.
+//
+// References:
+//    * https://github.com/sanctuary/notes/blob/master/structs.h#item
+typedef enum {
+	ITEM_EQUIP_TYPE_NONE        = 0,
+	ITEM_EQUIP_TYPE_ONE_HANDED  = 1,
+	ITEM_EQUIP_TYPE_TWO_HANDED  = 2,
+	ITEM_EQUIP_TYPE_CHEST       = 3,
+	ITEM_EQUIP_TYPE_HEAD        = 4,
+	ITEM_EQUIP_TYPE_RING        = 5,
+	ITEM_EQUIP_TYPE_AMULET      = 6,
+	ITEM_EQUIP_TYPE_UNEQUIPABLE = 7,
+	ITEM_EQUIP_TYPE_BELT        = 8,
+	ITEM_EQUIP_TYPE_INVALID     = -1,
+} item_equip_type;
 
 // TODO: Add remaining enums for item_graphic_id.
 
@@ -141,212 +326,6 @@ typedef enum {
 	ITEM_GRAPHIC_ID_SHORT_BATTLE_BOW            = 167,
 	ITEM_GRAPHIC_ID_GOLD                        = 168,
 } item_graphic_id;
-
-// Dungeon types.
-typedef enum {
-	DUNGEON_TYPE_TRISTRAM  =  0, // dlvl:       0
-	DUNGEON_TYPE_CATHEDRAL =  1, // dlvl:  1 -  4
-	DUNGEON_TYPE_CATACOMBS =  2, // dlvl:  5 -  8
-	DUNGEON_TYPE_CAVES     =  3, // dlvl:  9 - 12
-	DUNGEON_TYPE_HELL      =  4, // dlvl: 13 - 16
-	DUNGEON_TYPE_NONE      = -1,
-} dungeon_type;
-
-// Directions.
-//
-// # Map layout
-//
-//                    (col=0 row=0)
-//                          _
-//                         / \
-//                    r   /   \     c
-//                   o   /     \     o
-//                  w   /       \     l
-//                     /         \
-//    (col=0 row=95)  |           |  (col=95 row=0)
-//                     \         /
-//                      \       /
-//                       \     /
-//                        \   /
-//                         \_/
-//                   (col=95 row=95)
-//
-// # Step based on direction
-//
-//    * South      (col+1, row+1)
-//    * South west (col,   row+1)
-//    * West       (col-1, row+1)
-//    * North west (col-1, row)
-//    * North      (col-1, row-1)
-//    * North east (col,   row-1)
-//    * East       (col+1, row-1)
-//    * South east (col+1, row)
-typedef enum {
-	DIRECTION_SOUTH      = 0,
-	DIRECTION_SOUTH_WEST = 1,
-	DIRECTION_WEST       = 2,
-	DIRECTION_NORTH_WEST = 3,
-	DIRECTION_NORTH      = 4,
-	DIRECTION_NORTH_EAST = 5,
-	DIRECTION_EAST       = 6,
-	DIRECTION_SOUTH_EAST = 7,
-	DIRECTION_OMNI       = 8, // All directions.
-} direction;
-
-// Broad item categorization.
-//
-// References:
-//    * https://github.com/sanctuary/notes/blob/master/structs.h#item
-typedef enum {
-	ITEM_CLASS_NONE                   = 0,
-	ITEM_CLASS_WEAPON                 = 1,
-	ITEM_CLASS_ARMOR                  = 2,
-	ITEM_CLASS_JEWELRY_AND_CONSUMABLE = 3,
-	ITEM_CLASS_GOLD                   = 4,
-	ITEM_CLASS_QUEST                  = 5,
-} item_class;
-
-// Additional item categorization.
-//
-// References:
-//    * https://github.com/sanctuary/notes/blob/master/structs.h#item
-typedef enum {
-	ITEM_MISC_ID_NONE                        =  0, // all non-unique weapons and armor have this code
-	ITEM_MISC_ID_USE_FIRST                   =  1, // unused
-	ITEM_MISC_ID_POTION_OF_FULL_HEALING      =  2,
-	ITEM_MISC_ID_POTION_OF_HEALING           =  3,
-	ITEM_MISC_ID_POTION_OF_MANA              =  6,
-	ITEM_MISC_ID_POTION_OF_FULL_MANA         =  7,
-	ITEM_MISC_ID_ELIXIR_OF_STRENGTH          = 10,
-	ITEM_MISC_ID_ELIXIR_OF_MAGIC             = 11,
-	ITEM_MISC_ID_ELIXIR_OF_DEXTERITY         = 12,
-	ITEM_MISC_ID_ELIXIR_OF_VITALITY          = 13,
-	ITEM_MISC_ID_POTION_OF_REJUVENATION      = 18,
-	ITEM_MISC_ID_POTION_OF_FULL_REJUVENATION = 19,
-	ITEM_MISC_ID_USE_LAST                    = 20, // unused
-	ITEM_MISC_ID_SCROLL                      = 21,
-	ITEM_MISC_ID_SCROLL_WITH_TARGET          = 22,
-	ITEM_MISC_ID_STAFF                       = 23,
-	ITEM_MISC_ID_BOOK                        = 24,
-	ITEM_MISC_ID_RING                        = 25,
-	ITEM_MISC_ID_AMULET                      = 26,
-	ITEM_MISC_ID_UNIQUE                      = 27,
-	ITEM_MISC_ID_POTION_OF_HEALING_SOMETHING = 28, // unused
-	ITEM_MISC_ID_MAP_OF_THE_STARS            = 42,
-	ITEM_MISC_ID_EAR                         = 43,
-	ITEM_MISC_ID_SPECTRAL_ELIXIR             = 44,
-	ITEM_MISC_ID_INVALID                     = -1,
-} item_misc_id;
-
-// TODO: Rethink item_drop_state enum. It probably has to do with animation, and
-// then ITEM_DROP_STATE_GLIMMERING would make sense, as that would be
-// represented as ANIM_BACK_FORTH, or ANIM_LOOP. Will have to verify how the
-// various values are actually used in game when it comes to animations.
-
-// References:
-//    * https://github.com/sanctuary/notes/blob/master/structs.h#item
-typedef enum {
-	ITEM_DROP_STATE_STARTED    = 0,
-	ITEM_DROP_STATE_COMPLETE   = 1,
-	ITEM_DROP_STATE_GLIMMERING = 2,
-	ITEM_DROP_STATE_UNKNOWN    = 3,
-} item_drop_state;
-
-// Type of effect caused by suffix, prefix of magic item or one of 5 or less
-// effects of unique item.
-//
-// References:
-//    * https://github.com/sanctuary/notes/blob/master/structs.h#item
-typedef enum {
-    ITEM_EFFECT_TYPE_TO_HIT_PLUS                            =  0,
-    ITEM_EFFECT_TYPE_TO_HIT_MINUS                           =  1,
-    ITEM_EFFECT_TYPE_PERCENT_ATTACK_DAMAGE_PLUS             =  2,
-    ITEM_EFFECT_TYPE_PERCENT_ATTACK_DAMAGE_MINUS            =  3,
-    ITEM_EFFECT_TYPE_TO_HIT_AND_PERCENT_ATTACK_DAMAGE_PLUS  =  4,
-    ITEM_EFFECT_TYPE_TO_HIT_AND_PERCENT_ATTACK_DAMAGE_MINUS =  5,
-    ITEM_EFFECT_TYPE_ARMOR_CLASS_PERCENT_PLUS               =  6,
-    ITEM_EFFECT_TYPE_ARMOR_CLASS_PERCENT_MINUS              =  7,
-    ITEM_EFFECT_TYPE_FIRE_RESISTANCE_BONUS                  =  8,
-    ITEM_EFFECT_TYPE_LIGHTNING_RESISTANCE_BONUS             =  9,
-    ITEM_EFFECT_TYPE_MAGIC_RESISTANCE_BONUS                 = 10,
-    ITEM_EFFECT_TYPE_ALL_RESISTANCES_BONUS                  = 11,
-    ITEM_EFFECT_TYPE_SPELL_LEVELS_PLUS                      = 14,
-    ITEM_EFFECT_TYPE_EXTRA_CHARGES                          = 15,
-    ITEM_EFFECT_TYPE_FIRE_DAMAGE_BONUS                      = 16,
-    ITEM_EFFECT_TYPE_LIGHTNING_DAMAGE_BONUS                 = 17,
-    ITEM_EFFECT_TYPE_STRENGTH_PLUS                          = 19,
-    ITEM_EFFECT_TYPE_STRENGTH_MINUS                         = 20,
-    ITEM_EFFECT_TYPE_MAGIC_PLUS                             = 21,
-    ITEM_EFFECT_TYPE_MAGIC_MINUS                            = 22,
-    ITEM_EFFECT_TYPE_DEXTERITY_PLUS                         = 23,
-    ITEM_EFFECT_TYPE_DEXTERITY_MINUS                        = 24,
-    ITEM_EFFECT_TYPE_VITALITY_PLUS                          = 25,
-    ITEM_EFFECT_TYPE_VITALITY_MINUS                         = 26,
-    ITEM_EFFECT_TYPE_ALL_ATTRIBUTES_PLUS                    = 27,
-    ITEM_EFFECT_TYPE_ALL_ATTRIBUTES_MINUS                   = 28,
-    ITEM_EFFECT_TYPE_DAMAGE_TAKEN_PLUS                      = 29,
-    ITEM_EFFECT_TYPE_DAMAGE_TAKEN_MINUS                     = 30,
-    ITEM_EFFECT_TYPE_LIFE_PLUS                              = 31,
-    ITEM_EFFECT_TYPE_LIFE_MINUS                             = 32,
-    ITEM_EFFECT_TYPE_MANA_PLUS                              = 33,
-    ITEM_EFFECT_TYPE_MANA_MINUS                             = 34,
-    ITEM_EFFECT_TYPE_DURABILITY_PERCENT_PLUS                = 35,
-    ITEM_EFFECT_TYPE_DURABILITY_PERCENT_MINUS               = 36,
-    ITEM_EFFECT_TYPE_INDESTRUCTIBLE                         = 37,
-    ITEM_EFFECT_TYPE_LIGHT_RADIUS_PLUS                      = 38,
-    ITEM_EFFECT_TYPE_LIGHT_RADIUS_MINUS                     = 39,
-    ITEM_EFFECT_TYPE_FIRE_ARROWS                            = 42,
-    ITEM_EFFECT_TYPE_LIGHTNING_ARROWS                       = 43,
-    ITEM_EFFECT_TYPE_CUSTOM_GRAPHICS                        = 44,
-    ITEM_EFFECT_TYPE_THORNS                                 = 45,
-    ITEM_EFFECT_TYPE_NO_MANA                                = 46,
-    ITEM_EFFECT_TYPE_USER_CANT_HEAL                         = 47,
-    ITEM_EFFECT_TYPE_ABSORBS_HALF_OF_TRAP_DAMAGE            = 52,
-    ITEM_EFFECT_TYPE_KNOCKBACK                              = 53,
-    ITEM_EFFECT_TYPE_HIT_MONSTER_DOESNT_HEAL                = 54,
-    ITEM_EFFECT_TYPE_STEAL_MANA                             = 55,
-    ITEM_EFFECT_TYPE_STEAL_LIFE                             = 56,
-    ITEM_EFFECT_TYPE_DAMAGES_TARGETS_ARMOR                  = 57,
-    ITEM_EFFECT_TYPE_FASTER_ATTACK                          = 58,
-    ITEM_EFFECT_TYPE_FASTER_HIT_RECOVERY                    = 59,
-    ITEM_EFFECT_TYPE_FAST_BLOCK                             = 60,
-    ITEM_EFFECT_TYPE_ATTACK_DAMAGE_PLUS                     = 61,
-    ITEM_EFFECT_TYPE_RANDOM_SPEED_ARROWS                    = 62,
-    ITEM_EFFECT_TYPE_CUSTOM_ATTACK_DAMAGE                   = 63, // used for Butcher's Cleaver
-    ITEM_EFFECT_TYPE_CUSTOM_DURABILITY                      = 64,
-    ITEM_EFFECT_TYPE_NO_STRENGTH_REQUIREMENT                = 65,
-    ITEM_EFFECT_TYPE_SET_SPELL_ID_AND_CHARGES               = 66, // (most likely erroneously) sets current spell charges to spell_id
-    ITEM_EFFECT_TYPE_FASTER_ATTACK_SWING                    = 67,
-    ITEM_EFFECT_TYPE_MAKE_WEAPON_ONE_HANDED                 = 68,
-    ITEM_EFFECT_TYPE_3X_DAMAGE_VS_DEMONS                    = 69,
-    ITEM_EFFECT_TYPE_ALL_RESISTANCES_EQUAL_0                = 70,
-    ITEM_EFFECT_TYPE_CONSTANTLY_LOSE_HIT_POINTS             = 72,
-    ITEM_EFFECT_TYPE_LIFE_STEAL_RANDOM                      = 73, // in range 0-12.5%, used for The Undead Crown
-    ITEM_EFFECT_TYPE_INFRAVISION                            = 74,
-    ITEM_EFFECT_TYPE_CUSTOM_ARMOR_CLASS                     = 75,
-    ITEM_EFFECT_TYPE_ARMOR_CLASS_ADDED_TO_LIFE              = 76,
-    ITEM_EFFECT_TYPE_10_PERCENT_MANA_ADDED_TO_ARMOR         = 77,
-    ITEM_EFFECT_TYPE_FIRE_RESISTANCE_BASED_ON_CLVL          = 78,
-    ITEM_EFFECT_TYPE_ARMOR_CLASS_MINUS                      = 79,
-    ITEM_EFFECT_TYPE_INVALID                                = -1,
-} item_effect_type;
-
-// Enumeration describing in which slot item could be equipped.
-//
-// References:
-//    * https://github.com/sanctuary/notes/blob/master/structs.h#item
-typedef enum {
-	ITEM_EQUIP_TYPE_NONE        =  0,
-	ITEM_EQUIP_TYPE_ONE_HANDED  =  1,
-	ITEM_EQUIP_TYPE_TWO_HANDED  =  2,
-	ITEM_EQUIP_TYPE_CHEST       =  3,
-	ITEM_EQUIP_TYPE_HEAD        =  4,
-	ITEM_EQUIP_TYPE_RING        =  5,
-	ITEM_EQUIP_TYPE_AMULET      =  6,
-	ITEM_EQUIP_TYPE_UNEQUIPABLE =  7,
-	ITEM_EQUIP_TYPE_BELT        =  8,
-	ITEM_EQUIP_TYPE_INVALID     = -1,
-} item_equip_type;
 
 // Item IDs specify item_data array indices.
 //
@@ -518,112 +497,144 @@ typedef enum {
 // References:
 //    * https://github.com/sanctuary/notes/blob/master/structs.h#item
 typedef enum {
-    ITEM_INV_GRAPHICS_ID_POTION_OF_FULL_MANA         = 0  ,
-    ITEM_INV_GRAPHICS_ID_SCROLL_OF                   = 1  ,
-    ITEM_INV_GRAPHICS_ID_GOLD_SMALL                  = 4  ,
-    ITEM_INV_GRAPHICS_ID_GOLD_MEDIUM                 = 5  ,
-    ITEM_INV_GRAPHICS_ID_GOLD_LARGE                  = 6  ,
-    ITEM_INV_GRAPHICS_ID_RING_OF_TRUTH               = 10 ,
-    ITEM_INV_GRAPHICS_ID_RING                        = 12 ,
-    ITEM_INV_GRAPHICS_ID_SPECTRAL_ELIXIR             = 15 ,
-    ITEM_INV_GRAPHICS_ID_GOLDEN_ELIXIR               = 17 ,
-    ITEM_INV_GRAPHICS_ID_EMPYREAN_BAND               = 18 ,
-    ITEM_INV_GRAPHICS_ID_EAR_SORCEROR                = 19 ,
-    ITEM_INV_GRAPHICS_ID_EAR_WARRIOR                 = 20 ,
-    ITEM_INV_GRAPHICS_ID_EAR_ROGUE                   = 21 ,
-    ITEM_INV_GRAPHICS_ID_BLOOD_STONE                 = 25 ,
-    ITEM_INV_GRAPHICS_ID_ELIXIR_OF_VITALITY          = 31 ,
-    ITEM_INV_GRAPHICS_ID_POTION_OF_HEALING           = 32 ,
-    ITEM_INV_GRAPHICS_ID_POTION_OF_FULL_REJUVENATION = 33 ,
-    ITEM_INV_GRAPHICS_ID_ELIXIR_OF_MAGIC             = 34 ,
-    ITEM_INV_GRAPHICS_ID_POTION_OF_FULL_HEALING      = 35 ,
-    ITEM_INV_GRAPHICS_ID_ELIXIR_OF_DEXTERITY         = 36 ,
-    ITEM_INV_GRAPHICS_ID_POTION_OF_REJUVENATION      = 37 ,
-    ITEM_INV_GRAPHICS_ID_ELIXIR_OF_STRENGTH          = 38 ,
-    ITEM_INV_GRAPHICS_ID_POTION_OF_MANA              = 39 ,
-    ITEM_INV_GRAPHICS_ID_BRAIN                       = 40 ,
-    ITEM_INV_GRAPHICS_ID_OPTIC_AMULET                = 44 ,
-    ITEM_INV_GRAPHICS_ID_AMULET                      = 45 ,
-    ITEM_INV_GRAPHICS_ID_DAGGER                      = 51 ,
-    ITEM_INV_GRAPHICS_ID_BLADE                       = 56 ,
-    ITEM_INV_GRAPHICS_ID_BASTARD_SWORD               = 57 ,
-    ITEM_INV_GRAPHICS_ID_MACE                        = 59 ,
-    ITEM_INV_GRAPHICS_ID_LONG_SWORD                  = 60 ,
-    ITEM_INV_GRAPHICS_ID_BROAD_SWORD                 = 61 ,
-    ITEM_INV_GRAPHICS_ID_FALCHION                    = 62 ,
-    ITEM_INV_GRAPHICS_ID_MORNING_STAR                = 63 ,
-    ITEM_INV_GRAPHICS_ID_SHORT_SWORD                 = 64 ,
-    ITEM_INV_GRAPHICS_ID_CLAYMORE                    = 65 ,
-    ITEM_INV_GRAPHICS_ID_CLUB                        = 66 ,
-    ITEM_INV_GRAPHICS_ID_SABRE                       = 67 ,
-    ITEM_INV_GRAPHICS_ID_SPIKED_CLUB                 = 70 ,
-    ITEM_INV_GRAPHICS_ID_SCIMITAR                    = 72 ,
-    ITEM_INV_GRAPHICS_ID_FULL_HELM                   = 75 ,
-    ITEM_INV_GRAPHICS_ID_MAGIC_ROCK                  = 76 ,
-    ITEM_INV_GRAPHICS_ID_THE_UNDEAD_CROWN            = 78 ,
-    ITEM_INV_GRAPHICS_ID_HELM                        = 82 ,
-    ITEM_INV_GRAPHICS_ID_BUCKLER                     = 83 ,
-    ITEM_INV_GRAPHICS_ID_VIEL_OF_STEEL               = 85 ,
-    ITEM_INV_GRAPHICS_ID_BOOK_GREY                   = 86 ,
-    ITEM_INV_GRAPHICS_ID_BOOK_RED                    = 87 ,
-    ITEM_INV_GRAPHICS_ID_BOOK_BLUE                   = 88 ,
-    ITEM_INV_GRAPHICS_ID_BLACK_MUSHROOM              = 89 ,
-    ITEM_INV_GRAPHICS_ID_SKULL_CAP                   = 90 ,
-    ITEM_INV_GRAPHICS_ID_CAP                         = 91 ,
-    ITEM_INV_GRAPHICS_ID_HARLEQUIN_CREST             = 93 ,
-    ITEM_INV_GRAPHICS_ID_CROWN                       = 95 ,
-    ITEM_INV_GRAPHICS_ID_MAP_OF_THE_STARS            = 96 ,
-    ITEM_INV_GRAPHICS_ID_FUNGAL_TOME                 = 97 ,
-    ITEM_INV_GRAPHICS_ID_GREAT_HELM                  = 98 ,
-    ITEM_INV_GRAPHICS_ID_BATTLE_AXE                  = 101,
-    ITEM_INV_GRAPHICS_ID_HUNTERS_BOW                 = 102,
-    ITEM_INV_GRAPHICS_ID_FIELD_PLATE                 = 103,
-    ITEM_INV_GRAPHICS_ID_SMALL_SHIELD                = 105,
-    ITEM_INV_GRAPHICS_ID_CLEAVER                     = 106,
-    ITEM_INV_GRAPHICS_ID_STUDDED_LEATHER_ARMOR       = 107,
-    ITEM_INV_GRAPHICS_ID_SHORT_STAFF                 = 109,
-    ITEM_INV_GRAPHICS_ID_TWO_HANDED_SWORD            = 110,
-    ITEM_INV_GRAPHICS_ID_CHAIN_MAIL                  = 111,
-    ITEM_INV_GRAPHICS_ID_SMALL_AXE                   = 112,
-    ITEM_INV_GRAPHICS_ID_KITE_SHIELD                 = 113,
-    ITEM_INV_GRAPHICS_ID_SCALE_MAIL                  = 114,
-    ITEM_INV_GRAPHICS_ID_SHORT_BOW                   = 118,
-    ITEM_INV_GRAPHICS_ID_LONG_WAR_BOW                = 119,
-    ITEM_INV_GRAPHICS_ID_WAR_HAMMER                  = 121,
-    ITEM_INV_GRAPHICS_ID_MAUL                        = 122,
-    ITEM_INV_GRAPHICS_ID_LONG_STAFF                  = 123,
-    ITEM_INV_GRAPHICS_ID_WAR_STAFF                   = 124,
-    ITEM_INV_GRAPHICS_ID_TAVERN_SIGN                 = 126,
-    ITEM_INV_GRAPHICS_ID_HARD_LEATHER_ARMOR          = 127,
-    ITEM_INV_GRAPHICS_ID_RAGS                        = 128,
-    ITEM_INV_GRAPHICS_ID_QUILTED_ARMOR               = 129,
-    ITEM_INV_GRAPHICS_ID_FLAIL                       = 131,
-    ITEM_INV_GRAPHICS_ID_TOWER_SHIELD                = 132,
-    ITEM_INV_GRAPHICS_ID_COMPOSITE_BOW               = 133,
-    ITEM_INV_GRAPHICS_ID_GREAT_SWORD                 = 134,
-    ITEM_INV_GRAPHICS_ID_LEATHER_ARMOR               = 135,
-    ITEM_INV_GRAPHICS_ID_SPLINT_MAIL                 = 136,
-    ITEM_INV_GRAPHICS_ID_ROBE                        = 137,
-    ITEM_INV_GRAPHICS_ID_ANVIL_OF_FURY               = 140,
-    ITEM_INV_GRAPHICS_ID_BROAD_AXE                   = 141,
-    ITEM_INV_GRAPHICS_ID_LARGE_AXE                   = 142,
-    ITEM_INV_GRAPHICS_ID_GREAT_AXE                   = 143,
-    ITEM_INV_GRAPHICS_ID_AXE                         = 144,
-    ITEM_INV_GRAPHICS_ID_LARGE_SHIELD                = 147,
-    ITEM_INV_GRAPHICS_ID_GOTHIC_SHIELD               = 148,
-    ITEM_INV_GRAPHICS_ID_CLOAK                       = 149,
-    ITEM_INV_GRAPHICS_ID_CAPE                        = 150,
-    ITEM_INV_GRAPHICS_ID_FULL_PLATE_MAIL             = 151,
-    ITEM_INV_GRAPHICS_ID_GOTHIC_PLATE                = 152,
-    ITEM_INV_GRAPHICS_ID_BREAST_PLATE                = 153,
-    ITEM_INV_GRAPHICS_ID_RING_MAIL                   = 154,
-    ITEM_INV_GRAPHICS_ID_STAFF_OF_LAZARUS            = 155,
-    ITEM_INV_GRAPHICS_ID_ARKAINES_VALOR              = 157,
-    ITEM_INV_GRAPHICS_ID_SHORT_WAR_BOW               = 165,
-    ITEM_INV_GRAPHICS_ID_COMPOSITE_STAFF             = 166,
-    ITEM_INV_GRAPHICS_ID_SHORT_BATTLE_BOW            = 167,
-    ITEM_INV_GRAPHICS_ID_GOLD                        = 168,
+	ITEM_INV_GRAPHICS_ID_POTION_OF_FULL_MANA         =   0,
+	ITEM_INV_GRAPHICS_ID_SCROLL_OF                   =   1,
+	ITEM_INV_GRAPHICS_ID_GOLD_SMALL                  =   4,
+	ITEM_INV_GRAPHICS_ID_GOLD_MEDIUM                 =   5,
+	ITEM_INV_GRAPHICS_ID_GOLD_LARGE                  =   6,
+	ITEM_INV_GRAPHICS_ID_RING_OF_TRUTH               =  10,
+	ITEM_INV_GRAPHICS_ID_RING                        =  12,
+	ITEM_INV_GRAPHICS_ID_SPECTRAL_ELIXIR             =  15,
+	ITEM_INV_GRAPHICS_ID_GOLDEN_ELIXIR               =  17,
+	ITEM_INV_GRAPHICS_ID_EMPYREAN_BAND               =  18,
+	ITEM_INV_GRAPHICS_ID_EAR_SORCEROR                =  19,
+	ITEM_INV_GRAPHICS_ID_EAR_WARRIOR                 =  20,
+	ITEM_INV_GRAPHICS_ID_EAR_ROGUE                   =  21,
+	ITEM_INV_GRAPHICS_ID_BLOOD_STONE                 =  25,
+	ITEM_INV_GRAPHICS_ID_ELIXIR_OF_VITALITY          =  31,
+	ITEM_INV_GRAPHICS_ID_POTION_OF_HEALING           =  32,
+	ITEM_INV_GRAPHICS_ID_POTION_OF_FULL_REJUVENATION =  33,
+	ITEM_INV_GRAPHICS_ID_ELIXIR_OF_MAGIC             =  34,
+	ITEM_INV_GRAPHICS_ID_POTION_OF_FULL_HEALING      =  35,
+	ITEM_INV_GRAPHICS_ID_ELIXIR_OF_DEXTERITY         =  36,
+	ITEM_INV_GRAPHICS_ID_POTION_OF_REJUVENATION      =  37,
+	ITEM_INV_GRAPHICS_ID_ELIXIR_OF_STRENGTH          =  38,
+	ITEM_INV_GRAPHICS_ID_POTION_OF_MANA              =  39,
+	ITEM_INV_GRAPHICS_ID_BRAIN                       =  40,
+	ITEM_INV_GRAPHICS_ID_OPTIC_AMULET                =  44,
+	ITEM_INV_GRAPHICS_ID_AMULET                      =  45,
+	ITEM_INV_GRAPHICS_ID_DAGGER                      =  51,
+	ITEM_INV_GRAPHICS_ID_BLADE                       =  56,
+	ITEM_INV_GRAPHICS_ID_BASTARD_SWORD               =  57,
+	ITEM_INV_GRAPHICS_ID_MACE                        =  59,
+	ITEM_INV_GRAPHICS_ID_LONG_SWORD                  =  60,
+	ITEM_INV_GRAPHICS_ID_BROAD_SWORD                 =  61,
+	ITEM_INV_GRAPHICS_ID_FALCHION                    =  62,
+	ITEM_INV_GRAPHICS_ID_MORNING_STAR                =  63,
+	ITEM_INV_GRAPHICS_ID_SHORT_SWORD                 =  64,
+	ITEM_INV_GRAPHICS_ID_CLAYMORE                    =  65,
+	ITEM_INV_GRAPHICS_ID_CLUB                        =  66,
+	ITEM_INV_GRAPHICS_ID_SABRE                       =  67,
+	ITEM_INV_GRAPHICS_ID_SPIKED_CLUB                 =  70,
+	ITEM_INV_GRAPHICS_ID_SCIMITAR                    =  72,
+	ITEM_INV_GRAPHICS_ID_FULL_HELM                   =  75,
+	ITEM_INV_GRAPHICS_ID_MAGIC_ROCK                  =  76,
+	ITEM_INV_GRAPHICS_ID_THE_UNDEAD_CROWN            =  78,
+	ITEM_INV_GRAPHICS_ID_HELM                        =  82,
+	ITEM_INV_GRAPHICS_ID_BUCKLER                     =  83,
+	ITEM_INV_GRAPHICS_ID_VIEL_OF_STEEL               =  85,
+	ITEM_INV_GRAPHICS_ID_BOOK_GREY                   =  86,
+	ITEM_INV_GRAPHICS_ID_BOOK_RED                    =  87,
+	ITEM_INV_GRAPHICS_ID_BOOK_BLUE                   =  88,
+	ITEM_INV_GRAPHICS_ID_BLACK_MUSHROOM              =  89,
+	ITEM_INV_GRAPHICS_ID_SKULL_CAP                   =  90,
+	ITEM_INV_GRAPHICS_ID_CAP                         =  91,
+	ITEM_INV_GRAPHICS_ID_HARLEQUIN_CREST             =  93,
+	ITEM_INV_GRAPHICS_ID_CROWN                       =  95,
+	ITEM_INV_GRAPHICS_ID_MAP_OF_THE_STARS            =  96,
+	ITEM_INV_GRAPHICS_ID_FUNGAL_TOME                 =  97,
+	ITEM_INV_GRAPHICS_ID_GREAT_HELM                  =  98,
+	ITEM_INV_GRAPHICS_ID_BATTLE_AXE                  = 101,
+	ITEM_INV_GRAPHICS_ID_HUNTERS_BOW                 = 102,
+	ITEM_INV_GRAPHICS_ID_FIELD_PLATE                 = 103,
+	ITEM_INV_GRAPHICS_ID_SMALL_SHIELD                = 105,
+	ITEM_INV_GRAPHICS_ID_CLEAVER                     = 106,
+	ITEM_INV_GRAPHICS_ID_STUDDED_LEATHER_ARMOR       = 107,
+	ITEM_INV_GRAPHICS_ID_SHORT_STAFF                 = 109,
+	ITEM_INV_GRAPHICS_ID_TWO_HANDED_SWORD            = 110,
+	ITEM_INV_GRAPHICS_ID_CHAIN_MAIL                  = 111,
+	ITEM_INV_GRAPHICS_ID_SMALL_AXE                   = 112,
+	ITEM_INV_GRAPHICS_ID_KITE_SHIELD                 = 113,
+	ITEM_INV_GRAPHICS_ID_SCALE_MAIL                  = 114,
+	ITEM_INV_GRAPHICS_ID_SHORT_BOW                   = 118,
+	ITEM_INV_GRAPHICS_ID_LONG_WAR_BOW                = 119,
+	ITEM_INV_GRAPHICS_ID_WAR_HAMMER                  = 121,
+	ITEM_INV_GRAPHICS_ID_MAUL                        = 122,
+	ITEM_INV_GRAPHICS_ID_LONG_STAFF                  = 123,
+	ITEM_INV_GRAPHICS_ID_WAR_STAFF                   = 124,
+	ITEM_INV_GRAPHICS_ID_TAVERN_SIGN                 = 126,
+	ITEM_INV_GRAPHICS_ID_HARD_LEATHER_ARMOR          = 127,
+	ITEM_INV_GRAPHICS_ID_RAGS                        = 128,
+	ITEM_INV_GRAPHICS_ID_QUILTED_ARMOR               = 129,
+	ITEM_INV_GRAPHICS_ID_FLAIL                       = 131,
+	ITEM_INV_GRAPHICS_ID_TOWER_SHIELD                = 132,
+	ITEM_INV_GRAPHICS_ID_COMPOSITE_BOW               = 133,
+	ITEM_INV_GRAPHICS_ID_GREAT_SWORD                 = 134,
+	ITEM_INV_GRAPHICS_ID_LEATHER_ARMOR               = 135,
+	ITEM_INV_GRAPHICS_ID_SPLINT_MAIL                 = 136,
+	ITEM_INV_GRAPHICS_ID_ROBE                        = 137,
+	ITEM_INV_GRAPHICS_ID_ANVIL_OF_FURY               = 140,
+	ITEM_INV_GRAPHICS_ID_BROAD_AXE                   = 141,
+	ITEM_INV_GRAPHICS_ID_LARGE_AXE                   = 142,
+	ITEM_INV_GRAPHICS_ID_GREAT_AXE                   = 143,
+	ITEM_INV_GRAPHICS_ID_AXE                         = 144,
+	ITEM_INV_GRAPHICS_ID_LARGE_SHIELD                = 147,
+	ITEM_INV_GRAPHICS_ID_GOTHIC_SHIELD               = 148,
+	ITEM_INV_GRAPHICS_ID_CLOAK                       = 149,
+	ITEM_INV_GRAPHICS_ID_CAPE                        = 150,
+	ITEM_INV_GRAPHICS_ID_FULL_PLATE_MAIL             = 151,
+	ITEM_INV_GRAPHICS_ID_GOTHIC_PLATE                = 152,
+	ITEM_INV_GRAPHICS_ID_BREAST_PLATE                = 153,
+	ITEM_INV_GRAPHICS_ID_RING_MAIL                   = 154,
+	ITEM_INV_GRAPHICS_ID_STAFF_OF_LAZARUS            = 155,
+	ITEM_INV_GRAPHICS_ID_ARKAINES_VALOR              = 157,
+	ITEM_INV_GRAPHICS_ID_SHORT_WAR_BOW               = 165,
+	ITEM_INV_GRAPHICS_ID_COMPOSITE_STAFF             = 166,
+	ITEM_INV_GRAPHICS_ID_SHORT_BATTLE_BOW            = 167,
+	ITEM_INV_GRAPHICS_ID_GOLD                        = 168,
 } item_inv_graphics_id;
+
+// Additional item categorization.
+//
+// References:
+//    * https://github.com/sanctuary/notes/blob/master/structs.h#item
+typedef enum {
+	ITEM_MISC_ID_NONE                        =  0, // all non-unique weapons and armor have this code
+	ITEM_MISC_ID_USE_FIRST                   =  1, // unused
+	ITEM_MISC_ID_POTION_OF_FULL_HEALING      =  2,
+	ITEM_MISC_ID_POTION_OF_HEALING           =  3,
+	ITEM_MISC_ID_POTION_OF_MANA              =  6,
+	ITEM_MISC_ID_POTION_OF_FULL_MANA         =  7,
+	ITEM_MISC_ID_ELIXIR_OF_STRENGTH          = 10,
+	ITEM_MISC_ID_ELIXIR_OF_MAGIC             = 11,
+	ITEM_MISC_ID_ELIXIR_OF_DEXTERITY         = 12,
+	ITEM_MISC_ID_ELIXIR_OF_VITALITY          = 13,
+	ITEM_MISC_ID_POTION_OF_REJUVENATION      = 18,
+	ITEM_MISC_ID_POTION_OF_FULL_REJUVENATION = 19,
+	ITEM_MISC_ID_USE_LAST                    = 20, // unused
+	ITEM_MISC_ID_SCROLL                      = 21,
+	ITEM_MISC_ID_SCROLL_WITH_TARGET          = 22,
+	ITEM_MISC_ID_STAFF                       = 23,
+	ITEM_MISC_ID_BOOK                        = 24,
+	ITEM_MISC_ID_RING                        = 25,
+	ITEM_MISC_ID_AMULET                      = 26,
+	ITEM_MISC_ID_UNIQUE                      = 27,
+	ITEM_MISC_ID_POTION_OF_HEALING_SOMETHING = 28, // unused
+	ITEM_MISC_ID_MAP_OF_THE_STARS            = 42,
+	ITEM_MISC_ID_EAR                         = 43,
+	ITEM_MISC_ID_SPECTRAL_ELIXIR             = 44,
+	ITEM_MISC_ID_INVALID                     = -1,
+} item_misc_id;
 
 // Item quality levels.
 //
@@ -641,39 +652,39 @@ typedef enum {
 // References:
 //    * https://github.com/sanctuary/notes/blob/master/structs.h#item
 typedef enum {
-    ITEM_SPECIAL_EFFECT_NONE                        = 0         ,
-    ITEM_SPECIAL_EFFECT_INFRAVISION                 = 1         ,
-    ITEM_SPECIAL_EFFECT_LIFE_STEAL_RANDOM           = 2         , // in range 0-12.5%
-    ITEM_SPECIAL_EFFECT_RANDOM_SPEED_ARROWS         = 4         ,
-    ITEM_SPECIAL_EFFECT_FIRE_ARROWS                 = 8         ,
-    ITEM_SPECIAL_EFFECT_FIRE_DAMAGE_BONUS           = 0x10      ,
-    ITEM_SPECIAL_EFFECT_LIGHTNING_DAMAGE_BONUS      = 0x20      ,
-    ITEM_SPECIAL_EFFECT_CONSTANTLY_LOSE_HIT_POINTS  = 0x40      ,
-    ITEM_SPECIAL_EFFECT_UNKNOWN_1                   = 0x80      , // unused
-    ITEM_SPECIAL_EFFECT_USER_CANT_HEAL              = 0x100     ,
-    ITEM_SPECIAL_EFFECT_UNKNOWN_2                   = 0x200     , // unused
-    ITEM_SPECIAL_EFFECT_UNKNOWN_3                   = 0x400     , // unused
-    ITEM_SPECIAL_EFFECT_KNOCKS_TARGET_BACK          = 0x800     ,
-    ITEM_SPECIAL_EFFECT_HIT_MONSTER_DOESNT_HEAL     = 0x1000    ,
-    ITEM_SPECIAL_EFFECT_MANA_STEAL_3_PERCENT        = 0x2000    ,
-    ITEM_SPECIAL_EFFECT_MANA_STEAL_5_PERCENT        = 0x4000    ,
-    ITEM_SPECIAL_EFFECT_LIFE_STEAL_3_PERCENT        = 0x8000    ,
-    ITEM_SPECIAL_EFFECT_LIFE_STEAL_5_PERCENT        = 0x10000   ,
-    ITEM_SPECIAL_EFFECT_QUICK_ATTACK                = 0x20000   , // Suffix: Readiness
-    ITEM_SPECIAL_EFFECT_FAST_ATTACK                 = 0x40000   , // Suffix: Swiftness
-    ITEM_SPECIAL_EFFECT_FASTER_ATTACK               = 0x80000   , // Suffix: Speed
-    ITEM_SPECIAL_EFFECT_FASTEST_ATTACK              = 0x100000  , // Suffix: Haste
-    ITEM_SPECIAL_EFFECT_FAST_HIT_RECOVERY           = 0x200000  , // Suffix: Balance
-    ITEM_SPECIAL_EFFECT_FASTER_HIT_RECOVERY         = 0x400000  , // Suffix: Stability
-    ITEM_SPECIAL_EFFECT_FASTEST_HIT_RECOVERY        = 0x800000  , // Suffix: Harmony
-    ITEM_SPECIAL_EFFECT_FAST_BLOCK                  = 0x1000000 ,
-    ITEM_SPECIAL_EFFECT_LIGHTNING_ARROWS            = 0x2000000 ,
-    ITEM_SPECIAL_EFFECT_THORNS                      = 0x4000000 ,
-    ITEM_SPECIAL_EFFECT_NO_MANA                     = 0x8000000 , // cursed mana
-    ITEM_SPECIAL_EFFECT_ABSORBS_HALF_OF_TRAP_DAMAGE = 0x10000000,
-    ITEM_SPECIAL_EFFECT_UNKNOWN_4                   = 0x20000000, // unused
-    ITEM_SPECIAL_EFFECT_3X_DAMAGE_VS_DEMONS         = 0x40000000,
-    ITEM_SPECIAL_EFFECT_ALL_RESISTANCES_EQUAL_0     = 0x80000000,
+	ITEM_SPECIAL_EFFECT_NONE                        = 0x00000000,
+	ITEM_SPECIAL_EFFECT_INFRAVISION                 = 0x00000001,
+	ITEM_SPECIAL_EFFECT_LIFE_STEAL_RANDOM           = 0x00000002, // in range 0-12.5%
+	ITEM_SPECIAL_EFFECT_RANDOM_SPEED_ARROWS         = 0x00000004,
+	ITEM_SPECIAL_EFFECT_FIRE_ARROWS                 = 0x00000008,
+	ITEM_SPECIAL_EFFECT_FIRE_DAMAGE_BONUS           = 0x00000010,
+	ITEM_SPECIAL_EFFECT_LIGHTNING_DAMAGE_BONUS      = 0x00000020,
+	ITEM_SPECIAL_EFFECT_CONSTANTLY_LOSE_HIT_POINTS  = 0x00000040,
+	ITEM_SPECIAL_EFFECT_UNKNOWN_1                   = 0x00000080, // unused
+	ITEM_SPECIAL_EFFECT_USER_CANT_HEAL              = 0x00000100,
+	ITEM_SPECIAL_EFFECT_UNKNOWN_2                   = 0x00000200, // unused
+	ITEM_SPECIAL_EFFECT_UNKNOWN_3                   = 0x00000400, // unused
+	ITEM_SPECIAL_EFFECT_KNOCKS_TARGET_BACK          = 0x00000800,
+	ITEM_SPECIAL_EFFECT_HIT_MONSTER_DOESNT_HEAL     = 0x00001000,
+	ITEM_SPECIAL_EFFECT_MANA_STEAL_3_PERCENT        = 0x00002000,
+	ITEM_SPECIAL_EFFECT_MANA_STEAL_5_PERCENT        = 0x00004000,
+	ITEM_SPECIAL_EFFECT_LIFE_STEAL_3_PERCENT        = 0x00008000,
+	ITEM_SPECIAL_EFFECT_LIFE_STEAL_5_PERCENT        = 0x00010000,
+	ITEM_SPECIAL_EFFECT_QUICK_ATTACK                = 0x00020000, // Suffix: Readiness
+	ITEM_SPECIAL_EFFECT_FAST_ATTACK                 = 0x00040000, // Suffix: Swiftness
+	ITEM_SPECIAL_EFFECT_FASTER_ATTACK               = 0x00080000, // Suffix: Speed
+	ITEM_SPECIAL_EFFECT_FASTEST_ATTACK              = 0x00100000, // Suffix: Haste
+	ITEM_SPECIAL_EFFECT_FAST_HIT_RECOVERY           = 0x00200000, // Suffix: Balance
+	ITEM_SPECIAL_EFFECT_FASTER_HIT_RECOVERY         = 0x00400000, // Suffix: Stability
+	ITEM_SPECIAL_EFFECT_FASTEST_HIT_RECOVERY        = 0x00800000, // Suffix: Harmony
+	ITEM_SPECIAL_EFFECT_FAST_BLOCK                  = 0x01000000,
+	ITEM_SPECIAL_EFFECT_LIGHTNING_ARROWS            = 0x02000000,
+	ITEM_SPECIAL_EFFECT_THORNS                      = 0x04000000,
+	ITEM_SPECIAL_EFFECT_NO_MANA                     = 0x08000000, // cursed mana
+	ITEM_SPECIAL_EFFECT_ABSORBS_HALF_OF_TRAP_DAMAGE = 0x10000000,
+	ITEM_SPECIAL_EFFECT_UNKNOWN_4                   = 0x20000000, // unused
+	ITEM_SPECIAL_EFFECT_3X_DAMAGE_VS_DEMONS         = 0x40000000,
+	ITEM_SPECIAL_EFFECT_ALL_RESISTANCES_EQUAL_0     = 0x80000000,
 } item_special_effect;
 
 // Item types.
@@ -696,17 +707,6 @@ typedef enum {
 	ITEM_TYPE_NONE         = -1,
 } item_type;
 
-// Bit flag which is used to determine if affix could be applied to certain type of items.
-// As it can be noted each flag just represents one or more values from `item_type` enumeration.
-typedef enum {
-    AFFIX_ITEM_TYPE_JEWELRY = 0x1     ,
-    AFFIX_ITEM_TYPE_BOW     = 0x10    ,
-    AFFIX_ITEM_TYPE_STAFF   = 0x100   ,
-    AFFIX_ITEM_TYPE_WEAPON  = 0x1000  ,
-    AFFIX_ITEM_TYPE_SHIELD  = 0x10000 ,
-    AFFIX_ITEM_TYPE_ARMOR   = 0x100000,
-} affix_item_type;
-
 // Tile IDs for dungeon layout 1.
 //
 // TODO: Figure out how to fix broken link. Requires graphics files, which may
@@ -715,106 +715,106 @@ typedef enum {
 // References:
 //    * https://github.com/sanctuary/graphics/blob/master/l1/tiles/README.md
 typedef enum {
-	L1_TILE_ID_NONE                                    = 0,
-	L1_TILE_ID_WALL_SW                                 = 1,
-	L1_TILE_ID_WALL_SE                                 = 2,
-	L1_TILE_ID_ARCH_NE_ARCH_NW                         = 3,
-	L1_TILE_ID_WALL_SW_WALL_SE                         = 4,
-	L1_TILE_ID_ARCH_SW_ARCH_SE                         = 5,
-	L1_TILE_ID_WALL_END_SW                             = 6,
-	L1_TILE_ID_WALL_END_SE                             = 7,
-	L1_TILE_ID_ARCH_END_SW                             = 8,
-	L1_TILE_ID_ARCH_END_SE                             = 9,
-	L1_TILE_ID_WALL_SW_ARCH_SE                         = 10,
-	L1_TILE_ID_ARCH_SW                                 = 11,
-	L1_TILE_ID_ARCH_SE                                 = 12,
-	L1_TILE_ID_FLOOR                                   = 13,
-	L1_TILE_ID_ARCH_SW_WALL_SE                         = 14,
-	L1_TILE_ID_COLUMN                                  = 15,
-	L1_TILE_ID_ARCH_END_NE                             = 16,
-	L1_TILE_ID_ARCH_END_NW                             = 17,
-	L1_TILE_ID_DIRT_WALL_SW                            = 18,
-	L1_TILE_ID_DIRT_WALL_SE                            = 19,
-	L1_TILE_ID_DIRT_WALL_NE_WALL_NW                    = 20,
-	L1_TILE_ID_DIRT_WALL_SW_WALL_SE                    = 21,
-	L1_TILE_ID_DIRT                                    = 22,
-	L1_TILE_ID_DIRT_WALL_END_SW                        = 23,
-	L1_TILE_ID_DIRT_WALL_END_SE                        = 24,
-	L1_TILE_ID_DOOR_SW                                 = 25,
-	L1_TILE_ID_DOOR_SE                                 = 26,
-	L1_TILE_ID_WALL_SW_BAR_SE                          = 27,
-	L1_TILE_ID_DOOR_SW_DOOR_SE                         = 28,
-	L1_TILE_ID_BAR_SW_BAR_SE                           = 29,
-	L1_TILE_ID_DOOR_END_SW                             = 30,
-	L1_TILE_ID_DOOR_END_SE                             = 31,
-	L1_TILE_ID_BAR_END_SW                              = 32,
-	L1_TILE_ID_BAR_END_SE                              = 33,
-	L1_TILE_ID_DOOR_SW_BAR_SE                          = 34,
-	L1_TILE_ID_BAR_SW                                  = 35,
-	L1_TILE_ID_BAR_SE                                  = 36,
-	L1_TILE_ID_BAR_SW_WALL_SE                          = 37,
-	L1_TILE_ID_BAR_SW_ARCH_SE                          = 38,
-	L1_TILE_ID_BAR_SW_DOOR_SE                          = 39,
-	L1_TILE_ID_DOOR_SW_ARCH_SE                         = 40,
-	L1_TILE_ID_DOOR_SW_WALL_SE                         = 41,
-	L1_TILE_ID_ARCH_SW_DOOR_SE                         = 42,
-	L1_TILE_ID_WALL_SW_DOOR_SE                         = 43,
-	L1_TILE_ID_ARCH_SW_BAR_SE                          = 44,
-	L1_TILE_ID_CIRCLE_MARKING_1                        = 45,
-	L1_TILE_ID_CIRCLE_MARKING_2                        = 46,
-	L1_TILE_ID_CIRCLE_MARKING_3                        = 47,
-	L1_TILE_ID_CIRCLE_MARKING_4                        = 48,
-	L1_TILE_ID_CIRCLE_MARKING_5                        = 49,
-	L1_TILE_ID_CIRCLE_MARKING_6                        = 50,
-	L1_TILE_ID_CIRCLE_MARKING_7                        = 51,
-	L1_TILE_ID_CIRCLE_MARKING_8                        = 52,
-	L1_TILE_ID_CIRCLE_MARKING_9                        = 53,
-	L1_TILE_ID_CIRCLE_MARKING_10                       = 54,
-	L1_TILE_ID_CIRCLE_MARKING_11                       = 55,
-	L1_TILE_ID_CIRCLE_MARKING_12                       = 56,
-	L1_TILE_ID_STAIR_A_1                               = 57,
-	L1_TILE_ID_STAIR_A_2                               = 58,
-	L1_TILE_ID_STAIR_A_3                               = 59,
-	L1_TILE_ID_STAIR_A_4                               = 60,
-	L1_TILE_ID_STAIR_A_5                               = 61,
-	L1_TILE_ID_STAIR_A_6                               = 62,
-	L1_TILE_ID_STAIR_B_1                               = 63,
-	L1_TILE_ID_STAIR_B_2                               = 64,
-	L1_TILE_ID_STAIR_B_3                               = 65,
-	L1_TILE_ID_STAIR_B_4                               = 66,
-	L1_TILE_ID_STAIR_B_5                               = 67,
-	L1_TILE_ID_STAIR_B_6                               = 68,
-	L1_TILE_ID_TOMB_1                                  = 69,
-	L1_TILE_ID_TOMB_2                                  = 70,
-	L1_TILE_ID_TOMB_3                                  = 71,
-	L1_TILE_ID_TOMB_4                                  = 72,
-	L1_TILE_ID_TOMB_5                                  = 73,
-	L1_TILE_ID_TOMB_6                                  = 74,
-	L1_TILE_ID_TOMB_7                                  = 75,
-	L1_TILE_ID_TOMB_8                                  = 76,
-	L1_TILE_ID_TOMB_9                                  = 77,
-	L1_TILE_ID_TOMB_10                                 = 78,
-	L1_TILE_ID_WALL_SW_2                               = 79,
-	L1_TILE_ID_WALL_SE_2                               = 80,
-	L1_TILE_ID_WALL_NE_WALL_NW                         = 81,
-	L1_TILE_ID_WALL_SW_WALL_SE_2                       = 82,
-	L1_TILE_ID_WALL_SW_3                               = 83,
-	L1_TILE_ID_WALL_END_SW_2                           = 84,
-	L1_TILE_ID_WALL_END_SE_2                           = 85,
-	L1_TILE_ID_WALL_END_NE                             = 86,
-	L1_TILE_ID_WALL_END_NW                             = 87,
-	L1_TILE_ID_WALL_SE_3                               = 88,
-	L1_TILE_ID_TAPESTRY_WALL_SW_1                      = 89,
-	L1_TILE_ID_TAPESTRY_WALL_SW_2                      = 90,
-	L1_TILE_ID_TAPESTRY_WALL_SE_1                      = 91,
-	L1_TILE_ID_TAPESTRY_WALL_SE_2                      = 92,
-	L1_TILE_ID_WALL_SW_4                               = 93,
-	L1_TILE_ID_TOMB_WALL_SW                            = 94,
-	L1_TILE_ID_TOMB_WALL_SE                            = 95,
-	L1_TILE_ID_WALL_SE_4                               = 96,
-	L1_TILE_ID_BLOOD_WALL_SE_1                         = 97,
-	L1_TILE_ID_BLOOD_WALL_SE_2                         = 98,
-	L1_TILE_ID_BLOOD_WALL_SE_3                         = 99,
+	L1_TILE_ID_NONE                                    =   0,
+	L1_TILE_ID_WALL_SW                                 =   1,
+	L1_TILE_ID_WALL_SE                                 =   2,
+	L1_TILE_ID_ARCH_NE_ARCH_NW                         =   3,
+	L1_TILE_ID_WALL_SW_WALL_SE                         =   4,
+	L1_TILE_ID_ARCH_SW_ARCH_SE                         =   5,
+	L1_TILE_ID_WALL_END_SW                             =   6,
+	L1_TILE_ID_WALL_END_SE                             =   7,
+	L1_TILE_ID_ARCH_END_SW                             =   8,
+	L1_TILE_ID_ARCH_END_SE                             =   9,
+	L1_TILE_ID_WALL_SW_ARCH_SE                         =  10,
+	L1_TILE_ID_ARCH_SW                                 =  11,
+	L1_TILE_ID_ARCH_SE                                 =  12,
+	L1_TILE_ID_FLOOR                                   =  13,
+	L1_TILE_ID_ARCH_SW_WALL_SE                         =  14,
+	L1_TILE_ID_COLUMN                                  =  15,
+	L1_TILE_ID_ARCH_END_NE                             =  16,
+	L1_TILE_ID_ARCH_END_NW                             =  17,
+	L1_TILE_ID_DIRT_WALL_SW                            =  18,
+	L1_TILE_ID_DIRT_WALL_SE                            =  19,
+	L1_TILE_ID_DIRT_WALL_NE_WALL_NW                    =  20,
+	L1_TILE_ID_DIRT_WALL_SW_WALL_SE                    =  21,
+	L1_TILE_ID_DIRT                                    =  22,
+	L1_TILE_ID_DIRT_WALL_END_SW                        =  23,
+	L1_TILE_ID_DIRT_WALL_END_SE                        =  24,
+	L1_TILE_ID_DOOR_SW                                 =  25,
+	L1_TILE_ID_DOOR_SE                                 =  26,
+	L1_TILE_ID_WALL_SW_BAR_SE                          =  27,
+	L1_TILE_ID_DOOR_SW_DOOR_SE                         =  28,
+	L1_TILE_ID_BAR_SW_BAR_SE                           =  29,
+	L1_TILE_ID_DOOR_END_SW                             =  30,
+	L1_TILE_ID_DOOR_END_SE                             =  31,
+	L1_TILE_ID_BAR_END_SW                              =  32,
+	L1_TILE_ID_BAR_END_SE                              =  33,
+	L1_TILE_ID_DOOR_SW_BAR_SE                          =  34,
+	L1_TILE_ID_BAR_SW                                  =  35,
+	L1_TILE_ID_BAR_SE                                  =  36,
+	L1_TILE_ID_BAR_SW_WALL_SE                          =  37,
+	L1_TILE_ID_BAR_SW_ARCH_SE                          =  38,
+	L1_TILE_ID_BAR_SW_DOOR_SE                          =  39,
+	L1_TILE_ID_DOOR_SW_ARCH_SE                         =  40,
+	L1_TILE_ID_DOOR_SW_WALL_SE                         =  41,
+	L1_TILE_ID_ARCH_SW_DOOR_SE                         =  42,
+	L1_TILE_ID_WALL_SW_DOOR_SE                         =  43,
+	L1_TILE_ID_ARCH_SW_BAR_SE                          =  44,
+	L1_TILE_ID_CIRCLE_MARKING_1                        =  45,
+	L1_TILE_ID_CIRCLE_MARKING_2                        =  46,
+	L1_TILE_ID_CIRCLE_MARKING_3                        =  47,
+	L1_TILE_ID_CIRCLE_MARKING_4                        =  48,
+	L1_TILE_ID_CIRCLE_MARKING_5                        =  49,
+	L1_TILE_ID_CIRCLE_MARKING_6                        =  50,
+	L1_TILE_ID_CIRCLE_MARKING_7                        =  51,
+	L1_TILE_ID_CIRCLE_MARKING_8                        =  52,
+	L1_TILE_ID_CIRCLE_MARKING_9                        =  53,
+	L1_TILE_ID_CIRCLE_MARKING_10                       =  54,
+	L1_TILE_ID_CIRCLE_MARKING_11                       =  55,
+	L1_TILE_ID_CIRCLE_MARKING_12                       =  56,
+	L1_TILE_ID_STAIR_A_1                               =  57,
+	L1_TILE_ID_STAIR_A_2                               =  58,
+	L1_TILE_ID_STAIR_A_3                               =  59,
+	L1_TILE_ID_STAIR_A_4                               =  60,
+	L1_TILE_ID_STAIR_A_5                               =  61,
+	L1_TILE_ID_STAIR_A_6                               =  62,
+	L1_TILE_ID_STAIR_B_1                               =  63,
+	L1_TILE_ID_STAIR_B_2                               =  64,
+	L1_TILE_ID_STAIR_B_3                               =  65,
+	L1_TILE_ID_STAIR_B_4                               =  66,
+	L1_TILE_ID_STAIR_B_5                               =  67,
+	L1_TILE_ID_STAIR_B_6                               =  68,
+	L1_TILE_ID_TOMB_1                                  =  69,
+	L1_TILE_ID_TOMB_2                                  =  70,
+	L1_TILE_ID_TOMB_3                                  =  71,
+	L1_TILE_ID_TOMB_4                                  =  72,
+	L1_TILE_ID_TOMB_5                                  =  73,
+	L1_TILE_ID_TOMB_6                                  =  74,
+	L1_TILE_ID_TOMB_7                                  =  75,
+	L1_TILE_ID_TOMB_8                                  =  76,
+	L1_TILE_ID_TOMB_9                                  =  77,
+	L1_TILE_ID_TOMB_10                                 =  78,
+	L1_TILE_ID_WALL_SW_2                               =  79,
+	L1_TILE_ID_WALL_SE_2                               =  80,
+	L1_TILE_ID_WALL_NE_WALL_NW                         =  81,
+	L1_TILE_ID_WALL_SW_WALL_SE_2                       =  82,
+	L1_TILE_ID_WALL_SW_3                               =  83,
+	L1_TILE_ID_WALL_END_SW_2                           =  84,
+	L1_TILE_ID_WALL_END_SE_2                           =  85,
+	L1_TILE_ID_WALL_END_NE                             =  86,
+	L1_TILE_ID_WALL_END_NW                             =  87,
+	L1_TILE_ID_WALL_SE_3                               =  88,
+	L1_TILE_ID_TAPESTRY_WALL_SW_1                      =  89,
+	L1_TILE_ID_TAPESTRY_WALL_SW_2                      =  90,
+	L1_TILE_ID_TAPESTRY_WALL_SE_1                      =  91,
+	L1_TILE_ID_TAPESTRY_WALL_SE_2                      =  92,
+	L1_TILE_ID_WALL_SW_4                               =  93,
+	L1_TILE_ID_TOMB_WALL_SW                            =  94,
+	L1_TILE_ID_TOMB_WALL_SE                            =  95,
+	L1_TILE_ID_WALL_SE_4                               =  96,
+	L1_TILE_ID_BLOOD_WALL_SE_1                         =  97,
+	L1_TILE_ID_BLOOD_WALL_SE_2                         =  98,
+	L1_TILE_ID_BLOOD_WALL_SE_3                         =  99,
 	L1_TILE_ID_BLOOD_WALL_SW_1                         = 100,
 	L1_TILE_ID_BLOOD_WALL_SW_2                         = 101,
 	L1_TILE_ID_BLOOD_ARCH_SW                           = 102,
@@ -1098,6 +1098,14 @@ typedef enum {
 	MONSTER_ID_THE_ARCH_LITCH_MALIGNUS = 111, // monsters/darkmage/
 	MONSTER_ID_NONE                    =  -1,
 } monster_id;
+
+// Network message IDs.
+typedef enum {
+	NET_MSG_ID_I_NEED_HELP_COME_HERE   = 0,
+	NET_MSG_ID_FOLLOW_ME               = 1,
+	NET_MSG_ID_HERES_SOMETHING_FOR_YOU = 2,
+	NET_MSG_ID_NOW_YOU_DIE             = 3,
+} net_msg_id;
 
 // Pannel button IDs specify panel_buttons array indices.
 //
@@ -2363,16 +2371,16 @@ typedef enum {
 
 // Talk IDs for conversation dialogues.
 typedef enum {
-	TALK_ID_NONE                      = 0,
-	TALK_ID_GRISWOLD                  = 1,
-	TALK_ID_GRISWOLD_BUY_BASIC        = 2,
-	TALK_ID_GRISWOLD_SELL             = 3,
-	TALK_ID_GRISWOLD_REPAIR           = 4,
-	TALK_ID_ADRIA                     = 5,
-	TALK_ID_ADRIA_BUY                 = 6,
-	TALK_ID_ADRIA_SELL                = 7,
-	TALK_ID_ADRIA_RECHARGE            = 8,
-	TALK_ID_NOT_ENOUGH_GOLD           = 9,
+	TALK_ID_NONE                      =  0,
+	TALK_ID_GRISWOLD                  =  1,
+	TALK_ID_GRISWOLD_BUY_BASIC        =  2,
+	TALK_ID_GRISWOLD_SELL             =  3,
+	TALK_ID_GRISWOLD_REPAIR           =  4,
+	TALK_ID_ADRIA                     =  5,
+	TALK_ID_ADRIA_BUY                 =  6,
+	TALK_ID_ADRIA_SELL                =  7,
+	TALK_ID_ADRIA_RECHARGE            =  8,
+	TALK_ID_NOT_ENOUGH_GOLD           =  9,
 	TALK_ID_NOT_ENOUGH_ROOM           = 10,
 	TALK_ID_CONFIRM                   = 11,
 	TALK_ID_WIRT                      = 12,
@@ -2417,12 +2425,12 @@ typedef enum {
 // References:
 //    * https://github.com/sanctuary/notes/blob/master/data/towners.cpp#towner_anim_seq
 typedef enum {
-	TOWNER_ANIM_SEQ_ID_GRISWOLD =  0,
-	TOWNER_ANIM_SEQ_ID_PEPIN    =  1,
-	TOWNER_ANIM_SEQ_ID_CAIN     =  2,
-	TOWNER_ANIM_SEQ_ID_OGDEN    =  3,
-	TOWNER_ANIM_SEQ_ID_FARNHAM  =  4,
-	TOWNER_ANIM_SEQ_ID_ADRIA    =  5,
+	TOWNER_ANIM_SEQ_ID_GRISWOLD = 0,
+	TOWNER_ANIM_SEQ_ID_PEPIN    = 1,
+	TOWNER_ANIM_SEQ_ID_CAIN     = 2,
+	TOWNER_ANIM_SEQ_ID_OGDEN    = 3,
+	TOWNER_ANIM_SEQ_ID_FARNHAM  = 4,
+	TOWNER_ANIM_SEQ_ID_ADRIA    = 5,
 	TOWNER_ANIM_SEQ_ID_NONE     = -1,
 } towner_anim_seq_id;
 
