@@ -3,16 +3,25 @@
 // address: 0x457A01
 //
 // stores_init initializes the resources used by store owners.
+//
+// PSX ref: 0x80162CDC
+// PSX def: void InitStores__Fv()
 void stores_init();
 
 // address: 0x457A87
 //
 // stores_renew_items renews the items sold in stores.
+//
+// PSX ref: 0x80162DD0
+// PSX def: void SetupTownStores__Fv()
 void stores_renew_items();
 
 // address: 0x457B42
 //
 // stores_cleanup releases the resources used by store owners.
+//
+// PSX ref: 0x800695A4
+// PSX def: void FreeStoreMem__Fv()
 void stores_cleanup();
 
 // address: 0x457B78
