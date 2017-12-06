@@ -18,7 +18,11 @@ void __fastcall spell_use_mana(int player_num, spell_id spell_id);
 
 // address: 0x457584
 //
-// TODO: add documentation.
+// spell_can_cast reports whether the player may cast the specified spell.
+//
+// PSX ref: 0x80077498
+// PSX def: unsigned char CheckSpell__FiicUc(int id, int sn, char st, unsigned char manaonly)
+bool32_t __fastcall spell_can_cast(int player_num, int spell_id, int spell_type, bool32_t mana_only);
 
 // address: 0x4575D5
 //
@@ -26,16 +30,25 @@ void __fastcall spell_use_mana(int player_num, spell_id spell_id);
 //
 // PSX ref: 0x80077538
 // PSX def: void CastSpell__Fiiiiiiii(int id, int spl, int sx, int sy, int dx, int dy, int caster, int spllvl)
-void __fastcall spell_cast(int player_num, spell_id spell_id, int col, int row, int target_col, int target_row, int target_num, int spell_lvl);
+void __fastcall spell_cast(int player_num, spell_id spell_id, int x, int y, int target_x, int target_y, int target_num, int spell_lvl);
 
 // address: 0x4576B1
 //
-// TODO: add documentation.
+// spell_cast_resurrect casts resurrect on the target player.
+//
+// PSX ref: 0x80077850
+// PSX def: void DoResurrect__Fii(int pnum, int rid)
+void __fastcall spell_cast_resurrect(int player_num, int target_player_num);
 
 // address: 0x4577CB
 //
-// TODO: add documentation.
+// spell_resurrect resurrects the given player.
+void __fastcall spell_resurrect(int player_num);
 
 // address: 0x4578EE
 //
-// TODO: add documentation.
+// spell_cast_heal_other casts heal other on the target player.
+//
+// PSX ref: 0x80077AB8
+// PSX def: void DoHealOther__Fii(int pnum, int rid)
+void __fastcall spell_cast_heal_other(int player_num, int target_player_num);

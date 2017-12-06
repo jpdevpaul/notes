@@ -61,7 +61,7 @@ Each function has been categorised based on their original source file, as summa
 | [setmaps.cpp](setmaps.cpp)       | `0x456625`    | `0x456A15`  | 0% (0/6 functions)       |
 | [sha1.cpp](sha1.cpp)             | `0x456A16`    | `0x456CBA`  | 100% (6/6 functions)     |
 | [sound.cpp](sound.cpp)           | `0x456CBB`    | `0x45744D`  | 18% (4/22 functions)     |
-| [spells.cpp](spells.cpp)         | `0x45744E`    | `0x457A00`  | 42% (3/7 functions)      |
+| [spells.cpp](spells.cpp)         | `0x45744E`    | `0x457A00`  | 100% (7/7 functions)     |
 | [stores.cpp](stores.cpp)         | `0x457A01`    | `0x45C198`  | 67% (64/95 functions)    |
 | [sync.cpp](sync.cpp)             | `0x45C199`    | `0x45C86F`  | 0% (0/9 functions)       |
 | [themes.cpp](themes.cpp)         | `0x45C870`    | `0x45E08B`  | 0% (0/31 functions)      |
