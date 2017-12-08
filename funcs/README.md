@@ -1,6 +1,6 @@
 # Functions
 
-Each function has been categorised based on their original source file, as summarised by the table below. The *progress* column tracks the percentage of functions within a given source file that have been documented.
+Each function has been categorised based on their original source file, as summarised by the table below. The *progress* column tracks the percentage of functions within a given source file that has been documented.
 
 | Source File                      | Start Address | End Address | Progress                 |
 |----------------------------------|---------------|-------------|--------------------------|
@@ -33,7 +33,7 @@ Each function has been categorised based on their original source file, as summa
 | [init.cpp](init.cpp)             | `0x41A7B3`    | `0x41B18F`  | 47% (9/19 functions)     |
 | [interfac.cpp](interfac.cpp)     | `0x41B190`    | `0x41B813`  | 22% (2/9 functions)      |
 | [inv.cpp](inv.cpp)               | `0x41B814`    | `0x41F095`  | 10% (4/40 functions)     |
-| [items.cpp](items.cpp)           | `0x41F096`    | `0x425442`  | 9% (10/110 functions)    |
+| [items.cpp](items.cpp)           | `0x41F096`    | `0x425442`  | 10% (11/110 functions)   |
 | [lighting.cpp](lighting.cpp)     | `0x425443`    | `0x426563`  | 0% (0/24 functions)      |
 | [loadsave.cpp](loadsave.cpp)     | `0x426564`    | `0x4279F1`  | 34% (11/32 functions)    |
 | [log.cpp](log.cpp)               | `0x4279F2`    | `0x427E0D`  | 0% (0/11 functions)      |

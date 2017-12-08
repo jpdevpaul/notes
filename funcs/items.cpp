@@ -4,11 +4,19 @@
 //
 // items_load_drop_graphics loads item drop graphics and initializes the
 // tracking of dropped unique items.
+//
+// PSX ref: 0x8003E24C
+// PSX def: void InitItemGFX__Fv()
 void items_load_drop_graphics();
 
 // address: 0x41F0E8
 //
-// TODO: add documentation.
+// items_can_place reports whether it is possible to place an item at the given
+// coordinate.
+//
+// PSX ref: 0x8003E254
+// PSX def: unsigned char ItemPlace__Fii(int xp, int yp)
+bool32_t __fastcall items_can_place(int x, int y);
 
 // address: 0x41F13A
 //
