@@ -2,11 +2,12 @@
 
 // address: 0x4619A7
 //
-// trigs_init initializes triggers on the map.
+// trigs_init_archbishop_lazarus_lair initializers triggers on Archbishop
+// Lazarus' Lair.
 //
-// PSX ref: 0x80075018
-// PSX def: void InitVPTriggers__Fv()
-void trigs_init();
+// PSX ref: 0x801621AC
+// PSX def: void InitNoTriggers__Fv()
+void trigs_init_archbishop_lazarus_lair()
 
 // address: 0x4619B6
 //
@@ -30,15 +31,28 @@ void trigs_init();
 
 // address: 0x461F0A
 //
-// TODO: add documentation.
+// trigs_init_skeleton_kings_lair initializers triggers on Skeleton King's Lair.
+//
+// PSX ref: 0x80162BF8
+// PSX def: void InitSKingTriggers__Fv()
+void trigs_init_skeleton_kings_lair();
 
 // address: 0x461F3A
 //
-// TODO: add documentation.
+// trigs_init_bone_chamber initializers triggers on the Bone Chamber.
+//
+// PSX ref: 0x80162C44
+// PSX def: void InitSChambTriggers__Fv()
+void trigs_init_bone_chamber();
 
 // address: 0x461F6A
 //
-// TODO: add documentation.
+// trigs_init_poisoned_water_supply initializers triggers on the Poisoned Water
+// Supply.
+//
+// PSX ref: 0x80162C90
+// PSX def: void InitPWaterTriggers__Fv()
+void trigs_init_poisoned_water_supply();
 
 // address: 0x461F9A
 //

@@ -58,7 +58,7 @@ Each function has been categorised based on their original source file, as summa
 | [quests.cpp](quests.cpp)         | `0x45138E`    | `0x452830`  | 44% (11/25 functions)    |
 | [restricted.cpp](restricted.cpp) | `0x452831`    | `0x452974`  | 33% (1/3 functions)      |
 | [scrollrt.cpp](scrollrt.cpp)     | `0x452975`    | `0x456624`  | 9% (3/31 functions)      |
-| [setmaps.cpp](setmaps.cpp)       | `0x456625`    | `0x456A15`  | 0% (0/6 functions)       |
+| [setmaps.cpp](setmaps.cpp)       | `0x456625`    | `0x456A15`  | 1000% (6/6 functions)    |
 | [sha1.cpp](sha1.cpp)             | `0x456A16`    | `0x456CBA`  | 100% (6/6 functions)     |
 | [sound.cpp](sound.cpp)           | `0x456CBB`    | `0x45744D`  | 18% (4/22 functions)     |
 | [spells.cpp](spells.cpp)         | `0x45744E`    | `0x457A00`  | 100% (7/7 functions)     |
@@ -69,7 +69,7 @@ Each function has been categorised based on their original source file, as summa
 | [town.cpp](town.cpp)             | `0x45E151`    | `0x46019A`  | 15% (3/19 functions)     |
 | [towners.cpp](towners.cpp)       | `0x46019B`    | `0x4618A4`  | 100% (33/33 functions)   |
 | [track.cpp](track.cpp)           | `0x4618A5`    | `0x4619A6`  | 0% (0/5 functions)       |
-| [trigs.cpp](trigs.cpp)           | `0x4619A7`    | `0x462C6C`  | 4% (1/21 functions)      |
+| [trigs.cpp](trigs.cpp)           | `0x4619A7`    | `0x462C6C`  | 19% (4/21 functions)     |
 | [wave.cpp](wave.cpp)             | `0x462C6D`    | `0x46305F`  | 0% (0/18 functions)      |
 | [world.cpp](world.cpp)           | `0x463060`    | `0x469719`  | 0% (0/7 functions)       |
 | _crt.cpp                         | `0x46971A`    | `0x47746F`  | N/A                      |
