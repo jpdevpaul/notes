@@ -7,7 +7,7 @@
 //
 // PSX ref: 0x801621AC
 // PSX def: void InitNoTriggers__Fv()
-void trigs_init_archbishop_lazarus_lair()
+void trigs_init_archbishop_lazarus_lair();
 
 // address: 0x4619B6
 //
