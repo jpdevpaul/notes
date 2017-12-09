@@ -20,15 +20,27 @@ bool32_t __fastcall items_can_place(int x, int y);
 
 // address: 0x41F13A
 //
-// TODO: add documentation.
+// items_add_init_items adds the starting items on the ground of the map.
+//
+// PSX ref: 0x8003E2F0
+// PSX def: void AddInitItems__Fv()
+void items_add_init_items();
 
 // address: 0x41F24E
 //
-// TODO: add documentation.
+// items_init initializes the items on the ground of the map.
+//
+// PSX ref: 0x8003E4F8
+// PSX def: void InitItems__Fb(unknown re_init)
+void items_init();
 
 // address: 0x41F320
 //
-// TODO: add documentation.
+// items_calc_player_item_values calculates the player bonus from items.
+//
+// PSX ref: 0x8003E6B0
+// PSX def: void CalcPlrItemVals__FiUc(int p, unsigned char Loadgfx)
+void __fastcall items_calc_player_item_values(int player_num, bool32_t load_gfx);
 
 // address: 0x41F953
 //
