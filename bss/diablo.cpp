@@ -9,6 +9,16 @@ HWND hWndParent;
 
 */
 
+// address: 0x525600
+//
+// mouse_y specifies the current Y-coordinate of the mouse cursor.
+int mouse_y;
+
+// address: 0x525604
+//
+// mouse_x specifies the current X-coordinate of the mouse cursor.
+int mouse_x;
+
 // address: 0x525720
 //
 // visible_tile_squares specifies whether tile squares are visible. In the

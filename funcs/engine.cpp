@@ -298,14 +298,14 @@ void __fastcall engine_cel_decode_frame_with_header_and_colour_highlight(uint8_t
 
 // address: 0x417518
 //
-// engine_set_seed sets the global seed to x.
+// engine_set_seed sets the global seed to s.
 //
 // PSX ref: 0x8003DACC
 // PSX def: void SetRndSeed__Fl(long s)
 //
 // References:
 //    * https://github.com/sanctuary/notes/blob/master/bss/engine.cpp#seed
-void __fastcall engine_set_seed(int32_t x);
+void __fastcall engine_set_seed(int32_t s);
 
 // address: 0x41752C
 //

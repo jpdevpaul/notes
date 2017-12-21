@@ -422,6 +422,26 @@ typedef struct {
 	ScreenRow row_unused_2[16];
 } Screen;
 
+// SoundFile represents a WAV sound file.
+//
+// PSX def:
+//    typedef struct TSnd {
+//    } TSnd;
+typedef struct { // size = 0x28
+	// offset 0000 (18 bytes)
+	WAVEFORMATEX fmt;
+	// offset 0014 (4 bytes)
+	int32_t len;
+	// offset 0018 (4 bytes)
+	int32_t offset;
+	// offset 001C (4 bytes)
+	char *sound_path;
+	// offset 0020 (4 bytes)
+	IDirectSoundBuffer *DSB; // direct sound buffer.
+	// offset 0024 (4 bytes)
+	uint32_t start_tc; // start tick count.
+} SoundFile;
+
 // A Tile consists of four dungeon pieces (top, right, left, bottom), forming a
 // square.
 //
