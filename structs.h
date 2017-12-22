@@ -57,6 +57,100 @@ typedef struct {
 	speech_id archbishop_lazarus;
 } GossipData;
 
+// HeroItem contains the most essential information about the item of a player,
+// as used in save files.
+typedef struct { // size = 0x13
+	// offset 0000 (bytes 4)
+	int32_t seed;
+	// offset 0004 (bytes 2)
+	uint16_t wCF;
+	// offset 0006 (bytes 1)
+	item_id item_id;
+	// offset 0008 (bytes 1)
+	uint8_t identified_and_item_quality; // The first bit corresponds to identified and the remaining bits corresponds to item_quality.
+	// offset 0009 (bytes 1)
+	int8_t durability_cur;
+	// offset 000A (bytes 1)
+	int8_t durability_max;
+	// offset 000B (bytes 1)
+	int8_t charges_min;
+	// offset 000C (bytes 1)
+	int8_t charges_max;
+	// offset 000D (bytes 1)
+	int16_t gold_price;
+	// offset 000F (bytes 1)
+	uint32_t only_used_by_ear; // Stores the last 4 bytes of the ear name.
+} HeroItem;
+
+// Hero contains the most essential information about a player, as used in save
+// files.
+typedef struct { // size = 0x4F2
+	// offset 0008 (1 bytes)
+	int8_t daction;
+	// offset 0009 (1 bytes)
+	int8_t param1;
+	// offset 000A (1 bytes)
+	int8_t param2;
+	// offset 000B (1 bytes)
+	int8_t dlvl;
+	// offset 000C (1 bytes)
+	int8_t x;
+	// offset 000D (1 bytes)
+	int8_t y;
+	// offset 000E (1 bytes)
+	int8_t target_x;
+	// offset 000F (1 bytes)
+	int8_t target_y;
+	// offset 0010 (32 bytes)
+	char name[32];
+	// offset 0030 (1 bytes)
+	player_class player_class;
+	// offset 0031 (1 bytes)
+	int8_t str_base;
+	// offset 0032 (1 bytes)
+	int8_t mag_base;
+	// offset 0033 (1 bytes)
+	int8_t dex_base;
+	// offset 0034 (1 bytes)
+	int8_t vit_base;
+	// offset 0035 (1 bytes)
+	int8_t clvl;
+	// offset 0036 (1 bytes)
+	int8_t points;
+	// offset 0037 (4 bytes)
+	int32_t exp;
+	// offset 003B (4 bytes)
+	int32_t gold_total;
+	// offset 003F (4 bytes)
+	int32_t hp_base_cur;
+	// offset 0043 (4 bytes)
+	int32_t hp_base_max;
+	// offset 0047 (4 bytes)
+	int32_t mp_base_cur;
+	// offset 004B (4 bytes)
+	int32_t mp_base_max;
+	// offset 004F (37 bytes)
+	int8_t spell_lvl_from_spell_id[37];
+	// offset 0074 (8 bytes)
+	uint32_t known_spells[2]; // bitfield of known spells.
+	// offset 007C (133 bytes)
+	HeroItem body_items[7];
+	// offset 0101 (760 bytes)
+	HeroItem inv_items[40];
+	// offset 03F9 (40 bytes)
+	int8_t inv_num_from_inv_grid[40];
+	// offset 0421 (1 bytes)
+	int8_t ninv_items;
+	// offset 0422 (152 bytes)
+	HeroItem belt_items[8];
+	// offset 04BD (1 bytes)
+	int8_t on_battlenet;
+	// offset 04BE (1 bytes)
+	int8_t has_manashild;
+	// offset 04D2 (4 bytes)
+	int32_t difficulty;
+} Hero;
+
 // Item describes in-game state of any game item.
 //
 // References:
