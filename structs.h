@@ -64,7 +64,7 @@ typedef struct { // size = 0x13
 	int32_t seed;
 	// offset 0004 (bytes 2)
 	uint16_t wCF;
-	// offset 0006 (bytes 1)
+	// offset 0006 (bytes 2)
 	item_id item_id;
 	// offset 0008 (bytes 1)
 	uint8_t identified_and_item_quality; // The first bit corresponds to identified and the remaining bits corresponds to item_quality.
@@ -76,9 +76,9 @@ typedef struct { // size = 0x13
 	int8_t charges_min;
 	// offset 000C (bytes 1)
 	int8_t charges_max;
-	// offset 000D (bytes 1)
+	// offset 000D (bytes 2)
 	int16_t gold_price;
-	// offset 000F (bytes 1)
+	// offset 000F (bytes 4)
 	uint32_t only_used_by_ear; // Stores the last 4 bytes of the ear name.
 } HeroItem;
 
