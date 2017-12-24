@@ -558,6 +558,21 @@ typedef struct {
 	uint16_t bottom;
 } Tile;
 
+struct TMsg;
+
+// TMsgHeader represents the header of a timed message.
+typedef struct {
+	TMsg *next;
+	uint32_t start_tc;
+	uint8_t len;
+} TMsgHeader;
+
+// TMsg represents a timed message.
+typedef struct TMsg {
+	TMsgHeader hdr;
+	uint8_t data[3]; // The size of msg is >= 3 and is dynamically allocated.
+} TMsg;
+
 // UniqueItemData describes the properties and effects of a unique item.
 typedef struct { // size = 0x54
 	// offset 0000 (4 bytes)
