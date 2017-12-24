@@ -116,8 +116,11 @@ bool32_t __fastcall msg_is_portal_inactive(int portal_num);
 
 // address: 0x43C873
 //
-// msg_send_cmd sends a command without body to connected peers.
-void __fastcall msg_send_cmd(bool32_t a1, cmd cmd);
+// msg_send_cmd sends a command message without body to connected peers.
+//
+// PSX ref: 0x8004F6D0
+// PSX def: void NetSendCmd__FUcUc(unsigned char bHiPri, unsigned char bCmd)
+void __fastcall msg_send_cmd(bool32_t high_priority, cmd cmd);
 
 // address: 0x43C891
 //
@@ -125,55 +128,82 @@ void __fastcall msg_send_cmd(bool32_t a1, cmd cmd);
 
 // address: 0x43C8C7
 //
-// msg_send_cmd_coord sends a command with a 2-byte body specifying X,Y
-// coordinates to connected peers.
-void __fastcall msg_send_cmd_coord(bool32_t a1, cmd cmd, int8_t x, int8_t y);
+// msg_send_cmd_coord sends a command message with X,Y coordinates to connected peers.
+//
+// PSX ref: 0x8004F744
+// PSX def: void NetSendCmdLoc__FUcUcUcUc(unsigned char bHiPri, unsigned char bCmd, unsigned char x, unsigned char y)
+void __fastcall msg_send_cmd_coord(bool32_t high_priority, cmd cmd, int8_t x, int8_t y);
 
 // address: 0x43C8F3
 //
-// msg_send_cmd_coord_word sends a command with a 4-byte body specifying X,Y
-// coordinates and a 16-bit value to connected peers.
-void __fastcall msg_send_cmd_coord_word(bool32_t a1, cmd cmd, int8_t x, int8_t y, int16_t value);
+// msg_send_cmd_coord_param1 sends a command message with X,Y coordinates and
+// one parameter to connected peers.
+//
+// PSX ref: 0x8004F774
+// PSX def: void NetSendCmdLocParam1__FUcUcUcUcUs(unsigned char bHiPri, unsigned char bCmd, unsigned char x, unsigned char y, int wParam1)
+void __fastcall msg_send_cmd_coord_param1(bool32_t high_priority, cmd cmd, int8_t x, int8_t y, int16_t param1);
 
 // address: 0x43C928
 //
-// msg_send_cmd_coord_word_word sends a command with a 6-byte body specifying
-// X,Y coordinates and two 16-bit values to connected peers.
-void __fastcall msg_send_cmd_coord_word_word(bool32_t a1, cmd cmd, int8_t x, int8_t y, int16_t value1, int16_t value2);
+// msg_send_cmd_coord_param2 sends a command message with  X,Y coordinates and
+// two parameters to connected peers.
+//
+// PSX ref: 0x8004F7AC
+// PSX def: void NetSendCmdLocParam2__FUcUcUcUcUsUs(unsigned char bHiPri, unsigned char bCmd, unsigned char x, unsigned char y, int wParam1, int wParam2)
+void __fastcall msg_send_cmd_coord_param2(bool32_t high_priority, cmd cmd, int8_t x, int8_t y, int16_t param1, int16_t param2);
 
 // address: 0x43C965
 //
-// msg_send_cmd_coord_word_word_word sends a command with a 8-byte body
-// specifying X,Y coordinates and three 16-bit values to connected peers.
-void __fastcall msg_send_cmd_coord_word_word_word(bool32_t a1, cmd cmd, int8_t x, int8_t y, int16_t value1, int16_t value2, int16_t value3);
+// msg_send_cmd_coord_param3 sends a command message with X,Y coordinates and
+// three parameters to connected peers.
+//
+// PSX ref: 0x8004F7EC
+// PSX def: void NetSendCmdLocParam3__FUcUcUcUcUsUsUs(unsigned char bHiPri, unsigned char bCmd, unsigned char x, unsigned char y, int wParam1, int wParam2, int wParam3)
+void __fastcall msg_send_cmd_coord_param3(bool32_t high_priority, cmd cmd, int8_t x, int8_t y, int16_t param1, int16_t param2, int16_t param3);
 
 // address: 0x43C9AB
 //
-// msg_send_cmd_word sends a command with a 2-byte body specifying a 16-bit
-// value to connected peers.
-void __fastcall msg_send_cmd_word(bool32_t a1, cmd cmd, int16_t value);
+// msg_send_cmd_param1 sends a command message with one parameter to connected
+// peers.
+//
+// PSX ref: 0x8004F834
+// PSX def: void NetSendCmdParam1__FUcUcUs(unsigned char bHiPri, unsigned char bCmd, unsigned short wParam1)
+void __fastcall msg_send_cmd_param1(bool32_t high_priority, cmd cmd, int16_t param1);
 
 // address: 0x43C9D3
 //
-// msg_send_cmd_word_word sends a command with a 4-byte body specifying two
-// 16-bit values to connected peers.
-void __fastcall msg_send_cmd_word_word(bool32_t a1, cmd cmd, int16_t value1, int16_t value2);
+// msg_send_cmd_param2 sends a command message with two parameters to connected
+// peers.
+//
+// PSX ref: 0x8004F860
+// PSX def: void NetSendCmdParam2__FUcUcUsUs(unsigned char bHiPri, unsigned char bCmd, unsigned short wParam1, unsigned short wParam2)
+void __fastcall msg_send_cmd_param2(bool32_t high_priority, cmd cmd, int16_t param1, int16_t param2);
 
 // address: 0x43CA04
 //
-// msg_send_cmd_word_word_word sends a command with a 6-byte body specifying
-// three 16-bit values to connected peers.
-void __fastcall msg_send_cmd_word_word_word(bool32_t a1, cmd cmd, int16_t value1, int16_t value2, int16_t value3);
+// msg_send_cmd_param3 sends a command message with three parameters to
+// connected peers.
+//
+// PSX ref: 0x8004F890
+// PSX def: void NetSendCmdParam3__FUcUcUsUsUs(unsigned char bHiPri, unsigned char bCmd, unsigned short wParam1, unsigned short wParam2, int wParam3)
+void __fastcall msg_send_cmd_param3(bool32_t high_priority, cmd cmd, int16_t param1, int16_t param2, int16_t param3);
 
 // address: 0x43CA3D
 //
-// msg_send_cmd_word sends a sync quest command to connected peers.
-void __fastcall msg_send_cmd_sync_quest(bool32_t a1, quest_id quest_id);
+// msg_send_cmd_sync_quest sends a sync quest command message to connected
+// peers.
+//
+// PSX ref: 0x8004F8C8
+// PSX def: void NetSendCmdQuest__FUcUc(unsigned char bHiPri, unsigned char q)
+void __fastcall msg_send_cmd_sync_quest(bool32_t high_priority, quest_id quest_id);
 
 // address: 0x43CA84
 //
-// msg_send_cmd_item sends an item command to connected peers.
-void __fastcall msg_send_cmd_item(bool32_t a1, cmd cmd, int8_t player_num_1, int8_t player_num_2, int8_t item_num);
+// msg_send_cmd_get_item sends a get item command message to connected peers.
+//
+// PSX ref: 0x8004F93C
+// PSX def: void NetSendCmdGItem__FUcUcUcUcUc(unsigned char bHiPri, unsigned char bCmd, unsigned char mast, unsigned char pnum, int ii)
+void __fastcall msg_send_cmd_get_item(bool32_t high_priority, cmd cmd, int8_t player_num_master, int8_t player_num, int8_t item_num);
 
 // address: 0x43CC09
 //
