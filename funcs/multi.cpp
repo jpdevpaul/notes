@@ -1,10 +1,12 @@
 // address: 0x43FAC4
 //
-// TODO: add documentation.
+// j_multi_cpp_init initializes the C++ runtime of multi.cpp.
+void j_multi_cpp_init();
 
 // address: 0x43FAC9
 //
-// TODO: add documentation.
+// multi_cpp_init initializes the C++ runtime of multi.cpp.
+void multi_cpp_init();
 
 // address: 0x43FAD4
 //

@@ -335,7 +335,8 @@ int32_t __fastcall engine_rand_cap(int unused, int32_t max);
 
 // address: 0x41756D
 //
-// TODO: add documentation.
+// engine_cpp_init_2 initializes the C++ runtime of engine.cpp.
+void engine_cpp_init_2();
 
 // address: 0x417577
 //

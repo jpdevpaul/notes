@@ -1,10 +1,12 @@
 // address: 0x44A8E6
 //
-// TODO: add documentation.
+// j_player_cpp_init initializes the C++ runtime of player.cpp.
+void j_player_cpp_init();
 
 // address: 0x44A8EB
 //
-// TODO: add documentation.
+// player_cpp_init initializes the C++ runtime of player.cpp.
+void player_cpp_init();
 
 // address: 0x44A8F6
 //

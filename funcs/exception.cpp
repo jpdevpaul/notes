@@ -1,6 +1,7 @@
 // address: 0x4182AD
 //
-// TODO: add documentation.
+// exception_cpp_init initializes the C++ runtime of exception.cpp.
+void exception_cpp_init();
 
 // address: 0x4182B7
 //

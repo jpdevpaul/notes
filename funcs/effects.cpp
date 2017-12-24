@@ -1,10 +1,12 @@
 // address: 0x4158A9
 //
-// TODO: add documentation.
+// j_effects_cpp_init initializes the C++ runtime of effects.cpp.
+void j_effects_cpp_init();
 
 // address: 0x4158AE
 //
-// TODO: add documentation.
+// effects_cpp_init initializes the C++ runtime of effects.cpp.
+void effects_cpp_init();
 
 // address: 0x4158B9
 //

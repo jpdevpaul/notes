@@ -1,10 +1,12 @@
 // address: 0x4618A5
 //
-// TODO: add documentation.
+// j_track_cpp_init initializes the C++ runtime of track.cpp.
+void j_track_cpp_init();
 
 // address: 0x4618AA
 //
-// TODO: add documentation.
+// track_cpp_init initializes the C++ runtime of track.cpp.
+void track_cpp_init();
 
 // address: 0x4618B5
 //

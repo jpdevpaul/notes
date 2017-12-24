@@ -1,14 +1,17 @@
 // address: 0x440DAE
 //
-// TODO: add documentation.
+// j_nthread_cpp_init_1 initializes the C++ runtime of nthread.cpp.
+void j_nthread_cpp_init_1();
 
 // address: 0x440DB3
 //
-// TODO: add documentation.
+// nthread_cpp_init_1 initializes the C++ runtime of nthread.cpp.
+void nthread_cpp_init_1();
 
 // address: 0x440DBE
 //
-// TODO: add documentation.
+// nthread_cpp_init_2 initializes the C++ runtime of nthread.cpp.
+void nthread_cpp_init_2();
 
 // address: 0x440DC8
 //

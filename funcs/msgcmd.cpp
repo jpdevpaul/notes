@@ -1,14 +1,17 @@
 // address: 0x43F849
 //
-// TODO: add documentation.
+// j_msgcmd_cpp_init_1 initializes the C++ runtime of msgcmd.cpp.
+void j_msgcmd_cpp_init_1();
 
 // address: 0x43F84E
 //
-// TODO: add documentation.
+// msgcmd_cpp_init_1 initializes the C++ runtime of msgcmd.cpp.
+void msgcmd_cpp_init_1();
 
 // address: 0x43F859
 //
-// TODO: add documentation.
+// msgcmd_cpp_init_2 initializes the C++ runtime of msgcmd.cpp.
+void msgcmd_cpp_init_2();
 
 // address: 0x43F863
 //

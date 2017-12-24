@@ -2,11 +2,13 @@
 
 // address: 0x41A7B3
 //
-// TODO: add documentation.
+// j_init_cpp_init initializes the C++ runtime of init.cpp.
+void j_init_cpp_init();
 
 // address: 0x41A7B8
 //
-// TODO: add documentation.
+// init_cpp_init initializes the C++ runtime of init.cpp.
+void init_cpp_init();
 
 // address: 0x41A7C3
 //

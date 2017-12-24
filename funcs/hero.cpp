@@ -1,10 +1,12 @@
 // address: 0x448755
 //
-// TODO: add documentation.
+// j_hero_cpp_init initializes the C++ runtime of hero.cpp.
+void j_hero_cpp_init();
 
 // address: 0x44875A
 //
-// TODO: add documentation.
+// hero_cpp_init initializes the C++ runtime of hero.cpp.
+void hero_cpp_init();
 
 // address: 0x448765
 //

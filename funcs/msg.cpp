@@ -2,12 +2,12 @@
 
 // address: 0x43BBA4
 //
-// j_msg_cpp_init_1 initializes the C++ runtime of msg.cpp.
+// j_msg_cpp_init initializes the C++ runtime of msg.cpp.
 void j_msg_cpp_init();
 
 // address: 0x43BBA9
 //
-// msg_cpp_init_1 initializes the C++ runtime of msg.cpp.
+// msg_cpp_init initializes the C++ runtime of msg.cpp.
 void msg_cpp_init();
 
 // address: 0x43BBB4

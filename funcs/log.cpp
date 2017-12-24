@@ -1,14 +1,17 @@
 // address: 0x4279F2
 //
-// TODO: add documentation.
+// j_log_cpp_init_1 initializes the C++ runtime of log.cpp.
+void j_log_cpp_init_1();
 
 // address: 0x4279F7
 //
-// TODO: add documentation.
+// log_cpp_init_1 initializes the C++ runtime of log.cpp.
+void log_cpp_init_1();
 
 // address: 0x427A02
 //
-// TODO: add documentation.
+// log_cpp_init_2 initializes the C++ runtime of log.cpp.
+void log_cpp_init_2();
 
 // address: 0x427A0C
 //

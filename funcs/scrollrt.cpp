@@ -1,10 +1,12 @@
 // address: 0x452975
 //
-// TODO: add documentation.
+// j_scrollrt_cpp_init initializes the C++ runtime of scrollrt.cpp.
+void j_scrollrt_cpp_init();
 
 // address: 0x45297A
 //
-// TODO: add documentation.
+// scrollrt_cpp_init initializes the C++ runtime of scrollrt.cpp.
+void scrollrt_cpp_init();
 
 // address: 0x452985
 //

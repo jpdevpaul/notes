@@ -1,10 +1,12 @@
 // address: 0x430FDF
 //
-// TODO: add documentation.
+// j_monster_cpp_init initializes the C++ runtime of monster.cpp.
+void j_monster_cpp_init();
 
 // address: 0x430FE4
 //
-// TODO: add documentation.
+// monster_cpp_init initializes the C++ runtime of monster.cpp.
+void monster_cpp_init();
 
 // address: 0x430FEF
 //

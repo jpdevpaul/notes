@@ -1,10 +1,12 @@
 // address: 0x43AD33
 //
-// TODO: add documentation.
+// j_movie_cpp_init initializes the C++ runtime of movie.cpp.
+void j_movie_cpp_init();
 
 // address: 0x43AD38
 //
-// TODO: add documentation.
+// movie_cpp_init initializes the C++ runtime of movie.cpp.
+void movie_cpp_init();
 
 // address: 0x43AD43
 //

@@ -2,11 +2,13 @@
 
 // address: 0x41B190
 //
-// TODO: add documentation.
+// j_interfac_cpp_init initializes the C++ runtime of interfac.cpp.
+void j_interfac_cpp_init();
 
 // address: 0x41B195
 //
-// TODO: add documentation.
+// interfac_cpp_init initializes the C++ runtime of interfac.cpp.
+void interfac_cpp_init();
 
 // address: 0x41B1A0
 //

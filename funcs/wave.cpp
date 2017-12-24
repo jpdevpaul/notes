@@ -1,10 +1,12 @@
 // address: 0x462C6D
 //
-// TODO: add documentation.
+// j_wave_cpp_init initializes the C++ runtime of wave.cpp.
+void j_wave_cpp_init();
 
 // address: 0x462C72
 //
-// TODO: add documentation.
+// wave_cpp_init initializes the C++ runtime of wave.cpp.
+void wave_cpp_init();
 
 // address: 0x462C7D
 //

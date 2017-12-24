@@ -1,10 +1,12 @@
 // address: 0x448DF5
 //
-// TODO: add documentation.
+// j_palette_cpp_init initializes the C++ runtime of palette.cpp.
+void j_palette_cpp_init();
 
 // address: 0x448DFA
 //
-// TODO: add documentation.
+// palette_cpp_init initializes the C++ runtime of palette.cpp.
+void palette_cpp_init();
 
 // address: 0x448E05
 //

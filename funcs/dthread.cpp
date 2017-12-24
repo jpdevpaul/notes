@@ -1,14 +1,17 @@
 // address: 0x415098
 //
-// TODO: add documentation.
+// j_dthread_cpp_init_1 initializes the C++ runtime of dthread.cpp.
+void j_dthread_cpp_init_1();
 
 // address: 0x41509D
 //
-// TODO: add documentation.
+// dthread_cpp_init_1 initializes the C++ runtime of dthread.cpp.
+void dthread_cpp_init_1();
 
 // address: 0x4150A8
 //
-// TODO: add documentation.
+// dthread_cpp_init_2 initializes the C++ runtime of dthread.cpp.
+void dthread_cpp_init_2();
 
 // address: 0x4150B2
 //

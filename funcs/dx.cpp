@@ -1,14 +1,17 @@
 // address: 0x415362
 //
-// TODO: add documentation.
+// j_dx_cpp_init_1 initializes the C++ runtime of dx.cpp.
+void j_dx_cpp_init_1();
 
 // address: 0x415367
 //
-// TODO: add documentation.
+// dx_cpp_init_1 initializes the C++ runtime of dx.cpp.
+void dx_cpp_init_1();
 
 // address: 0x415372
 //
-// TODO: add documentation.
+// dx_cpp_init_2 initializes the C++ runtime of dx.cpp.
+void dx_cpp_init_2();
 
 // address: 0x41537C
 //

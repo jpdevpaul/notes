@@ -1,10 +1,12 @@
 // address: 0x427E0E
 //
-// TODO: add documentation.
+// j_mainmenu_cpp_init initializes the C++ runtime of mainmenu.cpp.
+void j_mainmenu_cpp_init();
 
 // address: 0x427E13
 //
-// TODO: add documentation.
+// mainmenu_cpp_init initializes the C++ runtime of mainmenu.cpp.
+void mainmenu_cpp_init();
 
 // address: 0x427E1E
 //
