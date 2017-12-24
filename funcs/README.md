@@ -65,7 +65,7 @@ Each function has been categorised based on their original source file, as summa
 | [stores.cpp](stores.cpp)         | `0x457A01`    | `0x45C198`  | 67% (64/95 functions)    |
 | [sync.cpp](sync.cpp)             | `0x45C199`    | `0x45C86F`  | 0% (0/9 functions)       |
 | [themes.cpp](themes.cpp)         | `0x45C870`    | `0x45E08B`  | 0% (0/31 functions)      |
-| [tmsg.cpp](tmsg.cpp)             | `0x45E08C`    | `0x45E150`  | 33% (1/3 functions)      |
+| [tmsg.cpp](tmsg.cpp)             | `0x45E08C`    | `0x45E150`  | 100% (3/3 functions)     |
 | [town.cpp](town.cpp)             | `0x45E151`    | `0x46019A`  | 15% (3/19 functions)     |
 | [towners.cpp](towners.cpp)       | `0x46019B`    | `0x4618A4`  | 100% (33/33 functions)   |
 | [track.cpp](track.cpp)           | `0x4618A5`    | `0x4619A6`  | 0% (0/5 functions)       |

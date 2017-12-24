@@ -59,7 +59,7 @@ Each global variable in the uninitialized data section has been categorised base
 | [stores.cpp](stores.cpp)         | `0x69F108`    | `0x6AA707`  | 91% (42696/46592 bytes)      |
 | [sync.cpp](sync.cpp)             | `0x6AA708`    | `0x6AAA37`  | 0% (0/816 bytes)             |
 | [themes.cpp](themes.cpp)         | `0x6AAA38`    | `0x6AAC13`  | 84% (400/476 bytes)          |
-| [tmsg.cpp](tmsg.cpp)             | `0x6AAC14`    | `0x6AAC17`  | 0% (0/4 bytes)               |
+| [tmsg.cpp](tmsg.cpp)             | `0x6AAC14`    | `0x6AAC17`  | 100% (4/4 bytes)             |
 | [towners.cpp](towners.cpp)       | `0x6AAC18`    | `0x6ABAB7`  | 100% (3744/3744 bytes)       |
 | [track.cpp](track.cpp)           | `0x6ABAB8`    | `0x6ABAC7`  | 0% (0/16 bytes)              |
 | [trigs.cpp](trigs.cpp)           | `0x6ABAC8`    | `0x6ABB33`  | 0% (0/108 bytes)             |
