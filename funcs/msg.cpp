@@ -2,11 +2,13 @@
 
 // address: 0x43BBA4
 //
-// TODO: add documentation.
+// j_msg_cpp_init_1 initializes the C++ runtime of msg.cpp.
+void j_msg_cpp_init();
 
 // address: 0x43BBA9
 //
-// TODO: add documentation.
+// msg_cpp_init_1 initializes the C++ runtime of msg.cpp.
+void msg_cpp_init();
 
 // address: 0x43BBB4
 //
@@ -114,7 +116,8 @@ bool32_t __fastcall msg_is_portal_inactive(int portal_num);
 
 // address: 0x43C873
 //
-// TODO: add documentation.
+// msg_send_cmd sends a command without body to connected peers.
+void __fastcall msg_send_cmd(bool32_t a1, cmd cmd);
 
 // address: 0x43C891
 //
@@ -122,39 +125,55 @@ bool32_t __fastcall msg_is_portal_inactive(int portal_num);
 
 // address: 0x43C8C7
 //
-// TODO: add documentation.
+// msg_send_cmd_coord sends a command with a 2-byte body specifying X,Y
+// coordinates to connected peers.
+void __fastcall msg_send_cmd_coord(bool32_t a1, cmd cmd, int8_t x, int8_t y);
 
 // address: 0x43C8F3
 //
-// TODO: add documentation.
+// msg_send_cmd_coord_word sends a command with a 4-byte body specifying X,Y
+// coordinates and a 16-bit value to connected peers.
+void __fastcall msg_send_cmd_coord_word(bool32_t a1, cmd cmd, int8_t x, int8_t y, int16_t value);
 
 // address: 0x43C928
 //
-// TODO: add documentation.
+// msg_send_cmd_coord_word_word sends a command with a 6-byte body specifying
+// X,Y coordinates and two 16-bit values to connected peers.
+void __fastcall msg_send_cmd_coord_word_word(bool32_t a1, cmd cmd, int8_t x, int8_t y, int16_t value1, int16_t value2);
 
 // address: 0x43C965
 //
-// TODO: add documentation.
+// msg_send_cmd_coord_word_word_word sends a command with a 8-byte body
+// specifying X,Y coordinates and three 16-bit values to connected peers.
+void __fastcall msg_send_cmd_coord_word_word_word(bool32_t a1, cmd cmd, int8_t x, int8_t y, int16_t value1, int16_t value2, int16_t value3);
 
 // address: 0x43C9AB
 //
-// TODO: add documentation.
+// msg_send_cmd_word sends a command with a 2-byte body specifying a 16-bit
+// value to connected peers.
+void __fastcall msg_send_cmd_word(bool32_t a1, cmd cmd, int16_t value);
 
 // address: 0x43C9D3
 //
-// TODO: add documentation.
+// msg_send_cmd_word_word sends a command with a 4-byte body specifying two
+// 16-bit values to connected peers.
+void __fastcall msg_send_cmd_word_word(bool32_t a1, cmd cmd, int16_t value1, int16_t value2);
 
 // address: 0x43CA04
 //
-// TODO: add documentation.
+// msg_send_cmd_word_word_word sends a command with a 6-byte body specifying
+// three 16-bit values to connected peers.
+void __fastcall msg_send_cmd_word_word_word(bool32_t a1, cmd cmd, int16_t value1, int16_t value2, int16_t value3);
 
 // address: 0x43CA3D
 //
-// TODO: add documentation.
+// msg_send_cmd_word sends a sync quest command to connected peers.
+void __fastcall msg_send_cmd_sync_quest(bool32_t a1, quest_id quest_id);
 
 // address: 0x43CA84
 //
-// TODO: add documentation.
+// msg_send_cmd_item sends an item command to connected peers.
+void __fastcall msg_send_cmd_item(bool32_t a1, cmd cmd, int8_t player_num_1, int8_t player_num_2, int8_t item_num);
 
 // address: 0x43CC09
 //
@@ -534,4 +553,5 @@ bool32_t __fastcall msg_is_portal_inactive(int portal_num);
 
 // address: 0x43F830
 //
-// TODO: add documentation.
+// msg_parse_cmd_impact_mana_shield parses a impact mana shield command.
+int __fastcall msg_parse_cmd_impact_mana_shield(uint8_t *msg, int player_num);

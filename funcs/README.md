@@ -43,7 +43,7 @@ Each function has been categorised based on their original source file, as summa
 | [monster.cpp](monster.cpp)       | `0x430FDF`    | `0x43AD32`  | 0% (0/147 functions)     |
 | [movie.cpp](movie.cpp)           | `0x43AD33`    | `0x43AE8F`  | 0% (0/4 functions)       |
 | [mpqapi.cpp](mpqapi.cpp)         | `0x43AE90`    | `0x43BBA3`  | 10% (3/29 functions)     |
-| [msg.cpp](msg.cpp)               | `0x43BBA4`    | `0x43F848`  | 0% (1/133 functions)     |
+| [msg.cpp](msg.cpp)               | `0x43BBA4`    | `0x43F848`  | 10% (14/133 functions)   |
 | [msgcmd.cpp](msgcmd.cpp)         | `0x43F849`    | `0x43FAC3`  | 0% (0/18 functions)      |
 | [multi.cpp](multi.cpp)           | `0x43FAC4`    | `0x440DAD`  | 2% (1/38 functions)      |
 | [nthread.cpp](nthread.cpp)       | `0x440DAE`    | `0x44121C`  | 6% (1/15 functions)      |
