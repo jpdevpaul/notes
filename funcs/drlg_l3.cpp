@@ -1,3 +1,5 @@
+#include "types.h"
+
 // address: 0x40FF81
 //
 // TODO: add documentation.
@@ -28,7 +30,12 @@
 
 // address: 0x4103A1
 //
-// TODO: add documentation.
+// drlg_l3_create_dungeon creates a random caves dungeon based on the given seed
+// and level entry.
+//
+// PSX ref: 0x8014D450
+// PSX def: void CreateL3Dungeon__FUii(unsigned int rseed, int entry)
+void __fastcall drlg_l3_create_dungeon(uint32_t seed, int entry);
 
 // address: 0x41044E
 //

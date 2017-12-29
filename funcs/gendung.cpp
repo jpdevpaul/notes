@@ -98,7 +98,11 @@ void gendung_mark_set_piece();
 
 // address: 0x419C10
 //
-// TODO: add documentation.
+// gendung_place_theme_rooms places thematic rooms.
+//
+// PSX ref: 0x8015B6B8
+// PSX def: void DRLG_PlaceThemeRooms__FiiiiUc(int minSize, int maxSize, int floor, int freq, int rndSize)
+void __fastcall gendung_place_theme_rooms(int min_size, int max_size, int floor, int frequency, int rnd_size);
 
 // address: 0x419D92
 //

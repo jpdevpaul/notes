@@ -1,3 +1,5 @@
+#include "types.h"
+
 // address: 0x412655
 //
 // TODO: add documentation.
@@ -40,7 +42,12 @@
 
 // address: 0x4129B0
 //
-// TODO: add documentation.
+// drlg_l4_create_dungeon creates a random hell dungeon based on the given seed
+// and level entry.
+//
+// PSX ref: 0x801551F8
+// PSX def: void CreateL4Dungeon__FUii(unsigned int rseed, int entry)
+void __fastcall drlg_l4_create_dungeon(uint32_t seed, int entry);
 
 // address: 0x412A00
 //

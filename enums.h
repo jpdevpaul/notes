@@ -9,6 +9,11 @@ typedef enum {
 	AFFIX_ITEM_TYPE_ARMOR   = 0x00100000,
 } affix_item_type;
 
+// Network message commands.
+typedef enum {
+	// TODO: Define message commands (there are 93 of them).
+} cmd;
+
 // Cursor IDs; frame_num+1 of objcurs.cel.
 typedef enum {
 	CURSOR_ID_NONE           =  0,

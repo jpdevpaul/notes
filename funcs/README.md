@@ -16,9 +16,9 @@ Each function has been categorised based on their original source file, as summa
 | [diablo.cpp](diablo.cpp)         | `0x4087B1`    | `0x40ACAC`  | 42% (15/35 functions)    |
 | [doom.cpp](doom.cpp)             | `0x40ACAD`    | `0x40ADD5`  | 14% (1/7 functions)      |
 | [drlg_l1.cpp](drlg_l1.cpp)       | `0x40ADD6`    | `0x40D356`  | 100% (38/38 functions)   |
-| [drlg_l2.cpp](drlg_l2.cpp)       | `0x40D357`    | `0x40FF80`  | 0% (0/35 functions)      |
-| [drlg_l3.cpp](drlg_l3.cpp)       | `0x40FF81`    | `0x412654`  | 0% (0/34 functions)      |
-| [drlg_l4.cpp](drlg_l4.cpp)       | `0x412655`    | `0x415097`  | 0% (0/35 functions)      |
+| [drlg_l2.cpp](drlg_l2.cpp)       | `0x40D357`    | `0x40FF80`  | 51% (18/35 functions)    |
+| [drlg_l3.cpp](drlg_l3.cpp)       | `0x40FF81`    | `0x412654`  | 2% (1/34 functions)      |
+| [drlg_l4.cpp](drlg_l4.cpp)       | `0x412655`    | `0x415097`  | 2% (1/35 functions)      |
 | [dthread.cpp](dthread.cpp)       | `0x415098`    | `0x415361`  | 36% (4/11 functions)     |
 | [dx.cpp](dx.cpp)                 | `0x415362`    | `0x4158A8`  | 35% (6/17 functions)     |
 | [effects.cpp](effects.cpp)       | `0x4158A9`    | `0x415F42`  | 14% (3/21 functions)     |
@@ -27,7 +27,7 @@ Each function has been categorised based on their original source file, as summa
 | [error.cpp](error.cpp)           | `0x41804E`    | `0x4182AC`  | 33% (1/3 functions)      |
 | [exception.cpp](exception.cpp)   | `0x4182AD`    | `0x418865`  | 8% (1/12 functions)      |
 | [gamemenu.cpp](gamemenu.cpp)     | `0x418866`    | `0x418C8A`  | 0% (0/23 functions)      |
-| [gendung.cpp](gendung.cpp)       | `0x418C8B`    | `0x419E8A`  | 31% (7/22 functions)     |
+| [gendung.cpp](gendung.cpp)       | `0x418C8B`    | `0x419E8A`  | 36% (8/22 functions)     |
 | [gmenu.cpp](gmenu.cpp)           | `0x419E8B`    | `0x41A552`  | 10% (2/20 functions)     |
 | [help.cpp](help.cpp)             | `0x41A553`    | `0x41A7B2`  | 16% (1/6 functions)      |
 | [init.cpp](init.cpp)             | `0x41A7B3`    | `0x41B18F`  | 57% (11/19 functions)    |
