@@ -37,7 +37,7 @@ Each global variable in the uninitialized data section has been categorised base
 | [mainmenu.cpp](mainmenu.cpp)     | `0x646CE0`    | `0x646CF3`  | 0% (0/20 bytes)              |
 | [minitext.cpp](minitext.cpp)     | `0x646CF4`    | `0x646D17`  | 0% (0/36 bytes)              |
 | [missiles.cpp](missiles.cpp)     | `0x646D18`    | `0x64CCDF`  | 89% (22000/24520 bytes)      |
-| [monster.cpp](monster.cpp)       | `0x64CCE0`    | `0x659AF3`  | 96% (50848/52756 bytes)      |
+| [monster.cpp](monster.cpp)       | `0x64CCE0`    | `0x659AF3`  | 98% (51736/52756 bytes)      |
 | [movie.cpp](movie.cpp)           | `0x659AF4`    | `0x659AFF`  | 0% (0/12 bytes)              |
 | [mpqapi.cpp](mpqapi.cpp)         | `0x659B00`    | `0x65AB17`  | 0% (0/4120 bytes)            |
 | [msg.cpp](msg.cpp)               | `0x65AB18`    | `0x67619F`  | 0% (20/112264 bytes)         |
