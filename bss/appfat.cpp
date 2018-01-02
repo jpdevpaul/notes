@@ -15,3 +15,8 @@ bool32_t terminating;
 //
 // cleanup_thread_id stores the thread id of the last callee to appfat_cleanup.
 int32_t cleanup_thread_id;
+
+// address: 0x4B7A3C
+//
+// empty_string is a NULL-terminated empty string.
+char *empty_string;
