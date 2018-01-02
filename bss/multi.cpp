@@ -1,5 +1,10 @@
 #include "types.h"
 
+// address 0x678620
+//
+// +Infinity after initialization of multi.cpp.
+float multi_cpp_init_value;
+
 // address: 0x679660
 //
 // max_players specifies the maximum number of players in a game, where 1

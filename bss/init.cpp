@@ -1,5 +1,10 @@
 #include "types.h"
 
+// address 0x63497C
+//
+// +Infinity after initialization of init.cpp.
+float init_cpp_init_value;
+
 // address: 0x634CA0
 //
 // killed_mom_parent specifies whether a process with the "MOM Parent" class has

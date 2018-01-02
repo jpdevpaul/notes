@@ -1,5 +1,10 @@
 #include "types.h"
 
+// address 0x525514
+//
+// +Infinity after initialization of diablo.cpp.
+float diablo_cpp_init_value;
+
 /* TODO: uncomment when HWND struct has been added.
 
 // address: 0x525518

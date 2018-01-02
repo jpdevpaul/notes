@@ -1,5 +1,10 @@
 #include "types.h"
 
+// address 0x69CEFC
+//
+// +Infinity after initialization of scrollrt.cpp.
+float scrollrt_cpp_init_value;
+
 // address: 0x69BEF8
 //
 // light_table_index specifies the current light entry.

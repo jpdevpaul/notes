@@ -1,5 +1,10 @@
 #include "types.h"
 
+// address 0x52B968
+//
+// +Infinity after initialization of engine.cpp.
+float engine_cpp_init_value;
+
 // address: 0x52B974
 //
 // initial_seed represents the initial global seed of the game.
