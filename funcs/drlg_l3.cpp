@@ -103,7 +103,11 @@ void __fastcall drlg_l3_create_dungeon(uint32_t seed, int entry);
 
 // address: 0x411A74
 //
-// TODO: add documentation.
+// drlg_l3_place_miniset places the given miniset of tile IDs.
+//
+// PSX ref: 0x8014B0C4
+// PSX def: int DRLG_L3PlaceMiniSet__FPCUciiiiii(unsigned char *miniset, int tmin, int tmax, int cx, int cy, int setview, int ldir)
+bool32_t __fastcall drlg_l3_place_miniset(char *miniset, int tmin, int tmax, int cx, int cy, bool32_t set_view, int ldir);
 
 // address: 0x411C83
 //
