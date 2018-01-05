@@ -37,10 +37,10 @@ Each global variable in the read-only data section has been categorised based on
 | [nthread.cpp](nthread.cpp)       | `0x47F164`    | `0x47F167`  | 100% (4/4 bytes)         |
 | [hero.cpp](hero.cpp)             | `0x47F168`    | `0x47F16B`  | 100% (4/4 bytes)         |
 | [palette.cpp](palette.cpp)       | `0x47F16C`    | `0x47F1AF`  | 100% (68/68 bytes)       |
-| [path.cpp](path.cpp)             | `0x47F1B0`    | `0x47F1BF`  | 0% (0/16 bytes)          |
+| [path.cpp](path.cpp)             | `0x47F1B0`    | `0x47F1BF`  | 100% (16/16 bytes)       |
 | [pfile.cpp](pfile.cpp)           | `0x47F1C0`    | `0x47F203`  | 100% (68/68 bytes)       |
 | [player.cpp](player.cpp)         | `0x47F204`    | `0x47F22F`  | 100% (44/44 bytes)       |
-| [plrmsg.cpp](plrmsg.cpp)         | `0x47F230`    | `0x47F237`  | 1000% (8/8 bytes)        |
+| [plrmsg.cpp](plrmsg.cpp)         | `0x47F230`    | `0x47F237`  | 100% (8/8 bytes)         |
 | [scrollrt.cpp](scrollrt.cpp)     | `0x47F238`    | `0x47F24B`  | 100% (20/20 bytes)       |
 | [sound.cpp](sound.cpp)           | `0x47F24C`    | `0x47F277`  | 100% (44/44 bytes)       |
 | [talk.cpp](talk.cpp)             | `0x47F278`    | `0x4802AB`  | 100% (4148/4148 bytes)   |

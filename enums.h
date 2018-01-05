@@ -2474,6 +2474,50 @@ typedef enum {
 	SPELL_TYPE_INVALID = 4,
 } spell_type;
 
+// Step direction used for path finding.
+//
+// north
+//    -1
+//    -1
+//
+// west
+//    -1
+//    1
+//
+// east
+//    1
+//    -1
+//
+// south
+//    1
+//    1
+//
+// north west
+//    -1
+//    0
+//
+// north east
+//    0
+//    -1
+//
+// south east
+//    1
+//    0
+//
+// south west
+//    0
+//    1
+typedef enum {
+	STEP_DIRECTION_NORTH      = 0,
+	STEP_DIRECTION_WEST       = 1,
+	STEP_DIRECTION_EAST       = 2,
+	STEP_DIRECTION_SOUTH      = 3,
+	STEP_DIRECTION_NORTH_WEST = 4,
+	STEP_DIRECTION_NORTH_EAST = 5,
+	STEP_DIRECTION_SOUTH_WEST = 6,
+	STEP_DIRECTION_SOUTH_EAST = 7,
+} step_direction;
+
 // Talk IDs for conversation dialogues.
 typedef enum {
 	TALK_ID_NONE                      =  0,
