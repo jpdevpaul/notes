@@ -2,6 +2,7 @@
 typedef uint8_t BYTE;
 typedef uint16_t WORD;
 typedef uint32_t DWORD;
+typedef int32_t LONG;
 typedef void * HANDLE;
 typedef HANDLE HWND;
 typedef HANDLE HINSTANCE;
@@ -75,3 +76,88 @@ typedef struct {
 	WORD Data3;
 	BYTE Data4[8];
 } GUID;
+
+// ref: https://msdn.microsoft.com/en-us/library/windows/desktop/gg426103(v=vs.85).aspx
+typedef struct {
+	DWORD dwColorSpaceLowValue;
+	DWORD dwColorSpaceHighValue;
+} DDCOLORKEY;
+
+// ref: https://msdn.microsoft.com/en-us/library/windows/desktop/gg426109(v=vs.85).aspx
+typedef struct {
+	DWORD dwSize;
+	DWORD dwFlags;
+	DWORD dwFourCC;
+	union {
+		DWORD dwRGBBitCount;
+		DWORD dwYUVBitCount;
+		DWORD dwZBufferBitDepth;
+		DWORD dwAlphaBitDepth;
+		DWORD dwLuminanceBitCount;
+		DWORD dwBumpBitCount;
+		DWORD dwPrivateFormatBitCount;
+	};
+	union {
+		DWORD dwRBitMask;
+		DWORD dwYBitMask;
+		DWORD dwStencilBitDepth;
+		DWORD dwLuminanceBitMask;
+		DWORD dwBumpDuBitMask;
+		DWORD dwOperations;
+	};
+	union {
+		DWORD dwGBitMask;
+		DWORD dwUBitMask;
+		DWORD dwZBitMask;
+		DWORD dwBumpDvBitMask;
+		struct {
+			WORD wFlipMSTypes;
+			WORD wBltMSTypes;
+		} MultiSampleCaps;
+	};
+	union {
+		DWORD dwBBitMask;
+		DWORD dwVBitMask;
+		DWORD dwStencilBitMask;
+		DWORD dwBumpLuminanceBitMask;
+	};
+	union {
+		DWORD dwRGBAlphaBitMask;
+		DWORD dwYUVAlphaBitMask;
+		DWORD dwLuminanceAlphaBitMask;
+		DWORD dwRGBZBitMask;
+		DWORD dwYUVZBitMask;
+	};
+} DDPIXELFORMAT;
+
+// ref: https://msdn.microsoft.com/en-us/library/windows/desktop/gg426110(v=vs.85).aspx
+typedef struct {
+	DWORD dwCaps;
+} DDSCAPS;
+
+// ref: https://msdn.microsoft.com/en-us/library/windows/desktop/gg426113(v=vs.85).aspx
+typedef struct {
+	DWORD dwSize;
+	DWORD dwFlags;
+	DWORD dwHeight;
+	DWORD dwWidth;
+	union {
+		LONG  lPitch;
+		DWORD dwLinearSize;
+	};
+	DWORD dwBackBufferCount;
+	union {
+		DWORD dwMipMapCount;
+		DWORD dwZBufferBitDepth;
+		DWORD dwRefreshRate;
+	};
+	DWORD  dwAlphaBitDepth;
+	DWORD  dwReserved;
+	void *lpSurface;
+	DDCOLORKEY    ddckCKDestOverlay;
+	DDCOLORKEY    ddckCKDestBlt;
+	DDCOLORKEY    ddckCKSrcOverlay;
+	DDCOLORKEY    ddckCKSrcBlt;
+	DDPIXELFORMAT ddpfPixelFormat;
+	DDSCAPS       ddsCaps;
+} DDSURFACEDESC;
