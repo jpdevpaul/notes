@@ -2,3 +2,19 @@
 //
 // +Infinity after initialization of pfile.cpp.
 float pfile_cpp_init_value;
+
+// address: 0x6862E4
+//
+// hero_names contains a list of character names for the character selection
+// screen.
+char hero_names[10][32];
+
+// address: 0x686424
+//
+// valid_save specifies whether the save file is valid.
+bool32_t valid_save;
+
+// address: 0x686428
+//
+// save_prev_tc stores the tick count of the previous hero save.
+uint32_t save_prev_tc;
