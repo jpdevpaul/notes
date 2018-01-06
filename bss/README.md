@@ -29,7 +29,7 @@ Each global variable in the uninitialized data section has been categorised base
 | [help.cpp](help.cpp)             | `0x634490`    | `0x634967`  | 0% (0/1240 bytes)            |
 | [init.cpp](init.cpp)             | `0x634968`    | `0x634CA7`  | 1% (12/832 bytes)            |
 | [interfac.cpp](interfac.cpp)     | `0x634CA8`    | `0x634CB7`  | 25% (4/16 bytes)             |
-| [inv.cpp](inv.cpp)               | `0x634CB8`    | `0x634CC3`  | 0% (0/12 bytes)              |
+| [inv.cpp](inv.cpp)               | `0x634CB8`    | `0x634CC3`  | 100% (12/12 bytes)           |
 | [items.cpp](items.cpp)           | `0x634CC4`    | `0x6414E7`  | 91% (46736/51236 bytes)      |
 | [lighting.cpp](lighting.cpp)     | `0x6414E8`    | `0x646A2B`  | 7% (1669/21828 bytes)        |
 | [loadsave.cpp](loadsave.cpp)     | `0x646A2C`    | `0x646A2F`  | 100% (4/4 bytes)             |
