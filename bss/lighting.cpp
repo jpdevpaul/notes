@@ -14,7 +14,7 @@ Lighting lightings[32];
 // address: 0x646A28
 bool32_t lighting_disabled;
 
-// lighting_max specifies the maximum light effects.
+// lighting_max specifies the maximum number of light effects.
 //
 // PSX ref: 0x8011B918
 // PSX def: char lightmax

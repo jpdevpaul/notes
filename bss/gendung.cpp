@@ -158,6 +158,15 @@ int32_t level_frame_count[2048];
 // "levels/l3data/l3.cel" or "levels/l4data/l4.cel".
 void *level_cel;
 
+// address: 0x5BDB10
+//
+// speed_cel_frame_num_from_light_index_frame_num returns the frame number of
+// the speed CEL, an in memory decoding of level CEL frames, based on original
+// frame number and light index.
+//
+// Note, given light index 0, the original frame number is returned.
+int speed_cel_frame_num_from_light_index_frame_num[16][128];
+
 // address: 0x5BFEF8
 //
 // player_num_map contains the player numbers (players array indices) of the
