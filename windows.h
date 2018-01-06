@@ -4,6 +4,8 @@ typedef uint16_t WORD;
 typedef uint32_t DWORD;
 typedef void * HANDLE;
 typedef HANDLE HWND;
+typedef HANDLE HINSTANCE;
+typedef HINSTANCE HMODULE;
 
 // ref: https://msdn.microsoft.com/en-us/library/windows/desktop/dd390970(v=vs.85).aspx
 typedef struct {

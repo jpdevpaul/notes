@@ -1,3 +1,5 @@
+#include "types.h"
+
 // address: 0x47F1B0
 //
 // x_delta_from_step_direction maps from step direction to X-coordinate movement
