@@ -47,7 +47,7 @@ Each global variable in the uninitialized data section has been categorised base
 | [objects.cpp](objects.cpp)       | `0x679768`    | `0x67D7C7`  | 92% (15240/16480 bytes)      |
 | [hero.cpp](hero.cpp)             | `0x67D7C8`    | `0x67D7CB`  | 100% (4/4 bytes)             |
 | [palette.cpp](palette.cpp)       | `0x67D7CC`    | `0x67E3D7`  | 0% (4/3084 bytes)            |
-| [path.cpp](path.cpp)             | `0x67E3D8`    | `0x6862DF`  | 0% (0/32520 bytes)           |
+| [path.cpp](path.cpp)             | `0x67E3D8`    | `0x6862DF`  | 47% (15600/32520 bytes)      |
 | [pfile.cpp](pfile.cpp)           | `0x6862E0`    | `0x68642F`  | 100% (336/336 bytes)         |
 | [player.cpp](player.cpp)         | `0x686430`    | `0x69B7CF`  | 99% (86884/86944 bytes)      |
 | [plrmsg.cpp](plrmsg.cpp)         | `0x69B7D0`    | `0x69BC97`  | 0% (0/1224 bytes)            |

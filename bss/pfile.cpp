@@ -1,3 +1,5 @@
+#include "types.h"
+
 // address 0x6862E0
 //
 // +Infinity after initialization of pfile.cpp.

@@ -437,6 +437,38 @@ typedef struct { // size = 0xEC
 	void *x_offset_from_orientation[16];
 } MissileGraphicData;
 
+// PathNode is a node of a path constructed by the path finding algorithm.
+//
+// PSX def:
+//    typedef struct tagPATHNODE {
+//       char f;
+//       char h;
+//       char g;
+//       int x;
+//       int y;
+//       struct tagPATHNODE* Parent;
+//       struct tagPATHNODE* Child[8];
+//       struct tagPATHNODE* NextNode;
+//    } tagPATHNODE, PATHNODE;
+typedef struct PathNode { // size = 0x34
+	// offset 0000 (1 bytes)
+	int8_t f; // f(n) = g(n) + h(n)
+	// offset 0001 (1 bytes)
+	int8_t h; // heuristic cost to goal.
+	// offset 0002 (1 bytes)
+	int8_t g; // cost from start to n.
+	// offset 0004 (4 bytes)
+	int x;
+	// offset 0008 (4 bytes)
+	int y;
+	// offset 000C (4 bytes)
+	PathNode *parent;
+	// offset 0010 (32 bytes)
+	PathNode *children[8];
+	// offset 0030 (4 bytes)
+	PathNode *next;
+} PathNode;
+
 // A Point is an X, Y coordinate pair. The axes increase right and down.
 typedef struct {
 	int32_t x;
