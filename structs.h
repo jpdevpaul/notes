@@ -19,9 +19,6 @@ typedef struct {
 } DPiece;
 
 // GossipData specifies the speech IDs for the gossip related to each quest.
-//
-// References:
-//    * https://github.com/sanctuary/notes/blob/master/enums.h#speech_id
 typedef struct {
 	// offset 0000 (4 bytes)
 	speech_id the_magic_rock;
@@ -152,18 +149,6 @@ typedef struct { // size = 0x4F2
 } Hero;
 
 // Item describes in-game state of any game item.
-//
-// References:
-//    * https://github.com/sanctuary/notes/blob/master/enums.h#item_class
-//    * https://github.com/sanctuary/notes/blob/master/enums.h#item_misc_id
-//    * https://github.com/sanctuary/notes/blob/master/enums.h#item_drop_state
-//    * https://github.com/sanctuary/notes/blob/master/enums.h#item_effect_type
-//    * https://github.com/sanctuary/notes/blob/master/enums.h#item_equip_type
-//    * https://github.com/sanctuary/notes/blob/master/enums.h#item_id
-//    * https://github.com/sanctuary/notes/blob/master/enums.h#item_inv_graphics_id
-//    * https://github.com/sanctuary/notes/blob/master/enums.h#item_quality
-//    * https://github.com/sanctuary/notes/blob/master/enums.h#item_special_effect
-//    * https://github.com/sanctuary/notes/blob/master/enums.h#item_type
 typedef struct { // size = 0x170
 	// offset 0000 (4 bytes)
 	uint32_t seed;

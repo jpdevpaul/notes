@@ -42,7 +42,7 @@ Each global variable in the uninitialized data section has been categorised base
 | [mpqapi.cpp](mpqapi.cpp)         | `0x659B00`    | `0x65AB17`  | 0% (4/4120 bytes)            |
 | [msg.cpp](msg.cpp)               | `0x65AB18`    | `0x67619F`  | 0% (24/112264 bytes)         |
 | [msgcmd.cpp](msgcmd.cpp)         | `0x6761A0`    | `0x6761B7`  | 16% (4/24 bytes)             |
-| [multi.cpp](multi.cpp)           | `0x6761B8`    | `0x6796FF`  | 0% (5/13640 bytes)           |
+| [multi.cpp](multi.cpp)           | `0x6761B8`    | `0x6796FF`  | 39% (5325/13640 bytes)       |
 | [nthread.cpp](nthread.cpp)       | `0x679700`    | `0x679767`  | 3% (4/104 bytes)             |
 | [objects.cpp](objects.cpp)       | `0x679768`    | `0x67D7C7`  | 92% (15240/16480 bytes)      |
 | [hero.cpp](hero.cpp)             | `0x67D7C8`    | `0x67D7CB`  | 100% (4/4 bytes)             |

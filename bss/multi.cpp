@@ -1,5 +1,16 @@
 #include "types.h"
 
+// address: 0x6771C4
+//
+// game_pass specifies the password of the network game.
+char game_pass[128];
+
+// address: 0x677250
+//
+// heroes specifies the essential information about a player, as used in save
+// files.
+Hero heroes[4];
+
 // address 0x678620
 //
 // +Infinity after initialization of multi.cpp.
@@ -13,3 +24,8 @@ float multi_cpp_init_value;
 // PSX ref: 0x8011B9A2
 // PSX def: unsigned char gbMaxPlayers
 int8_t max_players;
+
+// address: 0679664
+//
+// game_name specifies the name of the network game.
+char game_name[128];
