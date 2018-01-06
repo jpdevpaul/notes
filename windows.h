@@ -161,3 +161,11 @@ typedef struct {
 	DDPIXELFORMAT ddpfPixelFormat;
 	DDSCAPS       ddsCaps;
 } DDSURFACEDESC;
+
+// ref: https://msdn.microsoft.com/en-us/library/windows/desktop/dd162769(v=vs.85).aspx
+typedef struct {
+	BYTE peRed;
+	BYTE peGreen;
+	BYTE peBlue;
+	BYTE peFlags;
+} PALETTEENTRY;

@@ -49,7 +49,7 @@ Each function has been categorised based on their original source file, as summa
 | [nthread.cpp](nthread.cpp)       | `0x440DAE`    | `0x44121C`  | 26% (4/15 functions)     |
 | [objects.cpp](objects.cpp)       | `0x44121D`    | `0x448754`  | 0% (0/131 functions)     |
 | [hero.cpp](hero.cpp)             | `0x448755`    | `0x448DF4`  | 28% (2/7 functions)      |
-| [palette.cpp](palette.cpp)       | `0x448DF5`    | `0x4493D3`  | 9% (2/22 functions)      |
+| [palette.cpp](palette.cpp)       | `0x448DF5`    | `0x4493D3`  | 100% (22/22 functions)   |
 | [path.cpp](path.cpp)             | `0x4493D4`    | `0x4498EB`  | 0% (0/14 functions)      |
 | [pfile.cpp](pfile.cpp)           | `0x4498EC`    | `0x44A8E5`  | 21% (8/38 functions)     |
 | [player.cpp](player.cpp)         | `0x44A8E6`    | `0x450D32`  | 5% (5/92 functions)      |
