@@ -1,3 +1,112 @@
+// CmdPutItem is a PutItem network command.
+//
+// PSX def:
+//     typedef struct TCmdPItem {
+//        unsigned char bCmd;
+//        unsigned char x;
+//        unsigned char y;
+//        unsigned char bId;
+//        unsigned char bDur;
+//        unsigned char bMDur;
+//        unsigned char bCh;
+//        unsigned char bMCh;
+//        unsigned short wValue;
+//        unsigned short wIndx;
+//        unsigned short wCI;
+//        unsigned long dwSeed;
+//        unsigned long dwBuff;
+//     } TCmdPItem;
+typedef struct {
+	// offset: 0000 (1 bytes)
+	cmd cmd;
+	// offset: 0001 (1 bytes)
+	int8_t x;
+	// offset: 0002 (1 bytes)
+	int8_t y;
+	// offset: 0003 (2 bytes)
+	int16_t item_id;
+	// offset: 0005 (2 bytes)
+	uint16_t wCF;
+	// offset: 0007 (4 bytes)
+	int32_t seed;
+	// offset: 000B (1 bytes)
+	bool8_t identified;
+	// offset: 000C (1 bytes)
+	int8_t durability_cur;
+	// offset: 000D (1 bytes)
+	int8_t durability_max;
+	// offset: 000E (1 bytes)
+	int8_t charges_cur;
+	// offset: 000F (1 bytes)
+	int8_t charges_max;
+	// offset: 0010 (2 bytes)
+	int16_t gold_price;
+	// offset: 0012 (4 bytes)
+	uint32_t only_used_by_ear; // only used by ear to store name of character.
+} CmdPutItem;
+
+// DeltaObject contains delta information about an object to be synchronized
+// with connected peers.
+//
+// PSX def:
+//    typedef struct DObjectStr {
+//       unsigned char bCmd;
+//    } DObjectStr;
+typedef struct {
+	// offset: 0000 (1 bytes)
+	cmd cmd;
+} DeltaObject;
+
+// DeltaMonster contains delta information about a monster to be synchronized
+// with connected peers.
+//
+// PSX def:
+//    typedef struct DMonsterStr {
+//       unsigned char _mx;
+//       unsigned char _my;
+//       unsigned char _mdir;
+//       unsigned char _menemy;
+//       int _mhitpoints;
+//    } DMonsterStr;
+typedef struct {
+	// offset: 0000 (1 bytes)
+	int8_t x;
+	// offset: 0001 (1 bytes)
+	int8_t y;
+	// offset: 0002 (1 bytes)
+	int8_t field_0002; // TODO: document field name.
+	// offset: 0003 (1 bytes)
+	int8_t target_num;
+	// offset: 0004 (1 bytes)
+	//
+	// Activity threshold (squelch).
+	//    activity_threshold == 0   // Inactive.
+	//    activity_threshold > 0    // Active, can perform most actions.
+	//    activity_threshold == 255 // Active, can perform all actions.
+	//
+	// At each monster update (20 times per sec) the activity threshold is set to
+	// 255 if the monster is within line of sight from the player. If the monster
+	// is outside of line of sight, the threshold is decremented by 1 until it
+	// reaches 0.
+	//
+	//    activity_threshold -= 1  // Decrement when player is outside of line of sight.
+	//    activity_threshold = 255 // Set when player is within line of sight.
+	int8_t activity_threshold;
+	// offset: 0005 (4 bytes)
+	int32_t hp;
+} DeltaMonster;
+
+// DeltaLevel contains delta information about items, objects and monsters of a
+// dungeon level to be synchronized with connected peers.
+typedef struct { // size = 0x1271
+	// offset: 0000 (2794 bytes)
+	CmdPutItem items[127];
+	// offset: 0AEA (127 bytes)
+	DeltaObject objects[127];
+	// offset: 0B69 (1800 bytes)
+	DeltaMonster monsters[200];
+} DeltaLevel;
+
 // 10 blocks for l1.min, l2.min and l3.min
 // 16 blocks for l4.min and town.min
 const int nblocks = 10;

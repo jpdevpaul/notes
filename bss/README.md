@@ -40,7 +40,7 @@ Each global variable in the uninitialized data section has been categorised base
 | [monster.cpp](monster.cpp)       | `0x64CCE0`    | `0x659AF3`  | 98% (51736/52756 bytes)      |
 | [movie.cpp](movie.cpp)           | `0x659AF4`    | `0x659AFF`  | 33% (4/12 bytes)             |
 | [mpqapi.cpp](mpqapi.cpp)         | `0x659B00`    | `0x65AB17`  | 0% (4/4120 bytes)            |
-| [msg.cpp](msg.cpp)               | `0x65AB18`    | `0x67619F`  | 0% (24/112264 bytes)         |
+| [msg.cpp](msg.cpp)               | `0x65AB18`    | `0x67619F`  | 71% (80281/112264 bytes)     |
 | [msgcmd.cpp](msgcmd.cpp)         | `0x6761A0`    | `0x6761B7`  | 16% (4/24 bytes)             |
 | [multi.cpp](multi.cpp)           | `0x6761B8`    | `0x6796FF`  | 39% (5325/13640 bytes)       |
 | [nthread.cpp](nthread.cpp)       | `0x679700`    | `0x679767`  | 3% (4/104 bytes)             |
