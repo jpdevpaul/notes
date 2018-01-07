@@ -1,3 +1,8 @@
+// address: 0x48D7C4
+//
+// error_messages maps from error_id to error message.
+char *error_messages[44];
+
 // address: 0x48D874
 //
 // "Arcane knowledge gained!"

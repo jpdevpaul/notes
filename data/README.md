@@ -26,7 +26,7 @@ Each global variable in the data section has been categorised based on their ori
 | [effects.cpp](effects.cpp)       | `0x486370`    | `0x48D6EF`  | 100% (29568/29568 bytes) |
 | pkware.cpp                       | `0x48D6F0`    | `0x48D76F`  | N/A                      |
 | [engine.cpp](engine.cpp)         | `0x48D770`    | `0x48D7C3`  | 100% (84/84 bytes)       |
-| [error.cpp](error.cpp)           | `0x48D7C4`    | `0x48DE7F`  | 89% (1548/1724 bytes)    |
+| [error.cpp](error.cpp)           | `0x48D7C4`    | `0x48DE7F`  | 100% (1724/1724 bytes)   |
 | [exception.cpp](exception.cpp)   | `0x48DE80`    | `0x48E1B7`  | 100% (824/824 bytes)     |
 | [gamemenu.cpp](gamemenu.cpp)     | `0x48E1B8`    | `0x48E357`  | 44% (184/416 bytes)      |
 | [gendung.cpp](gendung.cpp)       | `0x48E358`    | `0x48E3E7`  | 100% (144/144 bytes)     |
