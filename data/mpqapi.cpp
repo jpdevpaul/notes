@@ -1,7 +1,14 @@
+#include "types.h"
+
 // address: 0x49EEF8
 //
 // "Diablo"
 const char str_49EEF8[7] = {};
+
+// address: 0x49EF00
+//
+// hArchive is a handle to the opened MPQ archive.
+HANDLE hArchive;
 
 // address: 0x49EF04
 //
