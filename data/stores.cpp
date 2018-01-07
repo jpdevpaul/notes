@@ -1,3 +1,9 @@
+// address: 0x4A2D5C
+//
+// description_box_text_y_offset maps from line number to Y offset in pixels for
+// text drawn in the description box.
+int description_box_text_y_offset[24];
+
 // address: 0x4A2DBC
 //
 // towner_names maps from towner IDs to NPC names.
