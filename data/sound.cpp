@@ -1,3 +1,36 @@
+#include "types.h"
+
+// address: 0x4A22D4
+//
+// music_enabled specifies whether background music is enabled.
+bool8_t music_enabled;
+
+// address: 0x4A22D5
+//
+// sound_enabled specifies whether sound effects are enabled.
+bool8_t sound_enabled;
+
+// address: 0x4A22D6
+//
+// flag_ds_noduplicates specifies that no duplicate audio channel should be
+// used.
+bool8_t flag_ds_noduplicates;
+
+// address: 0x4A22D8
+//
+// music_track_id specifies the active background music track id.
+track_id music_track_id;
+
+// address: 0x4A22DC
+//
+// track_names maps from track ID to track name.
+char *track_names[6];
+
+// address: 0x4A22F4
+//
+// track_unused is unused.
+int8_t track_unused[8];
+
 // address: 0x4A22FC
 //
 // `Music\Dintro.wav`

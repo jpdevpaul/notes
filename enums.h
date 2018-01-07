@@ -2597,6 +2597,17 @@ typedef enum {
 	TOWNER_ID_COW              = 9,
 } towner_id;
 
+// Music track IDs.
+typedef enum {
+	TRACK_ID_TRISTRAM  = 0,
+	TRACK_ID_CATHEDRAL = 1,
+	TRACK_ID_CATACOMBS = 2,
+	TRACK_ID_CAVES     = 3,
+	TRACK_ID_HELL      = 4,
+	TRACK_ID_INTRO     = 5,
+	TRACK_ID_NONE      = 6,
+} track_id;
+
 // Unique base items specify the underlying base items of unique items.
 typedef enum {
 	UNIQUE_BASE_ITEM_NONE                  =  0,
