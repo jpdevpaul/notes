@@ -926,6 +926,13 @@ typedef enum {
 	L1_TILE_ID_BROKEN_ENTERANCE_SE_3                   = 206,
 } l1_tile_id;
 
+// Magic types.
+typedef enum {
+	MAGIC_TYPE_FIRE      = 0,
+	MAGIC_TYPE_LIGHTNING = 1,
+	MAGIC_TYPE_MAGIC     = 2,
+} magic_type;
+
 // Missile graphic IDs specify missile_graphic_data array indices.
 //
 // References:
