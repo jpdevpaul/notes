@@ -1,3 +1,10 @@
+#include "types.h"
+
+// address: 0x4A208C
+//
+// setmap_rects specifies areas used for set maps.
+Rect setmap_rects[32];
+
 // address: 0x4A210C
 //
 // quest_level_names maps from quest level to quest level names.

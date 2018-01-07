@@ -45,6 +45,12 @@ typedef struct {
 	uint32_t only_used_by_ear; // only used by ear to store name of character.
 } CmdPutItem;
 
+// Coord specifies an X-Y coordinate of the map.
+typedef struct {
+	int8_t x;
+	int8_t y;
+} Coord;
+
 // DeltaObject contains delta information about an object to be synchronized
 // with connected peers.
 //
@@ -600,6 +606,12 @@ typedef struct {
 	dungeon_type dtype;
 	quest_level quest_lvl;
 } Portal;
+
+// Rect specifies a rectangluar area of the map.
+typedef struct {
+	Coord min;
+	Coord max;
+} Rect;
 
 // A Shadow contains the shadows for a 2x2 block of base tile IDs.
 //
