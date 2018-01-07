@@ -127,6 +127,20 @@ typedef struct {
 	uint16_t blocks[nblocks];
 } DPiece;
 
+// FileInfo provides information about the game executable and asset archives.
+typedef struct {
+	// offset: 0000 (4 bytes)
+	int32_t size;
+	// offset: 0004 (4 bytes)
+	char *version;
+	// offset: 0008 (4 bytes)
+	char *diablo_exe_path;
+	// offset: 000C (4 bytes)
+	char *diabdat_mpq_path;
+	// offset: 0010 (4 bytes)
+	char *patch_mpq_path;
+} FileInfo;
+
 // GossipData specifies the speech IDs for the gossip related to each quest.
 typedef struct {
 	// offset 0000 (4 bytes)

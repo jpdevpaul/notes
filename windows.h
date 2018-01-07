@@ -7,6 +7,10 @@ typedef void * HANDLE;
 typedef HANDLE HWND;
 typedef HANDLE HINSTANCE;
 typedef HINSTANCE HMODULE;
+typedef uint32_t LRESULT; // size of pointer.
+typedef unsigned int UINT;
+typedef uint32_t WPARAM; // size of pointer.
+typedef uint32_t LPARAM; // size of pointer.
 
 // ref: https://msdn.microsoft.com/en-us/library/windows/desktop/dd390970(v=vs.85).aspx
 typedef struct {
