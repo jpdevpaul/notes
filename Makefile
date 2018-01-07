@@ -1,18 +1,12 @@
-all: funcs rdata data bss
+CPP = $(wildcard funcs/*.cpp rdata/*.cpp data/*.cpp bss/*.cpp)
+OBJ = $(CPP:.cpp=.o)
 
-funcs:
-	clang -I ./ -c -m32 funcs/*.cpp
+all: $(OBJ)
 
-rdata:
-	clang -I ./ -c -m32 rdata/*.cpp
+%.o: %.cpp
+	clang -I ./ -c -m32 -o $@ $<
 
-data:
-	clang -I ./ -c -m32 data/*.cpp
-
-bss:
-	clang -I ./ -c -m32 bss/*.cpp
-
-.PHONY: all clean funcs rdata data bss
+.PHONY: all clean
 
 clean:
 	rm -f funcs/*.o rdata/*.o data/*.o bss/*.o *.o

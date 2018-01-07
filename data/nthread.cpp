@@ -1,3 +1,10 @@
+#include "types.h"
+
+// address: 0x49F204
+//
+// network_thread is a handle to the network thread.
+HANDLE network_thread;
+
 // address: 0x49F208
 //
 // "%s:\n%s"
