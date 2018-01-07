@@ -988,6 +988,42 @@ typedef enum {
 	MISSILE_GRAPHIC_ID_INVALID                = 47,
 } missile_graphic_id;
 
+// Monster AIs.
+typedef enum {
+	MONSTER_AI_ID_ZOMBIE               =  0,
+	MONSTER_AI_ID_OVERLORD             =  1,
+	MONSTER_AI_ID_SKELETON_SWORD       =  2,
+	MONSTER_AI_ID_SKELETON_ARCHER      =  3,
+	MONSTER_AI_ID_SCAVENGER            =  4,
+	MONSTER_AI_ID_HORNED_DEMON         =  5,
+	MONSTER_AI_ID_GOAT_MAN             =  6,
+	MONSTER_AI_ID_GOAT_MAN_ARCHER      =  7,
+	MONSTER_AI_ID_FALLEN_ONE           =  8,
+	MONSTER_AI_ID_MAGMA_DEMON          =  9,
+	MONSTER_AI_ID_SKELETON_KING        = 10,
+	MONSTER_AI_ID_WINGED_FIEND         = 11,
+	MONSTER_AI_ID_GARGOYLE             = 12,
+	MONSTER_AI_ID_THE_BUTCHER          = 13,
+	MONSTER_AI_ID_SUCCUBUS             = 14,
+	MONSTER_AI_ID_HIDDEN               = 15,
+	MONSTER_AI_ID_LIGHTNING_DEMON      = 16,
+	MONSTER_AI_ID_FIREMAN              = 17,
+	MONSTER_AI_ID_GHARBAD_THE_WEAK     = 18,
+	MONSTER_AI_ID_SPITTING_TERROR      = 19,
+	MONSTER_AI_ID_FAST_SPITTING_TERROR = 20,
+	MONSTER_AI_ID_GOLEM                = 21,
+	MONSTER_AI_ID_ZHAR_THE_MAD         = 22,
+	MONSTER_AI_ID_SNOTSPILL            = 23,
+	MONSTER_AI_ID_VIPER                = 24,
+	MONSTER_AI_ID_MAGE                 = 25,
+	MONSTER_AI_ID_BALROG               = 26,
+	MONSTER_AI_ID_THE_DARK_LORD        = 27,
+	MONSTER_AI_ID_ARCH_BISHOP_LAZARUS  = 28,
+	MONSTER_AI_ID_UNIQUE_SUCCUBUS      = 29,
+	MONSTER_AI_ID_LACHDANAN            = 30,
+	MONSTER_AI_ID_WARLORD_OF_BLOOD     = 31,
+} monster_ai_id;
+
 // Monster IDs specify monster_data array indices.
 //
 // References:
