@@ -1,3 +1,13 @@
+// address: 0x4A1EC0
+//
+// monster_modes maps from monster mode to monster mode name.
+char *monster_modes[18];
+
+// address: 0x4A1F08
+//
+// player_modes maps from player mode to player mode name.
+char *player_modes[12];
+
 // address: 0x4A1F38
 //
 // "quitting"

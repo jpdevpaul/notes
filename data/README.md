@@ -58,7 +58,7 @@ Each global variable in the data section has been categorised based on their ori
 | [quests.cpp](quests.cpp)         | `0x4A1AE0`    | `0x4A1E07`  | 90% (728/808 bytes)      |
 | [restricted.cpp](restricted.cpp) | `0x4A1E08`    | `0x4A1E3F`  | 100% (56/56 bytes)       |
 | pkware.cpp                       | `0x4A1E40`    | `0x4A1EBF`  | N/A                      |
-| [scrollrt.cpp](scrollrt.cpp)     | `0x4A1EC0`    | `0x4A208B`  | 73% (340/460 bytes)      |
+| [scrollrt.cpp](scrollrt.cpp)     | `0x4A1EC0`    | `0x4A208B`  | 100% (460/460 bytes)     |
 | [setmaps.cpp](setmaps.cpp)       | `0x4A208C`    | `0x4A22D3`  | 100% (584/584 bytes)     |
 | [sound.cpp](sound.cpp)           | `0x4A22D4`    | `0x4A23C7`  | 100% (244/244 bytes)     |
 | [spells.cpp](spells.cpp)         | `0x4A23C8`    | `0x4A2D5B`  | 100% (2452/2452 bytes)   |

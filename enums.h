@@ -1101,6 +1101,28 @@ typedef enum {
 	MONSTER_ID_NONE                    =  -1,
 } monster_id;
 
+// Monster modes.
+typedef enum {
+	MONSTER_MODE_STANDING                 =  0,
+	MONSTER_MODE_WALKING_1                =  1,
+	MONSTER_MODE_WALKING_2                =  2,
+	MONSTER_MODE_WALKING_3                =  3,
+	MONSTER_MODE_ATTACKING                =  4,
+	MONSTER_MODE_GETTING_HIT              =  5,
+	MONSTER_MODE_DYING                    =  6,
+	MONSTER_MODE_ATTACKING_SPECIAL        =  7,
+	MONSTER_MODE_FADING_IN                =  8,
+	MONSTER_MODE_FADING_OUT               =  9,
+	MONSTER_MODE_ATTACKING_RANGED         = 10,
+	MONSTER_MODE_STANDING_SPECIAL         = 11,
+	MONSTER_MODE_ATTACKING_SPECIAL_RANGED = 12,
+	MONSTER_MODE_DELAYING                 = 13,
+	MONSTER_MODE_CHARGING                 = 14,
+	MONSTER_MODE_STONED                   = 15,
+	MONSTER_MODE_HEALING                  = 16,
+	MONSTER_MODE_TALKING                  = 17,
+} monster_mode;
+
 // Network message IDs.
 typedef enum {
 	NET_MSG_ID_I_NEED_HELP_COME_HERE   = 0,
@@ -1233,6 +1255,22 @@ typedef enum {
 	PLAYER_CLASS_ROGUE    = 1,
 	PLAYER_CLASS_SORCEROR = 2,
 } player_class;
+
+// Player modes.
+typedef enum {
+	PLAYER_MODE_STANDING         =  0,
+	PLAYER_MODE_WALKING_1        =  1,
+	PLAYER_MODE_WALKING_2        =  2,
+	PLAYER_MODE_WALKING_3        =  3,
+	PLAYER_MODE_ATTACKING_MELEE  =  4,
+	PLAYER_MODE_ATTACKING_RANGED =  5,
+	PLAYER_MODE_BLOCKING         =  6,
+	PLAYER_MODE_GETTING_HIT      =  7,
+	PLAYER_MODE_DYING            =  8,
+	PLAYER_MODE_CASTING_A_SPELL  =  9,
+	PLAYER_MODE_CHANGING_LEVELS  = 10,
+	PLAYER_MODE_QUITTING         = 11,
+} player_mode;
 
 // Quest IDs specify quest_data array indices.
 //
