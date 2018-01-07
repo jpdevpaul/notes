@@ -1,3 +1,15 @@
+#include "types.h"
+
+// address: 0x4947D4
+//
+// log_not_created specifies whether the log file has not yet been created.
+bool32_t log_not_created;
+
+// address: 0x4947D8
+//
+// log_file is a handle to the log file.
+HANDLE log_file;
+
 // address: 0x4947DC
 //
 // `c:\`
