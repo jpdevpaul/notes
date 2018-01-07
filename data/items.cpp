@@ -1962,6 +1962,47 @@ const char str_492C24[12] = {};
 // "Gold"
 const char str_492C30[5] = {};
 
+// address: 0x492C38
+//
+// item_drop_id_from_item_graphic_id maps from item_graphic_id to item_drop_id.
+item_drop_id item_drop_id_from_item_graphic_id[169];
+
+// address: 0x492CE4
+//
+// item_drop_name_from_item_drop_id maps from item_drop_id to the name of the
+// item drop graphics.
+char *item_drop_name_from_item_drop_id[35];
+
+// address: 0x492D70
+//
+// nitem_drop_frames_from_item_drop_id maps from item_drop_id to the number of
+// frames used by the item drop animation.
+int8_t nitem_drop_frames_from_item_drop_id[35];
+
+// address: 0x492D94
+//
+// item_drop_sfx_id_from_item_drop_id maps from item_drop_id to the sound effect
+// of dropping the item on ground.
+sfx_id item_drop_sfx_id_from_item_drop_id[35];
+
+// address: 0x492E20
+//
+// item_place_sfx_id_from_item_drop_id maps from item_drop_id to the sound
+// effect of playing the item in the inventory.
+sfx_id item_place_sfx_id_from_item_drop_id[35];
+
+// address: 0x492EAC
+//
+// item_y specifies the current Y-coordinate used for validation of items on
+// ground.
+int item_y;
+
+// address: 0x492EB0
+//
+// griswold_premium_item_quality_lvl_delta maps from Griswold premium item
+// number to a quality level delta as added to the base quality level.
+int griswold_premium_item_quality_lvl_delta[6];
+
 // address: 0x492EC8
 //
 // "FLazStaf"

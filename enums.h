@@ -104,6 +104,45 @@ typedef enum {
 	ITEM_CLASS_QUEST                  = 5,
 } item_class;
 
+// Item drop IDs, used for the graphics of item drop animations.
+typedef enum {
+	ITEM_DROP_ID_MEDIUM_ARMOR         =  0, // Armor2
+	ITEM_DROP_ID_AXE                  =  1, // Axe
+	ITEM_DROP_ID_BOTTLE_DARK_RED      =  2, // FBttle
+	ITEM_DROP_ID_BOW                  =  3, // Bow
+	ITEM_DROP_ID_GOLD                 =  4, // GoldFlip
+	ITEM_DROP_ID_HELM                 =  5, // Helmut
+	ITEM_DROP_ID_MACE                 =  6, // Mace
+	ITEM_DROP_ID_SHIELD               =  7, // Shield
+	ITEM_DROP_ID_SWORD                =  8, // SwrdFlip
+	ITEM_DROP_ID_MAGIC_ROCK           =  9, // Rock
+	ITEM_DROP_ID_CLEAVER              = 10, // Cleaver
+	ITEM_DROP_ID_STAFF                = 11, // Staff
+	ITEM_DROP_ID_RING                 = 12, // Ring
+	ITEM_DROP_ID_CROWN                = 13, // CrownF
+	ITEM_DROP_ID_LIGHT_ARMOR          = 14, // LArmor
+	ITEM_DROP_ID_WOODEN_SHIELD        = 15, // WShield
+	ITEM_DROP_ID_SCROLL               = 16, // Scroll
+	ITEM_DROP_ID_HEAVY_ARMOR          = 17, // FPlateAr
+	ITEM_DROP_ID_BOOK                 = 18, // FBook
+	ITEM_DROP_ID_FOOD                 = 19, // Food
+	ITEM_DROP_ID_BOTTLE_BRIGHT_BLUE   = 20, // FBttleBB
+	ITEM_DROP_ID_BOTTLE_DARK_YELLOW   = 21, // FBttleDY
+	ITEM_DROP_ID_BOTTLE_ORANGE        = 22, // FBttleOR
+	ITEM_DROP_ID_BOTTLE_BRIGHT_RED    = 23, // FBttleBR
+	ITEM_DROP_ID_BOTTLE_BLACK         = 24, // FBttleBL
+	ITEM_DROP_ID_BOTTLE_BRIGHT_YELLOW = 25, // FBttleBY
+	ITEM_DROP_ID_BOTTLE_WHITE         = 26, // FBttleWH
+	ITEM_DROP_ID_BOTTLE_DARK_BLUE     = 27, // FBttleDB
+	ITEM_DROP_ID_EAR                  = 28, // FEar
+	ITEM_DROP_ID_BRAIN                = 29, // FBrain
+	ITEM_DROP_ID_BLACK_MUSHROOM       = 30, // FMush
+	ITEM_DROP_ID_TAVERN_SIGN          = 31, // Innsign
+	ITEM_DROP_ID_BLOOD_STONE          = 32, // Bldstn
+	ITEM_DROP_ID_ANVIL_OF_FURY        = 33, // Fanvil
+	ITEM_DROP_ID_STAFF_OF_LAZARUS     = 34, // FLazStaf
+} item_drop_id;
+
 // Item drop rates.
 typedef enum {
 	ITEM_DROP_RATE_NEVER   = 0, // never drops.
@@ -331,6 +370,8 @@ typedef enum {
 	ITEM_GRAPHIC_ID_SHORT_BATTLE_BOW            = 167,
 	ITEM_GRAPHIC_ID_GOLD                        = 168,
 } item_graphic_id;
+
+// TODO: add missing enums of item_id.
 
 // Item IDs specify item_data array indices.
 typedef enum {
