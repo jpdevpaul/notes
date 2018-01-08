@@ -1,3 +1,11 @@
+#include "types.h"
+
+// address: 0x4862B0
+//
+// delta_thread is a handle to the thread sending game state delta information
+// to connected peers.
+HANDLE delta_thread;
+
 // address: 0x4862B4
 //
 // "dthread2:\n%s"
