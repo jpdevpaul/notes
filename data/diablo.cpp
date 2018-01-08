@@ -1,3 +1,25 @@
+#include "types.h"
+
+// address: 0x484364
+//
+// exclusive specifies whether to give the game exclusive access to the screen.
+bool32_t exclusive;
+
+// address: 0x484368
+//
+// player_friendly specifies whether players are in non-PvP mode.
+bool32_t player_friendly;
+
+// address: 0x48436C
+//
+// net_msg_texts maps from net_msg_id to hotkey network message.
+char *net_msg_texts[4];
+
+// address: 0x48437C
+//
+// net_msg_hotkeys maps from net_msg_id to hotkey name.
+char *net_msg_hotkeys[4];
+
 // address: 0x48438C
 //
 // "F12"
