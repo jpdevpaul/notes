@@ -9,6 +9,14 @@ typedef enum {
 	AFFIX_ITEM_TYPE_ARMOR   = 0x00100000,
 } affix_item_type;
 
+// Attribute IDs.
+typedef enum {
+	ATTRIBUTE_ID_STR = 0,
+	ATTRIBUTE_ID_MAG = 1,
+	ATTRIBUTE_ID_DEX = 2,
+	ATTRIBUTE_ID_VIT = 3,
+} attribute_id;
+
 // Network message commands.
 typedef enum {
 	// TODO: Define message commands (there are 93 of them).

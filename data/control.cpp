@@ -2,39 +2,35 @@
 
 // address: 0x483C2C
 //
-// spelicon_frame_from_spell_id maps from spell ID to spelicon.cel frame number.
-//
-// References:
-//    * https://github.com/sanctuary/notes/blob/master/enums.h#spell_id
+// spelicon_frame_from_spell_id maps from spell_id to spelicon.cel frame number.
 int8_t spelicon_frame_from_spell_id[37];
-
-/* TODO: uncomment when the PanelButton struct has been added to structs.h.
 
 // address: 0x483C54
 //
-// panel_buttons specifies the position and dimensions of panel buttons.
-//
-// References:
-//    * https://github.com/sanctuary/notes/blob/master/enums.h#panel_button_id
+// panel_buttons maps from panel_button_id to the position and dimensions of a
+// panel button.
 PanelButton panel_buttons[8];
-
-*/
 
 // address: 0x483CF4
 //
-// button_hotkeys specifies the hot keys of each panel button.
-//
-// References:
-//    * https://github.com/sanctuary/notes/blob/master/enums.h#panel_button_id
+// button_hotkeys maps from panel_button_id to hotkey name.
 char *button_hotkeys[8];
 
 // address: 0x483D14
 //
-// button_descriptions describes each panel button.
-//
-// References:
-//    * https://github.com/sanctuary/notes/blob/master/enums.h#panel_button_id
+// button_descriptions maps from panel_button_id to panel button description.
 char *button_descriptions[8];
+
+// address: 0x483D34
+//
+// attribute_inc_rects maps from attribute_id to the rectangle on screen used
+// for attribute increment buttons.
+Rectangle attribute_inc_rects[4];
+
+// address: 0x483D74
+//
+// spell_id_from_spellbook_pos maps from spellbook position to spell_id.
+spell_id spell_id_from_spellbook_pos[42];
 
 // address: 0x483E1C
 //

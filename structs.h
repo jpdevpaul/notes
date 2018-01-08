@@ -551,6 +551,20 @@ typedef struct { // size = 0xEC
 	void *x_offset_from_orientation[16];
 } MissileGraphicData;
 
+// PanelButton specifies the position and dimensions of a panel button.
+typedef struct { // size = 0x14
+	// offset: 0000 (4 bytes)
+	int x;
+	// offset: 0004 (4 bytes)
+	int y;
+	// offset: 0008 (4 bytes)
+	int width;
+	// offset: 000C (4 bytes)
+	int height;
+	// offset: 0010 (4 bytes)
+	int unused;
+} PanelButton;
+
 // PathNode is a node of a path constructed by the path finding algorithm.
 //
 // PSX def:
@@ -612,6 +626,18 @@ typedef struct {
 	Coord min;
 	Coord max;
 } Rect;
+
+// Rectangle specifies a rectangluar area of the screen.
+typedef struct { // size = 0x10
+	// offset: 0000 (4 bytes)
+	int x;
+	// offset: 0004 (4 bytes)
+	int y;
+	// offset: 0008 (4 bytes)
+	int width;
+	// offset: 000C (4 bytes)
+	int height;
+} Rectangle;
 
 // A Shadow contains the shadows for a 2x2 block of base tile IDs.
 //
