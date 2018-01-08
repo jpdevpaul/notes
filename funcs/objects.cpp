@@ -1,3 +1,5 @@
+#include "types.h"
+
 // address: 0x44121D
 //
 // TODO: add documentation.
@@ -44,15 +46,27 @@
 
 // address: 0x441A00
 //
-// TODO: add documentation.
+// objects_add_l1_objects adds Cathedral objects.
+//
+// PSX ref: 0x801583A0
+// PSX def: void AddL1Objs__Fiiii(int x1, int y1, int x2, int y2)
+void __fastcall objects_add_l1_objects(int x_start, int y_start, int x_end, int y_end);
 
 // address: 0x441A98
 //
-// TODO: add documentation.
+// objects_add_l2_objects adds Catacombs objects.
+//
+// PSX ref: 0x801584AC
+// PSX def: void AddL2Objs__Fiiii(int x1, int y1, int x2, int y2)
+void __fastcall objects_add_l2_objects(int x_start, int y_start, int x_end, int y_end);
 
 // address: 0x441B16
 //
-// TODO: add documentation.
+// objects_add_l3_objects adds Hell objects.
+//
+// PSX ref: 0x801585A8
+// PSX def: void AddL3Objs__Fiiii(int x1, int y1, int x2, int y2)
+void __fastcall objects_add_l3_objects(int x_start, int y_start, int x_end, int y_end);
 
 // address: 0x441B8A
 //
@@ -60,7 +74,11 @@
 
 // address: 0x441BA0
 //
-// TODO: add documentation.
+// objects_add_l2_torches adds torches to Catacombs maps.
+//
+// PSX ref: 0x80158710
+// PSX def: void AddL2Torches__Fv()
+void objects_add_l2_torches();
 
 // address: 0x441C8C
 //
@@ -68,7 +86,11 @@
 
 // address: 0x441CB3
 //
-// TODO: add documentation.
+// objects_add_traps adds traps to objects.
+//
+// PSX ref: 0x801588AC
+// PSX def: void AddObjTraps__Fv()
+void objects_add_traps();
 
 // address: 0x441E58
 //
@@ -232,7 +254,11 @@
 
 // address: 0x4431FF
 //
-// TODO: add documentation.
+// objects_add_object adds a new object to the specifies coordinates.
+//
+// PSX ref: 0x80053AF8
+// PSX def: void AddObject__Fiii(int ot, int ox, int oy)
+void __fastcall objects_add_object(object_id object_id, int x, int y);
 
 // address: 0x4434CB
 //

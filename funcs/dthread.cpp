@@ -43,5 +43,5 @@ void dthread_cpp_init_2();
 
 // address: 0x4152C0
 //
-// dthread_cleanup terminates the dungeon thread.
+// dthread_cleanup terminates the delta thread.
 void dthread_cleanup();
