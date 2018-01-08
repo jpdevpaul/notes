@@ -599,7 +599,9 @@ typedef struct PathNode { // size = 0x34
 
 // A Point is an X, Y coordinate pair. The axes increase right and down.
 typedef struct {
+	// offset: 0000 (4 bytes)
 	int32_t x;
+	// offset: 0004 (4 bytes)
 	int32_t y;
 } Point;
 
