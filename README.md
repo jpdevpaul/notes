@@ -21,7 +21,7 @@ The notes are currently organized into the following categories.
 | Category                                          | Progess                        |
 |---------------------------------------------------|--------------------------------|
 | [Functions](funcs/README.md)                      | 25% (492/1955 functions)       |
-| [Global variables (read-only)](rdata/README.md)   | 95% (27040/28372 bytes)        |
+| [Global variables (read-only)](rdata/README.md)   | 95% (27048/28372 bytes)        |
 | [Global variables (read-write)](data/README.md)   | 96% (189436/196860 bytes)      |
 | [Global variables (uninitialized)](bss/README.md) | 91% (1880075/2048520 bytes)    |
 | [Storm ordinals](storm.md)                        | 63% (37/58 functions)          |
