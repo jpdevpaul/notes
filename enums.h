@@ -1458,6 +1458,18 @@ typedef enum {
 	QUEST_LEVEL_ARCHBISHOP_LAZARUS_LAIR = 5,
 } quest_level;
 
+// Quest level IDs.
+//
+// References:
+//    * https://github.com/sanctuary/notes/blob/master/data/quests.cpp#quest_stairway_names
+typedef enum {
+	QUEST_LEVEL_ID_KING_LEORICS_TOMB   = 0,
+	QUEST_LEVEL_ID_THE_CHAMBER_OF_BONE = 1,
+	QUEST_LEVEL_ID_MAZE                = 2,
+	QUEST_LEVEL_ID_A_DARK_PASSAGE      = 3,
+	QUEST_LEVEL_ID_UNHOLY_ALTAR        = 4,
+} quest_level_id;
+
 // Quest state records the progress of the quest.
 typedef enum {
 	QUEST_STATE_INACTIVE = 0,

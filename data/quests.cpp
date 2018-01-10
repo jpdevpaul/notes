@@ -1,19 +1,58 @@
 #include "types.h"
 
-/* TODO: uncomment when the QuestData struct has been added to structs.h.
-
 // address: 0x4A1AE0
 //
-// quest_data contains the data related to each quest ID.
-//
-// References:
-//    * https://github.com/sanctuary/notes/blob/master/enums.h#quest_id
+// quest_data contains the data related to each quest_id.
 //
 // PSX ref: 0x800DD908
 // PSX def: QuestData questlist[16]
 QuestData quest_data[16];
 
-*/
+// address: 0x4A1C20
+//
+// quest_entrance_cursor_x_delta specifies a delta in X-coordinates from the
+// quest entrance for which the hover text of the cursor will be visible.
+int8_t quest_entrance_cursor_x_delta[7];
+
+// address: 0x4A1C28
+//
+// quest_entrance_cursor_y_delta specifies a delta in Y-coordinates from the
+// quest entrance for which the hover text of the cursor will be visible.
+int8_t quest_entrance_cursor_y_delta[7];
+
+// address: 0x4A1C30
+//
+// quest_stairway_names specifies the names of quest levels for the hover text
+// of the cursor.
+char *quest_stairway_names[5];
+
+// address: 0x04A1C44
+//
+// rand_quest_id_group_1 is a quest group containing the three quests the
+// Butcher, Ogden's Sign and Gharbad the Weak, which ensures that exactly one of
+// these three quests appears in any single player game.
+int rand_quest_id_group_1[3];
+
+// address: 0x04A1C50
+//
+// rand_quest_id_group_2 is a quest group containing the three quests Halls of
+// the Blind, the Magic Rock and Valor, which ensures that exactly one of these
+// three quests appears in any single player game.
+int rand_quest_id_group_2[3];
+
+// address: 0x04A1C5C
+//
+// rand_quest_id_group_3 is a quest group containing the three quests Black
+// Mushroom, Zhar the Mad and Anvil of Fury, which ensures that exactly one of
+// these three quests appears in any single player game.
+int rand_quest_id_group_3[3];
+
+// address: 0x04A1C68
+//
+// rand_quest_id_group_4 is a quest group containing the two quests Lachdanan
+// and Warlord of Blood, which ensures that exactly one of these two quests
+// appears in any single player game.
+int rand_quest_id_group_4[2];
 
 // address: 0x4A1C70
 //

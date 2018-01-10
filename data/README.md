@@ -55,7 +55,7 @@ Each global variable in the data section has been categorised based on their ori
 | [player.cpp](player.cpp)         | `0x4A0EF8`    | `0x4A1AAB`  | 80% (2420/2996 bytes)    |
 | [plrmsg.cpp](plrmsg.cpp)         | `0x4A1AAC`    | `0x4A1ABB`  | 100% (16/16 bytes)       |
 | [portal.cpp](portal.cpp)         | `0x4A1ABC`    | `0x4A1ADF`  | 100% (36/36 bytes)       |
-| [quests.cpp](quests.cpp)         | `0x4A1AE0`    | `0x4A1E07`  | 90% (728/808 bytes)      |
+| [quests.cpp](quests.cpp)         | `0x4A1AE0`    | `0x4A1E07`  | 100% (808/808 bytes)     |
 | [restricted.cpp](restricted.cpp) | `0x4A1E08`    | `0x4A1E3F`  | 100% (56/56 bytes)       |
 | pkware.cpp                       | `0x4A1E40`    | `0x4A1EBF`  | N/A                      |
 | [scrollrt.cpp](scrollrt.cpp)     | `0x4A1EC0`    | `0x4A208B`  | 100% (460/460 bytes)     |

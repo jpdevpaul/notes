@@ -623,6 +623,39 @@ typedef struct {
 	quest_level quest_lvl;
 } Portal;
 
+// QuestData describes the basic properties and activation conditions of quests.
+//
+// PSX def:
+//    typedef struct QuestData {
+//       unsigned char _qdlvl;
+//       char _qdmultlvl;
+//       unsigned char _qlvlt;
+//       unsigned char _qdtype;
+//       unsigned char _qdrnd;
+//       unsigned char _qslvl;
+//       unsigned char _qflags;
+//       int _qdmsg;
+//       int _qlstr;
+//    } QuestData;
+typedef struct { // size = 0x14
+	// offset: 0000 (1 bytes)
+	int8_t dlvl_single;
+	// offset: 0001 (1 bytes)
+	int8_t dlvl_multi;
+	// offset: 0002 (1 bytes)
+	dungeon_type dtype;
+	// offset: 0003 (1 bytes)
+	quest_id quest_id;
+	// offset: 0005 (1 bytes)
+	quest_level quest_level;
+	// offset: 0008 (1 bytes)
+	bool8_t multiplayer;
+	// offset: 000C (4 bytes)
+	speech_id  speech_id;
+	// offset: 0010 (4 bytes)
+	char *name;
+} QuestData;
+
 // Rect specifies a rectangluar area of the map.
 typedef struct {
 	Coord min;
