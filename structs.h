@@ -749,6 +749,16 @@ typedef struct { // size = 0x28
 	uint32_t start_tc; // start tick count.
 } SoundFile;
 
+// SfxData contains the data associated with a sound effect.
+typedef struct { // size = 0x9
+	// offset: 0000 (1 bytes)
+	uint8_t sfx_flag;
+	// offset: 0001 (4 bytes)
+	char *sound_path;
+	// offset: 0005 (4 bytes)
+	SoundFile *sound_file;
+} SfxData;
+
 // A Tile consists of four dungeon pieces (top, right, left, bottom), forming a
 // square.
 //

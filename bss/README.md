@@ -19,7 +19,7 @@ Each global variable in the uninitialized data section has been categorised base
 | [drlg_l4.cpp](drlg_l4.cpp)       | `0x5289C4`    | `0x52A4DF`  | 0% (0/6940 bytes)            |
 | [dthread.cpp](dthread.cpp)       | `0x52A4E0`    | `0x52A50F`  | 8% (4/48 bytes)              |
 | [dx.cpp](dx.cpp)                 | `0x52A510`    | `0x52A54F`  | 18% (12/64 bytes)            |
-| [effects.cpp](effects.cpp)       | `0x52A550`    | `0x52A563`  | 20% (4/20 bytes)             |
+| [effects.cpp](effects.cpp)       | `0x52A550`    | `0x52A563`  | 100% (20/20 bytes)           |
 | [encrypt.cpp](encrypt.cpp)       | `0x52A564`    | `0x52B967`  | 0% (0/5124 bytes)            |
 | [engine.cpp](engine.cpp)         | `0x52B968`    | `0x52B99F`  | 71% (40/56 bytes)            |
 | [error.cpp](error.cpp)           | `0x52B9A0`    | `0x52B9F3`  | 0% (0/84 bytes)              |
