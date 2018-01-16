@@ -33,7 +33,7 @@ Each global variable in the read-only data section has been categorised based on
 | [mpqapi.cpp](mpqapi.cpp)         | `0x47F148`    | `0x47F14B`  | 100% (4/4 bytes)         |
 | [msg.cpp](msg.cpp)               | `0x47F14C`    | `0x47F14F`  | 100% (4/4 bytes)         |
 | [msgcmd.cpp](msgcmd.cpp)         | `0x47F150`    | `0x47F153`  | 100% (4/4 bytes)         |
-| [multi.cpp](multi.cpp)           | `0x47F154`    | `0x47F163`  | 25% (4/16 bytes)         |
+| [multi.cpp](multi.cpp)           | `0x47F154`    | `0x47F163`  | 100% (16/16 bytes)       |
 | [nthread.cpp](nthread.cpp)       | `0x47F164`    | `0x47F167`  | 100% (4/4 bytes)         |
 | [hero.cpp](hero.cpp)             | `0x47F168`    | `0x47F16B`  | 100% (4/4 bytes)         |
 | [palette.cpp](palette.cpp)       | `0x47F16C`    | `0x47F1AF`  | 100% (68/68 bytes)       |

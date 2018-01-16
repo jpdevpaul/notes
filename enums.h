@@ -147,6 +147,13 @@ typedef enum {
 	ERROR_ID_ARCANE_KNOWLEDGE_GAINED               = 43,
 } error_id;
 
+// Event types for multiplayer games.
+typedef enum {
+	EVENT_TYPE_PLAYER_CREATE_GAME = 1,
+	EVENT_TYPE_PLAYER_LEAVE_GAME  = 3,
+	EVENT_TYPE_PLAYER_MESSAGE     = 4,
+} event_type;
+
 // Broad item categorization.
 //
 // References:
