@@ -1,3 +1,36 @@
+#include "types.h"
+
+// address: 0x48E1B8
+//
+// single_menu contains the game menu items of the single player menu.
+MenuItem single_menu[6];
+
+// address: 0x48E200
+//
+// multi_menu contains the game menu items of the multi player menu.
+MenuItem multi_menu[5];
+
+// address: 0x48E240
+//
+// options_menu contains the game menu items of the options menu.
+MenuItem options_menu[6];
+
+// address: 0x48E288
+//
+// music_toggle_names specifies the menu names for music enabled and disabled.
+char *music_toggle_names[2]
+
+// address: 0x48E290
+//
+// sound_toggle_names specifies the menu names for sound enabled and disabled.
+char *sound_toggle_names[2]
+
+// address: 0x48E298
+//
+// colour_cycling_toggle_names specifies the menu names for colour cycling
+// enabled and disabled.
+char *colour_cycling_toggle_names[2]
+
 // address: 0x48E2A0
 //
 // "Color Cycling On"

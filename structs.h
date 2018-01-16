@@ -529,6 +529,16 @@ typedef struct { // size = 0x30
 	int cost_multiplier;
 } ItemAffixData;
 
+// MenuItem is a game menu item.
+typedef struct { // size = 0xC
+	// offset: 0000 (4 bytes)
+	uint32_t flags;
+	// offset: 0004 (4 bytes)
+	char *name;
+	// offset: 0008 (4 bytes)
+	void (*func)(bool32_t a1);
+} MenuItem;
+
 // MissileGraphicData specifies the different missile animation graphics.
 typedef struct { // size = 0xEC
 	// offset 0000 (1 bytes)

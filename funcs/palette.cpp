@@ -75,7 +75,8 @@ void palette_dec_gamma();
 
 // address: 0x449209
 //
-// palette_update_gamma updates the gamma of the palette.
+// palette_update_gamma updates the gamma of the palette. A zero value returns
+// the current gamma.
 int __fastcall palette_update_gamma(int gamma);
 
 // address: 0x44923E
