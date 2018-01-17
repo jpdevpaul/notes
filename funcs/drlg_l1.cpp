@@ -16,7 +16,7 @@ void drlg_l1_reset_maps();
 //
 // PSX ref: 0x8013CF64
 // PSX sig: void LoadL1Dungeon__FPcii(char *sFileName, int vx, int vy)
-void __fastcall drlg_l1_load_dun(char *dun_path, int view_col, int view_row);
+void __fastcall drlg_l1_load_dun(char *dun_path, int view_x, int view_y);
 
 // address: 0x40AF65
 //
@@ -48,7 +48,7 @@ void drlg_l1_init_arches();
 //
 // PSX ref: 0x8013D138
 // PSX sig: void LoadPreL1Dungeon__FPcii(char *sFileName, int vx, int vy)
-void __fastcall drlg_l1_preload_dun(char *dun_path, int view_col, int view_row);
+void __fastcall drlg_l1_preload_dun(char *dun_path, int view_x, int view_y);
 
 // address: 0x40B229
 //
@@ -91,7 +91,7 @@ void __fastcall drlg_l1_generate_dungeon(int entry);
 //
 // PSX ref: 0x8013BCB0
 // PSX sig: void DRLG_PlaceDoor__Fii(int x, int y)
-void __fastcall drlg_l1_place_door(int qcol, int qrow);
+void __fastcall drlg_l1_place_door(int tx, int ty);
 
 // address: 0x40B699
 //
@@ -139,7 +139,7 @@ void drlg_l1_generate_first_room();
 //
 // PSX ref: 0x8013D3CC
 // PSX sig: void L5drawRoom__Fiiii(int x, int y, int w, int h)
-void __fastcall drlg_l1_add_room(int qcol_start, int qrow_start, int qcol_count, int qrow_count);
+void __fastcall drlg_l1_add_room(int tx, int ty, int tw, int th);
 
 // address: 0x40BD9D
 //
@@ -148,7 +148,7 @@ void __fastcall drlg_l1_add_room(int qcol_start, int qrow_start, int qcol_count,
 //
 // PSX ref: 0x8013D4CC
 // PSX sig: void L5roomGen__Fiiiii(int x, int y, int w, int h, int dir)
-void __fastcall drlg_l1_generate_room(int qcol_start, int qrow_start, int qcol_count, int qrow_count, bool32_t dir_horiz);
+void __fastcall drlg_l1_generate_room(int tx, int ty, int tw, int th, bool32_t dir_horiz);
 
 // address: 0x40BFA4
 //
@@ -156,7 +156,7 @@ void __fastcall drlg_l1_generate_room(int qcol_start, int qrow_start, int qcol_c
 //
 // PSX ref: 0x8013D438
 // PSX sig: unsigned char L5checkRoom__Fiiii(int x, int y, int width, int height)
-bool32_t __fastcall drlg_l1_is_area_empty(int qcol_start, int qrow_start, int qcol_count, int qrow_count);
+bool32_t __fastcall drlg_l1_is_area_empty(int tx, int ty, int tw, int th);
 
 // address: 0x40C008
 //
@@ -198,7 +198,7 @@ void drlg_l1_add_wall();
 //
 // PSX ref: 0x8013DD70
 // PSX sig: int L5HWallOk__Fii(int i, int j)
-int __fastcall drlg_l1_get_horiz_wall_space(int qcol, int qrow);
+int __fastcall drlg_l1_get_horiz_wall_space(int tx, int ty);
 
 // address: 0x40C2DC
 //
@@ -207,7 +207,7 @@ int __fastcall drlg_l1_get_horiz_wall_space(int qcol, int qrow);
 //
 // PSX ref: 0x8013DEAC
 // PSX sig: int L5VWallOk__Fii(int i, int j)
-int __fastcall drlg_l1_get_vert_wall_space(int qcol, int qrow);
+int __fastcall drlg_l1_get_vert_wall_space(int tx, int ty);
 
 // address: 0x40C35B
 //
@@ -215,7 +215,7 @@ int __fastcall drlg_l1_get_vert_wall_space(int qcol, int qrow);
 //
 // PSX ref: 0x8013DFF4
 // PSX sig: void L5HorizWall__Fiici(int i, int j, char p, int dx)
-void __fastcall drlg_l1_add_horiz_wall(int qcol, int qrow, l1_tile_id tile_id, int qcol_count);
+void __fastcall drlg_l1_add_horiz_wall(int tx, int ty, l1_tile_id tile_id, int tw);
 
 // address: 0x40C449
 //
@@ -223,7 +223,7 @@ void __fastcall drlg_l1_add_horiz_wall(int qcol, int qrow, l1_tile_id tile_id, i
 //
 // PSX ref: 0x8013E22C
 // PSX sig: void L5VertWall__Fiici(int i, int j, char p, int dy)
-void __fastcall drlg_l1_add_vert_wall(int qcol, int qrow, l1_tile_id tile_id, int qrow_count);
+void __fastcall drlg_l1_add_vert_wall(int tx, int ty, l1_tile_id tile_id, int th);
 
 // address: 0x40C551
 //
@@ -256,7 +256,7 @@ void drlg_l1_generate_chambers();
 //
 // PSX ref: 0x8013E6B4
 // PSX sig: void DRLG_L5GChamber__Fiiiiii(int sx, int sy, int topflag, int bottomflag, int leftflag, int rightflag)
-void __fastcall drlg_l1_generate_chamber(int qcol_start, int qrow_start, bool32_t top_right, bool32_t bottom_left, bool32_t top_left, bool32_t bottom_right);
+void __fastcall drlg_l1_generate_chamber(int tx, int ty, bool32_t top_right, bool32_t bottom_left, bool32_t top_left, bool32_t bottom_right);
 
 // address: 0x40CEC7
 //
@@ -264,7 +264,7 @@ void __fastcall drlg_l1_generate_chamber(int qcol_start, int qrow_start, bool32_
 //
 // PSX ref: 0x8013E974
 // PSX sig: void DRLG_L5GHall__Fiiii(int x1, int y1, int x2, int y2)
-void __fastcall drlg_l1_generate_hall(int qcol_start, int qrow_start, int qcol_end, int qrow_end);
+void __fastcall drlg_l1_generate_hall(int tx_start, int ty_start, int tx_end, int ty_end);
 
 // address: 0x40CF17
 //
@@ -273,7 +273,7 @@ void __fastcall drlg_l1_generate_hall(int qcol_start, int qrow_start, int qcol_e
 //
 // PSX ref: 0x8013F4F8
 // PSX sig: void DRLG_L5SetRoom__Fii(int rx1, int ry1)
-void __fastcall drlg_l1_init_quest_dun(int qcol_start, int qrow_start);
+void __fastcall drlg_l1_init_quest_dun(int tx, int ty);
 
 // address: 0x40CF9C
 //
@@ -290,7 +290,7 @@ void drlg_l1_floor_transparency();
 //
 // PSX ref: 0x8013FCE4
 // PSX sig: void DRLG_L5FTVR__Fiiiii(int i, int j, int x, int y, int d)
-void __fastcall drlg_l1_floor_transparency_recursive(int qcol, int qrow, int col, int row, int direction);
+void __fastcall drlg_l1_floor_transparency_recursive(int tx, int ty, int x, int y, int direction);
 
 // address: 0x40D1FB
 //

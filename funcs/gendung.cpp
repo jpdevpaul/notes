@@ -40,7 +40,7 @@ void gendung_init_transparency();
 //
 // PSX ref: 0x800578DC
 // PSX def: void DRLG_MRectTrans__Fiiii(int x1, int y1, int x2, int y2)
-void __fastcall gendung_make_rect_transparent(int qcol_start, int qrow_start, int qcol_end, int qrow_end);
+void __fastcall gendung_make_rect_transparent(int tx_start, int ty_start, int tx_end, int ty_end);
 
 // address: 0x4194D0
 //
@@ -57,7 +57,7 @@ void __fastcall gendung_rect_transparent(int x_start, int y_start, int x_end, in
 //
 // PSX ref: 0x8015A158
 // PSX def: void DRLG_CopyTrans__Fiiii(int sx, int sy, int dx, int dy)
-void __fastcall gendung_copy_transparency(int src_col, int src_row, int dst_col, int dst_row);
+void __fastcall gendung_copy_transparency(int src_x, int src_y, int dst_x, int dst_y);
 
 // address: 0x419534
 //

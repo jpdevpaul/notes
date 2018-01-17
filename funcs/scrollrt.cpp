@@ -35,12 +35,12 @@ void scrollrt_cpp_init();
 // address: 0x453160
 //
 // scrollrt_draw renders the UI and the game world in dungeons on screen.
-void __fastcall scrollrt_draw(int col, int row);
+void __fastcall scrollrt_draw(int x, int y);
 
 // address: 0x453272
 //
 // scrollrt_draw_game renders the game world in dungeons on screen.
-void __fastcall scrollrt_draw_game(int col, int row);
+void __fastcall scrollrt_draw_game(int x, int y);
 
 // address: 0x453477
 //
@@ -98,7 +98,7 @@ void __fastcall scrollrt_draw_game(int col, int row);
 //
 // scrollrt_draw_zoomed_game renders a zoomed-in version of the game world in
 // dungeons on screen.
-void __fastcall scrollrt_draw_zoomed_game(int col, int row);
+void __fastcall scrollrt_draw_zoomed_game(int x, int y);
 
 // address: 0x455E32
 //

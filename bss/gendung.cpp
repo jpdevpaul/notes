@@ -71,8 +71,8 @@ uint8_t tile_id_map_backup[40][40];
 // dead_map contains the dead numbers (deads array indices) and dead direction
 // of the map, encoded as specified by the pseudo-code below.
 //
-//    dead_num  = dead_map[col][row]&0x1F
-//    direction = dead_map[col][row]>>5
+//    dead_num  = dead_map[x][y]&0x1F
+//    direction = dead_map[x][y]>>5
 //
 // References:
 //    * https://github.com/sanctuary/notes/blob/master/bss/dead.cpp#deads

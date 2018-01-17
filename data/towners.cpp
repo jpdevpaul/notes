@@ -10,19 +10,19 @@ int8_t towner_anim_seq[148][6];
 
 // address: 0x4B2A9C
 //
-// cow_start_col specifies the start columns of the cows in Tristram.
+// cow_start_x specifies the start X-coordinates of the cows in Tristram.
 //
 // PSX ref: 0x800CFB5C
 // PSX def: int TownCowX[3]
-int cow_start_col[3];
+int cow_start_x[3];
 
 // address: 0x4B2AA8
 //
-// cow_start_row specifies the start rows of the cows in Tristram.
+// cow_start_y specifies the start Y-coordinates of the cows in Tristram.
 //
 // PSX ref: 0x800CFB68
 // PSX def: int TownCowY[3]
-int cow_start_row[3];
+int cow_start_y[3];
 
 // address: 0x4B2AB4
 //
@@ -34,23 +34,23 @@ direction cow_start_direction[3];
 
 // address: 0x4B2AC0
 //
-// cow_col_delta_from_direction maps from direction to column delta, which is
-// used when placing cows in Tristram. A single cow may require space of up to
-// three tiles when being placed on the map.
+// cow_x_delta_from_direction maps from direction to X-coordinate delta, which
+// is used when placing cows in Tristram. A single cow may require space of up
+// to three tiles when being placed on the map.
 //
 // PSX ref: 0x800CFB80
 // PSX def: int cowoffx[8]
-int cow_col_delta_from_direction[8];
+int cow_x_delta_from_direction[8];
 
 // address: 0x4B2AE0
 //
-// cow_row_delta_from_direction maps from direction to row delta, which is used
-// when placing cows in Tristram. A single cow may require space of up to three
-// tiles when being placed on the map.
+// cow_y_delta_from_direction maps from direction to Y-coordinate delta, which
+// is used when placing cows in Tristram. A single cow may require space of up
+// to three tiles when being placed on the map.
 //
 // PSX ref: 0x800CFBA0
 // PSX def: int cowoffy[8]
-int cow_row_delta_from_direction[8];
+int cow_y_delta_from_direction[8];
 
 // address: 0x4B2B00
 //

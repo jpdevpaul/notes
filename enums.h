@@ -53,31 +53,31 @@ typedef enum {
 //
 // # Map layout
 //
-//                    (col=0 row=0)
-//                          _
-//                         / \
-//                    r   /   \     c
-//                   o   /     \     o
-//                  w   /       \     l
-//                     /         \
-//    (col=0 row=95)  |           |  (col=95 row=0)
-//                     \         /
-//                      \       /
-//                       \     /
-//                        \   /
-//                         \_/
-//                   (col=95 row=95)
+//                  (x=0 y=0)
+//                      _
+//                     / \
+//                    /   \
+//               y   /     \   x
+//                  /       \
+//                 /         \
+//    (x=0 y=95)  |           |  (x=95 y=0)
+//                 \         /
+//                  \       /
+//                   \     /
+//                    \   /
+//                     \_/
+//                 (x=95 y=95)
 //
 // # Step based on direction
 //
-//    * South      (col+1, row+1)
-//    * South west (col,   row+1)
-//    * West       (col-1, row+1)
-//    * North west (col-1, row)
-//    * North      (col-1, row-1)
-//    * North east (col,   row-1)
-//    * East       (col+1, row-1)
-//    * South east (col+1, row)
+//    * South      (x+1, y+1)
+//    * South west (x,   y+1)
+//    * West       (x-1, y+1)
+//    * North west (x-1, y)
+//    * North      (x-1, y-1)
+//    * North east (x,   y-1)
+//    * East       (x+1, y-1)
+//    * South east (x+1, y)
 typedef enum {
 	DIRECTION_SOUTH      = 0,
 	DIRECTION_SOUTH_WEST = 1,

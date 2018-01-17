@@ -338,9 +338,9 @@ typedef struct { // size = 0x170
 	// offset 0008 (4 bytes)
 	item_type type;
 	// offset 000C (4 bytes)
-	int32_t col;
+	int32_t x;
 	// offset 0010 (4 bytes)
-	int32_t row;
+	int32_t y;
 	// offset 0014 (4 bytes)
 	int32_t drop_anim_update;
 	// offset 0018 (4 bytes)
@@ -733,8 +733,8 @@ typedef struct {
 //       unsigned char setlvl;
 //    } DPortal;
 typedef struct {
-	int8_t col;
-	int8_t row;
+	int8_t x;
+	int8_t y;
 	int8_t dlvl;
 	dungeon_type dtype;
 	quest_level quest_lvl;

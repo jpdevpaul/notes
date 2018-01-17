@@ -45,18 +45,18 @@
 // address: 0x45F65D
 //
 // town_draw_game renders the game world in town on screen.
-void __fastcall town_draw_game(int col, int row);
+void __fastcall town_draw_game(int x, int y);
 
 // address: 0x45F856
 //
 // town_draw_zoomed_game renders a zoomed-in version of the game world in town
 // on screen.
-void __fastcall town_draw_zoomed_game(int col, int row);
+void __fastcall town_draw_zoomed_game(int x, int y);
 
 // address: 0x45FAAB
 //
 // town_draw renders the UI and the game world in town on screen.
-void __fastcall town_draw(int col, int row);
+void __fastcall town_draw(int x, int y);
 
 // address: 0x45FBD7
 //
