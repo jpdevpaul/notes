@@ -2743,6 +2743,27 @@ typedef enum {
 	TALK_ID_GILLIAN                   = 23,
 } talk_id;
 
+// Theme IDs.
+typedef enum {
+	THEME_ID_BARREL             =  0,
+	THEME_ID_SHRINE             =  1,
+	THEME_ID_MONSTER_PIT        =  2,
+	THEME_ID_SKELETON_ROOM      =  3,
+	THEME_ID_TREASURE           =  4,
+	THEME_ID_LIBRARY            =  5,
+	THEME_ID_TORTURE            =  6,
+	THEME_ID_BLOOD_FOUNTAIN     =  7,
+	THEME_ID_DECAPITATED        =  8,
+	THEME_ID_PURIFYING_FOUNTAIN =  9,
+	THEME_ID_ARMOR_STAND        = 10,
+	THEME_ID_GOAT_SHRINE        = 11,
+	THEME_ID_CAULDRON           = 12,
+	THEME_ID_MURKY_FOUNTAIN     = 13,
+	THEME_ID_TEAR_FOUNTAIN      = 14,
+	THEME_ID_BURNING_CROSS      = 15,
+	THEME_ID_WEAPON_RACK        = 16,
+} theme_id;
+
 
 // Template IDs for error windows.
 typedef enum {

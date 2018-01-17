@@ -65,7 +65,7 @@ Each global variable in the data section has been categorised based on their ori
 | [stores.cpp](stores.cpp)         | `0x4A2D5C`    | `0x4A34F7`  | 100% (1948/1948 bytes)   |
 | [sync.cpp](sync.cpp)             | `0x4A34F8`    | `0x4A350B`  | 100% (20/20 bytes)       |
 | [talk.cpp](talk.cpp)             | `0x4A350C`    | `0x4B2583`  | 100% (61560/61560 bytes) |
-| [themes.cpp](themes.cpp)         | `0x4B2584`    | `0x4B26A3`  | 0% (0/288 bytes)         |
+| [themes.cpp](themes.cpp)         | `0x4B2584`    | `0x4B26A3`  | 100% (288/288 bytes)     |
 | [town.cpp](town.cpp)             | `0x4B26A4`    | `0x4B2723`  | 100% (128/128 bytes)     |
 | [towners.cpp](towners.cpp)       | `0x4B2724`    | `0x4B2F77`  | 100% (2132/2132 bytes)   |
 | [trigs.cpp](trigs.cpp)           | `0x4B2F78`    | `0x4B325B`  | 100% (740/740 bytes)     |
