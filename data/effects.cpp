@@ -1,7 +1,5 @@
 #include "types.h"
 
-/* TODO: uncomment when the SfxData struct has been added to structs.h.
-
 // address: 0x486370
 //
 // sfx_data contains the data related to each sound effect ID.
@@ -9,8 +7,6 @@
 // PSX ref: 0x800D0AC0
 // PSX def: TSFX sgSFX[992]
 SfxData sfx_data[858];
-
-*/
 
 // address: 0x48819C
 //
