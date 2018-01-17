@@ -28,7 +28,7 @@ Each function has been categorised based on their original source file, as summa
 | [exception.cpp](exception.cpp)   | `0x4182AD`    | `0x418865`  | 8% (1/12 functions)      |
 | [gamemenu.cpp](gamemenu.cpp)     | `0x418866`    | `0x418C8A`  | 0% (0/23 functions)      |
 | [gendung.cpp](gendung.cpp)       | `0x418C8B`    | `0x419E8A`  | 36% (8/22 functions)     |
-| [gmenu.cpp](gmenu.cpp)           | `0x419E8B`    | `0x41A552`  | 10% (2/20 functions)     |
+| [gmenu.cpp](gmenu.cpp)           | `0x419E8B`    | `0x41A552`  | 20% (4/20 functions)     |
 | [help.cpp](help.cpp)             | `0x41A553`    | `0x41A7B2`  | 16% (1/6 functions)      |
 | [init.cpp](init.cpp)             | `0x41A7B3`    | `0x41B18F`  | 57% (11/19 functions)    |
 | [interfac.cpp](interfac.cpp)     | `0x41B190`    | `0x41B813`  | 44% (4/9 functions)      |
@@ -64,7 +64,7 @@ Each function has been categorised based on their original source file, as summa
 | [spells.cpp](spells.cpp)         | `0x45744E`    | `0x457A00`  | 100% (7/7 functions)     |
 | [stores.cpp](stores.cpp)         | `0x457A01`    | `0x45C198`  | 67% (64/95 functions)    |
 | [sync.cpp](sync.cpp)             | `0x45C199`    | `0x45C86F`  | 0% (0/9 functions)       |
-| [themes.cpp](themes.cpp)         | `0x45C870`    | `0x45E08B`  | 0% (0/31 functions)      |
+| [themes.cpp](themes.cpp)         | `0x45C870`    | `0x45E08B`  | 67% (21/31 functions)    |
 | [tmsg.cpp](tmsg.cpp)             | `0x45E08C`    | `0x45E150`  | 100% (3/3 functions)     |
 | [town.cpp](town.cpp)             | `0x45E151`    | `0x46019A`  | 15% (3/19 functions)     |
 | [towners.cpp](towners.cpp)       | `0x46019B`    | `0x4618A4`  | 100% (33/33 functions)   |

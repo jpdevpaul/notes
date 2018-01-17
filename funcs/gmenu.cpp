@@ -1,3 +1,5 @@
+#include "types.h"
+
 // address: 0x419E8B
 //
 // gmenu_draw_pause renders the pause menu on screen.
@@ -66,7 +68,8 @@ void gmenu_draw();
 
 // address: 0x41A4B8
 //
-// TODO: add documentation.
+// gmenu_enable enables or disables the game menu item.
+void __fastcall gmenu_enable(MenuItem *menu_item, bool32_t enable);
 
 // address: 0x41A4C6
 //
@@ -74,7 +77,9 @@ void gmenu_draw();
 
 // address: 0x41A508
 //
-// TODO: add documentation.
+// gmenu_slider_get returns the slider value of the given game menu item,
+// contained within the given interval.
+int __fastcall gmenu_slider_get(MenuItem *menu_item, int min, int max);
 
 // address: 0x41A545
 //
