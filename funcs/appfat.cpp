@@ -57,26 +57,16 @@ void __fastcall appfat_DD_assert(uint32_t error_code, int log_line_nr, char *log
 // box.
 void __fastcall appfat_DS_assert(uint32_t error_code, int log_line_nr, char *log_file_path);
 
-/* TODO: uncomment when the HWND struct has been added. Include windows.h
-   from types.h? Or create a minimal windows.h locally for the specific types
-   which are used in Diablo.
-
 // address: 0x401AAB
 //
 // appfat_centre_dialog_box centres the given dialog box.
 void __fastcall appfat_centre_dialog_box(HWND hDlg);
-
-*/
 
 // address: 0x401B3D
 //
 // appfat_terminate_dialog_box terminates the game and displays an error dialog
 // box based on the given template id.
 void __fastcall __attribute__((noreturn)) appfat_terminate_dialog_box(int template_id, uint32_t error_code, char *log_file_path, int log_line_nr);
-
-/* TODO: uncomment when the HWND struct has been added. Include windows.h
-   from types.h? Or create a minimal windows.h locally for the specific types
-   which are used in Diablo.
 
 // address: 0x401BCA
 //
@@ -88,8 +78,6 @@ bool32_t __stdcall appfat_dialog_func(HWND hDlg, UINT uMsg, WPARAM wParam, char 
 //
 // appfat_set_dialog_text sets the text of the given dialog.
 void __fastcall appfat_set_dialog_text(HWND hDlg, char *text);
-
-*/
 
 // address: 0x401C2E
 //

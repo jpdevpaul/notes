@@ -173,6 +173,22 @@ typedef enum {
 	GAME_INFO_PASS = 2,
 } game_info;
 
+// TODO: add definition of interface_mode members.
+
+// User-defined events for signaling interface mode changes.
+typedef enum {
+	INTERFACE_MODE_402 = 0x402,
+	INTERFACE_MODE_403 = 0x403,
+	INTERFACE_MODE_404 = 0x404,
+	INTERFACE_MODE_405 = 0x405,
+	INTERFACE_MODE_406 = 0x406,
+	INTERFACE_MODE_407 = 0x407,
+	INTERFACE_MODE_408 = 0x408,
+	INTERFACE_MODE_409 = 0x409,
+	INTERFACE_MODE_40A = 0x40A,
+	INTERFACE_MODE_40B = 0x40B,
+} interface_mode;
+
 // Broad item categorization.
 //
 // References:

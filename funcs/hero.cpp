@@ -20,11 +20,15 @@ void __fastcall hero_get_hero_from_player(Hero *hero, int player_num, bool32_t c
 // hero_get_hero_item_from_item retrieves hero item information from the item struct.
 void __fastcall hero_get_hero_item_from_item(HeroItem *hero_item, Item *item);
 
+/* TODO: uncomment when the Player struct has been added to structs.h.
+
 // address: 0x448A5E
 //
 // hero_regenerate_gold_item_seeds regenerates the item seed of all gold in the
 // plyer's inventory inventory.
 void __fastcall hero_regenerate_gold_item_seeds(Player *player);
+
+*/
 
 // address: 0x448AD0
 //

@@ -5,14 +5,10 @@
 // +Infinity after initialization of diablo.cpp.
 float diablo_cpp_init_value;
 
-/* TODO: uncomment when HWND struct has been added.
-
 // address: 0x525518
 //
 // hWndParent is the window handle of the game.
 HWND hWndParent;
-
-*/
 
 // address: 0x525600
 //

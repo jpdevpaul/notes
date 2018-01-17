@@ -42,17 +42,11 @@ void __fastcall init_disable_screensaver(bool32_t disable);
 // init_kill_mom_parent kills the "MOM Parent" process if present.
 void init_kill_mom_parent();
 
-/* TODO: uncomment when the HWND struct has been added. Include windows.h
-   from types.h? Or create a minimal windows.h locally for the specific types
-   which are used in Diablo.
-
 // address: 0x41AC21
 //
 // init_find_mom_parent attempts to locate the "MOM Parent" process and return
 // its window handle.
 HWND init_find_mom_parent();
-
-*/
 
 // address: 0x41AC71
 //

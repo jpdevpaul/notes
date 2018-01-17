@@ -22,8 +22,6 @@ void diablo_cleanup_current_level();
 //
 // TODO: add documentation.
 
-/* TODO: uncomment once interface_mode enum has been defined.
-
 // address: 0x4088E2
 //
 // diablo_run_game_loop runs the game loop, dispatching events, and processing game state changes.
@@ -32,10 +30,6 @@ void diablo_cleanup_current_level();
 // PSX def: void run_game_loop__FUi(unsigned int uMsg)
 void __fastcall diablo_run_game_loop(interface_mode interface_mode);
 
-*/
-
-/* TODO: uncomment once interface_mode enum has been defined.
-
 // address: 0x408A8C
 //
 // diablo_init_game initializes the resources used for the game.
@@ -43,8 +37,6 @@ void __fastcall diablo_run_game_loop(interface_mode interface_mode);
 // PSX ref: 0x80037FE4
 // PSX def: void start_game__FUi(unsigned int uMsg)
 void __fastcall diablo_init_game(interface_mode interface_mode);
-
-*/
 
 // address: 0x408ADB
 //
@@ -76,18 +68,11 @@ void __fastcall diablo_parse_flags(char *args);
 //
 // TODO: add documentation.
 
-
-/* TODO: uncomment when the HMODULE struct has been added. Include windows.h
-   from types.h? Or create a minimal windows.h locally for the specific types
-   which are used in Diablo.
-
 // address: 0x408DF4
 //
 // diablo_reload_process reloads the diablo.exe process in order to obstruct
 // debugging attempts.
 void __fastcall diablo_reload_process(HMODULE hModule);
-
-*/
 
 // address: 0x408FCF
 //

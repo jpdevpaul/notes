@@ -108,7 +108,6 @@ void __fastcall pfile_get_save_path(char *save_path, int size, int save_num);
 //
 // TODO: add documentation.
 
-
 /* TODO: uncomment when the HeroInfo struct has been added to structs.h.
 
 // address: 0x44A356

@@ -1,6 +1,6 @@
 #include "types.h"
 
-/* TODO: uncomment when the l1_piece_id struct has been added to enums.h.
+/* TODO: uncomment when the l1_piece_id enum has been added to enums.h.
 
 // address: 0x4B2F78
 //

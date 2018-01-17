@@ -1,3 +1,5 @@
+#include "types.h"
+
 // address: 0x415362
 //
 // j_dx_cpp_init_1 initializes the C++ runtime of dx.cpp.
@@ -25,16 +27,10 @@ void dx_cpp_init_2();
 //
 // TODO: add documentation.
 
-/* TODO: uncomment when the HWND struct has been added. Include windows.h
-   from types.h? Or create a minimal windows.h locally for the specific types
-   which are used in Diablo.
-
 // address: 0x4153A0
 //
 // dx_init initializes the DirectX rendering system.
 void __fastcall dx_init(HWND hWnd);
-
-*/
 
 // address: 0x4154B5
 //
