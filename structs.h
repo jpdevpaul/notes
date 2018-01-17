@@ -1,3 +1,19 @@
+// Caps specifies the network message capabilities of the client.
+typedef struct { // size = 0x24
+	// offset: 00000000 (4 bytes)
+	int size;
+	// offset: 00000008 (4 bytes)
+	int max_msg_size;
+	// offset: 00000010 (4 bytes)
+	int max_players;
+	// offset: 00000014 (4 bytes)
+	int unknown_0014;
+	// offset: 0000001C (4 bytes)
+	int unknown_001C;
+	// offset: 00000020 (4 bytes)
+	int nturns_in_transit;
+} Caps;
+
 // CmdPutItem is a PutItem network command.
 //
 // PSX def:
@@ -44,6 +60,30 @@ typedef struct {
 	// offset: 0012 (4 bytes)
 	uint32_t only_used_by_ear; // only used by ear to store name of character.
 } CmdPutItem;
+
+// ClientInfo specifies information about the game version of the client.
+typedef struct { // size = 0x3C
+	// offset: 0000 (4 bytes)
+	int size; // size of ClientInfo struct.
+	// offset: 0004 (4 bytes)
+	char *release_name;
+	// offset: 0008 (4 bytes)
+	char *version;
+	// offset: 000C (4 bytes)
+	uint32_t release_id; // 'DRTL' (Diablo Retail)
+	// offset: 0010 (4 bytes)
+	int unknown_0010;
+	// offset: 0018 (4 bytes)
+	int unknown_0018;
+	// offset: 001C (4 bytes)
+	int32_t multi_seed;
+	// offset: 0020 (4 bytes)
+	int unknown_0020;
+	// offset: 0028 (4 bytes)
+	int unknown_0028;
+	// offset: 0038 (4 bytes)
+	uint32_t languageID;
+} ClientInfo;
 
 // Coord specifies an X-Y coordinate of the map.
 typedef struct {
@@ -132,6 +172,18 @@ typedef struct {
 	// Either 10 or 16 blocks constituting the dungeon piece.
 	uint16_t blocks[nblocks];
 } DPiece;
+
+// Event is a network game player event.
+typedef struct { // size = 0x10
+	// offset: 0000 (4 bytes)
+	event_type event_type;
+	// offset: 0004 (4 bytes)
+	int player_num;
+	// offset: 0008 (4 bytes)
+	void *data;
+	// offset: 000C (4 bytes)
+	int len;
+} Event;
 
 // FileInfo provides information about the game executable and asset archives.
 typedef struct {
@@ -561,6 +613,61 @@ typedef struct { // size = 0xEC
 	void *x_offset_from_orientation[16];
 } MissileGraphicData;
 
+// PacketHeader is the header of a network game synchronization packet.
+//
+// PSX def:
+//    typedef struct TPktHdr {
+//       unsigned char px;
+//       unsigned char py;
+//       unsigned char targx;
+//       unsigned char targy;
+//       unsigned long php;
+//       unsigned long pmhp;
+//       unsigned char bstr;
+//       unsigned char bmag;
+//       unsigned char bdex;
+//       unsigned short wCheck;
+//       unsigned short wLen;
+//    } TPktHdr;
+typedef struct { // size = 0x13
+	// offset: 0000 (1 bytes)
+	int8_t x;
+	// offset: 0001 (1 bytes)
+	int8_t y;
+	// offset: 0002 (1 bytes)
+	int8_t target_x;
+	// offset: 0003 (1 bytes)
+	int8_t target_y;
+	// offset: 0004 (4 bytes)
+	int hp_cur;
+	// offset: 0008 (4 bytes)
+	int hp_max;
+	// offset: 000C (1 bytes)
+	int8_t str_base;
+	// offset: 000D (1 bytes)
+	int8_t mag_base;
+	// offset: 000E (1 bytes)
+	int8_t dex_base;
+	// offset: 000F (2 bytes)
+	uint16_t pkt_type; // Contains the magic value 'ip' (0x6970).
+	// offset: 0011 (2 bytes)
+	int16_t len;
+} PacketHeader;
+
+// Packet is a network game synchronization packet.
+//
+// PSX def:
+//    typedef struct TPkt {
+//       struct TPktHdr hdr;
+//       unsigned char body[492];
+//    } TPkt;
+typedef struct { // size = 0x200
+	// offset: 0000 (19 bytes)
+	PacketHeader hdr;
+	// offset: 0013 (493 bytes)
+	uint8_t data[493];
+} Packet;
+
 // PanelButton specifies the position and dimensions of a panel button.
 typedef struct { // size = 0x14
 	// offset: 0000 (4 bytes)
@@ -600,11 +707,11 @@ typedef struct PathNode { // size = 0x34
 	// offset 0008 (4 bytes)
 	int y;
 	// offset 000C (4 bytes)
-	PathNode *parent;
+	struct PathNode *parent;
 	// offset 0010 (32 bytes)
-	PathNode *children[8];
+	struct PathNode *children[8];
 	// offset 0030 (4 bytes)
-	PathNode *next;
+	struct PathNode *next;
 } PathNode;
 
 // A Point is an X, Y coordinate pair. The axes increase right and down.
@@ -795,7 +902,7 @@ struct TMsg;
 
 // TMsgHeader represents the header of a timed message.
 typedef struct {
-	TMsg *next;
+	struct TMsg *next;
 	uint32_t start_tc;
 	uint8_t len;
 } TMsgHeader;
@@ -805,6 +912,42 @@ typedef struct TMsg {
 	TMsgHeader hdr;
 	uint8_t data[3]; // The size of msg is >= 3 and is dynamically allocated.
 } TMsg;
+
+// UiInfo specifies callback functions for the character selection user
+// interface.
+typedef struct { // size = 0x50
+	// offset: 0000 (4 bytes)
+	int size; // size of UiInfo struct.
+	// offset: 0008 (4 bytes)
+	HWND hFrameWnd;
+	// TODO: Fill in the correct function signatures below.
+	// offset: 000C (4 bytes)
+	void (*UiArtCallback)();
+	// offset: 0010 (4 bytes)
+	void (*UiAuthCallback)();
+	// offset: 0014 (4 bytes)
+	void (*UiCreateGameCallback)();
+	// offset: 0018 (4 bytes)
+	void (*UiDrawDescCallback)();
+	// offset: 0020 (4 bytes)
+	void (*UiMessageBoxCallback)();
+	// offset: 0024 (4 bytes)
+	void (*UiSoundCallback)();
+	// offset: 002C (4 bytes)
+	void (*UiGetDataCallback)();
+	// offset: 0030 (4 bytes)
+	void (*UiCategoryCallback)();
+	// offset: 003C (4 bytes)
+	void (*UiProfileCallback)();
+	// offset: 0040 (4 bytes)
+	void (*UiProfileGetString)();
+	// offset: 0044 (4 bytes)
+	void (*UiProfileDraw)();
+	// offset: 0048 (4 bytes)
+	void (*mainmenu_select_hero_dialog)();
+	// offset: 004C (4 bytes)
+	void (*mainmenu_create_hero)();
+} UiInfo;
 
 // UniqueItemData describes the properties and effects of a unique item.
 typedef struct { // size = 0x54
@@ -821,3 +964,15 @@ typedef struct { // size = 0x54
 	// offset 000C (72 bytes)
 	ItemEffect effects[6];
 } UniqueItemData;
+
+// UserInfo describes the selected character.
+typedef struct { // size = 0x10
+	// offset: 0000 (4 bytes)
+	int size;
+	// offset: 0004 (4 bytes)
+	char *char_name;
+	// offset: 0008 (4 bytes)
+	char *player_description;
+	// offset: 000C (4 bytes)
+	int unknown_000C;
+} UserInfo;

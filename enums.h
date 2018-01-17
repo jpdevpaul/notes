@@ -19,6 +19,7 @@ typedef enum {
 
 // Network message commands.
 typedef enum {
+	CMD_0 = 0,
 	// TODO: Define message commands (there are 93 of them).
 } cmd;
 
@@ -149,10 +150,28 @@ typedef enum {
 
 // Event types for multiplayer games.
 typedef enum {
-	EVENT_TYPE_PLAYER_CREATE_GAME = 1,
-	EVENT_TYPE_PLAYER_LEAVE_GAME  = 3,
-	EVENT_TYPE_PLAYER_MESSAGE     = 4,
+	EVENT_TYPE_PLAYER_CREATE_GAME =  1,
+	EVENT_TYPE_2                  =  2,
+	EVENT_TYPE_PLAYER_LEAVE_GAME  =  3,
+	EVENT_TYPE_PLAYER_MESSAGE     =  4,
+	EVENT_TYPE_5                  =  5,
+	EVENT_TYPE_6                  =  6,
+	EVENT_TYPE_7                  =  7,
+	EVENT_TYPE_8                  =  8,
+	EVENT_TYPE_9                  =  9,
+	EVENT_TYPE_10                 = 10,
+	EVENT_TYPE_11                 = 11,
+	EVENT_TYPE_12                 = 12,
+	EVENT_TYPE_13                 = 13,
+	EVENT_TYPE_14                 = 14,
+	EVENT_TYPE_15                 = 15,
 } event_type;
+
+// Network game information.
+typedef enum {
+	GAME_INFO_NAME = 1,
+	GAME_INFO_PASS = 2,
+} game_info;
 
 // Broad item categorization.
 //
