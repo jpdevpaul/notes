@@ -651,7 +651,7 @@ typedef struct { // size = 0x34
 	// offset: 0008 (4 bytes)
 	int light_radius;
 	// offset: 000C (4 bytes)
-	int light_id;
+	int vision_id;
 	// offset: 0010 (4 bytes)
 	bool32_t inactive;
 	// offset: 0014 (4 bytes)

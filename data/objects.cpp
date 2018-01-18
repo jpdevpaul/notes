@@ -8,7 +8,6 @@
 // PSX def: ObjDataStruct AllObjects[99]
 ObjectData object_data[99];
 
-
 // address: 0x4A0634
 //
 // "LzStand"

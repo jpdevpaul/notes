@@ -1499,6 +1499,22 @@ typedef enum {
 } player_class;
 
 // Player modes.
+//
+// PSX def:
+//    typedef enum PLR_MODE {
+//       PM_STAND = 0,
+//       PM_WALK = 1,
+//       PM_WALK2 = 2,
+//       PM_WALK3 = 3,
+//       PM_ATTACK = 4,
+//       PM_RATTACK = 5,
+//       PM_BLOCK = 6,
+//       PM_GOTHIT = 7,
+//       PM_DEATH = 8,
+//       PM_SPELL = 9,
+//       PM_NEWLVL = 10,
+//       PM_QUIT = 11,
+//    } PLR_MODE;
 typedef enum {
 	PLAYER_MODE_STANDING         =  0,
 	PLAYER_MODE_WALKING_1        =  1,
