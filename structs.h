@@ -1069,6 +1069,14 @@ typedef struct { // size = 0x9
 } SfxData;
 
 // SpeechData specifies the text and sound of a speech.
+//
+// PSX ref:
+//    typedef struct TextDataStruct {
+//        int txtstr;
+//        unsigned char scrlltxt;
+//        unsigned char txtspd;
+//        int sfxnr;
+//    } TextDataStruct;
 typedef struct { // size = 0x10
 	// offset: 0000 (4 bytes)
 	char *text;
