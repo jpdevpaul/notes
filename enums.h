@@ -100,6 +100,13 @@ typedef enum {
 	DUNGEON_TYPE_NONE      = -1,
 } dungeon_type;
 
+// Enterances to town (warp), used as bitfield.
+typedef enum {
+	ENTERANCE_OPEN_CATACOMBS = 0x01,
+	ENTERANCE_OPEN_CAVES     = 0x02,
+	ENTERANCE_OPEN_HELL      = 0x04,
+} enterance_open;
+
 // Error IDs for on screen error messages.
 typedef enum {
 	ERROR_ID_NONE                                  =  0,

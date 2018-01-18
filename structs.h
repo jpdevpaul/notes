@@ -887,6 +887,51 @@ typedef struct {
 	quest_level quest_lvl;
 } Portal;
 
+// Quest describes in-game state of a quest.
+//
+// PSX def:
+//     typedef struct QuestStruct {
+//        unsigned char _qlevel;
+//        unsigned char _qtype;
+//        unsigned char _qactive;
+//        unsigned char _qlvltype;
+//        int _qtx;
+//        int _qty;
+//        unsigned char _qslvl;
+//        unsigned char _qidx;
+//        unsigned char _qmsg;
+//        unsigned char _qvar1;
+//        unsigned char _qvar2;
+//        unsigned char _qlog;
+//        unsigned char pad_for_laz;
+//     } QuestStruct;
+typedef struct { // size = 0x18
+	// offset: 0000 (1 bytes)
+	int8_t dlvl;
+	// offset: 0001 (1 bytes)
+	quest_id quest_id;
+	// offset: 0002 (1 bytes)
+	int8_t quest_active; // TODO: define quest_active enum
+	// offset: 0003 (1 bytes)
+	dungeon_type dtype;
+	// offset: 0004 (4 bytes)
+	int32_t enterance_x;
+	// offset: 0008 (4 bytes)
+	int32_t enterance_y;
+	// offset: 000C (1 bytes)
+	int8_t quest_level;
+	// offset: 000D (1 bytes)
+	quest_level_id quest_level_id;
+	// offset: 000E (1 bytes)
+	speech_id speech_id;
+	// offset: 000F (1 bytes)
+	int8_t var1;
+	// offset: 0010 (1 bytes)
+	int8_t var2;
+	// offset: 0014 (4 bytes)
+	bool32_t speech_spoken;
+} Quest;
+
 // QuestData describes the basic properties and activation conditions of quests.
 //
 // PSX def:
