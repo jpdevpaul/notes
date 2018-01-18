@@ -329,6 +329,51 @@ typedef struct { // size = 0x4F2
 	int32_t difficulty;
 } Hero;
 
+// HeroInfo specifies information about the hero to be presented in the user
+// interface.
+//
+// PSX def:
+//    typedef struct _uiheroinfo {
+//       struct _uiheroinfo* next;
+//       char name[16];
+//       unsigned short level;
+//       unsigned char heroclass;
+//       unsigned char herorank;
+//       unsigned short strength;
+//       unsigned short magic;
+//       unsigned short dexterity;
+//       unsigned short vitality;
+//       unsigned long gold;
+//       unsigned char hassaved;
+//       unsigned char spawned;
+//    } TUIHEROINFO, _uiheroinfo;
+typedef struct HeroInfo { // size = 0x2C
+	// offset: 0000 (4 bytes)
+	struct HeroInfo *next;
+	// offset: 0004 (16 bytes)
+	char name[16];
+	// offset: 0014 (2 bytes)
+	int16_t clvl;
+	// offset: 0016 (1 bytes)
+	player_class player_class;
+	// offset: 0017 (1 bytes)
+	int8_t difficulty; // TODO: use difficulty enum
+	// offset: 0018 (2 bytes)
+	int16_t str_cur;
+	// offset: 001A (2 bytes)
+	int16_t mag_cur;
+	// offset: 001C (2 bytes)
+	int16_t dex_cur;
+	// offset: 001E (2 bytes)
+	int16_t vit_cur;
+	// offset: 0020 (4 bytes)
+	int32_t gold_total;
+	// offset: 0024 (4 bytes)
+	bool32_t has_save;
+	// offset: 0028 (4 bytes)
+	bool32_t spawned;
+} HeroInfo;
+
 // Item describes in-game state of any game item.
 typedef struct { // size = 0x170
 	// offset 0000 (4 bytes)
@@ -469,51 +514,6 @@ typedef struct { // size = 0x170
 	item_id id;
 } Item;
 
-// HeroInfo specifies information about the hero to be presented in the user
-// interface.
-//
-// PSX def:
-//    typedef struct _uiheroinfo {
-//       struct _uiheroinfo* next;
-//       char name[16];
-//       unsigned short level;
-//       unsigned char heroclass;
-//       unsigned char herorank;
-//       unsigned short strength;
-//       unsigned short magic;
-//       unsigned short dexterity;
-//       unsigned short vitality;
-//       unsigned long gold;
-//       unsigned char hassaved;
-//       unsigned char spawned;
-//    } TUIHEROINFO, _uiheroinfo;
-typedef struct HeroInfo { // size = 0x2C
-	// offset: 0000 (4 bytes)
-	struct HeroInfo *next;
-	// offset: 0004 (16 bytes)
-	char name[16];
-	// offset: 0014 (2 bytes)
-	int16_t clvl;
-	// offset: 0016 (1 bytes)
-	player_class player_class;
-	// offset: 0017 (1 bytes)
-	int8_t difficulty; // TODO: use difficulty enum
-	// offset: 0018 (2 bytes)
-	int16_t str_cur;
-	// offset: 001A (2 bytes)
-	int16_t mag_cur;
-	// offset: 001C (2 bytes)
-	int16_t dex_cur;
-	// offset: 001E (2 bytes)
-	int16_t vit_cur;
-	// offset: 0020 (4 bytes)
-	int32_t gold_total;
-	// offset: 0024 (4 bytes)
-	bool32_t has_save;
-	// offset: 0028 (4 bytes)
-	bool32_t spawned;
-} HeroInfo;
-
 // ItemData describes possible basic state a of game item (i.e. state before possibly applying
 // prefix, suffix, unique, effects or spells for books or staves)
 typedef struct { // size = 0x4C
@@ -625,6 +625,50 @@ typedef struct { // size = 0x30
 	// offset 002C (4 bytes)
 	int cost_multiplier;
 } ItemAffixData;
+
+// Lighting represents a light source.
+//
+// PSX def:
+// typedef struct LightListStruct {
+//    char _lx;
+//    char _ly;
+//    unsigned short _lradius;
+//    char _lid;
+//    unsigned char _ldel;
+//    unsigned char _lunflag;
+//    char _lunx;
+//    char _luny;
+//    char _lunr;
+//    char _xoff;
+//    char _yoff;
+//    unsigned char _lflags;
+// } LightListStruct;
+typedef struct { // size = 0x34
+	// offset: 0000 (4 bytes)
+	int x;
+	// offset: 0004 (4 bytes)
+	int y;
+	// offset: 0008 (4 bytes)
+	int light_radius;
+	// offset: 000C (4 bytes)
+	int light_id;
+	// offset: 0010 (4 bytes)
+	bool32_t inactive;
+	// offset: 0014 (4 bytes)
+	bool32_t visible;
+	// offset: 001C (4 bytes)
+	int x_prev;
+	// offset: 0020 (4 bytes)
+	int y_prev;
+	// offset: 0024 (4 bytes)
+	int light_radius_prev;
+	// offset: 0028 (4 bytes)
+	int x_offset;
+	// offset: 002C (4 bytes)
+	int y_offset;
+	// offset: 0030 (4 bytes)
+	uint32_t flags;
+} Lighting;
 
 // MenuItem is a game menu item.
 typedef struct { // size = 0xC

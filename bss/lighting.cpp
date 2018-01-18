@@ -1,13 +1,12 @@
 #include "types.h"
 
-/* TODO: uncomment when the Lighting struct has been added to structs.h.
-
 // address: 0x641B88
 //
 // lightings contains the light sources of the current game.
+//
+// PSX ref: 0x800D65D0
+// PSX def: LightListStruct VisionList[32]
 Lighting lightings[32];
-
-*/
 
 // lighting_disabled specifies whether light effects are disabled.
 //
