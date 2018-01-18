@@ -1068,6 +1068,18 @@ typedef struct { // size = 0x9
 	SoundFile *sound_file;
 } SfxData;
 
+// SpeechData specifies the text and sound of a speech.
+typedef struct { // size = 0x10
+	// offset: 0000 (4 bytes)
+	char *text;
+	// offset: 0004 (4 bytes)
+	bool32_t display_text;
+	// offset: 0008 (4 bytes)
+	int32_t speed;
+	// offset: 000C (4 bytes)
+	sfx_id sfx_id;
+} SpeechData;
+
 // A Tile consists of four dungeon pieces (top, right, left, bottom), forming a
 // square.
 //
