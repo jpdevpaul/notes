@@ -1,16 +1,13 @@
 #include "types.h"
 
-/* TODO: uncomment when the ObjectData struct has been added to structs.h.
-
 // address: 0x49F450
 //
 // object_data contains the data related to each object ID.
 //
-// References:
-//    * https://github.com/sanctuary/notes/blob/master/enums.h#object_id
+// PSX ref: 0x800D84B0
+// PSX def: ObjDataStruct AllObjects[99]
 ObjectData object_data[99];
 
-*/
 
 // address: 0x4A0634
 //

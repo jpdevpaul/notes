@@ -1313,6 +1313,66 @@ typedef enum {
 	NET_MSG_ID_NOW_YOU_DIE             = 3,
 } net_msg_id;
 
+// Object graphics.
+typedef enum {
+	OBJECT_GRAPHIC_ID_BRAZIER               =  0, // l1braz
+	OBJECT_GRAPHIC_ID_L1_DOOR               =  1, // l1doors
+	OBJECT_GRAPHIC_ID_LEVER                 =  2, // lever
+	OBJECT_GRAPHIC_ID_SMALL_CHEST           =  3, // chest1
+	OBJECT_GRAPHIC_ID_CHEST                 =  4, // chest2
+	OBJECT_GRAPHIC_ID_BANNER                =  5, // banner
+	OBJECT_GRAPHIC_ID_SKULL_PILE            =  6, // skulpile
+	OBJECT_GRAPHIC_ID_SKULL_FIRE            =  7, // skulfire
+	OBJECT_GRAPHIC_ID_SKULL_STICK           =  8, // skulstik
+	OBJECT_GRAPHIC_ID_CRUCIFIED_SKELETON_S  =  9, // cruxsk1
+	OBJECT_GRAPHIC_ID_CRUCIFIED_SKELETON_SE = 10, // cruxsk2
+	OBJECT_GRAPHIC_ID_CRUCIFIED_SKELETON_SW = 11, // cruxsk3
+	OBJECT_GRAPHIC_ID_STEEL_TOME            = 12, // book1
+	OBJECT_GRAPHIC_ID_MYTHICAL_BOOK         = 13, // book2
+	OBJECT_GRAPHIC_ID_ROCK_STAND            = 14, // rockstan
+	OBJECT_GRAPHIC_ID_ANGEL                 = 15, // angel
+	OBJECT_GRAPHIC_ID_LARGE_CHEST           = 16, // chest3
+	OBJECT_GRAPHIC_ID_BURNING_CROSS         = 17, // burncros
+	OBJECT_GRAPHIC_ID_CANDLE                = 18, // candle2
+	OBJECT_GRAPHIC_ID_NUDE                  = 19, // nude2
+	OBJECT_GRAPHIC_ID_SKULL_LEVER           = 20, // switch4
+	OBJECT_GRAPHIC_ID_TORTURED_NUDE_MAN     = 21, // tnudem
+	OBJECT_GRAPHIC_ID_TORTURED_NUDE_WOMAN   = 22, // tnudew
+	OBJECT_GRAPHIC_ID_TORTURED_SOUL         = 23, // tsoul
+	OBJECT_GRAPHIC_ID_L2_DOOR               = 24, // l2doors
+	OBJECT_GRAPHIC_ID_WALL_TORCH_SIMPLE_SE  = 25, // wtorch4
+	OBJECT_GRAPHIC_ID_WALL_TORCH_SIMPLE_SW  = 26, // wtorch3
+	OBJECT_GRAPHIC_ID_SARCOPHAGUS           = 27, // sarc
+	OBJECT_GRAPHIC_ID_FLAME                 = 28, // flame1
+	OBJECT_GRAPHIC_ID_PRESSURE_PLATE        = 29, // prsrplt1
+	OBJECT_GRAPHIC_ID_TRAPHOLE              = 30, // traphole
+	OBJECT_GRAPHIC_ID_MINI_WATER            = 31, // miniwatr
+	OBJECT_GRAPHIC_ID_WALL_TORCH_SE         = 32, // wtorch2
+	OBJECT_GRAPHIC_ID_WALL_TORCH_SW         = 33, // wtorch1
+	OBJECT_GRAPHIC_ID_BOOKCASE              = 34, // bcase
+	OBJECT_GRAPHIC_ID_BOOKSHELF             = 35, // bshelf
+	OBJECT_GRAPHIC_ID_WEAPON_RACK           = 36, // weapstnd
+	OBJECT_GRAPHIC_ID_BARREL                = 37, // barrel
+	OBJECT_GRAPHIC_ID_BARREL_EXPLOSION      = 38, // barrelex
+	OBJECT_GRAPHIC_ID_LEFT_SHRINE           = 39, // lshrineg
+	OBJECT_GRAPHIC_ID_RIGHT_SHRINE          = 40, // rshrineg
+	OBJECT_GRAPHIC_ID_BLOOD_FOUNTAIN        = 41, // bloodfnt
+	OBJECT_GRAPHIC_ID_DECAPITATED_BODY      = 42, // decap
+	OBJECT_GRAPHIC_ID_PEDESTAL_OF_BLOOD     = 43, // pedistl
+	OBJECT_GRAPHIC_ID_L3_DOOR               = 44, // l3doors
+	OBJECT_GRAPHIC_ID_PURIFYING_SPRING      = 45, // pfountn
+	OBJECT_GRAPHIC_ID_ARMOR_STAND           = 46, // armstand
+	OBJECT_GRAPHIC_ID_GOAT_SHRINE           = 47, // goatshrn
+	OBJECT_GRAPHIC_ID_CAULDRON              = 48, // cauldren
+	OBJECT_GRAPHIC_ID_MURKY_POOL            = 49, // mfountn
+	OBJECT_GRAPHIC_ID_FOUNTAIN_OF_TEARS     = 50, // tfountn
+	OBJECT_GRAPHIC_ID_ALTAR_BOY             = 51, // altboy
+	OBJECT_GRAPHIC_ID_MAGIC_CIRCLE          = 52, // mcirl
+	OBJECT_GRAPHIC_ID_LABYRINTH_BOOKS       = 53, // bkslbrnt
+	OBJECT_GRAPHIC_ID_MUSHROOM_PATCH        = 54, // mushptch
+	OBJECT_GRAPHIC_ID_VILE_STAND            = 55, // lzstand
+} object_graphic_id;
+
 // Object IDs specify object_data array indices.
 typedef enum {
 	OBJECT_ID_BRAZIER                          =  0, // l1braz (animated, ticksPerFrame 1)
@@ -1329,7 +1389,7 @@ typedef enum {
 	OBJECT_ID_BANNER_SE_THEME_3                = 11, // banner (frame 1)
 	OBJECT_ID_BANNER_THEME_3                   = 12, // banner (frame 0)
 	OBJECT_ID_BANNER_SW_THEME_3                = 13, // banner (frame 2)
-	OBJECT_ID_SKULPILE                         = 14, // skulpile (invalid frame)
+	OBJECT_ID_SKULL_PILE                       = 14, // skulpile (invalid frame)
 	OBJECT_ID_INVALID_3                        = 15, // l1braz (invalid frame)
 	OBJECT_ID_INVALID_4                        = 16, // l1braz (invalid frame)
 	OBJECT_ID_INVALID_5                        = 17, // l1braz (invalid frame)
@@ -1370,7 +1430,7 @@ typedef enum {
 	OBJECT_ID_BOOK_CLOSED                      = 52, // book1 (frame 0)
 	OBJECT_ID_TRAPHOLE_SW                      = 53, // traphole (frame 0)
 	OBJECT_ID_TRAPHOLE_SE                      = 54, // traphole (frame 1)
-	OBJECT_ID_BOOKSHELF                        = 55, // bcase (frame 0)
+	OBJECT_ID_BOOKCASE                         = 55, // bcase (frame 0)
 	OBJECT_ID_WEAPON_RACK                      = 56, // weapstnd (frame 0)
 	OBJECT_ID_BARREL                           = 57, // barrel (frame 0)
 	OBJECT_ID_BARREL_EXPLOSION                 = 58, // barrelex (frame 0)
@@ -2798,7 +2858,6 @@ typedef enum {
 	THEME_ID_BURNING_CROSS      = 15,
 	THEME_ID_WEAPON_RACK        = 16,
 } theme_id;
-
 
 // Template IDs for error windows.
 typedef enum {

@@ -702,6 +702,64 @@ typedef struct { // size = 0xEC
 	void *x_offset_from_orientation[16];
 } MissileGraphicData;
 
+// ObjectData describes basic properties of game objects.
+//
+// PSX def:
+//    typedef struct ObjDataStruct {
+//       char oload;
+//       char ofindex;
+//       char ominlvl;
+//       char omaxlvl;
+//       char olvltype;
+//       char otheme;
+//       char oquest;
+//       unsigned char oAnimFlag;
+//       short oAnimDelay;
+//       short oAnimLen;
+//       unsigned char oSolidFlag;
+//       unsigned char oMissFlag;
+//       unsigned char oLightFlag;
+//       char oBreak;
+//       char oSelFlag;
+//       unsigned char oTrapFlag;
+//    } ObjDataStruct;
+typedef struct { // size = 0x2C
+	// offset: 0000 (1 bytes)
+	int8_t object_load; // TODO: define object_load enum
+	// offset: 0001 (1 bytes)
+	object_graphic_id object_graphic_id;
+	// offset: 0002 (1 bytes)
+	int8_t dlvl_min;
+	// offset: 0003 (1 bytes)
+	int8_t dlvl_max;
+	// offset: 0004 (1 bytes)
+	dungeon_type dtype;
+	// offset: 0005 (1 bytes)
+	theme_id theme_id;
+	// offset: 0006 (1 bytes)
+	quest_id quest_id;
+	// offset: 0008 (4 bytes)
+	bool32_t animated;
+	// offset: 000C (4 bytes)
+	int32_t ticks_per_frame; // specifies the number of game ticks per frame, or first frame if not animated.
+	// offset: 0010 (4 bytes)
+	int32_t nframes;
+	// offset: 0014 (4 bytes)
+	int32_t frame_width;
+	// offset: 0018 (4 bytes)
+	bool32_t collision;
+	// offset: 001C (4 bytes)
+	bool32_t missile_can_pass;
+	// offset: 0020 (4 bytes)
+	bool32_t has_light;
+	// offset: 0024 (1 bytes)
+	bool8_t hittable;
+	// offset: 0025 (1 bytes)
+	int8_t object_interact; // TODO: define object_interact enum
+	// offset: 0028 (4 bytes)
+	bool32_t possible_traphole;
+} ObjectData;
+
 // PacketHeader is the header of a network game synchronization packet.
 //
 // PSX def:
