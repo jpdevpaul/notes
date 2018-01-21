@@ -1223,7 +1223,7 @@ typedef struct { // size = 0x10
 
 // Stats specifies character statistics (i.e. strength, magic, dexterity,
 // vitality).
-typedef struct {
+typedef struct { // size = 0x10
 	int32_t str;
 	int32_t mag;
 	int32_t dex;

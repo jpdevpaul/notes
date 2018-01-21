@@ -1,3 +1,120 @@
+#include "types.h"
+
+// address: 0x4A0EF8
+//
+// x_delta_from_start_location_tristram specifies the X-coordinate delta from
+// the player start location in Tristram.
+//
+// PSX ref: 0x800DA348
+// PSX def: int plrxoff[9]
+int x_delta_from_start_location_tristram[9];
+
+// address: 0x4A0F1C
+//
+// y_delta_from_start_location_tristram specifies the Y-coordinate delta from
+// the player start location in Tristram.
+//
+// PSX ref: 0x800DA36C
+// PSX def: int plryoff[9]
+int y_delta_from_start_location_tristram[9];
+
+// address: 0x4A0F40
+//
+// x_delta_from_player specifies the X-coordinate delta from a player, used for
+// instanced when casting resurrect.
+//
+// PSX ref: 0x800DA390
+// PSX def: int plrxoff2[9]
+int x_delta_from_player[9];
+
+// address: 0x4A0F64
+//
+// y_delta_from_player specifies the Y-coordinate delta from a player, used for
+// instanced when casting resurrect.
+//
+// PSX ref: 0x800DA3B4
+// PSX def: int plryoff2[9]
+int y_delta_from_player[9];
+
+// address: 0x4A0F88
+//
+// action_frame_from_player_class specifies the frame of each animation for
+// which an action is triggered, for each player class.
+//
+// PSX ref: 0x800DA3D8
+// PSX def: char PlrGFXAnimLens[3][11]
+ActionFrame action_frame_from_player_class[3];
+
+// address: 0x4A0FDC
+//
+// start_str_from_player_class maps from player_class to starting stat in
+// strength.
+//
+// PSX ref: 0x800DA3FC
+// PSX def: int StrengthTbl[3]
+int start_str_from_player_class[3];
+
+// address: 0x4A0FE8
+//
+// start_mag_from_player_class maps from player_class to starting stat in magic.
+//
+// PSX ref: 0x800DA408
+// PSX def: int MagicTbl[3]
+int start_mag_from_player_class[3];
+
+// address: 0x4A0FF4
+//
+// start_dex_from_player_class maps from player_class to starting stat in
+// dexterity.
+//
+// PSX ref: 0x800DA414
+// PSX def: int DexterityTbl[3]
+int start_dex_from_player_class[3];
+
+// address: 0x4A1000
+//
+// start_vit_from_player_class maps from player_class to starting stat in
+// vitality.
+//
+// PSX ref: 0x800DA420
+// PSX def: int VitalityTbl[3]
+int start_vit_from_player_class[3];
+
+// address: 0x4A100C
+//
+// start_chance_to_block_bonus_from_player_class specifies the chance to block
+// bonus of each player class.
+//
+// PSX ref: 0x800DA42C
+// PSX def: int ToBlkTbl[3]
+int start_chance_to_block_bonus_from_player_class[3];
+
+// address: 0x4A1018
+//
+// player_class_names2 specifies the name of each player class.
+char *player_class_names2[3];
+
+// address: 0x4A1024
+//
+// max_stat_from_player_class maps from player_class to maximum stats.
+//
+// PSX ref: 0x800DA438
+// PSX def: int MaxStats[3][4]
+Stats max_stat_from_player_class[3];
+
+// address: 0x4A1054
+//
+// exp_limit specifies the experience point limit of each level.
+//
+// PSX ref: 0x800DA468
+// PSX def: long ExpLvlsTbl[51]
+int exp_limit[51];
+
+// address: 0x4A1120
+//
+// player_class_names specifies the name of each player class.
+char *player_class_names[3];
+
 // address: 0x4A1138
 //
 // `PlrGFX\%s\%s\%s%s.CL2`
