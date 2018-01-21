@@ -1,5 +1,10 @@
 #include "types.h"
 
+// address: 0x49F288
+//
+// object_id_from_dun_object_id maps from dun_object_id to object_id.
+object_id object_id_from_dun_object_id[114];
+
 // address: 0x49F450
 //
 // object_data contains the data related to each object ID.
@@ -7,6 +12,12 @@
 // PSX ref: 0x800D84B0
 // PSX def: ObjDataStruct AllObjects[99]
 ObjectData object_data[99];
+
+// address: 0x4A0554
+//
+// object_cel_name_from_object_graphic_id maps from object_graphic_id to object
+// CEL name.
+char *object_cel_name_from_object_graphic_id[56];
 
 // address: 0x4A0634
 //
@@ -287,6 +298,65 @@ const char str_4A082C[8] = {};
 //
 // "L1Braz"
 const char str_4A0834[7] = {};
+
+// address: 0x4A083C
+//
+// barrel_x_delta specifies the X-coordinate delta between barrels.
+//
+// PSX ref: 0x800D8BA8
+// PSX def: int bxadd[8]
+int barrel_x_delta[8];
+
+// address: 0x4A085C
+//
+// barrel_y_delta specifies the Y-coordinate delta between barrels.
+//
+// PSX ref: 0x800D8BC8
+// PSX def: int byadd[8]
+int barrel_y_delta[8];
+
+// address: 0x4A087C
+//
+// shrine_name_from_shrine_id maps from shrine_id to shrine name.
+//
+// PSX ref: 0x800D8BE8
+// PSX def: unsigned short shrinestrs[26]
+char *shrine_name_from_shrine_id[26];
+
+// address: 0x4A08E4
+//
+// dlvl_min_from_shrine_id specifies the minimum dungeon level on which each
+// shrine will appear.
+int8_t dlvl_min_from_shrine_id[26];
+
+// address: 0x4A0900
+//
+// dlvl_max_from_shrine_id specifies the maximum dungeon level on which each
+// shrine will appear.
+int8_t dlvl_max_from_shrine_id[26];
+
+// address: 0x4A091C
+//
+// shrine_game_type_from_shrine_id specifies the game type for which each shrine
+// may appear.
+//
+// PSX ref: 0x800D8C1C
+// PSX def: char shrineavail[26]
+int8_t shrine_game_type_from_shrine_id[26]; // TODO: define game_type enum
+
+// address: 0x4A0938
+//
+// book_name_from_book_id maps from book_id to book name.
+//
+// PSX ref: 0x800D8C38
+// PSX def: unsigned short StoryBookName[9]
+char *book_name_from_book_id[9];
+
+// address: 0x4A095C
+//
+// narrator_book_from_player_class specifies the speech IDs of each dungeon type
+// narrator book, for each player class.
+NarratorBook narrator_book_from_player_class[3];
 
 // address: 0x4A0980
 //
