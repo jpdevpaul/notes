@@ -44,7 +44,7 @@ Each global variable in the uninitialized data section has been categorised base
 | [msgcmd.cpp](msgcmd.cpp)         | `0x6761A0`    | `0x6761B7`  | 16% (4/24 bytes)             |
 | [multi.cpp](multi.cpp)           | `0x6761B8`    | `0x6796FF`  | 39% (5325/13640 bytes)       |
 | [nthread.cpp](nthread.cpp)       | `0x679700`    | `0x679767`  | 3% (4/104 bytes)             |
-| [objects.cpp](objects.cpp)       | `0x679768`    | `0x67D7C7`  | 92% (15240/16480 bytes)      |
+| [objects.cpp](objects.cpp)       | `0x679768`    | `0x67D7C7`  | 98% (16300/16480 bytes)      |
 | [hero.cpp](hero.cpp)             | `0x67D7C8`    | `0x67D7CB`  | 100% (4/4 bytes)             |
 | [palette.cpp](palette.cpp)       | `0x67D7CC`    | `0x67E3D7`  | 100% (3084/3084 bytes)       |
 | [path.cpp](path.cpp)             | `0x67E3D8`    | `0x6862DF`  | 47% (15600/32520 bytes)      |
