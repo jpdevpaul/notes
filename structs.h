@@ -118,6 +118,101 @@ typedef struct {
 	int8_t y;
 } Coord;
 
+// CircleCoords specifies X- and Y-coordinate deltas from the center of a
+// circle.
+//
+// n=4
+//
+//     1
+//    3#4
+//     2
+//
+// n=16
+//
+//     314
+//    B7 8C
+//    F # G
+//    D9 AE
+//     526
+typedef struct { // size = 0xABD
+	// offset: 0000 (1 bytes)
+	int8_t n_1;
+	// offset: 0001 (2 bytes)
+	Coord delta_1[1];
+	// offset: 0003 (1 bytes)
+	int8_t n_4;
+	// offset: 0004 (8 bytes)
+	Coord delta_4[4];
+	// offset: 000C (1 bytes)
+	int8_t n_16;
+	// offset: 000D (32 bytes)
+	Coord delta_16[16];
+	// offset: 002D (1 bytes)
+	int8_t n_24;
+	// offset: 002E (48 bytes)
+	Coord delta_24[24];
+	// offset: 005E (1 bytes)
+	int8_t n_32;
+	// offset: 005F (64 bytes)
+	Coord delta_32[32];
+	// offset: 009F (1 bytes)
+	int8_t n_40;
+	// offset: 00A0 (80 bytes)
+	Coord delta_40[40];
+	// offset: 00F0 (1 bytes)
+	int8_t n_48;
+	// offset: 00F1 (96 bytes)
+	Coord delta_48[48];
+	// offset: 0151 (1 bytes)
+	int8_t n_56;
+	// offset: 0152 (112 bytes)
+	Coord delta_56[56];
+	// offset: 01C2 (1 bytes)
+	int8_t n_64;
+	// offset: 01C3 (128 bytes)
+	Coord delta_64[64];
+	// offset: 0243 (1 bytes)
+	int8_t n_72;
+	// offset: 0244 (144 bytes)
+	Coord delta_72[72];
+	// offset: 02D4 (1 bytes)
+	int8_t n_80;
+	// offset: 02D5 (160 bytes)
+	Coord delta_80[80];
+	// offset: 0375 (1 bytes)
+	int8_t n_88;
+	// offset: 0376 (176 bytes)
+	Coord delta_88[88];
+	// offset: 0426 (1 bytes)
+	int8_t n_96;
+	// offset: 0427 (192 bytes)
+	Coord delta_96[96];
+	// offset: 04E7 (1 bytes)
+	int8_t n_104;
+	// offset: 04E8 (208 bytes)
+	Coord delta_104[104];
+	// offset: 05B8 (1 bytes)
+	int8_t n_112;
+	// offset: 05B9 (224 bytes)
+	Coord delta_112[112];
+	// offset: 0699 (1 bytes)
+	int8_t n_120;
+	// offset: 069A (240 bytes)
+	Coord delta_120[120];
+	// offset: 078A (1 bytes)
+	int8_t n_128;
+	// offset: 078B (256 bytes)
+	Coord delta_128[128];
+	// offset: 088B (1 bytes)
+	int8_t n_136;
+	// offset: 088C (272 bytes)
+	Coord delta_136[136];
+	// offset: 099C (1 bytes)
+	int8_t n_144;
+	// offset: 099D (288 bytes)
+	Coord delta_144[144];
+} CircleCoords;
+
 // DeltaObject contains delta information about an object to be synchronized
 // with connected peers.
 //
