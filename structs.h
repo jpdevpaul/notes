@@ -1,3 +1,30 @@
+// ActionFrame specifies the frame of each animation for which an action is
+// triggered.
+typedef struct { // size = 0xB
+	// offset: 0000 (1 bytes)
+	int8_t dungeon_stand_frame;
+	// offset: 0001 (1 bytes)
+	int8_t attack_frame;
+	// offset: 0002 (1 bytes)
+	int8_t dungeon_walk_frame;
+	// offset: 0003 (1 bytes)
+	int8_t block_frame;
+	// offset: 0004 (1 bytes)
+	int8_t death_frame;
+	// offset: 0005 (1 bytes)
+	int8_t spell_frame;
+	// offset: 0006 (1 bytes)
+	int8_t hit_frame;
+	// offset: 0007 (1 bytes)
+	int8_t town_stand_frame;
+	// offset: 0008 (1 bytes)
+	int8_t town_walk_frame;
+	// offset: 0009 (1 bytes)
+	int8_t attack_frame_unknown_0009;
+	// offset: 000A (1 bytes)
+	int8_t attack_frame_unknown_000A;
+} ActionFrame;
+
 // Caps specifies the network message capabilities of the client.
 typedef struct { // size = 0x24
 	// offset: 00000000 (4 bytes)
@@ -702,6 +729,17 @@ typedef struct { // size = 0xEC
 	void *x_offset_from_orientation[16];
 } MissileGraphicData;
 
+// NarratorBook specifies the speech IDs of each dungeon type narrator book for
+// a player class.
+typedef struct { // size = 0xC
+	// offset: 0000 (4 bytes)
+	speech_id dlvl4_speech_id;
+	// offset: 0004 (4 bytes)
+	speech_id dlvl8_speech_id;
+	// offset: 0008 (4 bytes)
+	speech_id dlvl12_speech_id;
+} NarratorBook;
+
 // ObjectData describes basic properties of game objects.
 //
 // PSX def:
@@ -983,6 +1021,30 @@ typedef struct { // size = 0x10
 	int height;
 } Rectangle;
 
+// ScreenRow represents a single horizontal line of pixels on the screen.
+//
+// size = 0x300
+typedef struct {
+	// offset 0000 (64 bytes)
+	uint8_t col_unused_1[64];
+	// offset 0040 (640 bytes)
+	uint8_t pixels[640];
+	// offset 02C0 (64 bytes)
+	uint8_t col_unused_2[64];
+} ScreenRow;
+
+// Screen represents the pixels of the screen.
+//
+// size = 0x7B000
+typedef struct {
+	// offset 00000000 (122880 bytes)
+	ScreenRow row_unused_1[160];
+	// offset 0001E000 (368640 bytes)
+	ScreenRow row[480];
+	// offset 00078000 (12288 bytes)
+	ScreenRow row_unused_2[16];
+} Screen;
+
 // A Shadow contains the shadows for a 2x2 block of base tile IDs.
 //
 // PSX def:
@@ -1013,30 +1075,6 @@ typedef struct {
 	l1_tile_id shadow_right;
 	l1_tile_id shadow_left;
 } Shadow;
-
-// ScreenRow represents a single horizontal line of pixels on the screen.
-//
-// size = 0x300
-typedef struct {
-	// offset 0000 (64 bytes)
-	uint8_t col_unused_1[64];
-	// offset 0040 (640 bytes)
-	uint8_t pixels[640];
-	// offset 02C0 (64 bytes)
-	uint8_t col_unused_2[64];
-} ScreenRow;
-
-// Screen represents the pixels of the screen.
-//
-// size = 0x7B000
-typedef struct {
-	// offset 00000000 (122880 bytes)
-	ScreenRow row_unused_1[160];
-	// offset 0001E000 (368640 bytes)
-	ScreenRow row[480];
-	// offset 00078000 (12288 bytes)
-	ScreenRow row_unused_2[16];
-} Screen;
 
 // SoundFile represents a WAV sound file.
 //
@@ -1087,6 +1125,15 @@ typedef struct { // size = 0x10
 	// offset: 000C (4 bytes)
 	sfx_id sfx_id;
 } SpeechData;
+
+// Stats specifies character statistics (i.e. strength, magic, dexterity,
+// vitality).
+typedef struct {
+	int32_t str;
+	int32_t mag;
+	int32_t dex;
+	int32_t vit;
+} Stats;
 
 // A Tile consists of four dungeon pieces (top, right, left, bottom), forming a
 // square.

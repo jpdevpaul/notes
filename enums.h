@@ -2880,6 +2880,7 @@ typedef enum {
 	THEME_ID_TEAR_FOUNTAIN      = 14,
 	THEME_ID_BURNING_CROSS      = 15,
 	THEME_ID_WEAPON_RACK        = 16,
+	THEME_ID_NONE               = -1,
 } theme_id;
 
 // Template IDs for error windows.
