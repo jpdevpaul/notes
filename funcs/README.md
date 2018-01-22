@@ -11,7 +11,7 @@ Each function has been categorised based on their original source file, as summa
 | [codec.cpp](codec.cpp)           | `0x4034D9`    | `0x4037D3`  | 100% (5/5 functions)     |
 | [control.cpp](control.cpp)       | `0x4037D4`    | `0x407409`  | 24% (16/65 functions)    |
 | [cursor.cpp](cursor.cpp)         | `0x40740A`    | `0x4084A5`  | 100% (9/9 functions)     |
-| [dead.cpp](dead.cpp)             | `0x4084A6`    | `0x4086F3`  | 0% (0/3 functions)       |
+| [dead.cpp](dead.cpp)             | `0x4084A6`    | `0x4086F3`  | 100% (3/3 functions)     |
 | [debug.cpp](debug.cpp)           | `0x4086F4`    | `0x4087B0`  | 66% (2/3 functions)      |
 | [diablo.cpp](diablo.cpp)         | `0x4087B1`    | `0x40ACAC`  | 42% (15/35 functions)    |
 | [doom.cpp](doom.cpp)             | `0x40ACAD`    | `0x40ADD5`  | 14% (1/7 functions)      |
