@@ -41,7 +41,7 @@ Each function has been categorised based on their original source file, as summa
 | [minitext.cpp](minitext.cpp)     | `0x428056`    | `0x4283BF`  | 100% (6/6 functions)     |
 | [missiles.cpp](missiles.cpp)     | `0x4283C0`    | `0x430FDE`  | 0% (1/133 functions)     |
 | [monster.cpp](monster.cpp)       | `0x430FDF`    | `0x43AD32`  | 1% (2/147 functions)     |
-| [movie.cpp](movie.cpp)           | `0x43AD33`    | `0x43AE8F`  | 50% (2/4 functions)      |
+| [movie.cpp](movie.cpp)           | `0x43AD33`    | `0x43AE8F`  | 100% (4/4 functions)     |
 | [mpqapi.cpp](mpqapi.cpp)         | `0x43AE90`    | `0x43BBA3`  | 10% (3/29 functions)     |
 | [msg.cpp](msg.cpp)               | `0x43BBA4`    | `0x43F848`  | 10% (14/133 functions)   |
 | [msgcmd.cpp](msgcmd.cpp)         | `0x43F849`    | `0x43FAC3`  | 16% (3/18 functions)     |
