@@ -12,7 +12,12 @@ void interfac_cpp_init();
 
 // address: 0x41B1A0
 //
-// TODO: add documentation.
+// interfac_poll_events polls events while the interface cut scene progress bar
+// is displayed.
+//
+// PSX ref: 0x8003DE38
+// PSX def: void interface_msg_pump__Fv()
+void interfac_poll_events();
 
 // address: 0x41B1DF
 //
@@ -27,16 +32,24 @@ void interfac_draw_cut_scene();
 
 // address: 0x41B28D
 //
-// TODO: add documentation.
+// interfac_draw_progress_bar renders the progress bar on screen.
+void __fastcall interfac_draw_progress_bar(int screen_x, int screen_y, int progress_id);
 
 // address: 0x41B2B6
 //
-// TODO: add documentation.
+// interfac_init initializes the interface between cut scenes while displaying a
+// progress bar.
+//
+// PSX ref: 0x8003DE40
+// PSX def: void ShowProgress__FUi(unsigned int uMsg)
+void __fastcall interfac_init(interface_mode interface_mode);
 
 // address: 0x41B5F5
 //
-// TODO: add documentation.
+// interfac_cleanup releases resources related to the cut scene.
+void interfac_cleanup();
 
 // address: 0x41B607
 //
-// TODO: add documentation.
+// interfac_init_cut_scene initializes the active cut scene.
+void __fastcall interfac_init_cut_scene(interface_mode interface_mode);
