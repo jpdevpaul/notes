@@ -29,7 +29,7 @@ Each function has been categorised based on their original source file, as summa
 | [gamemenu.cpp](gamemenu.cpp)     | `0x418866`    | `0x418C8A`  | 0% (0/23 functions)      |
 | [gendung.cpp](gendung.cpp)       | `0x418C8B`    | `0x419E8A`  | 36% (8/22 functions)     |
 | [gmenu.cpp](gmenu.cpp)           | `0x419E8B`    | `0x41A552`  | 20% (4/20 functions)     |
-| [help.cpp](help.cpp)             | `0x41A553`    | `0x41A7B2`  | 16% (1/6 functions)      |
+| [help.cpp](help.cpp)             | `0x41A553`    | `0x41A7B2`  | 100% (6/6 functions)     |
 | [init.cpp](init.cpp)             | `0x41A7B3`    | `0x41B18F`  | 57% (11/19 functions)    |
 | [interfac.cpp](interfac.cpp)     | `0x41B190`    | `0x41B813`  | 44% (4/9 functions)      |
 | [inv.cpp](inv.cpp)               | `0x41B814`    | `0x41F095`  | 10% (4/40 functions)     |
