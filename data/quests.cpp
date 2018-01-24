@@ -24,6 +24,9 @@ int8_t quest_entrance_cursor_y_delta[7];
 //
 // quest_stairway_names specifies the names of quest levels for the hover text
 // of the cursor.
+//
+// PSX ref: 0x8010D6CC
+// PSX def: int SetLevelName[6]
 char *quest_stairway_names[5];
 
 // address: 0x04A1C44

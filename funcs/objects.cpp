@@ -430,7 +430,11 @@ void __fastcall objects_add_object(object_id object_id, int x, int y);
 
 // address: 0x445E4B
 //
-// TODO: add documentation.
+// objects_interact_shrine interacts with the given shrine.
+//
+// PSX ref: 0x8005A478
+// PSX def: void OperateShrine__Fiii(int pnum, int i, int sType)
+void __fastcall objects_interact_shrine(int player_num, int object_num, sfx_id sfx_id);
 
 // address: 0x446E6A
 //

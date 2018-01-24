@@ -6,7 +6,7 @@ Each function has been categorised based on their original source file, as summa
 |----------------------------------|---------------|-------------|--------------------------|
 | _crt.cpp                         | `0x401000`    | `0x401029`  | N/A                      |
 | [appfat.cpp](appfat.cpp)         | `0x40102A`    | `0x401DA3`  | 100% (19/19 functions)   |
-| [automap.cpp](automap.cpp)       | `0x401DA4`    | `0x40311A`  | 12% (2/16 functions)     |
+| [automap.cpp](automap.cpp)       | `0x401DA4`    | `0x40311A`  | 100% (16/16 functions)   |
 | [capture.cpp](capture.cpp)       | `0x40311B`    | `0x4034D8`  | 14% (1/7 functions)      |
 | [codec.cpp](codec.cpp)           | `0x4034D9`    | `0x4037D3`  | 100% (5/5 functions)     |
 | [control.cpp](control.cpp)       | `0x4037D4`    | `0x407409`  | 24% (16/65 functions)    |
@@ -47,7 +47,7 @@ Each function has been categorised based on their original source file, as summa
 | [msgcmd.cpp](msgcmd.cpp)         | `0x43F849`    | `0x43FAC3`  | 16% (3/18 functions)     |
 | [multi.cpp](multi.cpp)           | `0x43FAC4`    | `0x440DAD`  | 7% (3/38 functions)      |
 | [nthread.cpp](nthread.cpp)       | `0x440DAE`    | `0x44121C`  | 26% (4/15 functions)     |
-| [objects.cpp](objects.cpp)       | `0x44121D`    | `0x448754`  | 4% (6/131 functions)     |
+| [objects.cpp](objects.cpp)       | `0x44121D`    | `0x448754`  | 5% (7/131 functions)     |
 | [hero.cpp](hero.cpp)             | `0x448755`    | `0x448DF4`  | 100% (7/7 functions)     |
 | [palette.cpp](palette.cpp)       | `0x448DF5`    | `0x4493D3`  | 100% (22/22 functions)   |
 | [path.cpp](path.cpp)             | `0x4493D4`    | `0x4498EB`  | 0% (0/14 functions)      |
