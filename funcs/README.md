@@ -23,7 +23,7 @@ Each function has been categorised based on their original source file, as summa
 | [dx.cpp](dx.cpp)                 | `0x415362`    | `0x4158A8`  | 35% (6/17 functions)     |
 | [effects.cpp](effects.cpp)       | `0x4158A9`    | `0x415F42`  | 14% (3/21 functions)     |
 | [encrypt.cpp](encrypt.cpp)       | `0x415F43`    | `0x4161FB`  | 25% (2/8 functions)      |
-| [engine.cpp](engine.cpp)         | `0x4161FC`    | `0x41804D`  | 64% (37/57 functions)    |
+| [engine.cpp](engine.cpp)         | `0x4161FC`    | `0x41804D`  | 66% (38/57 functions)    |
 | [error.cpp](error.cpp)           | `0x41804E`    | `0x4182AC`  | 100% (3/3 functions)     |
 | [exception.cpp](exception.cpp)   | `0x4182AD`    | `0x418865`  | 8% (1/12 functions)      |
 | [gamemenu.cpp](gamemenu.cpp)     | `0x418866`    | `0x418C8A`  | 0% (0/23 functions)      |

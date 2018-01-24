@@ -78,6 +78,9 @@ void automap_draw();
 //
 // automap_draw_type renders the given automap type at the specified screen
 // coordinates.
+//
+//    x = screen_x - 64
+//    y = screen_y - 160
 void __fastcall automap_draw_type(int screen_x, int screen_y, uint16_t automap_type);
 
 // address: 0x4029A8

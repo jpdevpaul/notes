@@ -282,7 +282,12 @@ void __fastcall engine_cel_decode_frame_with_header_and_colour_highlight(uint8_t
 
 // address: 0x416FEF
 //
-// TODO: add documentation.
+// engine_set_pixel sets the given screen coordinate to the specified pixel
+// value (index into the active palette).
+//
+//    x = screen_x - 64
+//    y = screen_y - 160
+void __fastcall engine_set_pixel(int screen_x, int screen_y, uint8_t pixel);
 
 // address: 0x417034
 //
