@@ -8,6 +8,7 @@ typedef HANDLE HWND;
 typedef HANDLE HINSTANCE;
 typedef HANDLE HPALETTE;
 typedef HINSTANCE HMODULE;
+typedef int32_t HRESULT;
 typedef uint32_t LRESULT; // size of pointer.
 typedef unsigned int UINT;
 typedef uint32_t WPARAM; // size of pointer.

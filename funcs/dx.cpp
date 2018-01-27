@@ -17,15 +17,19 @@ void dx_cpp_init_2();
 
 // address: 0x41537C
 //
-// TODO: add documentation.
+// dx_init_mutex initializes the DirectX rendering system mutex.
+void dx_init_mutex();
 
 // address: 0x415388
 //
-// TODO: add documentation.
+// dx_cleanup_mutex_atexit terminates the DirectX rendering system mutex at
+// exit.
+void dx_cleanup_mutex_atexit();
 
 // address: 0x415394
 //
-// TODO: add documentation.
+// dx_cleanup_mutex terminates the DirectX rendering system mutex.
+void dx_cleanup_mutex();
 
 // address: 0x4153A0
 //
@@ -34,7 +38,8 @@ void __fastcall dx_init(HWND hWnd);
 
 // address: 0x4154B5
 //
-// TODO: add documentation.
+// dx_create_back_buffer creates the DirectDraw back buffer.
+void dx_create_back_buffer();
 
 // address: 0x4155C2
 //
@@ -43,23 +48,28 @@ void dx_create_primary_surface();
 
 // address: 0x41561A
 //
-// TODO: add documentation.
+// dx_DirectDrawCreate creates a DirectDraw object.
+HRESULT __fastcall dx_DirectDrawCreate(GUID *guid, IDirectDraw **DD, void *unknown);
 
 // address: 0x415695
 //
-// TODO: add documentation.
+// j_dx_lock_mutex locks the DirectX rendering system mutex.
+void j_dx_lock_mutex();
 
 // address: 0x41569A
 //
-// TODO: add documentation.
+// dx_lock_mutex locks the DirectX rendering system mutex.
+void dx_lock_mutex();
 
 // address: 0x415720
 //
-// TODO: add documentation.
+// j_dx_unlock_mutex unlocks the DirectX rendering system mutex.
+void j_dx_unlock_mutex();
 
 // address: 0x415725
 //
-// TODO: add documentation.
+// dx_unlock_mutex unlocks the DirectX rendering system mutex.
+void dx_unlock_mutex();
 
 // address: 0x4157A0
 //
@@ -68,8 +78,10 @@ void dx_cleanup();
 
 // address: 0x415848
 //
-// TODO: add documentation.
+// dx_reinit reinitializes the DirectX rendering system.
+void dx_reinit();
 
 // address: 0x4158A4
 //
-// TODO: add documentation.
+// j_dx_reinit reinitializes the DirectX rendering system.
+void j_dx_reinit();
