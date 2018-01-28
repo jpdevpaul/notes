@@ -10,4 +10,6 @@ void debug_cleanup();
 
 // address: 0x408721
 //
-// TODO: add documentation.
+// debug_check_monster_and_player_clear validates that the NPC and player maps
+// have been cleared.
+void debug_check_monster_and_player_clear();
