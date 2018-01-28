@@ -2,11 +2,13 @@
 
 // address: 0x415F43
 //
-// TODO: add documentation.
+// encrypt_decrypt_block decrypts the given block.
+void __fastcall encrypt_decrypt_block(void *block, int size, uint32_t key);
 
 // address: 0x415F8F
 //
-// TODO: add documentation.
+// encrypt_encrypt_block encrypts the given block.
+void __fastcall encrypt_encrypt_block(void *block, int size, uint32_t key);
 
 // address: 0x415FDF
 //
@@ -24,16 +26,24 @@ void encrypt_init_lookup_table();
 
 // address: 0x41609D
 //
-// TODO: add documentation.
+// encrypt_compress compresses the given buffer using the PKWARE Data
+// Compression Library.
+int __fastcall encrypt_compress(void *buf, int size);
 
 // address: 0x416133
 //
-// TODO: add documentation.
+// encrypt_pkware_read reads data from the parameter and writes it to the
+// buffer.
+int __cdecl encrypt_pkware_read(void *buf, int *size, void *param);
 
 // address: 0x416167
 //
-// TODO: add documentation.
+// encrypt_pkware_write reads data from the buffer and writes it to the given
+// parameter.
+int __cdecl encrypt_pkware_write(void *buf, int *size, void *param);
 
 // address: 0x41618E
 //
-// TODO: add documentation.
+// encrypt_compress decompresses the given buffer using the PKWARE Data
+// Compression Library.
+void __fastcall encrypt_decompress(void *param, int a2, int size);
