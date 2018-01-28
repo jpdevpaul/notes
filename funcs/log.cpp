@@ -33,7 +33,7 @@ void log_cleanup_mutex();
 // address: 0x427A30
 //
 // log_flush flushes the log file.
-void log_flush(bool32_t force_close);
+void __cdecl log_flush(bool32_t force_close);
 
 // address: 0x427AC2
 //

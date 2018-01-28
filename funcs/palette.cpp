@@ -110,7 +110,7 @@ void __fastcall palette_brightness_fade_out(int dec);
 // address: 0x449336
 //
 // palette_update_caves updates the palettes of Caves.
-void __cdecl palette_update_caves();
+void palette_update_caves();
 
 // address: 0x449398
 //
@@ -121,7 +121,7 @@ void __fastcall palette_update_quest_palette(int n);
 // address: 0x4493C6
 //
 // palette_get_colour_cycling reports whether colour cycling is enabled.
-bool32_t __cdecl palette_get_colour_cycling();
+bool32_t palette_get_colour_cycling();
 
 // address: 0x4493CC
 //
