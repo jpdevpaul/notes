@@ -14,6 +14,23 @@ typedef unsigned int UINT;
 typedef uint32_t WPARAM; // size of pointer.
 typedef uint32_t LPARAM; // size of pointer.
 
+// ref: https://msdn.microsoft.com/en-us/library/windows/desktop/ms646997(v=vs.85).aspx
+typedef struct {
+	DWORD dwSignature;
+	DWORD dwStrucVersion;
+	DWORD dwFileVersionMS;
+	DWORD dwFileVersionLS;
+	DWORD dwProductVersionMS;
+	DWORD dwProductVersionLS;
+	DWORD dwFileFlagsMask;
+	DWORD dwFileFlags;
+	DWORD dwFileOS;
+	DWORD dwFileType;
+	DWORD dwFileSubtype;
+	DWORD dwFileDateMS;
+	DWORD dwFileDateLS;
+} VS_FIXEDFILEINFO;
+
 // ref: https://msdn.microsoft.com/en-us/library/windows/desktop/dd390970(v=vs.85).aspx
 typedef struct {
 	WORD  wFormatTag;
