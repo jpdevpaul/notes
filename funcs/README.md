@@ -19,7 +19,7 @@ Each function has been categorised based on their original source file, as summa
 | [drlg_l2.cpp](drlg_l2.cpp)       | `0x40D357`    | `0x40FF80`  | 51% (18/35 functions)    |
 | [drlg_l3.cpp](drlg_l3.cpp)       | `0x40FF81`    | `0x412654`  | 5% (2/34 functions)      |
 | [drlg_l4.cpp](drlg_l4.cpp)       | `0x412655`    | `0x415097`  | 2% (1/35 functions)      |
-| [dthread.cpp](dthread.cpp)       | `0x415098`    | `0x415361`  | 36% (4/11 functions)     |
+| [dthread.cpp](dthread.cpp)       | `0x415098`    | `0x415361`  | 100% (11/11 functions)   |
 | [dx.cpp](dx.cpp)                 | `0x415362`    | `0x4158A8`  | 100% (17/17 functions)   |
 | [effects.cpp](effects.cpp)       | `0x4158A9`    | `0x415F42`  | 14% (3/21 functions)     |
 | [encrypt.cpp](encrypt.cpp)       | `0x415F43`    | `0x4161FB`  | 25% (2/8 functions)      |

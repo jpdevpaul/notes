@@ -52,12 +52,12 @@ void nthread_set_turn_upper_bit();
 
 // address: 0x440F61
 //
-// nthread_start_thread starts the networking thread.
-void __fastcall nthread_start_thread(bool32_t set_turn_upper_bit);
+// nthread_start starts the networking thread.
+void __fastcall nthread_start(bool32_t set_turn_upper_bit);
 
 // address: 0x4410CF
 //
-// nthread_handler runs the networking thread which synchronizes turns of connected peers.
+// nthread_handler is the networking thread which synchronizes turns of connected peers.
 int __stdcall nthread_handler(void *a1);
 
 // address: 0x441145
