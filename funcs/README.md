@@ -7,7 +7,7 @@ Each function has been categorised based on their original source file, as summa
 | _crt.cpp                         | `0x401000`    | `0x401029`  | N/A                      |
 | [appfat.cpp](appfat.cpp)         | `0x40102A`    | `0x401DA3`  | 100% (19/19 functions)   |
 | [automap.cpp](automap.cpp)       | `0x401DA4`    | `0x40311A`  | 100% (16/16 functions)   |
-| [capture.cpp](capture.cpp)       | `0x40311B`    | `0x4034D8`  | 14% (1/7 functions)      |
+| [capture.cpp](capture.cpp)       | `0x40311B`    | `0x4034D8`  | 100% (7/7 functions)     |
 | [codec.cpp](codec.cpp)           | `0x4034D9`    | `0x4037D3`  | 100% (5/5 functions)     |
 | [control.cpp](control.cpp)       | `0x4037D4`    | `0x407409`  | 24% (16/65 functions)    |
 | [cursor.cpp](cursor.cpp)         | `0x40740A`    | `0x4084A5`  | 100% (9/9 functions)     |
