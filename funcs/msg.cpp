@@ -124,7 +124,11 @@ void __fastcall msg_send_cmd(bool32_t high_priority, cmd cmd);
 
 // address: 0x43C891
 //
-// TODO: add documentation.
+// msg_send_cmd_spawn_golem sends a spawn golem command message.
+//
+// PSX ref: 0x8004F6F8
+// PSX def: void NetSendCmdGolem__FUcUcUcUclUc(unsigned char mx, unsigned char my, unsigned char dir, unsigned char menemy, long hp, int cl)
+void __fastcall msg_send_cmd_spawn_golem(int8_t x, int8_t y, int8_t direction, int8_t target_num, int hp_cur, int8_t dlvl);
 
 // address: 0x43C8C7
 //
@@ -207,7 +211,11 @@ void __fastcall msg_send_cmd_get_item(bool32_t high_priority, cmd cmd, int8_t pl
 
 // address: 0x43CC09
 //
-// TODO: add documentation.
+// msg_send_cmd_get_item2 sends a GetItem command message to connected peers.
+//
+// PSX ref: 0x8004FA84
+// PSX def: void NetSendCmdGItem2__FUcUcUcUcPC9TCmdGItem(unsigned char usonly, unsigned char bCmd, unsigned char mast, unsigned char pnum, struct TCmdGItem *p)
+void __fastcall msg_send_cmd_get_item2(bool32_t record_tc, cmd cmd, int8_t master_player_num, int8_t player_num, CmdGetItem *src_msg);
 
 // address: 0x43CC74
 //
@@ -275,39 +283,72 @@ void __fastcall msg_send_cmd_get_item(bool32_t high_priority, cmd cmd, int8_t pl
 
 // address: 0x43D7FC
 //
-// TODO: add documentation.
+// msg_on_cmd_walk_to_coordinate handles a WalkToCoordinate command.
+//
+// PSX ref: 0x8004FF74
+// PSX def: void On_WALKXY__FPC4TCmdi(struct TCmd *pCmd, int pnum)
+int __fastcall msg_on_cmd_walk_to_coordinate(CmdCoord *msg, int player_num);
 
 // address: 0x43D84A
 //
-// TODO: add documentation.
+// msg_on_add_str handles an AddStr command.
+//
+// PSX ref: 0x8004FFF4
+// PSX def: void On_ADDSTR__FPC4TCmdi(struct TCmd *pCmd, int pnum)
+int __fastcall msg_on_add_str(CmdParam1 *msg, int player_num);
 
 // address: 0x43D87B
 //
-// TODO: add documentation.
+// msg_on_add_mag handles an AddMag command.
+//
+// PSX ref: 0x80050024
+// PSX def: void On_ADDMAG__FPC4TCmdi(struct TCmd *pCmd, int pnum)
+int __fastcall msg_on_add_mag(CmdParam1 *msg, int player_num);
 
 // address: 0x43D8AC
 //
-// TODO: add documentation.
+// msg_on_add_dex handles an AddDex command.
+//
+// PSX ref: 0x80050054
+// PSX def: void On_ADDDEX__FPC4TCmdi(struct TCmd *pCmd, int pnum)
+int __fastcall msg_on_add_dex(CmdParam1 *msg, int player_num);
 
 // address: 0x43D8DD
 //
-// TODO: add documentation.
+// msg_on_add_vit handles an AddVit command.
+//
+// PSX ref: 0x80050084
+// PSX def: void On_ADDVIT__FPC4TCmdi(struct TCmd *pCmd, int pnum)
+int __fastcall msg_on_add_vit(CmdParam1 *msg, int player_num);
 
 // address: 0x43D90E
 //
-// TODO: add documentation.
+// msg_on_cmd_cast_spell handles a CastSpell command.
+//
+// PSX ref: 0x800500B4
+// PSX def: void On_SBSPELL__FPC4TCmdi(struct TCmd *pCmd, int pnum)
+int __fastcall msg_on_cmd_cast_spell(CmdParam1 *msg, int player_num);
 
 // address: 0x43D97D
 //
-// TODO: add documentation.
+// msg_errorf displays a formatted error message.
+void msg_errorf(char *format, ...);
 
 // address: 0x43D9C4
 //
-// TODO: add documentation.
+// msg_on_cmd_lift_item_at_coordinate handles a LiftItemAtCoordinate command.
+//
+// PSX ref: 0x80050128
+// PSX def: void On_GOTOGETITEM__FPC4TCmdi(struct TCmd *pCmd, int pnum)
+int __fastcall msg_on_cmd_lift_item_at_coordinate(CmdCoordParam1 *msg, int player_num);
 
 // address: 0x43DA16
 //
-// TODO: add documentation.
+// msg_on_cmd_lift_item handles a LiftItem command.
+//
+// PSX ref: 0x800501B0
+// PSX def: void On_REQUESTGITEM__FPC4TCmdi(struct TCmd *pCmd, int pnum)
+int __fastcall msg_on_cmd_lift_item(CmdGetItem *msg, int player_num);
 
 // address: 0x43DAE6
 //
@@ -323,7 +364,11 @@ void __fastcall msg_send_cmd_get_item(bool32_t high_priority, cmd cmd, int8_t pl
 
 // address: 0x43DD40
 //
-// TODO: add documentation.
+// msg_on_cmd_loot_item_at_coordinate handles a LootItemAtCoordinate command.
+//
+// PSX ref: 0x800501B0
+// PSX def: void On_REQUESTGITEM__FPC4TCmdi(struct TCmd *pCmd, int pnum)
+int __fastcall msg_on_cmd_loot_item_at_coordinate(CmdCoordParam1 *msg, int player_num);
 
 // address: 0x43DD92
 //

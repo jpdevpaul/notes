@@ -479,6 +479,47 @@ typedef enum {
 // TODO: add missing enums of item_id.
 
 // Item IDs specify item_data array indices.
+//
+// PSX def:
+//    typedef enum _item_indexes {
+//       IDI_GOLD = 0,
+//       IDI_WARRIOR = 1,
+//       IDI_WARRSHLD = 2,
+//       IDI_WARRCLUB = 3,
+//       IDI_ROGUE = 4,
+//       IDI_SORCEROR = 5,
+//       IDI_CLEAVER = 6,
+//       IDI_FIRSTQUEST = 6,
+//       IDI_SKCROWN = 7,
+//       IDI_INFRARING = 8,
+//       IDI_ROCK = 9,
+//       IDI_OPTAMULET = 10,
+//       IDI_TRING = 11,
+//       IDI_BANNER = 12,
+//       IDI_HARCREST = 13,
+//       IDI_STEELVEIL = 14,
+//       IDI_GLDNELIX = 15,
+//       IDI_ANVIL = 16,
+//       IDI_MUSHROOM = 17,
+//       IDI_BRAIN = 18,
+//       IDI_FUNGALTM = 19,
+//       IDI_SPECELIX = 20,
+//       IDI_BLDSTONE = 21,
+//       IDI_LASTQUEST = 22,
+//       IDI_MAPOFDOOM = 22,
+//       IDI_EAR = 23,
+//       IDI_HEAL = 24,
+//       IDI_MANA = 25,
+//       IDI_IDENTIFY = 26,
+//       IDI_PORTAL = 27,
+//       IDI_ARMOFVAL = 28,
+//       IDI_FULLHEAL = 29,
+//       IDI_FULLMANA = 30,
+//       IDI_GRISWOLD = 31,
+//       IDI_LGTFORGE = 32,
+//       IDI_LAZSTAFF = 33,
+//       IDI_RESURRECT = 34,
+//    } _item_indexes;
 typedef enum {
 	ITEM_ID_GOLD                             =   0,
 	ITEM_ID_SHORT_SWORD                      =   1,

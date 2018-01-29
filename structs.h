@@ -41,7 +41,267 @@ typedef struct { // size = 0x24
 	int nturns_in_transit;
 } Caps;
 
-// CmdPutItem is a PutItem network command.
+// Cmd is a command message without body.
+//
+// PSX def:
+//     typedef struct TCmd {
+//        unsigned char bCmd;
+//     } TCmd;
+typedef struct { // size = 0x1
+	// offset: 0000 (1 bytes)
+	cmd cmd;
+} Cmd;
+
+// CmdCoord is a command message with X-Y coordinate.
+//
+// PSX def:
+//     typedef struct TCmdLoc {
+//        unsigned char bCmd;
+//        unsigned char x;
+//        unsigned char y;
+//     } TCmdLoc;
+typedef struct { // size = 0x3
+	// offset: 0000 (1 bytes)
+	cmd cmd;
+	// offset: 0001 (1 bytes)
+	int8_t x;
+	// offset: 0002 (1 bytes)
+	int8_t y;
+} CmdCoord;
+
+// CmdCoordParam1 is a command message with X-Y coordinate and one parameter.
+//
+// PSX def:
+//     typedef struct TCmdLocParam1 {
+//        unsigned char bCmd;
+//        unsigned char x;
+//        unsigned char y;
+//        unsigned short wParam1;
+//     } TCmdLocParam1;
+typedef struct { // size = 0x5
+	// offset: 0000 (1 bytes)
+	cmd cmd;
+	// offset: 0001 (1 bytes)
+	int8_t x;
+	// offset: 0002 (1 bytes)
+	int8_t y;
+	// offset: 0003 (2 bytes)
+	int16_t param1;
+} CmdCoordParam1;
+
+// CmdCoordParam2 is a command message with X-Y coordinate and two parameters.
+//
+// PSX def:
+//     typedef struct TCmdLocParam2 {
+//        unsigned char bCmd;
+//        unsigned char x;
+//        unsigned char y;
+//        unsigned short wParam1;
+//        unsigned short wParam2;
+//     } TCmdLocParam2;
+typedef struct { // size = 0x7
+	// offset: 0000 (1 bytes)
+	cmd cmd;
+	// offset: 0001 (1 bytes)
+	int8_t x;
+	// offset: 0002 (1 bytes)
+	int8_t y;
+	// offset: 0003 (2 bytes)
+	int16_t param1;
+	// offset: 0005 (2 bytes)
+	int16_t param2;
+} CmdCoordParam2;
+
+// CmdCoordParam3 is a command message with X-Y coordinate and three parameters.
+//
+// PSX def:
+//     typedef struct TCmdLocParam3 {
+//        unsigned char bCmd;
+//        unsigned char x;
+//        unsigned char y;
+//        unsigned short wParam1;
+//        unsigned short wParam2;
+//        unsigned short wParam3;
+//     } TCmdLocParam3;
+typedef struct { // size = 0x9
+	// offset: 0000 (1 bytes)
+	cmd cmd;
+	// offset: 0001 (1 bytes)
+	int8_t x;
+	// offset: 0002 (1 bytes)
+	int8_t y;
+	// offset: 0003 (2 bytes)
+	int16_t param1;
+	// offset: 0005 (2 bytes)
+	int16_t param2;
+	// offset: 0007 (2 bytes)
+	int16_t param3;
+} CmdCoordParam3;
+
+// CmdParam1 is a command message with one parameter.
+//
+// PSX def:
+//     typedef struct TCmdParam1 {
+//        unsigned char bCmd;
+//        unsigned short wParam1;
+//     } TCmdParam1;
+typedef struct { // size = 0x3
+	// offset: 0000 (1 bytes)
+	cmd cmd;
+	// offset: 0001 (2 bytes)
+	int16_t param1;
+} CmdParam1;
+
+// CmdParam2 is a command message with two parameters.
+//
+// PSX def:
+//     typedef struct TCmdParam2 {
+//        unsigned char bCmd;
+//        unsigned short wParam1;
+//        unsigned short wParam2;
+//     } TCmdParam2;
+typedef struct { // size = 0x5
+	// offset: 0000 (1 bytes)
+	cmd cmd;
+	// offset: 0001 (2 bytes)
+	int16_t param1;
+	// offset: 0003 (2 bytes)
+	int16_t param2;
+} CmdParam2;
+
+// CmdParam3 is a command message with three parameters.
+//
+// PSX def:
+//     typedef struct TCmdParam3 {
+//        unsigned char bCmd;
+//        unsigned short wParam1;
+//        unsigned short wParam2;
+//        unsigned short wParam3;
+//     } TCmdParam3;
+typedef struct { // size = 0x7
+	// offset: 0000 (1 bytes)
+	cmd cmd;
+	// offset: 0001 (2 bytes)
+	int16_t param1;
+	// offset: 0003 (2 bytes)
+	int16_t param2;
+	// offset: 0005 (2 bytes)
+	int16_t param3;
+} CmdParam3;
+
+// CmdSpawnGolem is a SpawnGolem command message.
+//
+// PSX def:
+//     typedef struct TCmdGolem {
+//        unsigned char bCmd;
+//        unsigned char _mx;
+//        unsigned char _my;
+//        unsigned char _mdir;
+//        unsigned char _menemy;
+//        unsigned char _currlevel;
+//        short _mhitpoints;
+//     } TCmdGolem;
+typedef struct { // size = 0xA
+	// offset: 0000 (1 bytes)
+	cmd cmd;
+	// offset: 0001 (1 bytes)
+	int8_t x;
+	// offset: 0002 (1 bytes)
+	int8_t y;
+	// offset: 0003 (1 bytes)
+	direction direction;
+	// offset: 0004 (1 bytes)
+	int8_t target_num;
+	// offset: 0005 (4 bytes)
+	int32_t hp;
+	// offset: 0009 (1 bytes)
+	int8_t dlvl;
+} CmdSpawnGolem;
+
+// CmdQuest is a Quest command message.
+//
+// PSX def:
+//     typedef struct TCmdQuest {
+//        unsigned char bCmd;
+//        unsigned char q;
+//        unsigned char qstate;
+//        unsigned char qlog;
+//        unsigned char qvar1;
+//     } TCmdQuest;
+typedef struct { // size = 0x5
+	// offset: 0000 (1 bytes)
+	cmd cmd;
+	// offset: 0001 (1 bytes)
+	quest_id quest_id;
+	// offset: 0002 (1 bytes)
+	bool8_t quest_active;
+	// offset: 0003 (1 bytes)
+	bool8_t speech_spoken;
+	// offset: 0004 (1 bytes)
+	int8_t var1;
+} CmdQuest;
+
+// CmdGetItem is a GetItem command message.
+//
+// PSX def:
+//     typedef struct TCmdGItem {
+//        unsigned char bCmd;
+//        unsigned char bMaster;
+//        unsigned char bPnum;
+//        unsigned char bCursitem;
+//        unsigned char bLevel;
+//        unsigned char x;
+//        unsigned char y;
+//        unsigned char bId;
+//        unsigned char bDur;
+//        unsigned char bMDur;
+//        unsigned char bCh;
+//        unsigned char bMCh;
+//        unsigned short wValue;
+//        unsigned short wIndx;
+//        unsigned short wCI;
+//        unsigned long dwSeed;
+//        unsigned long dwBuff;
+//        unsigned long dwTime;
+//     } TCmdGItem;
+typedef struct { // size = 0x1E
+	// offset: 0000 (1 bytes)
+	cmd cmd;
+	// offset: 0001 (1 bytes)
+	int8_t player_num_master;
+	// offset: 0002 (1 bytes)
+	int8_t player_num;
+	// offset: 0003 (1 bytes)
+	int8_t item_num;
+	// offset: 0004 (1 bytes)
+	int8_t dlvl;
+	// offset: 0005 (1 bytes)
+	int8_t x;
+	// offset: 0006 (1 bytes)
+	int8_t y;
+	// offset: 0007 (2 bytes)
+	int16_t item_id;
+	// offset: 0009 (2 bytes)
+	int16_t wCF;
+	// offset: 000B (4 bytes)
+	int32_t seed;
+	// offset: 000F (1 bytes)
+	int8_t identified;
+	// offset: 0010 (1 bytes)
+	int8_t durability_cur;
+	// offset: 0011 (1 bytes)
+	int8_t durability_max;
+	// offset: 0012 (1 bytes)
+	int8_t charges_cur;
+	// offset: 0013 (1 bytes)
+	int8_t charges_max;
+	// offset: 0014 (2 bytes)
+	int16_t gold_price_min;
+	// offset: 001A (4 bytes)
+	int32_t tc;
+} CmdGetItem;
+
+// CmdPutItem is a PutItem command message.
 //
 // PSX def:
 //     typedef struct TCmdPItem {
