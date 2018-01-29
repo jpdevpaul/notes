@@ -348,6 +348,42 @@ typedef struct {
 	uint32_t only_used_by_ear; // only used by ear to store name of character.
 } CmdPutItem;
 
+// PSX def:
+//     typedef struct TCmdChItem {
+//        unsigned char bCmd;
+//        unsigned char bLoc;
+//        unsigned short wIndx;
+//        unsigned short wCI;
+//        unsigned long dwSeed;
+//        unsigned char bId;
+//     } TCmdChItem;
+typedef struct { // size = 0xB
+	// offset: 0000 (1 bytes)
+	cmd cmd;
+	// offset: 0001 (1 bytes)
+	int8_t item_body_num;
+	// offset: 0002 (2 bytes)
+	item_id item_id;
+	// offset: 0004 (2 bytes)
+	int16_t wCF;
+	// offset: 0006 (4 bytes)
+	int32_t seed;
+	// offset: 000A (1 bytes)
+	bool8_t identified;
+} CmdChangeItem;
+
+// PSX def:
+//     typedef struct TCmdDelItem {
+//        unsigned char bCmd;
+//        unsigned char bLoc;
+//     } TCmdDelItem;
+typedef struct { // size = 0x2
+	// offset: 0000 (1 bytes)
+	cmd cmd;
+	// offset: 0001 (1 bytes)
+	int8_t item_body_num;
+} CmdDeleteItem;
+
 // ClientInfo specifies information about the game version of the client.
 typedef struct { // size = 0x3C
 	// offset: 0000 (4 bytes)
