@@ -109,11 +109,13 @@ bool32_t __fastcall mpqapi_set_hidden(char *save_path, bool32_t hidden);
 
 // address: 0x43BA60
 //
-// TODO: add documentation.
+// mpqapi_write_block_table writes the block table to the MPQ archive.
+bool32_t mpqapi_write_block_table();
 
 // address: 0x43BAEB
 //
-// TODO: add documentation.
+// mpqapi_write_hash_table writes the hash table to the MPQ archive.
+bool32_t mpqapi_write_hash_table();
 
 // address: 0x43BB79
 //
