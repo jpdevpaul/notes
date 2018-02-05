@@ -17,6 +17,19 @@ typedef enum {
 	ATTRIBUTE_ID_VIT = 3,
 } attribute_id;
 
+// MPQ block flags.
+typedef enum {
+	BLOCK_FLAG_IMPLODE                = 0x00000100, // compressed file (PKWARE)
+	BLOCK_FLAG_COMPRESS               = 0x00000200, // compressed file
+	BLOCK_FLAG_ENCRYPTED              = 0x00010000, // encrypted file
+	BLOCK_FLAG_POSITION_DEPENDENT_KEY = 0x00020000, // position dependent decryption key
+	BLOCK_FLAG_PATCH_FILE             = 0x00100000, // incremental patch file for an existing file in the base MPQ
+	BLOCK_FLAG_SINGLE_UNIT            = 0x01000000, // file contained in a single unit, not split in sectors
+	BLOCK_FLAG_DELETED                = 0x02000000, // deleted file; used by patch archives to delete files in lower-priority archives
+	BLOCK_FLAG_SECTOR_CRC             = 0x04000000, // sector CRC checksums
+	BLOCK_FLAG_EXISTS                 = 0x80000000, // file present
+} block_flag;
+
 // Network message commands.
 typedef enum {
 	CMD_0 = 0,

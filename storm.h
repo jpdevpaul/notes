@@ -22,7 +22,7 @@ bool32_t __stdcall SNetDropPlayer(int player_num, uint32_t flags);
 
 // ordinal: 107
 //
-// SNetGameInfo retrieves game information of the given type.
+// SNetGetGameInfo retrieves game information of the given type.
 bool32_t __stdcall SNetGetGameInfo(game_info type, char *dst, int size, int *len);
 
 // ordinal: 110

@@ -42,7 +42,7 @@ Each function has been categorised based on their original source file, as summa
 | [missiles.cpp](missiles.cpp)     | `0x4283C0`    | `0x430FDE`  | 0% (1/133 functions)     |
 | [monster.cpp](monster.cpp)       | `0x430FDF`    | `0x43AD32`  | 1% (2/147 functions)     |
 | [movie.cpp](movie.cpp)           | `0x43AD33`    | `0x43AE8F`  | 100% (4/4 functions)     |
-| [mpqapi.cpp](mpqapi.cpp)         | `0x43AE90`    | `0x43BBA3`  | 17% (5/29 functions)     |
+| [mpqapi.cpp](mpqapi.cpp)         | `0x43AE90`    | `0x43BBA3`  | 68% (20/29 functions)    |
 | [msg.cpp](msg.cpp)               | `0x43BBA4`    | `0x43F848`  | 19% (26/133 functions)   |
 | [msgcmd.cpp](msgcmd.cpp)         | `0x43F849`    | `0x43FAC3`  | 16% (3/18 functions)     |
 | [multi.cpp](multi.cpp)           | `0x43FAC4`    | `0x440DAD`  | 7% (3/38 functions)      |
@@ -51,7 +51,7 @@ Each function has been categorised based on their original source file, as summa
 | [hero.cpp](hero.cpp)             | `0x448755`    | `0x448DF4`  | 100% (7/7 functions)     |
 | [palette.cpp](palette.cpp)       | `0x448DF5`    | `0x4493D3`  | 100% (22/22 functions)   |
 | [path.cpp](path.cpp)             | `0x4493D4`    | `0x4498EB`  | 0% (0/14 functions)      |
-| [pfile.cpp](pfile.cpp)           | `0x4498EC`    | `0x44A8E5`  | 21% (8/38 functions)     |
+| [pfile.cpp](pfile.cpp)           | `0x4498EC`    | `0x44A8E5`  | 50% (19/38 functions)    |
 | [player.cpp](player.cpp)         | `0x44A8E6`    | `0x450D32`  | 5% (5/92 functions)      |
 | [plrmsg.cpp](plrmsg.cpp)         | `0x450D33`    | `0x450FFD`  | 12% (1/8 functions)      |
 | [portal.cpp](portal.cpp)         | `0x450FFE`    | `0x45138D`  | 7% (1/13 functions)      |

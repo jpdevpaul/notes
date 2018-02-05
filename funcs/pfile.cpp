@@ -23,7 +23,8 @@ void __fastcall pfile_check_available_space(char *dir);
 
 // address: 0x4499C3
 //
-// TODO: add documentation.
+// pfile_write_hero stores the hero to a save file.
+void pfile_write_hero();
 
 // address: 0x449A33
 //
@@ -33,11 +34,13 @@ int __fastcall pfile_get_save_num_from_name(char *name);
 
 // address: 0x449A5B
 //
-// TODO: add documentation.
+// pfile_encode_hero encodes the hero and stores it to the 'hero' file.
+void __fastcall pfile_encode_hero(Hero *hero);
 
 // address: 0x449ADF
 //
-// TODO: add documentation.
+// pfile_open_archive opens the specified save archive.
+bool32_t __fastcall pfile_open_archive(bool32_t a1, int save_num);
 
 // address: 0x449B30
 //
@@ -64,9 +67,14 @@ void __fastcall pfile_get_save_path(char *save_path, int size, int save_num);
 //
 // TODO: add documentation.
 
+/* TODO: uncomment when Player is defined in structs.h
+
 // address: 0x449DD0
 //
-// TODO: add documentation.
+// pfile_get_player_class returns the player class of the player.
+int __fastcall pfile_get_player_class(Player *player);
+
+*/
 
 // address: 0x449DE3
 //
@@ -119,15 +127,20 @@ bool32_t __stdcall pfile_delete_save(HeroInfo *hero_info);
 
 // address: 0x44A419
 //
-// TODO: add documentation.
+// pfile_get_temp_level_name retrieves the name of the temporary level save
+// file.
+void __fastcall pfile_get_temp_level_name(char *dst);
 
 // address: 0x44A463
 //
-// TODO: add documentation.
+// pfile_get_perm_level_name retrieves the name of the permanent level save
+// file.
+void __fastcall pfile_get_perm_level_name(char *dst);
 
 // address: 0x44A4E9
 //
-// TODO: add documentation.
+// pfile_get_game_name retrieves the name of the game state save file.
+void __fastcall pfile_get_game_name(char *dst);
 
 // address: 0x44A512
 //
@@ -135,7 +148,9 @@ bool32_t __stdcall pfile_delete_save(HeroInfo *hero_info);
 
 // address: 0x44A563
 //
-// TODO: add documentation.
+// pfile_get_temp_name retrieves the name of the temporary save file of the
+// specified level.
+bool32_t __stdcall pfile_get_temp_name(int a1, char *dst);
 
 // address: 0x44A598
 //
@@ -143,7 +158,9 @@ bool32_t __stdcall pfile_delete_save(HeroInfo *hero_info);
 
 // address: 0x44A644
 //
-// TODO: add documentation.
+// pfile_get_perm_name retrieves the name of the permanent save file of the
+// specified level.
+bool32_t __stdcall pfile_get_perm_name(int lvl, char *dst);
 
 // address: 0x44A679
 //
@@ -156,8 +173,10 @@ void __fastcall pfile_strcpy(char *dst, char *src);
 
 // address: 0x44A731
 //
-// TODO: add documentation.
+// pfile_read reads the contents of the specified save file.
+uint8_t * __fastcall pfile_read(char *path, int *len);
 
 // address: 0x44A8B3
 //
-// TODO: add documentation.
+// pfile_update stores a periodic update to the save file each minute.
+void __fastcall pfile_update(bool32_t force_save);

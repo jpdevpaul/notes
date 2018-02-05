@@ -25,6 +25,18 @@ typedef struct { // size = 0xB
 	int8_t attack_frame_unknown_000A;
 } ActionFrame;
 
+// A BlockEntry is an MPQ block table entry.
+typedef struct { // size = 0x10
+	// offset: 0000 (4 bytes)
+	uint32_t block_offset; // Offset to the start of the block.
+	// offset: 0004 (4 bytes)
+	uint32_t block_size; // Size in bytes of the block.
+	// offset: 0008 (4 bytes)
+	uint32_t file_size; // Size in bytes of the uncompressed file.
+	// offset: 000C (4 bytes)
+	block_flag flags; // Flags associated with the block.
+} BlockEntry;
+
 // Caps specifies the network message capabilities of the client.
 typedef struct { // size = 0x24
 	// offset: 00000000 (4 bytes)
@@ -652,6 +664,20 @@ typedef struct {
 	// offset 003C (4 bytes)
 	speech_id archbishop_lazarus;
 } GossipData;
+
+// A HashEntry is an MPQ hash table entry.
+typedef struct { // size = 0x10
+	// offset: 0000 (4 bytes)
+	uint32_t hash_a; // Hash of relative file path, using method A.
+	// offset: 0004 (4 bytes)
+	uint32_t hash_b; // Hash of relative file path, using method B.
+	// offset: 0008 (2 bytes)
+	uint16_t locale; // Language locale of the file.
+	// offset: 000A (2 bytes)
+	uint16_t platform; // Platform of the file.
+	// offset: 000C (4 bytes)
+	uint32_t block_index; // Index into the block table for the file; or one of the following two values.
+} HashEntry;
 
 // HeroItem contains the most essential information about the item of a player,
 // as used in save files.
