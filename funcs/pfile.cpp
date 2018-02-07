@@ -114,7 +114,8 @@ int __fastcall pfile_get_player_class(Player *player);
 
 // address: 0x44A2FF
 //
-// TODO: add documentation.
+// pfile_get_file_name retrieves the name of the permanent save file of the specified level.
+bool32_t __stdcall pfile_get_file_name(int lvl, char *dst);
 
 // address: 0x44A356
 //

@@ -40,19 +40,22 @@ bool32_t __fastcall mpqapi_reg_store_modification_time(uint8_t *src, int len);
 
 // address: 0x43AFFD
 //
-// TODO: add documentation.
+// j_mpqapi_remove_hash_entry removes the hash entry of the give file path.
+void __fastcall j_mpqapi_remove_hash_entry(char *path);
 
 // address: 0x43B002
 //
-// TODO: add documentation.
+// mpqapi_remove_hash_entry removes the hash entry of the give file path.
+void __fastcall mpqapi_remove_hash_entry(char *path);
 
 // address: 0x43B054
 //
-// TODO: add documentation.
+// mpqapi_free_block frees the block at the specified block offset.
+void __fastcall mpqapi_alloc_block(int block_offset, int block_size);
 
 // address: 0x43B0E4
 //
-// mpqapi_new_block returns a new block entry and stores its block index.
+// mpqapi_new_block returns a new block entry and retrieves its block index.
 BlockEntry * __fastcall mpqapi_new_block(int *block_index);
 
 // address: 0x43B123
@@ -68,7 +71,9 @@ int __fastcall mpqapi_get_hash_index(int16_t index, int hash_a, int hash_b, int 
 
 // address: 0x43B1BD
 //
-// TODO: add documentation.
+// mpqapi_remove_hash_entries removes the hash entires associated with the file
+// paths returned by the get_file_name function.
+void __fastcall mpqapi_remove_hash_entries(bool32_t (__stdcall *get_file_name)(int lvl, char *file_name));
 
 // address: 0x43B1F8
 //
@@ -78,17 +83,19 @@ bool32_t __fastcall mpqapi_write_file(char *file_name, uint8_t *buf, int len);
 
 // address: 0x43B23D
 //
-// mpqapi_add_file adds a file with the given file path and optional block to
-// the archive.
-int __fastcall mpqapi_add_file(char *path, BlockEntry *block, int block_index);
+// mpqapi_add_file creates a block for the given file path.
+BlockEntry *__fastcall mpqapi_add_file(char *path, BlockEntry *block, int block_index);
 
 // address: 0x43B317
 //
-// TODO: add documentation.
+// mpqapi_write_file_contents writes the file contents to a block.
+bool32_t __fastcall mpqapi_write_file_contents(char *path, uint8_t *buf, int len, BlockEntry *block);
 
 // address: 0x43B51C
 //
-// TODO: add documentation.
+// mpqapi_find_free_block returns the block offset of the first free block of
+// the given size.
+uint32_t __fastcall mpqapi_find_free_block(int size, uint32_t *block_size);
 
 // address: 0x43B570
 //
@@ -108,7 +115,8 @@ bool32_t __fastcall mpqapi_open_archive(char *save_path, bool32_t hidden, int sa
 
 // address: 0x43B791
 //
-// TODO: add documentation.
+// mpqapi_parse_archive_header parses the MPQ archive header.
+bool32_t __fastcall mpqapi_parse_archive_header(MPQHeader *header, uint32_t *mpq_offset);
 
 // address: 0x43B882
 //
@@ -117,7 +125,9 @@ void __fastcall mpqapi_close_archive(char *save_path, bool32_t free_tables, int 
 
 // address: 0x43B8FD
 //
-// TODO: add documentation.
+// mpqapi_store_modification_time stores the creation time of the given save
+// file to registry.
+void __fastcall mpqapi_store_modified_time(char *save_path, int save_num);
 
 // address: 0x43B970
 //
@@ -126,8 +136,8 @@ void __fastcall mpqapi_flush_and_close(char *save_path, bool32_t is_single_playe
 
 // address: 0x43B9CA
 //
-// mpqapi_write_header writes the MPQ header to the active archive.
-bool32_t mpqapi_write_header();
+// mpqapi_write_archive_header writes the MPQ header to the active archive.
+bool32_t __cdecl mpqapi_write_archive_header();
 
 // address: 0x43BA60
 //
@@ -141,4 +151,5 @@ bool32_t mpqapi_write_hash_table();
 
 // address: 0x43BB79
 //
-// TODO: add documentation.
+// mpqapi_can_seek reports whether the active archive is seekable.
+bool32_t __cdecl mpqapi_can_seek();

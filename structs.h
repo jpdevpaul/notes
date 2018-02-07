@@ -1146,6 +1146,28 @@ typedef struct { // size = 0xEC
 	void *x_offset_from_orientation[16];
 } MissileGraphicData;
 
+// An MPQHeader is the header of an MPQ archive.
+typedef struct { // size = 0x20
+	// offset: 0000 (4 bytes)
+	uint8_t magic[4]; // Magic signature; "MPQ\x1A"
+	// offset: 0004 (4 bytes)
+	uint32_t hdr_size; // Size in bytes of the MPQ header.
+	// offset: 0008 (4 bytes)
+	uint32_t archive_size; // Size in bytes of the MPQ archive.
+	// offset: 000C (2 bytes)
+	uint16_t format_version; // MPQ format version.
+	// offset: 000E (2 bytes)
+	uint16_t sector_size_exp; // Sector size exponent; sectorSize = 512 * 2^SectorSizeExp.
+	// offset: 0010 (4 bytes)
+	uint32_t hash_table_offset; // Offset to the start of the hash table.
+	// offset: 0014 (4 bytes)
+	uint32_t block_table_offset; // Offset to the start of the block table.
+	// offset: 0018 (4 bytes)
+	uint32_t hash_count; // Number of hash table entires.
+	// offset: 001C (4 bytes)
+	uint32_t block_count; // Number of block table entires.
+} MPQHeader;
+
 // NarratorBook specifies the speech IDs of each dungeon type narrator book for
 // a player class.
 typedef struct { // size = 0xC

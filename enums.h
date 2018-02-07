@@ -30,6 +30,12 @@ typedef enum {
 	BLOCK_FLAG_EXISTS                 = 0x80000000, // file present
 } block_flag;
 
+// Special block indices.
+typedef enum {
+	BLOCK_INDEX_HASH_ENTRY_EMPTY   = -1,
+	BLOCK_INDEX_HASH_ENTRY_DELETED = -2,
+} block_index;
+
 // Network message commands.
 typedef enum {
 	CMD_0 = 0,
