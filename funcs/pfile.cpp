@@ -49,68 +49,92 @@ void __fastcall pfile_get_save_path(char *save_path, int size, int save_num);
 
 // address: 0x449BB2
 //
-// TODO: add documentation.
+// pfile_flush flushes changes to the save archive.
+void __fastcall pfile_flush(bool32_t is_single_player, int save_num);
 
 // address: 0x449BE4
 //
-// TODO: add documentation.
+// pfile_create_player_description creates a player description based on the
+// save file associated with the player name.
+bool32_t __fastcall pfile_create_player_description(char *dst, int len);
 
 // address: 0x449C5A
 //
-// TODO: add documentation.
+// pfile_create_save_file creates a save file for the given player name.
+int __fastcall pfile_create_save_file(char *name_1, char *name_2);
 
 // address: 0x449D22
 //
-// TODO: add documentation.
+// pfile_flush_W flushes changes to the active save archive.
+void pfile_flush_W();
+
+/* TODO: uncomment when Player is defined in structs.h
 
 // address: 0x449D43
 //
-// TODO: add documentation.
+// pfile_get_hero_info_from_player retrieves hero information from the given
+// player.
+void __fastcall pfile_get_hero_info_from_player(Player *player, HeroInfo *hero_info, bool32_t valid_save);
+
+*/
 
 /* TODO: uncomment when Player is defined in structs.h
 
 // address: 0x449DD0
 //
-// pfile_get_player_class returns the player class of the player.
-int __fastcall pfile_get_player_class(Player *player);
+// pfile_get_player_class_from_player returns the player class of the player.
+player_class __fastcall pfile_get_player_class_from_player(Player *player);
 
 */
 
 // address: 0x449DE3
 //
-// TODO: add documentation.
+// pfile_ui_set_hero_infos retrieves hero information from the save files.
+//
+// Note, the hidden and system file attributes are removed from each save file.
+bool32_t __stdcall pfile_ui_set_hero_infos(void (__cdecl *ui_add_hero_info)(HeroInfo *));
 
 // address: 0x449FAA
 //
-// TODO: add documentation.
+// pfile_get_archive_path returns the path to the save archive of the given save
+// number.
+char *__fastcall pfile_get_archive_path(char *dst, int dst_size, int save_num);
 
 // address: 0x44A036
 //
-// TODO: add documentation.
+// pfile_read_hero reads the 'hero' save file of the given save archive.
+bool32_t __fastcall pfile_read_hero(void *archive, Hero *hero);
 
 // address: 0x44A158
 //
-// TODO: add documentation.
+// pfile_open_save_archive opens the save archive with the specified save number.
+void *__fastcall pfile_open_save_archive(int *unused, int save_num);
 
 // address: 0x44A192
 //
-// TODO: add documentation.
+// pfile_SFileCloseArchive closes the save archive.
+void __fastcall pfile_SFileCloseArchive(void *archive);
 
 // address: 0x44A199
 //
-// TODO: add documentation.
+// pfile_archive_contains_game reports whether the save archive contains the 'game' save file.
+bool32_t __fastcall pfile_archive_contains_game(void *archive);
 
 // address: 0x44A1CC
 //
-// TODO: add documentation.
+// pfile_ui_set_class_stats retrieves the starting stats for the given player
+// class.
+bool32_t __stdcall pfile_ui_set_class_stats(int player_class_nr, Stats_i16 *class_stats);
 
 // address: 0x44A210
 //
-// TODO: add documentation.
+// pfile_get_player_class returns the player class of the player.
+player_class __fastcall pfile_get_player_class(int player_class_nr);
 
 // address: 0x44A220
 //
-// TODO: add documentation.
+// pfile_ui_save_create creates a save file based on the given hero information.
+bool32_t __stdcall pfile_ui_save_create(HeroInfo *hero_info);
 
 // address: 0x44A2FF
 //
@@ -124,7 +148,9 @@ bool32_t __stdcall pfile_delete_save(HeroInfo *hero_info);
 
 // address: 0x44A3A0
 //
-// TODO: add documentation.
+// pfile_read_player_from_save reads player information from the save file of
+// the specified character name.
+void pfile_read_player_from_save();
 
 // address: 0x44A419
 //
@@ -145,7 +171,8 @@ void __fastcall pfile_get_game_name(char *dst);
 
 // address: 0x44A512
 //
-// TODO: add documentation.
+// pfile_remove_temp_files removes temporary save files.
+void pfile_remove_temp_files();
 
 // address: 0x44A563
 //
@@ -155,7 +182,9 @@ bool32_t __stdcall pfile_get_temp_name(int a1, char *dst);
 
 // address: 0x44A598
 //
-// TODO: add documentation.
+// pfile_rename_temp_to_perm renames temporary save files to permanent save
+// files.
+void pfile_rename_temp_to_perm();
 
 // address: 0x44A644
 //
@@ -165,7 +194,8 @@ bool32_t __stdcall pfile_get_perm_name(int lvl, char *dst);
 
 // address: 0x44A679
 //
-// TODO: add documentation.
+// pfile_write_save_file stores the save file at the specific location.
+void __fastcall pfile_write_save_file(char *path, void *save_ptr, int size, int size_64);
 
 // address: 0x44A727
 //

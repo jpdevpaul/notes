@@ -1568,11 +1568,28 @@ typedef struct { // size = 0x10
 // Stats specifies character statistics (i.e. strength, magic, dexterity,
 // vitality).
 typedef struct { // size = 0x10
+	// offset: 0000 (4 bytes)
 	int32_t str;
+	// offset: 0004 (4 bytes)
 	int32_t mag;
+	// offset: 0008 (4 bytes)
 	int32_t dex;
+	// offset: 000C (4 bytes)
 	int32_t vit;
 } Stats;
+
+// Stats_i16 specifies character statistics (i.e. strength, magic, dexterity,
+// vitality).
+typedef struct { // size = 0x8
+	// offset: 0000 (2 bytes)
+	int16_t str;
+	// offset: 0002 (2 bytes)
+	int16_t mag;
+	// offset: 0004 (2 bytes)
+	int16_t dex;
+	// offset: 0006 (2 bytes)
+	int16_t vit;
+} Stats_i16;
 
 // A Tile consists of four dungeon pieces (top, right, left, bottom), forming a
 // square.

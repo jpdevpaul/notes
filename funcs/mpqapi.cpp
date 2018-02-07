@@ -137,7 +137,7 @@ void __fastcall mpqapi_flush_and_close(char *save_path, bool32_t is_single_playe
 // address: 0x43B9CA
 //
 // mpqapi_write_archive_header writes the MPQ header to the active archive.
-bool32_t __cdecl mpqapi_write_archive_header();
+bool32_t mpqapi_write_archive_header();
 
 // address: 0x43BA60
 //
@@ -152,4 +152,4 @@ bool32_t mpqapi_write_hash_table();
 // address: 0x43BB79
 //
 // mpqapi_can_seek reports whether the active archive is seekable.
-bool32_t __cdecl mpqapi_can_seek();
+bool32_t mpqapi_can_seek();
