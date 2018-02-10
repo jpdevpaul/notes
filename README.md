@@ -20,11 +20,11 @@ The notes are currently organized into the following categories.
 
 | Category                                          | Progess                                                     |
 |---------------------------------------------------|-------------------------------------------------------------|
-| [Functions](funcs/README.md)                      | ![35% (690/1955 functions)](http://progressed.io/bar/35)    |
-| [Global variables (read-only)](rdata/README.md)   | ![95% (27096/28372 bytes)](http://progressed.io/bar/95)     |
-| [Global variables (read-write)](data/README.md)   | ![98% (194378/196860 bytes)](http://progressed.io/bar/98)   |
-| [Global variables (uninitialized)](bss/README.md) | ![91% (1883843/2048520 bytes)](http://progressed.io/bar/91) |
-| [Storm ordinals](storm.h)                         | ![100% (58/58 functions)](http://progressed.io/bar/100)     |
+| [Functions](funcs/README.md)                      | ![35%](http://progressed.io/bar/35 "(690/1955 functions)")    |
+| [Global variables (read-only)](rdata/README.md)   | ![95%](http://progressed.io/bar/95 "(27096/28372 bytes)")     |
+| [Global variables (read-write)](data/README.md)   | ![98%](http://progressed.io/bar/98 "(194378/196860 bytes)")   |
+| [Global variables (uninitialized)](bss/README.md) | ![91%](http://progressed.io/bar/91 "(1883843/2048520 bytes)") |
+| [Storm ordinals](storm.h)                         | ![100%](http://progressed.io/bar/100 "(58/58 functions)")     |
 
 The README of each sub-project tracks the progress for each of its source files.
 
