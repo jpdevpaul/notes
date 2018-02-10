@@ -12,7 +12,8 @@ void pfile_cpp_init();
 
 // address: 0x4498FC
 //
-// pfile_init_save_directory initializes the save directory.
+// pfile_check_save_directory verifies that the save directory has enough free
+// space.
 void pfile_init_save_directory();
 
 // address: 0x44995B
@@ -133,8 +134,8 @@ player_class __fastcall pfile_get_player_class(int player_class_nr);
 
 // address: 0x44A220
 //
-// pfile_ui_save_create creates a save file based on the given hero information.
-bool32_t __stdcall pfile_ui_save_create(HeroInfo *hero_info);
+// pfile_ui_create_save creates a save file based on the given hero information.
+bool32_t __stdcall pfile_ui_create_save(HeroInfo *hero_info);
 
 // address: 0x44A2FF
 //
@@ -143,8 +144,8 @@ bool32_t __stdcall pfile_get_file_name(int lvl, char *dst);
 
 // address: 0x44A356
 //
-// pfile_delete_save deletes the save file of the given character.
-bool32_t __stdcall pfile_delete_save(HeroInfo *hero_info);
+// pfile_ui_delete_save deletes the save file of the given character.
+bool32_t __stdcall pfile_ui_delete_save(HeroInfo *hero_info);
 
 // address: 0x44A3A0
 //
