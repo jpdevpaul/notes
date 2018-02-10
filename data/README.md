@@ -2,8 +2,8 @@
 
 Each global variable in the data section has been categorised based on their original source file, as summarised by the table below.
 
-| Source File                      | Start Address | End Address | Progress                 |
-|----------------------------------|---------------|-------------|--------------------------|
+| Source File                      | Start Address | End Address | Progress                                                    |
+|----------------------------------|---------------|-------------|-------------------------------------------------------------|
 | _crt.cpp                         | `0x483000`    | `0x4830B7`  | N/A                                                         |
 | [appfat.cpp](appfat.cpp)         | `0x4830B8`    | `0x483B0F`  | ![100%](http://progressed.io/bar/100 "(2648/2648 bytes)")   |
 | [automap.cpp](automap.cpp)       | `0x483B10`    | `0x483B8F`  | ![100%](http://progressed.io/bar/100 "(128/128 bytes)")     |

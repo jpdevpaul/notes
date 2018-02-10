@@ -18,8 +18,8 @@ The notes are currently organized into the following categories.
 
 ## Progress
 
-| Category                                          | Progess                                                     |
-|---------------------------------------------------|-------------------------------------------------------------|
+| Category                                          | Progess                                                       |
+|---------------------------------------------------|---------------------------------------------------------------|
 | [Functions](funcs/README.md)                      | ![35%](http://progressed.io/bar/35 "(690/1955 functions)")    |
 | [Global variables (read-only)](rdata/README.md)   | ![95%](http://progressed.io/bar/95 "(27096/28372 bytes)")     |
 | [Global variables (read-write)](data/README.md)   | ![98%](http://progressed.io/bar/98 "(194378/196860 bytes)")   |
