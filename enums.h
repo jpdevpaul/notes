@@ -1,5 +1,9 @@
+#ifndef ENUMS_H
+#define ENUMS_H
+
 /// Bit flag which is used to determine if affix could be applied to certain type of items.
 /// As it can be noted each flag just represents one or more values from `item_type` enumeration.
+/// bitflag
 typedef enum {
 	AFFIX_ITEM_TYPE_JEWELRY = 0x00000001,
 	AFFIX_ITEM_TYPE_BOW     = 0x00000010,
@@ -18,6 +22,7 @@ typedef enum {
 } attribute_id;
 
 /// MPQ block flags.
+/// bitflag
 typedef enum {
 	BLOCK_FLAG_IMPLODE                = 0x00000100, ///< compressed file (PKWARE)
 	BLOCK_FLAG_COMPRESS               = 0x00000200, ///< compressed file
@@ -857,6 +862,7 @@ typedef enum {
 /// Bit flags used to describe unique, usually non-quantifiable effect on a
 /// player caused by items.
 ///
+/// bitflag
 /// References:
 ///    * https://github.com/sanctuary/notes/blob/master/structs.h#item
 typedef enum {
@@ -3278,3 +3284,5 @@ typedef enum {
 	UNIQUE_MONSTER_ID_DOOMLOCK                 = 96, ///< MONSTER_ID_STORM_LORD
 	UNIQUE_MONSTER_ID_NULL                     = 97, ///< MONSTER_ID_NONE
 } unique_monster_id;
+
+#endif // ENUMS_H
