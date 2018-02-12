@@ -1,5 +1,5 @@
-// Bit flag which is used to determine if affix could be applied to certain type of items.
-// As it can be noted each flag just represents one or more values from `item_type` enumeration.
+/// Bit flag which is used to determine if affix could be applied to certain type of items.
+/// As it can be noted each flag just represents one or more values from `item_type` enumeration.
 typedef enum {
 	AFFIX_ITEM_TYPE_JEWELRY = 0x00000001,
 	AFFIX_ITEM_TYPE_BOW     = 0x00000010,
@@ -9,7 +9,7 @@ typedef enum {
 	AFFIX_ITEM_TYPE_ARMOR   = 0x00100000,
 } affix_item_type;
 
-// Attribute IDs.
+/// Attribute IDs.
 typedef enum {
 	ATTRIBUTE_ID_STR = 0,
 	ATTRIBUTE_ID_MAG = 1,
@@ -17,32 +17,32 @@ typedef enum {
 	ATTRIBUTE_ID_VIT = 3,
 } attribute_id;
 
-// MPQ block flags.
+/// MPQ block flags.
 typedef enum {
-	BLOCK_FLAG_IMPLODE                = 0x00000100, // compressed file (PKWARE)
-	BLOCK_FLAG_COMPRESS               = 0x00000200, // compressed file
-	BLOCK_FLAG_ENCRYPTED              = 0x00010000, // encrypted file
-	BLOCK_FLAG_POSITION_DEPENDENT_KEY = 0x00020000, // position dependent decryption key
-	BLOCK_FLAG_PATCH_FILE             = 0x00100000, // incremental patch file for an existing file in the base MPQ
-	BLOCK_FLAG_SINGLE_UNIT            = 0x01000000, // file contained in a single unit, not split in sectors
-	BLOCK_FLAG_DELETED                = 0x02000000, // deleted file; used by patch archives to delete files in lower-priority archives
-	BLOCK_FLAG_SECTOR_CRC             = 0x04000000, // sector CRC checksums
-	BLOCK_FLAG_EXISTS                 = 0x80000000, // file present
+	BLOCK_FLAG_IMPLODE                = 0x00000100, ///< compressed file (PKWARE)
+	BLOCK_FLAG_COMPRESS               = 0x00000200, ///< compressed file
+	BLOCK_FLAG_ENCRYPTED              = 0x00010000, ///< encrypted file
+	BLOCK_FLAG_POSITION_DEPENDENT_KEY = 0x00020000, ///< position dependent decryption key
+	BLOCK_FLAG_PATCH_FILE             = 0x00100000, ///< incremental patch file for an existing file in the base MPQ
+	BLOCK_FLAG_SINGLE_UNIT            = 0x01000000, ///< file contained in a single unit, not split in sectors
+	BLOCK_FLAG_DELETED                = 0x02000000, ///< deleted file; used by patch archives to delete files in lower-priority archives
+	BLOCK_FLAG_SECTOR_CRC             = 0x04000000, ///< sector CRC checksums
+	BLOCK_FLAG_EXISTS                 = 0x80000000, ///< file present
 } block_flag;
 
-// Special block indices.
+/// Special block indices.
 typedef enum {
 	BLOCK_INDEX_HASH_ENTRY_EMPTY   = -1,
 	BLOCK_INDEX_HASH_ENTRY_DELETED = -2,
 } block_index;
 
-// Network message commands.
+/// Network message commands.
 typedef enum {
 	CMD_0 = 0,
 	// TODO: Define message commands (there are 93 of them).
 } cmd;
 
-// Cursor IDs; frame_num+1 of objcurs.cel.
+/// Cursor IDs; frame_num+1 of objcurs.cel.
 typedef enum {
 	CURSOR_ID_NONE           =  0,
 	CURSOR_ID_HAND           =  1,
@@ -59,7 +59,7 @@ typedef enum {
 	CURSOR_ID_FIRST_ITEM     = 12,
 } cursor_id;
 
-// Damage types.
+/// Damage types.
 typedef enum {
 	DAMAGE_TYPE_NONE      = 0,
 	DAMAGE_TYPE_FIRE      = 1,
@@ -68,35 +68,35 @@ typedef enum {
 	DAMAGE_TYPE_ACID      = 4,
 } damage_type;
 
-// Directions.
-//
-// # Map layout
-//
-//                  (x=0 y=0)
-//                      _
-//                     / \
-//                    /   \
-//               y   /     \   x
-//                  /       \
-//                 /         \
-//    (x=0 y=95)  |           |  (x=95 y=0)
-//                 \         /
-//                  \       /
-//                   \     /
-//                    \   /
-//                     \_/
-//                 (x=95 y=95)
-//
-// # Step based on direction
-//
-//    * South      (x+1, y+1)
-//    * South west (x,   y+1)
-//    * West       (x-1, y+1)
-//    * North west (x-1, y)
-//    * North      (x-1, y-1)
-//    * North east (x,   y-1)
-//    * East       (x+1, y-1)
-//    * South east (x+1, y)
+/// Directions.
+///
+/// # Map layout
+///
+///                  (x=0 y=0)
+///                      _
+///                     / \
+///                    /   \
+///               y   /     \   x
+///                  /       \
+///                 /         \
+///    (x=0 y=95)  |           |  (x=95 y=0)
+///                 \         /
+///                  \       /
+///                   \     /
+///                    \   /
+///                     \_/
+///                 (x=95 y=95)
+///
+/// # Step based on direction
+///
+///    * South      (x+1, y+1)
+///    * South west (x,   y+1)
+///    * West       (x-1, y+1)
+///    * North west (x-1, y)
+///    * North      (x-1, y-1)
+///    * North east (x,   y-1)
+///    * East       (x+1, y-1)
+///    * South east (x+1, y)
 typedef enum {
 	DIRECTION_SOUTH      = 0,
 	DIRECTION_SOUTH_WEST = 1,
@@ -106,27 +106,27 @@ typedef enum {
 	DIRECTION_NORTH_EAST = 5,
 	DIRECTION_EAST       = 6,
 	DIRECTION_SOUTH_EAST = 7,
-	DIRECTION_OMNI       = 8, // All directions.
+	DIRECTION_OMNI       = 8, ///< All directions.
 } direction;
 
-// Dungeon types.
+/// Dungeon types.
 typedef enum {
-	DUNGEON_TYPE_TRISTRAM  = 0, // dlvl:       0
-	DUNGEON_TYPE_CATHEDRAL = 1, // dlvl:  1 -  4
-	DUNGEON_TYPE_CATACOMBS = 2, // dlvl:  5 -  8
-	DUNGEON_TYPE_CAVES     = 3, // dlvl:  9 - 12
-	DUNGEON_TYPE_HELL      = 4, // dlvl: 13 - 16
+	DUNGEON_TYPE_TRISTRAM  = 0, ///< dlvl:       0
+	DUNGEON_TYPE_CATHEDRAL = 1, ///< dlvl:  1 -  4
+	DUNGEON_TYPE_CATACOMBS = 2, ///< dlvl:  5 -  8
+	DUNGEON_TYPE_CAVES     = 3, ///< dlvl:  9 - 12
+	DUNGEON_TYPE_HELL      = 4, ///< dlvl: 13 - 16
 	DUNGEON_TYPE_NONE      = -1,
 } dungeon_type;
 
-// Enterances to town (warp), used as bitfield.
+/// Enterances to town (warp), used as bitfield.
 typedef enum {
 	ENTERANCE_OPEN_CATACOMBS = 0x01,
 	ENTERANCE_OPEN_CAVES     = 0x02,
 	ENTERANCE_OPEN_HELL      = 0x04,
 } enterance_open;
 
-// Error IDs for on screen error messages.
+/// Error IDs for on screen error messages.
 typedef enum {
 	ERROR_ID_NONE                                  =  0,
 	ERROR_ID_NO_AUTOMAP_AVAILABLE_IN_TOWN          =  1,
@@ -174,7 +174,7 @@ typedef enum {
 	ERROR_ID_ARCANE_KNOWLEDGE_GAINED               = 43,
 } error_id;
 
-// Event types for multiplayer games.
+/// Event types for multiplayer games.
 typedef enum {
 	EVENT_TYPE_PLAYER_CREATE_GAME =  1,
 	EVENT_TYPE_2                  =  2,
@@ -193,15 +193,15 @@ typedef enum {
 	EVENT_TYPE_15                 = 15,
 } event_type;
 
-// Network game information.
+/// Network game information.
 typedef enum {
 	GAME_INFO_NAME = 1,
 	GAME_INFO_PASS = 2,
 } game_info;
 
-// TODO: add definition of interface_mode members.
+/// TODO: add definition of interface_mode members.
 
-// User-defined events for signaling interface mode changes.
+/// User-defined events for signaling interface mode changes.
 typedef enum {
 	INTERFACE_MODE_402 = 0x402,
 	INTERFACE_MODE_403 = 0x403,
@@ -215,10 +215,10 @@ typedef enum {
 	INTERFACE_MODE_40B = 0x40B,
 } interface_mode;
 
-// Broad item categorization.
-//
-// References:
-//    * https://github.com/sanctuary/notes/blob/master/structs.h#item
+/// Broad item categorization.
+///
+/// References:
+///    * https://github.com/sanctuary/notes/blob/master/structs.h#item
 typedef enum {
 	ITEM_CLASS_NONE                   = 0,
 	ITEM_CLASS_WEAPON                 = 1,
@@ -228,59 +228,59 @@ typedef enum {
 	ITEM_CLASS_QUEST                  = 5,
 } item_class;
 
-// Item drop IDs, used for the graphics of item drop animations.
+/// Item drop IDs, used for the graphics of item drop animations.
 typedef enum {
-	ITEM_DROP_ID_MEDIUM_ARMOR         =  0, // Armor2
-	ITEM_DROP_ID_AXE                  =  1, // Axe
-	ITEM_DROP_ID_BOTTLE_DARK_RED      =  2, // FBttle
-	ITEM_DROP_ID_BOW                  =  3, // Bow
-	ITEM_DROP_ID_GOLD                 =  4, // GoldFlip
-	ITEM_DROP_ID_HELM                 =  5, // Helmut
-	ITEM_DROP_ID_MACE                 =  6, // Mace
-	ITEM_DROP_ID_SHIELD               =  7, // Shield
-	ITEM_DROP_ID_SWORD                =  8, // SwrdFlip
-	ITEM_DROP_ID_MAGIC_ROCK           =  9, // Rock
-	ITEM_DROP_ID_CLEAVER              = 10, // Cleaver
-	ITEM_DROP_ID_STAFF                = 11, // Staff
-	ITEM_DROP_ID_RING                 = 12, // Ring
-	ITEM_DROP_ID_CROWN                = 13, // CrownF
-	ITEM_DROP_ID_LIGHT_ARMOR          = 14, // LArmor
-	ITEM_DROP_ID_WOODEN_SHIELD        = 15, // WShield
-	ITEM_DROP_ID_SCROLL               = 16, // Scroll
-	ITEM_DROP_ID_HEAVY_ARMOR          = 17, // FPlateAr
-	ITEM_DROP_ID_BOOK                 = 18, // FBook
-	ITEM_DROP_ID_FOOD                 = 19, // Food
-	ITEM_DROP_ID_BOTTLE_BRIGHT_BLUE   = 20, // FBttleBB
-	ITEM_DROP_ID_BOTTLE_DARK_YELLOW   = 21, // FBttleDY
-	ITEM_DROP_ID_BOTTLE_ORANGE        = 22, // FBttleOR
-	ITEM_DROP_ID_BOTTLE_BRIGHT_RED    = 23, // FBttleBR
-	ITEM_DROP_ID_BOTTLE_BLACK         = 24, // FBttleBL
-	ITEM_DROP_ID_BOTTLE_BRIGHT_YELLOW = 25, // FBttleBY
-	ITEM_DROP_ID_BOTTLE_WHITE         = 26, // FBttleWH
-	ITEM_DROP_ID_BOTTLE_DARK_BLUE     = 27, // FBttleDB
-	ITEM_DROP_ID_EAR                  = 28, // FEar
-	ITEM_DROP_ID_BRAIN                = 29, // FBrain
-	ITEM_DROP_ID_BLACK_MUSHROOM       = 30, // FMush
-	ITEM_DROP_ID_TAVERN_SIGN          = 31, // Innsign
-	ITEM_DROP_ID_BLOOD_STONE          = 32, // Bldstn
-	ITEM_DROP_ID_ANVIL_OF_FURY        = 33, // Fanvil
-	ITEM_DROP_ID_STAFF_OF_LAZARUS     = 34, // FLazStaf
+	ITEM_DROP_ID_MEDIUM_ARMOR         =  0, ///< Armor2
+	ITEM_DROP_ID_AXE                  =  1, ///< Axe
+	ITEM_DROP_ID_BOTTLE_DARK_RED      =  2, ///< FBttle
+	ITEM_DROP_ID_BOW                  =  3, ///< Bow
+	ITEM_DROP_ID_GOLD                 =  4, ///< GoldFlip
+	ITEM_DROP_ID_HELM                 =  5, ///< Helmut
+	ITEM_DROP_ID_MACE                 =  6, ///< Mace
+	ITEM_DROP_ID_SHIELD               =  7, ///< Shield
+	ITEM_DROP_ID_SWORD                =  8, ///< SwrdFlip
+	ITEM_DROP_ID_MAGIC_ROCK           =  9, ///< Rock
+	ITEM_DROP_ID_CLEAVER              = 10, ///< Cleaver
+	ITEM_DROP_ID_STAFF                = 11, ///< Staff
+	ITEM_DROP_ID_RING                 = 12, ///< Ring
+	ITEM_DROP_ID_CROWN                = 13, ///< CrownF
+	ITEM_DROP_ID_LIGHT_ARMOR          = 14, ///< LArmor
+	ITEM_DROP_ID_WOODEN_SHIELD        = 15, ///< WShield
+	ITEM_DROP_ID_SCROLL               = 16, ///< Scroll
+	ITEM_DROP_ID_HEAVY_ARMOR          = 17, ///< FPlateAr
+	ITEM_DROP_ID_BOOK                 = 18, ///< FBook
+	ITEM_DROP_ID_FOOD                 = 19, ///< Food
+	ITEM_DROP_ID_BOTTLE_BRIGHT_BLUE   = 20, ///< FBttleBB
+	ITEM_DROP_ID_BOTTLE_DARK_YELLOW   = 21, ///< FBttleDY
+	ITEM_DROP_ID_BOTTLE_ORANGE        = 22, ///< FBttleOR
+	ITEM_DROP_ID_BOTTLE_BRIGHT_RED    = 23, ///< FBttleBR
+	ITEM_DROP_ID_BOTTLE_BLACK         = 24, ///< FBttleBL
+	ITEM_DROP_ID_BOTTLE_BRIGHT_YELLOW = 25, ///< FBttleBY
+	ITEM_DROP_ID_BOTTLE_WHITE         = 26, ///< FBttleWH
+	ITEM_DROP_ID_BOTTLE_DARK_BLUE     = 27, ///< FBttleDB
+	ITEM_DROP_ID_EAR                  = 28, ///< FEar
+	ITEM_DROP_ID_BRAIN                = 29, ///< FBrain
+	ITEM_DROP_ID_BLACK_MUSHROOM       = 30, ///< FMush
+	ITEM_DROP_ID_TAVERN_SIGN          = 31, ///< Innsign
+	ITEM_DROP_ID_BLOOD_STONE          = 32, ///< Bldstn
+	ITEM_DROP_ID_ANVIL_OF_FURY        = 33, ///< Fanvil
+	ITEM_DROP_ID_STAFF_OF_LAZARUS     = 34, ///< FLazStaf
 } item_drop_id;
 
-// Item drop rates.
+/// Item drop rates.
 typedef enum {
-	ITEM_DROP_RATE_NEVER   = 0, // never drops.
-	ITEM_DROP_RATE_REGULAR = 1, // regular drop chance.
-	ITEM_DROP_RATE_DOUBLE  = 2, // twice as likely to drop.
+	ITEM_DROP_RATE_NEVER   = 0, ///< never drops.
+	ITEM_DROP_RATE_REGULAR = 1, ///< regular drop chance.
+	ITEM_DROP_RATE_DOUBLE  = 2, ///< twice as likely to drop.
 } item_drop_rate;
 
-// TODO: Rethink item_drop_state enum. It probably has to do with animation, and
-// then ITEM_DROP_STATE_GLIMMERING would make sense, as that would be
-// represented as ANIM_BACK_FORTH, or ANIM_LOOP. Will have to verify how the
-// various values are actually used in game when it comes to animations.
+/// TODO: Rethink item_drop_state enum. It probably has to do with animation, and
+/// then ITEM_DROP_STATE_GLIMMERING would make sense, as that would be
+/// represented as ANIM_BACK_FORTH, or ANIM_LOOP. Will have to verify how the
+/// various values are actually used in game when it comes to animations.
 
-// References:
-//    * https://github.com/sanctuary/notes/blob/master/structs.h#item
+/// References:
+///    * https://github.com/sanctuary/notes/blob/master/structs.h#item
 typedef enum {
 	ITEM_DROP_STATE_STARTED    = 0,
 	ITEM_DROP_STATE_COMPLETE   = 1,
@@ -288,11 +288,11 @@ typedef enum {
 	ITEM_DROP_STATE_UNKNOWN    = 3,
 } item_drop_state;
 
-// Type of effect caused by suffix, prefix of magic item or one of 5 or less
-// effects of unique item.
-//
-// References:
-//    * https://github.com/sanctuary/notes/blob/master/structs.h#item
+/// Type of effect caused by suffix, prefix of magic item or one of 5 or less
+/// effects of unique item.
+///
+/// References:
+///    * https://github.com/sanctuary/notes/blob/master/structs.h#item
 typedef enum {
 	ITEM_EFFECT_TYPE_TO_HIT_PLUS                            =  0,
 	ITEM_EFFECT_TYPE_TO_HIT_MINUS                           =  1,
@@ -348,16 +348,16 @@ typedef enum {
 	ITEM_EFFECT_TYPE_FAST_BLOCK                             = 60,
 	ITEM_EFFECT_TYPE_ATTACK_DAMAGE_PLUS                     = 61,
 	ITEM_EFFECT_TYPE_RANDOM_SPEED_ARROWS                    = 62,
-	ITEM_EFFECT_TYPE_CUSTOM_ATTACK_DAMAGE                   = 63, // used for Butcher's Cleaver
+	ITEM_EFFECT_TYPE_CUSTOM_ATTACK_DAMAGE                   = 63, ///< used for Butcher's Cleaver
 	ITEM_EFFECT_TYPE_CUSTOM_DURABILITY                      = 64,
 	ITEM_EFFECT_TYPE_NO_STRENGTH_REQUIREMENT                = 65,
-	ITEM_EFFECT_TYPE_SET_SPELL_ID_AND_CHARGES               = 66, // (most likely erroneously) sets current spell charges to spell_id
+	ITEM_EFFECT_TYPE_SET_SPELL_ID_AND_CHARGES               = 66, ///< (most likely erroneously) sets current spell charges to spell_id
 	ITEM_EFFECT_TYPE_FASTER_ATTACK_SWING                    = 67,
 	ITEM_EFFECT_TYPE_MAKE_WEAPON_ONE_HANDED                 = 68,
 	ITEM_EFFECT_TYPE_3X_DAMAGE_VS_DEMONS                    = 69,
 	ITEM_EFFECT_TYPE_ALL_RESISTANCES_EQUAL_0                = 70,
 	ITEM_EFFECT_TYPE_CONSTANTLY_LOSE_HIT_POINTS             = 72,
-	ITEM_EFFECT_TYPE_LIFE_STEAL_RANDOM                      = 73, // in range 0-12.5%, used for The Undead Crown
+	ITEM_EFFECT_TYPE_LIFE_STEAL_RANDOM                      = 73, ///< in range 0-12.5%, used for The Undead Crown
 	ITEM_EFFECT_TYPE_INFRAVISION                            = 74,
 	ITEM_EFFECT_TYPE_CUSTOM_ARMOR_CLASS                     = 75,
 	ITEM_EFFECT_TYPE_ARMOR_CLASS_ADDED_TO_LIFE              = 76,
@@ -367,10 +367,10 @@ typedef enum {
 	ITEM_EFFECT_TYPE_INVALID                                = -1,
 } item_effect_type;
 
-// Enumeration describing in which slot item could be equipped.
-//
-// References:
-//    * https://github.com/sanctuary/notes/blob/master/structs.h#item
+/// Enumeration describing in which slot item could be equipped.
+///
+/// References:
+///    * https://github.com/sanctuary/notes/blob/master/structs.h#item
 typedef enum {
 	ITEM_EQUIP_TYPE_NONE        = 0,
 	ITEM_EQUIP_TYPE_ONE_HANDED  = 1,
@@ -384,9 +384,9 @@ typedef enum {
 	ITEM_EQUIP_TYPE_INVALID     = -1,
 } item_equip_type;
 
-// TODO: Add remaining enums for item_graphic_id.
+/// TODO: Add remaining enums for item_graphic_id.
 
-// Item graphic IDs; frame_num-11 of objcurs.cel.
+/// Item graphic IDs; frame_num-11 of objcurs.cel.
 typedef enum {
 	ITEM_GRAPHIC_ID_POTION_OF_FULL_MANA         = 0,
 	ITEM_GRAPHIC_ID_SCROLL_OF                   = 1,
@@ -495,50 +495,50 @@ typedef enum {
 	ITEM_GRAPHIC_ID_GOLD                        = 168,
 } item_graphic_id;
 
-// TODO: add missing enums of item_id.
+/// TODO: add missing enums of item_id.
 
-// Item IDs specify item_data array indices.
-//
-// PSX def:
-//    typedef enum _item_indexes {
-//       IDI_GOLD = 0,
-//       IDI_WARRIOR = 1,
-//       IDI_WARRSHLD = 2,
-//       IDI_WARRCLUB = 3,
-//       IDI_ROGUE = 4,
-//       IDI_SORCEROR = 5,
-//       IDI_CLEAVER = 6,
-//       IDI_FIRSTQUEST = 6,
-//       IDI_SKCROWN = 7,
-//       IDI_INFRARING = 8,
-//       IDI_ROCK = 9,
-//       IDI_OPTAMULET = 10,
-//       IDI_TRING = 11,
-//       IDI_BANNER = 12,
-//       IDI_HARCREST = 13,
-//       IDI_STEELVEIL = 14,
-//       IDI_GLDNELIX = 15,
-//       IDI_ANVIL = 16,
-//       IDI_MUSHROOM = 17,
-//       IDI_BRAIN = 18,
-//       IDI_FUNGALTM = 19,
-//       IDI_SPECELIX = 20,
-//       IDI_BLDSTONE = 21,
-//       IDI_LASTQUEST = 22,
-//       IDI_MAPOFDOOM = 22,
-//       IDI_EAR = 23,
-//       IDI_HEAL = 24,
-//       IDI_MANA = 25,
-//       IDI_IDENTIFY = 26,
-//       IDI_PORTAL = 27,
-//       IDI_ARMOFVAL = 28,
-//       IDI_FULLHEAL = 29,
-//       IDI_FULLMANA = 30,
-//       IDI_GRISWOLD = 31,
-//       IDI_LGTFORGE = 32,
-//       IDI_LAZSTAFF = 33,
-//       IDI_RESURRECT = 34,
-//    } _item_indexes;
+/// Item IDs specify item_data array indices.
+///
+/// PSX def:
+///    typedef enum _item_indexes {
+///       IDI_GOLD = 0,
+///       IDI_WARRIOR = 1,
+///       IDI_WARRSHLD = 2,
+///       IDI_WARRCLUB = 3,
+///       IDI_ROGUE = 4,
+///       IDI_SORCEROR = 5,
+///       IDI_CLEAVER = 6,
+///       IDI_FIRSTQUEST = 6,
+///       IDI_SKCROWN = 7,
+///       IDI_INFRARING = 8,
+///       IDI_ROCK = 9,
+///       IDI_OPTAMULET = 10,
+///       IDI_TRING = 11,
+///       IDI_BANNER = 12,
+///       IDI_HARCREST = 13,
+///       IDI_STEELVEIL = 14,
+///       IDI_GLDNELIX = 15,
+///       IDI_ANVIL = 16,
+///       IDI_MUSHROOM = 17,
+///       IDI_BRAIN = 18,
+///       IDI_FUNGALTM = 19,
+///       IDI_SPECELIX = 20,
+///       IDI_BLDSTONE = 21,
+///       IDI_LASTQUEST = 22,
+///       IDI_MAPOFDOOM = 22,
+///       IDI_EAR = 23,
+///       IDI_HEAL = 24,
+///       IDI_MANA = 25,
+///       IDI_IDENTIFY = 26,
+///       IDI_PORTAL = 27,
+///       IDI_ARMOFVAL = 28,
+///       IDI_FULLHEAL = 29,
+///       IDI_FULLMANA = 30,
+///       IDI_GRISWOLD = 31,
+///       IDI_LGTFORGE = 32,
+///       IDI_LAZSTAFF = 33,
+///       IDI_RESURRECT = 34,
+///    } _item_indexes;
 typedef enum {
 	ITEM_ID_GOLD                             =   0,
 	ITEM_ID_SHORT_SWORD                      =   1,
@@ -699,11 +699,11 @@ typedef enum {
 	ITEM_ID_NULL_14                          = 156,
 } item_id;
 
-// ID characterizing item appearance. Frame number (11 + item_inv_graphics_id)
-// from data/inv/objcurs.cel is used as item graphics for inventory.
-//
-// References:
-//    * https://github.com/sanctuary/notes/blob/master/structs.h#item
+/// ID characterizing item appearance. Frame number (11 + item_inv_graphics_id)
+/// from data/inv/objcurs.cel is used as item graphics for inventory.
+///
+/// References:
+///    * https://github.com/sanctuary/notes/blob/master/structs.h#item
 typedef enum {
 	ITEM_INV_GRAPHICS_ID_POTION_OF_FULL_MANA         =   0,
 	ITEM_INV_GRAPHICS_ID_SCROLL_OF                   =   1,
@@ -812,13 +812,13 @@ typedef enum {
 	ITEM_INV_GRAPHICS_ID_GOLD                        = 168,
 } item_inv_graphics_id;
 
-// Additional item categorization.
-//
-// References:
-//    * https://github.com/sanctuary/notes/blob/master/structs.h#item
+/// Additional item categorization.
+///
+/// References:
+///    * https://github.com/sanctuary/notes/blob/master/structs.h#item
 typedef enum {
-	ITEM_MISC_ID_NONE                        =  0, // all non-unique weapons and armor have this code
-	ITEM_MISC_ID_USE_FIRST                   =  1, // unused
+	ITEM_MISC_ID_NONE                        =  0, ///< all non-unique weapons and armor have this code
+	ITEM_MISC_ID_USE_FIRST                   =  1, ///< unused
 	ITEM_MISC_ID_POTION_OF_FULL_HEALING      =  2,
 	ITEM_MISC_ID_POTION_OF_HEALING           =  3,
 	ITEM_MISC_ID_POTION_OF_MANA              =  6,
@@ -829,7 +829,7 @@ typedef enum {
 	ITEM_MISC_ID_ELIXIR_OF_VITALITY          = 13,
 	ITEM_MISC_ID_POTION_OF_REJUVENATION      = 18,
 	ITEM_MISC_ID_POTION_OF_FULL_REJUVENATION = 19,
-	ITEM_MISC_ID_USE_LAST                    = 20, // unused
+	ITEM_MISC_ID_USE_LAST                    = 20, ///< unused
 	ITEM_MISC_ID_SCROLL                      = 21,
 	ITEM_MISC_ID_SCROLL_WITH_TARGET          = 22,
 	ITEM_MISC_ID_STAFF                       = 23,
@@ -837,67 +837,67 @@ typedef enum {
 	ITEM_MISC_ID_RING                        = 25,
 	ITEM_MISC_ID_AMULET                      = 26,
 	ITEM_MISC_ID_UNIQUE                      = 27,
-	ITEM_MISC_ID_POTION_OF_HEALING_SOMETHING = 28, // unused
+	ITEM_MISC_ID_POTION_OF_HEALING_SOMETHING = 28, ///< unused
 	ITEM_MISC_ID_MAP_OF_THE_STARS            = 42,
 	ITEM_MISC_ID_EAR                         = 43,
 	ITEM_MISC_ID_SPECTRAL_ELIXIR             = 44,
 	ITEM_MISC_ID_INVALID                     = -1,
 } item_misc_id;
 
-// Item quality levels.
-//
-// References:
-//    * https://github.com/sanctuary/notes/blob/master/structs.h#item
+/// Item quality levels.
+///
+/// References:
+///    * https://github.com/sanctuary/notes/blob/master/structs.h#item
 typedef enum {
 	ITEM_QUALITY_NORMAL = 0,
 	ITEM_QUALITY_MAGIC  = 1,
 	ITEM_QUALITY_UNIQUE = 2,
 } item_quality;
 
-// Bit flags used to describe unique, usually non-quantifiable effect on a
-// player caused by items.
-//
-// References:
-//    * https://github.com/sanctuary/notes/blob/master/structs.h#item
+/// Bit flags used to describe unique, usually non-quantifiable effect on a
+/// player caused by items.
+///
+/// References:
+///    * https://github.com/sanctuary/notes/blob/master/structs.h#item
 typedef enum {
 	ITEM_SPECIAL_EFFECT_NONE                        = 0x00000000,
 	ITEM_SPECIAL_EFFECT_INFRAVISION                 = 0x00000001,
-	ITEM_SPECIAL_EFFECT_LIFE_STEAL_RANDOM           = 0x00000002, // in range 0-12.5%
+	ITEM_SPECIAL_EFFECT_LIFE_STEAL_RANDOM           = 0x00000002, ///< in range 0-12.5%
 	ITEM_SPECIAL_EFFECT_RANDOM_SPEED_ARROWS         = 0x00000004,
 	ITEM_SPECIAL_EFFECT_FIRE_ARROWS                 = 0x00000008,
 	ITEM_SPECIAL_EFFECT_FIRE_DAMAGE_BONUS           = 0x00000010,
 	ITEM_SPECIAL_EFFECT_LIGHTNING_DAMAGE_BONUS      = 0x00000020,
 	ITEM_SPECIAL_EFFECT_CONSTANTLY_LOSE_HIT_POINTS  = 0x00000040,
-	ITEM_SPECIAL_EFFECT_UNKNOWN_1                   = 0x00000080, // unused
+	ITEM_SPECIAL_EFFECT_UNKNOWN_1                   = 0x00000080, ///< unused
 	ITEM_SPECIAL_EFFECT_USER_CANT_HEAL              = 0x00000100,
-	ITEM_SPECIAL_EFFECT_UNKNOWN_2                   = 0x00000200, // unused
-	ITEM_SPECIAL_EFFECT_UNKNOWN_3                   = 0x00000400, // unused
+	ITEM_SPECIAL_EFFECT_UNKNOWN_2                   = 0x00000200, ///< unused
+	ITEM_SPECIAL_EFFECT_UNKNOWN_3                   = 0x00000400, ///< unused
 	ITEM_SPECIAL_EFFECT_KNOCKS_TARGET_BACK          = 0x00000800,
 	ITEM_SPECIAL_EFFECT_HIT_MONSTER_DOESNT_HEAL     = 0x00001000,
 	ITEM_SPECIAL_EFFECT_MANA_STEAL_3_PERCENT        = 0x00002000,
 	ITEM_SPECIAL_EFFECT_MANA_STEAL_5_PERCENT        = 0x00004000,
 	ITEM_SPECIAL_EFFECT_LIFE_STEAL_3_PERCENT        = 0x00008000,
 	ITEM_SPECIAL_EFFECT_LIFE_STEAL_5_PERCENT        = 0x00010000,
-	ITEM_SPECIAL_EFFECT_QUICK_ATTACK                = 0x00020000, // Suffix: Readiness
-	ITEM_SPECIAL_EFFECT_FAST_ATTACK                 = 0x00040000, // Suffix: Swiftness
-	ITEM_SPECIAL_EFFECT_FASTER_ATTACK               = 0x00080000, // Suffix: Speed
-	ITEM_SPECIAL_EFFECT_FASTEST_ATTACK              = 0x00100000, // Suffix: Haste
-	ITEM_SPECIAL_EFFECT_FAST_HIT_RECOVERY           = 0x00200000, // Suffix: Balance
-	ITEM_SPECIAL_EFFECT_FASTER_HIT_RECOVERY         = 0x00400000, // Suffix: Stability
-	ITEM_SPECIAL_EFFECT_FASTEST_HIT_RECOVERY        = 0x00800000, // Suffix: Harmony
+	ITEM_SPECIAL_EFFECT_QUICK_ATTACK                = 0x00020000, ///< Suffix: Readiness
+	ITEM_SPECIAL_EFFECT_FAST_ATTACK                 = 0x00040000, ///< Suffix: Swiftness
+	ITEM_SPECIAL_EFFECT_FASTER_ATTACK               = 0x00080000, ///< Suffix: Speed
+	ITEM_SPECIAL_EFFECT_FASTEST_ATTACK              = 0x00100000, ///< Suffix: Haste
+	ITEM_SPECIAL_EFFECT_FAST_HIT_RECOVERY           = 0x00200000, ///< Suffix: Balance
+	ITEM_SPECIAL_EFFECT_FASTER_HIT_RECOVERY         = 0x00400000, ///< Suffix: Stability
+	ITEM_SPECIAL_EFFECT_FASTEST_HIT_RECOVERY        = 0x00800000, ///< Suffix: Harmony
 	ITEM_SPECIAL_EFFECT_FAST_BLOCK                  = 0x01000000,
 	ITEM_SPECIAL_EFFECT_LIGHTNING_ARROWS            = 0x02000000,
 	ITEM_SPECIAL_EFFECT_THORNS                      = 0x04000000,
-	ITEM_SPECIAL_EFFECT_NO_MANA                     = 0x08000000, // cursed mana
+	ITEM_SPECIAL_EFFECT_NO_MANA                     = 0x08000000, ///< cursed mana
 	ITEM_SPECIAL_EFFECT_ABSORBS_HALF_OF_TRAP_DAMAGE = 0x10000000,
-	ITEM_SPECIAL_EFFECT_UNKNOWN_4                   = 0x20000000, // unused
+	ITEM_SPECIAL_EFFECT_UNKNOWN_4                   = 0x20000000, ///< unused
 	ITEM_SPECIAL_EFFECT_3X_DAMAGE_VS_DEMONS         = 0x40000000,
 	ITEM_SPECIAL_EFFECT_ALL_RESISTANCES_EQUAL_0     = 0x80000000,
 } item_special_effect;
 
-// Item types.
+/// Item types.
 typedef enum {
-	ITEM_TYPE_MISC         =  0, // Potions, scrolls, books and quest items.
+	ITEM_TYPE_MISC         =  0, ///< Potions, scrolls, books and quest items.
 	ITEM_TYPE_SWORD        =  1,
 	ITEM_TYPE_AXE          =  2,
 	ITEM_TYPE_BOW          =  3,
@@ -911,17 +911,17 @@ typedef enum {
 	ITEM_TYPE_GOLD         = 11,
 	ITEM_TYPE_RING         = 12,
 	ITEM_TYPE_AMULET       = 13,
-	ITEM_TYPE_14           = 14, // NOTE: Unused?
+	ITEM_TYPE_14           = 14, ///< NOTE: Unused?
 	ITEM_TYPE_NONE         = -1,
 } item_type;
 
-// Tile IDs for dungeon layout 1.
-//
-// TODO: Figure out how to fix broken link. Requires graphics files, which may
-// not be put online. Perhaps, add a script to view locally.
-//
-// References:
-//    * https://github.com/sanctuary/graphics/blob/master/l1/tiles/README.md
+/// Tile IDs for dungeon layout 1.
+///
+/// TODO: Figure out how to fix broken link. Requires graphics files, which may
+/// not be put online. Perhaps, add a script to view locally.
+///
+/// References:
+///    * https://github.com/sanctuary/graphics/blob/master/l1/tiles/README.md
 typedef enum {
 	L1_TILE_ID_NONE                                    =   0,
 	L1_TILE_ID_WALL_SW                                 =   1,
@@ -1132,69 +1132,69 @@ typedef enum {
 	L1_TILE_ID_BROKEN_ENTERANCE_SE_3                   = 206,
 } l1_tile_id;
 
-// Magic types.
+/// Magic types.
 typedef enum {
 	MAGIC_TYPE_FIRE      = 0,
 	MAGIC_TYPE_LIGHTNING = 1,
 	MAGIC_TYPE_MAGIC     = 2,
 } magic_type;
 
-// Missile graphic IDs specify missile_graphic_data array indices.
-//
-// References:
-//    * https://github.com/sanctuary/notes/blob/master/data/missiles.cpp#missile_graphic_data
+/// Missile graphic IDs specify missile_graphic_data array indices.
+///
+/// References:
+///    * https://github.com/sanctuary/notes/blob/master/data/missiles.cpp#missile_graphic_data
 typedef enum {
-	MISSILE_GRAPHIC_ID_ARROW                  =  0, // "missiles/arrows.cl2"
-	MISSILE_GRAPHIC_ID_FIRE_BALL              =  1, // "missiles/fireba%i.cl2"
-	MISSILE_GRAPHIC_ID_GUARDIAN               =  2, // "missiles/guard%i.cl2"
-	MISSILE_GRAPHIC_ID_LIGHTNING              =  3, // "missiles/lghning.cl2"
-	MISSILE_GRAPHIC_ID_FIRE_WALL              =  4, // "missiles/firewal%i.cl2"
-	MISSILE_GRAPHIC_ID_MAGIC_BLOSSOM          =  5, // "missiles/magblos.cl2"
-	MISSILE_GRAPHIC_ID_PORTAL                 =  6, // "missiles/portal%i.cl2"
-	MISSILE_GRAPHIC_ID_BLUE_EXPLOSION_FRONT   =  7, // "missiles/bluexfr.cl2"
-	MISSILE_GRAPHIC_ID_BLUE_EXPLOSION_BACK    =  8, // "missiles/bluexbk.cl2"
-	MISSILE_GRAPHIC_ID_MANA_SHIELD            =  9, // "missiles/manashld.cl2"
-	MISSILE_GRAPHIC_ID_BLOOD                  = 10, // "missiles/blood%i.cl2"
-	MISSILE_GRAPHIC_ID_BONE                   = 11, // "missiles/bone%i.cl2"
-	MISSILE_GRAPHIC_ID_METAL_HIT              = 12, // "missiles/metlhit%i.cl2"
-	MISSILE_GRAPHIC_ID_FIRE_ARROW             = 13, // "missiles/farrow%i.cl2"
-	MISSILE_GRAPHIC_ID_DOOM_SERPENT           = 14, // "missiles/doom%i.cl2"
-	MISSILE_GRAPHIC_ID_SPACE                  = 15, // " "
-	MISSILE_GRAPHIC_ID_BLOOD_BURST            = 16, // "missiles/blodbur%i.cl2"
-	MISSILE_GRAPHIC_ID_EXPLOSION              = 17, // "missiles/newexp.cl2"
-	MISSILE_GRAPHIC_ID_SHATTER                = 18, // "missiles/shatter1.cl2"
-	MISSILE_GRAPHIC_ID_BIG_EXPLOSION          = 19, // "missiles/bigexp.cl2"
-	MISSILE_GRAPHIC_ID_INFERNO                = 20, // "missiles/inferno.cl2"
-	MISSILE_GRAPHIC_ID_THIN_LIGHTNING         = 21, // "missiles/thinlght.cl2"
-	MISSILE_GRAPHIC_ID_FLARE                  = 22, // "missiles/flare.cl2"
-	MISSILE_GRAPHIC_ID_FLARE_EXPLOSION        = 23, // "missiles/flareexp.cl2"
-	MISSILE_GRAPHIC_ID_MAGIC_BALL             = 24, // "missiles/magball%i.cl2"
-	MISSILE_GRAPHIC_ID_KRULL                  = 25, // "missiles/krull.cl2"
-	MISSILE_GRAPHIC_ID_MINI_LIGHTNING         = 26, // "missiles/miniltng.cl2"
-	MISSILE_GRAPHIC_ID_HOLY_BOLT              = 27, // "missiles/holy%i.cl2"
-	MISSILE_GRAPHIC_ID_HOLY_EXPLOSION         = 28, // "missiles/holyexpl.cl2"
-	MISSILE_GRAPHIC_ID_LIGHTNING_ARROW        = 29, // "missiles/larrow%i.cl2"
-	MISSILE_GRAPHIC_ID_FIRE_ARROW_EXPLOSION   = 30, // "missiles/firarwex.cl2"
-	MISSILE_GRAPHIC_ID_ACID_BALL              = 31, // "missiles/acidbf%i.cl2"
-	MISSILE_GRAPHIC_ID_ACID_SPLASH            = 32, // "missiles/acidspla.cl2"
-	MISSILE_GRAPHIC_ID_ACID_PUDDLE            = 33, // "missiles/acidpud%i.cl2"
-	MISSILE_GRAPHIC_ID_ETHEREAL_SHIELD        = 34, // "missiles/ethrshld.cl2"
-	MISSILE_GRAPHIC_ID_ELEMENTAL              = 35, // "missiles/firerun%i.cl2"
-	MISSILE_GRAPHIC_ID_RESURRECT              = 36, // "missiles/ressur1.cl2"
-	MISSILE_GRAPHIC_ID_SKULL_BALL             = 37, // "missiles/sklball%i.cl2"
-	MISSILE_GRAPHIC_ID_RED_PORTAL             = 38, // "missiles/rportal%i.cl2"
-	MISSILE_GRAPHIC_ID_FIRE_PILLAR            = 39, // "missiles/fireplar.cl2"
-	MISSILE_GRAPHIC_ID_BLUE_FLARE             = 40, // "missiles/scubmisb.cl2"
-	MISSILE_GRAPHIC_ID_BLUE_FLARE_EXPLOSION   = 41, // "missiles/scbsexpb.cl2"
-	MISSILE_GRAPHIC_ID_YELLOW_FLARE           = 42, // "missiles/scubmisc.cl2"
-	MISSILE_GRAPHIC_ID_YELLOW_FLARE_EXPLOSION = 43, // "missiles/scbsexpc.cl2"
-	MISSILE_GRAPHIC_ID_RED_FLARE              = 44, // "missiles/scubmisd.cl2"
-	MISSILE_GRAPHIC_ID_RED_FLARE_EXPLOSION    = 45, // "missiles/scbsexpd.cl2"
-	MISSILE_GRAPHIC_ID_NULL                   = 46, // NULL
+	MISSILE_GRAPHIC_ID_ARROW                  =  0, ///< "missiles/arrows.cl2"
+	MISSILE_GRAPHIC_ID_FIRE_BALL              =  1, ///< "missiles/fireba%i.cl2"
+	MISSILE_GRAPHIC_ID_GUARDIAN               =  2, ///< "missiles/guard%i.cl2"
+	MISSILE_GRAPHIC_ID_LIGHTNING              =  3, ///< "missiles/lghning.cl2"
+	MISSILE_GRAPHIC_ID_FIRE_WALL              =  4, ///< "missiles/firewal%i.cl2"
+	MISSILE_GRAPHIC_ID_MAGIC_BLOSSOM          =  5, ///< "missiles/magblos.cl2"
+	MISSILE_GRAPHIC_ID_PORTAL                 =  6, ///< "missiles/portal%i.cl2"
+	MISSILE_GRAPHIC_ID_BLUE_EXPLOSION_FRONT   =  7, ///< "missiles/bluexfr.cl2"
+	MISSILE_GRAPHIC_ID_BLUE_EXPLOSION_BACK    =  8, ///< "missiles/bluexbk.cl2"
+	MISSILE_GRAPHIC_ID_MANA_SHIELD            =  9, ///< "missiles/manashld.cl2"
+	MISSILE_GRAPHIC_ID_BLOOD                  = 10, ///< "missiles/blood%i.cl2"
+	MISSILE_GRAPHIC_ID_BONE                   = 11, ///< "missiles/bone%i.cl2"
+	MISSILE_GRAPHIC_ID_METAL_HIT              = 12, ///< "missiles/metlhit%i.cl2"
+	MISSILE_GRAPHIC_ID_FIRE_ARROW             = 13, ///< "missiles/farrow%i.cl2"
+	MISSILE_GRAPHIC_ID_DOOM_SERPENT           = 14, ///< "missiles/doom%i.cl2"
+	MISSILE_GRAPHIC_ID_SPACE                  = 15, ///< " "
+	MISSILE_GRAPHIC_ID_BLOOD_BURST            = 16, ///< "missiles/blodbur%i.cl2"
+	MISSILE_GRAPHIC_ID_EXPLOSION              = 17, ///< "missiles/newexp.cl2"
+	MISSILE_GRAPHIC_ID_SHATTER                = 18, ///< "missiles/shatter1.cl2"
+	MISSILE_GRAPHIC_ID_BIG_EXPLOSION          = 19, ///< "missiles/bigexp.cl2"
+	MISSILE_GRAPHIC_ID_INFERNO                = 20, ///< "missiles/inferno.cl2"
+	MISSILE_GRAPHIC_ID_THIN_LIGHTNING         = 21, ///< "missiles/thinlght.cl2"
+	MISSILE_GRAPHIC_ID_FLARE                  = 22, ///< "missiles/flare.cl2"
+	MISSILE_GRAPHIC_ID_FLARE_EXPLOSION        = 23, ///< "missiles/flareexp.cl2"
+	MISSILE_GRAPHIC_ID_MAGIC_BALL             = 24, ///< "missiles/magball%i.cl2"
+	MISSILE_GRAPHIC_ID_KRULL                  = 25, ///< "missiles/krull.cl2"
+	MISSILE_GRAPHIC_ID_MINI_LIGHTNING         = 26, ///< "missiles/miniltng.cl2"
+	MISSILE_GRAPHIC_ID_HOLY_BOLT              = 27, ///< "missiles/holy%i.cl2"
+	MISSILE_GRAPHIC_ID_HOLY_EXPLOSION         = 28, ///< "missiles/holyexpl.cl2"
+	MISSILE_GRAPHIC_ID_LIGHTNING_ARROW        = 29, ///< "missiles/larrow%i.cl2"
+	MISSILE_GRAPHIC_ID_FIRE_ARROW_EXPLOSION   = 30, ///< "missiles/firarwex.cl2"
+	MISSILE_GRAPHIC_ID_ACID_BALL              = 31, ///< "missiles/acidbf%i.cl2"
+	MISSILE_GRAPHIC_ID_ACID_SPLASH            = 32, ///< "missiles/acidspla.cl2"
+	MISSILE_GRAPHIC_ID_ACID_PUDDLE            = 33, ///< "missiles/acidpud%i.cl2"
+	MISSILE_GRAPHIC_ID_ETHEREAL_SHIELD        = 34, ///< "missiles/ethrshld.cl2"
+	MISSILE_GRAPHIC_ID_ELEMENTAL              = 35, ///< "missiles/firerun%i.cl2"
+	MISSILE_GRAPHIC_ID_RESURRECT              = 36, ///< "missiles/ressur1.cl2"
+	MISSILE_GRAPHIC_ID_SKULL_BALL             = 37, ///< "missiles/sklball%i.cl2"
+	MISSILE_GRAPHIC_ID_RED_PORTAL             = 38, ///< "missiles/rportal%i.cl2"
+	MISSILE_GRAPHIC_ID_FIRE_PILLAR            = 39, ///< "missiles/fireplar.cl2"
+	MISSILE_GRAPHIC_ID_BLUE_FLARE             = 40, ///< "missiles/scubmisb.cl2"
+	MISSILE_GRAPHIC_ID_BLUE_FLARE_EXPLOSION   = 41, ///< "missiles/scbsexpb.cl2"
+	MISSILE_GRAPHIC_ID_YELLOW_FLARE           = 42, ///< "missiles/scubmisc.cl2"
+	MISSILE_GRAPHIC_ID_YELLOW_FLARE_EXPLOSION = 43, ///< "missiles/scbsexpc.cl2"
+	MISSILE_GRAPHIC_ID_RED_FLARE              = 44, ///< "missiles/scubmisd.cl2"
+	MISSILE_GRAPHIC_ID_RED_FLARE_EXPLOSION    = 45, ///< "missiles/scbsexpd.cl2"
+	MISSILE_GRAPHIC_ID_NULL                   = 46, ///< NULL
 	MISSILE_GRAPHIC_ID_INVALID                = 47,
 } missile_graphic_id;
 
-// Monster AIs.
+/// Monster AIs.
 typedef enum {
 	MONSTER_AI_ID_ZOMBIE               =  0,
 	MONSTER_AI_ID_OVERLORD             =  1,
@@ -1230,127 +1230,127 @@ typedef enum {
 	MONSTER_AI_ID_WARLORD_OF_BLOOD     = 31,
 } monster_ai_id;
 
-// Monster IDs specify monster_data array indices.
-//
-// References:
-//    * https://github.com/sanctuary/notes/blob/master/data/monsters.cpp#monster_data
+/// Monster IDs specify monster_data array indices.
+///
+/// References:
+///    * https://github.com/sanctuary/notes/blob/master/data/monsters.cpp#monster_data
 typedef enum {
-	MONSTER_ID_ZOMBIE                  =   0, // monsters/zombie/
-	MONSTER_ID_GHOUL                   =   1, // monsters/zombie/
-	MONSTER_ID_ROTTING_CARCASS         =   2, // monsters/zombie/
-	MONSTER_ID_BLACK_DEATH             =   3, // monsters/zombie/
-	MONSTER_ID_FALLEN_ONE_SPEAR        =   4, // monsters/falspear/
-	MONSTER_ID_CARVER_SPEAR            =   5, // monsters/falspear/
-	MONSTER_ID_DEVIL_KIN_SPEAR         =   6, // monsters/falspear/
-	MONSTER_ID_DARK_ONE_SPEAR          =   7, // monsters/falspear/
-	MONSTER_ID_SKELETON_AXE            =   8, // monsters/skelaxe/
-	MONSTER_ID_CORPSE_AXE              =   9, // monsters/skelaxe/
-	MONSTER_ID_BURNING_DEAD_AXE        =  10, // monsters/skelaxe/
-	MONSTER_ID_HORROR_AXE              =  11, // monsters/skelaxe/
-	MONSTER_ID_FALLEN_ONE_SWORD        =  12, // monsters/falsword/
-	MONSTER_ID_CARVER_SWORD            =  13, // monsters/falsword/
-	MONSTER_ID_DEVIL_KIN_SWORD         =  14, // monsters/falsword/
-	MONSTER_ID_DARK_ONE_SWORD          =  15, // monsters/falsword/
-	MONSTER_ID_SCAVENGER               =  16, // monsters/scav/
-	MONSTER_ID_PLAGUE_EATER            =  17, // monsters/scav/
-	MONSTER_ID_SHADOW_BEAST            =  18, // monsters/scav/
-	MONSTER_ID_BONE_GASHER             =  19, // monsters/scav/
-	MONSTER_ID_SKELETON_BOW            =  20, // monsters/skelbow/
-	MONSTER_ID_CORPSE_BOW              =  21, // monsters/skelbow/
-	MONSTER_ID_BURNING_DEAD_BOW        =  22, // monsters/skelbow/
-	MONSTER_ID_HORROR_BOW              =  23, // monsters/skelbow/
-	MONSTER_ID_SKELETON_CAPTAIN        =  24, // monsters/skelsd/
-	MONSTER_ID_CORPSE_CAPTAIN          =  25, // monsters/skelsd/
-	MONSTER_ID_BURNING_DEAD_CAPTAIN    =  26, // monsters/skelsd/
-	MONSTER_ID_HORROR_CAPTAIN          =  27, // monsters/skelsd/
-	MONSTER_ID_INVISIBLE_LORD          =  28, // monsters/tsneak/
-	MONSTER_ID_HIDDEN                  =  29, // monsters/sneak/
-	MONSTER_ID_STALKER                 =  30, // monsters/sneak/
-	MONSTER_ID_UNSEEN                  =  31, // monsters/sneak/
-	MONSTER_ID_ILLUSION_WEAVER         =  32, // monsters/sneak/
-	MONSTER_ID_LORD_SAYTER             =  33, // monsters/goatlord/
-	MONSTER_ID_FLESH_CLAN_MACE         =  34, // monsters/goatmace/
-	MONSTER_ID_STONE_CLAN_MACE         =  35, // monsters/goatmace/
-	MONSTER_ID_FIRE_CLAN_MACE          =  36, // monsters/goatmace/
-	MONSTER_ID_NIGHT_CLAN_MACE         =  37, // monsters/goatmace/
-	MONSTER_ID_FIEND                   =  38, // monsters/bat/
-	MONSTER_ID_BLINK                   =  39, // monsters/bat/
-	MONSTER_ID_GLOOM                   =  40, // monsters/bat/
-	MONSTER_ID_FAMILIAR                =  41, // monsters/bat/
-	MONSTER_ID_FLESH_CLAN_BOW          =  42, // monsters/goatbow/
-	MONSTER_ID_STONE_CLAN_BOW          =  43, // monsters/goatbow/
-	MONSTER_ID_FIRE_CLAN_BOW           =  44, // monsters/goatbow/
-	MONSTER_ID_NIGHT_CLAN_BOW          =  45, // monsters/goatbow/
-	MONSTER_ID_ACID_BEAST              =  46, // monsters/acid/
-	MONSTER_ID_POISON_SPITTER          =  47, // monsters/acid/
-	MONSTER_ID_PIT_BEAST               =  48, // monsters/acid/
-	MONSTER_ID_LAVA_MAW                =  49, // monsters/acid/
-	MONSTER_ID_SKELETON_KING           =  50, // monsters/sking/
-	MONSTER_ID_THE_BUTCHER             =  51, // monsters/fatc/
-	MONSTER_ID_OVERLORD                =  52, // monsters/fat/
-	MONSTER_ID_MUD_MAN                 =  53, // monsters/fat/
-	MONSTER_ID_TOAD_DEMON              =  54, // monsters/fat/
-	MONSTER_ID_FLAYED_ONE              =  55, // monsters/fat/
-	MONSTER_ID_WYRM                    =  56, // monsters/worm/
-	MONSTER_ID_CAVE_SLUG               =  57, // monsters/worm/
-	MONSTER_ID_DEVIL_WYRM              =  58, // monsters/worm/
-	MONSTER_ID_DEVOURER                =  59, // monsters/worm/
-	MONSTER_ID_MAGMA_DEMON             =  60, // monsters/magma/
-	MONSTER_ID_BLOOD_STONE             =  61, // monsters/magma/
-	MONSTER_ID_HELL_STONE              =  62, // monsters/magma/
-	MONSTER_ID_LAVA_LORD               =  63, // monsters/magma/
-	MONSTER_ID_HORNED_DEMON            =  64, // monsters/rhino/
-	MONSTER_ID_MUD_RUNNER              =  65, // monsters/rhino/
-	MONSTER_ID_FROST_CHARGER           =  66, // monsters/rhino/
-	MONSTER_ID_OBSIDIAN_LORD           =  67, // monsters/rhino/
-	MONSTER_ID_BONE_DEMON              =  68, // monsters/demskel/
-	MONSTER_ID_RED_DEATH               =  69, // monsters/thin/
-	MONSTER_ID_LITCH_DEMON             =  70, // monsters/thin/
-	MONSTER_ID_UNDEAD_BALROG           =  71, // monsters/thin/
-	MONSTER_ID_INCINERATOR             =  72, // monsters/fireman/
-	MONSTER_ID_FLAME_LORD              =  73, // monsters/fireman/
-	MONSTER_ID_DOOM_FIRE               =  74, // monsters/fireman/
-	MONSTER_ID_HELL_BURNER             =  75, // monsters/fireman/
-	MONSTER_ID_RED_STORM               =  76, // monsters/thin/
-	MONSTER_ID_STORM_RIDER             =  77, // monsters/thin/
-	MONSTER_ID_STORM_LORD              =  78, // monsters/thin/
-	MONSTER_ID_MAELSTORM               =  79, // monsters/thin/
-	MONSTER_ID_DEVIL_KIN_BRUTE         =  80, // monsters/bigfall/
-	MONSTER_ID_WINGED_DEMON            =  81, // monsters/gargoyle/
-	MONSTER_ID_GARGOYLE                =  82, // monsters/gargoyle/
-	MONSTER_ID_BLOOD_CLAW              =  83, // monsters/gargoyle/
-	MONSTER_ID_DEATH_WING              =  84, // monsters/gargoyle/
-	MONSTER_ID_SLAYER                  =  85, // monsters/mega/
-	MONSTER_ID_GUARDIAN                =  86, // monsters/mega/
-	MONSTER_ID_VORTEX_LORD             =  87, // monsters/mega/
-	MONSTER_ID_BALROG                  =  88, // monsters/mega/
-	MONSTER_ID_CAVE_VIPER              =  89, // monsters/snake/
-	MONSTER_ID_FIRE_DRAKE              =  90, // monsters/snake/
-	MONSTER_ID_GOLD_VIPER              =  91, // monsters/snake/
-	MONSTER_ID_AZURE_DRAKE             =  92, // monsters/snake/
-	MONSTER_ID_BLACK_KNIGHT            =  93, // monsters/black/
-	MONSTER_ID_DOOM_GUARD              =  94, // monsters/black/
-	MONSTER_ID_STEEL_LORD              =  95, // monsters/black/
-	MONSTER_ID_BLOOD_KNIGHT            =  96, // monsters/black/
-	MONSTER_ID_UNRAVELER               =  97, // monsters/unrav/
-	MONSTER_ID_HOLLOW_ONE              =  98, // monsters/unrav/
-	MONSTER_ID_PAIN_MASTER             =  99, // monsters/unrav/
-	MONSTER_ID_REALITY_WEAVER          = 100, // monsters/unrav/
-	MONSTER_ID_SUCCUBUS                = 101, // monsters/succ/
-	MONSTER_ID_SNOW_WITCH              = 102, // monsters/succ/
-	MONSTER_ID_HELL_SPAWN              = 103, // monsters/succ/
-	MONSTER_ID_SOUL_BURNER             = 104, // monsters/succ/
-	MONSTER_ID_COUNSELOR               = 105, // monsters/mage/
-	MONSTER_ID_MAGISTRATE              = 106, // monsters/mage/
-	MONSTER_ID_CABALIST                = 107, // monsters/mage/
-	MONSTER_ID_ADVOCATE                = 108, // monsters/mage/
-	MONSTER_ID_GOLEM                   = 109, // monsters/golem/
-	MONSTER_ID_THE_DARK_LORD           = 110, // monsters/diablo/
-	MONSTER_ID_THE_ARCH_LITCH_MALIGNUS = 111, // monsters/darkmage/
+	MONSTER_ID_ZOMBIE                  =   0, ///< monsters/zombie/
+	MONSTER_ID_GHOUL                   =   1, ///< monsters/zombie/
+	MONSTER_ID_ROTTING_CARCASS         =   2, ///< monsters/zombie/
+	MONSTER_ID_BLACK_DEATH             =   3, ///< monsters/zombie/
+	MONSTER_ID_FALLEN_ONE_SPEAR        =   4, ///< monsters/falspear/
+	MONSTER_ID_CARVER_SPEAR            =   5, ///< monsters/falspear/
+	MONSTER_ID_DEVIL_KIN_SPEAR         =   6, ///< monsters/falspear/
+	MONSTER_ID_DARK_ONE_SPEAR          =   7, ///< monsters/falspear/
+	MONSTER_ID_SKELETON_AXE            =   8, ///< monsters/skelaxe/
+	MONSTER_ID_CORPSE_AXE              =   9, ///< monsters/skelaxe/
+	MONSTER_ID_BURNING_DEAD_AXE        =  10, ///< monsters/skelaxe/
+	MONSTER_ID_HORROR_AXE              =  11, ///< monsters/skelaxe/
+	MONSTER_ID_FALLEN_ONE_SWORD        =  12, ///< monsters/falsword/
+	MONSTER_ID_CARVER_SWORD            =  13, ///< monsters/falsword/
+	MONSTER_ID_DEVIL_KIN_SWORD         =  14, ///< monsters/falsword/
+	MONSTER_ID_DARK_ONE_SWORD          =  15, ///< monsters/falsword/
+	MONSTER_ID_SCAVENGER               =  16, ///< monsters/scav/
+	MONSTER_ID_PLAGUE_EATER            =  17, ///< monsters/scav/
+	MONSTER_ID_SHADOW_BEAST            =  18, ///< monsters/scav/
+	MONSTER_ID_BONE_GASHER             =  19, ///< monsters/scav/
+	MONSTER_ID_SKELETON_BOW            =  20, ///< monsters/skelbow/
+	MONSTER_ID_CORPSE_BOW              =  21, ///< monsters/skelbow/
+	MONSTER_ID_BURNING_DEAD_BOW        =  22, ///< monsters/skelbow/
+	MONSTER_ID_HORROR_BOW              =  23, ///< monsters/skelbow/
+	MONSTER_ID_SKELETON_CAPTAIN        =  24, ///< monsters/skelsd/
+	MONSTER_ID_CORPSE_CAPTAIN          =  25, ///< monsters/skelsd/
+	MONSTER_ID_BURNING_DEAD_CAPTAIN    =  26, ///< monsters/skelsd/
+	MONSTER_ID_HORROR_CAPTAIN          =  27, ///< monsters/skelsd/
+	MONSTER_ID_INVISIBLE_LORD          =  28, ///< monsters/tsneak/
+	MONSTER_ID_HIDDEN                  =  29, ///< monsters/sneak/
+	MONSTER_ID_STALKER                 =  30, ///< monsters/sneak/
+	MONSTER_ID_UNSEEN                  =  31, ///< monsters/sneak/
+	MONSTER_ID_ILLUSION_WEAVER         =  32, ///< monsters/sneak/
+	MONSTER_ID_LORD_SAYTER             =  33, ///< monsters/goatlord/
+	MONSTER_ID_FLESH_CLAN_MACE         =  34, ///< monsters/goatmace/
+	MONSTER_ID_STONE_CLAN_MACE         =  35, ///< monsters/goatmace/
+	MONSTER_ID_FIRE_CLAN_MACE          =  36, ///< monsters/goatmace/
+	MONSTER_ID_NIGHT_CLAN_MACE         =  37, ///< monsters/goatmace/
+	MONSTER_ID_FIEND                   =  38, ///< monsters/bat/
+	MONSTER_ID_BLINK                   =  39, ///< monsters/bat/
+	MONSTER_ID_GLOOM                   =  40, ///< monsters/bat/
+	MONSTER_ID_FAMILIAR                =  41, ///< monsters/bat/
+	MONSTER_ID_FLESH_CLAN_BOW          =  42, ///< monsters/goatbow/
+	MONSTER_ID_STONE_CLAN_BOW          =  43, ///< monsters/goatbow/
+	MONSTER_ID_FIRE_CLAN_BOW           =  44, ///< monsters/goatbow/
+	MONSTER_ID_NIGHT_CLAN_BOW          =  45, ///< monsters/goatbow/
+	MONSTER_ID_ACID_BEAST              =  46, ///< monsters/acid/
+	MONSTER_ID_POISON_SPITTER          =  47, ///< monsters/acid/
+	MONSTER_ID_PIT_BEAST               =  48, ///< monsters/acid/
+	MONSTER_ID_LAVA_MAW                =  49, ///< monsters/acid/
+	MONSTER_ID_SKELETON_KING           =  50, ///< monsters/sking/
+	MONSTER_ID_THE_BUTCHER             =  51, ///< monsters/fatc/
+	MONSTER_ID_OVERLORD                =  52, ///< monsters/fat/
+	MONSTER_ID_MUD_MAN                 =  53, ///< monsters/fat/
+	MONSTER_ID_TOAD_DEMON              =  54, ///< monsters/fat/
+	MONSTER_ID_FLAYED_ONE              =  55, ///< monsters/fat/
+	MONSTER_ID_WYRM                    =  56, ///< monsters/worm/
+	MONSTER_ID_CAVE_SLUG               =  57, ///< monsters/worm/
+	MONSTER_ID_DEVIL_WYRM              =  58, ///< monsters/worm/
+	MONSTER_ID_DEVOURER                =  59, ///< monsters/worm/
+	MONSTER_ID_MAGMA_DEMON             =  60, ///< monsters/magma/
+	MONSTER_ID_BLOOD_STONE             =  61, ///< monsters/magma/
+	MONSTER_ID_HELL_STONE              =  62, ///< monsters/magma/
+	MONSTER_ID_LAVA_LORD               =  63, ///< monsters/magma/
+	MONSTER_ID_HORNED_DEMON            =  64, ///< monsters/rhino/
+	MONSTER_ID_MUD_RUNNER              =  65, ///< monsters/rhino/
+	MONSTER_ID_FROST_CHARGER           =  66, ///< monsters/rhino/
+	MONSTER_ID_OBSIDIAN_LORD           =  67, ///< monsters/rhino/
+	MONSTER_ID_BONE_DEMON              =  68, ///< monsters/demskel/
+	MONSTER_ID_RED_DEATH               =  69, ///< monsters/thin/
+	MONSTER_ID_LITCH_DEMON             =  70, ///< monsters/thin/
+	MONSTER_ID_UNDEAD_BALROG           =  71, ///< monsters/thin/
+	MONSTER_ID_INCINERATOR             =  72, ///< monsters/fireman/
+	MONSTER_ID_FLAME_LORD              =  73, ///< monsters/fireman/
+	MONSTER_ID_DOOM_FIRE               =  74, ///< monsters/fireman/
+	MONSTER_ID_HELL_BURNER             =  75, ///< monsters/fireman/
+	MONSTER_ID_RED_STORM               =  76, ///< monsters/thin/
+	MONSTER_ID_STORM_RIDER             =  77, ///< monsters/thin/
+	MONSTER_ID_STORM_LORD              =  78, ///< monsters/thin/
+	MONSTER_ID_MAELSTORM               =  79, ///< monsters/thin/
+	MONSTER_ID_DEVIL_KIN_BRUTE         =  80, ///< monsters/bigfall/
+	MONSTER_ID_WINGED_DEMON            =  81, ///< monsters/gargoyle/
+	MONSTER_ID_GARGOYLE                =  82, ///< monsters/gargoyle/
+	MONSTER_ID_BLOOD_CLAW              =  83, ///< monsters/gargoyle/
+	MONSTER_ID_DEATH_WING              =  84, ///< monsters/gargoyle/
+	MONSTER_ID_SLAYER                  =  85, ///< monsters/mega/
+	MONSTER_ID_GUARDIAN                =  86, ///< monsters/mega/
+	MONSTER_ID_VORTEX_LORD             =  87, ///< monsters/mega/
+	MONSTER_ID_BALROG                  =  88, ///< monsters/mega/
+	MONSTER_ID_CAVE_VIPER              =  89, ///< monsters/snake/
+	MONSTER_ID_FIRE_DRAKE              =  90, ///< monsters/snake/
+	MONSTER_ID_GOLD_VIPER              =  91, ///< monsters/snake/
+	MONSTER_ID_AZURE_DRAKE             =  92, ///< monsters/snake/
+	MONSTER_ID_BLACK_KNIGHT            =  93, ///< monsters/black/
+	MONSTER_ID_DOOM_GUARD              =  94, ///< monsters/black/
+	MONSTER_ID_STEEL_LORD              =  95, ///< monsters/black/
+	MONSTER_ID_BLOOD_KNIGHT            =  96, ///< monsters/black/
+	MONSTER_ID_UNRAVELER               =  97, ///< monsters/unrav/
+	MONSTER_ID_HOLLOW_ONE              =  98, ///< monsters/unrav/
+	MONSTER_ID_PAIN_MASTER             =  99, ///< monsters/unrav/
+	MONSTER_ID_REALITY_WEAVER          = 100, ///< monsters/unrav/
+	MONSTER_ID_SUCCUBUS                = 101, ///< monsters/succ/
+	MONSTER_ID_SNOW_WITCH              = 102, ///< monsters/succ/
+	MONSTER_ID_HELL_SPAWN              = 103, ///< monsters/succ/
+	MONSTER_ID_SOUL_BURNER             = 104, ///< monsters/succ/
+	MONSTER_ID_COUNSELOR               = 105, ///< monsters/mage/
+	MONSTER_ID_MAGISTRATE              = 106, ///< monsters/mage/
+	MONSTER_ID_CABALIST                = 107, ///< monsters/mage/
+	MONSTER_ID_ADVOCATE                = 108, ///< monsters/mage/
+	MONSTER_ID_GOLEM                   = 109, ///< monsters/golem/
+	MONSTER_ID_THE_DARK_LORD           = 110, ///< monsters/diablo/
+	MONSTER_ID_THE_ARCH_LITCH_MALIGNUS = 111, ///< monsters/darkmage/
 	MONSTER_ID_NONE                    =  -1,
 } monster_id;
 
-// Monster modes.
+/// Monster modes.
 typedef enum {
 	MONSTER_MODE_STANDING                 =  0,
 	MONSTER_MODE_WALKING_1                =  1,
@@ -1372,7 +1372,7 @@ typedef enum {
 	MONSTER_MODE_TALKING                  = 17,
 } monster_mode;
 
-// Network message IDs.
+/// Network message IDs.
 typedef enum {
 	NET_MSG_ID_I_NEED_HELP_COME_HERE   = 0,
 	NET_MSG_ID_FOLLOW_ME               = 1,
@@ -1380,173 +1380,173 @@ typedef enum {
 	NET_MSG_ID_NOW_YOU_DIE             = 3,
 } net_msg_id;
 
-// Object graphics.
+/// Object graphics.
 typedef enum {
-	OBJECT_GRAPHIC_ID_BRAZIER               =  0, // l1braz
-	OBJECT_GRAPHIC_ID_L1_DOOR               =  1, // l1doors
-	OBJECT_GRAPHIC_ID_LEVER                 =  2, // lever
-	OBJECT_GRAPHIC_ID_SMALL_CHEST           =  3, // chest1
-	OBJECT_GRAPHIC_ID_CHEST                 =  4, // chest2
-	OBJECT_GRAPHIC_ID_BANNER                =  5, // banner
-	OBJECT_GRAPHIC_ID_SKULL_PILE            =  6, // skulpile
-	OBJECT_GRAPHIC_ID_SKULL_FIRE            =  7, // skulfire
-	OBJECT_GRAPHIC_ID_SKULL_STICK           =  8, // skulstik
-	OBJECT_GRAPHIC_ID_CRUCIFIED_SKELETON_S  =  9, // cruxsk1
-	OBJECT_GRAPHIC_ID_CRUCIFIED_SKELETON_SE = 10, // cruxsk2
-	OBJECT_GRAPHIC_ID_CRUCIFIED_SKELETON_SW = 11, // cruxsk3
-	OBJECT_GRAPHIC_ID_STEEL_TOME            = 12, // book1
-	OBJECT_GRAPHIC_ID_MYTHICAL_BOOK         = 13, // book2
-	OBJECT_GRAPHIC_ID_ROCK_STAND            = 14, // rockstan
-	OBJECT_GRAPHIC_ID_ANGEL                 = 15, // angel
-	OBJECT_GRAPHIC_ID_LARGE_CHEST           = 16, // chest3
-	OBJECT_GRAPHIC_ID_BURNING_CROSS         = 17, // burncros
-	OBJECT_GRAPHIC_ID_CANDLE                = 18, // candle2
-	OBJECT_GRAPHIC_ID_NUDE                  = 19, // nude2
-	OBJECT_GRAPHIC_ID_SKULL_LEVER           = 20, // switch4
-	OBJECT_GRAPHIC_ID_TORTURED_NUDE_MAN     = 21, // tnudem
-	OBJECT_GRAPHIC_ID_TORTURED_NUDE_WOMAN   = 22, // tnudew
-	OBJECT_GRAPHIC_ID_TORTURED_SOUL         = 23, // tsoul
-	OBJECT_GRAPHIC_ID_L2_DOOR               = 24, // l2doors
-	OBJECT_GRAPHIC_ID_WALL_TORCH_SIMPLE_SE  = 25, // wtorch4
-	OBJECT_GRAPHIC_ID_WALL_TORCH_SIMPLE_SW  = 26, // wtorch3
-	OBJECT_GRAPHIC_ID_SARCOPHAGUS           = 27, // sarc
-	OBJECT_GRAPHIC_ID_FLAME                 = 28, // flame1
-	OBJECT_GRAPHIC_ID_PRESSURE_PLATE        = 29, // prsrplt1
-	OBJECT_GRAPHIC_ID_TRAPHOLE              = 30, // traphole
-	OBJECT_GRAPHIC_ID_MINI_WATER            = 31, // miniwatr
-	OBJECT_GRAPHIC_ID_WALL_TORCH_SE         = 32, // wtorch2
-	OBJECT_GRAPHIC_ID_WALL_TORCH_SW         = 33, // wtorch1
-	OBJECT_GRAPHIC_ID_BOOKCASE              = 34, // bcase
-	OBJECT_GRAPHIC_ID_BOOKSHELF             = 35, // bshelf
-	OBJECT_GRAPHIC_ID_WEAPON_RACK           = 36, // weapstnd
-	OBJECT_GRAPHIC_ID_BARREL                = 37, // barrel
-	OBJECT_GRAPHIC_ID_BARREL_EXPLOSION      = 38, // barrelex
-	OBJECT_GRAPHIC_ID_LEFT_SHRINE           = 39, // lshrineg
-	OBJECT_GRAPHIC_ID_RIGHT_SHRINE          = 40, // rshrineg
-	OBJECT_GRAPHIC_ID_BLOOD_FOUNTAIN        = 41, // bloodfnt
-	OBJECT_GRAPHIC_ID_DECAPITATED_BODY      = 42, // decap
-	OBJECT_GRAPHIC_ID_PEDESTAL_OF_BLOOD     = 43, // pedistl
-	OBJECT_GRAPHIC_ID_L3_DOOR               = 44, // l3doors
-	OBJECT_GRAPHIC_ID_PURIFYING_SPRING      = 45, // pfountn
-	OBJECT_GRAPHIC_ID_ARMOR_STAND           = 46, // armstand
-	OBJECT_GRAPHIC_ID_GOAT_SHRINE           = 47, // goatshrn
-	OBJECT_GRAPHIC_ID_CAULDRON              = 48, // cauldren
-	OBJECT_GRAPHIC_ID_MURKY_POOL            = 49, // mfountn
-	OBJECT_GRAPHIC_ID_FOUNTAIN_OF_TEARS     = 50, // tfountn
-	OBJECT_GRAPHIC_ID_ALTAR_BOY             = 51, // altboy
-	OBJECT_GRAPHIC_ID_MAGIC_CIRCLE          = 52, // mcirl
-	OBJECT_GRAPHIC_ID_LABYRINTH_BOOKS       = 53, // bkslbrnt
-	OBJECT_GRAPHIC_ID_MUSHROOM_PATCH        = 54, // mushptch
-	OBJECT_GRAPHIC_ID_VILE_STAND            = 55, // lzstand
+	OBJECT_GRAPHIC_ID_BRAZIER               =  0, ///< l1braz
+	OBJECT_GRAPHIC_ID_L1_DOOR               =  1, ///< l1doors
+	OBJECT_GRAPHIC_ID_LEVER                 =  2, ///< lever
+	OBJECT_GRAPHIC_ID_SMALL_CHEST           =  3, ///< chest1
+	OBJECT_GRAPHIC_ID_CHEST                 =  4, ///< chest2
+	OBJECT_GRAPHIC_ID_BANNER                =  5, ///< banner
+	OBJECT_GRAPHIC_ID_SKULL_PILE            =  6, ///< skulpile
+	OBJECT_GRAPHIC_ID_SKULL_FIRE            =  7, ///< skulfire
+	OBJECT_GRAPHIC_ID_SKULL_STICK           =  8, ///< skulstik
+	OBJECT_GRAPHIC_ID_CRUCIFIED_SKELETON_S  =  9, ///< cruxsk1
+	OBJECT_GRAPHIC_ID_CRUCIFIED_SKELETON_SE = 10, ///< cruxsk2
+	OBJECT_GRAPHIC_ID_CRUCIFIED_SKELETON_SW = 11, ///< cruxsk3
+	OBJECT_GRAPHIC_ID_STEEL_TOME            = 12, ///< book1
+	OBJECT_GRAPHIC_ID_MYTHICAL_BOOK         = 13, ///< book2
+	OBJECT_GRAPHIC_ID_ROCK_STAND            = 14, ///< rockstan
+	OBJECT_GRAPHIC_ID_ANGEL                 = 15, ///< angel
+	OBJECT_GRAPHIC_ID_LARGE_CHEST           = 16, ///< chest3
+	OBJECT_GRAPHIC_ID_BURNING_CROSS         = 17, ///< burncros
+	OBJECT_GRAPHIC_ID_CANDLE                = 18, ///< candle2
+	OBJECT_GRAPHIC_ID_NUDE                  = 19, ///< nude2
+	OBJECT_GRAPHIC_ID_SKULL_LEVER           = 20, ///< switch4
+	OBJECT_GRAPHIC_ID_TORTURED_NUDE_MAN     = 21, ///< tnudem
+	OBJECT_GRAPHIC_ID_TORTURED_NUDE_WOMAN   = 22, ///< tnudew
+	OBJECT_GRAPHIC_ID_TORTURED_SOUL         = 23, ///< tsoul
+	OBJECT_GRAPHIC_ID_L2_DOOR               = 24, ///< l2doors
+	OBJECT_GRAPHIC_ID_WALL_TORCH_SIMPLE_SE  = 25, ///< wtorch4
+	OBJECT_GRAPHIC_ID_WALL_TORCH_SIMPLE_SW  = 26, ///< wtorch3
+	OBJECT_GRAPHIC_ID_SARCOPHAGUS           = 27, ///< sarc
+	OBJECT_GRAPHIC_ID_FLAME                 = 28, ///< flame1
+	OBJECT_GRAPHIC_ID_PRESSURE_PLATE        = 29, ///< prsrplt1
+	OBJECT_GRAPHIC_ID_TRAPHOLE              = 30, ///< traphole
+	OBJECT_GRAPHIC_ID_MINI_WATER            = 31, ///< miniwatr
+	OBJECT_GRAPHIC_ID_WALL_TORCH_SE         = 32, ///< wtorch2
+	OBJECT_GRAPHIC_ID_WALL_TORCH_SW         = 33, ///< wtorch1
+	OBJECT_GRAPHIC_ID_BOOKCASE              = 34, ///< bcase
+	OBJECT_GRAPHIC_ID_BOOKSHELF             = 35, ///< bshelf
+	OBJECT_GRAPHIC_ID_WEAPON_RACK           = 36, ///< weapstnd
+	OBJECT_GRAPHIC_ID_BARREL                = 37, ///< barrel
+	OBJECT_GRAPHIC_ID_BARREL_EXPLOSION      = 38, ///< barrelex
+	OBJECT_GRAPHIC_ID_LEFT_SHRINE           = 39, ///< lshrineg
+	OBJECT_GRAPHIC_ID_RIGHT_SHRINE          = 40, ///< rshrineg
+	OBJECT_GRAPHIC_ID_BLOOD_FOUNTAIN        = 41, ///< bloodfnt
+	OBJECT_GRAPHIC_ID_DECAPITATED_BODY      = 42, ///< decap
+	OBJECT_GRAPHIC_ID_PEDESTAL_OF_BLOOD     = 43, ///< pedistl
+	OBJECT_GRAPHIC_ID_L3_DOOR               = 44, ///< l3doors
+	OBJECT_GRAPHIC_ID_PURIFYING_SPRING      = 45, ///< pfountn
+	OBJECT_GRAPHIC_ID_ARMOR_STAND           = 46, ///< armstand
+	OBJECT_GRAPHIC_ID_GOAT_SHRINE           = 47, ///< goatshrn
+	OBJECT_GRAPHIC_ID_CAULDRON              = 48, ///< cauldren
+	OBJECT_GRAPHIC_ID_MURKY_POOL            = 49, ///< mfountn
+	OBJECT_GRAPHIC_ID_FOUNTAIN_OF_TEARS     = 50, ///< tfountn
+	OBJECT_GRAPHIC_ID_ALTAR_BOY             = 51, ///< altboy
+	OBJECT_GRAPHIC_ID_MAGIC_CIRCLE          = 52, ///< mcirl
+	OBJECT_GRAPHIC_ID_LABYRINTH_BOOKS       = 53, ///< bkslbrnt
+	OBJECT_GRAPHIC_ID_MUSHROOM_PATCH        = 54, ///< mushptch
+	OBJECT_GRAPHIC_ID_VILE_STAND            = 55, ///< lzstand
 } object_graphic_id;
 
-// Object IDs specify object_data array indices.
+/// Object IDs specify object_data array indices.
 typedef enum {
-	OBJECT_ID_BRAZIER                          =  0, // l1braz (animated, ticksPerFrame 1)
-	OBJECT_ID_L1_DOOR_SW                       =  1, // l1doors (frame 0)
-	OBJECT_ID_L1_DOOR_SE                       =  2, // l1doors (frame 1)
-	OBJECT_ID_SKULL_FIRE_THEME_3               =  3, // skulfire (animated, ticksPerFrame 2)
-	OBJECT_ID_LEVER_POS_A                      =  4, // lever (frame 0)
-	OBJECT_ID_SMALL_CHEST                      =  5, // chest1 (frame 0)
-	OBJECT_ID_CHEST                            =  6, // chest2 (frame 0)
-	OBJECT_ID_LARGE_CHEST                      =  7, // chest3 (frame 0)
-	OBJECT_ID_INVALID_1                        =  8, // l1braz (invalid frame)
-	OBJECT_ID_CANDLE_THEME_1                   =  9, // candle2 (animated, ticksPerFrame 2)
-	OBJECT_ID_INVALID_2                        = 10, // l1braz (invalid frame)
-	OBJECT_ID_BANNER_SE_THEME_3                = 11, // banner (frame 1)
-	OBJECT_ID_BANNER_THEME_3                   = 12, // banner (frame 0)
-	OBJECT_ID_BANNER_SW_THEME_3                = 13, // banner (frame 2)
-	OBJECT_ID_SKULL_PILE                       = 14, // skulpile (invalid frame)
-	OBJECT_ID_INVALID_3                        = 15, // l1braz (invalid frame)
-	OBJECT_ID_INVALID_4                        = 16, // l1braz (invalid frame)
-	OBJECT_ID_INVALID_5                        = 17, // l1braz (invalid frame)
-	OBJECT_ID_INVALID_6                        = 18, // l1braz (invalid frame)
-	OBJECT_ID_INVALID_7                        = 19, // l1braz (invalid frame)
-	OBJECT_ID_CRUCIFIED_SKELETON_S             = 20, // cruxsk1 (frame 0)
-	OBJECT_ID_CRUCIFIED_SKELETON_SE            = 21, // cruxsk2 (frame 0)
-	OBJECT_ID_CRUCIFIED_SKELETON_SW            = 22, // cruxsk3 (frame 0)
-	OBJECT_ID_ROCK_STAND                       = 23, // rockstan (frame 0)
-	OBJECT_ID_ANGEL                            = 24, // angel (frame 0)
-	OBJECT_ID_ANCIENT_TOME_OR_BOOK_OF_VILENESS = 25, // book2 (frame 0)
-	OBJECT_ID_BURNING_CROSS                    = 26, // burncros (animated, ticksPerFrame 0)
-	OBJECT_ID_NUDE                             = 27, // nude2 (animated, ticksPerFrame 3)
-	OBJECT_ID_SKULL_LEVER                      = 28, // switch4 (frame 0)
-	OBJECT_ID_TORTURED_NUDE_MAN_0              = 29, // tnudem (frame 0)
-	OBJECT_ID_TORTURED_NUDE_MAN_1_THEME_6      = 30, // tnudem (frame 1)
-	OBJECT_ID_TORTURED_NUDE_MAN_2_THEME_6      = 31, // tnudem (frame 2)
-	OBJECT_ID_TORTURED_NUDE_MAN_3_THEME_6      = 32, // tnudem (frame 3)
-	OBJECT_ID_TORTURED_NUDE_WOMAN_0_THEME_6    = 33, // tnudew (frame 0)
-	OBJECT_ID_TORTURED_NUDE_WOMAN_1_THEME_6    = 34, // tnudew (frame 1)
-	OBJECT_ID_TORTURED_NUDE_WOMAN_2_THEME_6    = 35, // tnudew (frame 2)
-	OBJECT_ID_TORTURED_SOUL_0                  = 36, // tsoul (frame 0)
-	OBJECT_ID_TORTURED_SOUL_1                  = 37, // tsoul (frame 1)
-	OBJECT_ID_TORTURED_SOUL_2                  = 38, // tsoul (frame 2)
-	OBJECT_ID_TORTURED_SOUL_3                  = 39, // tsoul (frame 3)
-	OBJECT_ID_TORTURED_SOUL_4                  = 40, // tsoul (frame 4)
-	OBJECT_ID_MYTHICAL_BOOK                    = 41, // book2 (frame 3)
-	OBJECT_ID_L2_DOOR_SW                       = 42, // l2doors (frame 0)
-	OBJECT_ID_L2_DOOR_SE                       = 43, // l2doors (frame 1)
-	OBJECT_ID_WALL_TORCH_SIMPLE_SE             = 44, // wtorch4 (animated, ticksPerFrame 1)
-	OBJECT_ID_WALL_TORCH_SIMPLE_SW             = 45, // wtorch3 (animated, ticksPerFrame 1)
-	OBJECT_ID_WALL_TORCH_SW                    = 46, // wtorch1 (animated, ticksPerFrame 1)
-	OBJECT_ID_WALL_TORCH_SE                    = 47, // wtorch2 (animated, ticksPerFrame 1)
-	OBJECT_ID_SARCOPHAGUS                      = 48, // sarc (frame 0)
-	OBJECT_ID_FLAME                            = 49, // flame1 (frame 0)
-	OBJECT_ID_LEVER_POS_B                      = 50, // lever (frame 0)
-	OBJECT_ID_MINI_WATER                       = 51, // miniwatr (animated, ticksPerFrame 1)
-	OBJECT_ID_BOOK_CLOSED                      = 52, // book1 (frame 0)
-	OBJECT_ID_TRAPHOLE_SW                      = 53, // traphole (frame 0)
-	OBJECT_ID_TRAPHOLE_SE                      = 54, // traphole (frame 1)
-	OBJECT_ID_BOOKCASE                         = 55, // bcase (frame 0)
-	OBJECT_ID_WEAPON_RACK                      = 56, // weapstnd (frame 0)
-	OBJECT_ID_BARREL                           = 57, // barrel (frame 0)
-	OBJECT_ID_BARREL_EXPLOSION                 = 58, // barrelex (frame 0)
-	OBJECT_ID_LEFT_SHRINE_THEME_1              = 59, // lshrineg (frame 0)
-	OBJECT_ID_RIGHT_SHRINE_THEME_1             = 60, // rshrineg (frame 0)
-	OBJECT_ID_SKELETON_TOME_THEME_3            = 61, // book2 (frame 3)
-	OBJECT_ID_BOOKCASE_SW_THEME_5              = 62, // bcase (frame 2)
-	OBJECT_ID_BOOKCASE_SE_THEME_5              = 63, // bcase (frame 3)
-	OBJECT_ID_LIBRARY_BOOK_THEME_5             = 64, // book2 (frame 0)
-	OBJECT_ID_CANDLE_THEME_5                   = 65, // candle2 (animated, ticksPerFrame 2)
-	OBJECT_ID_BLOOD_FOUNTAIN_THEME_7           = 66, // bloodfnt (animated, ticksPerFrame 2)
-	OBJECT_ID_DECAPITATED_BODY_N_THEME_8       = 67, // decap (frame 0)
-	OBJECT_ID_SMALL_CHEST_TRAP                 = 68, // chest1 (frame 0)
-	OBJECT_ID_CHEST_TRAP                       = 69, // chest2 (frame 0)
-	OBJECT_ID_LARGE_CHEST_TRAP                 = 70, // chest3 (frame 0)
-	OBJECT_ID_BOOK_OF_THE_BLIND                = 71, // book1 (frame 0)
-	OBJECT_ID_BOOK_OF_BLOOD                    = 72, // book1 (frame 3)
-	OBJECT_ID_PEDESTAL_OF_BLOOD                = 73, // pedistl (frame 0)
-	OBJECT_ID_L3_DOOR_SE                       = 74, // l3doors (frame 0)
-	OBJECT_ID_L3_DOOR_SW                       = 75, // l3doors (frame 1)
-	OBJECT_ID_PURIFYING_SPRING_THEME_9         = 76, // pfountn (animated, ticksPerFrame 2)
-	OBJECT_ID_ARMOR_STAND_THEME_10             = 77, // armstand (frame 0)
-	OBJECT_ID_ARMOR_STAND_THEME_10_EMPTY       = 78, // armstand (frame 1)
-	OBJECT_ID_GOAT_SHRINE_THEME_11             = 79, // goatshrn (animated, ticksPerFrame 2)
-	OBJECT_ID_CAULDRON                         = 80, // cauldren (frame 0)
-	OBJECT_ID_MURKY_POOL_THEME_13              = 81, // mfountn (animated, ticksPerFrame 2)
-	OBJECT_ID_FOUNTAIN_OF_TEARS_THEME_14       = 82, // tfountn (animated, ticksPerFrame 2)
-	OBJECT_ID_ALTAR_BOY                        = 83, // altboy (frame 0)
-	OBJECT_ID_MAGIC_CIRCLE_PENTAGRAM           = 84, // mcirl (frame 0)
-	OBJECT_ID_MAGIC_CIRCLE                     = 85, // mcirl (frame 0) [frame 2 in game]
-	OBJECT_ID_LABYRINTH_BOOKS                  = 86, // bkslbrnt (frame 0)
-	OBJECT_ID_CANDLE                           = 87, // candle2 (animated, ticksPerFrame 2)
-	OBJECT_ID_STEEL_TOME                       = 88, // book1 (frame 3)
-	OBJECT_ID_ARMOR_STAND_WARLORD_OF_BLOOD     = 89, // armstand (frame 0)
-	OBJECT_ID_WEAPON_RACK_WARLORD_OF_BLOOD     = 90, // weapstnd (frame 0)
-	OBJECT_ID_BURNING_CROSS_THEME_15           = 91, // burncros (animated, ticksPerFrame 0)
-	OBJECT_ID_WEAPON_RACK_THEME_16             = 92, // weapstnd (frame 0)
-	OBJECT_ID_WEAPON_RACK_THEME_16_EMPTY       = 93, // weapstnd (frame 1)
-	OBJECT_ID_MUSHROOM_PATCH                   = 94, // mushptch (frame 0)
-	OBJECT_ID_VILE_STAND                       = 95, // lzstand (frame 0)
-	OBJECT_ID_SLAIN_HERO                       = 96, // decap (frame 1)
-	OBJECT_ID_LARGE_CHEST_OGDENS_SIGN          = 97, // chest3 (frame 0)
-	OBJECT_ID_INVALID_8                        = 98, // l1braz (invalid frame)
+	OBJECT_ID_BRAZIER                          =  0, ///< l1braz (animated, ticksPerFrame 1)
+	OBJECT_ID_L1_DOOR_SW                       =  1, ///< l1doors (frame 0)
+	OBJECT_ID_L1_DOOR_SE                       =  2, ///< l1doors (frame 1)
+	OBJECT_ID_SKULL_FIRE_THEME_3               =  3, ///< skulfire (animated, ticksPerFrame 2)
+	OBJECT_ID_LEVER_POS_A                      =  4, ///< lever (frame 0)
+	OBJECT_ID_SMALL_CHEST                      =  5, ///< chest1 (frame 0)
+	OBJECT_ID_CHEST                            =  6, ///< chest2 (frame 0)
+	OBJECT_ID_LARGE_CHEST                      =  7, ///< chest3 (frame 0)
+	OBJECT_ID_INVALID_1                        =  8, ///< l1braz (invalid frame)
+	OBJECT_ID_CANDLE_THEME_1                   =  9, ///< candle2 (animated, ticksPerFrame 2)
+	OBJECT_ID_INVALID_2                        = 10, ///< l1braz (invalid frame)
+	OBJECT_ID_BANNER_SE_THEME_3                = 11, ///< banner (frame 1)
+	OBJECT_ID_BANNER_THEME_3                   = 12, ///< banner (frame 0)
+	OBJECT_ID_BANNER_SW_THEME_3                = 13, ///< banner (frame 2)
+	OBJECT_ID_SKULL_PILE                       = 14, ///< skulpile (invalid frame)
+	OBJECT_ID_INVALID_3                        = 15, ///< l1braz (invalid frame)
+	OBJECT_ID_INVALID_4                        = 16, ///< l1braz (invalid frame)
+	OBJECT_ID_INVALID_5                        = 17, ///< l1braz (invalid frame)
+	OBJECT_ID_INVALID_6                        = 18, ///< l1braz (invalid frame)
+	OBJECT_ID_INVALID_7                        = 19, ///< l1braz (invalid frame)
+	OBJECT_ID_CRUCIFIED_SKELETON_S             = 20, ///< cruxsk1 (frame 0)
+	OBJECT_ID_CRUCIFIED_SKELETON_SE            = 21, ///< cruxsk2 (frame 0)
+	OBJECT_ID_CRUCIFIED_SKELETON_SW            = 22, ///< cruxsk3 (frame 0)
+	OBJECT_ID_ROCK_STAND                       = 23, ///< rockstan (frame 0)
+	OBJECT_ID_ANGEL                            = 24, ///< angel (frame 0)
+	OBJECT_ID_ANCIENT_TOME_OR_BOOK_OF_VILENESS = 25, ///< book2 (frame 0)
+	OBJECT_ID_BURNING_CROSS                    = 26, ///< burncros (animated, ticksPerFrame 0)
+	OBJECT_ID_NUDE                             = 27, ///< nude2 (animated, ticksPerFrame 3)
+	OBJECT_ID_SKULL_LEVER                      = 28, ///< switch4 (frame 0)
+	OBJECT_ID_TORTURED_NUDE_MAN_0              = 29, ///< tnudem (frame 0)
+	OBJECT_ID_TORTURED_NUDE_MAN_1_THEME_6      = 30, ///< tnudem (frame 1)
+	OBJECT_ID_TORTURED_NUDE_MAN_2_THEME_6      = 31, ///< tnudem (frame 2)
+	OBJECT_ID_TORTURED_NUDE_MAN_3_THEME_6      = 32, ///< tnudem (frame 3)
+	OBJECT_ID_TORTURED_NUDE_WOMAN_0_THEME_6    = 33, ///< tnudew (frame 0)
+	OBJECT_ID_TORTURED_NUDE_WOMAN_1_THEME_6    = 34, ///< tnudew (frame 1)
+	OBJECT_ID_TORTURED_NUDE_WOMAN_2_THEME_6    = 35, ///< tnudew (frame 2)
+	OBJECT_ID_TORTURED_SOUL_0                  = 36, ///< tsoul (frame 0)
+	OBJECT_ID_TORTURED_SOUL_1                  = 37, ///< tsoul (frame 1)
+	OBJECT_ID_TORTURED_SOUL_2                  = 38, ///< tsoul (frame 2)
+	OBJECT_ID_TORTURED_SOUL_3                  = 39, ///< tsoul (frame 3)
+	OBJECT_ID_TORTURED_SOUL_4                  = 40, ///< tsoul (frame 4)
+	OBJECT_ID_MYTHICAL_BOOK                    = 41, ///< book2 (frame 3)
+	OBJECT_ID_L2_DOOR_SW                       = 42, ///< l2doors (frame 0)
+	OBJECT_ID_L2_DOOR_SE                       = 43, ///< l2doors (frame 1)
+	OBJECT_ID_WALL_TORCH_SIMPLE_SE             = 44, ///< wtorch4 (animated, ticksPerFrame 1)
+	OBJECT_ID_WALL_TORCH_SIMPLE_SW             = 45, ///< wtorch3 (animated, ticksPerFrame 1)
+	OBJECT_ID_WALL_TORCH_SW                    = 46, ///< wtorch1 (animated, ticksPerFrame 1)
+	OBJECT_ID_WALL_TORCH_SE                    = 47, ///< wtorch2 (animated, ticksPerFrame 1)
+	OBJECT_ID_SARCOPHAGUS                      = 48, ///< sarc (frame 0)
+	OBJECT_ID_FLAME                            = 49, ///< flame1 (frame 0)
+	OBJECT_ID_LEVER_POS_B                      = 50, ///< lever (frame 0)
+	OBJECT_ID_MINI_WATER                       = 51, ///< miniwatr (animated, ticksPerFrame 1)
+	OBJECT_ID_BOOK_CLOSED                      = 52, ///< book1 (frame 0)
+	OBJECT_ID_TRAPHOLE_SW                      = 53, ///< traphole (frame 0)
+	OBJECT_ID_TRAPHOLE_SE                      = 54, ///< traphole (frame 1)
+	OBJECT_ID_BOOKCASE                         = 55, ///< bcase (frame 0)
+	OBJECT_ID_WEAPON_RACK                      = 56, ///< weapstnd (frame 0)
+	OBJECT_ID_BARREL                           = 57, ///< barrel (frame 0)
+	OBJECT_ID_BARREL_EXPLOSION                 = 58, ///< barrelex (frame 0)
+	OBJECT_ID_LEFT_SHRINE_THEME_1              = 59, ///< lshrineg (frame 0)
+	OBJECT_ID_RIGHT_SHRINE_THEME_1             = 60, ///< rshrineg (frame 0)
+	OBJECT_ID_SKELETON_TOME_THEME_3            = 61, ///< book2 (frame 3)
+	OBJECT_ID_BOOKCASE_SW_THEME_5              = 62, ///< bcase (frame 2)
+	OBJECT_ID_BOOKCASE_SE_THEME_5              = 63, ///< bcase (frame 3)
+	OBJECT_ID_LIBRARY_BOOK_THEME_5             = 64, ///< book2 (frame 0)
+	OBJECT_ID_CANDLE_THEME_5                   = 65, ///< candle2 (animated, ticksPerFrame 2)
+	OBJECT_ID_BLOOD_FOUNTAIN_THEME_7           = 66, ///< bloodfnt (animated, ticksPerFrame 2)
+	OBJECT_ID_DECAPITATED_BODY_N_THEME_8       = 67, ///< decap (frame 0)
+	OBJECT_ID_SMALL_CHEST_TRAP                 = 68, ///< chest1 (frame 0)
+	OBJECT_ID_CHEST_TRAP                       = 69, ///< chest2 (frame 0)
+	OBJECT_ID_LARGE_CHEST_TRAP                 = 70, ///< chest3 (frame 0)
+	OBJECT_ID_BOOK_OF_THE_BLIND                = 71, ///< book1 (frame 0)
+	OBJECT_ID_BOOK_OF_BLOOD                    = 72, ///< book1 (frame 3)
+	OBJECT_ID_PEDESTAL_OF_BLOOD                = 73, ///< pedistl (frame 0)
+	OBJECT_ID_L3_DOOR_SE                       = 74, ///< l3doors (frame 0)
+	OBJECT_ID_L3_DOOR_SW                       = 75, ///< l3doors (frame 1)
+	OBJECT_ID_PURIFYING_SPRING_THEME_9         = 76, ///< pfountn (animated, ticksPerFrame 2)
+	OBJECT_ID_ARMOR_STAND_THEME_10             = 77, ///< armstand (frame 0)
+	OBJECT_ID_ARMOR_STAND_THEME_10_EMPTY       = 78, ///< armstand (frame 1)
+	OBJECT_ID_GOAT_SHRINE_THEME_11             = 79, ///< goatshrn (animated, ticksPerFrame 2)
+	OBJECT_ID_CAULDRON                         = 80, ///< cauldren (frame 0)
+	OBJECT_ID_MURKY_POOL_THEME_13              = 81, ///< mfountn (animated, ticksPerFrame 2)
+	OBJECT_ID_FOUNTAIN_OF_TEARS_THEME_14       = 82, ///< tfountn (animated, ticksPerFrame 2)
+	OBJECT_ID_ALTAR_BOY                        = 83, ///< altboy (frame 0)
+	OBJECT_ID_MAGIC_CIRCLE_PENTAGRAM           = 84, ///< mcirl (frame 0)
+	OBJECT_ID_MAGIC_CIRCLE                     = 85, ///< mcirl (frame 0) [frame 2 in game]
+	OBJECT_ID_LABYRINTH_BOOKS                  = 86, ///< bkslbrnt (frame 0)
+	OBJECT_ID_CANDLE                           = 87, ///< candle2 (animated, ticksPerFrame 2)
+	OBJECT_ID_STEEL_TOME                       = 88, ///< book1 (frame 3)
+	OBJECT_ID_ARMOR_STAND_WARLORD_OF_BLOOD     = 89, ///< armstand (frame 0)
+	OBJECT_ID_WEAPON_RACK_WARLORD_OF_BLOOD     = 90, ///< weapstnd (frame 0)
+	OBJECT_ID_BURNING_CROSS_THEME_15           = 91, ///< burncros (animated, ticksPerFrame 0)
+	OBJECT_ID_WEAPON_RACK_THEME_16             = 92, ///< weapstnd (frame 0)
+	OBJECT_ID_WEAPON_RACK_THEME_16_EMPTY       = 93, ///< weapstnd (frame 1)
+	OBJECT_ID_MUSHROOM_PATCH                   = 94, ///< mushptch (frame 0)
+	OBJECT_ID_VILE_STAND                       = 95, ///< lzstand (frame 0)
+	OBJECT_ID_SLAIN_HERO                       = 96, ///< decap (frame 1)
+	OBJECT_ID_LARGE_CHEST_OGDENS_SIGN          = 97, ///< chest3 (frame 0)
+	OBJECT_ID_INVALID_8                        = 98, ///< l1braz (invalid frame)
 } object_id;
 
-// Pannel button IDs specify panel_buttons array indices.
-//
-// References:
-//    * https://github.com/sanctuary/notes/blob/master/data/control.cpp#panel_buttons
+/// Pannel button IDs specify panel_buttons array indices.
+///
+/// References:
+///    * https://github.com/sanctuary/notes/blob/master/data/control.cpp#panel_buttons
 typedef enum {
 	PANEL_BUTTON_ID_CHARACTER_INFORMATION = 0,
 	PANEL_BUTTON_ID_QUESTS_LOG            = 1,
@@ -1558,30 +1558,30 @@ typedef enum {
 	PANEL_BUTTON_ID_PLAYER_ATTACK         = 7,
 } panel_button_id;
 
-// Player classes.
+/// Player classes.
 typedef enum {
 	PLAYER_CLASS_WARRIOR  = 0,
 	PLAYER_CLASS_ROGUE    = 1,
 	PLAYER_CLASS_SORCEROR = 2,
 } player_class;
 
-// Player modes.
-//
-// PSX def:
-//    typedef enum PLR_MODE {
-//       PM_STAND = 0,
-//       PM_WALK = 1,
-//       PM_WALK2 = 2,
-//       PM_WALK3 = 3,
-//       PM_ATTACK = 4,
-//       PM_RATTACK = 5,
-//       PM_BLOCK = 6,
-//       PM_GOTHIT = 7,
-//       PM_DEATH = 8,
-//       PM_SPELL = 9,
-//       PM_NEWLVL = 10,
-//       PM_QUIT = 11,
-//    } PLR_MODE;
+/// Player modes.
+///
+/// PSX def:
+///    typedef enum PLR_MODE {
+///       PM_STAND = 0,
+///       PM_WALK = 1,
+///       PM_WALK2 = 2,
+///       PM_WALK3 = 3,
+///       PM_ATTACK = 4,
+///       PM_RATTACK = 5,
+///       PM_BLOCK = 6,
+///       PM_GOTHIT = 7,
+///       PM_DEATH = 8,
+///       PM_SPELL = 9,
+///       PM_NEWLVL = 10,
+///       PM_QUIT = 11,
+///    } PLR_MODE;
 typedef enum {
 	PLAYER_MODE_STANDING         =  0,
 	PLAYER_MODE_WALKING_1        =  1,
@@ -1597,10 +1597,10 @@ typedef enum {
 	PLAYER_MODE_QUITTING         = 11,
 } player_mode;
 
-// Quest IDs specify quest_data array indices.
-//
-// References:
-//    * https://github.com/sanctuary/notes/blob/master/data/quests.cpp#quest_data
+/// Quest IDs specify quest_data array indices.
+///
+/// References:
+///    * https://github.com/sanctuary/notes/blob/master/data/quests.cpp#quest_data
 typedef enum {
 	QUEST_ID_THE_MAGIC_ROCK           =  0,
 	QUEST_ID_BLACK_MUSHROOM           =  1,
@@ -1621,19 +1621,19 @@ typedef enum {
 	QUEST_ID_INVALID                  = -1,
 } quest_id;
 
-// Quest levels.
-//
-// PSX def:
-//    typedef enum _setlevels {
-//       SL_SKELKING = 1,
-//       SL_BONECHAMB = 2,
-//       SL_MAZE = 3,
-//       SL_POISONWATER = 4,
-//       SL_VILEBETRAYER = 5,
-//    } _setlevels;
-//
-// References:
-//    * https://github.com/sanctuary/notes/blob/master/data/setmaps.cpp#quest_level_names
+/// Quest levels.
+///
+/// PSX def:
+///    typedef enum _setlevels {
+///       SL_SKELKING = 1,
+///       SL_BONECHAMB = 2,
+///       SL_MAZE = 3,
+///       SL_POISONWATER = 4,
+///       SL_VILEBETRAYER = 5,
+///    } _setlevels;
+///
+/// References:
+///    * https://github.com/sanctuary/notes/blob/master/data/setmaps.cpp#quest_level_names
 typedef enum {
 	QUEST_LEVEL_NONE                    = 0,
 	QUEST_LEVEL_SKELETON_KINGS_LAIR     = 1,
@@ -1643,10 +1643,10 @@ typedef enum {
 	QUEST_LEVEL_ARCHBISHOP_LAZARUS_LAIR = 5,
 } quest_level;
 
-// Quest level IDs.
-//
-// References:
-//    * https://github.com/sanctuary/notes/blob/master/data/quests.cpp#quest_stairway_names
+/// Quest level IDs.
+///
+/// References:
+///    * https://github.com/sanctuary/notes/blob/master/data/quests.cpp#quest_stairway_names
 typedef enum {
 	QUEST_LEVEL_ID_KING_LEORICS_TOMB   = 0,
 	QUEST_LEVEL_ID_THE_CHAMBER_OF_BONE = 1,
@@ -1655,7 +1655,7 @@ typedef enum {
 	QUEST_LEVEL_ID_UNHOLY_ALTAR        = 4,
 } quest_level_id;
 
-// Quest state records the progress of the quest.
+/// Quest state records the progress of the quest.
 typedef enum {
 	QUEST_STATE_INACTIVE = 0,
 	QUEST_STATE_WAITING  = 1,
@@ -1663,10 +1663,10 @@ typedef enum {
 	QUEST_STATE_COMPLETE = 3,
 } quest_state;
 
-// Sound effect IDs specify sfx_data array indices.
-//
-// References:
-//    * https://github.com/sanctuary/notes/blob/master/data/effects.cpp#sfx_data
+/// Sound effect IDs specify sfx_data array indices.
+///
+/// References:
+///    * https://github.com/sanctuary/notes/blob/master/data/effects.cpp#sfx_data
 typedef enum {
 	SFX_ID_MISC_WALK1_WAV                                                                                  =   0,
 	SFX_ID_MISC_WALK2_WAV                                                                                  =   1,
@@ -2528,10 +2528,10 @@ typedef enum {
 	SFX_ID_MONSTERS_DIABLOD_WAV                                                                            = 857,
 } sfx_id;
 
-// Speech IDs specify speech_data array indices.
-//
-// References:
-//    * https://github.com/sanctuary/notes/blob/master/rdata/talk.cpp#speech_data
+/// Speech IDs specify speech_data array indices.
+///
+/// References:
+///    * https://github.com/sanctuary/notes/blob/master/rdata/talk.cpp#speech_data
 typedef enum {
 	SPEECH_ID_TOWNERS_STORYT01_WAV_AHH_THE_STORY_OF_OUR_KING_IS_IT                                            =   0,
 	SPEECH_ID_TOWNERS_TAVOWN21_WAV_THE_VILLAGE_NEEDS_YOUR_HELP_GOOD_MASTER                                    =   1,
@@ -2795,10 +2795,10 @@ typedef enum {
 	SPEECH_ID_INVALID                                                                                         =  -1,
 } speech_id;
 
-// Spell IDs specify spell_data array indices.
-//
-// References:
-//    * https://github.com/sanctuary/notes/blob/master/data/spells.cpp#spell_data
+/// Spell IDs specify spell_data array indices.
+///
+/// References:
+///    * https://github.com/sanctuary/notes/blob/master/data/spells.cpp#spell_data
 typedef enum {
 	SPELL_ID_NULL            =  0,
 	SPELL_ID_FIREBOLT        =  1,
@@ -2840,7 +2840,7 @@ typedef enum {
 	SPELL_ID_INVALID         = -1,
 } spell_id;
 
-// Spell types.
+/// Spell types.
 typedef enum {
 	SPELL_TYPE_SKILL   = 0,
 	SPELL_TYPE_SPELL   = 1,
@@ -2849,39 +2849,39 @@ typedef enum {
 	SPELL_TYPE_INVALID = 4,
 } spell_type;
 
-// Step direction used for path finding.
-//
-// north
-//    -1
-//    -1
-//
-// west
-//    -1
-//    1
-//
-// east
-//    1
-//    -1
-//
-// south
-//    1
-//    1
-//
-// north west
-//    -1
-//    0
-//
-// north east
-//    0
-//    -1
-//
-// south east
-//    1
-//    0
-//
-// south west
-//    0
-//    1
+/// Step direction used for path finding.
+///
+/// north
+///    -1
+///    -1
+///
+/// west
+///    -1
+///    1
+///
+/// east
+///    1
+///    -1
+///
+/// south
+///    1
+///    1
+///
+/// north west
+///    -1
+///    0
+///
+/// north east
+///    0
+///    -1
+///
+/// south east
+///    1
+///    0
+///
+/// south west
+///    0
+///    1
 typedef enum {
 	STEP_DIRECTION_NORTH      = 0,
 	STEP_DIRECTION_WEST       = 1,
@@ -2893,7 +2893,7 @@ typedef enum {
 	STEP_DIRECTION_SOUTH_EAST = 7,
 } step_direction;
 
-// Talk IDs for conversation dialogues.
+/// Talk IDs for conversation dialogues.
 typedef enum {
 	TALK_ID_NONE                      =  0,
 	TALK_ID_GRISWOLD                  =  1,
@@ -2921,7 +2921,7 @@ typedef enum {
 	TALK_ID_GILLIAN                   = 23,
 } talk_id;
 
-// Theme IDs.
+/// Theme IDs.
 typedef enum {
 	THEME_ID_BARREL             =  0,
 	THEME_ID_SHRINE             =  1,
@@ -2943,7 +2943,7 @@ typedef enum {
 	THEME_ID_NONE               = -1,
 } theme_id;
 
-// Template IDs for error windows.
+/// Template IDs for error windows.
 typedef enum {
 	TEMPLATE_ID_DX_INIT_ERROR              = 104,
 	TEMPLATE_ID_OUT_OF_MEMORY_ERROR        = 105,
@@ -2957,7 +2957,7 @@ typedef enum {
 	TEMPLATE_ID_READ_ONLY_DIRECTORY_ERROR  = 114,
 } template_id;
 
-// Text colours.
+/// Text colours.
 typedef enum {
 	TEXT_COLOR_GREY = 0,
 	TEXT_COLOR_BLUE = 1,
@@ -2965,10 +2965,10 @@ typedef enum {
 	TEXT_COLOR_GOLD = 3,
 } text_color;
 
-// Towner animation sequence IDs specify towner_anim_seq array indices.
-//
-// References:
-//    * https://github.com/sanctuary/notes/blob/master/data/towners.cpp#towner_anim_seq
+/// Towner animation sequence IDs specify towner_anim_seq array indices.
+///
+/// References:
+///    * https://github.com/sanctuary/notes/blob/master/data/towners.cpp#towner_anim_seq
 typedef enum {
 	TOWNER_ANIM_SEQ_ID_GRISWOLD = 0,
 	TOWNER_ANIM_SEQ_ID_PEPIN    = 1,
@@ -2979,7 +2979,7 @@ typedef enum {
 	TOWNER_ANIM_SEQ_ID_NONE     = -1,
 } towner_anim_seq_id;
 
-// Towner IDs for NPCs in Tristram.
+/// Towner IDs for NPCs in Tristram.
 typedef enum {
 	TOWNER_ID_GRISWOLD         = 0,
 	TOWNER_ID_PEPIN            = 1,
@@ -2993,7 +2993,7 @@ typedef enum {
 	TOWNER_ID_COW              = 9,
 } towner_id;
 
-// Music track IDs.
+/// Music track IDs.
 typedef enum {
 	TRACK_ID_TRISTRAM  = 0,
 	TRACK_ID_CATHEDRAL = 1,
@@ -3004,7 +3004,7 @@ typedef enum {
 	TRACK_ID_NONE      = 6,
 } track_id;
 
-// Unique base items specify the underlying base items of unique items.
+/// Unique base items specify the underlying base items of unique items.
 typedef enum {
 	UNIQUE_BASE_ITEM_NONE                  =  0,
 	UNIQUE_BASE_ITEM_SHORT_BOW             =  1,
@@ -3076,10 +3076,10 @@ typedef enum {
 	UNIQUE_BASE_ITEM_INVALID               = -1,
 } unique_base_item;
 
-// Unique item IDs specify unique_item_data array indices.
-//
-// References:
-//    * https://github.com/sanctuary/notes/blob/master/rdata/items.cpp#unique_item_data
+/// Unique item IDs specify unique_item_data array indices.
+///
+/// References:
+///    * https://github.com/sanctuary/notes/blob/master/rdata/items.cpp#unique_item_data
 typedef enum {
 	UNIQUE_ITEM_ID_THE_BUTCHERS_CLEAVER   =  0,
 	UNIQUE_ITEM_ID_THE_UNDEAD_CROWN       =  1,
@@ -3174,107 +3174,107 @@ typedef enum {
 	UNIQUE_ITEM_ID_NULL                   = 90,
 } unique_item_id;
 
-// Unique monster IDs specify unique_monster_data array indices.
-//
-// References:
-//    * https://github.com/sanctuary/notes/blob/master/data/monsters.cpp#unique_monster_data
+/// Unique monster IDs specify unique_monster_data array indices.
+///
+/// References:
+///    * https://github.com/sanctuary/notes/blob/master/data/monsters.cpp#unique_monster_data
 typedef enum {
-	UNIQUE_MONSTER_ID_GHARBAD_THE_WEAK         =  0, // MONSTER_ID_FLESH_CLAN_MACE
-	UNIQUE_MONSTER_ID_SKELETON_KING            =  1, // MONSTER_ID_SKELETON_KING
-	UNIQUE_MONSTER_ID_ZHAR_THE_MAD             =  2, // MONSTER_ID_COUNSELOR
-	UNIQUE_MONSTER_ID_SNOTSPILL                =  3, // MONSTER_ID_DARK_ONE_SPEAR
-	UNIQUE_MONSTER_ID_ARCH_BISHOP_LAZARUS      =  4, // MONSTER_ID_ADVOCATE
-	UNIQUE_MONSTER_ID_RED_VEX                  =  5, // MONSTER_ID_HELL_SPAWN
-	UNIQUE_MONSTER_ID_BLACKJADE                =  6, // MONSTER_ID_HELL_SPAWN
-	UNIQUE_MONSTER_ID_LACHDANAN                =  7, // MONSTER_ID_BLOOD_KNIGHT
-	UNIQUE_MONSTER_ID_WARLORD_OF_BLOOD         =  8, // MONSTER_ID_STEEL_LORD
-	UNIQUE_MONSTER_ID_THE_BUTCHER              =  9, // MONSTER_ID_THE_BUTCHER
-	UNIQUE_MONSTER_ID_BONEHEAD_KEENAXE         = 10, // MONSTER_ID_CORPSE_AXE
-	UNIQUE_MONSTER_ID_BLADESKIN_THE_SLASHER    = 11, // MONSTER_ID_FALLEN_ONE_SWORD
-	UNIQUE_MONSTER_ID_SOULPUS                  = 12, // MONSTER_ID_ZOMBIE
-	UNIQUE_MONSTER_ID_PUKERAT_THE_UNCLEAN      = 13, // MONSTER_ID_FALLEN_ONE_SPEAR
-	UNIQUE_MONSTER_ID_BONERIPPER               = 14, // MONSTER_ID_SKELETON_AXE
-	UNIQUE_MONSTER_ID_ROTFEAST_THE_HUNGRY      = 15, // MONSTER_ID_ZOMBIE
-	UNIQUE_MONSTER_ID_GUTSHANK_THE_QUICK       = 16, // MONSTER_ID_CARVER_SWORD
-	UNIQUE_MONSTER_ID_BROKENHEAD_BANGSHIELD    = 17, // MONSTER_ID_CORPSE_CAPTAIN
-	UNIQUE_MONSTER_ID_BONGO                    = 18, // MONSTER_ID_DEVIL_KIN_SPEAR
-	UNIQUE_MONSTER_ID_ROTCARNAGE               = 19, // MONSTER_ID_GHOUL
-	UNIQUE_MONSTER_ID_SHADOWBITE               = 20, // MONSTER_ID_SCAVENGER
-	UNIQUE_MONSTER_ID_DEADEYE                  = 21, // MONSTER_ID_SKELETON_BOW
-	UNIQUE_MONSTER_ID_MADEYE_THE_DEAD          = 22, // MONSTER_ID_BURNING_DEAD_AXE
-	UNIQUE_MONSTER_ID_EL_CHUPACABRAS           = 23, // MONSTER_ID_PLAGUE_EATER
-	UNIQUE_MONSTER_ID_SKULLFIRE                = 24, // MONSTER_ID_CORPSE_BOW
-	UNIQUE_MONSTER_ID_WARPSKULL                = 25, // MONSTER_ID_HIDDEN
-	UNIQUE_MONSTER_ID_GORETONGUE               = 26, // MONSTER_ID_ROTTING_CARCASS
-	UNIQUE_MONSTER_ID_PULSECRAWLER             = 27, // MONSTER_ID_SHADOW_BEAST
-	UNIQUE_MONSTER_ID_MOONBENDER               = 28, // MONSTER_ID_BLINK
-	UNIQUE_MONSTER_ID_WRATHRAVEN               = 29, // MONSTER_ID_BLINK
-	UNIQUE_MONSTER_ID_SPINEEATER               = 30, // MONSTER_ID_BONE_GASHER
-	UNIQUE_MONSTER_ID_BLACKASH_THE_BURNING     = 31, // MONSTER_ID_BURNING_DEAD_BOW
-	UNIQUE_MONSTER_ID_SHADOWCROW               = 32, // MONSTER_ID_DARK_ONE_SWORD
-	UNIQUE_MONSTER_ID_BLIGHTSTONE_THE_WEAK     = 33, // MONSTER_ID_LORD_SAYTER
-	UNIQUE_MONSTER_ID_BILEFROTH_THE_PIT_MASTER = 34, // MONSTER_ID_OVERLORD
-	UNIQUE_MONSTER_ID_BLOODSKIN_DARKBOW        = 35, // MONSTER_ID_FLESH_CLAN_BOW
-	UNIQUE_MONSTER_ID_FOULWING                 = 36, // MONSTER_ID_GLOOM
-	UNIQUE_MONSTER_ID_SHADOWDRINKER            = 37, // MONSTER_ID_HORROR_CAPTAIN
-	UNIQUE_MONSTER_ID_HAZESHIFTER              = 38, // MONSTER_ID_UNSEEN
-	UNIQUE_MONSTER_ID_DEATHSPIT                = 39, // MONSTER_ID_ACID_BEAST
-	UNIQUE_MONSTER_ID_BLOODGUTTER              = 40, // MONSTER_ID_FIRE_CLAN_MACE
-	UNIQUE_MONSTER_ID_DEATHSHADE_FLESHMAUL     = 41, // MONSTER_ID_STONE_CLAN_MACE
-	UNIQUE_MONSTER_ID_WARMAGGOT_THE_MAD        = 42, // MONSTER_ID_WYRM
-	UNIQUE_MONSTER_ID_GLASSKULL_THE_JAGGED     = 43, // MONSTER_ID_RED_STORM
-	UNIQUE_MONSTER_ID_BLIGHTFIRE               = 44, // MONSTER_ID_FIRE_CLAN_BOW
-	UNIQUE_MONSTER_ID_NIGHTWING_THE_COLD       = 45, // MONSTER_ID_GARGOYLE
-	UNIQUE_MONSTER_ID_GORESTONE                = 46, // MONSTER_ID_NIGHT_CLAN_BOW
-	UNIQUE_MONSTER_ID_BRONZEFIST_FIRESTONE     = 47, // MONSTER_ID_HELL_STONE
-	UNIQUE_MONSTER_ID_WRATHFIRE_THE_DOOMED     = 48, // MONSTER_ID_INCINERATOR
-	UNIQUE_MONSTER_ID_FIREWOUND_THE_GRIM       = 49, // MONSTER_ID_MAGMA_DEMON
-	UNIQUE_MONSTER_ID_BARON_SLUDGE             = 50, // MONSTER_ID_MUD_MAN
-	UNIQUE_MONSTER_ID_BLIGHTHORN_STEELMACE     = 51, // MONSTER_ID_NIGHT_CLAN_MACE
-	UNIQUE_MONSTER_ID_CHAOSHOWLER              = 52, // MONSTER_ID_POISON_SPITTER
-	UNIQUE_MONSTER_ID_DOOMGRIN_THE_ROTTING     = 53, // MONSTER_ID_RED_DEATH
-	UNIQUE_MONSTER_ID_MADBURNER                = 54, // MONSTER_ID_FLAME_LORD
-	UNIQUE_MONSTER_ID_BONESAW_THE_LITCH        = 55, // MONSTER_ID_LITCH_DEMON
-	UNIQUE_MONSTER_ID_BREAKSPINE               = 56, // MONSTER_ID_MUD_RUNNER
-	UNIQUE_MONSTER_ID_DEVILSKULL_SHARPBONE     = 57, // MONSTER_ID_RED_DEATH
-	UNIQUE_MONSTER_ID_BROKENSTORM              = 58, // MONSTER_ID_RED_STORM
-	UNIQUE_MONSTER_ID_STORMBANE                = 59, // MONSTER_ID_STORM_RIDER
-	UNIQUE_MONSTER_ID_OOZEDROOL                = 60, // MONSTER_ID_TOAD_DEMON
-	UNIQUE_MONSTER_ID_GOLDBLIGHT_OF_THE_FLAME  = 61, // MONSTER_ID_BLOOD_CLAW
-	UNIQUE_MONSTER_ID_BLACKSTORM               = 62, // MONSTER_ID_OBSIDIAN_LORD
-	UNIQUE_MONSTER_ID_PLAGUEWRATH              = 63, // MONSTER_ID_POISON_SPITTER
-	UNIQUE_MONSTER_ID_THE_FLAYER               = 64, // MONSTER_ID_STORM_RIDER
-	UNIQUE_MONSTER_ID_BLUEHORN                 = 65, // MONSTER_ID_FROST_CHARGER
-	UNIQUE_MONSTER_ID_WARPFIRE_HELLSPAWN       = 66, // MONSTER_ID_HELL_BURNER
-	UNIQUE_MONSTER_ID_FANGSPEIR                = 67, // MONSTER_ID_CAVE_VIPER
-	UNIQUE_MONSTER_ID_FESTERSKULL              = 68, // MONSTER_ID_UNDEAD_BALROG
-	UNIQUE_MONSTER_ID_LIONSKULL_THE_BENT       = 69, // MONSTER_ID_BLACK_KNIGHT
-	UNIQUE_MONSTER_ID_BLACKTONGUE              = 70, // MONSTER_ID_COUNSELOR
-	UNIQUE_MONSTER_ID_VILETOUCH                = 71, // MONSTER_ID_DEATH_WING
-	UNIQUE_MONSTER_ID_VIPERFLAME               = 72, // MONSTER_ID_FIRE_DRAKE
-	UNIQUE_MONSTER_ID_FANGSKIN                 = 73, // MONSTER_ID_GOLD_VIPER
-	UNIQUE_MONSTER_ID_WITCHFIRE_THE_UNHOLY     = 74, // MONSTER_ID_SUCCUBUS
-	UNIQUE_MONSTER_ID_BLACKSKULL               = 75, // MONSTER_ID_BALROG
-	UNIQUE_MONSTER_ID_SOULSLASH                = 76, // MONSTER_ID_UNRAVELER
-	UNIQUE_MONSTER_ID_WINDSPAWN                = 77, // MONSTER_ID_VORTEX_LORD
-	UNIQUE_MONSTER_ID_LORD_OF_THE_PIT          = 78, // MONSTER_ID_AZURE_DRAKE
-	UNIQUE_MONSTER_ID_RUSTWEAVER               = 79, // MONSTER_ID_DOOM_GUARD
-	UNIQUE_MONSTER_ID_HOWLINGIRE_THE_SHADE     = 80, // MONSTER_ID_HOLLOW_ONE
-	UNIQUE_MONSTER_ID_DOOMCLOUD                = 81, // MONSTER_ID_MAELSTORM
-	UNIQUE_MONSTER_ID_BLOODMOON_SOULFIRE       = 82, // MONSTER_ID_PAIN_MASTER
-	UNIQUE_MONSTER_ID_WITCHMOON                = 83, // MONSTER_ID_SNOW_WITCH
-	UNIQUE_MONSTER_ID_GOREFEAST                = 84, // MONSTER_ID_VORTEX_LORD
-	UNIQUE_MONSTER_ID_GRAYWAR_THE_SLAYER       = 85, // MONSTER_ID_DOOM_GUARD
-	UNIQUE_MONSTER_ID_DREADJUDGE               = 86, // MONSTER_ID_MAGISTRATE
-	UNIQUE_MONSTER_ID_STAREYE_THE_WITCH        = 87, // MONSTER_ID_HELL_SPAWN
-	UNIQUE_MONSTER_ID_STEELSKULL_THE_HUNTER    = 88, // MONSTER_ID_STEEL_LORD
-	UNIQUE_MONSTER_ID_SIR_GORASH               = 89, // MONSTER_ID_BLOOD_KNIGHT
-	UNIQUE_MONSTER_ID_THE_VIZIER               = 90, // MONSTER_ID_CABALIST
-	UNIQUE_MONSTER_ID_ZAMPHIR                  = 91, // MONSTER_ID_REALITY_WEAVER
-	UNIQUE_MONSTER_ID_BLOODLUST                = 92, // MONSTER_ID_HELL_SPAWN
-	UNIQUE_MONSTER_ID_WEBWIDOW                 = 93, // MONSTER_ID_HELL_SPAWN
-	UNIQUE_MONSTER_ID_FLESHDANCER              = 94, // MONSTER_ID_SOUL_BURNER
-	UNIQUE_MONSTER_ID_GRIMSPIKE                = 95, // MONSTER_ID_OBSIDIAN_LORD
-	UNIQUE_MONSTER_ID_DOOMLOCK                 = 96, // MONSTER_ID_STORM_LORD
-	UNIQUE_MONSTER_ID_NULL                     = 97, // MONSTER_ID_NONE
+	UNIQUE_MONSTER_ID_GHARBAD_THE_WEAK         =  0, ///< MONSTER_ID_FLESH_CLAN_MACE
+	UNIQUE_MONSTER_ID_SKELETON_KING            =  1, ///< MONSTER_ID_SKELETON_KING
+	UNIQUE_MONSTER_ID_ZHAR_THE_MAD             =  2, ///< MONSTER_ID_COUNSELOR
+	UNIQUE_MONSTER_ID_SNOTSPILL                =  3, ///< MONSTER_ID_DARK_ONE_SPEAR
+	UNIQUE_MONSTER_ID_ARCH_BISHOP_LAZARUS      =  4, ///< MONSTER_ID_ADVOCATE
+	UNIQUE_MONSTER_ID_RED_VEX                  =  5, ///< MONSTER_ID_HELL_SPAWN
+	UNIQUE_MONSTER_ID_BLACKJADE                =  6, ///< MONSTER_ID_HELL_SPAWN
+	UNIQUE_MONSTER_ID_LACHDANAN                =  7, ///< MONSTER_ID_BLOOD_KNIGHT
+	UNIQUE_MONSTER_ID_WARLORD_OF_BLOOD         =  8, ///< MONSTER_ID_STEEL_LORD
+	UNIQUE_MONSTER_ID_THE_BUTCHER              =  9, ///< MONSTER_ID_THE_BUTCHER
+	UNIQUE_MONSTER_ID_BONEHEAD_KEENAXE         = 10, ///< MONSTER_ID_CORPSE_AXE
+	UNIQUE_MONSTER_ID_BLADESKIN_THE_SLASHER    = 11, ///< MONSTER_ID_FALLEN_ONE_SWORD
+	UNIQUE_MONSTER_ID_SOULPUS                  = 12, ///< MONSTER_ID_ZOMBIE
+	UNIQUE_MONSTER_ID_PUKERAT_THE_UNCLEAN      = 13, ///< MONSTER_ID_FALLEN_ONE_SPEAR
+	UNIQUE_MONSTER_ID_BONERIPPER               = 14, ///< MONSTER_ID_SKELETON_AXE
+	UNIQUE_MONSTER_ID_ROTFEAST_THE_HUNGRY      = 15, ///< MONSTER_ID_ZOMBIE
+	UNIQUE_MONSTER_ID_GUTSHANK_THE_QUICK       = 16, ///< MONSTER_ID_CARVER_SWORD
+	UNIQUE_MONSTER_ID_BROKENHEAD_BANGSHIELD    = 17, ///< MONSTER_ID_CORPSE_CAPTAIN
+	UNIQUE_MONSTER_ID_BONGO                    = 18, ///< MONSTER_ID_DEVIL_KIN_SPEAR
+	UNIQUE_MONSTER_ID_ROTCARNAGE               = 19, ///< MONSTER_ID_GHOUL
+	UNIQUE_MONSTER_ID_SHADOWBITE               = 20, ///< MONSTER_ID_SCAVENGER
+	UNIQUE_MONSTER_ID_DEADEYE                  = 21, ///< MONSTER_ID_SKELETON_BOW
+	UNIQUE_MONSTER_ID_MADEYE_THE_DEAD          = 22, ///< MONSTER_ID_BURNING_DEAD_AXE
+	UNIQUE_MONSTER_ID_EL_CHUPACABRAS           = 23, ///< MONSTER_ID_PLAGUE_EATER
+	UNIQUE_MONSTER_ID_SKULLFIRE                = 24, ///< MONSTER_ID_CORPSE_BOW
+	UNIQUE_MONSTER_ID_WARPSKULL                = 25, ///< MONSTER_ID_HIDDEN
+	UNIQUE_MONSTER_ID_GORETONGUE               = 26, ///< MONSTER_ID_ROTTING_CARCASS
+	UNIQUE_MONSTER_ID_PULSECRAWLER             = 27, ///< MONSTER_ID_SHADOW_BEAST
+	UNIQUE_MONSTER_ID_MOONBENDER               = 28, ///< MONSTER_ID_BLINK
+	UNIQUE_MONSTER_ID_WRATHRAVEN               = 29, ///< MONSTER_ID_BLINK
+	UNIQUE_MONSTER_ID_SPINEEATER               = 30, ///< MONSTER_ID_BONE_GASHER
+	UNIQUE_MONSTER_ID_BLACKASH_THE_BURNING     = 31, ///< MONSTER_ID_BURNING_DEAD_BOW
+	UNIQUE_MONSTER_ID_SHADOWCROW               = 32, ///< MONSTER_ID_DARK_ONE_SWORD
+	UNIQUE_MONSTER_ID_BLIGHTSTONE_THE_WEAK     = 33, ///< MONSTER_ID_LORD_SAYTER
+	UNIQUE_MONSTER_ID_BILEFROTH_THE_PIT_MASTER = 34, ///< MONSTER_ID_OVERLORD
+	UNIQUE_MONSTER_ID_BLOODSKIN_DARKBOW        = 35, ///< MONSTER_ID_FLESH_CLAN_BOW
+	UNIQUE_MONSTER_ID_FOULWING                 = 36, ///< MONSTER_ID_GLOOM
+	UNIQUE_MONSTER_ID_SHADOWDRINKER            = 37, ///< MONSTER_ID_HORROR_CAPTAIN
+	UNIQUE_MONSTER_ID_HAZESHIFTER              = 38, ///< MONSTER_ID_UNSEEN
+	UNIQUE_MONSTER_ID_DEATHSPIT                = 39, ///< MONSTER_ID_ACID_BEAST
+	UNIQUE_MONSTER_ID_BLOODGUTTER              = 40, ///< MONSTER_ID_FIRE_CLAN_MACE
+	UNIQUE_MONSTER_ID_DEATHSHADE_FLESHMAUL     = 41, ///< MONSTER_ID_STONE_CLAN_MACE
+	UNIQUE_MONSTER_ID_WARMAGGOT_THE_MAD        = 42, ///< MONSTER_ID_WYRM
+	UNIQUE_MONSTER_ID_GLASSKULL_THE_JAGGED     = 43, ///< MONSTER_ID_RED_STORM
+	UNIQUE_MONSTER_ID_BLIGHTFIRE               = 44, ///< MONSTER_ID_FIRE_CLAN_BOW
+	UNIQUE_MONSTER_ID_NIGHTWING_THE_COLD       = 45, ///< MONSTER_ID_GARGOYLE
+	UNIQUE_MONSTER_ID_GORESTONE                = 46, ///< MONSTER_ID_NIGHT_CLAN_BOW
+	UNIQUE_MONSTER_ID_BRONZEFIST_FIRESTONE     = 47, ///< MONSTER_ID_HELL_STONE
+	UNIQUE_MONSTER_ID_WRATHFIRE_THE_DOOMED     = 48, ///< MONSTER_ID_INCINERATOR
+	UNIQUE_MONSTER_ID_FIREWOUND_THE_GRIM       = 49, ///< MONSTER_ID_MAGMA_DEMON
+	UNIQUE_MONSTER_ID_BARON_SLUDGE             = 50, ///< MONSTER_ID_MUD_MAN
+	UNIQUE_MONSTER_ID_BLIGHTHORN_STEELMACE     = 51, ///< MONSTER_ID_NIGHT_CLAN_MACE
+	UNIQUE_MONSTER_ID_CHAOSHOWLER              = 52, ///< MONSTER_ID_POISON_SPITTER
+	UNIQUE_MONSTER_ID_DOOMGRIN_THE_ROTTING     = 53, ///< MONSTER_ID_RED_DEATH
+	UNIQUE_MONSTER_ID_MADBURNER                = 54, ///< MONSTER_ID_FLAME_LORD
+	UNIQUE_MONSTER_ID_BONESAW_THE_LITCH        = 55, ///< MONSTER_ID_LITCH_DEMON
+	UNIQUE_MONSTER_ID_BREAKSPINE               = 56, ///< MONSTER_ID_MUD_RUNNER
+	UNIQUE_MONSTER_ID_DEVILSKULL_SHARPBONE     = 57, ///< MONSTER_ID_RED_DEATH
+	UNIQUE_MONSTER_ID_BROKENSTORM              = 58, ///< MONSTER_ID_RED_STORM
+	UNIQUE_MONSTER_ID_STORMBANE                = 59, ///< MONSTER_ID_STORM_RIDER
+	UNIQUE_MONSTER_ID_OOZEDROOL                = 60, ///< MONSTER_ID_TOAD_DEMON
+	UNIQUE_MONSTER_ID_GOLDBLIGHT_OF_THE_FLAME  = 61, ///< MONSTER_ID_BLOOD_CLAW
+	UNIQUE_MONSTER_ID_BLACKSTORM               = 62, ///< MONSTER_ID_OBSIDIAN_LORD
+	UNIQUE_MONSTER_ID_PLAGUEWRATH              = 63, ///< MONSTER_ID_POISON_SPITTER
+	UNIQUE_MONSTER_ID_THE_FLAYER               = 64, ///< MONSTER_ID_STORM_RIDER
+	UNIQUE_MONSTER_ID_BLUEHORN                 = 65, ///< MONSTER_ID_FROST_CHARGER
+	UNIQUE_MONSTER_ID_WARPFIRE_HELLSPAWN       = 66, ///< MONSTER_ID_HELL_BURNER
+	UNIQUE_MONSTER_ID_FANGSPEIR                = 67, ///< MONSTER_ID_CAVE_VIPER
+	UNIQUE_MONSTER_ID_FESTERSKULL              = 68, ///< MONSTER_ID_UNDEAD_BALROG
+	UNIQUE_MONSTER_ID_LIONSKULL_THE_BENT       = 69, ///< MONSTER_ID_BLACK_KNIGHT
+	UNIQUE_MONSTER_ID_BLACKTONGUE              = 70, ///< MONSTER_ID_COUNSELOR
+	UNIQUE_MONSTER_ID_VILETOUCH                = 71, ///< MONSTER_ID_DEATH_WING
+	UNIQUE_MONSTER_ID_VIPERFLAME               = 72, ///< MONSTER_ID_FIRE_DRAKE
+	UNIQUE_MONSTER_ID_FANGSKIN                 = 73, ///< MONSTER_ID_GOLD_VIPER
+	UNIQUE_MONSTER_ID_WITCHFIRE_THE_UNHOLY     = 74, ///< MONSTER_ID_SUCCUBUS
+	UNIQUE_MONSTER_ID_BLACKSKULL               = 75, ///< MONSTER_ID_BALROG
+	UNIQUE_MONSTER_ID_SOULSLASH                = 76, ///< MONSTER_ID_UNRAVELER
+	UNIQUE_MONSTER_ID_WINDSPAWN                = 77, ///< MONSTER_ID_VORTEX_LORD
+	UNIQUE_MONSTER_ID_LORD_OF_THE_PIT          = 78, ///< MONSTER_ID_AZURE_DRAKE
+	UNIQUE_MONSTER_ID_RUSTWEAVER               = 79, ///< MONSTER_ID_DOOM_GUARD
+	UNIQUE_MONSTER_ID_HOWLINGIRE_THE_SHADE     = 80, ///< MONSTER_ID_HOLLOW_ONE
+	UNIQUE_MONSTER_ID_DOOMCLOUD                = 81, ///< MONSTER_ID_MAELSTORM
+	UNIQUE_MONSTER_ID_BLOODMOON_SOULFIRE       = 82, ///< MONSTER_ID_PAIN_MASTER
+	UNIQUE_MONSTER_ID_WITCHMOON                = 83, ///< MONSTER_ID_SNOW_WITCH
+	UNIQUE_MONSTER_ID_GOREFEAST                = 84, ///< MONSTER_ID_VORTEX_LORD
+	UNIQUE_MONSTER_ID_GRAYWAR_THE_SLAYER       = 85, ///< MONSTER_ID_DOOM_GUARD
+	UNIQUE_MONSTER_ID_DREADJUDGE               = 86, ///< MONSTER_ID_MAGISTRATE
+	UNIQUE_MONSTER_ID_STAREYE_THE_WITCH        = 87, ///< MONSTER_ID_HELL_SPAWN
+	UNIQUE_MONSTER_ID_STEELSKULL_THE_HUNTER    = 88, ///< MONSTER_ID_STEEL_LORD
+	UNIQUE_MONSTER_ID_SIR_GORASH               = 89, ///< MONSTER_ID_BLOOD_KNIGHT
+	UNIQUE_MONSTER_ID_THE_VIZIER               = 90, ///< MONSTER_ID_CABALIST
+	UNIQUE_MONSTER_ID_ZAMPHIR                  = 91, ///< MONSTER_ID_REALITY_WEAVER
+	UNIQUE_MONSTER_ID_BLOODLUST                = 92, ///< MONSTER_ID_HELL_SPAWN
+	UNIQUE_MONSTER_ID_WEBWIDOW                 = 93, ///< MONSTER_ID_HELL_SPAWN
+	UNIQUE_MONSTER_ID_FLESHDANCER              = 94, ///< MONSTER_ID_SOUL_BURNER
+	UNIQUE_MONSTER_ID_GRIMSPIKE                = 95, ///< MONSTER_ID_OBSIDIAN_LORD
+	UNIQUE_MONSTER_ID_DOOMLOCK                 = 96, ///< MONSTER_ID_STORM_LORD
+	UNIQUE_MONSTER_ID_NULL                     = 97, ///< MONSTER_ID_NONE
 } unique_monster_id;
