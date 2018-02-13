@@ -3,6 +3,7 @@
 
 /// Bit flag which is used to determine if affix could be applied to certain type of items.
 /// As it can be noted each flag just represents one or more values from `item_type` enumeration.
+///
 /// bitflag
 typedef enum {
 	AFFIX_ITEM_TYPE_JEWELRY = 0x00000001,
@@ -22,6 +23,7 @@ typedef enum {
 } attribute_id;
 
 /// MPQ block flags.
+///
 /// bitflag
 typedef enum {
 	BLOCK_FLAG_IMPLODE                = 0x00000100, ///< compressed file (PKWARE)
