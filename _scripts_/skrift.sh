@@ -34,3 +34,9 @@ sar -i '[\n]//[\n]' '\n///\n' ${cpp_file}
 
 # Enum member line comments.
 sar -i '([\n][ \t]*[a-zA-Z0-9_]+[ \t]*[=][ \t]*[a-zA-Z0-9_]+,[ \t]*//)([^/])' '${1}/<${2}' ${cpp_file}
+
+# Move struct member line comments after semicolon to struct member doc.
+sar -i '[\n]([^/;]*;) //([^/\n]*)' '\n\t//${2}\n${1}' ${cpp_file}
+
+# Struct member line comments.
+sar -i '[\n][\t]//([^/\n]*)' '\n\t///${1}' ${cpp_file}
