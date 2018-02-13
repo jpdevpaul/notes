@@ -39,4 +39,4 @@ sar -i '([\n][ \t]*[a-zA-Z0-9_]+[ \t]*[=][ \t]*[a-zA-Z0-9_]+,[ \t]*//)([^/])' '$
 sar -i '[\n]([^/;]*;) //([^/\n]*)' '\n\t//${2}\n${1}' ${cpp_file}
 
 # Struct member line comments.
-sar -i '[\n][\t]//([^/\n]*)' '\n\t///${1}' ${cpp_file}
+sar -i '[\n][\t]//([^/\n]+)' '\n\t///${1}' ${cpp_file}
