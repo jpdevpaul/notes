@@ -1,4 +1,4 @@
-// SHA1Context holds the context of a SHA-1 running hashsum.
+/// SHA1Context holds the context of a SHA-1 running hashsum.
 typedef struct {
 	uint32_t state[5];
 	int32_t count[2];
