@@ -1053,8 +1053,8 @@ typedef struct {
 	const char *name;
 	/// offset 0014 (4 bytes)
 	/// applied if item description becomes too long after adding affixes
+	/// and/or spell
 	const char *short_name;
-	                        // and/or spell
 	/// offset 0018 (4 bytes)
 	item_quality quality;
 	/// offset 001C (4 bytes)
@@ -1075,21 +1075,21 @@ typedef struct {
 	uint8_t required_dexterity;
 	/// offset 0034 (4 bytes)
 	/// Rarely set, only for undead crown and even this
+	/// case seems to be redundant due one of its unique
+	/// item effect
 	item_special_effect special_effect_flags;
-	                                          // case seems to be redundant due one of its unique
-	                                          // item effect
 	/// offset 0038 (4 bytes)
 	item_misc_id misc_id;
 	/// offset 003C (4 bytes)
 	/// Used for charges on Short Staff of Charged Bolt,
+	/// and used for scrolls otherwise.
 	spell_id spell_id;
-	                   // and used for scrolls otherwise.
 	/// offset 0040 (4 bytes)
 	/// Set if item could be triggered with right click (e.g. for gold,
+	/// potions, elixirs, books and scrolls). Some unique items do still
+	/// trigger an action on right click even though for them this flag
+	/// is not set.
 	bool32_t is_usable;
-	                    // potions, elixirs, books and scrolls). Some unique items do still
-	                    // trigger an action on right click even though for them this flag
-	                    // is not set.
 	/// offset 0044 (4 bytes)
 	int price;
 	/// offset 0048 (4 bytes)
@@ -1137,18 +1137,18 @@ typedef struct {
 	affix_item_type item_type_flags;
 	/// offset 0018 (4 bytes)
 	/// contains 0x01 or 0x10. If (suffix | preffix) == 0x11 they will
+	/// never be applied to a single item simultaneously. Also if prefix
+	/// has value 0x01 it also means that it can not be present on a staff
+	/// with a spell.
 	int excluded_combination;
-	                          // never be applied to a single item simultaneously. Also if prefix
-	                          // has value 0x01 it also means that it can not be present on a staff
-	                          // with a spell.
 	/// offset 001C (4 bytes)
 	/// if it is set then there's a twice is likely chance that this affix
+	/// will be generated than if it's not
 	bool32_t double_chance;
-	                        // will be generated than if it's not
 	/// offset 0020 (4 bytes)
 	/// cursed affixes are never applied to items sold in town and also have
+	/// lower probability to be applied in other cases.
 	bool32_t not_cursed;
-	                     // lower probability to be applied in other cases.
 	/// offset 0024 (4 bytes)
 	int min_price;
 	/// offset 0028 (4 bytes)
