@@ -1,3 +1,9 @@
+#ifndef STRUCTS_H
+#define STRUCTS_H
+
+#include "typedefs.h"
+#include "enums.h"
+
 /// ActionFrame specifies the frame of each animation for which an action is
 /// triggered.
 ///
@@ -1842,3 +1848,5 @@ typedef struct {
 	/// offset: 000C (4 bytes)
 	int unknown_000C;
 } UserInfo;
+
+#endif // STRUCTS_H
