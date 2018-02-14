@@ -745,26 +745,26 @@ typedef struct {
 ///
 /// size = 0x13
 typedef struct {
-	/// offset 0000 (bytes 4)
+	/// offset 0000 (4 bytes)
 	int32_t seed;
-	/// offset 0004 (bytes 2)
+	/// offset 0004 (2 bytes)
 	uint16_t wCF;
-	/// offset 0006 (bytes 2)
+	/// offset 0006 (2 bytes)
 	item_id item_id;
-	/// offset 0008 (bytes 1)
+	/// offset 0008 (1 byte)
 	/// The first bit corresponds to identified and the remaining bits corresponds to item_quality.
 	uint8_t identified_and_item_quality;
-	/// offset 0009 (bytes 1)
+	/// offset 0009 (1 byte)
 	int8_t durability_cur;
-	/// offset 000A (bytes 1)
+	/// offset 000A (1 byte)
 	int8_t durability_max;
-	/// offset 000B (bytes 1)
+	/// offset 000B (1 byte)
 	int8_t charges_min;
-	/// offset 000C (bytes 1)
+	/// offset 000C (1 byte)
 	int8_t charges_max;
-	/// offset 000D (bytes 2)
+	/// offset 000D (2 bytes)
 	int16_t gold_price;
-	/// offset 000F (bytes 4)
+	/// offset 000F (4 bytes)
 	/// Stores the last 4 bytes of the ear name.
 	uint32_t only_used_by_ear;
 } HeroItem;
