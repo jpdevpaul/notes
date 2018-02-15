@@ -14,7 +14,9 @@ void quests_init();
 
 /// address: 0x45178F
 ///
-/// TODO: add documentation.
+/// quests_set_stairway_text sets the description text of stairways in the quest
+/// level.
+bool32_t quests_set_stairway_text();
 
 /// address: 0x451831
 ///

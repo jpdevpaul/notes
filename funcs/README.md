@@ -55,7 +55,7 @@ Each function has been categorised based on their original source file, as summa
 | [player.cpp](player.cpp)         | `0x44A8E6`    | `0x450D32`  | ![5%](http://progressed.io/bar/5 "(5/92 functions)")      |
 | [plrmsg.cpp](plrmsg.cpp)         | `0x450D33`    | `0x450FFD`  | ![12%](http://progressed.io/bar/12 "(1/8 functions)")     |
 | [portal.cpp](portal.cpp)         | `0x450FFE`    | `0x45138D`  | ![7%](http://progressed.io/bar/7 "(1/13 functions)")      |
-| [quests.cpp](quests.cpp)         | `0x45138E`    | `0x452830`  | ![44%](http://progressed.io/bar/44 "(11/25 functions)")   |
+| [quests.cpp](quests.cpp)         | `0x45138E`    | `0x452830`  | ![48%](http://progressed.io/bar/48 "(12/25 functions)")   |
 | [restricted.cpp](restricted.cpp) | `0x452831`    | `0x452974`  | ![100%](http://progressed.io/bar/100 "(3/3 functions)")   |
 | [scrollrt.cpp](scrollrt.cpp)     | `0x452975`    | `0x456624`  | ![16%](http://progressed.io/bar/16 "(5/31 functions)")    |
 | [setmaps.cpp](setmaps.cpp)       | `0x456625`    | `0x456A15`  | ![100%](http://progressed.io/bar/100 "(6/6 functions)")   |
@@ -69,7 +69,7 @@ Each function has been categorised based on their original source file, as summa
 | [town.cpp](town.cpp)             | `0x45E151`    | `0x46019A`  | ![15%](http://progressed.io/bar/15 "(3/19 functions)")    |
 | [towners.cpp](towners.cpp)       | `0x46019B`    | `0x4618A4`  | ![100%](http://progressed.io/bar/100 "(33/33 functions)") |
 | [track.cpp](track.cpp)           | `0x4618A5`    | `0x4619A6`  | ![40%](http://progressed.io/bar/40 "(2/5 functions)")     |
-| [trigs.cpp](trigs.cpp)           | `0x4619A7`    | `0x462C6C`  | ![19%](http://progressed.io/bar/19 "(4/21 functions)")    |
+| [trigs.cpp](trigs.cpp)           | `0x4619A7`    | `0x462C6C`  | ![100%](http://progressed.io/bar/100 "(21/21 functions)") |
 | [wave.cpp](wave.cpp)             | `0x462C6D`    | `0x46305F`  | ![11%](http://progressed.io/bar/11 "(2/18 functions)")    |
 | [world.cpp](world.cpp)           | `0x463060`    | `0x469719`  | ![0%](http://progressed.io/bar/0 "(0/7 functions)")       |
 | _crt.cpp                         | `0x46971A`    | `0x47746F`  | N/A                                                       |
