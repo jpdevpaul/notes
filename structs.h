@@ -1849,4 +1849,21 @@ typedef struct {
 	int unknown_000C;
 } UserInfo;
 
+/// A Warp is an entrance that connects two levels of the map.
+///
+/// size = 0x10
+typedef struct {
+	/// offset: 0000 (4 bytes)
+	/// X-coordinate of the entrance.
+	int32_t entrance_x;
+	/// offset: 0004 (4 bytes)
+	/// Y-coordinate of the entrance.
+	int32_t entrance_y;
+	/// offset: 0008 (4 bytes)
+	interface_mode interface_mode; // TODO: validate that this field is actualy used for interface_mode.
+	/// offset: 000C (4 bytes)
+	/// Dungeon level of the target map.
+	int32_t dlvl_next;
+} Warp;
+
 #endif // STRUCTS_H
