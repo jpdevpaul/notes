@@ -13,7 +13,7 @@ char player_armors[3];
 /// player_weapons maps from weapon animation to letter used in graphic files.
 char player_weapons[9];
 
-/// address: 47F218
+/// address: 0x47F218
 ///
 /// player_classes maps from player class to letter used in graphic files.
 char player_classes[3];

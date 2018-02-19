@@ -25,7 +25,7 @@ float multi_cpp_init_value;
 /// PSX def: unsigned char gbMaxPlayers
 int8_t max_players;
 
-/// address: 0679664
+/// address: 0x679664
 ///
 /// game_name specifies the name of the network game.
 char game_name[128];
