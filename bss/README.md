@@ -45,7 +45,7 @@ Each global variable in the uninitialized data section has been categorised base
 | [multi.cpp](multi.cpp)           | `0x6761B8`    | `0x6796FF`  | ![39%](http://progressed.io/bar/39 "(5325/13640 bytes)")      |
 | [nthread.cpp](nthread.cpp)       | `0x679700`    | `0x679767`  | ![3%](http://progressed.io/bar/3 "(4/104 bytes)")             |
 | [objects.cpp](objects.cpp)       | `0x679768`    | `0x67D7C7`  | ![98%](http://progressed.io/bar/98 "(16300/16480 bytes)")     |
-| [hero.cpp](hero.cpp)             | `0x67D7C8`    | `0x67D7CB`  | ![100%](http://progressed.io/bar/100 "(4/4 bytes)")           |
+| [pack.cpp](pack.cpp)             | `0x67D7C8`    | `0x67D7CB`  | ![100%](http://progressed.io/bar/100 "(4/4 bytes)")           |
 | [palette.cpp](palette.cpp)       | `0x67D7CC`    | `0x67E3D7`  | ![100%](http://progressed.io/bar/100 "(3084/3084 bytes)")     |
 | [path.cpp](path.cpp)             | `0x67E3D8`    | `0x6862DF`  | ![47%](http://progressed.io/bar/47 "(15600/32520 bytes)")     |
 | [pfile.cpp](pfile.cpp)           | `0x6862E0`    | `0x68642F`  | ![100%](http://progressed.io/bar/100 "(336/336 bytes)")       |

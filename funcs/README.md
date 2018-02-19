@@ -48,7 +48,7 @@ Each function has been categorised based on their original source file, as summa
 | [multi.cpp](multi.cpp)           | `0x43FAC4`    | `0x440DAD`  | ![7%](http://progressed.io/bar/7 "(3/38 functions)")      |
 | [nthread.cpp](nthread.cpp)       | `0x440DAE`    | `0x44121C`  | ![100%](http://progressed.io/bar/100 "(15/15 functions)") |
 | [objects.cpp](objects.cpp)       | `0x44121D`    | `0x448754`  | ![5%](http://progressed.io/bar/5 "(7/131 functions)")     |
-| [hero.cpp](hero.cpp)             | `0x448755`    | `0x448DF4`  | ![100%](http://progressed.io/bar/100 "(7/7 functions)")   |
+| [pack.cpp](pack.cpp)             | `0x448755`    | `0x448DF4`  | ![100%](http://progressed.io/bar/100 "(7/7 functions)")   |
 | [palette.cpp](palette.cpp)       | `0x448DF5`    | `0x4493D3`  | ![100%](http://progressed.io/bar/100 "(22/22 functions)") |
 | [path.cpp](path.cpp)             | `0x4493D4`    | `0x4498EB`  | ![0%](http://progressed.io/bar/0 "(0/14 functions)")      |
 | [pfile.cpp](pfile.cpp)           | `0x4498EC`    | `0x44A8E5`  | ![100%](http://progressed.io/bar/100 "(38/38 functions)") |
@@ -85,7 +85,9 @@ The following source file names are known to be correct based on section names i
 
 The following source file names are known to be correct based on debug information in the 1997-12-08 Alpha release on Playstation 1 (codeword *Easy as Pie*): `path.cpp`.
 
-The following source file names are believed to be correct based on educated guesses: `exception.cpp`, `help.cpp`, `log.cpp`, `mainmenu.cpp`, `hero.cpp` and `sha1.cpp`.
+The following source file names are believed to be correct based on the alphabetic linking order constraint and the function declarations (`PackItem` and `PackPlayer`) inferred from the symbol debug information of an earlier Alpha release on Playstation 1: `pack.cpp`.
+
+The following source file names are believed to be correct based on educated guesses: `exception.cpp`, `help.cpp`, `log.cpp`, `mainmenu.cpp` and `sha1.cpp`.
 
 The following source file names are most likely incorrect, but they are the result of best efforts attempts at identifying source file names which describe the behaviour of their respective functions while satisfying to the alphabetic linking order constraint: `msgcmd.cpp`, `restricted.cpp`, `track.cpp` and `world.cpp`. *Any suggestions and ideas to further improve these names would be hugely appreciated!*
 

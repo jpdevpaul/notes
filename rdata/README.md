@@ -35,7 +35,7 @@ Each global variable in the read-only data section has been categorised based on
 | [msgcmd.cpp](msgcmd.cpp)         | `0x47F150`    | `0x47F153`  | ![100%](http://progressed.io/bar/100 "(4/4 bytes)")         |
 | [multi.cpp](multi.cpp)           | `0x47F154`    | `0x47F163`  | ![100%](http://progressed.io/bar/100 "(16/16 bytes)")       |
 | [nthread.cpp](nthread.cpp)       | `0x47F164`    | `0x47F167`  | ![100%](http://progressed.io/bar/100 "(4/4 bytes)")         |
-| [hero.cpp](hero.cpp)             | `0x47F168`    | `0x47F16B`  | ![100%](http://progressed.io/bar/100 "(4/4 bytes)")         |
+| [pack.cpp](pack.cpp)             | `0x47F168`    | `0x47F16B`  | ![100%](http://progressed.io/bar/100 "(4/4 bytes)")         |
 | [palette.cpp](palette.cpp)       | `0x47F16C`    | `0x47F1AF`  | ![100%](http://progressed.io/bar/100 "(68/68 bytes)")       |
 | [path.cpp](path.cpp)             | `0x47F1B0`    | `0x47F1BF`  | ![100%](http://progressed.io/bar/100 "(16/16 bytes)")       |
 | [pfile.cpp](pfile.cpp)           | `0x47F1C0`    | `0x47F203`  | ![100%](http://progressed.io/bar/100 "(68/68 bytes)")       |
