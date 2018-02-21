@@ -85,7 +85,7 @@ The following source file names are known to be correct based on section names i
 
 The following source file names are known to be correct based on debug information in the 1997-12-08 Alpha release on Playstation 1 (codeword *Easy as Pie*): `path.cpp`.
 
-The following source file names are believed to be correct based on the alphabetic linking order constraint and the function declarations (`PackItem` and `PackPlayer`) inferred from the symbol debug information of an earlier Alpha release on Playstation 1: `pack.cpp`.
+The following source file names are believed to be correct based on the alphabetic linking order constraint and the function declarations (`PackItem` and `PackPlayer`) inferred from the symbol debug information of the Japanese Playstation 1 release: `pack.cpp`.
 
 The following source file names are believed to be correct based on educated guesses: `exception.cpp`, `help.cpp`, `log.cpp`, `mainmenu.cpp` and `sha1.cpp`.
 
