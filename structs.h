@@ -1226,24 +1226,32 @@ typedef struct {
 /// size = 0xEC
 typedef struct {
 	/// offset 0000 (1 bytes)
+	/// Missile graphic ID.
 	missile_graphic_id missile_graphic_id;
 	/// offset 0001 (1 bytes)
-	/// number of animations.
+	/// Number of animations.
 	int8_t nanims;
 	/// offset 0004 (4 bytes)
+	/// CL2 image name.
 	char *cl2_name;
 	/// offset 0008 (4 bytes)
+	/// Missile graphics flags.
 	uint32_t flags;
 	/// offset 000C (64 bytes)
+	/// Map from orientation to CL2 buffer.
 	void *cl2_from_orientation[16];
-	/// offset 004C (64 bytes)
-	void *anim_speed_from_orientation[16];
-	/// offset 005C (64 bytes)
-	void *last_frame_from_orientation[16];
+	/// offset 004C (16 bytes)
+	/// Map from orientation to animation speed.
+	int8_t anim_speed_from_orientation[16];
+	/// offset 005C (16 bytes)
+	/// Map from orientation to last frame (frame_num+1)
+	int8_t last_frame_from_orientation[16];
 	/// offset 006C (64 bytes)
-	void *frame_width_from_orientation[16];
+	/// Map from orientation to frame width.
+	int32_t frame_width_from_orientation[16];
 	/// offset 00AC (64 bytes)
-	void *x_offset_from_orientation[16];
+	/// X offset to the left side used for tile alignment.
+	int32_t x_offset_from_orientation[16];
 } MissileGraphicData;
 
 /// An MPQHeader is the header of an MPQ archive.
