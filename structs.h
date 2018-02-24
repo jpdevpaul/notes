@@ -1000,29 +1000,29 @@ typedef struct {
 	uint8_t spell_level_bonus;
 	/// offset 0131 (1 byte)
 	bool8_t held_in_hand;
-	/// offset 0134 (4 byte)
+	/// offset 0134 (4 bytes)
 	unique_item_id unique_id;
-	/// offset 0138 (4 byte)
+	/// offset 0138 (4 bytes)
 	int32_t fire_damage_min;
-	/// offset 013C (4 byte)
+	/// offset 013C (4 bytes)
 	int32_t fire_damage_max;
-	/// offset 0140 (4 byte)
+	/// offset 0140 (4 bytes)
 	int32_t lightning_damage_min;
-	/// offset 0144 (4 byte)
+	/// offset 0144 (4 bytes)
 	int32_t lightning_damage_max;
-	/// offset 0148 (4 byte)
+	/// offset 0148 (4 bytes)
 	int32_t armor_penetration;
-	/// offset 014C (4 byte)
+	/// offset 014C (4 bytes)
 	item_effect_type prefix_effect_type;
-	/// offset 014D (4 byte)
+	/// offset 014D (4 bytes)
 	item_effect_type suffix_effect_type;
-	/// offset 0150 (4 byte)
+	/// offset 0150 (4 bytes)
 	int32_t prefix_price;
-	/// offset 0154 (4 byte)
+	/// offset 0154 (4 bytes)
 	int32_t prefix_price_multiplier;
-	/// offset 0158 (4 byte)
+	/// offset 0158 (4 bytes)
 	int32_t suffix_price;
-	/// offset 015C (4 byte)
+	/// offset 015C (4 bytes)
 	int32_t suffix_price_multiplier;
 	/// offset 0160 (1 byte)
 	uint8_t required_strength;
@@ -1032,9 +1032,9 @@ typedef struct {
 	uint8_t required_dexterity;
 	/// offset 0163 (1 byte)
 	uint8_t required_vitality;
-	/// offset 0164 (1 byte)
+	/// offset 0164 (4 bytes)
 	bool32_t is_equippable;
-	/// offset 0168 (4 byte)
+	/// offset 0168 (4 bytes)
 	item_id id;
 } Item;
 
