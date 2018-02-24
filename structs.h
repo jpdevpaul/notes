@@ -3,6 +3,7 @@
 
 #include "typedefs.h"
 #include "enums.h"
+#include "windows.h"
 
 /// ActionFrame specifies the frame of each animation for which an action is
 /// triggered.
