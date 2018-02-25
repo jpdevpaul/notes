@@ -3,6 +3,7 @@
 
 #include "typedefs.h"
 #include "enums.h"
+#include "windows.h"
 
 /// ActionFrame specifies the frame of each animation for which an action is
 /// triggered.
@@ -922,7 +923,7 @@ typedef struct {
 	item_drop_state drop_state;
 	/// offset 0034 (4 bytes)
 	bool32_t draw_quest_item;
-	/// offset 0038 (1 byte)
+	/// offset 0038 (4 bytes)
 	bool32_t is_identified;
 	/// offset 003C (1 byte)
 	item_quality quality;

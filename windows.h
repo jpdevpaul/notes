@@ -1,3 +1,6 @@
+#ifndef WINDOWS_H
+#define WINDOWS_H
+
 /// ref: https://msdn.microsoft.com/en-us/library/windows/desktop/aa383751(v=vs.85).aspx
 typedef uint8_t BYTE;
 typedef uint16_t WORD;
@@ -395,3 +398,5 @@ typedef struct {
 	BYTE peBlue;
 	BYTE peFlags;
 } PALETTEENTRY;
+
+#endif // WINDOWS_H
