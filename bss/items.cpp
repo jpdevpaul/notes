@@ -2,5 +2,8 @@
 
 /// address: 0x635A28
 ///
+/// PSX ref: 0x800D1D54
+/// PSX def: ItemStruct item[128]
+///
 /// items contains the items on ground of the current game.
-Item items[127];
+Item items[128];
