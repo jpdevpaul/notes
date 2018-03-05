@@ -30,7 +30,7 @@ cd ..
 rm -rf out/**/* || exit 0
 
 # Run our compile script
-git clone https://github.com/Predelnik/Scripture
+git clone https://github.com/mewpull/Scripture
 export notes_path=`pwd`
 cd Scripture
 SCRIPTURE_SHA=`git rev-parse --verify HEAD`
