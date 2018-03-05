@@ -9,11 +9,11 @@ before_install:
   - sudo apt-get -qq update
   - sudo apt-get install -y libc6-dev-i386
   # Install libclang.
-  - sudo apt-add-repository "deb http://apt.llvm.org/trusty/ llvm-toolchain-trusty-6.0 main" --yes
+  - sudo apt-add-repository "deb http://apt.llvm.org/trusty/ llvm-toolchain-trusty-5.0 main" --yes
   - sudo apt-add-repository "deb http://ppa.launchpad.net/ubuntu-toolchain-r/test/ubuntu trusty main"  --yes
   - sudo apt-get update
-  - sudo apt-get install libclang1-6.0 libclang-common-6.0-dev  --yes --force-yes
-  - sudo ln -v -s /usr/lib/x86_64-linux-gnu/libclang-6.0.so.1 /usr/lib/x86_64-linux-gnu/libclang.so
+  - sudo apt-get install libclang1-5.0 libclang-common-5.0-dev  --yes --force-yes
+  - sudo ln -v -s /usr/lib/x86_64-linux-gnu/libclang-5.0.so.1 /usr/lib/x86_64-linux-gnu/libclang.so
   - sudo ldconfig
 
 script:
