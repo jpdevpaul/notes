@@ -34,6 +34,7 @@ git clone https://github.com/mewpull/Scripture
 export notes_path=`pwd`
 cd Scripture
 SCRIPTURE_SHA=`git rev-parse --verify HEAD`
+pip3 install -r requirements.txt
 mv extract.sh.sample extract.sh
 chmod +x extract.sh
 echo "Generating pages using Scripture"
