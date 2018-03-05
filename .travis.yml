@@ -8,8 +8,8 @@ notifications:
 before_install:
   - sudo apt-get -qq update
   - sudo apt-get install -y libc6-dev-i386
-  - sudo apt-get install -y libclang1
-  - find /usr/lib -type f -name 'libclang.so*'
+  - sudo apt-get install -y libclang1 clang
+  - find /usr/lib -type f -name 'libclang*.so*'
 
 script:
   - ./deploy.sh
