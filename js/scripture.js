@@ -1,6 +1,6 @@
 $(function () {
 
-  var typeNameToHtml = function (typeName, structs, enums, varName = '') {
+  var typeNameToHtml = function (typeName, structs, enums, varName) {
     lastChar = typeName.charAt(typeName.length - 1)
     var funcPtrPatten = /([a-zA-z]*)\s*\(\*\)\((?:([a-zA-z\*]*),\s*)*([a-zA-z\*]*)?\)/g
     var match = funcPtrPatten.exec(typeName)
@@ -12,7 +12,7 @@ $(function () {
         return match[1] + ' (*) (' + match.slice(2, firstUndef).join(', ') + ')'
     }
 
-    var usualPattern = /(const\s*)?([^\[\]\*\s]+)(?:\s*)(\**)(\[\d+\]*)?/g
+    var usualPattern = /(const\s*)?([^\[\]\*\s]+)(?:\s*)(\**)((?:\[\d+\])*)?/g
     var match = usualPattern.exec(typeName)
     var prefix = match[1] ? match[1] : ''
     var name = match[2]
@@ -451,34 +451,49 @@ $(function () {
     index: function () {
     },
 
+    currentRoute: undefined,
+    routeScrollPositions: {},
+    activateView: function (view) {
+      var newRoute = Backbone.history.fragment;
+      if(newRoute !== this.currentRoute){
+        this.routeScrollPositions[this.currentRoute] = window.pageYOffset;
+        this.currentRoute = newRoute;
+        var position = (this.routeScrollPositions[newRoute])
+            ? this.routeScrollPositions[newRoute]
+            : 0;
+        this.mainView.setActive(view)
+        window.scrollTo(0, position);
+      }
+    },
+
     fileData: function (fileName) {
       var model = new FileDataModel({ fileName: fileName, dataModel: this.dataModel })
       var view = new FileDataView({ model: model })
-      this.mainView.setActive(view)
+      this.activateView (view)
     },
 
     struct: function (structName) {
       var model = new structModel({ dataModel: this.dataModel, structName: structName })
       var view = new structView({ model: model })
-      this.mainView.setActive(view)
+      this.activateView (view)
     },
 
     function: function (functionName) {
       var model = new functionModel({ dataModel: this.dataModel, name: functionName })
       var view = new functionView({ model: model })
-      this.mainView.setActive(view)
+      this.activateView (view)
     },
 
     enum: function (enumName) {
       var model = new enumModel({ dataModel: this.dataModel, enumName: enumName })
       var view = new enumView({ model: model })
-      this.mainView.setActive(view)
+      this.activateView (view)
     },
 
     variable: function (varName) {
       var model = new varModel({ dataModel: this.dataModel, name: varName })
       var view = new varView({ model: model })
-      this.mainView.setActive(view)
+      this.activateView (view)
     },
 
     address: function (address) {

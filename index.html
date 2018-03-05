@@ -24,10 +24,11 @@
       <h2>Definition:</h2>
       <table class="structMembers">
       <tr><% if (structData.members && structData.members[0].offset) { %><th>Offset</th><th>Size</th><% } %>
-      <th>Type</th><th>Name</th><th>Comments</th></tr>
+      <% var hasComments = (_.findIndex (structData.members, function (member) { return member.explanation }) != -1) %>
+      <th>Type</th><th>Name</th><% if (hasComments){ %><th>Comments</th><% } %></tr>
       <% _.each(structData.members, function(member) { %>
         <tr><% if (structData.members && structData.members[0].offset) { %><td><%= member.offset %></td><td><%= member.size %></td><% } %>
-          <td><%= member.typeHtml %></td> <td><%= member.name %></td><td><%= member.explanation %></td></tr>
+          <td><%= member.typeHtml %></td> <td><%= member.name %></td><% if (hasComments){ %><td><%= member.explanation %></td><% } %></tr>
       <% }) %>
       </table>
       <% if (structData.referenced_in) { %>
@@ -70,10 +71,12 @@
       <pre><%= enumData.psx_def %></pre>
       <% } %>
       <h2>Values:</h2>
+      <% var hasComments = (_.findIndex (enumData.members, function (member) { return member.explanation }) != -1) %>
       <table class="enumTable">
-      <tr><th>Name</th><th>Value</th><th>Comments</th></tr>
+      <tr><th>Name</th><th>Value</th><% if (hasComments) { %><th>Comments</th><% } %></tr>
       <% _.each(enumData.members, function(member) { %>
-        <tr><td class="enumMemberName"><%= member.name %></td><td><%= !enumData.bitflag ? member.value : '0x' + Math.abs (member.value).toString (16) %></td><td class="enumComment"><%= member.explanation %></td></tr>
+        <tr><td class="enumMemberName"><%= member.name %></td><td><%= !enumData.bitflag ? member.value : '0x' + Math.abs (member.value).toString (16) %></td>
+          <% if (hasComments) { %><td class="enumComment"><%= member.explanation %></td><% } %></tr>
       <% }) %>
       </table>
       <% if (enumData.referenced_in) { %>
@@ -126,7 +129,8 @@
       <p>
       <table>
           <tr><td>File:</td><td><a href="#fileData/<%= data.short_file_name %>"><%= data.short_file_name %></a></td></tr>
-          <tr><td>Address:</td><td><a href="#address/<%= data.address %>"><%= data.address %></a></td></tr>
+          <% if (data.address) { %><tr><td>Address:</td><td><a href="#address/<%= data.address %>"><%= data.address %></a></td></tr> <% } %>
+          <% if (data.ordinal) { %><tr><td>Ordinal:</td><td><%= data.ordinal %></td></tr> <% } %>
           <% if (data.psx_ref) { %> <tr><td>PSX Ref:</td><td><%= data.psx_ref %> </td></tr> <% } %>
           <% if (data.psx_def) { %><tr><td>PSX Def:</td><td><%= data.psx_def %></td></tr> <% } %>
         </table>
@@ -157,8 +161,9 @@
       <h1>File `<%= fileName %>`</h1>
       <% if (functions.length > 0) { %>
       <h2 class="fileDataGroup">Functions:</h2>
-      <% _.each(_.sortBy (functions, function (func){ return func.data.address}), function(func) { %>
-        <h3><%= func.data.address %></h3>
+      <% _.each(_.sortBy (functions, function (func){ return [func.data.address, func.data.ordinal]}), function(func) { %>
+        <% if (func.data.address) { %><h3><%= func.data.address %></h3><% } %>
+        <% if (func.data.ordinal) { %><h3>Ordinal: <%= func.data.ordinal %></h3><% } %>
         <h4><%= func.signature %></h4>
       <% }) %>
       <% } %>
@@ -197,7 +202,7 @@
       <li>
       <h3><a href="#">Files</a></h3>
       <ul>
-      <% _.each(files, function(file_data, file_name) { %>
+      <% _.each(_.sortBy (Object.keys (files)), function(file_name) { %>
       <li>
       <a href="#fileData/<%= file_name %>"><%= file_name %></a>
       </li>
@@ -207,7 +212,7 @@
       <li>
       <h3><a href="#">Structs</a></h3>
       <ul>
-      <% _.each(structs, function(struct_data, struct_name) { %>
+      <% _.each(_.sortBy (Object.keys (structs)), function(struct_name) { %>
       <li>
       <a href="#struct/<%= struct_name %>"><%= struct_name %></a>
       </li>
@@ -217,7 +222,7 @@
       <li>
       <h3><a href="#">Enums</a></h3>
       <ul>
-      <% _.each(enums, function(enum_data, enum_name) { %>
+      <% _.each(_.sortBy (Object.keys (enums)), function(enum_name) { %>
       <li>
       <a href="#enum/<%= enum_name %>"><%= enum_name %></a>
       </li>
