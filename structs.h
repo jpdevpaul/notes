@@ -70,6 +70,30 @@ typedef struct {
 	int nturns_in_transit;
 } Caps;
 
+/// ServerCommand is a command sent to the chat server.
+///
+/// size = 0x88
+typedef struct {
+	/// offset: 0000 (4 bytes)
+	/// TODO: document field name.
+	int32_t field_0000;
+	/// offset: 0004 (4 bytes)
+	/// TODO: document field name.
+	int32_t field_0004;
+	/// offset: 0008 (128 bytes)
+	char command[128];
+} ServerCommand;
+
+/// ChatCmd handles commands sent to the chat server.
+///
+/// size = 0xC
+typedef struct ChatCmd {
+	/// offset: 0000 (4 bytes)
+	struct ChatCmd *next;
+	/// offset: 0004 (8 bytes)
+	ServerCommand *extern_msgs[2];
+} ChatCmd;
+
 /// Cmd is a command message without body.
 ///
 /// PSX def:
@@ -1209,6 +1233,26 @@ typedef struct {
 	/// offset: 0030 (4 bytes)
 	uint32_t flags;
 } Lighting;
+
+/// MemFile is a memory-buffered file.
+///
+/// size = 0x1C
+typedef struct {
+	/// offset: 0000 (4 bytes)
+	int32_t end;
+	/// offset: 0004 (4 bytes)
+	int32_t offset;
+	/// offset: 0008 (4 bytes)
+	int32_t buf_len;
+	/// offset: 000C (4 bytes)
+	int32_t dist;
+	/// offset: 0010 (4 bytes)
+	int32_t bytes_to_read;
+	/// offset: 0014 (4 bytes)
+	uint8_t *buf;
+	/// offset: 0018 (4 bytes)
+	int32_t file;
+} MemFile;
 
 /// MenuItem is a game menu item.
 ///
