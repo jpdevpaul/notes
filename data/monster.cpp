@@ -1,7 +1,5 @@
 #include "types.h"
 
-/* TODO: uncomment when the MonsterData struct has been added to structs.h.
-
 /// address: 0x497E08
 ///
 /// monster_data contains the data related to each monster ID.
@@ -9,8 +7,6 @@
 /// References:
 ///    * https://github.com/sanctuary/notes/blob/master/enums.h#monster_id
 MonsterData monster_data[112];
-
-*/
 
 /// address: 0x49B6F8
 ///

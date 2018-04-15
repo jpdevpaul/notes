@@ -1299,6 +1299,120 @@ typedef struct {
 	int32_t x_offset_from_orientation[16];
 } MissileGraphicData;
 
+/// MonsterData describes the attributes of a monster.
+///
+/// PSX def:
+///    typedef struct MonsterData {
+///       unsigned short GraphicType;
+///       unsigned char has_special;
+///       unsigned short sndfile;
+///       unsigned char snd_special;
+///       char TransFile;
+///       char Frames[6];
+///       char Rate[6];
+///       int mName;
+///       char mMinDLvl;
+///       char mMaxDLvl;
+///       char mLevel;
+///       short mMinHP;
+///       short mMaxHP;
+///       unsigned char mAi;
+///       unsigned short mFlags;
+///       unsigned char mInt;
+///       unsigned char mHit;
+///       unsigned char mAFNum;
+///       unsigned char mMinDamage;
+///       unsigned char mMaxDamage;
+///       unsigned char mHit2;
+///       unsigned char mAFNum2;
+///       unsigned char mMinDamage2;
+///       unsigned char mMaxDamage2;
+///       char mArmorClass;
+///       char mMonstClass;
+///       unsigned short mMagicRes;
+///       unsigned short mMagicRes2;
+///       unsigned short mTreasure;
+///       char mSelFlag;
+///       unsigned short mExp;
+///    } MonsterData;
+///
+/// size = 0x80
+typedef struct {
+	/// offset: 0000 (4 bytes)
+	int32_t frame_width;
+	/// offset: 0004 (4 bytes)
+	int32_t memory_usage;
+	/// offset: 0008 (4 bytes)
+	char *cl2_path;
+	/// offset: 000C (4 bytes)
+	bool32_t has_special_graphic;
+	/// offset: 0010 (4 bytes)
+	char *wav_path;
+	/// offset: 0014 (4 bytes)
+	bool32_t has_special_sound;
+	/// offset: 0018 (4 bytes)
+	bool32_t has_trn;
+	/// offset: 001C (4 bytes)
+	char *trn_path;
+	/// indexed by monster_action (stand, walk, attach, hit, death, special).
+	///
+	/// offset: 0020 (24 bytes)
+	int32_t nframes[6];
+	/// playback rate. indexed by monster_action (stand, walk, attach, hit,
+	/// death, special).
+	///
+	/// offset: 0038 (24 bytes)
+	int32_t rate[6];
+	/// offset: 0050 (4 bytes)
+	char *name;
+	/// offset: 0054 (1 bytes)
+	int8_t dlvl_min;
+	/// offset: 0055 (1 bytes)
+	int8_t dlvl_max;
+	/// offset: 0056 (1 bytes)
+	int8_t monster_lvl;
+	/// offset: 0058 (4 bytes)
+	int32_t hp_min;
+	/// offset: 005C (4 bytes)
+	int32_t hp_max;
+	/// offset: 0060 (4 bytes)
+	monster_ai_id monster_ai_id;
+	/// offset: 0064 (4 bytes)
+	uint32_t monster_flag; // TODO: define monster_flag enum.
+	/// offset: 0068 (1 bytes)
+	int8_t intelligence_factor;
+	/// offset: 0069 (1 bytes)
+	int8_t chance_to_hit;
+	/// offset: 006A (1 bytes)
+	int8_t attack_frame;
+	/// offset: 006B (1 bytes)
+	int8_t damage_min;
+	/// offset: 006C (1 bytes)
+	int8_t damage_max;
+	/// offset: 006D (1 bytes)
+	int8_t chance_to_hit_special;
+	/// offset: 006E (1 bytes)
+	int8_t attack_frame_special;
+	/// offset: 006F (1 bytes)
+	int8_t damage_min_special;
+	/// offset: 0070 (1 bytes)
+	int8_t damage_max_special;
+	/// offset: 0071 (1 bytes)
+	int8_t armor_class;
+	/// offset: 0072 (1 bytes)
+	int8_t monster_class;
+	/// offset: 0074 (2 bytes)
+	uint16_t resistance_and_immunity; // TODO: define resistance and immunity enum, or document its behaviour.
+	/// offset: 0076 (2 bytes)
+	uint16_t resistance_and_immunity_hell; // TODO: define resistance and immunity enum, or document its behaviour.
+	/// offset: 0078 (2 bytes)
+	uint16_t treasure; // TODO: define treasure enum (i.e. item drop flag).
+	/// offset: 007A (1 bytes)
+	uint8_t sel_flag; // TODO: figure out what sel_flag does.
+	/// offset: 007C (2 bytes)
+	uint16_t exp_base;
+} MonsterData;
+
 /// An MPQHeader is the header of an MPQ archive.
 ///
 /// size = 0x20
@@ -1928,7 +2042,7 @@ typedef struct {
 	/// offset: 0013 (1 bytes)
 	int8_t damage_max;
 	/// offset: 0014 (2 bytes)
-	uint16_t resistance_and_immunity;
+	uint16_t resistance_and_immunity; // TODO: define resistance and immunity enum, or document its behaviour.
 	/// offset: 0016 (2 bytes)
 	uint16_t pack_trigger;
 	/// offset: 0018 (4 bytes)
