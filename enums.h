@@ -3182,6 +3182,16 @@ typedef enum {
 	UNIQUE_ITEM_ID_NULL                   = 90,
 } unique_item_id;
 
+/// Monster actions.
+typedef enum {
+	MONSTER_ACTION_STAND   = 0,
+	MONSTER_ACTION_WALK    = 1,
+	MONSTER_ACTION_ATTACK  = 2,
+	MONSTER_ACTION_HIT     = 3,
+	MONSTER_ACTION_DEATH   = 4,
+	MONSTER_ACTION_SPECIAL = 5,
+} monster_action;
+
 /// Unique monster IDs specify unique_monster_data array indices.
 ///
 /// References:

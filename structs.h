@@ -1338,77 +1338,141 @@ typedef struct {
 ///
 /// size = 0x80
 typedef struct {
+	/// Frame width of monster graphics.
+	///
 	/// offset: 0000 (4 bytes)
 	int32_t frame_width;
+	/// Approximate memory usage in KB (e.g. the size of "monsters/zombie/" is
+	/// ~799 KB).
+	///
 	/// offset: 0004 (4 bytes)
 	int32_t memory_usage;
+	/// CL2 graphics path format string.
+	///
 	/// offset: 0008 (4 bytes)
 	char *cl2_path;
+	/// Specifies whether the monster has a special graphic (i.e. monster action
+	/// "s").
+	///
 	/// offset: 000C (4 bytes)
 	bool32_t has_special_graphic;
+	/// WAV sound path format string.
+	///
 	/// offset: 0010 (4 bytes)
 	char *wav_path;
+	/// Specifies whether the monster has a special sound (i.e. monster action
+	/// "s").
+	///
 	/// offset: 0014 (4 bytes)
 	bool32_t has_special_sound;
+	/// Specifies whether the monster has a colour transition.
+	///
 	/// offset: 0018 (4 bytes)
 	bool32_t has_trn;
+	/// Colour transition path.
+	///
 	/// offset: 001C (4 bytes)
 	char *trn_path;
-	/// indexed by monster_action (stand, walk, attach, hit, death, special).
+	/// Map from monster action to number of frames.
 	///
 	/// offset: 0020 (24 bytes)
 	int32_t nframes[6];
-	/// playback rate. indexed by monster_action (stand, walk, attach, hit,
-	/// death, special).
+	/// Map from action to animation playback rate.
 	///
 	/// offset: 0038 (24 bytes)
 	int32_t rate[6];
+	/// Monster name.
+	///
 	/// offset: 0050 (4 bytes)
 	char *name;
+	/// Minimum dungeon level at which the monster may be present.
+	///
 	/// offset: 0054 (1 bytes)
 	int8_t dlvl_min;
+	/// Maximum dungeon level at which the monster may be present.
+	///
 	/// offset: 0055 (1 bytes)
 	int8_t dlvl_max;
+	/// Monster level.
+	///
 	/// offset: 0056 (1 bytes)
 	int8_t monster_lvl;
+	/// Minimum health points.
+	///
 	/// offset: 0058 (4 bytes)
 	int32_t hp_min;
+	/// Maximum health points.
+	///
 	/// offset: 005C (4 bytes)
 	int32_t hp_max;
+	/// Monster AI.
+	///
 	/// offset: 0060 (4 bytes)
 	monster_ai_id monster_ai_id;
+	/// Bitfield of monster flags.
+	///
 	/// offset: 0064 (4 bytes)
 	uint32_t monster_flag; // TODO: define monster_flag enum.
+	/// Monster intelligence.
+	///
 	/// offset: 0068 (1 bytes)
 	int8_t intelligence_factor;
+	/// Chance to hit.
+	///
 	/// offset: 0069 (1 bytes)
 	int8_t chance_to_hit;
+	/// Trigger frame of attack animation; 1-indexed.
+	///
 	/// offset: 006A (1 bytes)
 	int8_t attack_frame;
+	/// Minimum damage.
+	///
 	/// offset: 006B (1 bytes)
 	int8_t damage_min;
+	/// Maximum damage.
+	///
 	/// offset: 006C (1 bytes)
 	int8_t damage_max;
+	/// Chance to hit with special attack.
+	///
 	/// offset: 006D (1 bytes)
 	int8_t chance_to_hit_special;
+	/// Trigger frame of attack animation with special attack; 1-indexed.
+	///
 	/// offset: 006E (1 bytes)
 	int8_t attack_frame_special;
+	/// Minimum damage with special attack.
+	///
 	/// offset: 006F (1 bytes)
 	int8_t damage_min_special;
+	/// Maximum damage with special attack.
+	///
 	/// offset: 0070 (1 bytes)
 	int8_t damage_max_special;
+	/// Armor class.
+	///
 	/// offset: 0071 (1 bytes)
 	int8_t armor_class;
+	/// Monster class.
+	///
 	/// offset: 0072 (1 bytes)
 	int8_t monster_class;
+	/// Resistance and immunity bitfield.
+	///
 	/// offset: 0074 (2 bytes)
 	uint16_t resistance_and_immunity; // TODO: define resistance and immunity enum, or document its behaviour.
+	/// Resistance and immunity bitfield (hell difficulty).
+	///
 	/// offset: 0076 (2 bytes)
 	uint16_t resistance_and_immunity_hell; // TODO: define resistance and immunity enum, or document its behaviour.
+	/// Treasure dropped by monster.
+	///
 	/// offset: 0078 (2 bytes)
 	uint16_t treasure; // TODO: define treasure enum (i.e. item drop flag).
 	/// offset: 007A (1 bytes)
-	uint8_t sel_flag; // TODO: figure out what sel_flag does.
+	uint8_t sel_flag; // TODO: figure out what sel_flag does. monster selection flag?
+	/// Experience.
+	///
 	/// offset: 007C (2 bytes)
 	uint16_t exp_base;
 } MonsterData;
