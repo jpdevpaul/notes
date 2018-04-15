@@ -1877,7 +1877,7 @@ typedef struct {
 	/// offset 0000 (4 bytes)
 	char *name;
 	/// offset 0004 (1 bytes)
-	unique_base_item  unique_base_item;
+	unique_base_item unique_base_item;
 	/// offset 0005 (1 bytes)
 	int8_t quality_lvl;
 	/// offset 0006 (1 bytes)
@@ -1887,6 +1887,55 @@ typedef struct {
 	/// offset 000C (72 bytes)
 	ItemEffect effects[6];
 } UniqueItemData;
+
+/// UniqueMonsterData describes the attributes of a unique monster.
+///
+/// PSX def:
+///    typedef struct UniqMonstStruct {
+///       char mtype;
+///       unsigned short mName;
+///       unsigned char mlevel;
+///       unsigned short mmaxhp;
+///       unsigned char mAi;
+///       unsigned char mint;
+///       unsigned char mMinDamage;
+///       unsigned char mMaxDamage;
+///       unsigned short mMagicRes;
+///       unsigned short mUnqAttr;
+///       unsigned char mUnqVar1;
+///       unsigned char mUnqVar2;
+///       int mtalkmsg;
+///    } UniqMonstStruct;
+///
+/// size = 0x20
+typedef struct {
+	/// offset: 0000 (1 bytes)
+	monster_id base_monster_id;
+	/// offset: 0004 (4 bytes)
+	char *name;
+	/// offset: 0008 (4 bytes)
+	char *trn_name;
+	/// offset: 000C (2 bytes)
+	int16_t dlvl;
+	/// offset: 000E (2 bytes)
+	int16_t hp;
+	/// offset: 0010 (1 bytes)
+	monster_ai_id monster_ai_id;
+	/// offset: 0011 (1 bytes)
+	int8_t intelligence_factor;
+	/// offset: 0012 (1 bytes)
+	int8_t damage_min;
+	/// offset: 0013 (1 bytes)
+	int8_t damage_max;
+	/// offset: 0014 (2 bytes)
+	uint16_t resistance_and_immunity;
+	/// offset: 0016 (2 bytes)
+	uint16_t pack_trigger;
+	/// offset: 0018 (4 bytes)
+	int32_t pack_modifier;
+	/// offset: 001C (4 bytes)
+	speech_id speech_id;
+} UniqueMonsterData;
 
 /// UserInfo describes the selected character.
 ///

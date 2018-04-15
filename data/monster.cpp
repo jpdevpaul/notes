@@ -12,8 +12,6 @@ MonsterData monster_data[112];
 
 */
 
-/* TODO: uncomment when the UniqueMonsterData struct has been added to structs.h.
-
 /// address: 0x49B6F8
 ///
 /// unique_monster_data contains the data related to each unique monster ID.
@@ -21,8 +19,6 @@ MonsterData monster_data[112];
 /// References:
 ///    * https://github.com/sanctuary/notes/blob/master/enums.h#unique_monster_id
 UniqueMonsterData unique_monster_data[98];
-
-*/
 
 /// address: 0x49C338
 ///
