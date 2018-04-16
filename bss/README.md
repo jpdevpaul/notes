@@ -61,7 +61,7 @@ Each global variable in the uninitialized data section has been categorised base
 | [themes.cpp](themes.cpp)         | `0x6AAA38`    | `0x6AAC13`  | ![84%](http://progressed.io/bar/84 "(400/476 bytes)")         |
 | [tmsg.cpp](tmsg.cpp)             | `0x6AAC14`    | `0x6AAC17`  | ![100%](http://progressed.io/bar/100 "(4/4 bytes)")           |
 | [towners.cpp](towners.cpp)       | `0x6AAC18`    | `0x6ABAB7`  | ![100%](http://progressed.io/bar/100 "(3744/3744 bytes)")     |
-| [track.cpp](track.cpp)           | `0x6ABAB8`    | `0x6ABAC7`  | ![25%](http://progressed.io/bar/25 "(4/16 bytes)")            |
+| [track.cpp](track.cpp)           | `0x6ABAB8`    | `0x6ABAC7`  | ![100%](http://progressed.io/bar/100 "(16/16 bytes)")         |
 | [trigs.cpp](trigs.cpp)           | `0x6ABAC8`    | `0x6ABB33`  | ![59%](http://progressed.io/bar/59 "(64/108 bytes)")          |
 | [wave.cpp](wave.cpp)             | `0x6ABB34`    | `0x6ABB37`  | ![100%](http://progressed.io/bar/100 "(4/4 bytes)")           |
 | _crt.cpp                         | `0x6ABB38`    | `0x6ADFFF`  | N/A                                                           |

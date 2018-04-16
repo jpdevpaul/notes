@@ -68,7 +68,7 @@ Each function has been categorised based on their original source file, as summa
 | [tmsg.cpp](tmsg.cpp)             | `0x45E08C`    | `0x45E150`  | ![100%](http://progressed.io/bar/100 "(3/3 functions)")   |
 | [town.cpp](town.cpp)             | `0x45E151`    | `0x46019A`  | ![15%](http://progressed.io/bar/15 "(3/19 functions)")    |
 | [towners.cpp](towners.cpp)       | `0x46019B`    | `0x4618A4`  | ![100%](http://progressed.io/bar/100 "(33/33 functions)") |
-| [track.cpp](track.cpp)           | `0x4618A5`    | `0x4619A6`  | ![40%](http://progressed.io/bar/40 "(2/5 functions)")     |
+| [track.cpp](track.cpp)           | `0x4618A5`    | `0x4619A6`  | ![100%](http://progressed.io/bar/100 "(5/5 functions)")   |
 | [trigs.cpp](trigs.cpp)           | `0x4619A7`    | `0x462C6C`  | ![100%](http://progressed.io/bar/100 "(21/21 functions)") |
 | [wave.cpp](wave.cpp)             | `0x462C6D`    | `0x46305F`  | ![11%](http://progressed.io/bar/11 "(2/18 functions)")    |
 | [world.cpp](world.cpp)           | `0x463060`    | `0x469719`  | ![0%](http://progressed.io/bar/0 "(0/7 functions)")       |
