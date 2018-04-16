@@ -2,17 +2,17 @@
 
 /// address: 0x634CB8
 ///
-/// inventory_open specifies whether the inventory is open.
+/// inv_is_open specifies whether the inventory is open.
 ///
 /// PSX ref: 0x8011C32C
 /// PSX def: unsigned char invflag
-bool32_t inventory_open;
+bool32_t inv_is_open;
 
 /// address: 0x634CBC
 ///
-/// inv_cel points to the contents of "data/inv/inv.cel", "data/inv/inv_rog.cel"
-/// or "data/inv/inv_sor.cel".
-uint8_t *inv_cel;
+/// inv_graphics points to the contents of the inventory graphics CEL file (e.g.
+/// "data/inv/inv.cel", "data/inv/inv_rog.cel" or "data/inv/inv_sor.cel").
+uint8_t *inv_graphics;
 
 /// address: 0x634CC0
 ///

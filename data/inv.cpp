@@ -2,7 +2,7 @@
 
 /// address: 0x48E9A8
 ///
-/// inv_start_slot_2x2 specifies the starting inventory number for placement of
+/// inv_start_slot_2x2 specifies the starting inventory slots for placement of
 /// 2x2 items.
 int32_t inv_start_slot_2x2[10];
 
