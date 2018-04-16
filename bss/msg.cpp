@@ -11,6 +11,11 @@ float msg_cpp_init_value;
 /// each dungeon level to be synchronized with connected peers.
 DeltaLevel delta_levels[17];
 
+/// address: 0x66E4B0
+///
+/// msg_buf is a pre-allocated buffer for receiving network messages.
+uint8_t msg_recv_buf[4722];
+
 /// address: 0x66F728
 ///
 /// automap_discovered_from_dlvl maps tracks the explored areas of the map for
