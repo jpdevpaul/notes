@@ -1,8 +1,10 @@
+#include "types.h"
+
 /// address: 0x48E9A8
 ///
-/// inv_num_start_for_2x2 specifies the starting inventry number for placement of
+/// inv_start_slot_2x2 specifies the starting inventory number for placement of
 /// 2x2 items.
-int inv_num_start_for_2x2[10];
+int32_t inv_start_slot_2x2[10];
 
 /// address: 0x48E9D0
 ///
