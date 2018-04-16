@@ -2857,6 +2857,25 @@ typedef enum {
 	SPELL_TYPE_INVALID = 4,
 } spell_type;
 
+/// step represents the movement of one step in a path.
+///
+///      5
+///     2 1
+///    8 0 6
+///     4 3
+///      7
+typedef enum {
+	STEP_NONE       = 0,
+	STEP_NORTH_EAST = 1,
+	STEP_NORTH_WEST = 2,
+	STEP_SOUTH_EAST = 3,
+	STEP_SOUTH_WEST = 4,
+	STEP_NORTH      = 5,
+	STEP_EAST       = 6,
+	STEP_SOUTH      = 7,
+	STEP_WEST       = 8,
+} step;
+
 /// Step direction used for path finding.
 ///
 /// north

@@ -50,7 +50,7 @@ Each global variable in the data section has been categorised based on their ori
 | [nthread.cpp](nthread.cpp)       | `0x49F204`    | `0x49F287`  | ![100%](http://progressed.io/bar/100 "(132/132 bytes)")     |
 | [objects.cpp](objects.cpp)       | `0x49F288`    | `0x4A0D07`  | ![100%](http://progressed.io/bar/100 "(6784/6784 bytes)")   |
 | [palette.cpp](palette.cpp)       | `0x4A0D08`    | `0x4A0D6F`  | ![100%](http://progressed.io/bar/100 "(104/104 bytes)")     |
-| [path.cpp](path.cpp)             | `0x4A0D70`    | `0x4A0D7B`  | ![0%](http://progressed.io/bar/0 "(0/12 bytes)")            |
+| [path.cpp](path.cpp)             | `0x4A0D70`    | `0x4A0D7B`  | ![100%](http://progressed.io/bar/100 "(12/12 bytes)")       |
 | [pfile.cpp](pfile.cpp)           | `0x4A0D7C`    | `0x4A0EF7`  | ![100%](http://progressed.io/bar/100 "(380/380 bytes)")     |
 | [player.cpp](player.cpp)         | `0x4A0EF8`    | `0x4A1AAB`  | ![97%](http://progressed.io/bar/97 "(2933/2996 bytes)")     |
 | [plrmsg.cpp](plrmsg.cpp)         | `0x4A1AAC`    | `0x4A1ABB`  | ![100%](http://progressed.io/bar/100 "(16/16 bytes)")       |
