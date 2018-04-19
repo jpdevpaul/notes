@@ -2,8 +2,8 @@
 
 /// address: 0x6ABAB8
 ///
-/// walk_tracking_active specifies whether tracking of continued walk actions
-/// are tracked (i.e. when the left mouse button is held down).
+/// walk_tracking_active specifies whether continued walk actions are tracked
+/// (i.e. when the left mouse button is held down).
 bool8_t walk_tracking_active;
 
 /// address 0x6ABABC
