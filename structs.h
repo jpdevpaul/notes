@@ -2105,19 +2105,19 @@ typedef struct {
 	/// offset: 0218 (4 bytes)
 	int32_t anim_loaded;
 	/// offset: 021C (32 bytes)
-	void *stand_cl2_hdrs[8];
+	uintptr32_t stand_cl2_hdrs[8]; ///< void *
 	/// offset: 023C (4 bytes)
 	int32_t stand_action_frame;
 	/// offset: 0240 (4 bytes)
 	int32_t stand_frame_width;
 	/// offset: 0244 (32 bytes)
-	void *walk_cl2_hdrs[8];
+	uintptr32_t walk_cl2_hdrs[8]; ///< void *
 	/// offset: 0264 (4 bytes)
 	int32_t walk_action_frame;
 	/// offset: 0268 (4 bytes)
 	int32_t walk_frame_width;
 	/// offset: 026C (32 bytes)
-	void *attack_cl2_hdrs[8];
+	uintptr32_t attack_cl2_hdrs[8]; ///< void *
 	/// offset: 028C (4 bytes)
 	int32_t attack_action_frame;
 	/// offset: 0290 (4 bytes)
@@ -2125,11 +2125,11 @@ typedef struct {
 	/// offset: 0294 (4 bytes)
 	int32_t field_294;
 	/// offset: 0298 (32 bytes)
-	void *lightning_magic_cl2_hdrs[8];
+	uintptr32_t lightning_magic_cl2_hdrs[8]; ///< void *
 	/// offset: 02B8 (32 bytes)
-	void *fire_magic_cl2_hdrs[8];
+	uintptr32_t fire_magic_cl2_hdrs[8]; ///< void *
 	/// offset: 02D8 (32 bytes)
-	void *q_magic_cl2_hdrs[8];
+	uintptr32_t q_magic_cl2_hdrs[8]; ///< void *
 	/// offset: 02F8 (4 bytes)
 	int32_t spell_action_frame;
 	/// offset: 02FC (4 bytes)
@@ -2137,19 +2137,19 @@ typedef struct {
 	/// offset: 0300 (4 bytes)
 	int32_t field_300;
 	/// offset: 0304 (32 bytes)
-	void *hit_cl2_hdrs[8];
+	uintptr32_t hit_cl2_hdrs[8]; ///< void *
 	/// offset: 0324 (4 bytes)
 	int32_t hit_action_frame;
 	/// offset: 0328 (4 bytes)
 	int32_t hit_frame_width;
 	/// offset: 032C (32 bytes)
-	void *death_cl2_hdrs[8];
+	uintptr32_t death_cl2_hdrs[8]; ///< void *
 	/// offset: 034C (4 bytes)
 	int32_t death_action_frame;
 	/// offset: 0350 (4 bytes)
 	int32_t death_frame_width;
 	/// offset: 0354 (32 bytes)
-	void *block_cl2_hdrs[8];
+	uintptr32_t block_cl2_hdrs[8]; ///< void *
 	/// offset: 0374 (4 bytes)
 	int32_t block_action_frame;
 	/// offset: 0378 (4 bytes)
