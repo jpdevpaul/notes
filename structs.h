@@ -1699,6 +1699,563 @@ typedef struct PathNode {
 	struct PathNode *next;
 } PathNode;
 
+// TODO: Add enums to player struct and validate that it is correct.
+
+/// Player describes the in-game state of a player.
+///
+/// PSX def:
+///    typedef struct PlayerStruct {
+///       enum PLR_MODE _pmode;
+///       char walkpath[25];
+///       unsigned char plractive;
+///       char destAction;
+///       char destParam1;
+///       char destParam2;
+///       char destParam3;
+///       char destParam4;
+///       int plrlevel;
+///       int WorldX;
+///       int WorldY;
+///       short _px;
+///       short _py;
+///       short _pownerx;
+///       short _pownery;
+///       short _poldx;
+///       short _poldy;
+///       char _pxoff;
+///       char _pyoff;
+///       short _pxvel;
+///       short _pyvel;
+///       char _pdir;
+///       char _pgfxnum;
+///       unsigned char* _pAnimData;
+///       int _pAnimDelay;
+///       int _pAnimCnt;
+///       int _pAnimLen;
+///       int _pAnimFrame;
+///       char _pAnimWidth;
+///       char _pAnimWidth2;
+///       char DeadLevel;
+///       char _plid;
+///       char _pvid;
+///       char _pSpell;
+///       char _pSplType;
+///       char _pSplFrom;
+///       char _pTSpell;
+///       char _pTSplType;
+///       int _pRSpell;
+///       char _pRSplType;
+///       int _pSBkSpell;
+///       char _pSBkSplType;
+///       char _pSplLvl[64];
+///       unsigned long _pMemSpells;
+///       unsigned long _pAblSpells;
+///       unsigned long _pScrlSpells;
+///       char _pSpellFlags;
+///       char _pwtype;
+///       unsigned char _pBlockFlag;
+///       unsigned char _pInvincible;
+///       char _pLightRad;
+///       unsigned char _pLvlChanging;
+///       char _pName[32];
+///       char _pClass;
+///       short _pStrength;
+///       short _pBaseStr;
+///       short _pMagic;
+///       short _pBaseMag;
+///       short _pDexterity;
+///       short _pBaseDex;
+///       short _pVitality;
+///       short _pBaseVit;
+///       int _pStatPts;
+///       int _pDamageMod;
+///       int _pBaseToBlk;
+///       long _pHPBase;
+///       long _pMaxHPBase;
+///       long _pHitPoints;
+///       long _pMaxHP;
+///       int _pHPPer;
+///       long _pManaBase;
+///       long _pMaxManaBase;
+///       long _pMana;
+///       long _pMaxMana;
+///       int _pManaPer;
+///       char _pLevel;
+///       char _pMaxLvl;
+///       long _pExperience;
+///       long _pMaxExp;
+///       long _pNextExper;
+///       char _pArmorClass;
+///       char _pMagResist;
+///       char _pFireResist;
+///       char _pLghtResist;
+///       long _pGold;
+///       unsigned char _pInfraFlag;
+///       short _pVar1;
+///       short _pVar2;
+///       short _pVar3;
+///       short _pVar4;
+///       short _pVar5;
+///       short _pVar6;
+///       short _pVar7;
+///       short _pVar8;
+///       unsigned char _pLvlVisited[17];
+///       unsigned char _pSLvlVisited[10];
+///       int _pGFXLoad;
+///       unsigned char peq;
+///       int _pAFNum;
+///       int _pNFrames;
+///       int _pWFrames;
+///       int _pAFrames;
+///       int _pSFrames;
+///       int _pSFNum;
+///       int _pHFrames;
+///       int _pDFrames;
+///       int _pBFrames;
+///       struct ItemStruct InvBody[7];
+///       struct ItemStruct InvList[40];
+///       int _pNumInv;
+///       char InvGrid[40];
+///       struct ItemStruct SpdList[8];
+///       struct ItemStruct HoldItem;
+///       int inv_highlight;
+///       int body_highlight;
+///       int holdinv_x;
+///       int holdinv_y;
+///       int holdbody_loc;
+///       int _pIMinDam;
+///       int _pIMaxDam;
+///       int _pIAC;
+///       int _pIBonusDam;
+///       int _pIBonusToHit;
+///       int _pIBonusAC;
+///       int _pIBonusDamMod;
+///       unsigned long _pISpells;
+///       long _pIFlags;
+///       int _pIGetHit;
+///       char _pISplLvlAdd;
+///       char _pISplCost;
+///       int _pISplDur;
+///       int _pIEnAc;
+///       int _pIFMinDam;
+///       int _pIFMaxDam;
+///       int _pILMinDam;
+///       int _pILMaxDam;
+///       int _pOilType;
+///       unsigned char pTownWarps;
+///       unsigned char pDungMsgs;
+///       unsigned char pLvlLoad;
+///       unsigned long pDiabloKillLevel;
+///    } PlayerStruct;
+///
+/// size = 0x54D8
+typedef struct {
+	/// offset: 0000 (4 bytes)
+	int32_t player_mode;
+	/// offset: 0004 (25 bytes)
+	int8_t steps[25];
+	/// offset: 001D (1 bytes)
+	int8_t player_active;
+	/// offset: 001E (2 bytes)
+	uint8_t pad_001E[2];
+	/// offset: 0020 (4 bytes)
+	int32_t dest_action;
+	/// offset: 0024 (4 bytes)
+	int32_t dest_param1;
+	/// offset: 0028 (4 bytes)
+	int32_t dest_param2;
+	/// offset: 002C (4 bytes)
+	int32_t dest_param3;
+	/// offset: 0030 (4 bytes)
+	int32_t dest_param4;
+	/// offset: 0034 (4 bytes)
+	int32_t dlvl;
+	/// offset: 0038 (4 bytes)
+	int32_t x;
+	/// offset: 003C (4 bytes)
+	int32_t y;
+	/// offset: 0040 (4 bytes)
+	int32_t x_new;
+	/// offset: 0044 (4 bytes)
+	int32_t y_new;
+	/// offset: 0048 (4 bytes)
+	int32_t target_x;
+	/// offset: 004C (4 bytes)
+	int32_t target_y;
+	/// offset: 0050 (4 bytes)
+	int32_t x_owner;
+	/// offset: 0054 (4 bytes)
+	int32_t y_owner;
+	/// offset: 0058 (4 bytes)
+	int32_t x_prev;
+	/// offset: 005C (4 bytes)
+	int32_t y_prev;
+	/// offset: 0060 (4 bytes)
+	int32_t x_offset;
+	/// offset: 0064 (4 bytes)
+	int32_t y_offset;
+	/// offset: 0068 (4 bytes)
+	int32_t x_velocity;
+	/// offset: 006C (4 bytes)
+	int32_t y_velocity;
+	/// offset: 0070 (4 bytes)
+	int32_t direction;
+	/// offset: 0074 (4 bytes)
+	int32_t next_direction;
+	/// offset: 0078 (4 bytes)
+	int32_t anim_id;
+	/// offset: 007C (4 bytes)
+	int32_t cur_cl2_buf;
+	/// offset: 0080 (4 bytes)
+	int32_t anim_delay_probably;
+	/// offset: 0084 (4 bytes)
+	int32_t anim_count_probably;
+	/// offset: 0088 (4 bytes)
+	int32_t anim_len_probably;
+	/// offset: 008C (4 bytes)
+	int32_t cur_frame;
+	/// offset: 0090 (4 bytes)
+	int32_t frame_width;
+	/// offset: 0094 (4 bytes)
+	int32_t frame_width_minus_64_div_2;
+	/// offset: 0098 (4 bytes)
+	int32_t eflag;
+	/// offset: 009C (4 bytes)
+	int32_t lighting_num;
+	/// offset: 00A0 (4 bytes)
+	int32_t vision_id;
+	/// offset: 00A4 (4 bytes)
+	int32_t cast_spell_id;
+	/// offset: 00A8 (1 bytes)
+	int8_t cast_spell_type;
+	/// offset: 00A9 (1 bytes)
+	int8_t cast_spell_from;
+	/// offset: 00AA (1 bytes)
+	uint8_t pad_00AA;
+	/// offset: 00AB (1 bytes)
+	uint8_t pad_00AB;
+	/// offset: 00AC (4 bytes)
+	int32_t cast_skill_id;
+	/// offset: 00B0 (1 bytes)
+	int8_t cast_skill_type;
+	/// offset: 00B1 (1 bytes)
+	uint8_t pad_00B1;
+	/// offset: 00B2 (1 bytes)
+	uint8_t pad_00B2;
+	/// offset: 00B3 (1 bytes)
+	uint8_t pad_00B3;
+	/// offset: 00B4 (4 bytes)
+	int32_t active_spell_id;
+	/// offset: 00B8 (1 bytes)
+	int8_t active_spell_type;
+	/// offset: 00B9 (1 bytes)
+	uint8_t pad_00B9;
+	/// offset: 00BA (1 bytes)
+	uint8_t pad_00BA;
+	/// offset: 00BB (1 bytes)
+	uint8_t pad_00BB;
+	/// offset: 00BC (4 bytes)
+	int32_t speedbook_spell_id;
+	/// offset: 00C0 (1 bytes)
+	int8_t speedbook_spell_type;
+	/// offset: 00C1 (64 bytes)
+	int8_t spell_lvl_from_spell_id[64];
+	/// offset: 0101 (1 bytes)
+	uint8_t pad_0101;
+	/// offset: 0102 (1 bytes)
+	uint8_t pad_0102;
+	/// offset: 0103 (1 bytes)
+	uint8_t pad_0103;
+	/// offset: 0104 (1 bytes)
+	uint8_t pad_0104;
+	/// offset: 0105 (1 bytes)
+	uint8_t pad_0105;
+	/// offset: 0106 (1 bytes)
+	uint8_t pad_0106;
+	/// offset: 0107 (1 bytes)
+	uint8_t pad_0107;
+	/// offset: 0108 (8 bytes)
+	uint32_t known_spells[2];
+	/// offset: 0110 (8 bytes)
+	uint32_t known_skills[2];
+	/// offset: 0118 (4 bytes)
+	uint32_t known_scroll[2];
+	/// offset: 0120 (1 bytes)
+	int8_t spell_flags;
+	/// offset: 0121 (1 bytes)
+	uint8_t pad_0121;
+	/// offset: 0122 (1 bytes)
+	uint8_t pad_0122;
+	/// offset: 0123 (1 bytes)
+	uint8_t pad_0123;
+	/// offset: 0124 (16 bytes)
+	int32_t spell_id_from_hotkey_id[4];
+	/// offset: 0134 (4 bytes)
+	int8_t spell_type_from_hotkey_id[4];
+	/// offset: 0138 (4 bytes)
+	int32_t has_range_weapon;
+	/// offset: 013C (1 bytes)
+	int8_t block_flag;
+	/// offset: 013D (1 bytes)
+	int8_t invalid;
+	/// offset: 013E (1 bytes)
+	int8_t light_radius;
+	/// offset: 013F (1 bytes)
+	int8_t changing_level;
+	/// offset: 0140 (32 bytes)
+	char name[32];
+	/// offset: 0160 (1 bytes)
+	int8_t player_class;
+	/// offset: 0161 (1 bytes)
+	uint8_t pad_0161;
+	/// offset: 0162 (1 bytes)
+	uint8_t pad_0162;
+	/// offset: 0163 (1 bytes)
+	uint8_t pad_0163;
+	/// offset: 0164 (4 bytes)
+	int32_t str_cur;
+	/// offset: 0168 (4 bytes)
+	int32_t str_base;
+	/// offset: 016C (4 bytes)
+	int32_t mag_cur;
+	/// offset: 0170 (4 bytes)
+	int32_t mag_base;
+	/// offset: 0174 (4 bytes)
+	int32_t dex_cur;
+	/// offset: 0178 (4 bytes)
+	int32_t dex_base;
+	/// offset: 017C (4 bytes)
+	int32_t vit_cur;
+	/// offset: 0180 (4 bytes)
+	int32_t vit_base;
+	/// offset: 0184 (4 bytes)
+	int32_t stat_points;
+	/// offset: 0188 (4 bytes)
+	int32_t melee_character_damage;
+	/// offset: 018C (4 bytes)
+	int32_t chance_to_block_bonus;
+	/// offset: 0190 (4 bytes)
+	int32_t hp_base_cur;
+	/// offset: 0194 (4 bytes)
+	int32_t hp_base_max;
+	/// offset: 0198 (4 bytes)
+	int32_t hp_cur;
+	/// offset: 019C (4 bytes)
+	int32_t hp_max;
+	/// offset: 01A0 (4 bytes)
+	int32_t hp_ratio;
+	/// offset: 01A4 (4 bytes)
+	int32_t mp_base_cur;
+	/// offset: 01A8 (4 bytes)
+	int32_t mp_base_max;
+	/// offset: 01AC (4 bytes)
+	int32_t mp_cur;
+	/// offset: 01B0 (4 bytes)
+	int32_t mp_max;
+	/// offset: 01B4 (4 bytes)
+	int32_t mp_ratio;
+	/// offset: 01B8 (1 bytes)
+	int8_t clvl;
+	/// offset: 01B9 (1 bytes)
+	int8_t clvl_max;
+	/// offset: 01BA (1 bytes)
+	uint8_t pad_01BA;
+	/// offset: 01BB (1 bytes)
+	uint8_t pad_01BB;
+	/// offset: 01BC (4 bytes)
+	int32_t exp;
+	/// offset: 01C0 (4 bytes)
+	int32_t exp_max;
+	/// offset: 01C4 (4 bytes)
+	int32_t exp_limit;
+	/// offset: 01C8 (1 bytes)
+	int8_t armor_class_2;
+	/// offset: 01C9 (1 bytes)
+	int8_t magic_resistance;
+	/// offset: 01CA (1 bytes)
+	int8_t fire_resistance;
+	/// offset: 01CB (1 bytes)
+	int8_t lightning_resistance;
+	/// offset: 01CC (4 bytes)
+	int32_t gold_total;
+	/// offset: 01D0 (4 bytes)
+	int32_t has_infravision;
+	/// offset: 01D4 (4 bytes)
+	int32_t player_var1;
+	/// offset: 01D8 (4 bytes)
+	int32_t player_var2;
+	/// offset: 01DC (4 bytes)
+	int32_t player_var3;
+	/// offset: 01E0 (4 bytes)
+	int32_t player_var4;
+	/// offset: 01E4 (4 bytes)
+	int32_t player_var5;
+	/// offset: 01E8 (4 bytes)
+	int32_t player_var6;
+	/// offset: 01EC (4 bytes)
+	int32_t player_var7;
+	/// offset: 01F0 (4 bytes)
+	int32_t player_var8;
+	/// offset: 01F4 (17 bytes)
+	bool8_t dlvl_visited[17];
+	/// offset: 0205 (10 bytes)
+	bool8_t quest_level_visited[10];
+	/// offset: 020F (9 bytes)
+	uint8_t pad_020F[9];
+	/// offset: 0218 (4 bytes)
+	int32_t anim_loaded;
+	/// offset: 021C (32 bytes)
+	void *stand_cl2_hdrs[8];
+	/// offset: 023C (4 bytes)
+	int32_t stand_action_frame;
+	/// offset: 0240 (4 bytes)
+	int32_t stand_frame_width;
+	/// offset: 0244 (32 bytes)
+	void *walk_cl2_hdrs[8];
+	/// offset: 0264 (4 bytes)
+	int32_t walk_action_frame;
+	/// offset: 0268 (4 bytes)
+	int32_t walk_frame_width;
+	/// offset: 026C (32 bytes)
+	void *attack_cl2_hdrs[8];
+	/// offset: 028C (4 bytes)
+	int32_t attack_action_frame;
+	/// offset: 0290 (4 bytes)
+	int32_t attack_frame_width;
+	/// offset: 0294 (4 bytes)
+	int32_t field_294;
+	/// offset: 0298 (32 bytes)
+	void *lightning_magic_cl2_hdrs[8];
+	/// offset: 02B8 (32 bytes)
+	void *fire_magic_cl2_hdrs[8];
+	/// offset: 02D8 (32 bytes)
+	void *q_magic_cl2_hdrs[8];
+	/// offset: 02F8 (4 bytes)
+	int32_t spell_action_frame;
+	/// offset: 02FC (4 bytes)
+	int32_t spell_frame_width;
+	/// offset: 0300 (4 bytes)
+	int32_t field_300;
+	/// offset: 0304 (32 bytes)
+	void *hit_cl2_hdrs[8];
+	/// offset: 0324 (4 bytes)
+	int32_t hit_action_frame;
+	/// offset: 0328 (4 bytes)
+	int32_t hit_frame_width;
+	/// offset: 032C (32 bytes)
+	void *death_cl2_hdrs[8];
+	/// offset: 034C (4 bytes)
+	int32_t death_action_frame;
+	/// offset: 0350 (4 bytes)
+	int32_t death_frame_width;
+	/// offset: 0354 (32 bytes)
+	void *block_cl2_hdrs[8];
+	/// offset: 0374 (4 bytes)
+	int32_t block_action_frame;
+	/// offset: 0378 (4 bytes)
+	int32_t block_frame_width;
+	/// offset: 037C (2576 bytes)
+	Item body_items[7];
+	/// offset: 0D8C (14720 bytes)
+	Item inv_items[40];
+	/// offset: 470C (4 bytes)
+	int32_t ninv_items;
+	/// offset: 4710 (40 bytes)
+	int8_t inv_num_from_inv_grid[40];
+	/// offset: 4738 (2944 bytes)
+	Item belt_items[8];
+	/// offset: 52B8 (368 bytes)
+	Item hold_item;
+	/// offset: 5428 (4 bytes)
+	int32_t damage_min;
+	/// offset: 542C (4 bytes)
+	int32_t damage_max;
+	/// offset: 5430 (4 bytes)
+	int32_t armor_class;
+	/// offset: 5434 (4 bytes)
+	int32_t damage_bonus;
+	/// offset: 5438 (4 bytes)
+	int32_t chance_to_hit_bonus;
+	/// offset: 543C (4 bytes)
+	int32_t armor_class_bonus;
+	/// offset: 5440 (4 bytes)
+	int32_t damage_modifier_bonus;
+	/// offset: 5444 (1 bytes)
+	uint8_t pad_5444;
+	/// offset: 5445 (1 bytes)
+	uint8_t pad_5445;
+	/// offset: 5446 (1 bytes)
+	uint8_t pad_5446;
+	/// offset: 5447 (1 bytes)
+	uint8_t pad_5447;
+	/// offset: 5448 (8 bytes)
+	uint32_t known_charges[2];
+	/// offset: 5450 (4 bytes)
+	int32_t special_effect;
+	/// offset: 5454 (4 bytes)
+	int32_t damage_from_enemies;
+	/// offset: 5458 (1 bytes)
+	int8_t spell_lvl_bonus;
+	/// offset: 5459 (1 bytes)
+	int8_t spell_cost_percent;
+	/// offset: 545A (1 bytes)
+	uint8_t pad_545A;
+	/// offset: 545B (1 bytes)
+	uint8_t pad_545B;
+	/// offset: 545C (4 bytes)
+	int32_t spell_duration_probably;
+	/// offset: 5460 (4 bytes)
+	int32_t enhanced_accuracy_probably;
+	/// offset: 5464 (4 bytes)
+	int32_t fire_damage_min;
+	/// offset: 5468 (4 bytes)
+	int32_t fire_damage_max;
+	/// offset: 546C (4 bytes)
+	int32_t lightning_damage_min;
+	/// offset: 5470 (4 bytes)
+	int32_t lightning_damage_max;
+	/// offset: 5474 (4 bytes)
+	int32_t oil_type;
+	/// offset: 5478 (1 bytes)
+	int8_t enterance_open;
+	/// offset: 5479 (1 bytes)
+	int8_t dungeon_msgs;
+	/// offset: 547A (1 bytes)
+	int8_t sound_on_level_load;
+	/// offset: 547B (1 bytes)
+	int8_t on_battlenet;
+	/// offset: 547C (1 bytes)
+	int8_t has_manashild;
+	/// offset: 547D (3 bytes)
+	uint8_t reserved_547D[3];
+	/// offset: 5480 (16 bytes)
+	uint16_t reserved_5480[8];
+	/// offset: 5490 (4 bytes)
+	int32_t difficulty;
+	/// offset: 5494 (28 bytes)
+	uint32_t reserved_5494[7];
+	/// offset: 54B0 (4 bytes)
+	int32_t stand_cl2;
+	/// offset: 54B4 (4 bytes)
+	int32_t walk_cl2;
+	/// offset: 54B8 (4 bytes)
+	int32_t attack_cl2;
+	/// offset: 54BC (4 bytes)
+	int32_t lightning_magic_cl2;
+	/// offset: 54C0 (4 bytes)
+	int32_t fire_magic_cl2;
+	/// offset: 54C4 (4 bytes)
+	int32_t q_magic_cl2;
+	/// offset: 54C8 (4 bytes)
+	int32_t hit_cl2;
+	/// offset: 54CC (4 bytes)
+	int32_t death_cl2;
+	/// offset: 54D0 (4 bytes)
+	int32_t block_cl2;
+	/// offset: 54D4 (4 bytes)
+	int32_t align_54D4;
+} Player;
+
 /// A Point is an X, Y coordinate pair. The axes increase right and down.
 typedef struct {
 	/// offset: 0000 (4 bytes)
