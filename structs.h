@@ -952,7 +952,7 @@ typedef struct {
 	/// offset 003C (1 byte)
 	int8_t quality; ///< item_quality
 	/// offset 003D (64 bytes)
-	char unindentified_name[64];
+	char unidentified_name[64];
 	/// offset 007D (64 bytes)
 	char full_name[64];
 	/// offset 00BD (1 byte)
@@ -963,7 +963,7 @@ typedef struct {
 	int32_t inv_graphics_id; ///< item_inv_graphics_id
 	/// offset 00C4 (4 bytes)
 	/// also represents number of gold pieces for item `gold`
-	int32_t unindentified_price;
+	int32_t unidentified_price;
 	/// offset 00C8 (4 bytes)
 	int32_t full_price;
 	/// offset 00CC (4 bytes)
