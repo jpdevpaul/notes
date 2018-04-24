@@ -3,7 +3,7 @@
 [![Join the chat at https://gitter.im/sanctuary/notes](https://badges.gitter.im/sanctuary/notes.svg)](https://gitter.im/sanctuary/notes)
 [![Build Status](https://travis-ci.org/sanctuary/notes.svg)](https://travis-ci.org/sanctuary/notes)
 
-The aim of this project is to organize and cross-reference a collection of notes related to the inner workings of the Diablo 1 game engine. The initial work has focused on creating a foundation and high-level structure (think documentation skeleton) for organizing these notes. A few function declarations and global variable declarations have already been documented, but mainly to provide a reference for how the structure of the documentation may look like. Future work will focus on documenting the remaining relevant function declarations, global variable declarations, structure definitions and enumerate definitions of the Diablo 1 game engine.
+The aim of this project is to organize and cross-reference a collection of notes related to the inner workings of the Diablo 1 game engine.
 
 The notes are currently organized into the following categories.
 
@@ -11,10 +11,16 @@ The notes are currently organized into the following categories.
 * [Global variables (read-only)](rdata/README.md): global variable declarations in the read-only data section.
 * [Global variables (read-write)](data/README.md): global variable declarations in the read-write data section.
 * [Global variables (uninitialized)](bss/README.md): global variable declarations in the uninitialized data section.
-* [Structures](structs.h): structure definitions.
-* [Enumerates](enums.h): enumerate definitions.
-* [Storm ordinals](storm.h): Storm.dll function declarations based on ordinal numbers.
-* [Variable name descriptions](name_desc.md): description of variable names based on context.
+* [Structs](include/structs.h): structure definitions.
+* [Enums](include/enums.h): enumerate definitions.
+* [Storm ordinals](include/storm.h): Storm.dll function declarations based on ordinal numbers.
+* [Variable naming conventions](name_desc.md): variable naming convention based on context.
+
+## Online documentation
+
+The collective notes of this repository are made available as [online documentation](http://sanctuary.github.io/notes/) in a searchable format.
+
+To generate these pages, the [Scripture](https://github.com/Predelnik/Scripture) tool is used -- and a Git commit hook ensures that new commits to this repository are instantly mirrored to http://sanctuary.github.io/notes/.
 
 ## Progress
 
@@ -24,7 +30,7 @@ The notes are currently organized into the following categories.
 | [Global variables (read-only)](rdata/README.md)   | ![95%](http://progressed.io/bar/95 "(27096/28372 bytes)")     |
 | [Global variables (read-write)](data/README.md)   | ![98%](http://progressed.io/bar/98 "(194390/196860 bytes)")   |
 | [Global variables (uninitialized)](bss/README.md) | ![93%](http://progressed.io/bar/93 "(1920325/2048520 bytes)") |
-| [Storm ordinals](storm.h)                         | ![100%](http://progressed.io/bar/100 "(58/58 functions)")     |
+| [Storm ordinals](include/storm.h)                 | ![100%](http://progressed.io/bar/100 "(58/58 functions)")     |
 
 The README of each sub-project tracks the progress for each of its source files.
 
@@ -36,18 +42,13 @@ Anyone interested in contributing to the project may do so in whichever way they
 2. Point out mistakes or inconsistencies in the notes
 3. Improve the existing notes
 4. Add documentation for
-	- function declarations (e.g. [drlg_l1_place_door](https://github.com/sanctuary/notes/blob/master/funcs/drlg_l1.cpp#0x40b56f))
-	- global variable declarations (e.g. [cathedral_stairway_down_piece_ids](https://github.com/sanctuary/notes/blob/master/data/trigs.cpp#0x4b3008))
-	- structure definitions (e.g. [Shadow](https://github.com/sanctuary/notes/blob/master/structs.h#shadow))
-	- enumerate definitions (e.g. [quest_level](https://github.com/sanctuary/notes/blob/master/enums.h#quest_level))
-5. ...
+	- function declarations (e.g. `drlg_l1_place_door`: [code](https://github.com/sanctuary/notes/blob/fe200926d56a603b2173c5c2b0e3a97cc8649c6b/funcs/drlg_l1.h#L88), [doc](http://sanctuary.github.io/notes/#address/0x40B56F))
+	- global variable declarations (e.g. `items`: [code](https://github.com/sanctuary/notes/blob/fe200926d56a603b2173c5c2b0e3a97cc8649c6b/bss/items.h#L3), [doc](http://sanctuary.github.io/notes/#address/0x635A28))
+	- structure definitions (e.g. `ItemAffixData`: [code](https://github.com/sanctuary/notes/blob/dd2c34fbb172f4e05aca7ac5e803bc6846b7a7a8/include/structs.h#L1140), [doc](http://sanctuary.github.io/notes/#struct/ItemAffixData))
+	- enumerate definitions (e.g. `quest_level`: [code](https://github.com/sanctuary/notes/blob/dd2c34fbb172f4e05aca7ac5e803bc6846b7a7a8/include/enums.h#L1632), [doc](http://sanctuary.github.io/notes/#enum/quest_level))
+5. Improve the [Scripture](https://github.com/Predelnik/Scripture) documentation generation script.
+6. ...
 
 ## Credits
 
 None of this work would have been possible without [Jarulf's Guide to Diablo and Hellfire](http://www.lurkerlounge.com/diablo/jarulf/jarulf162.pdf), one of few truly amazing resources on the Internet.
-
-## Public domain
-
-The source code and any original content of this repository is hereby released into the [public domain].
-
-[public domain]: https://creativecommons.org/publicdomain/zero/1.0/
