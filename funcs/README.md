@@ -2,78 +2,78 @@
 
 Each function has been categorised based on their original source file, as summarised by the table below. The *progress* column tracks the percentage of functions within a given source file that has been documented.
 
-| Source File                      | Start Address | End Address | Progress                                                  |
-|----------------------------------|---------------|-------------|-----------------------------------------------------------|
-| _crt.cpp                         | `0x401000`    | `0x401029`  | N/A                                                       |
-| [appfat.cpp](appfat.cpp)         | `0x40102A`    | `0x401DA3`  | ![100%](http://progressed.io/bar/100 "(19/19 functions)") |
-| [automap.cpp](automap.cpp)       | `0x401DA4`    | `0x40311A`  | ![100%](http://progressed.io/bar/100 "(16/16 functions)") |
-| [capture.cpp](capture.cpp)       | `0x40311B`    | `0x4034D8`  | ![100%](http://progressed.io/bar/100 "(7/7 functions)")   |
-| [codec.cpp](codec.cpp)           | `0x4034D9`    | `0x4037D3`  | ![100%](http://progressed.io/bar/100 "(5/5 functions)")   |
-| [control.cpp](control.cpp)       | `0x4037D4`    | `0x407409`  | ![24%](http://progressed.io/bar/24 "(16/65 functions)")   |
-| [cursor.cpp](cursor.cpp)         | `0x40740A`    | `0x4084A5`  | ![100%](http://progressed.io/bar/100 "(9/9 functions)")   |
-| [dead.cpp](dead.cpp)             | `0x4084A6`    | `0x4086F3`  | ![100%](http://progressed.io/bar/100 "(3/3 functions)")   |
-| [debug.cpp](debug.cpp)           | `0x4086F4`    | `0x4087B0`  | ![100%](http://progressed.io/bar/100 "(3/3 functions)")   |
-| [diablo.cpp](diablo.cpp)         | `0x4087B1`    | `0x40ACAC`  | ![42%](http://progressed.io/bar/42 "(15/35 functions)")   |
-| [doom.cpp](doom.cpp)             | `0x40ACAD`    | `0x40ADD5`  | ![100%](http://progressed.io/bar/100 "(7/7 functions)")   |
-| [drlg_l1.cpp](drlg_l1.cpp)       | `0x40ADD6`    | `0x40D356`  | ![100%](http://progressed.io/bar/100 "(38/38 functions)") |
-| [drlg_l2.cpp](drlg_l2.cpp)       | `0x40D357`    | `0x40FF80`  | ![51%](http://progressed.io/bar/51 "(18/35 functions)")   |
-| [drlg_l3.cpp](drlg_l3.cpp)       | `0x40FF81`    | `0x412654`  | ![5%](http://progressed.io/bar/5 "(2/34 functions)")      |
-| [drlg_l4.cpp](drlg_l4.cpp)       | `0x412655`    | `0x415097`  | ![2%](http://progressed.io/bar/2 "(1/35 functions)")      |
-| [dthread.cpp](dthread.cpp)       | `0x415098`    | `0x415361`  | ![100%](http://progressed.io/bar/100 "(11/11 functions)") |
-| [dx.cpp](dx.cpp)                 | `0x415362`    | `0x4158A8`  | ![100%](http://progressed.io/bar/100 "(17/17 functions)") |
-| [effects.cpp](effects.cpp)       | `0x4158A9`    | `0x415F42`  | ![14%](http://progressed.io/bar/14 "(3/21 functions)")    |
-| [encrypt.cpp](encrypt.cpp)       | `0x415F43`    | `0x4161FB`  | ![100%](http://progressed.io/bar/100 "(8/8 functions)")   |
-| [engine.cpp](engine.cpp)         | `0x4161FC`    | `0x41804D`  | ![66%](http://progressed.io/bar/66 "(38/57 functions)")   |
-| [error.cpp](error.cpp)           | `0x41804E`    | `0x4182AC`  | ![100%](http://progressed.io/bar/100 "(3/3 functions)")   |
-| [exception.cpp](exception.cpp)   | `0x4182AD`    | `0x418865`  | ![8%](http://progressed.io/bar/8 "(1/12 functions)")      |
-| [gamemenu.cpp](gamemenu.cpp)     | `0x418866`    | `0x418C8A`  | ![0%](http://progressed.io/bar/0 "(0/23 functions)")      |
-| [gendung.cpp](gendung.cpp)       | `0x418C8B`    | `0x419E8A`  | ![36%](http://progressed.io/bar/36 "(8/22 functions)")    |
-| [gmenu.cpp](gmenu.cpp)           | `0x419E8B`    | `0x41A552`  | ![20%](http://progressed.io/bar/20 "(4/20 functions)")    |
-| [help.cpp](help.cpp)             | `0x41A553`    | `0x41A7B2`  | ![100%](http://progressed.io/bar/100 "(6/6 functions)")   |
-| [init.cpp](init.cpp)             | `0x41A7B3`    | `0x41B18F`  | ![57%](http://progressed.io/bar/57 "(11/19 functions)")   |
-| [interfac.cpp](interfac.cpp)     | `0x41B190`    | `0x41B813`  | ![100%](http://progressed.io/bar/100 "(9/9 functions)")   |
-| [inv.cpp](inv.cpp)               | `0x41B814`    | `0x41F095`  | ![10%](http://progressed.io/bar/10 "(4/40 functions)")    |
-| [items.cpp](items.cpp)           | `0x41F096`    | `0x425442`  | ![12%](http://progressed.io/bar/12 "(14/110 functions)")  |
-| [lighting.cpp](lighting.cpp)     | `0x425443`    | `0x426563`  | ![0%](http://progressed.io/bar/0 "(0/24 functions)")      |
-| [loadsave.cpp](loadsave.cpp)     | `0x426564`    | `0x4279F1`  | ![34%](http://progressed.io/bar/34 "(11/32 functions)")   |
-| [log.cpp](log.cpp)               | `0x4279F2`    | `0x427E0D`  | ![100%](http://progressed.io/bar/100 "(11/11 functions)") |
-| [mainmenu.cpp](mainmenu.cpp)     | `0x427E0E`    | `0x428055`  | ![20%](http://progressed.io/bar/20 "(2/10 functions)")    |
-| [minitext.cpp](minitext.cpp)     | `0x428056`    | `0x4283BF`  | ![100%](http://progressed.io/bar/100 "(6/6 functions)")   |
-| [missiles.cpp](missiles.cpp)     | `0x4283C0`    | `0x430FDE`  | ![0%](http://progressed.io/bar/0 "(1/133 functions)")     |
-| [monster.cpp](monster.cpp)       | `0x430FDF`    | `0x43AD32`  | ![1%](http://progressed.io/bar/1 "(2/147 functions)")     |
-| [movie.cpp](movie.cpp)           | `0x43AD33`    | `0x43AE8F`  | ![100%](http://progressed.io/bar/100 "(4/4 functions)")   |
-| [mpqapi.cpp](mpqapi.cpp)         | `0x43AE90`    | `0x43BBA3`  | ![100%](http://progressed.io/bar/100 "(29/29 functions)") |
-| [msg.cpp](msg.cpp)               | `0x43BBA4`    | `0x43F848`  | ![19%](http://progressed.io/bar/19 "(26/133 functions)")  |
-| [msgcmd.cpp](msgcmd.cpp)         | `0x43F849`    | `0x43FAC3`  | ![16%](http://progressed.io/bar/16 "(3/18 functions)")    |
-| [multi.cpp](multi.cpp)           | `0x43FAC4`    | `0x440DAD`  | ![7%](http://progressed.io/bar/7 "(3/38 functions)")      |
-| [nthread.cpp](nthread.cpp)       | `0x440DAE`    | `0x44121C`  | ![100%](http://progressed.io/bar/100 "(15/15 functions)") |
-| [objects.cpp](objects.cpp)       | `0x44121D`    | `0x448754`  | ![5%](http://progressed.io/bar/5 "(7/131 functions)")     |
-| [pack.cpp](pack.cpp)             | `0x448755`    | `0x448DF4`  | ![100%](http://progressed.io/bar/100 "(7/7 functions)")   |
-| [palette.cpp](palette.cpp)       | `0x448DF5`    | `0x4493D3`  | ![100%](http://progressed.io/bar/100 "(22/22 functions)") |
-| [path.cpp](path.cpp)             | `0x4493D4`    | `0x4498EB`  | ![35%](http://progressed.io/bar/35 "(5/14 functions)")    |
-| [pfile.cpp](pfile.cpp)           | `0x4498EC`    | `0x44A8E5`  | ![100%](http://progressed.io/bar/100 "(38/38 functions)") |
-| [player.cpp](player.cpp)         | `0x44A8E6`    | `0x450D32`  | ![5%](http://progressed.io/bar/5 "(5/92 functions)")      |
-| [plrmsg.cpp](plrmsg.cpp)         | `0x450D33`    | `0x450FFD`  | ![12%](http://progressed.io/bar/12 "(1/8 functions)")     |
-| [portal.cpp](portal.cpp)         | `0x450FFE`    | `0x45138D`  | ![7%](http://progressed.io/bar/7 "(1/13 functions)")      |
-| [quests.cpp](quests.cpp)         | `0x45138E`    | `0x452830`  | ![48%](http://progressed.io/bar/48 "(12/25 functions)")   |
-| [restricted.cpp](restricted.cpp) | `0x452831`    | `0x452974`  | ![100%](http://progressed.io/bar/100 "(3/3 functions)")   |
-| [scrollrt.cpp](scrollrt.cpp)     | `0x452975`    | `0x456624`  | ![16%](http://progressed.io/bar/16 "(5/31 functions)")    |
-| [setmaps.cpp](setmaps.cpp)       | `0x456625`    | `0x456A15`  | ![100%](http://progressed.io/bar/100 "(6/6 functions)")   |
-| [sha1.cpp](sha1.cpp)             | `0x456A16`    | `0x456CBA`  | ![100%](http://progressed.io/bar/100 "(6/6 functions)")   |
-| [sound.cpp](sound.cpp)           | `0x456CBB`    | `0x45744D`  | ![100%](http://progressed.io/bar/100 "(22/22 functions)") |
-| [spells.cpp](spells.cpp)         | `0x45744E`    | `0x457A00`  | ![100%](http://progressed.io/bar/100 "(7/7 functions)")   |
-| [stores.cpp](stores.cpp)         | `0x457A01`    | `0x45C198`  | ![67%](http://progressed.io/bar/67 "(64/95 functions)")   |
-| [sync.cpp](sync.cpp)             | `0x45C199`    | `0x45C86F`  | ![0%](http://progressed.io/bar/0 "(0/9 functions)")       |
-| [themes.cpp](themes.cpp)         | `0x45C870`    | `0x45E08B`  | ![67%](http://progressed.io/bar/67 "(21/31 functions)")   |
-| [tmsg.cpp](tmsg.cpp)             | `0x45E08C`    | `0x45E150`  | ![100%](http://progressed.io/bar/100 "(3/3 functions)")   |
-| [town.cpp](town.cpp)             | `0x45E151`    | `0x46019A`  | ![15%](http://progressed.io/bar/15 "(3/19 functions)")    |
-| [towners.cpp](towners.cpp)       | `0x46019B`    | `0x4618A4`  | ![100%](http://progressed.io/bar/100 "(33/33 functions)") |
-| [track.cpp](track.cpp)           | `0x4618A5`    | `0x4619A6`  | ![100%](http://progressed.io/bar/100 "(5/5 functions)")   |
-| [trigs.cpp](trigs.cpp)           | `0x4619A7`    | `0x462C6C`  | ![100%](http://progressed.io/bar/100 "(21/21 functions)") |
-| [wave.cpp](wave.cpp)             | `0x462C6D`    | `0x46305F`  | ![11%](http://progressed.io/bar/11 "(2/18 functions)")    |
-| [world.cpp](world.cpp)           | `0x463060`    | `0x469719`  | ![0%](http://progressed.io/bar/0 "(0/7 functions)")       |
-| _crt.cpp                         | `0x46971A`    | `0x47746F`  | N/A                                                       |
-| pkware.cpp                       | `0x477470`    | `0x478FFF`  | N/A                                                       |
+| Source File                    | Start Address | End Address | Progress                                                  |
+|--------------------------------|---------------|-------------|-----------------------------------------------------------|
+| _crt.cpp                       | `0x401000`    | `0x401029`  | N/A                                                       |
+| [appfat.cpp](appfat.h)         | `0x40102A`    | `0x401DA3`  | ![100%](http://progressed.io/bar/100 "(19/19 functions)") |
+| [automap.cpp](automap.h)       | `0x401DA4`    | `0x40311A`  | ![100%](http://progressed.io/bar/100 "(16/16 functions)") |
+| [capture.cpp](capture.h)       | `0x40311B`    | `0x4034D8`  | ![100%](http://progressed.io/bar/100 "(7/7 functions)")   |
+| [codec.cpp](codec.h)           | `0x4034D9`    | `0x4037D3`  | ![100%](http://progressed.io/bar/100 "(5/5 functions)")   |
+| [control.cpp](control.h)       | `0x4037D4`    | `0x407409`  | ![24%](http://progressed.io/bar/24 "(16/65 functions)")   |
+| [cursor.cpp](cursor.h)         | `0x40740A`    | `0x4084A5`  | ![100%](http://progressed.io/bar/100 "(9/9 functions)")   |
+| [dead.cpp](dead.h)             | `0x4084A6`    | `0x4086F3`  | ![100%](http://progressed.io/bar/100 "(3/3 functions)")   |
+| [debug.cpp](debug.h)           | `0x4086F4`    | `0x4087B0`  | ![100%](http://progressed.io/bar/100 "(3/3 functions)")   |
+| [diablo.cpp](diablo.h)         | `0x4087B1`    | `0x40ACAC`  | ![42%](http://progressed.io/bar/42 "(15/35 functions)")   |
+| [doom.cpp](doom.h)             | `0x40ACAD`    | `0x40ADD5`  | ![100%](http://progressed.io/bar/100 "(7/7 functions)")   |
+| [drlg_l1.cpp](drlg_l1.h)       | `0x40ADD6`    | `0x40D356`  | ![100%](http://progressed.io/bar/100 "(38/38 functions)") |
+| [drlg_l2.cpp](drlg_l2.h)       | `0x40D357`    | `0x40FF80`  | ![51%](http://progressed.io/bar/51 "(18/35 functions)")   |
+| [drlg_l3.cpp](drlg_l3.h)       | `0x40FF81`    | `0x412654`  | ![5%](http://progressed.io/bar/5 "(2/34 functions)")      |
+| [drlg_l4.cpp](drlg_l4.h)       | `0x412655`    | `0x415097`  | ![2%](http://progressed.io/bar/2 "(1/35 functions)")      |
+| [dthread.cpp](dthread.h)       | `0x415098`    | `0x415361`  | ![100%](http://progressed.io/bar/100 "(11/11 functions)") |
+| [dx.cpp](dx.h)                 | `0x415362`    | `0x4158A8`  | ![100%](http://progressed.io/bar/100 "(17/17 functions)") |
+| [effects.cpp](effects.h)       | `0x4158A9`    | `0x415F42`  | ![14%](http://progressed.io/bar/14 "(3/21 functions)")    |
+| [encrypt.cpp](encrypt.h)       | `0x415F43`    | `0x4161FB`  | ![100%](http://progressed.io/bar/100 "(8/8 functions)")   |
+| [engine.cpp](engine.h)         | `0x4161FC`    | `0x41804D`  | ![66%](http://progressed.io/bar/66 "(38/57 functions)")   |
+| [error.cpp](error.h)           | `0x41804E`    | `0x4182AC`  | ![100%](http://progressed.io/bar/100 "(3/3 functions)")   |
+| [exception.cpp](exception.h)   | `0x4182AD`    | `0x418865`  | ![8%](http://progressed.io/bar/8 "(1/12 functions)")      |
+| [gamemenu.cpp](gamemenu.h)     | `0x418866`    | `0x418C8A`  | ![0%](http://progressed.io/bar/0 "(0/23 functions)")      |
+| [gendung.cpp](gendung.h)       | `0x418C8B`    | `0x419E8A`  | ![36%](http://progressed.io/bar/36 "(8/22 functions)")    |
+| [gmenu.cpp](gmenu.h)           | `0x419E8B`    | `0x41A552`  | ![20%](http://progressed.io/bar/20 "(4/20 functions)")    |
+| [help.cpp](help.h)             | `0x41A553`    | `0x41A7B2`  | ![100%](http://progressed.io/bar/100 "(6/6 functions)")   |
+| [init.cpp](init.h)             | `0x41A7B3`    | `0x41B18F`  | ![57%](http://progressed.io/bar/57 "(11/19 functions)")   |
+| [interfac.cpp](interfac.h)     | `0x41B190`    | `0x41B813`  | ![100%](http://progressed.io/bar/100 "(9/9 functions)")   |
+| [inv.cpp](inv.h)               | `0x41B814`    | `0x41F095`  | ![10%](http://progressed.io/bar/10 "(4/40 functions)")    |
+| [items.cpp](items.h)           | `0x41F096`    | `0x425442`  | ![12%](http://progressed.io/bar/12 "(14/110 functions)")  |
+| [lighting.cpp](lighting.h)     | `0x425443`    | `0x426563`  | ![0%](http://progressed.io/bar/0 "(0/24 functions)")      |
+| [loadsave.cpp](loadsave.h)     | `0x426564`    | `0x4279F1`  | ![34%](http://progressed.io/bar/34 "(11/32 functions)")   |
+| [log.cpp](log.h)               | `0x4279F2`    | `0x427E0D`  | ![100%](http://progressed.io/bar/100 "(11/11 functions)") |
+| [mainmenu.cpp](mainmenu.h)     | `0x427E0E`    | `0x428055`  | ![20%](http://progressed.io/bar/20 "(2/10 functions)")    |
+| [minitext.cpp](minitext.h)     | `0x428056`    | `0x4283BF`  | ![100%](http://progressed.io/bar/100 "(6/6 functions)")   |
+| [missiles.cpp](missiles.h)     | `0x4283C0`    | `0x430FDE`  | ![0%](http://progressed.io/bar/0 "(1/133 functions)")     |
+| [monster.cpp](monster.h)       | `0x430FDF`    | `0x43AD32`  | ![1%](http://progressed.io/bar/1 "(2/147 functions)")     |
+| [movie.cpp](movie.h)           | `0x43AD33`    | `0x43AE8F`  | ![100%](http://progressed.io/bar/100 "(4/4 functions)")   |
+| [mpqapi.cpp](mpqapi.h)         | `0x43AE90`    | `0x43BBA3`  | ![100%](http://progressed.io/bar/100 "(29/29 functions)") |
+| [msg.cpp](msg.h)               | `0x43BBA4`    | `0x43F848`  | ![19%](http://progressed.io/bar/19 "(26/133 functions)")  |
+| [msgcmd.cpp](msgcmd.h)         | `0x43F849`    | `0x43FAC3`  | ![16%](http://progressed.io/bar/16 "(3/18 functions)")    |
+| [multi.cpp](multi.h)           | `0x43FAC4`    | `0x440DAD`  | ![7%](http://progressed.io/bar/7 "(3/38 functions)")      |
+| [nthread.cpp](nthread.h)       | `0x440DAE`    | `0x44121C`  | ![100%](http://progressed.io/bar/100 "(15/15 functions)") |
+| [objects.cpp](objects.h)       | `0x44121D`    | `0x448754`  | ![5%](http://progressed.io/bar/5 "(7/131 functions)")     |
+| [pack.cpp](pack.h)             | `0x448755`    | `0x448DF4`  | ![100%](http://progressed.io/bar/100 "(7/7 functions)")   |
+| [palette.cpp](palette.h)       | `0x448DF5`    | `0x4493D3`  | ![100%](http://progressed.io/bar/100 "(22/22 functions)") |
+| [path.cpp](path.h)             | `0x4493D4`    | `0x4498EB`  | ![35%](http://progressed.io/bar/35 "(5/14 functions)")    |
+| [pfile.cpp](pfile.h)           | `0x4498EC`    | `0x44A8E5`  | ![100%](http://progressed.io/bar/100 "(38/38 functions)") |
+| [player.cpp](player.h)         | `0x44A8E6`    | `0x450D32`  | ![5%](http://progressed.io/bar/5 "(5/92 functions)")      |
+| [plrmsg.cpp](plrmsg.h)         | `0x450D33`    | `0x450FFD`  | ![12%](http://progressed.io/bar/12 "(1/8 functions)")     |
+| [portal.cpp](portal.h)         | `0x450FFE`    | `0x45138D`  | ![7%](http://progressed.io/bar/7 "(1/13 functions)")      |
+| [quests.cpp](quests.h)         | `0x45138E`    | `0x452830`  | ![48%](http://progressed.io/bar/48 "(12/25 functions)")   |
+| [restricted.cpp](restricted.h) | `0x452831`    | `0x452974`  | ![100%](http://progressed.io/bar/100 "(3/3 functions)")   |
+| [scrollrt.cpp](scrollrt.h)     | `0x452975`    | `0x456624`  | ![16%](http://progressed.io/bar/16 "(5/31 functions)")    |
+| [setmaps.cpp](setmaps.h)       | `0x456625`    | `0x456A15`  | ![100%](http://progressed.io/bar/100 "(6/6 functions)")   |
+| [sha1.cpp](sha1.h)             | `0x456A16`    | `0x456CBA`  | ![100%](http://progressed.io/bar/100 "(6/6 functions)")   |
+| [sound.cpp](sound.h)           | `0x456CBB`    | `0x45744D`  | ![100%](http://progressed.io/bar/100 "(22/22 functions)") |
+| [spells.cpp](spells.h)         | `0x45744E`    | `0x457A00`  | ![100%](http://progressed.io/bar/100 "(7/7 functions)")   |
+| [stores.cpp](stores.h)         | `0x457A01`    | `0x45C198`  | ![67%](http://progressed.io/bar/67 "(64/95 functions)")   |
+| [sync.cpp](sync.h)             | `0x45C199`    | `0x45C86F`  | ![0%](http://progressed.io/bar/0 "(0/9 functions)")       |
+| [themes.cpp](themes.h)         | `0x45C870`    | `0x45E08B`  | ![67%](http://progressed.io/bar/67 "(21/31 functions)")   |
+| [tmsg.cpp](tmsg.h)             | `0x45E08C`    | `0x45E150`  | ![100%](http://progressed.io/bar/100 "(3/3 functions)")   |
+| [town.cpp](town.h)             | `0x45E151`    | `0x46019A`  | ![15%](http://progressed.io/bar/15 "(3/19 functions)")    |
+| [towners.cpp](towners.h)       | `0x46019B`    | `0x4618A4`  | ![100%](http://progressed.io/bar/100 "(33/33 functions)") |
+| [track.cpp](track.h)           | `0x4618A5`    | `0x4619A6`  | ![100%](http://progressed.io/bar/100 "(5/5 functions)")   |
+| [trigs.cpp](trigs.h)           | `0x4619A7`    | `0x462C6C`  | ![100%](http://progressed.io/bar/100 "(21/21 functions)") |
+| [wave.cpp](wave.h)             | `0x462C6D`    | `0x46305F`  | ![11%](http://progressed.io/bar/11 "(2/18 functions)")    |
+| [world.cpp](world.h)           | `0x463060`    | `0x469719`  | ![0%](http://progressed.io/bar/0 "(0/7 functions)")       |
+| _crt.cpp                       | `0x46971A`    | `0x47746F`  | N/A                                                       |
+| pkware.cpp                     | `0x477470`    | `0x478FFF`  | N/A                                                       |
 
 ## Notes
 
