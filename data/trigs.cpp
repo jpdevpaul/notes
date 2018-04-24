@@ -133,49 +133,49 @@ l1_piece_id hell_stairway_down_to_diablo_piece_ids[33];
 /// address: 0x4B31B0
 ///
 /// "Down to hell"
-const char str_4B31B0[13] = {};
+char str_4B31B0[13];
 
 /// address: 0x4B31C0
 ///
 /// "Down to caves"
-const char str_4B31C0[14] = {};
+char str_4B31C0[14];
 
 /// address: 0x4B31D0
 ///
 /// "Down to catacombs"
-const char str_4B31D0[18] = {};
+char str_4B31D0[18];
 
 /// address: 0x4B31E4
 ///
 /// "Down to dungeon"
-const char str_4B31E4[16] = {};
+char str_4B31E4[16];
 
 /// address: 0x4B31F4
 ///
 /// "Down to level %i"
-const char str_4B31F4[17] = {};
+char str_4B31F4[17];
 
 /// address: 0x4B3208
 ///
 /// "Up to town"
-const char str_4B3208[11] = {};
+char str_4B3208[11];
 
 /// address: 0x4B3214
 ///
 /// "Up to level %i"
-const char str_4B3214[15] = {};
+char str_4B3214[15];
 
 /// address: 0x4B3224
 ///
 /// "Down to Diablo"
-const char str_4B3224[15] = {};
+char str_4B3224[15];
 
 /// address: 0x4B3234
 ///
 /// "Back to Level %i"
-const char str_4B3234[17] = {};
+char str_4B3234[17];
 
 /// address: 0x4B3248
 ///
 /// "Unknown trigger msg"
-const char str_4B3248[20] = {};
+char str_4B3248[20];

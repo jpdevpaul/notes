@@ -72,94 +72,94 @@ sfx_id cow_active_sfx_id;
 /// address: 0x4B2DC4
 ///
 /// "Griswold the Blacksmith"
-const char str_4B2DC4[24] = {};
+char str_4B2DC4[24];
 
 /// address: 0x4B2DDC
 ///
 /// `Towners\Smith\SmithN.CEL`
-const char str_4B2DDC[25] = {};
+char str_4B2DDC[25];
 
 /// address: 0x4B2DF8
 ///
 /// "Ogden the Tavern owner"
-const char str_4B2DF8[23] = {};
+char str_4B2DF8[23];
 
 /// address: 0x4B2E10
 ///
 /// `Towners\TwnF\TwnFN.CEL`
-const char str_4B2E10[23] = {};
+char str_4B2E10[23];
 
 /// address: 0x4B2E28
 ///
 /// "Wounded Townsman"
-const char str_4B2E28[17] = {};
+char str_4B2E28[17];
 
 /// address: 0x4B2E3C
 ///
 /// `Towners\Butch\Deadguy.CEL`
-const char str_4B2E3C[26] = {};
+char str_4B2E3C[26];
 
 /// address: 0x4B2E58
 ///
 /// "Adria the Witch"
-const char str_4B2E58[16] = {};
+char str_4B2E58[16];
 
 /// address: 0x4B2E68
 ///
 /// `Towners\TownWmn1\Witch.CEL`
-const char str_4B2E68[27] = {};
+char str_4B2E68[27];
 
 /// address: 0x4B2E84
 ///
 /// "Gillian the Barmaid"
-const char str_4B2E84[20] = {};
+char str_4B2E84[20];
 
 /// address: 0x4B2E98
 ///
 /// `Towners\TownWmn1\WmnN.CEL`
-const char str_4B2E98[26] = {};
+char str_4B2E98[26];
 
 /// address: 0x4B2EB4
 ///
 /// `Towners\TownBoy\PegKid1.CEL`
-const char str_4B2EB4[28] = {};
+char str_4B2EB4[28];
 
 /// address: 0x4B2ED0
 ///
 /// "Pepin the Healer"
-const char str_4B2ED0[17] = {};
+char str_4B2ED0[17];
 
 /// address: 0x4B2EE4
 ///
 /// `Towners\Healer\Healer.CEL`
-const char str_4B2EE4[26] = {};
+char str_4B2EE4[26];
 
 /// address: 0x4B2F00
 ///
 /// "Cain the Elder"
-const char str_4B2F00[15] = {};
+char str_4B2F00[15];
 
 /// address: 0x4B2F10
 ///
 /// `Towners\Strytell\Strytell.CEL`
-const char str_4B2F10[30] = {};
+char str_4B2F10[30];
 
 /// address: 0x4B2F30
 ///
 /// `Towners\Drunk\TwnDrunk.CEL`
-const char str_4B2F30[27] = {};
+char str_4B2F30[27];
 
 /// address: 0x4B2F4C
 ///
 /// "Cow"
-const char str_4B2F4C[4] = {};
+char str_4B2F4C[4];
 
 /// address: 0x4B2F50
 ///
 /// `Towners\Animals\Cow.CEL`
-const char str_4B2F50[24] = {};
+char str_4B2F50[24];
 
 /// address: 0x4B2F68
 ///
 /// "Slain Townsman"
-const char str_4B2F68[15] = {};
+char str_4B2F68[15];

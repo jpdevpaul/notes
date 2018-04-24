@@ -6,12 +6,12 @@ float palette_inf;
 /// address: 0x47F170
 ///
 /// "Gamma Correction"
-const char str_47F170[17] = {};
+char str_47F170[17];
 
 /// address: 0x47F184
 ///
 /// "Color Cycling"
-const char str_47F184[14] = {};
+char str_47F184[14];
 
 /// address: 0x47F198
 ///

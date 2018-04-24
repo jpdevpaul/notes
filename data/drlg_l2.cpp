@@ -723,14 +723,14 @@ int Patterns[100][10];
 /// address: 0x4860E8
 ///
 /// `Levels\L2Data\Bonestr2.DUN`
-const char str_4860E8[27] = {};
+char str_4860E8[27];
 
 /// address: 0x486104
 ///
 /// `Levels\L2Data\Blood1.DUN`
-const char str_486104[25] = {};
+char str_486104[25];
 
 /// address: 0x486120
 ///
 /// `Levels\L2Data\Blind2.DUN`
-const char str_486120[25] = {};
+char str_486120[25];
