@@ -5,8 +5,6 @@
 /// +Infinity after initialization of player.cpp.
 float player_cpp_init_value;
 
-/* TODO: uncomment when the Player struct has been added to structs.h.
-
 /// address: 0x686448
 ///
 /// players contains the player characters of the current game.
@@ -14,5 +12,3 @@ float player_cpp_init_value;
 /// PSX ref: 0x800DA538
 /// PSX def: PlayerStruct plr[2]
 Player players[4];
-
-*/
