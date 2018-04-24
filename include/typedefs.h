@@ -9,4 +9,4 @@ typedef int32_t bool32_t;
 
 typedef uint32_t uintptr32_t;
 
-#endif /// TYPEDEFS_H
+#endif // TYPEDEFS_H
