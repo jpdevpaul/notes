@@ -1,3 +1,6 @@
+#ifndef STORM_H
+#define STORM_H
+
 /// storm.h documents the function signatures of Storm.dll, and maps them to the
 /// ordinal numbers used in Diablo.exe.
 
@@ -385,3 +388,5 @@ void __stdcall SErrSetLastError(uint32_t error_code);
 ///
 /// SStrCopy copies the source string into the destination string.
 int __stdcall SStrCopy(char *dst, char *src, int len);
+
+#endif STORM_H
