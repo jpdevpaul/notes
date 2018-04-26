@@ -2123,7 +2123,7 @@ typedef struct {
 	/// offset: 0290 (4 bytes)
 	int32_t attack_frame_width;
 	/// offset: 0294 (4 bytes)
-	int32_t field_294;
+	int32_t attack_frame_type; // e.g. range/melee/special
 	/// offset: 0298 (32 bytes)
 	uintptr32_t lightning_magic_cl2_hdrs[8]; ///< void *
 	/// offset: 02B8 (32 bytes)
@@ -2135,7 +2135,7 @@ typedef struct {
 	/// offset: 02FC (4 bytes)
 	int32_t spell_frame_width;
 	/// offset: 0300 (4 bytes)
-	int32_t field_300;
+	int32_t spell_frame_type; // e.g. fire/lightning/magic
 	/// offset: 0304 (32 bytes)
 	uintptr32_t hit_cl2_hdrs[8]; ///< void *
 	/// offset: 0324 (4 bytes)
