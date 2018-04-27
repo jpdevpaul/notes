@@ -83,13 +83,13 @@ The following source file names are known to be correct based on assert strings 
 
 The following source file names are known to be correct based on section names in the Japanese Playstation 1 release: `spells.cpp`.
 
-The following source file names are known to be correct based on debug information in the 1997-12-08 Alpha release on Playstation 1 (codeword *Easy as Pie*): `path.cpp`.
+The following source file names are known to be correct based on debug information in the 1997-12-08 Alpha release on Playstation 1 (codeword *Easy as Pie*): `help.cpp`, `path.cpp` and `track.cpp`.
 
 The following source file names are believed to be correct based on the alphabetic linking order constraint and the function declarations (`PackItem` and `PackPlayer`) inferred from the symbol debug information of the Japanese Playstation 1 release: `pack.cpp`.
 
-The following source file names are believed to be correct based on educated guesses: `exception.cpp`, `help.cpp`, `log.cpp`, `mainmenu.cpp` and `sha1.cpp`.
+The following source file names are believed to be correct based on educated guesses: `exception.cpp`, `log.cpp`, `mainmenu.cpp` and `sha1.cpp`.
 
-The following source file names are most likely incorrect, but they are the result of best efforts attempts at identifying source file names which describe the behaviour of their respective functions while satisfying to the alphabetic linking order constraint: `msgcmd.cpp`, `restricted.cpp`, `track.cpp` and `world.cpp`. *Any suggestions and ideas to further improve these names would be hugely appreciated!*
+The following source file names are most likely incorrect, but they are the result of best efforts attempts at identifying source file names which describe the behaviour of their respective functions while satisfying to the alphabetic linking order constraint: `msgcmd.cpp`, `restricted.cpp` and `world.cpp`. *Any suggestions and ideas to further improve these names would be hugely appreciated!*
 
 The `_crt.cpp` source file name is a pseudo-file name used for functions related to the C and C++ run-time.
 
