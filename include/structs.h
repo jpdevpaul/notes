@@ -923,7 +923,7 @@ typedef struct {
 	/// offset 0004 (2 bytes)
 	uint16_t CF;
 	/// offset 0008 (4 bytes)
-	int32_t type; ///< item_type
+	item_type type : 32;
 	/// offset 000C (4 bytes)
 	int32_t x;
 	/// offset 0010 (4 bytes)
@@ -944,23 +944,23 @@ typedef struct {
 	/// unused in win 1.09b, used in win 1.00 debug.
 	bool32_t inactive;
 	/// offset 0030 (1 byte)
-	int8_t drop_state; ///< item_drop_state
+	item_drop_state drop_state : 8;
 	/// offset 0034 (4 bytes)
 	bool32_t draw_quest_item;
 	/// offset 0038 (4 bytes)
 	bool32_t is_identified;
 	/// offset 003C (1 byte)
-	int8_t quality; ///< item_quality
+	item_quality quality : 8;
 	/// offset 003D (64 bytes)
 	char unidentified_name[64];
 	/// offset 007D (64 bytes)
 	char full_name[64];
 	/// offset 00BD (1 byte)
-	int8_t equip_type; ///< item_equip_type
+	item_equip_type equip_type : 8;
 	/// offset 00BE (1 byte)
-	int8_t _class; ///< item_class
+	item_class _class : 8;
 	/// offset 00C0 (4 bytes)
-	int32_t inv_graphics_id; ///< item_inv_graphics_id
+	item_inv_graphics_id inv_graphics_id : 32;
 	/// offset 00C4 (4 bytes)
 	/// also represents number of gold pieces for item `gold`
 	int32_t unidentified_price;
@@ -974,11 +974,11 @@ typedef struct {
 	int32_t armor_class;
 	/// offset 00D8 (4 bytes)
 	/// bitmask
-	uint32_t special_effect_flags; ///< item_special_effect
+	item_special_effect special_effect_flags : 32;
 	/// offset 00DC (4 bytes)
-	int32_t misc_id; ///< item_misc_id
+	item_misc_id misc_id : 32;
 	/// offset 00E0 (4 bytes)
-	int32_t item_spell_id; ///< spell_id
+	spell_id item_spell_id : 32;
 	/// offset 00E4 (4 bytes)
 	int32_t cur_staff_charges;
 	/// offset 00E8 (4 bytes)
@@ -1026,7 +1026,7 @@ typedef struct {
 	/// offset 0131 (1 byte)
 	bool8_t held_in_hand;
 	/// offset 0134 (4 bytes)
-	int32_t unique_id; ///< unique_item_id
+	unique_item_id unique_id : 32;
 	/// offset 0138 (4 bytes)
 	int32_t fire_damage_min;
 	/// offset 013C (4 bytes)
@@ -1038,9 +1038,9 @@ typedef struct {
 	/// offset 0148 (4 bytes)
 	int32_t armor_penetration;
 	/// offset 014C (4 bytes)
-	int32_t prefix_effect_type; ///< item_effect_type
+	item_effect_type prefix_effect_type : 32;
 	/// offset 014D (4 bytes)
-	int32_t suffix_effect_type; ///< item_effect_type
+	item_effect_type suffix_effect_type : 32;
 	/// offset 0150 (4 bytes)
 	int32_t prefix_price;
 	/// offset 0154 (4 bytes)
