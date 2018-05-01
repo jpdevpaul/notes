@@ -1060,7 +1060,7 @@ typedef struct {
 	/// offset 0164 (4 bytes)
 	bool32_t is_equippable;
 	/// offset 0168 (4 bytes)
-	int32_t id; ///< item_id
+	item_id id : 32;
 } Item;
 
 /// ItemData describes possible basic state a of game item (i.e. state before possibly applying
