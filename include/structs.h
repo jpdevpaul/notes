@@ -56,18 +56,18 @@ typedef struct {
 ///
 /// size = 0x24
 typedef struct {
-	/// offset: 00000000 (4 bytes)
-	int size;
-	/// offset: 00000008 (4 bytes)
-	int max_msg_size;
-	/// offset: 00000010 (4 bytes)
-	int max_players;
-	/// offset: 00000014 (4 bytes)
-	int unknown_0014;
-	/// offset: 0000001C (4 bytes)
-	int unknown_001C;
-	/// offset: 00000020 (4 bytes)
-	int nturns_in_transit;
+	/// offset: 0000 (4 bytes)
+	int32_t size;
+	/// offset: 0008 (4 bytes)
+	int32_t max_msg_size;
+	/// offset: 0010 (4 bytes)
+	int32_t max_players;
+	/// offset: 0014 (4 bytes)
+	int32_t unknown_0014;
+	/// offset: 001C (4 bytes)
+	int32_t unknown_001C;
+	/// offset: 0020 (4 bytes)
+	int32_t nturns_in_transit;
 } Caps;
 
 /// ServerCommand is a command sent to the chat server.
@@ -104,7 +104,7 @@ typedef struct ChatCmd {
 /// size = 0x1
 typedef struct {
 	/// offset: 0000 (1 bytes)
-	cmd cmd;
+	cmd cmd : 8;
 } Cmd;
 
 /// CmdCoord is a command message with X-Y coordinate.
@@ -119,7 +119,7 @@ typedef struct {
 /// size = 0x3
 typedef struct {
 	/// offset: 0000 (1 bytes)
-	cmd cmd;
+	cmd cmd : 8;
 	/// offset: 0001 (1 bytes)
 	int8_t x;
 	/// offset: 0002 (1 bytes)
@@ -139,7 +139,7 @@ typedef struct {
 /// size = 0x5
 typedef struct {
 	/// offset: 0000 (1 bytes)
-	cmd cmd;
+	cmd cmd : 8;
 	/// offset: 0001 (1 bytes)
 	int8_t x;
 	/// offset: 0002 (1 bytes)
@@ -162,7 +162,7 @@ typedef struct {
 /// size = 0x7
 typedef struct {
 	/// offset: 0000 (1 bytes)
-	cmd cmd;
+	cmd cmd : 8;
 	/// offset: 0001 (1 bytes)
 	int8_t x;
 	/// offset: 0002 (1 bytes)
@@ -188,7 +188,7 @@ typedef struct {
 /// size = 0x9
 typedef struct {
 	/// offset: 0000 (1 bytes)
-	cmd cmd;
+	cmd cmd : 8;
 	/// offset: 0001 (1 bytes)
 	int8_t x;
 	/// offset: 0002 (1 bytes)
@@ -212,7 +212,7 @@ typedef struct {
 /// size = 0x3
 typedef struct {
 	/// offset: 0000 (1 bytes)
-	cmd cmd;
+	cmd cmd : 8;
 	/// offset: 0001 (2 bytes)
 	int16_t param1;
 } CmdParam1;
@@ -229,7 +229,7 @@ typedef struct {
 /// size = 0x5
 typedef struct {
 	/// offset: 0000 (1 bytes)
-	cmd cmd;
+	cmd cmd : 8;
 	/// offset: 0001 (2 bytes)
 	int16_t param1;
 	/// offset: 0003 (2 bytes)
@@ -249,7 +249,7 @@ typedef struct {
 /// size = 0x7
 typedef struct {
 	/// offset: 0000 (1 bytes)
-	cmd cmd;
+	cmd cmd : 8;
 	/// offset: 0001 (2 bytes)
 	int16_t param1;
 	/// offset: 0003 (2 bytes)
@@ -274,7 +274,7 @@ typedef struct {
 /// size = 0xA
 typedef struct {
 	/// offset: 0000 (1 bytes)
-	cmd cmd;
+	cmd cmd : 8;
 	/// offset: 0001 (1 bytes)
 	int8_t x;
 	/// offset: 0002 (1 bytes)
@@ -303,9 +303,9 @@ typedef struct {
 /// size = 0x5
 typedef struct {
 	/// offset: 0000 (1 bytes)
-	cmd cmd;
+	cmd cmd : 8;
 	/// offset: 0001 (1 bytes)
-	quest_id quest_id;
+	quest_id quest_id : 8;
 	/// offset: 0002 (1 bytes)
 	bool8_t quest_active;
 	/// offset: 0003 (1 bytes)
@@ -341,7 +341,7 @@ typedef struct {
 /// size = 0x1E
 typedef struct {
 	/// offset: 0000 (1 bytes)
-	cmd cmd;
+	cmd cmd : 8;
 	/// offset: 0001 (1 bytes)
 	int8_t player_num_master;
 	/// offset: 0002 (1 bytes)
@@ -355,13 +355,13 @@ typedef struct {
 	/// offset: 0006 (1 bytes)
 	int8_t y;
 	/// offset: 0007 (2 bytes)
-	int16_t item_id;
+	item_id item_id : 16;
 	/// offset: 0009 (2 bytes)
 	int16_t wCF;
 	/// offset: 000B (4 bytes)
 	int32_t seed;
 	/// offset: 000F (1 bytes)
-	int8_t identified;
+	bool8_t identified;
 	/// offset: 0010 (1 bytes)
 	int8_t durability_cur;
 	/// offset: 0011 (1 bytes)
@@ -394,15 +394,17 @@ typedef struct {
 ///        unsigned long dwSeed;
 ///        unsigned long dwBuff;
 ///     } TCmdPItem;
+///
+/// size = 0x16
 typedef struct {
 	/// offset: 0000 (1 bytes)
-	cmd cmd;
+	cmd cmd : 8;
 	/// offset: 0001 (1 bytes)
 	int8_t x;
 	/// offset: 0002 (1 bytes)
 	int8_t y;
 	/// offset: 0003 (2 bytes)
-	int16_t item_id;
+	item_id item_id : 16;
 	/// offset: 0005 (2 bytes)
 	uint16_t wCF;
 	/// offset: 0007 (4 bytes)
@@ -437,11 +439,11 @@ typedef struct {
 /// size = 0xB
 typedef struct {
 	/// offset: 0000 (1 bytes)
-	cmd cmd;
+	cmd cmd : 8;
 	/// offset: 0001 (1 bytes)
 	int8_t item_body_num;
 	/// offset: 0002 (2 bytes)
-	item_id item_id;
+	item_id item_id : 16;
 	/// offset: 0004 (2 bytes)
 	int16_t wCF;
 	/// offset: 0006 (4 bytes)
@@ -459,7 +461,7 @@ typedef struct {
 /// size = 0x2
 typedef struct {
 	/// offset: 0000 (1 bytes)
-	cmd cmd;
+	cmd cmd : 8;
 	/// offset: 0001 (1 bytes)
 	int8_t item_body_num;
 } CmdDeleteItem;
@@ -470,7 +472,7 @@ typedef struct {
 typedef struct {
 	/// offset: 0000 (4 bytes)
 	/// size of ClientInfo struct.
-	int size;
+	int32_t size;
 	/// offset: 0004 (4 bytes)
 	char *release_name;
 	/// offset: 0008 (4 bytes)
@@ -479,22 +481,26 @@ typedef struct {
 	/// 'DRTL' (Diablo Retail)
 	uint32_t release_id;
 	/// offset: 0010 (4 bytes)
-	int unknown_0010;
+	int32_t unknown_0010;
 	/// offset: 0018 (4 bytes)
-	int unknown_0018;
+	int32_t unknown_0018;
 	/// offset: 001C (4 bytes)
 	int32_t multi_seed;
 	/// offset: 0020 (4 bytes)
-	int unknown_0020;
+	int32_t unknown_0020;
 	/// offset: 0028 (4 bytes)
-	int unknown_0028;
+	int32_t unknown_0028;
 	/// offset: 0038 (4 bytes)
 	uint32_t languageID;
 } ClientInfo;
 
 /// Coord specifies an X-Y coordinate of the map.
+///
+/// size = 0x2
 typedef struct {
+	/// offset: 0000 (1 bytes)
 	int8_t x;
+	/// offset: 0001 (1 bytes)
 	int8_t y;
 } Coord;
 
@@ -602,9 +608,11 @@ typedef struct {
 ///    typedef struct DObjectStr {
 ///       unsigned char bCmd;
 ///    } DObjectStr;
+///
+/// size = 0x1
 typedef struct {
 	/// offset: 0000 (1 bytes)
-	cmd cmd;
+	cmd cmd : 8;
 } DeltaObject;
 
 /// DeltaMonster contains delta information about a monster to be synchronized
@@ -618,6 +626,8 @@ typedef struct {
 ///       unsigned char _menemy;
 ///       int _mhitpoints;
 ///    } DMonsterStr;
+///
+/// size = 0x9
 typedef struct {
 	/// offset: 0000 (1 bytes)
 	int8_t x;
@@ -675,6 +685,8 @@ const int nblocks = 10;
 ///
 /// Frame type, specifying the CEL decoding algorithm of the frame;
 ///    (block&0x7000) >> 12
+///
+/// size = 0x14
 typedef struct {
 	/// Either 10 or 16 blocks constituting the dungeon piece.
 	uint16_t blocks[nblocks];
@@ -685,16 +697,18 @@ typedef struct {
 /// size = 0x10
 typedef struct {
 	/// offset: 0000 (4 bytes)
-	event_type event_type;
+	event_type event_type : 32;
 	/// offset: 0004 (4 bytes)
-	int player_num;
+	int32_t player_num;
 	/// offset: 0008 (4 bytes)
 	void *data;
 	/// offset: 000C (4 bytes)
-	int len;
+	int32_t len;
 } Event;
 
 /// FileInfo provides information about the game executable and asset archives.
+///
+/// size = 0x14
 typedef struct {
 	/// offset: 0000 (4 bytes)
 	int32_t size;
@@ -709,39 +723,41 @@ typedef struct {
 } FileInfo;
 
 /// GossipData specifies the speech IDs for the gossip related to each quest.
+///
+/// size = 0x40
 typedef struct {
-	/// offset 0000 (4 bytes)
-	speech_id the_magic_rock;
-	/// offset 0004 (4 bytes)
-	speech_id black_mushroom;
-	/// offset 0008 (4 bytes)
-	speech_id gharbad_the_weak;
+	/// offset: 0000 (4 bytes)
+	speech_id the_magic_rock : 32;
+	/// offset: 0004 (4 bytes)
+	speech_id black_mushroom : 32;
+	/// offset: 0008 (4 bytes)
+	speech_id gharbad_the_weak : 32;
 	/// offset 000C (4 bytes)
-	speech_id zhar_the_mad;
-	/// offset 0010 (4 bytes)
-	speech_id lachdanan;
-	/// offset 0014 (4 bytes)
-	speech_id diablo;
-	/// offset 0018 (4 bytes)
-	speech_id the_butcher;
+	speech_id zhar_the_mad : 32;
+	/// offset: 0010 (4 bytes)
+	speech_id lachdanan : 32;
+	/// offset: 0014 (4 bytes)
+	speech_id diablo : 32;
+	/// offset: 0018 (4 bytes)
+	speech_id the_butcher : 32;
 	/// offset 001C (4 bytes)
-	speech_id ogdens_sign;
-	/// offset 0020 (4 bytes)
-	speech_id halls_of_the_blind;
-	/// offset 0024 (4 bytes)
-	speech_id valor;
-	/// offset 0028 (4 bytes)
-	speech_id anvil_of_fury;
+	speech_id ogdens_sign : 32;
+	/// offset: 0020 (4 bytes)
+	speech_id halls_of_the_blind : 32;
+	/// offset: 0024 (4 bytes)
+	speech_id valor : 32;
+	/// offset: 0028 (4 bytes)
+	speech_id anvil_of_fury : 32;
 	/// offset 002C (4 bytes)
-	speech_id warlord_of_blood;
-	/// offset 0030 (4 bytes)
-	speech_id the_curse_of_king_leoric;
-	/// offset 0034 (4 bytes)
-	speech_id poisoned_water_supply;
-	/// offset 0038 (4 bytes)
-	speech_id the_chamber_of_bone;
+	speech_id warlord_of_blood : 32;
+	/// offset: 0030 (4 bytes)
+	speech_id the_curse_of_king_leoric : 32;
+	/// offset: 0034 (4 bytes)
+	speech_id poisoned_water_supply : 32;
+	/// offset: 0038 (4 bytes)
+	speech_id the_chamber_of_bone : 32;
 	/// offset 003C (4 bytes)
-	speech_id archbishop_lazarus;
+	speech_id archbishop_lazarus : 32;
 } GossipData;
 
 /// A HashEntry is an MPQ hash table entry.
@@ -770,16 +786,16 @@ typedef struct {
 ///
 /// size = 0x13
 typedef struct {
-	/// offset 0000 (4 bytes)
+	/// offset: 0000 (4 bytes)
 	int32_t seed;
-	/// offset 0004 (2 bytes)
+	/// offset: 0004 (2 bytes)
 	uint16_t wCF;
-	/// offset 0006 (2 bytes)
-	item_id item_id;
-	/// offset 0008 (1 byte)
+	/// offset: 0006 (2 bytes)
+	item_id item_id : 16;
+	/// offset: 0008 (1 byte)
 	/// The first bit corresponds to identified and the remaining bits corresponds to item_quality.
 	uint8_t identified_and_item_quality;
-	/// offset 0009 (1 byte)
+	/// offset: 0009 (1 byte)
 	int8_t durability_cur;
 	/// offset 000A (1 byte)
 	int8_t durability_max;
@@ -799,9 +815,9 @@ typedef struct {
 ///
 /// size = 0x4F2
 typedef struct {
-	/// offset 0008 (1 bytes)
+	/// offset: 0008 (1 bytes)
 	int8_t daction;
-	/// offset 0009 (1 bytes)
+	/// offset: 0009 (1 bytes)
 	int8_t param1;
 	/// offset 000A (1 bytes)
 	int8_t param2;
@@ -815,48 +831,48 @@ typedef struct {
 	int8_t target_x;
 	/// offset 000F (1 bytes)
 	int8_t target_y;
-	/// offset 0010 (32 bytes)
+	/// offset: 0010 (32 bytes)
 	char name[32];
-	/// offset 0030 (1 bytes)
-	player_class player_class;
-	/// offset 0031 (1 bytes)
+	/// offset: 0030 (1 bytes)
+	player_class player_class : 8;
+	/// offset: 0031 (1 bytes)
 	int8_t str_base;
-	/// offset 0032 (1 bytes)
+	/// offset: 0032 (1 bytes)
 	int8_t mag_base;
-	/// offset 0033 (1 bytes)
+	/// offset: 0033 (1 bytes)
 	int8_t dex_base;
-	/// offset 0034 (1 bytes)
+	/// offset: 0034 (1 bytes)
 	int8_t vit_base;
-	/// offset 0035 (1 bytes)
+	/// offset: 0035 (1 bytes)
 	int8_t clvl;
-	/// offset 0036 (1 bytes)
+	/// offset: 0036 (1 bytes)
 	int8_t points;
-	/// offset 0037 (4 bytes)
+	/// offset: 0037 (4 bytes)
 	int32_t exp;
 	/// offset 003B (4 bytes)
 	int32_t gold_total;
 	/// offset 003F (4 bytes)
 	int32_t hp_base_cur;
-	/// offset 0043 (4 bytes)
+	/// offset: 0043 (4 bytes)
 	int32_t hp_base_max;
-	/// offset 0047 (4 bytes)
+	/// offset: 0047 (4 bytes)
 	int32_t mp_base_cur;
 	/// offset 004B (4 bytes)
 	int32_t mp_base_max;
 	/// offset 004F (37 bytes)
 	int8_t spell_lvl_from_spell_id[37];
-	/// offset 0074 (8 bytes)
+	/// offset: 0074 (8 bytes)
 	/// bitfield of known spells.
 	uint32_t known_spells[2];
 	/// offset 007C (133 bytes)
 	HeroItem body_items[7];
-	/// offset 0101 (760 bytes)
+	/// offset: 0101 (760 bytes)
 	HeroItem inv_items[40];
 	/// offset 03F9 (40 bytes)
 	int8_t inv_num_from_inv_grid[40];
-	/// offset 0421 (1 bytes)
+	/// offset: 0421 (1 bytes)
 	int8_t ninv_items;
-	/// offset 0422 (152 bytes)
+	/// offset: 0422 (152 bytes)
 	HeroItem belt_items[8];
 	/// offset 04BD (1 bytes)
 	int8_t on_battlenet;
@@ -894,7 +910,7 @@ typedef struct HeroInfo {
 	/// offset: 0014 (2 bytes)
 	int16_t clvl;
 	/// offset: 0016 (1 bytes)
-	player_class player_class;
+	player_class player_class : 8;
 	/// offset: 0017 (1 bytes)
 	/// TODO: use difficulty enum
 	int8_t difficulty;
@@ -918,36 +934,36 @@ typedef struct HeroInfo {
 ///
 /// size = 0x170
 typedef struct {
-	/// offset 0000 (4 bytes)
+	/// offset: 0000 (4 bytes)
 	uint32_t seed;
-	/// offset 0004 (2 bytes)
+	/// offset: 0004 (2 bytes)
 	uint16_t CF;
-	/// offset 0008 (4 bytes)
+	/// offset: 0008 (4 bytes)
 	item_type type : 32;
 	/// offset 000C (4 bytes)
 	int32_t x;
-	/// offset 0010 (4 bytes)
+	/// offset: 0010 (4 bytes)
 	int32_t y;
-	/// offset 0014 (4 bytes)
+	/// offset: 0014 (4 bytes)
 	int32_t drop_anim_update;
-	/// offset 0018 (4 bytes)
+	/// offset: 0018 (4 bytes)
 	uintptr32_t drop_cel_data; ///< void *
 	/// offset 001C (4 bytes)
 	int32_t drop_frame_count;
-	/// offset 0020 (4 bytes)
+	/// offset: 0020 (4 bytes)
 	int32_t cur_drop_frame;
-	/// offset 0024 (4 bytes)
+	/// offset: 0024 (4 bytes)
 	int32_t drop_width;
-	/// offset 0028 (4 bytes)
+	/// offset: 0028 (4 bytes)
 	int32_t drop_x_offset;
 	/// offset 002C (4 bytes)
 	/// unused in win 1.09b, used in win 1.00 debug.
 	bool32_t inactive;
-	/// offset 0030 (1 byte)
+	/// offset: 0030 (1 byte)
 	item_drop_state drop_state : 8;
-	/// offset 0034 (4 bytes)
+	/// offset: 0034 (4 bytes)
 	bool32_t draw_quest_item;
-	/// offset 0038 (4 bytes)
+	/// offset: 0038 (4 bytes)
 	bool32_t is_identified;
 	/// offset 003C (1 byte)
 	item_quality quality : 8;
@@ -994,72 +1010,72 @@ typedef struct {
 	int32_t to_hit_bonus;
 	/// offset 00FC (4 bytes)
 	int32_t armor_class_percent_bonus;
-	/// offset 0100 (4 bytes)
+	/// offset: 0100 (4 bytes)
 	int32_t strength_bonus;
-	/// offset 0104 (4 bytes)
+	/// offset: 0104 (4 bytes)
 	int32_t magic_bonus;
-	/// offset 0108 (4 bytes)
+	/// offset: 0108 (4 bytes)
 	int32_t dexterity_bonus;
 	/// offset 010C (4 bytes)
 	int32_t vitality_bonus;
-	/// offset 0110 (4 bytes)
+	/// offset: 0110 (4 bytes)
 	int32_t fire_resistance_bonus;
-	/// offset 0114 (4 bytes)
+	/// offset: 0114 (4 bytes)
 	int32_t lightning_resistance_bonus;
-	/// offset 0118 (4 bytes)
+	/// offset: 0118 (4 bytes)
 	int32_t magic_resistance_bonus;
 	/// offset 011C (4 bytes)
 	/// in Q26.6 fixed-point format (each displayed mana point equals 64)
 	int32_t mana_bonus;
-	/// offset 0120 (4 bytes)
+	/// offset: 0120 (4 bytes)
 	/// in Q26.6 fixed-point format (each displayed health point equals 64)
 	int32_t life_bonus;
-	/// offset 0124 (4 bytes)
+	/// offset: 0124 (4 bytes)
 	int32_t attack_damage_bonus;
-	/// offset 0128 (4 bytes)
+	/// offset: 0128 (4 bytes)
 	int32_t damage_taken_bonus;
 	/// offset 012C (4 bytes)
 	/// measured in 10% chunks
 	int32_t light_radius_bonus;
-	/// offset 0130 (1 byte)
+	/// offset: 0130 (1 byte)
 	uint8_t spell_level_bonus;
-	/// offset 0131 (1 byte)
+	/// offset: 0131 (1 byte)
 	bool8_t held_in_hand;
-	/// offset 0134 (4 bytes)
+	/// offset: 0134 (4 bytes)
 	unique_item_id unique_id : 32;
-	/// offset 0138 (4 bytes)
+	/// offset: 0138 (4 bytes)
 	int32_t fire_damage_min;
 	/// offset 013C (4 bytes)
 	int32_t fire_damage_max;
-	/// offset 0140 (4 bytes)
+	/// offset: 0140 (4 bytes)
 	int32_t lightning_damage_min;
-	/// offset 0144 (4 bytes)
+	/// offset: 0144 (4 bytes)
 	int32_t lightning_damage_max;
-	/// offset 0148 (4 bytes)
+	/// offset: 0148 (4 bytes)
 	int32_t armor_penetration;
 	/// offset 014C (4 bytes)
 	item_effect_type prefix_effect_type : 32;
 	/// offset 014D (4 bytes)
 	item_effect_type suffix_effect_type : 32;
-	/// offset 0150 (4 bytes)
+	/// offset: 0150 (4 bytes)
 	int32_t prefix_price;
-	/// offset 0154 (4 bytes)
+	/// offset: 0154 (4 bytes)
 	int32_t prefix_price_multiplier;
-	/// offset 0158 (4 bytes)
+	/// offset: 0158 (4 bytes)
 	int32_t suffix_price;
 	/// offset 015C (4 bytes)
 	int32_t suffix_price_multiplier;
-	/// offset 0160 (1 byte)
+	/// offset: 0160 (1 byte)
 	uint8_t required_strength;
-	/// offset 0161 (1 byte)
+	/// offset: 0161 (1 byte)
 	uint8_t reguied_magic;
-	/// offset 0162 (1 byte)
+	/// offset: 0162 (1 byte)
 	uint8_t required_dexterity;
-	/// offset 0163 (1 byte)
+	/// offset: 0163 (1 byte)
 	uint8_t required_vitality;
-	/// offset 0164 (4 bytes)
+	/// offset: 0164 (4 bytes)
 	bool32_t is_equippable;
-	/// offset 0168 (4 bytes)
+	/// offset: 0168 (4 bytes)
 	item_id id : 32;
 } Item;
 
@@ -1068,72 +1084,77 @@ typedef struct {
 ///
 /// size = 0x4C
 typedef struct {
-	/// offset 0000 (4 bytes)
-	item_drop_rate drop_rate;
-	/// offset 0004 (1 byte)
-	item_class _class;
-	/// offset 0005 (1 byte)
-	item_equip_type equip_type;
-	/// offset 0008 (4 bytes)
-	item_inv_graphics_id inv_graphics_id;
+	/// offset: 0000 (4 bytes)
+	item_drop_rate drop_rate : 32;
+	/// offset: 0004 (1 byte)
+	item_class _class : 8;
+	/// offset: 0005 (1 byte)
+	item_equip_type equip_type : 8;
+	/// offset: 0008 (4 bytes)
+	item_inv_graphics_id inv_graphics_id : 32;
 	/// offset 000C (1 byte)
-	item_type type;
+	item_type type : 8;
 	/// offset 000D (1 byte)
-	unique_base_item unique_base_item_id;
-	/// offset 0010 (4 bytes)
+	unique_base_item unique_base_item_id : 8;
+	/// offset: 0010 (4 bytes)
 	const char *name;
-	/// offset 0014 (4 bytes)
+	/// offset: 0014 (4 bytes)
 	/// applied if item description becomes too long after adding affixes
 	/// and/or spell
 	const char *short_name;
-	/// offset 0018 (4 bytes)
-	item_quality quality;
+	/// offset: 0018 (4 bytes)
+	item_quality quality : 32;
 	/// offset 001C (4 bytes)
-	int max_durability;
-	/// offset 0020 (4 bytes)
-	int min_attack_damage;
-	/// offset 0024 (4 bytes)
-	int max_attack_damage;
-	/// offset 0028 (4 bytes)
-	int min_armor_class;
+	int32_t max_durability;
+	/// offset: 0020 (4 bytes)
+	int32_t min_attack_damage;
+	/// offset: 0024 (4 bytes)
+	int32_t max_attack_damage;
+	/// offset: 0028 (4 bytes)
+	int32_t min_armor_class;
 	/// offset 002C (4 bytes)
-	int max_armor_class;
-	/// offset 0030 (1 byte)
+	int32_t max_armor_class;
+	/// offset: 0030 (1 byte)
 	uint8_t required_strength;
-	/// offset 0031 (1 byte)
+	/// offset: 0031 (1 byte)
 	uint8_t required_magic;
-	/// offset 0032 (1 byte)
+	/// offset: 0032 (1 byte)
 	uint8_t required_dexterity;
-	/// offset 0034 (4 bytes)
+	/// offset: 0034 (4 bytes)
 	/// Rarely set, only for undead crown and even this
 	/// case seems to be redundant due one of its unique
 	/// item effect
-	item_special_effect special_effect_flags;
-	/// offset 0038 (4 bytes)
-	item_misc_id misc_id;
+	item_special_effect special_effect_flags : 32;
+	/// offset: 0038 (4 bytes)
+	item_misc_id misc_id : 32;
 	/// offset 003C (4 bytes)
 	/// Used for charges on Short Staff of Charged Bolt,
 	/// and used for scrolls otherwise.
-	spell_id spell_id;
-	/// offset 0040 (4 bytes)
+	spell_id spell_id : 32;
+	/// offset: 0040 (4 bytes)
 	/// Set if item could be triggered with right click (e.g. for gold,
 	/// potions, elixirs, books and scrolls). Some unique items do still
 	/// trigger an action on right click even though for them this flag
 	/// is not set.
 	bool32_t is_usable;
-	/// offset 0044 (4 bytes)
-	int price;
-	/// offset 0048 (4 bytes)
+	/// offset: 0044 (4 bytes)
+	int32_t price;
+	/// offset: 0048 (4 bytes)
 	/// Unused but for all items is specified higher than price
-	int max_price;
+	int32_t max_price;
 } ItemData;
 
 /// ItemEffect describes possible effect caused by suffix or prefix of magic item or one of
 /// 5 unique item's effects. For some rare effect types min/max values represent different
 /// type of parameters.
+///
+/// size = 0xC
 typedef struct {
-	item_effect_type type;
+	/// offset: 0000 (4 bytes)
+	item_effect_type type : 32;
+	/// offset: 0004 (4 bytes)
 	int32_t min_value;
+	/// offset: 0008 (4 bytes)
 	int32_t max_value;
 } ItemEffect;
 
@@ -1157,35 +1178,35 @@ typedef struct {
 ///
 /// size = 0x30
 typedef struct {
-	/// offset 0000 (4 bytes)
+	/// offset: 0000 (4 bytes)
 	const char *name;
-	/// offset 0004 (12 bytes)
+	/// offset: 0004 (12 bytes)
 	ItemEffect effect;
-	/// offset 0010 (1 bytes)
+	/// offset: 0010 (1 bytes)
 	int8_t quality_level;
-	/// offset 0014 (4 bytes)
+	/// offset: 0014 (4 bytes)
 	/// bitmask
-	affix_item_type item_type_flags;
-	/// offset 0018 (4 bytes)
+	affix_item_type item_type_flags : 32;
+	/// offset: 0018 (4 bytes)
 	/// contains 0x01 or 0x10. If (suffix | preffix) == 0x11 they will
 	/// never be applied to a single item simultaneously. Also if prefix
 	/// has value 0x01 it also means that it can not be present on a staff
 	/// with a spell.
-	int excluded_combination;
+	int32_t excluded_combination;
 	/// offset 001C (4 bytes)
 	/// if it is set then there's a twice is likely chance that this affix
 	/// will be generated than if it's not
 	bool32_t double_chance;
-	/// offset 0020 (4 bytes)
+	/// offset: 0020 (4 bytes)
 	/// cursed affixes are never applied to items sold in town and also have
 	/// lower probability to be applied in other cases.
 	bool32_t not_cursed;
-	/// offset 0024 (4 bytes)
-	int min_price;
-	/// offset 0028 (4 bytes)
-	int max_price;
+	/// offset: 0024 (4 bytes)
+	int32_t min_price;
+	/// offset: 0028 (4 bytes)
+	int32_t max_price;
 	/// offset 002C (4 bytes)
-	int cost_multiplier;
+	int32_t cost_multiplier;
 } ItemAffixData;
 
 /// Lighting represents a light source.
@@ -1209,27 +1230,27 @@ typedef struct {
 /// size = 0x34
 typedef struct {
 	/// offset: 0000 (4 bytes)
-	int x;
+	int32_t x;
 	/// offset: 0004 (4 bytes)
-	int y;
+	int32_t y;
 	/// offset: 0008 (4 bytes)
-	int light_radius;
+	int32_t light_radius;
 	/// offset: 000C (4 bytes)
-	int vision_id;
+	int32_t vision_id;
 	/// offset: 0010 (4 bytes)
 	bool32_t inactive;
 	/// offset: 0014 (4 bytes)
 	bool32_t visible;
 	/// offset: 001C (4 bytes)
-	int x_prev;
+	int32_t x_prev;
 	/// offset: 0020 (4 bytes)
-	int y_prev;
+	int32_t y_prev;
 	/// offset: 0024 (4 bytes)
-	int light_radius_prev;
+	int32_t light_radius_prev;
 	/// offset: 0028 (4 bytes)
-	int x_offset;
+	int32_t x_offset;
 	/// offset: 002C (4 bytes)
-	int y_offset;
+	int32_t y_offset;
 	/// offset: 0030 (4 bytes)
 	uint32_t flags;
 } Lighting;
@@ -1270,16 +1291,16 @@ typedef struct {
 ///
 /// size = 0xEC
 typedef struct {
-	/// offset 0000 (1 bytes)
+	/// offset: 0000 (1 bytes)
 	/// Missile graphic ID.
-	missile_graphic_id missile_graphic_id;
-	/// offset 0001 (1 bytes)
+	missile_graphic_id missile_graphic_id : 8;
+	/// offset: 0001 (1 bytes)
 	/// Number of animations.
 	int8_t nanims;
-	/// offset 0004 (4 bytes)
+	/// offset: 0004 (4 bytes)
 	/// CL2 image name.
 	char *cl2_name;
-	/// offset 0008 (4 bytes)
+	/// offset: 0008 (4 bytes)
 	/// Missile graphics flags.
 	uint32_t flags;
 	/// offset 000C (64 bytes)
@@ -1408,7 +1429,7 @@ typedef struct {
 	/// Monster AI.
 	///
 	/// offset: 0060 (4 bytes)
-	monster_ai_id monster_ai_id;
+	monster_ai_id monster_ai_id : 32;
 	/// Bitfield of monster flags.
 	///
 	/// offset: 0064 (4 bytes)
@@ -1516,11 +1537,11 @@ typedef struct {
 /// size = 0xC
 typedef struct {
 	/// offset: 0000 (4 bytes)
-	speech_id dlvl4_speech_id;
+	speech_id dlvl4_speech_id : 32;
 	/// offset: 0004 (4 bytes)
-	speech_id dlvl8_speech_id;
+	speech_id dlvl8_speech_id : 32;
 	/// offset: 0008 (4 bytes)
-	speech_id dlvl12_speech_id;
+	speech_id dlvl12_speech_id : 32;
 } NarratorBook;
 
 /// ObjectData describes basic properties of game objects.
@@ -1551,17 +1572,17 @@ typedef struct {
 	/// TODO: define object_load enum
 	int8_t object_load;
 	/// offset: 0001 (1 bytes)
-	object_graphic_id object_graphic_id;
+	object_graphic_id object_graphic_id : 8;
 	/// offset: 0002 (1 bytes)
 	int8_t dlvl_min;
 	/// offset: 0003 (1 bytes)
 	int8_t dlvl_max;
 	/// offset: 0004 (1 bytes)
-	dungeon_type dtype;
+	dungeon_type dtype : 8;
 	/// offset: 0005 (1 bytes)
-	theme_id theme_id;
+	theme_id theme_id : 8;
 	/// offset: 0006 (1 bytes)
-	quest_id quest_id;
+	quest_id quest_id : 8;
 	/// offset: 0008 (4 bytes)
 	bool32_t animated;
 	/// offset: 000C (4 bytes)
@@ -1614,9 +1635,9 @@ typedef struct {
 	/// offset: 0003 (1 bytes)
 	int8_t target_y;
 	/// offset: 0004 (4 bytes)
-	int hp_cur;
+	int32_t hp_cur;
 	/// offset: 0008 (4 bytes)
-	int hp_max;
+	int32_t hp_max;
 	/// offset: 000C (1 bytes)
 	int8_t str_base;
 	/// offset: 000D (1 bytes)
@@ -1651,15 +1672,15 @@ typedef struct {
 /// size = 0x14
 typedef struct {
 	/// offset: 0000 (4 bytes)
-	int x;
+	int32_t x;
 	/// offset: 0004 (4 bytes)
-	int y;
+	int32_t y;
 	/// offset: 0008 (4 bytes)
-	int width;
+	int32_t width;
 	/// offset: 000C (4 bytes)
-	int height;
+	int32_t height;
 	/// offset: 0010 (4 bytes)
-	int unused;
+	int32_t unused;
 } PanelButton;
 
 /// PathNode is a node of a path constructed by the path finding algorithm.
@@ -1678,24 +1699,24 @@ typedef struct {
 ///
 /// size = 0x34
 typedef struct PathNode {
-	/// offset 0000 (1 bytes)
+	/// offset: 0000 (1 bytes)
 	/// f(n) = g(n) + h(n)
 	int8_t f;
-	/// offset 0001 (1 bytes)
+	/// offset: 0001 (1 bytes)
 	/// heuristic cost to goal.
 	int8_t h;
-	/// offset 0002 (1 bytes)
+	/// offset: 0002 (1 bytes)
 	/// cost from start to n.
 	int8_t g;
-	/// offset 0004 (4 bytes)
-	int x;
-	/// offset 0008 (4 bytes)
-	int y;
+	/// offset: 0004 (4 bytes)
+	int32_t x;
+	/// offset: 0008 (4 bytes)
+	int32_t y;
 	/// offset 000C (4 bytes)
 	struct PathNode *parent;
-	/// offset 0010 (32 bytes)
+	/// offset: 0010 (32 bytes)
 	struct PathNode *children[8];
-	/// offset 0030 (4 bytes)
+	/// offset: 0030 (4 bytes)
 	struct PathNode *next;
 } PathNode;
 
@@ -1851,9 +1872,9 @@ typedef struct PathNode {
 /// size = 0x54D8
 typedef struct {
 	/// offset: 0000 (4 bytes)
-	int32_t player_mode;
+	player_mode player_mode : 32;
 	/// offset: 0004 (25 bytes)
-	int8_t steps[25];
+	int8_t steps[25]; // TODO: figure out how to specify enum bit width when used in array; e.g. step_direction steps[25]; // (where step_direction is 8-bits). Also verify if the enum used is step_direction or step.
 	/// offset: 001D (1 bytes)
 	int8_t player_active;
 	/// offset: 001E (2 bytes)
@@ -1899,9 +1920,9 @@ typedef struct {
 	/// offset: 006C (4 bytes)
 	int32_t y_velocity;
 	/// offset: 0070 (4 bytes)
-	int32_t direction;
+	int32_t direction; // TODO: use direction enum after validating that it is the correct enum for this member.
 	/// offset: 0074 (4 bytes)
-	int32_t next_direction;
+	int32_t next_direction; // TODO: use direction enum after validating that it is the correct enum for this member.
 	/// offset: 0078 (4 bytes)
 	int32_t anim_id;
 	/// offset: 007C (4 bytes)
@@ -1925,19 +1946,19 @@ typedef struct {
 	/// offset: 00A0 (4 bytes)
 	int32_t vision_id;
 	/// offset: 00A4 (4 bytes)
-	int32_t cast_spell_id;
+	spell_id cast_spell_id : 32;
 	/// offset: 00A8 (1 bytes)
-	int8_t cast_spell_type;
+	spell_type cast_spell_type : 8;
 	/// offset: 00A9 (1 bytes)
-	int8_t cast_spell_from;
+	int8_t cast_spell_from : 8;
 	/// offset: 00AA (1 bytes)
 	uint8_t pad_00AA;
 	/// offset: 00AB (1 bytes)
 	uint8_t pad_00AB;
 	/// offset: 00AC (4 bytes)
-	int32_t cast_skill_id;
+	spell_id cast_skill_id : 32;
 	/// offset: 00B0 (1 bytes)
-	int8_t cast_skill_type;
+	spell_type cast_skill_type : 8;
 	/// offset: 00B1 (1 bytes)
 	uint8_t pad_00B1;
 	/// offset: 00B2 (1 bytes)
@@ -1945,9 +1966,9 @@ typedef struct {
 	/// offset: 00B3 (1 bytes)
 	uint8_t pad_00B3;
 	/// offset: 00B4 (4 bytes)
-	int32_t active_spell_id;
+	spell_id active_spell_id : 32;
 	/// offset: 00B8 (1 bytes)
-	int8_t active_spell_type;
+	spell_type active_spell_type : 8;
 	/// offset: 00B9 (1 bytes)
 	uint8_t pad_00B9;
 	/// offset: 00BA (1 bytes)
@@ -1955,9 +1976,9 @@ typedef struct {
 	/// offset: 00BB (1 bytes)
 	uint8_t pad_00BB;
 	/// offset: 00BC (4 bytes)
-	int32_t speedbook_spell_id;
+	spell_id speedbook_spell_id : 32;
 	/// offset: 00C0 (1 bytes)
-	int8_t speedbook_spell_type;
+	spell_type speedbook_spell_type : 8;
 	/// offset: 00C1 (64 bytes)
 	int8_t spell_lvl_from_spell_id[64];
 	/// offset: 0101 (1 bytes)
@@ -1989,9 +2010,9 @@ typedef struct {
 	/// offset: 0123 (1 bytes)
 	uint8_t pad_0123;
 	/// offset: 0124 (16 bytes)
-	int32_t spell_id_from_hotkey_id[4];
+	int32_t spell_id_from_hotkey_id[4]; // TODO: figure out how to use array of enums with bit-size 32: e.g. spell_id spell_id_from_hotkey_id[4];
 	/// offset: 0134 (4 bytes)
-	int8_t spell_type_from_hotkey_id[4];
+	int8_t spell_type_from_hotkey_id[4]; // TODO: figure out how to use array of enums with bit-size 8: e.g. spell_type spell_type_from_hotkey_id[4];
 	/// offset: 0138 (4 bytes)
 	int32_t has_range_weapon;
 	/// offset: 013C (1 bytes)
@@ -2005,7 +2026,7 @@ typedef struct {
 	/// offset: 0140 (32 bytes)
 	char name[32];
 	/// offset: 0160 (1 bytes)
-	int8_t player_class;
+	player_class player_class : 8;
 	/// offset: 0161 (1 bytes)
 	uint8_t pad_0161;
 	/// offset: 0162 (1 bytes)
@@ -2217,7 +2238,8 @@ typedef struct {
 	/// offset: 5474 (4 bytes)
 	int32_t oil_type;
 	/// offset: 5478 (1 bytes)
-	int8_t enterance_open;
+	/// Bitfield of entrances open into the dungeon from town.
+	enterance_open enterance_open;
 	/// offset: 5479 (1 bytes)
 	int8_t dungeon_msgs;
 	/// offset: 547A (1 bytes)
@@ -2257,6 +2279,8 @@ typedef struct {
 } Player;
 
 /// A Point is an X, Y coordinate pair. The axes increase right and down.
+///
+/// size = 0x8
 typedef struct {
 	/// offset: 0000 (4 bytes)
 	int32_t x;
@@ -2274,12 +2298,19 @@ typedef struct {
 ///       unsigned char ltype;
 ///       unsigned char setlvl;
 ///    } DPortal;
+///
+/// size = 0x5
 typedef struct {
+	/// offset: 0000 (1 bytes)
 	int8_t x;
+	/// offset: 0001 (1 bytes)
 	int8_t y;
+	/// offset: 0002 (1 bytes)
 	int8_t dlvl;
-	dungeon_type dtype;
-	quest_level quest_lvl;
+	/// offset: 0003 (1 bytes)
+	dungeon_type dtype : 8;
+	/// offset: 0004 (1 bytes)
+	quest_level quest_lvl : 8;
 } Portal;
 
 /// Quest describes in-game state of a quest.
@@ -2306,12 +2337,12 @@ typedef struct {
 	/// offset: 0000 (1 bytes)
 	int8_t dlvl;
 	/// offset: 0001 (1 bytes)
-	quest_id quest_id;
+	quest_id quest_id : 8;
 	/// offset: 0002 (1 bytes)
 	/// TODO: define quest_active enum
 	int8_t quest_active;
 	/// offset: 0003 (1 bytes)
-	dungeon_type dtype;
+	dungeon_type dtype : 8;
 	/// offset: 0004 (4 bytes)
 	int32_t enterance_x;
 	/// offset: 0008 (4 bytes)
@@ -2319,9 +2350,9 @@ typedef struct {
 	/// offset: 000C (1 bytes)
 	int8_t quest_level;
 	/// offset: 000D (1 bytes)
-	quest_level_id quest_level_id;
+	quest_level_id quest_level_id : 8;
 	/// offset: 000E (1 bytes)
-	speech_id speech_id;
+	speech_id speech_id : 8;
 	/// offset: 000F (1 bytes)
 	int8_t var1;
 	/// offset: 0010 (1 bytes)
@@ -2352,22 +2383,26 @@ typedef struct {
 	/// offset: 0001 (1 bytes)
 	int8_t dlvl_multi;
 	/// offset: 0002 (1 bytes)
-	dungeon_type dtype;
+	dungeon_type dtype : 8;
 	/// offset: 0003 (1 bytes)
-	quest_id quest_id;
+	quest_id quest_id : 8;
 	/// offset: 0005 (1 bytes)
-	quest_level quest_level;
+	quest_level quest_level : 8;
 	/// offset: 0008 (1 bytes)
 	bool8_t multiplayer;
 	/// offset: 000C (4 bytes)
-	speech_id  speech_id;
+	speech_id  speech_id : 32;
 	/// offset: 0010 (4 bytes)
 	char *name;
 } QuestData;
 
 /// Rect specifies a rectangluar area of the map.
+///
+/// size = 0x4
 typedef struct {
+	/// offset: 0000 (2 bytes)
 	Coord min;
+	/// offset: 0002 (2 bytes)
 	Coord max;
 } Rect;
 
@@ -2376,22 +2411,22 @@ typedef struct {
 /// size = 0x10
 typedef struct {
 	/// offset: 0000 (4 bytes)
-	int x;
+	int32_t x;
 	/// offset: 0004 (4 bytes)
-	int y;
+	int32_t y;
 	/// offset: 0008 (4 bytes)
-	int width;
+	int32_t width;
 	/// offset: 000C (4 bytes)
-	int height;
+	int32_t height;
 } Rectangle;
 
 /// ScreenRow represents a single horizontal line of pixels on the screen.
 ///
 /// size = 0x300
 typedef struct {
-	/// offset 0000 (64 bytes)
+	/// offset: 0000 (64 bytes)
 	uint8_t col_unused_1[64];
-	/// offset 0040 (640 bytes)
+	/// offset: 0040 (640 bytes)
 	uint8_t pixels[640];
 	/// offset 02C0 (64 bytes)
 	uint8_t col_unused_2[64];
@@ -2428,16 +2463,25 @@ typedef struct {
 /// References:
 ///    * https://github.com/sanctuary/graphics/blob/master/l1/tiles/base.md
 ///    * https://github.com/sanctuary/graphics/blob/master/l2/tiles/base.md
+///
+/// size = 0x7
 typedef struct {
+	/// offset: 0000 (1 bytes)
 	/// 2x2 block of base tile IDs.
-	l1_tile_id base_bottom;
-	l1_tile_id base_top;
-	l1_tile_id base_right;
-	l1_tile_id base_left;
+	l1_tile_id base_bottom : 8;
+	/// offset: 0001 (1 bytes)
+	l1_tile_id base_top : 8;
+	/// offset: 0002 (1 bytes)
+	l1_tile_id base_right : 8;
+	/// offset: 0003 (1 bytes)
+	l1_tile_id base_left : 8;
+	/// offset: 0004 (1 bytes)
 	/// replacement shadow tile IDs.
-	l1_tile_id shadow_top;
-	l1_tile_id shadow_right;
-	l1_tile_id shadow_left;
+	l1_tile_id shadow_top : 8;
+	/// offset: 0005 (1 bytes)
+	l1_tile_id shadow_right : 8;
+	/// offset: 0006 (1 bytes)
+	l1_tile_id shadow_left : 8;
 } Shadow;
 
 /// SoundFile represents a WAV sound file.
@@ -2448,18 +2492,18 @@ typedef struct {
 ///
 /// size = 0x28
 typedef struct {
-	/// offset 0000 (18 bytes)
+	/// offset: 0000 (18 bytes)
 	WAVEFORMATEX fmt;
-	/// offset 0014 (4 bytes)
+	/// offset: 0014 (4 bytes)
 	int32_t len;
-	/// offset 0018 (4 bytes)
+	/// offset: 0018 (4 bytes)
 	int32_t offset;
 	/// offset 001C (4 bytes)
 	char *sound_path;
-	/// offset 0020 (4 bytes)
+	/// offset: 0020 (4 bytes)
 	/// direct sound buffer.
 	IDirectSoundBuffer *DSB;
-	/// offset 0024 (4 bytes)
+	/// offset: 0024 (4 bytes)
 	/// start tick count.
 	uint32_t start_tc;
 } SoundFile;
@@ -2495,7 +2539,7 @@ typedef struct {
 	/// offset: 0008 (4 bytes)
 	int32_t speed;
 	/// offset: 000C (4 bytes)
-	sfx_id sfx_id;
+	sfx_id sfx_id : 32;
 } SpeechData;
 
 /// Stats specifies character statistics (i.e. strength, magic, dexterity,
@@ -2539,13 +2583,19 @@ typedef struct {
 ///            \/
 ///
 ///          bottom
+///
+/// size = 0x8
 typedef struct {
+	/// offset: 0000 (2 bytes)
 	/// Dungeon piece ID at the top of the tile.
 	uint16_t top;
+	/// offset: 0002 (2 bytes)
 	/// Dungeon piece ID at the right of the tile.
 	uint16_t right;
+	/// offset: 0004 (2 bytes)
 	/// Dungeon piece ID at the left of the tile.
 	uint16_t left;
+	/// offset: 0006 (2 bytes)
 	/// Dungeon piece ID at the bottom of the tile.
 	uint16_t bottom;
 } Tile;
@@ -2553,15 +2603,24 @@ typedef struct {
 struct TMsg;
 
 /// TMsgHeader represents the header of a timed message.
+///
+/// size = 0x9
 typedef struct {
+	/// offset: 0000 (4 bytes)
 	struct TMsg *next;
+	/// offset: 0004 (4 bytes)
 	uint32_t start_tc;
+	/// offset: 0008 (1 bytes)
 	uint8_t len;
 } TMsgHeader;
 
 /// TMsg represents a timed message.
+///
+/// size = 0xC
 typedef struct TMsg {
+	/// offset: 0000 (9 bytes)
 	TMsgHeader hdr;
+	/// offset: 0009 (3 bytes)
 	/// The size of msg is >= 3 and is dynamically allocated.
 	uint8_t data[3];
 } TMsg;
@@ -2573,7 +2632,7 @@ typedef struct TMsg {
 typedef struct {
 	/// offset: 0000 (4 bytes)
 	/// size of UiInfo struct.
-	int size;
+	int32_t size;
 	/// offset: 0008 (4 bytes)
 	HWND hFrameWnd;
 	/// TODO: Fill in the correct function signatures below.
@@ -2609,15 +2668,15 @@ typedef struct {
 ///
 /// size = 0x54
 typedef struct {
-	/// offset 0000 (4 bytes)
+	/// offset: 0000 (4 bytes)
 	char *name;
-	/// offset 0004 (1 bytes)
-	unique_base_item unique_base_item;
-	/// offset 0005 (1 bytes)
+	/// offset: 0004 (1 bytes)
+	unique_base_item unique_base_item : 8;
+	/// offset: 0005 (1 bytes)
 	int8_t quality_lvl;
-	/// offset 0006 (1 bytes)
+	/// offset: 0006 (1 bytes)
 	int8_t neffects;
-	/// offset 0008 (4 bytes)
+	/// offset: 0008 (4 bytes)
 	int32_t gold_price;
 	/// offset 000C (72 bytes)
 	ItemEffect effects[6];
@@ -2645,7 +2704,7 @@ typedef struct {
 /// size = 0x20
 typedef struct {
 	/// offset: 0000 (1 bytes)
-	monster_id base_monster_id;
+	monster_id base_monster_id : 8;
 	/// offset: 0004 (4 bytes)
 	char *name;
 	/// offset: 0008 (4 bytes)
@@ -2655,7 +2714,7 @@ typedef struct {
 	/// offset: 000E (2 bytes)
 	int16_t hp;
 	/// offset: 0010 (1 bytes)
-	monster_ai_id monster_ai_id;
+	monster_ai_id monster_ai_id : 8;
 	/// offset: 0011 (1 bytes)
 	int8_t intelligence_factor;
 	/// offset: 0012 (1 bytes)
@@ -2669,7 +2728,7 @@ typedef struct {
 	/// offset: 0018 (4 bytes)
 	int32_t pack_modifier;
 	/// offset: 001C (4 bytes)
-	speech_id speech_id;
+	speech_id speech_id : 32;
 } UniqueMonsterData;
 
 /// UserInfo describes the selected character.
@@ -2677,13 +2736,13 @@ typedef struct {
 /// size = 0x10
 typedef struct {
 	/// offset: 0000 (4 bytes)
-	int size;
+	int32_t size;
 	/// offset: 0004 (4 bytes)
 	char *char_name;
 	/// offset: 0008 (4 bytes)
 	char *player_description;
 	/// offset: 000C (4 bytes)
-	int unknown_000C;
+	int32_t unknown_000C;
 } UserInfo;
 
 /// A Warp is an entrance that connects two levels of the map.
@@ -2697,7 +2756,7 @@ typedef struct {
 	/// Y-coordinate of the entrance.
 	int32_t entrance_y;
 	/// offset: 0008 (4 bytes)
-	interface_mode interface_mode; // TODO: validate that this field is actualy used for interface_mode.
+	interface_mode interface_mode : 32; // TODO: validate that this field is actualy used for interface_mode.
 	/// offset: 000C (4 bytes)
 	/// Dungeon level of the target map.
 	int32_t dlvl_next;
