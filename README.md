@@ -44,7 +44,7 @@ Anyone interested in contributing to the project may do so in whichever way they
 4. Add documentation for
 	- function declarations (e.g. `drlg_l1_place_door`: [code](https://github.com/sanctuary/notes/blob/fe200926d56a603b2173c5c2b0e3a97cc8649c6b/funcs/drlg_l1.h#L88), [doc](http://sanctuary.github.io/notes/#address/0x40B56F))
 	- global variable declarations (e.g. `items`: [code](https://github.com/sanctuary/notes/blob/fe200926d56a603b2173c5c2b0e3a97cc8649c6b/bss/items.h#L3), [doc](http://sanctuary.github.io/notes/#address/0x635A28))
-	- structure definitions (e.g. `ItemAffixData`: [code](https://github.com/sanctuary/notes/blob/dd2c34fbb172f4e05aca7ac5e803bc6846b7a7a8/include/structs.h#L1140), [doc](http://sanctuary.github.io/notes/#struct/ItemAffixData))
+	- structure definitions (e.g. `Player`: [code](https://github.com/sanctuary/notes/blob/3bf136c2f1f230aed0ca01585eb65a019d9e38ff/include/structs.h#L1725), [doc](http://sanctuary.github.io/notes/#struct/Player))
 	- enumerate definitions (e.g. `quest_level`: [code](https://github.com/sanctuary/notes/blob/dd2c34fbb172f4e05aca7ac5e803bc6846b7a7a8/include/enums.h#L1632), [doc](http://sanctuary.github.io/notes/#enum/quest_level))
 5. Improve the [Scripture](https://github.com/Predelnik/Scripture) documentation generation tool.
 6. ...
