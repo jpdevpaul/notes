@@ -1,15 +1,12 @@
-CPP = $(wildcard funcs/*.cpp rdata/*.cpp data/*.cpp bss/*.cpp)
-OBJ = $(CPP:.cpp=.o)
+H_SRC = $(wildcard funcs/*.h rdata/*.h data/*.h bss/*.h include/*.h)
+OBJ = $(H_SRC:.h=.o)
 
-all: $(OBJ) storm.o
+all: $(OBJ)
 
-%.o: %.cpp
-	clang -I ./ -c -m32 -o $@ $<
-
-storm.o: storm.h
-	clang -I ./ -c -m32 -o $@ $<
+%.o: %.h
+	clang -I ./include -c -m32 -o $@ $<
 
 .PHONY: all clean
 
 clean:
-	rm -f funcs/*.o rdata/*.o data/*.o bss/*.o *.o
+	rm -f funcs/*.o rdata/*.o data/*.o bss/*.o include/*.o
