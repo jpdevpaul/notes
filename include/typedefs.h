@@ -1,7 +1,9 @@
 #ifndef TYPEDEFS_H
 #define TYPEDEFS_H
 
+#ifndef _WIN32
 #include <stdint.h>
+#endif // _WIN32
 #include <stdarg.h>
 
 typedef int8_t bool8_t;
