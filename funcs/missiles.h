@@ -4,15 +4,28 @@
 ///
 /// missiles_get_spell_damage retrieves the min and max spell damage of the
 /// given spell.
+///
+/// PSX ref: 0x80139C04
+/// PSX def: void GetDamageAmt__FiPiT1(int i, int *mind, int *maxd)
 void __fastcall missiles_get_spell_damage(spell_id spell_id, int *damage_min, int *damage_max);
 
 /// address: 0x428921
 ///
-/// TODO: add documentation.
+/// missiles_check_block reports whether the missile trajectory is blocked by a
+/// tile.
+///
+/// PSX ref: 0x8013A1FC
+/// PSX def: int CheckBlock__Fiiii(int fx, int fy, int tx, int ty)
+bool32_t __fastcall missiles_check_block(int src_x, int src_y, int dst_x, int dst_y);
 
 /// address: 0x42897A
 ///
-/// TODO: add documentation.
+/// missiles_find_closest returns the NPC number of the closest NPC on the
+/// trajectory of the missile, or -1 if no such NPC is located.
+///
+/// PSX ref: 0x8013A2B0
+/// PSX def: int FindClosest__Fiii(int sx, int sy, int rad)
+int __fastcall missiles_find_closest(int x, int y, int radius);
 
 /// address: 0x428A99
 ///

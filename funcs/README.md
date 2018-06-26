@@ -39,7 +39,7 @@ Each function has been categorised based on their original source file, as summa
 | [log.cpp](log.h)               | `0x4279F2`    | `0x427E0D`  | ![100%](http://progressed.io/bar/100 "(11/11 functions)") |
 | [mainmenu.cpp](mainmenu.h)     | `0x427E0E`    | `0x428055`  | ![20%](http://progressed.io/bar/20 "(2/10 functions)")    |
 | [minitext.cpp](minitext.h)     | `0x428056`    | `0x4283BF`  | ![100%](http://progressed.io/bar/100 "(6/6 functions)")   |
-| [missiles.cpp](missiles.h)     | `0x4283C0`    | `0x430FDE`  | ![0%](http://progressed.io/bar/0 "(1/133 functions)")     |
+| [missiles.cpp](missiles.h)     | `0x4283C0`    | `0x430FDE`  | ![2%](http://progressed.io/bar/2 "(3/133 functions)")     |
 | [monster.cpp](monster.h)       | `0x430FDF`    | `0x43AD32`  | ![1%](http://progressed.io/bar/1 "(2/147 functions)")     |
 | [movie.cpp](movie.h)           | `0x43AD33`    | `0x43AE8F`  | ![100%](http://progressed.io/bar/100 "(4/4 functions)")   |
 | [mpqapi.cpp](mpqapi.h)         | `0x43AE90`    | `0x43BBA3`  | ![100%](http://progressed.io/bar/100 "(29/29 functions)") |
