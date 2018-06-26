@@ -35,10 +35,10 @@ export notes_path=`pwd`
 cd Scripture
 SCRIPTURE_SHA=`git rev-parse --verify HEAD`
 pip3 install -r requirements.txt
-mv extract.sh.sample extract.sh
-chmod +x extract.sh
 echo "Generating pages using Scripture"
-./extract.sh
+export scripture_dir=$(dirname `readlink -f "$0"`)
+cd ${notes_path}
+python3 ${scripture_dir}/extract.py --args="-I$notes_path/include" "$notes_path" --github-root="https://github.com/sanctuary/notes/blob/" --github-sha1="`git rev-parse HEAD`" --idc-path="${scripture_dir}/site/notes.idc"
 cp -r ./site/* ${notes_path}/out/
 
 # Now let's go have some fun with the cloned repo
