@@ -39,7 +39,7 @@ echo "Generating pages using Scripture"
 export scripture_dir=$(dirname `readlink -f "$0"`)
 cd ${notes_path}
 python3 ${scripture_dir}/extract.py --args="-I$notes_path/include" "$notes_path" --github-root="https://github.com/sanctuary/notes/blob/" --github-sha1="`git rev-parse HEAD`" --idc-path="${scripture_dir}/site/notes.idc"
-cp -r ./site/* ${notes_path}/out/
+cp -r ${scripture_dir}/site/* ${notes_path}/out/
 
 # Now let's go have some fun with the cloned repo
 cd ${notes_path}/out
