@@ -27,7 +27,7 @@ char * appfat_get_last_error();
 ///
 /// appfat_terminate_message_box terminates the game and displays an error
 /// message box.
-void __attribute__((noreturn)) appfat_terminate_message_box(char *format, ...);
+void appfat_terminate_message_box(char *format, ...);
 
 /// address: 0x401975
 ///
@@ -66,7 +66,7 @@ void __fastcall appfat_centre_dialog_box(HWND hDlg);
 ///
 /// appfat_terminate_dialog_box terminates the game and displays an error dialog
 /// box based on the given template id.
-void __fastcall __attribute__((noreturn)) appfat_terminate_dialog_box(int template_id, uint32_t error_code, char *log_file_path, int log_line_nr);
+void __fastcall appfat_terminate_dialog_box(int template_id, uint32_t error_code, char *log_file_path, int log_line_nr);
 
 /// address: 0x401BCA
 ///
@@ -89,13 +89,13 @@ void __fastcall appfat_dialog_box(template_id template_id, uint32_t error_code, 
 ///
 /// appfat_terminate_file_error_dialog terminates the game with a file not found
 /// error dialog.
-void __fastcall __attribute__((noreturn)) appfat_terminate_file_error_dialog(char *error);
+void __fastcall appfat_terminate_file_error_dialog(char *error);
 
 /// address: 0x401CE1
 ///
 /// appfat_terminate_disk_space_error_dialog terminates the game with an out of
 /// disk space error dialog.
-void __fastcall __attribute__((noreturn)) appfat_terminate_disk_space_error_dialog(char *error);
+void __fastcall appfat_terminate_disk_space_error_dialog(char *error);
 
 /// address: 0x401D1D
 ///
@@ -107,4 +107,4 @@ bool32_t appfat_terminate_insert_cd_error_dialog();
 ///
 /// appfat_terminate_directory_error_dialog terminates the game with a read-only
 /// directory error dialog.
-void __fastcall __attribute__((noreturn)) appfat_terminate_directory_error_dialog(char *error);
+void __fastcall appfat_terminate_directory_error_dialog(char *error);
