@@ -13,7 +13,7 @@ Each function has been categorised based on their original source file, as summa
 | [cursor.cpp](cursor.h)         | `0x40740A`    | `0x4084A5`  | ![100%](http://progressed.io/bar/100 "(9/9 functions)")   |
 | [dead.cpp](dead.h)             | `0x4084A6`    | `0x4086F3`  | ![100%](http://progressed.io/bar/100 "(3/3 functions)")   |
 | [debug.cpp](debug.h)           | `0x4086F4`    | `0x4087B0`  | ![100%](http://progressed.io/bar/100 "(3/3 functions)")   |
-| [diablo.cpp](diablo.h)         | `0x4087B1`    | `0x40ACAC`  | ![42%](http://progressed.io/bar/42 "(15/35 functions)")   |
+| [diablo.cpp](diablo.h)         | `0x4087B1`    | `0x40ACAC`  | ![45%](http://progressed.io/bar/45 "(16/35 functions)")   |
 | [doom.cpp](doom.h)             | `0x40ACAD`    | `0x40ADD5`  | ![100%](http://progressed.io/bar/100 "(7/7 functions)")   |
 | [drlg_l1.cpp](drlg_l1.h)       | `0x40ADD6`    | `0x40D356`  | ![100%](http://progressed.io/bar/100 "(38/38 functions)") |
 | [drlg_l2.cpp](drlg_l2.h)       | `0x40D357`    | `0x40FF80`  | ![51%](http://progressed.io/bar/51 "(18/35 functions)")   |

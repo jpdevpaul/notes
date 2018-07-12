@@ -53,7 +53,8 @@ bool32_t diablo_get_not_running();
 
 /// address: 0x408B4A
 ///
-/// TODO: add documentation.
+/// WinMain is the entry point of the Diablo executable.
+int __stdcall WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow);
 
 /// address: 0x408CB1
 ///
