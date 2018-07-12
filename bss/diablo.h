@@ -20,6 +20,11 @@ int mouse_y;
 /// mouse_x specifies the current X-coordinate of the mouse cursor.
 int mouse_x;
 
+/// address: 0x5256EC
+///
+/// hInstance is the instance of the main process.
+HINSTANCE hInstance;
+
 /// address: 0x525720
 ///
 /// visible_tile_squares specifies whether tile squares are visible. In the
