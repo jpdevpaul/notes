@@ -1,4 +1,4 @@
-H_SRC = $(wildcard funcs/*.h rdata/*.h data/*.h bss/*.h include/*.h)
+H_SRC = $(wildcard funcs/*.h rdata/*.h data/*.h bss/*.h include/*.h include/storm/*.h include/windows/*.h)
 OBJ = $(H_SRC:.h=.o)
 
 all: $(OBJ)
@@ -9,4 +9,4 @@ all: $(OBJ)
 .PHONY: all clean
 
 clean:
-	rm -f funcs/*.o rdata/*.o data/*.o bss/*.o include/*.o
+	@$(RM) -v funcs/*.o rdata/*.o data/*.o bss/*.o include/storm/*.o include/windows/*.o include/*.o

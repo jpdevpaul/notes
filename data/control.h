@@ -25,7 +25,7 @@ char *button_descriptions[8];
 ///
 /// attribute_inc_rects maps from attribute_id to the rectangle on screen used
 /// for attribute increment buttons.
-Rectangle attribute_inc_rects[4];
+Rectangle_t attribute_inc_rects[4];
 
 /// address: 0x483D74
 ///

@@ -1,138 +1,11 @@
-#ifndef WINDOWS_H
-#define WINDOWS_H
+#ifndef DDRAW_H
+#define DDRAW_H
 
-#include "typedefs.h"
-
-/// ref: https://msdn.microsoft.com/en-us/library/windows/desktop/aa383751(v=vs.85).aspx
-typedef uint8_t BYTE;
-typedef uint16_t WORD;
-typedef uint32_t DWORD;
-typedef int32_t LONG;
-typedef void * HANDLE;
-typedef HANDLE HWND;
-typedef HANDLE HINSTANCE;
-typedef HANDLE HPALETTE;
-typedef HINSTANCE HMODULE;
-typedef int32_t HRESULT;
-/// size of pointer.
-typedef uint32_t LRESULT;
-typedef unsigned int UINT;
-/// size of pointer.
-typedef uint32_t WPARAM;
-/// size of pointer.
-typedef uint32_t LPARAM;
-
-/// ref: https://msdn.microsoft.com/en-us/library/windows/desktop/ms646997(v=vs.85).aspx
-typedef struct {
-	DWORD dwSignature;
-	DWORD dwStrucVersion;
-	DWORD dwFileVersionMS;
-	DWORD dwFileVersionLS;
-	DWORD dwProductVersionMS;
-	DWORD dwProductVersionLS;
-	DWORD dwFileFlagsMask;
-	DWORD dwFileFlags;
-	DWORD dwFileOS;
-	DWORD dwFileType;
-	DWORD dwFileSubtype;
-	DWORD dwFileDateMS;
-	DWORD dwFileDateLS;
-} VS_FIXEDFILEINFO;
-
-/// ref: https://msdn.microsoft.com/en-us/library/windows/desktop/dd390970(v=vs.85).aspx
-typedef struct {
-	WORD  wFormatTag;
-	WORD  nChannels;
-	DWORD nSamplesPerSec;
-	DWORD nAvgBytesPerSec;
-	WORD  nBlockAlign;
-	WORD  wBitsPerSample;
-	WORD  cbSize;
-} WAVEFORMATEX;
-
-/// ref: https://msdn.microsoft.com/en-us/library/mt708923(v=vs.85).aspx
-typedef struct {
-	/// TODO: Fill in the correct method signatures below.
-	/// offset: 0000 (4 bytes)
-	void (*QueryInterface)();
-	/// offset: 0004 (4 bytes)
-	void (*AddRef)();
-	/// offset: 0008 (4 bytes)
-	void (*Release)();
-	/// offset: 000C (4 bytes)
-	void (*GetCaps)();
-	/// offset: 0010 (4 bytes)
-	void (*GetCurrentPosition)();
-	/// offset: 0014 (4 bytes)
-	void (*GetFormat)();
-	/// offset: 0018 (4 bytes)
-	void (*GetVolume)();
-	/// offset: 001C (4 bytes)
-	void (*GetPan)();
-	/// offset: 0020 (4 bytes)
-	void (*GetFrequency)();
-	/// offset: 0024 (4 bytes)
-	void (*GetStatus)();
-	/// offset: 0028 (4 bytes)
-	void (*Initialize)();
-	/// offset: 002C (4 bytes)
-	void (*Lock)();
-	/// offset: 0030 (4 bytes)
-	void (*Play)();
-	/// offset: 0034 (4 bytes)
-	void (*SetCurrentPosition)();
-	/// offset: 0038 (4 bytes)
-	void (*SetFormat)();
-	/// offset: 003C (4 bytes)
-	void (*SetVolume)();
-	/// offset: 0040 (4 bytes)
-	void (*SetPan)();
-	/// offset: 0044 (4 bytes)
-	void (*SetFrequency)();
-	/// offset: 0048 (4 bytes)
-	void (*Stop)();
-	/// offset: 004C (4 bytes)
-	void (*Unlock)();
-	/// offset: 0050 (4 bytes)
-	void (*Restore)();
-} IDirectSoundBufferVtbl;
-
-typedef struct {
-	IDirectSoundBufferVtbl *lpVtbl;
-} IDirectSoundBuffer;
-
-/// ref: https://msdn.microsoft.com/en-us/library/mt708922(v=vs.85).aspx
-///
-/// size = 0x2C
-typedef struct {
-	/// TODO: Fill in the correct method signatures below.
-	/// offset: 0000 (4 bytes)
-	void (*QueryInterface)();
-	/// offset: 0004 (4 bytes)
-	void (*AddRef)();
-	/// offset: 0008 (4 bytes)
-	void (*Release)();
-	/// offset: 000C (4 bytes)
-	void (*CreateSoundBuffer)();
-	/// offset: 0010 (4 bytes)
-	void (*GetCaps)();
-	/// offset: 0014 (4 bytes)
-	void (*DuplicateSoundBuffer)();
-	/// offset: 0018 (4 bytes)
-	void (*SetCooperativeLevel)();
-	/// offset: 001C (4 bytes)
-	void (*Compact)();
-	/// offset: 0020 (4 bytes)
-	void (*GetSpeakerConfig)();
-	/// offset: 0024 (4 bytes)
-	void (*SetSpeakerConfig)();
-	/// offset: 0028 (4 bytes)
-	void (*Initialize)();
-} IDirectSoundVtbl;
-
-typedef struct {
-	IDirectSoundVtbl *lpVtbl;
-} IDirectSound;
+#ifdef _WIN32
+#include <windows.h>
+#else
+#include "windows/windows.h"
+#endif // _WIN32
 
 /// ref: https://msdn.microsoft.com/en-us/library/windows/desktop/gg426173(v=vs.85).aspx
 ///
@@ -158,7 +31,6 @@ typedef struct {
 typedef struct {
 	IDirectDrawPaletteVtbl *lpVtbl;
 } IDirectDrawPalette;
-
 
 /// ref: https://msdn.microsoft.com/en-us/library/ee490539.aspx
 ///
@@ -300,14 +172,6 @@ typedef struct {
 	IDirectDrawVtbl *lpVtbl;
 } IDirectDraw;
 
-/// ref: https://msdn.microsoft.com/en-us/library/windows/desktop/aa373931(v=vs.85).aspx
-typedef struct {
-	DWORD Data1;
-	WORD Data2;
-	WORD Data3;
-	BYTE Data4[8];
-} GUID;
-
 /// ref: https://msdn.microsoft.com/en-us/library/windows/desktop/gg426103(v=vs.85).aspx
 typedef struct {
 	DWORD dwColorSpaceLowValue;
@@ -393,12 +257,4 @@ typedef struct {
 	DDSCAPS       ddsCaps;
 } DDSURFACEDESC;
 
-/// ref: https://msdn.microsoft.com/en-us/library/windows/desktop/dd162769(v=vs.85).aspx
-typedef struct {
-	BYTE peRed;
-	BYTE peGreen;
-	BYTE peBlue;
-	BYTE peFlags;
-} PALETTEENTRY;
-
-#endif // WINDOWS_H
+#endif // DDRAW_H

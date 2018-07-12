@@ -3,7 +3,16 @@
 
 #include "typedefs.h"
 #include "enums.h"
-#include "windows.h"
+
+#ifdef _WIN32
+#include <windows.h>
+#include <ddraw.h>
+#include <dsound.h>
+#else
+#include "windows/windows.h"
+#include "windows/ddraw.h"
+#include "windows/dsound.h"
+#endif // _WIN32
 
 /// ActionFrame specifies the frame of each animation for which an action is
 /// triggered.
@@ -2406,7 +2415,7 @@ typedef struct {
 	Coord max;
 } Rect;
 
-/// Rectangle specifies a rectangluar area of the screen.
+/// Rectangle_t specifies a rectangluar area of the screen.
 ///
 /// size = 0x10
 typedef struct {
@@ -2418,7 +2427,7 @@ typedef struct {
 	int32_t width;
 	/// offset: 000C (4 bytes)
 	int32_t height;
-} Rectangle;
+} Rectangle_t;
 
 /// ScreenRow represents a single horizontal line of pixels on the screen.
 ///
