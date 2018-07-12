@@ -1,7 +1,7 @@
 /// address: 0x4182AD
 ///
-/// exception_cpp_init initializes the C++ runtime of exception.cpp.
-void exception_cpp_init();
+/// fault_cpp_init initializes the C++ runtime of fault.cpp.
+void fault_cpp_init();
 
 /// address: 0x4182B7
 ///
