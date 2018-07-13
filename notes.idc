@@ -4509,6 +4509,9 @@ apply_type (0x408ADB, "void diablo_cleanup();", TINFO_DEFINITE);
 cleanup("diablo_get_not_running");set_name(0x408B1E, "diablo_get_not_running");
 set_func_cmt(0x408B1E, "diablo_get_not_running reports whether the game is not running already.", 0);
 apply_type (0x408B1E, "bool32_t diablo_get_not_running();", TINFO_DEFINITE);
+cleanup("WinMain");set_name(0x408B4A, "WinMain");
+set_func_cmt(0x408B4A, "WinMain is the entry point of the Diablo executable.", 0);
+apply_type (0x408B4A, "int __stdcall WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow);", TINFO_DEFINITE);
 cleanup("diablo_parse_flags");set_name(0x408CB1, "diablo_parse_flags");
 set_func_cmt(0x408CB1, "diablo_parse_flags parses command-line flags from the given command line arguments.", 0);
 apply_type (0x408CB1, "void __fastcall diablo_parse_flags(char *args);", TINFO_DEFINITE);
@@ -6356,7 +6359,7 @@ set_cmt(0x483D14, "button_descriptions maps from panel_button_id to panel button
 apply_type (0x483D14, "char *button_descriptions[8];", TINFO_DEFINITE);
 cleanup("attribute_inc_rects");set_name(0x483D34, "attribute_inc_rects");
 set_cmt(0x483D34, "attribute_inc_rects maps from attribute_id to the rectangle on screen used\nfor attribute increment buttons.", 0);
-apply_type (0x483D34, "Rectangle attribute_inc_rects[4];", TINFO_DEFINITE);
+apply_type (0x483D34, "Rectangle_t attribute_inc_rects[4];", TINFO_DEFINITE);
 cleanup("spell_id_from_spellbook_pos");set_name(0x483D74, "spell_id_from_spellbook_pos");
 set_cmt(0x483D74, "spell_id_from_spellbook_pos maps from spellbook position to spell_id.", 0);
 apply_type (0x483D74, "spell_id spell_id_from_spellbook_pos[42];", TINFO_DEFINITE);
