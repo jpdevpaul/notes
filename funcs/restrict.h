@@ -7,10 +7,10 @@ bool32_t restrict_is_os_supported();
 
 /// address: 0x452885
 ///
-/// restrict_check_game_win_write_access checks whether the process has write
+/// restrict_check_win_dir_write_access checks whether the process has write
 /// access to the windows directory. A return value of false states that the
 /// process has write access.
-bool32_t restrict_check_game_win_write_access();
+bool32_t restrict_check_win_dir_write_access();
 
 /// address: 0x4528F7
 ///

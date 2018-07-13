@@ -22,7 +22,8 @@ void mainmenu_cpp_init();
 
 /// address: 0x427F76
 ///
-/// TODO: add documentation.
+/// mainmenu_dialog displays the dialogue of the main menu.
+void mainmenu_dialog();
 
 /// address: 0x427FEC
 ///

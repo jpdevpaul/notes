@@ -37,7 +37,7 @@ Each function has been categorised based on their original source file, as summa
 | [lighting.cpp](lighting.h) | `0x425443`    | `0x426563`  | ![0%](http://progressed.io/bar/0 "(0/24 functions)")      |
 | [loadsave.cpp](loadsave.h) | `0x426564`    | `0x4279F1`  | ![34%](http://progressed.io/bar/34 "(11/32 functions)")   |
 | [log.cpp](log.h)           | `0x4279F2`    | `0x427E0D`  | ![100%](http://progressed.io/bar/100 "(11/11 functions)") |
-| [mainmenu.cpp](mainmenu.h) | `0x427E0E`    | `0x428055`  | ![20%](http://progressed.io/bar/20 "(2/10 functions)")    |
+| [mainmenu.cpp](mainmenu.h) | `0x427E0E`    | `0x428055`  | ![30%](http://progressed.io/bar/30 "(3/10 functions)")    |
 | [minitext.cpp](minitext.h) | `0x428056`    | `0x4283BF`  | ![100%](http://progressed.io/bar/100 "(6/6 functions)")   |
 | [missiles.cpp](missiles.h) | `0x4283C0`    | `0x430FDE`  | ![2%](http://progressed.io/bar/2 "(3/133 functions)")     |
 | [monster.cpp](monster.h)   | `0x430FDF`    | `0x43AD32`  | ![1%](http://progressed.io/bar/1 "(2/147 functions)")     |

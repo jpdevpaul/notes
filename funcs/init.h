@@ -36,7 +36,7 @@ void __fastcall init_disable_screensaver(bool32_t disable);
 /// address: 0x41AAC5
 ///
 /// init_main_window initializes the main window.
-void init_main_window();
+void __fastcall init_main_window(int nCmdShow);
 
 /// address: 0x41AC00
 ///

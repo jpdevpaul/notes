@@ -6,7 +6,7 @@
 
 #include "types.h"
 
-/// === [ SNet ] ================================================================
+// === [ SNet ] ================================================================
 
 /// address: 0x4698A0
 /// ordinal: 101
@@ -119,8 +119,7 @@ bool32_t __stdcall SNetUnregisterEventHandler(event_type event_type, void (__std
 /// SNetSendServerChatCommand sends a chat command to the server.
 int __stdcall SNetSendServerChatCommand(char *command);
 
-
-/// === [ SFile ] ===============================================================
+// === [ SFile ] ===============================================================
 
 /// address: 0x469816
 /// ordinal: 252
@@ -223,8 +222,7 @@ bool32_t __stdcall SFileSetBasePath(char *base_dir);
 /// the file, the current position indicator, or end-of-file, respectively.
 int __stdcall SFileSetFilePointer(int file1, int offset, int file2, int whence);
 
-
-/// === [ Storm ] ===============================================================
+// === [ Storm ] ===============================================================
 
 /// address: 0x469810
 /// ordinal: 301
@@ -232,8 +230,7 @@ int __stdcall SFileSetFilePointer(int file1, int offset, int file2, int whence);
 /// StormDestroy terminates the Storm library.
 bool32_t StormDestroy();
 
-
-/// === [ SDraw ] ===============================================================
+// === [ SDraw ] ===============================================================
 
 /// address: 0x4697EC
 /// ordinal: 344
@@ -271,8 +268,7 @@ void SDrawRealizePalette();
 /// SDrawUpdatePalette replaces the palette entries of the system palette.
 bool32_t __stdcall SDrawUpdatePalette(int first_entry, int nentries, PALETTEENTRY *entries, uint32_t flags);
 
-
-/// === [ SMem ] ================================================================
+// === [ SMem ] ================================================================
 
 /// address: 0x4697BC
 /// ordinal: 401
@@ -287,8 +283,7 @@ void * __stdcall SMemAlloc(int size, char *log_file_path, int log_line_nr, uint3
 /// SMemFree frees the allocated memory of the given pointer.
 bool32_t __stdcall SMemFree(void *ptr, char *log_file_path, int log_line_nr, uint32_t flags);
 
-
-/// === [ SReg ] ================================================================
+// === [ SReg ] ================================================================
 
 /// address: 0x469852
 /// ordinal: 421
@@ -326,8 +321,7 @@ bool32_t __stdcall SRegSaveString(char *sub_key, char *value_name, uint32_t flag
 /// SRegSaveValue saves an integer value to the given registry key.
 bool32_t __stdcall SRegSaveValue(char *subkey, char *value_name, uint32_t flags, int value);
 
-
-/// === [ SVid ] ================================================================
+// === [ SVid ] ================================================================
 
 /// address: 0x469900
 /// ordinal: 451
@@ -359,8 +353,7 @@ bool32_t SVidPlayContinue();
 /// SVidPlayEnd stops playback of the given video stream.
 bool32_t __stdcall SVidPlayEnd(void *video_stream);
 
-
-/// === [ SErr ] ================================================================
+// === [ SErr ] ================================================================
 
 /// address: 0x4697C2
 /// ordinal: 462
@@ -380,8 +373,7 @@ uint32_t SErrGetLastError();
 /// SErrSetLastError sets the last error.
 void __stdcall SErrSetLastError(uint32_t error_code);
 
-
-/// === [ SStr ] ================================================================
+// === [ SStr ] ================================================================
 
 /// address: 0x469834
 /// ordinal: 501
