@@ -4937,7 +4937,7 @@ set_func_cmt(0x40193A, "appfat_get_last_error returns a formatted error message 
 apply_type (0x40193A, "char * appfat_get_last_error();", TINFO_DEFINITE);
 cleanup("appfat_terminate_message_box");set_name(0x401947, "appfat_terminate_message_box");
 set_func_cmt(0x401947, "appfat_terminate_message_box terminates the game and displays an error\nmessage box.", 0);
-apply_type (0x401947, "void __attribute__((noreturn)) appfat_terminate_message_box(char *format, ...);", TINFO_DEFINITE);
+apply_type (0x401947, "void appfat_terminate_message_box(char *format, ...);", TINFO_DEFINITE);
 cleanup("appfat_message_box");set_name(0x401975, "appfat_message_box");
 set_func_cmt(0x401975, "appfat_message_box displays an error message box based on the given format\nstring and variable argument list.", 0);
 apply_type (0x401975, "void __fastcall appfat_message_box(char *format, va_list va);", TINFO_DEFINITE);
@@ -4958,7 +4958,7 @@ set_func_cmt(0x401AAB, "appfat_centre_dialog_box centres the given dialog box.",
 apply_type (0x401AAB, "void __fastcall appfat_centre_dialog_box(HWND hDlg);", TINFO_DEFINITE);
 cleanup("appfat_terminate_dialog_box");set_name(0x401B3D, "appfat_terminate_dialog_box");
 set_func_cmt(0x401B3D, "appfat_terminate_dialog_box terminates the game and displays an error dialog\nbox based on the given template id.", 0);
-apply_type (0x401B3D, "void __fastcall __attribute__((noreturn)) appfat_terminate_dialog_box(int template_id, uint32_t error_code, char *log_file_path, int log_line_nr);", TINFO_DEFINITE);
+apply_type (0x401B3D, "void __fastcall appfat_terminate_dialog_box(int template_id, uint32_t error_code, char *log_file_path, int log_line_nr);", TINFO_DEFINITE);
 cleanup("appfat_dialog_func");set_name(0x401BCA, "appfat_dialog_func");
 set_func_cmt(0x401BCA, "appfat_dialog_func is a callback function which processes messages sent to\nthe given dialog box.", 0);
 apply_type (0x401BCA, "bool32_t __stdcall appfat_dialog_func(HWND hDlg, UINT uMsg, WPARAM wParam, char *text);", TINFO_DEFINITE);
@@ -4970,16 +4970,16 @@ set_func_cmt(0x401C2E, "appfat_dialog_box displays an error dialog box based on 
 apply_type (0x401C2E, "void __fastcall appfat_dialog_box(template_id template_id, uint32_t error_code, char *log_file_path, int log_line_nr);", TINFO_DEFINITE);
 cleanup("appfat_terminate_file_error_dialog");set_name(0x401C9C, "appfat_terminate_file_error_dialog");
 set_func_cmt(0x401C9C, "appfat_terminate_file_error_dialog terminates the game with a file not found\nerror dialog.", 0);
-apply_type (0x401C9C, "void __fastcall __attribute__((noreturn)) appfat_terminate_file_error_dialog(char *error);", TINFO_DEFINITE);
+apply_type (0x401C9C, "void __fastcall appfat_terminate_file_error_dialog(char *error);", TINFO_DEFINITE);
 cleanup("appfat_terminate_disk_space_error_dialog");set_name(0x401CE1, "appfat_terminate_disk_space_error_dialog");
 set_func_cmt(0x401CE1, "appfat_terminate_disk_space_error_dialog terminates the game with an out of\ndisk space error dialog.", 0);
-apply_type (0x401CE1, "void __fastcall __attribute__((noreturn)) appfat_terminate_disk_space_error_dialog(char *error);", TINFO_DEFINITE);
+apply_type (0x401CE1, "void __fastcall appfat_terminate_disk_space_error_dialog(char *error);", TINFO_DEFINITE);
 cleanup("appfat_terminate_insert_cd_error_dialog");set_name(0x401D1D, "appfat_terminate_insert_cd_error_dialog");
 set_func_cmt(0x401D1D, "appfat_terminate_insert_cd_error_dialog terminates the game with an insert CD\nerror dialog.", 0);
 apply_type (0x401D1D, "bool32_t appfat_terminate_insert_cd_error_dialog();", TINFO_DEFINITE);
 cleanup("appfat_terminate_directory_error_dialog");set_name(0x401D68, "appfat_terminate_directory_error_dialog");
 set_func_cmt(0x401D68, "appfat_terminate_directory_error_dialog terminates the game with a read-only\ndirectory error dialog.", 0);
-apply_type (0x401D68, "void __fastcall __attribute__((noreturn)) appfat_terminate_directory_error_dialog(char *error);", TINFO_DEFINITE);
+apply_type (0x401D68, "void __fastcall appfat_terminate_directory_error_dialog(char *error);", TINFO_DEFINITE);
 cleanup("cursor_init_graphics");set_name(0x40740A, "cursor_init_graphics");
 set_func_cmt(0x40740A, "cursor_init_graphics initializes the cursor graphics.", 0);
 apply_type (0x40740A, "void cursor_init_graphics();", TINFO_DEFINITE);
