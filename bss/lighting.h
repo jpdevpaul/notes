@@ -6,7 +6,7 @@
 ///
 /// PSX ref: 0x800D65D0
 /// PSX def: LightListStruct VisionList[32]
-Lighting visions[32];
+extern Lighting visions[32];
 
 /// address: 0x641B88
 ///
@@ -14,12 +14,12 @@ Lighting visions[32];
 ///
 /// PSX ref: 0x800D6300
 /// PSX def: LightListStruct2 LightList[80]
-Lighting lightings[32];
+extern Lighting lightings[32];
 
 /// lighting_disabled specifies whether light effects are disabled.
 ///
 /// address: 0x646A28
-bool32_t lighting_disabled;
+extern bool32_t lighting_disabled;
 
 /// lighting_max specifies the maximum number of light effects.
 ///
@@ -27,4 +27,4 @@ bool32_t lighting_disabled;
 /// PSX def: char lightmax
 ///
 /// address: 0x642A14
-int8_t lighting_max;
+extern int8_t lighting_max;

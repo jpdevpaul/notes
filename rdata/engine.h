@@ -3,7 +3,7 @@
 /// address: 0x47A474
 ///
 /// +Infinity
-float engine_inf;
+extern float engine_inf;
 
 /// address: 0x47A478
 ///
@@ -13,7 +13,7 @@ float engine_inf;
 ///    seed = 0x15A4E35*seed + 1
 ///
 /// Note, this global variable is unused.
-int32_t rand_increment;
+extern int32_t rand_increment;
 
 /// address: 0x47A47C
 ///
@@ -23,4 +23,4 @@ int32_t rand_increment;
 ///   seed = 0x15A4E35*seed + 1
 ///
 /// Note, this global variable is unused.
-int32_t rand_multiplier;
+extern int32_t rand_multiplier;

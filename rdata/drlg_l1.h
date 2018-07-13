@@ -12,7 +12,7 @@
 ///
 /// References:
 ///    * https://github.com/sanctuary/graphics/blob/master/l1/shadow/README.md
-Shadow l1_shadow[37];
+extern Shadow l1_shadow[37];
 
 /// address: 0x479D28
 ///
@@ -27,7 +27,7 @@ Shadow l1_shadow[37];
 /// References:
 ///    * https://github.com/sanctuary/graphics/blob/master/l1/tiles/README.md
 ///    * https://github.com/sanctuary/graphics/blob/master/l1/tiles/base.md
-l1_tile_id l1_base[207];
+extern l1_tile_id l1_base[207];
 
 /// address: 0x479DF8
 ///
@@ -41,7 +41,7 @@ l1_tile_id l1_base[207];
 ///
 /// References:
 ///    * https://github.com/sanctuary/graphics/blob/master/l1/tiles/README.md
-l1_tile_id l1_plain[207];
+extern l1_tile_id l1_plain[207];
 
 /// address: 0x479EC8
 ///
@@ -66,7 +66,7 @@ l1_tile_id l1_plain[207];
 ///       // Tile IDs after transformation.
 ///       after [width][height]uint8
 ///    }
-uint8_t l1_stair_up1[34];
+extern uint8_t l1_stair_up1[34];
 
 /// address: 0x479EEC
 ///
@@ -91,7 +91,7 @@ uint8_t l1_stair_up1[34];
 ///       // Tile IDs after transformation.
 ///       after [width][height]uint8
 ///    }
-uint8_t l1_stair_up2[34];
+extern uint8_t l1_stair_up2[34];
 
 /// address: 0x479F10
 ///
@@ -117,7 +117,7 @@ uint8_t l1_stair_up2[34];
 ///       // Tile IDs after transformation.
 ///       after [width][height]uint8
 ///    }
-uint8_t l1_stair_down[26];
+extern uint8_t l1_stair_down[26];
 
 /// address: 0x479F2C
 ///
@@ -142,7 +142,7 @@ uint8_t l1_stair_down[26];
 ///       // Tile IDs after transformation.
 ///       after [width][height]uint8
 ///    }
-uint8_t l1_candlestick[10];
+extern uint8_t l1_candlestick[10];
 
 /// address: 0x479F38
 ///
@@ -168,4 +168,4 @@ uint8_t l1_candlestick[10];
 ///       // Tile IDs after transformation.
 ///       after [width][height]uint8
 ///    }
-uint8_t l1_stair_down_poison[74];
+extern uint8_t l1_stair_down_poison[74];

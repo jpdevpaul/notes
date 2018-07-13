@@ -1,4 +1,4 @@
 /// address: 0x47A460
 ///
 /// +Infinity
-float dthread_inf;
+extern float dthread_inf;

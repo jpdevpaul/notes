@@ -9,4 +9,4 @@
 ///    8 0 6
 ///     4 3
 ///      7
-step step_from_movement_delta[3][3];
+extern step step_from_movement_delta[3][3];

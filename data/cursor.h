@@ -1,29 +1,29 @@
 /// address: 0x484250
 ///
 /// `Data\Inv\Objcurs.CEL`
-char str_484250[21];
+extern char str_484250[21];
 
 /// address: 0x484268
 ///
 /// "from %s"
-char str_484268[8];
+extern char str_484268[8];
 
 /// address: 0x484270
 ///
 /// "Town Portal"
-char str_484270[12];
+extern char str_484270[12];
 
 /// address: 0x48427C
 ///
 /// "level 15"
-char str_48427C[9];
+extern char str_48427C[9];
 
 /// address: 0x484288
 ///
 /// "The Unholy Altar"
-char str_484288[17];
+extern char str_484288[17];
 
 /// address: 0x48429C
 ///
 /// "Portal to"
-char str_48429C[10];
+extern char str_48429C[10];

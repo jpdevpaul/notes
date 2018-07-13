@@ -3,12 +3,12 @@
 /// address 0x52B968
 ///
 /// +Infinity after initialization of engine.cpp.
-float engine_cpp_init_value;
+extern float engine_cpp_init_value;
 
 /// address: 0x52B974
 ///
 /// initial_seed represents the initial global seed of the game.
-int32_t initial_seed;
+extern int32_t initial_seed;
 
 /// address: 0x52B97C
 ///
@@ -16,7 +16,7 @@ int32_t initial_seed;
 ///
 /// PSX ref: 0x8011C7C4
 /// PSX def: long sglGameSeed
-int32_t seed;
+extern int32_t seed;
 
 /* TODO: uncomment when the CRITICAL_SECTION struct has been added. Include
    windows.h from types.h? Or create a minimal windows.h locally for the
@@ -25,7 +25,7 @@ int32_t seed;
 /// address: 0x52B980
 ///
 /// mem_mutex is a mutex which protects memory operations from race conditions.
-CRITICAL_SECTION mem_mutex;
+extern CRITICAL_SECTION mem_mutex;
 
 */
 
@@ -35,4 +35,4 @@ CRITICAL_SECTION mem_mutex;
 ///
 /// PSX ref: 0x8011B85C
 /// PSX def: int SeedCount
-int32_t seed_count;
+extern int32_t seed_count;

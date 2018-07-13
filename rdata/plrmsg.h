@@ -4,4 +4,4 @@
 ///
 /// text_color_from_player_num maps from player_num to text colour, as used in
 /// chat messages.
-text_color text_color_from_player_num[5];
+extern text_color text_color_from_player_num[5];

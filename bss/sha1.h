@@ -4,4 +4,4 @@
 ///
 /// sha1_contexts specifies the global SHA-1 contexts, which are used to
 /// generate the codec key for save file encoding and decoding.
-SHA1Context sha1_contexts[3];
+extern SHA1Context sha1_contexts[3];

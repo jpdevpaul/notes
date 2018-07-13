@@ -6,4 +6,4 @@
 ///
 /// References:
 ///    * https://github.com/sanctuary/notes/blob/master/enums.h#speech_id
-SpeechData speech_data[259];
+extern SpeechData speech_data[259];

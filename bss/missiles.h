@@ -8,6 +8,6 @@
 ///
 /// PSX ref: 0x80102C58
 /// PSX def: MissileStruct missile[125]
-Missile missiles[125];
+extern Missile missiles[125];
 
 */

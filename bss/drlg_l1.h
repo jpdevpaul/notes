@@ -7,7 +7,7 @@
 ///
 /// PSX ref: 0x8013A3B0
 /// PSX def: unsigned char L5dungeon[80][80]
-l1_tile_id l1_tile_bit_map[80][80];
+extern l1_tile_id l1_tile_bit_map[80][80];
 
 /// TODO: Define l1_flag enum.
 
@@ -17,7 +17,7 @@ l1_tile_id l1_tile_bit_map[80][80];
 ///
 /// PSX ref: 0x8011C0D8
 /// PSX def: unsigned char* mydflags
-uint8_t l1_flag_map[40][40];
+extern uint8_t l1_flag_map[40][40];
 
 /// address: 0x5276A4
 ///
@@ -26,7 +26,7 @@ uint8_t l1_flag_map[40][40];
 ///
 /// PSX ref: 0x8011C0F4
 /// PSX def: unsigned char setloadflag
-bool32_t l1_single_player_quest_dun_loaded;
+extern bool32_t l1_single_player_quest_dun_loaded;
 
 /// address: 0x5276A8
 ///
@@ -35,7 +35,7 @@ bool32_t l1_single_player_quest_dun_loaded;
 ///
 /// PSX ref: 0x8011C8D8
 /// PSX def: unsigned char HR1
-bool32_t l1_horiz_room1;
+extern bool32_t l1_horiz_room1;
 
 /// address: 0x5276AC
 ///
@@ -44,7 +44,7 @@ bool32_t l1_horiz_room1;
 ///
 /// PSX ref: 0x8011C8D9
 /// PSX def: unsigned char HR2
-bool32_t l1_horiz_room2;
+extern bool32_t l1_horiz_room2;
 
 /// address: 0x5276B0
 ///
@@ -53,7 +53,7 @@ bool32_t l1_horiz_room2;
 ///
 /// PSX ref: 0x8011C8DA
 /// PSX def: unsigned char HR3
-bool32_t l1_horiz_room3;
+extern bool32_t l1_horiz_room3;
 
 /// address: 0x5276B4
 ///
@@ -62,7 +62,7 @@ bool32_t l1_horiz_room3;
 ///
 /// PSX ref: 0x8011C8DB
 /// PSX def: unsigned char VR1
-bool32_t l1_vert_room1;
+extern bool32_t l1_vert_room1;
 
 /// address: 0x5276B8
 ///
@@ -71,7 +71,7 @@ bool32_t l1_vert_room1;
 ///
 /// PSX ref: 0x8011C8DC
 /// PSX def: unsigned char VR2
-bool32_t l1_vert_room2;
+extern bool32_t l1_vert_room2;
 
 /// address: 0x5276BC
 ///
@@ -80,7 +80,7 @@ bool32_t l1_vert_room2;
 ///
 /// PSX ref: 0x8011C8DD
 /// PSX def: unsigned char VR3
-bool32_t l1_vert_room3;
+extern bool32_t l1_vert_room3;
 
 /// address: 0x5276C0
 ///
@@ -89,4 +89,4 @@ bool32_t l1_vert_room3;
 ///
 /// PSX ref: 0x8011C0DC
 /// PSX def: unsigned char* pSetPiece
-void *l1_single_player_quest_dun;
+extern void *l1_single_player_quest_dun;

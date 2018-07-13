@@ -3,39 +3,39 @@
 /// address: 0x49F204
 ///
 /// network_thread is a handle to the network thread.
-HANDLE network_thread;
+extern HANDLE network_thread;
 
 /// address: 0x49F208
 ///
 /// "%s:\n%s"
-char str_49F208[7];
+extern char str_49F208[7];
 
 /// address: 0x49F210
 ///
 /// "SNetSendTurn"
-char str_49F210[13];
+extern char str_49F210[13];
 
 /// address: 0x49F220
 ///
 /// "SNetGetTurnsInTransit"
-char str_49F220[22];
+extern char str_49F220[22];
 
 /// address: 0x49F238
 ///
 /// "SNetReceiveTurns"
-char str_49F238[17];
+extern char str_49F238[17];
 
 /// address: 0x49F24C
 ///
 /// "nthread2:\n%s"
-char str_49F24C[13];
+extern char str_49F24C[13];
 
 /// address: 0x49F25C
 ///
 /// "SNetGetProviderCaps:\n%s"
-char str_49F25C[24];
+extern char str_49F25C[24];
 
 /// address: 0x49F274
 ///
 /// "nthread3:\n(%s)"
-char str_49F274[15];
+extern char str_49F274[15];

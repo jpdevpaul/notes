@@ -23,4 +23,4 @@
 ///
 /// References:
 ///    * https://raw.githubusercontent.com/sanctuary/graphics/master/inventory.png
-Point inv_screen_pos[73];
+extern Point inv_screen_pos[73];

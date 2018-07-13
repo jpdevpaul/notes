@@ -4,4 +4,4 @@
 ///
 /// path_nodes records the nodes of the path constructed by the path finding
 /// algorithm.
-PathNode path_nodes[300];
+extern PathNode path_nodes[300];

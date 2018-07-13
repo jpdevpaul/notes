@@ -6,12 +6,12 @@
 ///
 /// PSX ref: 0x8010D7AC
 /// PSX def: unsigned short automaptype[512]
-uint16_t automap_type_from_tile_id[512]; // TODO: define automap_type enum.
+extern uint16_t automap_type_from_tile_id[512]; // TODO: define automap_type enum.
 
 /// address: 0x4B7E48
 ///
 /// automap_enabled specifies whether the automap is enabled.
-bool32_t automap_enabled;
+extern bool32_t automap_enabled;
 
 /// address: 0x4B7E6C
 ///
@@ -19,7 +19,7 @@ bool32_t automap_enabled;
 ///
 /// PSX ref: 0x8010D6E4
 /// PSX def: unsigned char automapview[5][40]
-bool8_t automap_discovered[40][40];
+extern bool8_t automap_discovered[40][40];
 
 /// address: 0x4B84AC
 ///
@@ -27,4 +27,4 @@ bool8_t automap_discovered[40][40];
 ///
 /// PSX ref: 0x8011C368
 /// PSX def: int AutoMapScale
-int automap_zoom_level;
+extern int automap_zoom_level;

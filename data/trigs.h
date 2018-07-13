@@ -9,7 +9,7 @@
 ///
 /// PSX ref: 0x800E31F8
 /// PSX def: short TownDownList[11]
-l1_piece_id town_stairway_down_to_dungeon_piece_ids[11];
+extern l1_piece_id town_stairway_down_to_dungeon_piece_ids[11];
 
 /// address: 0x4B2FA4
 ///
@@ -18,7 +18,7 @@ l1_piece_id town_stairway_down_to_dungeon_piece_ids[11];
 ///
 /// PSX ref: 0x800E3210
 /// PSX def: short TownWarp1List[13]
-l1_piece_id town_stairway_down_to_catacombs_piece_ids[13];
+extern l1_piece_id town_stairway_down_to_catacombs_piece_ids[13];
 
 /// address: 0x4B2FD8
 ///
@@ -27,7 +27,7 @@ l1_piece_id town_stairway_down_to_catacombs_piece_ids[13];
 ///
 /// PSX ref: 0x800E3280
 /// PSX def: short L1UpList[12]
-l1_piece_id cathedral_stairway_up_piece_ids[12];
+extern l1_piece_id cathedral_stairway_up_piece_ids[12];
 
 /// address: 0x4B3008
 ///
@@ -36,7 +36,7 @@ l1_piece_id cathedral_stairway_up_piece_ids[12];
 ///
 /// PSX ref: 0x800E3298
 /// PSX def: short L1DownList[10]
-l1_piece_id cathedral_stairway_down_piece_ids[10];
+extern l1_piece_id cathedral_stairway_down_piece_ids[10];
 
 /// address: 0x4B3030
 ///
@@ -45,7 +45,7 @@ l1_piece_id cathedral_stairway_down_piece_ids[10];
 ///
 /// PSX ref: 0x8011BB1C
 /// PSX def: short L2UpList[3]
-l1_piece_id catacombs_stairway_up_piece_ids[3];
+extern l1_piece_id catacombs_stairway_up_piece_ids[3];
 
 /// address: 0x4B303C
 ///
@@ -54,7 +54,7 @@ l1_piece_id catacombs_stairway_up_piece_ids[3];
 ///
 /// PSX ref: 0x800E32AC
 /// PSX def: short L2DownList[5]
-l1_piece_id catacombs_stairway_down_piece_ids[5];
+extern l1_piece_id catacombs_stairway_down_piece_ids[5];
 
 /// address: 0x4B3050
 ///
@@ -63,7 +63,7 @@ l1_piece_id catacombs_stairway_down_piece_ids[5];
 ///
 /// PSX ref: 0x8011BB24
 /// PSX def: short L2TWarpUpList[3]
-l1_piece_id catacombs_stairway_up_to_town_piece_ids[3];
+extern l1_piece_id catacombs_stairway_up_to_town_piece_ids[3];
 
 /// address: 0x4B305C
 ///
@@ -72,7 +72,7 @@ l1_piece_id catacombs_stairway_up_to_town_piece_ids[3];
 ///
 /// PSX ref: 0x800E32B8
 /// PSX def: short L3UpList[15]
-l1_piece_id caves_stairway_up_piece_ids[15];
+extern l1_piece_id caves_stairway_up_piece_ids[15];
 
 /// address: 0x4B3098
 ///
@@ -81,7 +81,7 @@ l1_piece_id caves_stairway_up_piece_ids[15];
 ///
 /// PSX ref: 0x800E32D8
 /// PSX def: short L3DownList[9]
-l1_piece_id caves_stairway_down_piece_ids[9];
+extern l1_piece_id caves_stairway_down_piece_ids[9];
 
 /// address: 0x4B30BC
 ///
@@ -90,7 +90,7 @@ l1_piece_id caves_stairway_down_piece_ids[9];
 ///
 /// PSX ref: 0x800E32EC
 /// PSX def: short L3TWarpUpList[14]
-l1_piece_id caves_stairway_up_to_town_piece_ids[14];
+extern l1_piece_id caves_stairway_up_to_town_piece_ids[14];
 
 /// address: 0x4B30F4
 ///
@@ -99,7 +99,7 @@ l1_piece_id caves_stairway_up_to_town_piece_ids[14];
 ///
 /// PSX ref: 0x8011BB2C
 /// PSX def: short L4UpList[4]
-l1_piece_id hell_stairway_up_piece_ids[4];
+extern l1_piece_id hell_stairway_up_piece_ids[4];
 
 /// address: 0x4B3104
 ///
@@ -108,7 +108,7 @@ l1_piece_id hell_stairway_up_piece_ids[4];
 ///
 /// PSX ref: 0x800E3308
 /// PSX def: short L4DownList[6]
-l1_piece_id hell_stairway_down_piece_ids[6];
+extern l1_piece_id hell_stairway_down_piece_ids[6];
 
 /// address: 0x4B311C
 ///
@@ -117,7 +117,7 @@ l1_piece_id hell_stairway_down_piece_ids[6];
 ///
 /// PSX ref: 0x8011BB34
 /// PSX def: short L4TWarpUpList[4]
-l1_piece_id hell_stairway_up_to_town_piece_ids[4];
+extern l1_piece_id hell_stairway_up_to_town_piece_ids[4];
 
 /// address: 0x4B312C
 ///
@@ -126,56 +126,56 @@ l1_piece_id hell_stairway_up_to_town_piece_ids[4];
 ///
 /// PSX ref: 0x800E3314
 /// PSX def: short L4PentaList[33]
-l1_piece_id hell_stairway_down_to_diablo_piece_ids[33];
+extern l1_piece_id hell_stairway_down_to_diablo_piece_ids[33];
 
 */
 
 /// address: 0x4B31B0
 ///
 /// "Down to hell"
-char str_4B31B0[13];
+extern char str_4B31B0[13];
 
 /// address: 0x4B31C0
 ///
 /// "Down to caves"
-char str_4B31C0[14];
+extern char str_4B31C0[14];
 
 /// address: 0x4B31D0
 ///
 /// "Down to catacombs"
-char str_4B31D0[18];
+extern char str_4B31D0[18];
 
 /// address: 0x4B31E4
 ///
 /// "Down to dungeon"
-char str_4B31E4[16];
+extern char str_4B31E4[16];
 
 /// address: 0x4B31F4
 ///
 /// "Down to level %i"
-char str_4B31F4[17];
+extern char str_4B31F4[17];
 
 /// address: 0x4B3208
 ///
 /// "Up to town"
-char str_4B3208[11];
+extern char str_4B3208[11];
 
 /// address: 0x4B3214
 ///
 /// "Up to level %i"
-char str_4B3214[15];
+extern char str_4B3214[15];
 
 /// address: 0x4B3224
 ///
 /// "Down to Diablo"
-char str_4B3224[15];
+extern char str_4B3224[15];
 
 /// address: 0x4B3234
 ///
 /// "Back to Level %i"
-char str_4B3234[17];
+extern char str_4B3234[17];
 
 /// address: 0x4B3248
 ///
 /// "Unknown trigger msg"
-char str_4B3248[20];
+extern char str_4B3248[20];

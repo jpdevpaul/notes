@@ -4,4 +4,4 @@
 ///
 /// save_ptr holds a pointer into the contents of the save file, used for loading
 /// saves.
-uint8_t *save_ptr;
+extern uint8_t *save_ptr;

@@ -3,7 +3,7 @@
 /// address: 0x4B8CD8
 ///
 /// NOTE: unused.
-int unused_4B8CD8;
+extern int unused_4B8CD8;
 
 /* TODO: uncomment when the Dead struct has been added to structs.h.
 
@@ -13,7 +13,7 @@ int unused_4B8CD8;
 ///
 /// PSX ref: 0x800CEB10
 /// PSX def: DeadStruct dead[31]
-Dead deads[31];
+extern Dead deads[31];
 
 */
 
@@ -24,4 +24,4 @@ Dead deads[31];
 ///
 /// PSX ref: 0x8011B774
 /// PSX def: int stonendx
-int dead_num_stone_curse;
+extern int dead_num_stone_curse;

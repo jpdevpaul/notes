@@ -1,4 +1,4 @@
 /// address: 0x4802D0
 ///
 /// +Infinity
-float track_inf;
+extern float track_inf;

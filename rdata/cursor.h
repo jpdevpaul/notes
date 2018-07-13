@@ -7,7 +7,7 @@
 ///
 /// PSX ref: 0x8010D518
 /// PSX def: unsigned char InvItemWidth[180]
-int32_t objcurs_frame_width_from_frame[180];
+extern int32_t objcurs_frame_width_from_frame[180];
 
 /// address: 0x479928
 ///
@@ -16,4 +16,4 @@ int32_t objcurs_frame_width_from_frame[180];
 ///
 /// PSX ref: 0x8010D5CC
 /// PSX def: unsigned char InvItemHeight[180]
-int32_t objcurs_frame_height_from_frame[180];
+extern int32_t objcurs_frame_height_from_frame[180];

@@ -1,4 +1,4 @@
 /// address: 0x47F070
 ///
 /// +Infinity
-float log_inf;
+extern float log_inf;
