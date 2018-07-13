@@ -23,6 +23,71 @@ typedef uint32_t WPARAM;
 typedef uint32_t LPARAM;
 typedef char * LPSTR;
 
+#define EXCEPTION_MAXIMUM_PARAMETERS 15
+
+/// ref: https://docs.microsoft.com/en-us/windows/desktop/api/winnt/ns-winnt-_exception_record
+typedef struct _EXCEPTION_RECORD {
+	DWORD                    ExceptionCode;
+	DWORD                    ExceptionFlags;
+	struct _EXCEPTION_RECORD *ExceptionRecord;
+	void                     *ExceptionAddress;
+	DWORD                    NumberParameters;
+	void                     *ExceptionInformation[EXCEPTION_MAXIMUM_PARAMETERS];
+} EXCEPTION_RECORD;
+
+/// ref: WINNT.H
+#define SIZE_OF_80387_REGISTERS 80
+
+/// ref: WINNT.H
+typedef struct {
+	DWORD ControlWord;
+	DWORD StatusWord;
+	DWORD TagWord;
+	DWORD ErrorOffset;
+	DWORD ErrorSelector;
+	DWORD DataOffset;
+	DWORD DataSelector;
+	BYTE  RegisterArea[SIZE_OF_80387_REGISTERS];
+	DWORD Cr0NpxState;
+} FLOATING_SAVE_AREA;
+
+/// ref: WINNT.H
+typedef struct {
+	DWORD              ContextFlags;
+	DWORD              Dr0;
+	DWORD              Dr1;
+	DWORD              Dr2;
+	DWORD              Dr3;
+	DWORD              Dr6;
+	DWORD              Dr7;
+	FLOATING_SAVE_AREA FloatSave;
+	DWORD              SegGs;
+	DWORD              SegFs;
+	DWORD              SegEs;
+	DWORD              SegDs;
+	DWORD              Edi;
+	DWORD              Esi;
+	DWORD              Ebx;
+	DWORD              Edx;
+	DWORD              Ecx;
+	DWORD              Eax;
+	DWORD              Ebp;
+	DWORD              Eip;
+	DWORD              SegCs;
+	DWORD              EFlags;
+	DWORD              Esp;
+	DWORD              SegSs;
+} CONTEXT;
+
+/// ref: https://docs.microsoft.com/en-us/windows/desktop/api/winnt/ns-winnt-_exception_pointers
+typedef struct {
+	EXCEPTION_RECORD *ExceptionRecord;
+	CONTEXT          *ContextRecord;
+} EXCEPTION_POINTERS;
+
+/// ref: WINBASE.H
+typedef LONG (__stdcall *LPTOP_LEVEL_EXCEPTION_FILTER)(EXCEPTION_POINTERS *ep);
+
 /// ref: https://msdn.microsoft.com/en-us/library/windows/desktop/ms646997(v=vs.85).aspx
 typedef struct {
 	DWORD dwSignature;
