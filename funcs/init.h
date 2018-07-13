@@ -35,7 +35,8 @@ void __fastcall init_disable_screensaver(bool32_t disable);
 
 /// address: 0x41AAC5
 ///
-/// TODO: add documentation.
+/// init_main_window initializes the main window.
+void init_main_window();
 
 /// address: 0x41AC00
 ///

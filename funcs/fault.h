@@ -1,3 +1,5 @@
+#include "types.h"
+
 /// address: 0x4182AD
 ///
 /// fault_cpp_init initializes the C++ runtime of fault.cpp.
@@ -45,4 +47,5 @@ void fault_cpp_init();
 
 /// address: 0x418860
 ///
-/// TODO: add documentation.
+/// fault_get_exception_filter returns the top level exception filter.
+LPTOP_LEVEL_EXCEPTION_FILTER fault_get_exception_filter();

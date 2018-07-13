@@ -63,11 +63,13 @@ void __fastcall diablo_parse_flags(char *args);
 
 /// address: 0x408D61
 ///
-/// TODO: add documentation.
+/// diablo_init_screen initializes the screen.
+void diablo_init_screen();
 
 /// address: 0x408DB1
 ///
-/// TODO: add documentation.
+/// diablo_set_focus focuses the game window.
+HWND __fastcall diablo_set_focus(char *class_name);
 
 /// address: 0x408DF4
 ///

@@ -1671,6 +1671,20 @@ typedef enum {
 	QUEST_STATE_COMPLETE = 3,
 } quest_state;
 
+/// Sound effects to load.
+///
+/// bitflag
+typedef enum {
+	SFX_FLAG_STREAM   = 0x01,
+	SFX_FLAG_MISC     = 0x02,
+	SFX_FLAG_UI       = 0x04,
+	SFX_FLAG_08       = 0x08,
+	SFX_FLAG_ROGUE    = 0x10,
+	SFX_FLAG_WARRIOR  = 0x20,
+	SFX_FLAG_SORCEROR = 0x40,
+	SFX_FLAG_LOADED   = 0x80,
+} sfx_flag;
+
 /// Sound effect IDs specify sfx_data array indices.
 ///
 /// References:

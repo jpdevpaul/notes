@@ -1,3 +1,5 @@
+#include "types.h"
+
 /// address: 0x4158A9
 ///
 /// j_effects_cpp_init initializes the C++ runtime of effects.cpp.
@@ -77,9 +79,15 @@ void effects_cleanup_sfx();
 ///
 /// TODO: add documentation.
 
+/// address: 0x415E77
+///
+/// effects_load_sound_files loads the specified sound effects.
+void __fastcall effects_load_sound_files(sfx_flag sfx_flag);
+
 /// address: 0x415ED8
 ///
-/// TODO: add documentation.
+/// effects_load_ui_sound_files loads the UI sound effects.
+void effects_load_ui_sound_files();
 
 /// address: 0x415EDF
 ///
