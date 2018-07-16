@@ -71,7 +71,7 @@ Each function has been categorised based on their original source file, as summa
 | [track.cpp](track.h)       | `0x4618A5`    | `0x4619A6`  | ![100%](http://progressed.io/bar/100 "(5/5 functions)")   |
 | [trigs.cpp](trigs.h)       | `0x4619A7`    | `0x462C6C`  | ![100%](http://progressed.io/bar/100 "(21/21 functions)") |
 | [wave.cpp](wave.h)         | `0x462C6D`    | `0x46305F`  | ![11%](http://progressed.io/bar/11 "(2/18 functions)")    |
-| [world.cpp](world.h)       | `0x463060`    | `0x469719`  | ![0%](http://progressed.io/bar/0 "(0/7 functions)")       |
+| [render.cpp](render.h)     | `0x463060`    | `0x469719`  | ![0%](http://progressed.io/bar/0 "(0/7 functions)")       |
 | _crt.cpp                   | `0x46971A`    | `0x47746F`  | N/A                                                       |
 | pkware.cpp                 | `0x477470`    | `0x478FFF`  | N/A                                                       |
 
@@ -87,9 +87,11 @@ The following source file names are known to be correct based on debug informati
 
 The following source file names are believed to be correct based on the alphabetic linking order constraint and the function declarations (`PackItem` and `PackPlayer`) inferred from the symbol debug information of the Japanese Playstation 1 release: `pack.cpp`.
 
+The following source file names are believed to be correct based on the alphabetic linking order constraint as inferred from the 1.01 release of Hellfire: `render.cpp`.
+
 The following source file names are believed to be correct based on educated guesses: `fault.cpp`, `log.cpp`, `mainmenu.cpp` and `sha1.cpp`.
 
-The following source file names are most likely incorrect, but they are the result of best efforts attempts at identifying source file names which describe the behaviour of their respective functions while satisfying to the alphabetic linking order constraint: `msgcmd.cpp`, `restrict.cpp` and `world.cpp`. *Any suggestions and ideas to further improve these names would be hugely appreciated!*
+The following source file names are most likely incorrect, but they are the result of best efforts attempts at identifying source file names which describe the behaviour of their respective functions while satisfying to the alphabetic linking order constraint: `msgcmd.cpp` and `restrict.cpp`. *Any suggestions and ideas to further improve these names would be hugely appreciated!*
 
 The `_crt.cpp` source file name is a pseudo-file name used for functions related to the C and C++ run-time.
 

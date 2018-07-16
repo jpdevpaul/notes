@@ -69,6 +69,6 @@ Each global variable in the data section has been categorised based on their ori
 | [town.cpp](town.h)         | `0x4B26A4`    | `0x4B2723`  | ![100%](http://progressed.io/bar/100 "(128/128 bytes)")     |
 | [towners.cpp](towners.h)   | `0x4B2724`    | `0x4B2F77`  | ![100%](http://progressed.io/bar/100 "(2132/2132 bytes)")   |
 | [trigs.cpp](trigs.h)       | `0x4B2F78`    | `0x4B325B`  | ![100%](http://progressed.io/bar/100 "(740/740 bytes)")     |
-| [world.cpp](world.h)       | `0x4B325C`    | `0x4B354F`  | ![50%](http://progressed.io/bar/50 "(384/756 bytes)")       |
+| [render.cpp](render.h)     | `0x4B325C`    | `0x4B354F`  | ![50%](http://progressed.io/bar/50 "(384/756 bytes)")       |
 | _crt.cpp                   | `0x4B3550`    | `0x4B701F`  | N/A                                                         |
 | pkware.cpp                 | `0x4B7020`    | `0x4B792F`  | N/A                                                         |
