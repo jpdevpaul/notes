@@ -116,8 +116,8 @@ bool32_t __stdcall SNetUnregisterEventHandler(event_type event_type, void (__std
 /// address: 0x469870
 /// ordinal: 134
 ///
-/// SNetSendServerChatCommand sends a chat command to the server.
-int __stdcall SNetSendServerChatCommand(char *command);
+/// SNetSetServerChatCommand sends a chat command to the server.
+int __stdcall SNetSetServerChatCommand(char *command);
 
 // === [ SFile ] ===============================================================
 
