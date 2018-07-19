@@ -3179,9 +3179,9 @@ apply_type (0x469894, "bool32_t __stdcall SNetSetBasePlayer(int base_player_num)
 cleanup("SNetUnregisterEventHandler");set_name(0x469882, "SNetUnregisterEventHandler");
 set_func_cmt(0x469882, "SNetUnregisterEventHandler unregisters the event handler of the given event\ntype.", 0);
 apply_type (0x469882, "bool32_t __stdcall SNetUnregisterEventHandler(event_type event_type, void (__stdcall *event_handler)(Event *event));", TINFO_DEFINITE);
-cleanup("SNetSendServerChatCommand");set_name(0x469870, "SNetSendServerChatCommand");
-set_func_cmt(0x469870, "SNetSendServerChatCommand sends a chat command to the server.", 0);
-apply_type (0x469870, "int __stdcall SNetSendServerChatCommand(char *command);", TINFO_DEFINITE);
+cleanup("SNetSetServerChatCommand");set_name(0x469870, "SNetSetServerChatCommand");
+set_func_cmt(0x469870, "SNetSetServerChatCommand sends a chat command to the server.", 0);
+apply_type (0x469870, "int __stdcall SNetSetServerChatCommand(char *command);", TINFO_DEFINITE);
 cleanup("SFileCloseArchive");set_name(0x469816, "SFileCloseArchive");
 set_func_cmt(0x469816, "SFileCloseArchive closes the given MPQ archive.", 0);
 apply_type (0x469816, "bool32_t __stdcall SFileCloseArchive(void *archive);", TINFO_DEFINITE);
