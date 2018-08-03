@@ -5156,9 +5156,9 @@ apply_type (0x43AFFD, "void __fastcall j_mpqapi_remove_hash_entry(char *path);",
 cleanup("mpqapi_remove_hash_entry");set_name(0x43B002, "mpqapi_remove_hash_entry");
 set_func_cmt(0x43B002, "mpqapi_remove_hash_entry removes the hash entry of the give file path.", 0);
 apply_type (0x43B002, "void __fastcall mpqapi_remove_hash_entry(char *path);", TINFO_DEFINITE);
-cleanup("mpqapi_alloc_block");set_name(0x43B054, "mpqapi_alloc_block");
+cleanup("mpqapi_free_block");set_name(0x43B054, "mpqapi_free_block");
 set_func_cmt(0x43B054, "mpqapi_free_block frees the block at the specified block offset.", 0);
-apply_type (0x43B054, "void __fastcall mpqapi_alloc_block(int block_offset, int block_size);", TINFO_DEFINITE);
+apply_type (0x43B054, "void __fastcall mpqapi_free_block(int block_offset, int block_size);", TINFO_DEFINITE);
 cleanup("mpqapi_new_block");set_name(0x43B0E4, "mpqapi_new_block");
 set_func_cmt(0x43B0E4, "mpqapi_new_block returns a new block entry and retrieves its block index.", 0);
 apply_type (0x43B0E4, "BlockEntry * __fastcall mpqapi_new_block(int *block_index);", TINFO_DEFINITE);
