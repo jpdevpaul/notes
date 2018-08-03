@@ -51,7 +51,7 @@ void __fastcall mpqapi_remove_hash_entry(char *path);
 /// address: 0x43B054
 ///
 /// mpqapi_free_block frees the block at the specified block offset.
-void __fastcall mpqapi_alloc_block(int block_offset, int block_size);
+void __fastcall mpqapi_free_block(int block_offset, int block_size);
 
 /// address: 0x43B0E4
 ///
