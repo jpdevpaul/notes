@@ -9,7 +9,7 @@ Each function has been categorised based on their original source file, as summa
 | [automap.cpp](automap.h)   | `0x401DA4`    | `0x40311A`  | ![100%](http://progressed.io/bar/100 "(16/16 functions)") |
 | [capture.cpp](capture.h)   | `0x40311B`    | `0x4034D8`  | ![100%](http://progressed.io/bar/100 "(7/7 functions)")   |
 | [codec.cpp](codec.h)       | `0x4034D9`    | `0x4037D3`  | ![100%](http://progressed.io/bar/100 "(5/5 functions)")   |
-| [control.cpp](control.h)   | `0x4037D4`    | `0x407409`  | ![24%](http://progressed.io/bar/24 "(16/65 functions)")   |
+| [control.cpp](control.h)   | `0x4037D4`    | `0x407409`  | ![30%](http://progressed.io/bar/30 "(20/65 functions)")   |
 | [cursor.cpp](cursor.h)     | `0x40740A`    | `0x4084A5`  | ![100%](http://progressed.io/bar/100 "(9/9 functions)")   |
 | [dead.cpp](dead.h)         | `0x4084A6`    | `0x4086F3`  | ![100%](http://progressed.io/bar/100 "(3/3 functions)")   |
 | [debug.cpp](debug.h)       | `0x4086F4`    | `0x4087B0`  | ![100%](http://progressed.io/bar/100 "(3/3 functions)")   |
