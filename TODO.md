@@ -10,7 +10,7 @@
 - [ ] debug.cpp
 - [ ] diablo.cpp
 - [ ] doom.cpp
-- [ ] drlg_l1.cpp
+- [x] drlg_l1.cpp
 - [ ] drlg_l2.cpp
 - [ ] drlg_l3.cpp
 - [ ] drlg_l4.cpp
