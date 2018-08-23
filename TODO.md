@@ -5,7 +5,7 @@
 - [ ] capture.cpp
 - [ ] codec.cpp
 - [ ] control.cpp
-- [ ] cursor.cpp
+- [x] cursor.cpp
 - [ ] dead.cpp
 - [ ] debug.cpp
 - [ ] diablo.cpp
