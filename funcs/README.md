@@ -99,4 +99,6 @@ The `_crt.cpp` source file name is a pseudo-file name used for functions related
 
 The `pkware.cpp` source file contains the PKWARE Data Compression Library.
 
+---
+
 <a name="codeword_unknown">1</a>: sha1sum of `DIABPSX.MAP`: `5f3c15692e8c591acbe9d6754d152246b7817e53`.
