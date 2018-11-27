@@ -83,16 +83,20 @@ The following source file names are known to be correct based on assert strings 
 
 The following source file names are known to be correct based on section names in the Japanese Playstation 1 release: `spells.cpp`.
 
+The following source file names are known to be correct based on section names in the earliest known release on Playstation 1 (codeword ~unknown~<sup>[1](#codeword_unknown)</sup>): `mainmenu.cpp`.
+
 The following source file names are known to be correct based on debug information in the 1997-12-08 Alpha release on Playstation 1 (codeword *Easy as Pie*): `help.cpp`, `path.cpp` and `track.cpp`.
 
 The following source file names are believed to be correct based on the alphabetic linking order constraint and the function declarations (`PackItem` and `PackPlayer`) inferred from the symbol debug information of the Japanese Playstation 1 release: `pack.cpp`.
 
 The following source file names are believed to be correct based on the alphabetic linking order constraint as inferred from the 1.01 release of Hellfire: `render.cpp`.
 
-The following source file names are believed to be correct based on educated guesses: `fault.cpp`, `log.cpp`, `mainmenu.cpp` and `sha1.cpp`.
+The following source file names are believed to be correct based on educated guesses: `fault.cpp`, `log.cpp` and `sha1.cpp`.
 
 The following source file names are most likely incorrect, but they are the result of best efforts attempts at identifying source file names which describe the behaviour of their respective functions while satisfying to the alphabetic linking order constraint: `msgcmd.cpp` and `restrict.cpp`. *Any suggestions and ideas to further improve these names would be hugely appreciated!*
 
 The `_crt.cpp` source file name is a pseudo-file name used for functions related to the C and C++ run-time.
 
 The `pkware.cpp` source file contains the PKWARE Data Compression Library.
+
+<a name="codeword_unknown">1</a>: sha1sum of `DIABPSX.MAP`: `5f3c15692e8c591acbe9d6754d152246b7817e53`.
