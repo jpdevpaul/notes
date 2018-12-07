@@ -93,6 +93,10 @@ void __fastcall diablo_reload_process(HMODULE hModule);
 ///
 /// TODO: add documentation.
 
+/// address: 0x4095A5
+///
+/// TODO: add documentation.
+
 /// address: 0x4097EC
 ///
 /// TODO: add documentation.
