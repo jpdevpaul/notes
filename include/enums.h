@@ -1140,6 +1140,24 @@ typedef enum {
 	L1_TILE_ID_BROKEN_ENTERANCE_SE_3                   = 206,
 } l1_tile_id;
 
+/// Tile IDs for dungeon layout 2.
+typedef enum {
+	L2_TILE_ID_NONE = 0,
+	// TODO: add enums for l2_tile_id
+} l2_tile_id;
+
+/// Tile IDs for dungeon layout 3.
+typedef enum {
+	L3_TILE_ID_NONE = 0,
+	// TODO: add enums for l3_tile_id
+} l3_tile_id;
+
+/// Tile IDs for dungeon layout 4.
+typedef enum {
+	L4_TILE_ID_NONE = 0,
+	// TODO: add enums for l4_tile_id
+} l4_tile_id;
+
 /// Magic types.
 typedef enum {
 	MAGIC_TYPE_FIRE      = 0,

@@ -11,7 +11,7 @@ Each global variable in the read-only data section has been categorised based on
 | [cursor.cpp](cursor.h)     | `0x479658`    | `0x479BF7`  | ![100%](http://progressed.io/bar/100 "(1440/1440 bytes)")   |
 | [diablo.cpp](diablo.h)     | `0x479BF8`    | `0x479C23`  | ![100%](http://progressed.io/bar/100 "(44/44 bytes)")       |
 | [drlg_l1.cpp](drlg_l1.h)   | `0x479C24`    | `0x479F83`  | ![100%](http://progressed.io/bar/100 "(864/864 bytes)")     |
-| [drlg_l3.cpp](drlg_l3.h)   | `0x479F84`    | `0x47A2CF`  | ![0%](http://progressed.io/bar/0 "(0/844 bytes)")           |
+| [drlg_l3.cpp](drlg_l3.h)   | `0x479F84`    | `0x47A2CF`  | ![100%](http://progressed.io/bar/100 "(844/844 bytes)")     |
 | [drlg_l4.cpp](drlg_l4.h)   | `0x47A2D0`    | `0x47A45F`  | ![0%](http://progressed.io/bar/0 "(0/400 bytes)")           |
 | [dthread.cpp](dthread.h)   | `0x47A460`    | `0x47A463`  | ![100%](http://progressed.io/bar/100 "(4/4 bytes)")         |
 | [dx.cpp](dx.h)             | `0x47A464`    | `0x47A467`  | ![100%](http://progressed.io/bar/100 "(4/4 bytes)")         |
