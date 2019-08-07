@@ -36,9 +36,10 @@ cd Scripture
 SCRIPTURE_SHA=`git rev-parse --verify HEAD`
 pip3 install -r requirements.txt
 echo "Generating pages using Scripture"
-export scripture_dir=$(dirname `readlink -f "$0"`)
+export scripture_dir=`pwd`
 cd ${notes_path}
-python3 ${scripture_dir}/extract.py --args="-I$notes_path/include" "$notes_path" --github-root="https://github.com/sanctuary/notes/blob/" --github-sha1="`git rev-parse HEAD`" --idc-path="${scripture_dir}/site/notes.idc"
+export CLANG_IMPORT=`clang++ -Wp,-v -x c++ - -fsyntax-only < /dev/null 2>&1 | grep /clang/`
+python3 ${scripture_dir}/extract.py --args="-I${notes_path}/include -I${CLANG_IMPORT}" "$notes_path" --github-root="https://github.com/sanctuary/notes/blob/" --github-sha1="`git rev-parse HEAD`" --idc-path="${scripture_dir}/site/notes.idc"
 cp -r ${scripture_dir}/site/* ${notes_path}/out/
 
 # Now let's go have some fun with the cloned repo
