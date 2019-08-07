@@ -114,7 +114,7 @@ extern uint8_t L3HOLDWARP[20]; // alias: l3_stair_up2
 ///
 /// PSX ref: 0x8013139C
 /// PSX def: unsigned char L3TITE1[34]
-uint8_t L3TITE1[34];
+extern uint8_t L3TITE1[34];
 
 /// address: 0x479FF4
 ///
@@ -141,7 +141,7 @@ uint8_t L3TITE1[34];
 ///
 /// PSX ref: 0x801313C0
 /// PSX def: unsigned char L3TITE2[34]
-uint8_t L3TITE2[34];
+extern uint8_t L3TITE2[34];
 
 /// address: 0x47A018
 ///
@@ -168,7 +168,7 @@ uint8_t L3TITE2[34];
 ///
 /// PSX ref: 0x801313E4
 /// PSX def: unsigned char L3TITE3[34]
-uint8_t L3TITE3[34];
+extern uint8_t L3TITE3[34];
 
 /// address: 0x47A03C
 ///
@@ -195,7 +195,7 @@ uint8_t L3TITE3[34];
 ///
 /// PSX ref: 0x80131408
 /// PSX def: unsigned char L3TITE6[42]
-uint8_t L3TITE6[42];
+extern uint8_t L3TITE6[42];
 
 /// address: 0x47A068
 ///
@@ -222,7 +222,7 @@ uint8_t L3TITE6[42];
 ///
 /// PSX ref: 0x80131434
 /// PSX def: unsigned char L3TITE7[42]
-uint8_t L3TITE7[42];
+extern uint8_t L3TITE7[42];
 
 /// address: 0x47A094
 ///
@@ -249,7 +249,7 @@ uint8_t L3TITE7[42];
 ///
 /// PSX ref: 0x80131460
 /// PSX def: unsigned char L3TITE8[20]
-uint8_t L3TITE8[20];
+extern uint8_t L3TITE8[20];
 
 /// address: 0x47A0A8
 ///
@@ -276,7 +276,7 @@ uint8_t L3TITE8[20];
 ///
 /// PSX ref: 0x80131474
 /// PSX def: unsigned char L3TITE9[20]
-uint8_t L3TITE9[20];
+extern uint8_t L3TITE9[20];
 
 /// address: 0x47A0BC
 ///
@@ -303,7 +303,7 @@ uint8_t L3TITE9[20];
 ///
 /// PSX ref: 0x80131488
 /// PSX def: unsigned char L3TITE10[20]
-uint8_t L3TITE10[20];
+extern uint8_t L3TITE10[20];
 
 /// address: 0x47A0D0
 ///
@@ -330,7 +330,7 @@ uint8_t L3TITE10[20];
 ///
 /// PSX ref: 0x8013149C
 /// PSX def: unsigned char L3TITE11[20]
-uint8_t L3TITE11[20];
+extern uint8_t L3TITE11[20];
 
 /// address: 0x47A0E4
 ///
@@ -357,7 +357,7 @@ uint8_t L3TITE11[20];
 ///
 /// PSX ref: 0x80117348
 /// PSX def: unsigned char L3TITE12[6]
-uint8_t L3TITE12[6];
+extern uint8_t L3TITE12[6];
 
 /// address: 0x47A0EC
 ///
@@ -384,7 +384,7 @@ uint8_t L3TITE12[6];
 ///
 /// PSX ref: 0x80117350
 /// PSX def: unsigned char L3TITE13[6]
-uint8_t L3TITE13[6];
+extern uint8_t L3TITE13[6];
 
 /// address: 0x47A0F4
 ///
@@ -411,7 +411,7 @@ uint8_t L3TITE13[6];
 ///
 /// PSX ref: 0x80117358
 /// PSX def: unsigned char L3CREV1[6]
-uint8_t L3CREV1[6];
+extern uint8_t L3CREV1[6];
 
 /// address: 0x47A0FC
 ///
@@ -438,7 +438,7 @@ uint8_t L3CREV1[6];
 ///
 /// PSX ref: 0x80117360
 /// PSX def: unsigned char L3CREV2[6]
-uint8_t L3CREV2[6];
+extern uint8_t L3CREV2[6];
 
 /// address: 0x47A104
 ///
@@ -465,7 +465,7 @@ uint8_t L3CREV2[6];
 ///
 /// PSX ref: 0x80117368
 /// PSX def: unsigned char L3CREV3[6]
-uint8_t L3CREV3[6];
+extern uint8_t L3CREV3[6];
 
 /// address: 0x47A10C
 ///
@@ -492,7 +492,7 @@ uint8_t L3CREV3[6];
 ///
 /// PSX ref: 0x80117370
 /// PSX def: unsigned char L3CREV4[6]
-uint8_t L3CREV4[6];
+extern uint8_t L3CREV4[6];
 
 /// address: 0x47A114
 ///
@@ -519,7 +519,7 @@ uint8_t L3CREV4[6];
 ///
 /// PSX ref: 0x80117378
 /// PSX def: unsigned char L3CREV5[6]
-uint8_t L3CREV5[6];
+extern uint8_t L3CREV5[6];
 
 /// address: 0x47A11C
 ///
@@ -546,7 +546,7 @@ uint8_t L3CREV5[6];
 ///
 /// PSX ref: 0x80117380
 /// PSX def: unsigned char L3CREV6[6]
-uint8_t L3CREV6[6];
+extern uint8_t L3CREV6[6];
 
 /// address: 0x47A124
 ///
@@ -573,7 +573,7 @@ uint8_t L3CREV6[6];
 ///
 /// PSX ref: 0x80117388
 /// PSX def: unsigned char L3CREV7[6]
-uint8_t L3CREV7[6];
+extern uint8_t L3CREV7[6];
 
 /// address: 0x47A12C
 ///
@@ -600,7 +600,7 @@ uint8_t L3CREV7[6];
 ///
 /// PSX ref: 0x80117390
 /// PSX def: unsigned char L3CREV8[6]
-uint8_t L3CREV8[6];
+extern uint8_t L3CREV8[6];
 
 /// address: 0x47A134
 ///
@@ -627,7 +627,7 @@ uint8_t L3CREV8[6];
 ///
 /// PSX ref: 0x80117398
 /// PSX def: unsigned char L3CREV9[6]
-uint8_t L3CREV9[6];
+extern uint8_t L3CREV9[6];
 
 /// address: 0x47A13C
 ///
@@ -654,7 +654,7 @@ uint8_t L3CREV9[6];
 ///
 /// PSX ref: 0x801173A0
 /// PSX def: unsigned char L3CREV10[6]
-uint8_t L3CREV10[6];
+extern uint8_t L3CREV10[6];
 
 /// address: 0x47A144
 ///
@@ -681,7 +681,7 @@ uint8_t L3CREV10[6];
 ///
 /// PSX ref: 0x801173A8
 /// PSX def: unsigned char L3CREV11[6]
-uint8_t L3CREV11[6];
+extern uint8_t L3CREV11[6];
 
 /// address: 0x47A14C
 ///
@@ -708,7 +708,7 @@ uint8_t L3CREV11[6];
 ///
 /// PSX ref: 0x801314B0
 /// PSX def: unsigned char L3ISLE1[14]
-uint8_t L3ISLE1[14];
+extern uint8_t L3ISLE1[14];
 
 /// address: 0x47A15C
 ///
@@ -735,7 +735,7 @@ uint8_t L3ISLE1[14];
 ///
 /// PSX ref: 0x801314C0
 /// PSX def: unsigned char L3ISLE2[14]
-uint8_t L3ISLE2[14];
+extern uint8_t L3ISLE2[14];
 
 /// address: 0x47A16C
 ///
@@ -762,7 +762,7 @@ uint8_t L3ISLE2[14];
 ///
 /// PSX ref: 0x801314D0
 /// PSX def: unsigned char L3ISLE3[14]
-uint8_t L3ISLE3[14];
+extern uint8_t L3ISLE3[14];
 
 /// address: 0x47A17C
 ///
@@ -789,7 +789,7 @@ uint8_t L3ISLE3[14];
 ///
 /// PSX ref: 0x801314E0
 /// PSX def: unsigned char L3ISLE4[14]
-uint8_t L3ISLE4[14];
+extern uint8_t L3ISLE4[14];
 
 /// address: 0x47A18C
 ///
@@ -816,7 +816,7 @@ uint8_t L3ISLE4[14];
 ///
 /// PSX ref: 0x801314F0
 /// PSX def: unsigned char L3ISLE5[10]
-uint8_t L3ISLE5[10];
+extern uint8_t L3ISLE5[10];
 
 /// address: 0x47A198
 ///
@@ -843,7 +843,7 @@ uint8_t L3ISLE5[10];
 ///
 /// PSX ref: 0x801173B0
 /// PSX def: unsigned char L3XTRA1[4]
-uint8_t L3XTRA1[4];
+extern uint8_t L3XTRA1[4];
 
 /// address: 0x47A19C
 ///
@@ -870,7 +870,7 @@ uint8_t L3XTRA1[4];
 ///
 /// PSX ref: 0x801173B4
 /// PSX def: unsigned char L3XTRA2[4]
-uint8_t L3XTRA2[4];
+extern uint8_t L3XTRA2[4];
 
 /// address: 0x47A1A0
 ///
@@ -897,7 +897,7 @@ uint8_t L3XTRA2[4];
 ///
 /// PSX ref: 0x801173B8
 /// PSX def: unsigned char L3XTRA3[4]
-uint8_t L3XTRA3[4];
+extern uint8_t L3XTRA3[4];
 
 /// address: 0x47A1A4
 ///
@@ -924,7 +924,7 @@ uint8_t L3XTRA3[4];
 ///
 /// PSX ref: 0x801173BC
 /// PSX def: unsigned char L3XTRA4[4]
-uint8_t L3XTRA4[4];
+extern uint8_t L3XTRA4[4];
 
 /// address: 0x47A1A8
 ///
@@ -951,7 +951,7 @@ uint8_t L3XTRA4[4];
 ///
 /// PSX ref: 0x801173C0
 /// PSX def: unsigned char L3XTRA5[4]
-uint8_t L3XTRA5[4];
+extern uint8_t L3XTRA5[4];
 
 /// address: 0x47A1AC
 ///
@@ -978,7 +978,7 @@ uint8_t L3XTRA5[4];
 ///
 /// PSX ref: 0x801314FC
 /// PSX def: unsigned char L3ANVIL[244]
-uint8_t L3ANVIL[244];
+extern uint8_t L3ANVIL[244];
 
 /// address: 0x47A2A0
 ///
@@ -986,7 +986,7 @@ uint8_t L3ANVIL[244];
 /// which DRLG_L3Spawn is recursively invoked.
 ///
 /// PSX def: unsigned char spawntable[15] // static local variable in PSX
-uint8_t L3SpawnTbl1[15];
+extern uint8_t L3SpawnTbl1[15];
 
 /// address: 0x47A2B0
 ///
@@ -994,7 +994,7 @@ uint8_t L3SpawnTbl1[15];
 /// which DRLG_L3SpawnEdge is recursively invoked.
 ///
 /// PSX def: unsigned char spawntable[15] // static local variable in PSX
-uint8_t L3SpawnTbl2[15];
+extern uint8_t L3SpawnTbl2[15];
 
 /// address: 0x47A2C0
 ///
@@ -1002,4 +1002,4 @@ uint8_t L3SpawnTbl2[15];
 /// pool on the map.
 ///
 /// PSX def: unsigned char poolsub[15] // static local variable in PSX
-uint8_t L3PoolSub[15];
+extern uint8_t L3PoolSub[15];
