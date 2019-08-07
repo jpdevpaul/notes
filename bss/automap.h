@@ -2,16 +2,20 @@
 
 /// address 0x4B7A40
 ///
-/// automap_type_from_tile_id maps from tile_id to automap type.
+/// automaptype maps from tile_id to automap type.
 ///
 /// PSX ref: 0x8010D7AC
 /// PSX def: unsigned short automaptype[512]
-extern uint16_t automap_type_from_tile_id[512]; // TODO: define automap_type enum.
+// TODO: define automap_type enum.
+extern uint16_t automaptype[512]; // alias: automap_type_from_tile_id
 
 /// address: 0x4B7E48
 ///
-/// automap_enabled specifies whether the automap is enabled.
-extern bool32_t automap_enabled;
+/// automapflag specifies whether the automap is enabled.
+///
+/// PSX ref: 0x8011C37B
+/// PSX def: unsigned __int8 automapflag
+extern bool32_t automapflag; // alias: automap_enabled
 
 /// address: 0x4B7E6C
 ///

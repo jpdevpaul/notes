@@ -2,22 +2,23 @@
 
 /// address: 0x479424
 ///
-/// smaltext_frame_from_font_index maps from font index to smaltext.cel frame
-/// number.
-extern int8_t smaltext_frame_from_font_index[127];
+/// fontframe maps from font index to smaltext.cel frame number.
+extern uint8_t fontframe[127]; // alias: smaltext_frame_from_font_index
 
 /// address: 0x4794A4
 ///
-/// smaltext_character_width_from_frame maps from smaltext.cel frame number to
-/// character width. Note, the character width may be distinct from the frame
-/// width, which is 13 for every smaltext.cel frame.
-extern int8_t smaltext_character_width_from_frame[68];
+/// fontkern maps from smaltext.cel frame number to character width. Note, the
+/// character width may be distinct from the frame width, which is 13 for every
+/// smaltext.cel frame.
+///
+/// PSX ref: 0x8010D4E0
+/// PSX def: unsigned char fontkern[68]
+extern uint8_t fontkern[68]; // alias: smaltext_character_width_from_frame
 
 /// address: 0x4794E8
 ///
-/// screen_offset_from_nlines_and_line_nr maps from line count and line number
-/// pairs to screen offsets within the description box. The mapping is as
-/// follows:
+/// lineoffset maps from line count and line number pairs to screen offsets
+/// within the description box. The mapping is as follows:
 ///
 ///    * one line
 ///       * 1st line: 177x430
@@ -39,14 +40,17 @@ extern int8_t smaltext_character_width_from_frame[68];
 ///       * 3rd line: 177x430
 ///       * 4th line: 177x442
 ///       * 5th line: 177x453
-extern int32_t screen_offset_from_nlines_and_line_nr[5][5];
+extern int32_t lineoffset[5][5]; // alias: screen_offset_from_nlines_and_line_nr
 
 /// address: 0x47954C
 ///
-/// font_index_from_ascii maps ASCII character code to font index, as used by the
+/// gbFontTransTbl maps ASCII character code to font index, as used by the
 /// small, medium and large sized fonts; which corresponds to smaltext.cel,
 /// medtexts.cel and bigtgold.cel respectively.
-extern int8_t font_index_from_ascii[256];
+///
+/// PSX ref: 0x8010D5A0
+/// PSX def: unsigned char gbFontTransTbl[256]
+extern uint8_t gbFontTransTbl[256]; // alias: font_index_from_ascii
 
 /// address: 0x479650
 ///

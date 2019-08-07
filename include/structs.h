@@ -1935,7 +1935,7 @@ typedef struct {
 	/// offset: 0078 (4 bytes)
 	int32_t anim_id;
 	/// offset: 007C (4 bytes)
-	int32_t cur_cl2_buf;
+	uint8_t *cur_cl2_buf;
 	/// offset: 0080 (4 bytes)
 	int32_t anim_delay_probably;
 	/// offset: 0084 (4 bytes)
