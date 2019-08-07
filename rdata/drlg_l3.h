@@ -1,3 +1,5 @@
+#include "types.h"
+
 /// address: 0x479F84
 ///
 /// L3ConvTbl is a lookup table for the 16 possible patterns of a 2x2 area,

@@ -1,3 +1,5 @@
+#include "types.h"
+
 /// address: 0x47A2D0
 ///
 /// L4ConvTbl is a lookup table for the 16 possible patterns of a 2x2 area,
