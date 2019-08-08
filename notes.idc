@@ -16079,12 +16079,12 @@ apply_type (0x47F1B8, "extern int8_t y_delta_from_step_direction[8];", TINFO_DEF
 cleanup("engine_inf");set_name(0x47A474, "engine_inf");
 set_cmt(0x47A474, "+Infinity", 0);
 apply_type (0x47A474, "extern float engine_inf;", TINFO_DEFINITE);
-cleanup("rand_increment");set_name(0x47A478, "rand_increment");
-set_cmt(0x47A478, "rand_increment specifies the increment used in the Borland C/C++ pseudo-\nrandom number generator algorithm.\n   seed = 0x15A4E35*seed + 1\nNote, this global variable is unused.", 0);
-apply_type (0x47A478, "extern int32_t rand_increment;", TINFO_DEFINITE);
-cleanup("rand_multiplier");set_name(0x47A47C, "rand_multiplier");
-set_cmt(0x47A47C, "rand_multiplier specifies the multiplier used in the Borland C/C++ pseudo-\nrandom number generator algorithm.\n  seed = 0x15A4E35*seed + 1\nNote, this global variable is unused.", 0);
-apply_type (0x47A47C, "extern int32_t rand_multiplier;", TINFO_DEFINITE);
+cleanup("RndInc");set_name(0x47A478, "RndInc");
+set_cmt(0x47A478, "RndInc specifies the increment used in the Borland C/C++ pseudo- random\nnumber generator algorithm.\n   seed = RndMult*seed + RndInc\n   seed = 0x15A4E35*seed + 1", 0);
+apply_type (0x47A478, "extern const int32_t RndInc;", TINFO_DEFINITE);
+cleanup("RndMult");set_name(0x47A47C, "RndMult");
+set_cmt(0x47A47C, "RndMult specifies the multiplier used in the Borland C/C++ pseudo- random\nnumber generator algorithm.\n   seed = RndMult*seed + RndInc\n   seed = 0x15A4E35*seed + 1", 0);
+apply_type (0x47A47C, "extern const int32_t RndMult;", TINFO_DEFINITE);
 cleanup("str_47A544");set_name(0x47A544, "str_47A544");
 set_cmt(0x47A544, "\"$Keyboard Shortcuts:|F1:    Open Help Screen|Esc: \"...", 0);
 apply_type (0x47A544, "extern char str_47A544[2268];", TINFO_DEFINITE);
