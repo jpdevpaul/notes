@@ -28,7 +28,7 @@ Each global variable in the read-only data section has been categorised based on
 | [log.cpp](log.h)           | `0x47F070`    | `0x47F073`  | ![100%](http://progressed.io/bar/100 "(4/4 bytes)")         |
 | [mainmenu.cpp](mainmenu.h) | `0x47F074`    | `0x47F077`  | ![100%](http://progressed.io/bar/100 "(4/4 bytes)")         |
 | [minitext.cpp](minitext.h) | `0x47F078`    | `0x47F12F`  | ![100%](http://progressed.io/bar/100 "(184/184 bytes)")     |
-| [monster.cpp](monster.h)   | `0x47F130`    | `0x47F143`  | ![20%](http://progressed.io/bar/20 "(4/20 bytes)")          |
+| [monster.cpp](monster.h)   | `0x47F130`    | `0x47F143`  | ![100%](http://progressed.io/bar/100 "(20/20 bytes)")       |
 | [movie.cpp](movie.h)       | `0x47F144`    | `0x47F147`  | ![100%](http://progressed.io/bar/100 "(4/4 bytes)")         |
 | [mpqapi.cpp](mpqapi.h)     | `0x47F148`    | `0x47F14B`  | ![100%](http://progressed.io/bar/100 "(4/4 bytes)")         |
 | [msg.cpp](msg.h)           | `0x47F14C`    | `0x47F14F`  | ![100%](http://progressed.io/bar/100 "(4/4 bytes)")         |
