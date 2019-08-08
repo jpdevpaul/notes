@@ -2,8 +2,8 @@
 
 /// address: 0x47AE60
 ///
-/// inv_screen_pos maps from inventory slot to screen position. The inventory
-/// slots are arranged as follows:
+/// InvRect maps from inventory slot to screen position. The inventory slots are
+/// arranged as follows:
 ///
 ///                             00 01
 ///                             02 03   06
@@ -21,6 +21,8 @@
 ///
 ///    65 66 67 68 69 70 71 72
 ///
-/// References:
-///    * https://raw.githubusercontent.com/sanctuary/graphics/master/inventory.png
-extern Point inv_screen_pos[73];
+/// ref: graphics/inv/inventory.png
+///
+/// PSX ref: 0x8010D030
+/// PSX def: struct InvXY InvRect[73]
+extern Point InvRect[73]; // alias: inv_screen_pos

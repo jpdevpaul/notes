@@ -9,6 +9,7 @@ extern float interfac_inf;
 ///
 /// BarColor specifies the colour used for the progress bar as an index into the
 /// palette.
+// TODO: add colour enum.
 extern uint8_t BarColor[3]; // alias: progress_bar_colours
 
 /// address: 0x47AE48
