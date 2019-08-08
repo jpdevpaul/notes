@@ -2,13 +2,12 @@
 
 /// address: 0x47A48C
 ///
-/// bigtgold_frame_from_font_index maps from font index to bigtgold.cel
-/// frame number.
-extern int8_t bigtgold_frame_from_font_index[127];
+/// lfontframe maps from font index to bigtgold.cel frame number.
+extern uint8_t lfontframe[127]; // alias: bigtgold_frame_from_font_index
 
 /// address: 0x47A50C
 ///
-/// bigtgold_character_width_from_frame maps from bigtgold.cel frame number to
-/// character width. Note, the character width may be distinct from the frame
-/// width, which is 46 for every bigtgold.cel frame.
-extern int8_t bigtgold_character_width_from_frame[56];
+/// lfontkern maps from bigtgold.cel frame number to character width. Note, the
+/// character width may be distinct from the frame width, which is 46 for every
+/// bigtgold.cel frame.
+extern uint8_t lfontkern[56]; // alias: bigtgold_character_width_from_frame
