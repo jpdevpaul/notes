@@ -7,12 +7,12 @@ extern float interfac_inf;
 
 /// address: 0x47AE44
 ///
-/// progress_bar_colours specifies the colour used for the progress bar as an
-/// index into the palette.
-extern int8_t progress_bar_colours[3];
+/// BarColor specifies the colour used for the progress bar as an index into the
+/// palette.
+extern uint8_t BarColor[3]; // alias: progress_bar_colours
 
 /// address: 0x47AE48
 ///
-/// progress_bar_screen_pos specifies the screen position of the top left corner
-/// of the progress bar.
-extern Point progress_bar_screen_pos[3];
+/// BarPos specifies the screen position of the top left corner of the progress
+/// bar.
+extern Point BarPos[3]; // alias: progress_bar_screen_pos
