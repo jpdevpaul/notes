@@ -2,8 +2,8 @@
 
 /// address: 0x47F278
 ///
-/// speech_data contains the data related to each speech ID.
+/// alltext contains the data related to each speech ID.
 ///
-/// References:
-///    * https://github.com/sanctuary/notes/blob/master/enums.h#speech_id
-extern SpeechData speech_data[259];
+/// PSX ref (SLPS-01416): 0x80117C20
+/// PSX def: struct TextDataStruct alltext[269]
+extern SpeechData alltext[259]; // alias: speech_data
