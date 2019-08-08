@@ -11,7 +11,7 @@ extern uint8_t fontframe[127]; // alias: smaltext_frame_from_font_index
 /// character width may be distinct from the frame width, which is 13 for every
 /// smaltext.cel frame.
 ///
-/// PSX ref: 0x8010D4E0
+/// PSX ref (easy-as-pie): 0x80120F6C
 /// PSX def: unsigned char fontkern[68]
 extern uint8_t fontkern[68]; // alias: smaltext_character_width_from_frame
 
@@ -48,7 +48,7 @@ extern int32_t lineoffset[5][5]; // alias: screen_offset_from_nlines_and_line_nr
 /// small, medium and large sized fonts; which corresponds to smaltext.cel,
 /// medtexts.cel and bigtgold.cel respectively.
 ///
-/// PSX ref: 0x8010D5A0
+/// PSX ref (ID 3): 0x80116F68
 /// PSX def: unsigned char gbFontTransTbl[256]
 extern uint8_t gbFontTransTbl[256]; // alias: font_index_from_ascii
 

@@ -6,7 +6,7 @@
 ///
 /// ref: graphics/l1/shadow/README.md
 ///
-/// PSX ref: 0x8013A050
+/// PSX ref (SLPS-01416): 0x8013A050
 /// PSX def: ShadowStruct SPATS[37]
 extern Shadow SPATS[37]; // alias: l1_shadow
 
@@ -16,7 +16,7 @@ extern Shadow SPATS[37]; // alias: l1_shadow
 ///
 /// ref: graphics/l1/tiles/base.md
 ///
-/// PSX ref: 0x8013A154
+/// PSX ref (SLPS-01416): 0x8013A154
 /// PSX def: unsigned char BSTYPES[206]
 extern l1_tile_id BSTYPES[207]; // alias: l1_base
 
@@ -26,7 +26,7 @@ extern l1_tile_id BSTYPES[207]; // alias: l1_base
 ///
 /// ref: graphics/l1/tiles/README.md
 ///
-/// PSX ref: 0x8013A224
+/// PSX ref (SLPS-01416): 0x8013A224
 /// PSX def: unsigned char L5BTYPES[206]
 extern l1_tile_id L5BTYPES[207]; // alias: l1_plain
 
@@ -53,7 +53,7 @@ extern l1_tile_id L5BTYPES[207]; // alias: l1_plain
 ///       after [width][height]uint8
 ///    }
 ///
-/// PSX ref: 0x8013A2F4
+/// PSX ref (SLPS-01416): 0x8013A2F4
 /// PSX def: unsigned char STAIRSUP[34]
 extern uint8_t STAIRSUP[34]; // alias: l1_stair_up1
 
@@ -80,7 +80,7 @@ extern uint8_t STAIRSUP[34]; // alias: l1_stair_up1
 ///       after [width][height]uint8
 ///    }
 ///
-/// PSX ref: 0x8013A318
+/// PSX ref (SLPS-01416): 0x8013A318
 /// PSX def: unsigned char L5STAIRSUP[34]
 extern uint8_t L5STAIRSUP[34]; // alias: l1_stair_up2
 
@@ -108,7 +108,7 @@ extern uint8_t L5STAIRSUP[34]; // alias: l1_stair_up2
 ///       after [width][height]uint8
 ///    }
 ///
-/// PSX ref: 0x8013A33C
+/// PSX ref (SLPS-01416): 0x8013A33C
 /// PSX def: unsigned char STAIRSDOWN[26]
 extern uint8_t STAIRSDOWN[26]; // alias: l1_stair_down
 
@@ -135,7 +135,7 @@ extern uint8_t STAIRSDOWN[26]; // alias: l1_stair_down
 ///       after [width][height]uint8
 ///    }
 ///
-/// PSX ref: 0x8013A358
+/// PSX ref (SLPS-01416): 0x8013A358
 /// PSX def: unsigned char LAMPS[10]
 extern uint8_t LAMPS[10]; // alias: l1_candlestick
 
@@ -163,6 +163,6 @@ extern uint8_t LAMPS[10]; // alias: l1_candlestick
 ///       after [width][height]uint8
 ///    }
 ///
-/// PSX ref: 0x8013A364
+/// PSX ref (SLPS-01416): 0x8013A364
 /// PSX def: unsigned char PWATERIN[74]
 extern uint8_t PWATERIN[74]; // alias: l1_stair_down_poison

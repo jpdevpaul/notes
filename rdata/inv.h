@@ -23,6 +23,6 @@
 ///
 /// ref: graphics/inv/inventory.png
 ///
-/// PSX ref: 0x8010D030
+/// PSX ref (SLPS-01416): 0x8010D030
 /// PSX def: struct InvXY InvRect[73]
 extern Point InvRect[73]; // alias: inv_screen_pos

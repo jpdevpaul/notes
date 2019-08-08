@@ -5,7 +5,7 @@
 /// L4ConvTbl is a lookup table for the 16 possible patterns of a 2x2 area,
 /// where each cell either contains a SW wall or it doesn't.
 ///
-/// PSX ref: 0x80131350
+/// PSX ref (SLPS-01416): 0x8014F318
 /// PSX def: unsigned char L4ConvTbl[16]
 extern l4_tile_id L4ConvTbl[16]; // alias: l4_tile_id_pattern_lookup
 
@@ -32,7 +32,7 @@ extern l4_tile_id L4ConvTbl[16]; // alias: l4_tile_id_pattern_lookup
 ///       after [width][height]uint8
 ///    }
 ///
-/// PSX ref: 0x80137EC0
+/// PSX ref (SLPS-01416): 0x8014F328
 /// PSX def: unsigned char L4USTAIRS[42]
 extern uint8_t L4USTAIRS[42];
 
@@ -60,7 +60,7 @@ extern uint8_t L4USTAIRS[42];
 ///       after [width][height]uint8
 ///    }
 ///
-/// PSX ref: 0x80137EEC
+/// PSX ref (SLPS-01416): 0x8014F354
 /// PSX def: unsigned char L4TWARP[42]
 extern uint8_t L4TWARP[42];
 
@@ -87,7 +87,7 @@ extern uint8_t L4TWARP[42];
 ///       after [width][height]uint8
 ///    }
 ///
-/// PSX ref: 0x80137F18
+/// PSX ref (SLPS-01416): 0x8014F380
 /// PSX def: unsigned char L4DSTAIRS[52]
 extern uint8_t L4DSTAIRS[52];
 
@@ -114,7 +114,7 @@ extern uint8_t L4DSTAIRS[52];
 ///       after [width][height]uint8
 ///    }
 ///
-/// PSX ref: 0x80137F4C
+/// PSX ref (SLPS-01416): 0x8014F3B4
 /// PSX def: unsigned char L4PENTA[52]
 extern uint8_t L4PENTA[52];
 
@@ -141,7 +141,7 @@ extern uint8_t L4PENTA[52];
 ///       after [width][height]uint8
 ///    }
 ///
-/// PSX ref: 0x80137F80
+/// PSX ref (SLPS-01416): 0x8014F3E8
 /// PSX def: unsigned char L4PENTA2[52]
 extern uint8_t L4PENTA2[52];
 
@@ -151,6 +151,6 @@ extern uint8_t L4PENTA2[52];
 ///
 /// ref: graphics/l4/tiles/README.md
 ///
-/// PSX ref: 0x80137FB4
+/// PSX ref (SLPS-01416): 0x8014F41C
 /// PSX def: unsigned char L4BTYPES[140]
 extern l4_tile_id L4BTYPES[140]; // alias: l4_plain
