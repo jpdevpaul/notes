@@ -4,6 +4,9 @@
 ///
 /// fullscreen specifies whether to give the game exclusive access to the
 /// screen, as needed for efficient rendering in fullscreen mode.
+///
+/// PSX ref (SLPS-01416): 0x8011B78C
+/// PSX def: unsigned char fullscreen
 extern bool32_t fullscreen; // alias: exclusive
 
 /// address: 0x484368
@@ -16,13 +19,15 @@ extern bool32_t FriendlyMode; // alias: player_friendly
 
 /// address: 0x48436C
 ///
-/// NetMsgStr maps from net_msg_id to hotkey network message.
-extern char *NetMsgStr[4]; // alias: net_msg_texts
+/// spszMsgTbl maps from net_msg_id to hotkey network message.
+///
+/// assert name: spszMsgTbl
+extern char *spszMsgTbl[4]; // alias: net_msg_texts
 
 /// address: 0x48437C
 ///
-/// NetMsgHotKey maps from net_msg_id to hotkey name.
-extern char *NetMsgHotKey[4]; // alias: net_msg_hotkeys
+/// spszMsgHotKeyTbl maps from net_msg_id to hotkey name.
+extern char *spszMsgHotKeyTbl[4]; // alias: net_msg_hotkeys
 
 /// address: 0x48438C
 ///
