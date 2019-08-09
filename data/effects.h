@@ -4,9 +4,9 @@
 ///
 /// sfx_data contains the data related to each sound effect ID.
 ///
-/// PSX ref: 0x800D0AC0
+/// PSX ref (SLPS-01416): 0x800D0AC0
 /// PSX def: TSFX sgSFX[992]
-extern SfxData sfx_data[858];
+extern SfxData sgSFX[858]; // alias: sfx_data
 
 /// address: 0x48819C
 ///
