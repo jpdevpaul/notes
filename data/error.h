@@ -1,7 +1,10 @@
 /// address: 0x48D7C4
 ///
-/// error_messages maps from error_id to error message.
-extern char *error_messages[44];
+/// MsgStrings maps from error_id to error message.
+///
+/// PSX ref (SLPS-0141): 0x800D1A40
+/// PSX def: int MsgStrings[44]
+extern char *MsgStrings[44]; // alias: error_messages
 
 /// address: 0x48D874
 ///
