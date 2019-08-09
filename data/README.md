@@ -40,7 +40,7 @@ Each global variable in the data section has been categorised based on their ori
 | [loadsave.cpp](loadsave.h) | `0x4947C0`    | `0x4947D3`  | ![100%](http://progressed.io/bar/100 "(20/20 bytes)")       |
 | [log.cpp](log.h)           | `0x4947D4`    | `0x494897`  | ![100%](http://progressed.io/bar/100 "(196/196 bytes)")     |
 | [mainmenu.cpp](mainmenu.h) | `0x494898`    | `0x4948F7`  | ![100%](http://progressed.io/bar/100 "(96/96 bytes)")       |
-| [minitext.cpp](minitext.h) | `0x4948F8`    | `0x494947`  | ![50%](http://progressed.io/bar/50 "(40/80 bytes)")         |
+| [minitext.cpp](minitext.h) | `0x4948F8`    | `0x494947`  | ![100%](http://progressed.io/bar/100 "(80/80 bytes)")       |
 | [missiles.cpp](missiles.h) | `0x494948`    | `0x497E07`  | ![99%](http://progressed.io/bar/99 "(13440/13504 bytes)")   |
 | [monster.cpp](monster.h)   | `0x497E08`    | `0x49EEF7`  | ![96%](http://progressed.io/bar/96 "(28024/28912 bytes)")   |
 | [mpqapi.cpp](mpqapi.h)     | `0x49EEF8`    | `0x49EFA7`  | ![100%](http://progressed.io/bar/100 "(176/176 bytes)")     |
