@@ -2,19 +2,35 @@
 
 /// address: 0x497E08
 ///
-/// monster_data contains the data related to each monster ID.
+/// monsterdata contains the data related to each monster ID.
 ///
-/// References:
-///    * https://github.com/sanctuary/notes/blob/master/enums.h#monster_id
-extern MonsterData monster_data[112];
+/// PSX ref (SLPS-01416): 0x8010AB9C
+/// PSX def: struct MonsterData monsterdata[113]
+extern MonsterData monsterdata[112]; // alias: monster_data
+
+/// address: 0x49B608
+///
+/// MonstConvTbl maps from DUN monster ID to monster ID.
+///
+/// PSX ref (SLPS-01416): 0x8010C618
+/// PSX def: char MonstConvTbl[128]
+extern uint8_t MonstConvTbl[128];
+
+/// address: 0x49B688
+///
+/// MonstAvailTbl maps from monster ID to monster availability mask.
+///
+/// PSX ref (SLPS-01416): 0x8010C698
+/// PSX def: char MonstAvailTbl[112]
+extern uint8_t MonstAvailTbl[112];
 
 /// address: 0x49B6F8
 ///
-/// unique_monster_data contains the data related to each unique monster ID.
+/// UniqMonst contains the data related to each unique monster ID.
 ///
-/// References:
-///    * https://github.com/sanctuary/notes/blob/master/enums.h#unique_monster_id
-extern UniqueMonsterData unique_monster_data[98];
+/// PSX ref (SLPS-01416): 0x8010C708
+/// PSX def: struct UniqMonstStruct UniqMonst[96]
+extern UniqueMonsterData UniqMonst[98]; // alias: unique_monster_data
 
 /// address: 0x49C338
 ///
@@ -1800,6 +1816,75 @@ extern char str_49DD1C[29];
 ///
 /// "Invalid Monster"
 extern char str_49DD3C[16];
+
+/// address: 0x49DD4C
+///
+/// MWVel maps from monster animation frame num to monster velocity.
+///
+/// PSX ref (SLPS-01416): 0x801051F4
+/// PSX def: int MWVel[24][3]
+extern int32_t MWVel[3][24];
+
+// TODO: verify that animletter maps from "monster action".
+
+/// address: 0x49DE6C
+///
+/// animletter maps from monster action to monster animation letter.
+///
+/// PSX ref (SLPS-01416): 0x8011C2A0
+/// PSX def: char animletter[7]
+// Note: char[6] is enough, though PSX details as char[7].
+extern char animletter[7];
+
+/// address: 0x49DE74
+///
+/// left maps from direction to a left turn from the direction.
+///
+/// PSX ref (easy-as-pie): 0x8012BC40
+/// PSX def: char left[8]
+extern direction left[8];
+
+/// address: 0x49DE94
+///
+/// right maps from direction to a right turn from the direction.
+///
+/// PSX ref (easy-as-pie): 0x8012BC48
+/// PSX def: char right[8]
+extern direction right[8];
+
+/// address: 0x49DEB4
+///
+/// opposite maps from direction to the opposite direction.
+///
+/// PSX ref (easy-as-pie): 0x8012BC50
+/// PSX def: char opposite[8]
+extern direction opposite[8];
+
+/// address: 0x49DED4
+///
+/// offset_x maps from direction to delta X-offset.
+///
+/// PSX ref (SLPS-01416): 0x8011C2A8
+/// PSX def: char offset_x[8]
+extern int32_t offset_x[8];
+
+/// address: 0x49DEF4
+///
+/// offset_y maps from direction to delta Y-offset.
+///
+/// PSX ref (SLPS-01416): 0x8011C2B0
+/// PSX def: char offset_y[8]
+extern int32_t offset_y[8];
+
+// Note: unused data of type int[16].
+
+/// address: 0x49DEF4
+///
+/// AiProc maps from monster AI ID to monster AI function.
+///
+/// PSX ref (SLPS-01416): 0x80105314
+/// PSX def: void (*AiProc[32])()
+extern void (__fastcall *AiProc[32])(int i);
 
 /// address: 0x49DFD4
 ///
