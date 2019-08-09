@@ -106,9 +106,9 @@ typedef struct ChatCmd {
 /// Cmd is a command message without body.
 ///
 /// PSX def:
-///     typedef struct TCmd {
-///        unsigned char bCmd;
-///     } TCmd;
+///    typedef struct TCmd {
+///       unsigned char bCmd;
+///    } TCmd;
 ///
 /// size = 0x1
 typedef struct {
@@ -119,11 +119,11 @@ typedef struct {
 /// CmdCoord is a command message with X-Y coordinate.
 ///
 /// PSX def:
-///     typedef struct TCmdLoc {
-///        unsigned char bCmd;
-///        unsigned char x;
-///        unsigned char y;
-///     } TCmdLoc;
+///    typedef struct TCmdLoc {
+///       unsigned char bCmd;
+///       unsigned char x;
+///       unsigned char y;
+///    } TCmdLoc;
 ///
 /// size = 0x3
 typedef struct {
@@ -138,12 +138,12 @@ typedef struct {
 /// CmdCoordParam1 is a command message with X-Y coordinate and one parameter.
 ///
 /// PSX def:
-///     typedef struct TCmdLocParam1 {
-///        unsigned char bCmd;
-///        unsigned char x;
-///        unsigned char y;
-///        unsigned short wParam1;
-///     } TCmdLocParam1;
+///    typedef struct TCmdLocParam1 {
+///       unsigned char bCmd;
+///       unsigned char x;
+///       unsigned char y;
+///       unsigned short wParam1;
+///    } TCmdLocParam1;
 ///
 /// size = 0x5
 typedef struct {
@@ -160,13 +160,13 @@ typedef struct {
 /// CmdCoordParam2 is a command message with X-Y coordinate and two parameters.
 ///
 /// PSX def:
-///     typedef struct TCmdLocParam2 {
-///        unsigned char bCmd;
-///        unsigned char x;
-///        unsigned char y;
-///        unsigned short wParam1;
-///        unsigned short wParam2;
-///     } TCmdLocParam2;
+///    typedef struct TCmdLocParam2 {
+///       unsigned char bCmd;
+///       unsigned char x;
+///       unsigned char y;
+///       unsigned short wParam1;
+///       unsigned short wParam2;
+///    } TCmdLocParam2;
 ///
 /// size = 0x7
 typedef struct {
@@ -185,14 +185,14 @@ typedef struct {
 /// CmdCoordParam3 is a command message with X-Y coordinate and three parameters.
 ///
 /// PSX def:
-///     typedef struct TCmdLocParam3 {
-///        unsigned char bCmd;
-///        unsigned char x;
-///        unsigned char y;
-///        unsigned short wParam1;
-///        unsigned short wParam2;
-///        unsigned short wParam3;
-///     } TCmdLocParam3;
+///    typedef struct TCmdLocParam3 {
+///       unsigned char bCmd;
+///       unsigned char x;
+///       unsigned char y;
+///       unsigned short wParam1;
+///       unsigned short wParam2;
+///       unsigned short wParam3;
+///    } TCmdLocParam3;
 ///
 /// size = 0x9
 typedef struct {
@@ -213,10 +213,10 @@ typedef struct {
 /// CmdParam1 is a command message with one parameter.
 ///
 /// PSX def:
-///     typedef struct TCmdParam1 {
-///        unsigned char bCmd;
-///        unsigned short wParam1;
-///     } TCmdParam1;
+///    typedef struct TCmdParam1 {
+///       unsigned char bCmd;
+///       unsigned short wParam1;
+///    } TCmdParam1;
 ///
 /// size = 0x3
 typedef struct {
@@ -229,11 +229,11 @@ typedef struct {
 /// CmdParam2 is a command message with two parameters.
 ///
 /// PSX def:
-///     typedef struct TCmdParam2 {
-///        unsigned char bCmd;
-///        unsigned short wParam1;
-///        unsigned short wParam2;
-///     } TCmdParam2;
+///    typedef struct TCmdParam2 {
+///       unsigned char bCmd;
+///       unsigned short wParam1;
+///       unsigned short wParam2;
+///    } TCmdParam2;
 ///
 /// size = 0x5
 typedef struct {
@@ -248,12 +248,12 @@ typedef struct {
 /// CmdParam3 is a command message with three parameters.
 ///
 /// PSX def:
-///     typedef struct TCmdParam3 {
-///        unsigned char bCmd;
-///        unsigned short wParam1;
-///        unsigned short wParam2;
-///        unsigned short wParam3;
-///     } TCmdParam3;
+///    typedef struct TCmdParam3 {
+///       unsigned char bCmd;
+///       unsigned short wParam1;
+///       unsigned short wParam2;
+///       unsigned short wParam3;
+///    } TCmdParam3;
 ///
 /// size = 0x7
 typedef struct {
@@ -270,15 +270,15 @@ typedef struct {
 /// CmdSpawnGolem is a SpawnGolem command message.
 ///
 /// PSX def:
-///     typedef struct TCmdGolem {
-///        unsigned char bCmd;
-///        unsigned char _mx;
-///        unsigned char _my;
-///        unsigned char _mdir;
-///        unsigned char _menemy;
-///        unsigned char _currlevel;
-///        short _mhitpoints;
-///     } TCmdGolem;
+///    typedef struct TCmdGolem {
+///       unsigned char bCmd;
+///       unsigned char _mx;
+///       unsigned char _my;
+///       unsigned char _mdir;
+///       unsigned char _menemy;
+///       unsigned char _currlevel;
+///       short _mhitpoints;
+///    } TCmdGolem;
 ///
 /// size = 0xA
 typedef struct {
@@ -301,13 +301,13 @@ typedef struct {
 /// CmdQuest is a Quest command message.
 ///
 /// PSX def:
-///     typedef struct TCmdQuest {
-///        unsigned char bCmd;
-///        unsigned char q;
-///        unsigned char qstate;
-///        unsigned char qlog;
-///        unsigned char qvar1;
-///     } TCmdQuest;
+///    typedef struct TCmdQuest {
+///       unsigned char bCmd;
+///       unsigned char q;
+///       unsigned char qstate;
+///       unsigned char qlog;
+///       unsigned char qvar1;
+///    } TCmdQuest;
 ///
 /// size = 0x5
 typedef struct {
@@ -326,26 +326,26 @@ typedef struct {
 /// CmdGetItem is a GetItem command message.
 ///
 /// PSX def:
-///     typedef struct TCmdGItem {
-///        unsigned char bCmd;
-///        unsigned char bMaster;
-///        unsigned char bPnum;
-///        unsigned char bCursitem;
-///        unsigned char bLevel;
-///        unsigned char x;
-///        unsigned char y;
-///        unsigned char bId;
-///        unsigned char bDur;
-///        unsigned char bMDur;
-///        unsigned char bCh;
-///        unsigned char bMCh;
-///        unsigned short wValue;
-///        unsigned short wIndx;
-///        unsigned short wCI;
-///        unsigned long dwSeed;
-///        unsigned long dwBuff;
-///        unsigned long dwTime;
-///     } TCmdGItem;
+///    typedef struct TCmdGItem {
+///       unsigned char bCmd;
+///       unsigned char bMaster;
+///       unsigned char bPnum;
+///       unsigned char bCursitem;
+///       unsigned char bLevel;
+///       unsigned char x;
+///       unsigned char y;
+///       unsigned char bId;
+///       unsigned char bDur;
+///       unsigned char bMDur;
+///       unsigned char bCh;
+///       unsigned char bMCh;
+///       unsigned short wValue;
+///       unsigned short wIndx;
+///       unsigned short wCI;
+///       unsigned long dwSeed;
+///       unsigned long dwBuff;
+///       unsigned long dwTime;
+///    } TCmdGItem;
 ///
 /// size = 0x1E
 typedef struct {
@@ -388,21 +388,21 @@ typedef struct {
 /// CmdPutItem is a PutItem command message.
 ///
 /// PSX def:
-///     typedef struct TCmdPItem {
-///        unsigned char bCmd;
-///        unsigned char x;
-///        unsigned char y;
-///        unsigned char bId;
-///        unsigned char bDur;
-///        unsigned char bMDur;
-///        unsigned char bCh;
-///        unsigned char bMCh;
-///        unsigned short wValue;
-///        unsigned short wIndx;
-///        unsigned short wCI;
-///        unsigned long dwSeed;
-///        unsigned long dwBuff;
-///     } TCmdPItem;
+///    typedef struct TCmdPItem {
+///       unsigned char bCmd;
+///       unsigned char x;
+///       unsigned char y;
+///       unsigned char bId;
+///       unsigned char bDur;
+///       unsigned char bMDur;
+///       unsigned char bCh;
+///       unsigned char bMCh;
+///       unsigned short wValue;
+///       unsigned short wIndx;
+///       unsigned short wCI;
+///       unsigned long dwSeed;
+///       unsigned long dwBuff;
+///    } TCmdPItem;
 ///
 /// size = 0x16
 typedef struct {
@@ -436,14 +436,14 @@ typedef struct {
 } CmdPutItem;
 
 /// PSX def:
-///     typedef struct TCmdChItem {
-///        unsigned char bCmd;
-///        unsigned char bLoc;
-///        unsigned short wIndx;
-///        unsigned short wCI;
-///        unsigned long dwSeed;
-///        unsigned char bId;
-///     } TCmdChItem;
+///    typedef struct TCmdChItem {
+///       unsigned char bCmd;
+///       unsigned char bLoc;
+///       unsigned short wIndx;
+///       unsigned short wCI;
+///       unsigned long dwSeed;
+///       unsigned char bId;
+///    } TCmdChItem;
 ///
 /// size = 0xB
 typedef struct {
@@ -462,10 +462,10 @@ typedef struct {
 } CmdChangeItem;
 
 /// PSX def:
-///     typedef struct TCmdDelItem {
-///        unsigned char bCmd;
-///        unsigned char bLoc;
-///     } TCmdDelItem;
+///    typedef struct TCmdDelItem {
+///       unsigned char bCmd;
+///       unsigned char bLoc;
+///    } TCmdDelItem;
 ///
 /// size = 0x2
 typedef struct {
@@ -1227,20 +1227,20 @@ typedef struct {
 /// Lighting represents a light source.
 ///
 /// PSX def:
-/// typedef struct LightListStruct {
-///    char _lx;
-///    char _ly;
-///    unsigned short _lradius;
-///    char _lid;
-///    unsigned char _ldel;
-///    unsigned char _lunflag;
-///    char _lunx;
-///    char _luny;
-///    char _lunr;
-///    char _xoff;
-///    char _yoff;
-///    unsigned char _lflags;
-/// } LightListStruct;
+///    typedef struct LightListStruct {
+///       char _lx;
+///       char _ly;
+///       unsigned short _lradius;
+///       char _lid;
+///       unsigned char _ldel;
+///       unsigned char _lunflag;
+///       char _lunx;
+///       char _luny;
+///       char _lunr;
+///       char _xoff;
+///       char _yoff;
+///       unsigned char _lflags;
+///    } LightListStruct;
 ///
 /// size = 0x34
 typedef struct {
@@ -1302,8 +1302,61 @@ typedef struct {
 	void (*func)(bool32_t a1);
 } MenuItem;
 
+/// MissileData describes basic properties of missiles.
+///
+/// PSX def:
+///    struct MissileData {
+///       unsigned char mName;
+///       void (*mAddProc)();
+///       void (*mProc)();
+///       unsigned char mDraw;
+///       unsigned char mType;
+///       unsigned char mResist;
+///       unsigned char mFileNum;
+///       int mlSFX;
+///       int miSFX;
+///    };
+///
+/// size = 0x18
+typedef struct {
+	/// offset: 0000 (4 bytes)
+	/// Missile ID.
+	missile_id missile_id : 32;
+	/// offset: 0004 (4 bytes)
+	/// Function invoked to cast missile.
+	void (__fastcall *cast_func)(int missile_num, int x, int y, int target_x, int target_y, int facing, int target_num, int caster_num, int damage);
+	/// offset: 0008 (4 bytes)
+	/// Function invoked on missile impact.
+	void (__fastcall *impact_func)(int missile_num);
+	/// offset: 000C (4 bytes)
+	bool32_t draw;
+	/// offset: 0010 (1 bytes)
+	int32_t type; // TODO: figure out what field is used for, add enum.
+	/// offset: 0011 (1 bytes)
+	/// Damage type of missile (used for resistance).
+	damage_type damage_type : 8;
+	/// offset: 0012 (1 bytes)
+	/// Missile graphics ID.
+	missile_graphic_id missile_graphic_id : 8;
+	// align (1 bytes)
+	/// offset: 0014 (4 bytes)
+	/// Sound effect played when casting missile.
+	sfx_id cast_sfx_id : 32;
+	/// offset: 0018 (4 bytes)
+	/// Sound effect played on missile impact.
+	sfx_id impact_sfx_id : 32;
+} MissileData;
+
 /// MissileGraphicData specifies the different missile animation graphics.
 ///
+/// PSX def:
+///    struct MisFileData {
+///       unsigned char mAnimName;
+///       unsigned char mAnimFAmt;
+///       unsigned char mFlags;
+///       unsigned char mAnimDelay;
+///       unsigned char mAnimLen;
+///    };
 /// size = 0xEC
 typedef struct {
 	/// offset: 0000 (1 bytes)
@@ -2331,21 +2384,21 @@ typedef struct {
 /// Quest describes in-game state of a quest.
 ///
 /// PSX def:
-///     typedef struct QuestStruct {
-///        unsigned char _qlevel;
-///        unsigned char _qtype;
-///        unsigned char _qactive;
-///        unsigned char _qlvltype;
-///        int _qtx;
-///        int _qty;
-///        unsigned char _qslvl;
-///        unsigned char _qidx;
-///        unsigned char _qmsg;
-///        unsigned char _qvar1;
-///        unsigned char _qvar2;
-///        unsigned char _qlog;
-///        unsigned char pad_for_laz;
-///     } QuestStruct;
+///    typedef struct QuestStruct {
+///       unsigned char _qlevel;
+///       unsigned char _qtype;
+///       unsigned char _qactive;
+///       unsigned char _qlvltype;
+///       int _qtx;
+///       int _qty;
+///       unsigned char _qslvl;
+///       unsigned char _qidx;
+///       unsigned char _qmsg;
+///       unsigned char _qvar1;
+///       unsigned char _qvar2;
+///       unsigned char _qlog;
+///       unsigned char pad_for_laz;
+///    } QuestStruct;
 ///
 /// size = 0x18
 typedef struct {

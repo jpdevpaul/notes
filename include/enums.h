@@ -1165,9 +1165,15 @@ typedef enum {
 	MAGIC_TYPE_MAGIC     = 2,
 } magic_type;
 
+/// Missile IDs specify missile_data array indices.
+typedef enum {
+	MISSILE_ID_ARROW = 0,
+	// TODO: add missile_id enums.
+} missile_id;
+
 /// Missile types.
 typedef enum {
-	MISSILE_TYPE_ARROW =  0,
+	MISSILE_TYPE_ARROW = 0,
 	// TODO: add missile_type enums.
 } missile_type;
 

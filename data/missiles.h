@@ -1,24 +1,20 @@
 #include "types.h"
 
-/* TODO: uncomment when the MissileData struct has been added to structs.h.
-
 /// address: 0x494948
 ///
-/// missile_data contains the data related to each missile ID.
+/// missiledata contains the data related to each missile ID.
 ///
-/// References:
-///    * https://github.com/sanctuary/notes/blob/master/enums.h#missile_id
-extern MissileData missile_data[68];
-
-*/
+/// PSX ref (SLPS-01416): 0x800D67F0
+/// PSX def: struct MissileData missiledata[68]
+extern MissileData missiledata[68]; // alias: missile_data
 
 /// address: 0x4950B8
 ///
-/// missile_graphic_data contains the data related to each missile graphic ID.
+/// misfiledata contains the data related to each missile graphic ID.
 ///
-/// References:
-///    * https://github.com/sanctuary/notes/blob/master/enums.h#missile_graphic_id
-extern MissileGraphicData missile_graphic_data[47];
+/// PSX ref (SLPS-01416): 0x800D6F60
+/// PSX def: struct MisFileData misfiledata[47]
+extern MissileGraphicData misfiledata[47]; // alias: missile_graphic_data
 
 /// address: 0x497C0C
 ///
@@ -234,6 +230,22 @@ extern char str_497D94[7];
 ///
 /// "Arrows"
 extern char str_497D9C[7];
+
+/// address: 0x497DA4
+///
+/// XDirAdd maps from direction to X-offset.
+///
+/// PSX ref (SLPS-01416): 0x801029D8
+/// PSX def: int XDirAdd[8]
+int32_t XDirAdd[8];
+
+/// address: 0x497DC4
+///
+/// YDirAdd maps from direction to Y-offset.
+///
+/// PSX ref (SLPS-01416): 0x801029F8
+/// PSX def: int YDirAdd[8]
+int32_t YDirAdd[8];
 
 /// address: 0x497DE4
 ///
