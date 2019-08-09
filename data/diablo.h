@@ -2,23 +2,27 @@
 
 /// address: 0x484364
 ///
-/// exclusive specifies whether to give the game exclusive access to the screen.
-extern bool32_t exclusive;
+/// fullscreen specifies whether to give the game exclusive access to the
+/// screen, as needed for efficient rendering in fullscreen mode.
+extern bool32_t fullscreen; // alias: exclusive
 
 /// address: 0x484368
 ///
-/// player_friendly specifies whether players are in non-PvP mode.
-extern bool32_t player_friendly;
+/// FriendlyMode specifies whether players are in non-PvP mode.
+///
+/// PSX ref (SLPS-01416): 0x8011B7A5
+/// PSX def: unsigned char FriendlyMode
+extern bool32_t FriendlyMode; // alias: player_friendly
 
 /// address: 0x48436C
 ///
-/// net_msg_texts maps from net_msg_id to hotkey network message.
-extern char *net_msg_texts[4];
+/// NetMsgStr maps from net_msg_id to hotkey network message.
+extern char *NetMsgStr[4]; // alias: net_msg_texts
 
 /// address: 0x48437C
 ///
-/// net_msg_hotkeys maps from net_msg_id to hotkey name.
-extern char *net_msg_hotkeys[4];
+/// NetMsgHotKey maps from net_msg_id to hotkey name.
+extern char *NetMsgHotKey[4]; // alias: net_msg_hotkeys
 
 /// address: 0x48438C
 ///
