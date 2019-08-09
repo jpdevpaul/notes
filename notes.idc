@@ -12690,7 +12690,7 @@ cleanup("sound_toggle_names");set_name(0x48E290, "sound_toggle_names");
 set_cmt(0x48E290, "sound_toggle_names specifies the menu names for sound enabled and disabled.", 0);
 apply_type (0x48E290, "extern char *sound_toggle_names[2];", TINFO_DEFINITE);
 cleanup("color_cycling_toggle_names");set_name(0x48E298, "color_cycling_toggle_names");
-set_cmt(0x48E298, "color_cycling_toggle_names specifies the menu names for colour cycling\nenabled and disabled.", 0);
+set_cmt(0x48E298, "color_cycling_toggle_names specifies the menu names for colour cycling\ndisabled and enabled.", 0);
 apply_type (0x48E298, "extern char *color_cycling_toggle_names[2];", TINFO_DEFINITE);
 cleanup("str_48E2A0");set_name(0x48E2A0, "str_48E2A0");
 set_cmt(0x48E2A0, "\"Color Cycling On\"", 0);
