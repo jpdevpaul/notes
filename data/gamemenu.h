@@ -2,18 +2,18 @@
 
 /// address: 0x48E1B8
 ///
-/// single_menu contains the game menu items of the single player menu.
-extern MenuItem single_menu[6];
+/// SingleMenu contains the game menu items of the single player menu.
+extern MenuItem SingleMenu[6]; // alias: single_menu
 
 /// address: 0x48E200
 ///
-/// multi_menu contains the game menu items of the multi player menu.
-extern MenuItem multi_menu[5];
+/// MultiMenu contains the game menu items of the multi player menu.
+extern MenuItem MultiMenu[5]; // alias: multi_menu
 
 /// address: 0x48E240
 ///
-/// options_menu contains the game menu items of the options menu.
-extern MenuItem options_menu[6];
+/// OptionsMenu contains the game menu items of the options menu.
+extern MenuItem OptionsMenu[6]; // alias: options_menu
 
 /// address: 0x48E288
 ///
@@ -27,9 +27,9 @@ extern char *sound_toggle_names[2];
 
 /// address: 0x48E298
 ///
-/// colour_cycling_toggle_names specifies the menu names for colour cycling
+/// color_cycling_toggle_names specifies the menu names for colour cycling
 /// enabled and disabled.
-extern char *colour_cycling_toggle_names[2];
+extern char *color_cycling_toggle_names[2];
 
 /// address: 0x48E2A0
 ///
