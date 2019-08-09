@@ -2,9 +2,11 @@
 
 /// address: 0x48E9A8
 ///
-/// inv_start_slot_2x2 specifies the starting inventory slots for placement of
-/// 2x2 items.
-extern int32_t inv_start_slot_2x2[10];
+/// AP2x2Tbl specifies the starting inventory slots for placement of 2x2 items.
+///
+/// PSX ref (SLPS-01416): 0x8010D008
+/// PSX def: int AP2x2Tbl[10]
+extern int32_t AP2x2Tbl[10]; // alias: inv_start_slot_2x2
 
 /// address: 0x48E9D0
 ///
