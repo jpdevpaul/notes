@@ -2,12 +2,12 @@
 
 /// address: 0x484778
 ///
-/// l1_tile_id_pattern_lookup is a lookup table for the 16 possible patterns of a
-/// 2x2 area, where each cell either contains a SW wall or it doesn't.
+/// L5ConvTbl is a lookup table for the 16 possible patterns of a 2x2 area,
+/// where each cell either contains a SW wall or it doesn't.
 ///
-/// PSX ref: 0x80139C58
+/// PSX ref (SLPS-01416): 0x80139C58
 /// PSX def: unsigned char L5ConvTbl[16]
-extern l1_tile_id l1_tile_id_pattern_lookup[16];
+extern l1_tile_id L5ConvTbl[16]; // alias: l1_tile_id_pattern_lookup
 
 /// address: 0x484788
 ///
