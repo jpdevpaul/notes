@@ -28,7 +28,7 @@ extern char *sound_toggle_names[2];
 /// address: 0x48E298
 ///
 /// color_cycling_toggle_names specifies the menu names for colour cycling
-/// enabled and disabled.
+/// disabled and enabled.
 extern char *color_cycling_toggle_names[2];
 
 /// address: 0x48E2A0
