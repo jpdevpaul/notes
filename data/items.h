@@ -134,7 +134,7 @@ extern char str_48EC2C[13];
 ///
 /// "Helm of Sprits"
 ///
-/// NOTE: "Sprits" is an assumed typo of "Spirits" [1].
+/// Note: "Sprits" is an assumed typo of "Spirits" [1].
 ///
 ///    [1]: http://diablo.wikia.com/wiki/Helm_of_Spirits
 extern char str_48EC3C[15];
@@ -1286,11 +1286,11 @@ extern char str_48F600[4];
 
 /// address: 0x48F608
 ///
-/// item_data contains the data related to each item ID.
+/// AllItemsList contains the data related to each item ID.
 ///
 /// PSX ref: 0x801113A4
 /// PSX def: ItemDataStruct AllItemsList[157]
-extern ItemData item_data[157];
+extern ItemData AllItemsList[157]; // alias: item_data
 
 /// address: 0x4924A4
 ///
@@ -1964,44 +1964,58 @@ extern char str_492C30[5];
 
 /// address: 0x492C38
 ///
-/// item_drop_id_from_item_graphic_id maps from item_graphic_id to item_drop_id.
-extern item_drop_id item_drop_id_from_item_graphic_id[169];
+/// ItemCAnimTbl maps from item_graphic_id to item_drop_id.
+///
+/// PSX ref (SLPS-01416): 0x800D1BE0
+/// PSX def: unsigned char ItemCAnimTbl[169]
+extern item_drop_id ItemCAnimTbl[169]; // alias: item_drop_id_from_item_graphic_id
 
 /// address: 0x492CE4
 ///
-/// item_drop_name_from_item_drop_id maps from item_drop_id to the name of the
-/// item drop graphics.
-extern char *item_drop_name_from_item_drop_id[35];
+/// ItemDropNames maps from item_drop_id to the name of the item drop graphics.
+extern char *ItemDropNames[35]; // alias: item_drop_name_from_item_drop_id
 
 /// address: 0x492D70
 ///
-/// nitem_drop_frames_from_item_drop_id maps from item_drop_id to the number of
-/// frames used by the item drop animation.
-extern int8_t nitem_drop_frames_from_item_drop_id[35];
+/// ItemAnimLs maps from item_drop_id to the number of frames used by the item
+/// drop animation.
+///
+/// PSX ref (SLPS-01416): 0x800D1C8C
+/// PSX def: unsigned char ItemAnimLs[35]
+extern uint8_t ItemAnimLs[35]; // alias: nitem_drop_frames_from_item_drop_id
 
 /// address: 0x492D94
 ///
-/// item_drop_sfx_id_from_item_drop_id maps from item_drop_id to the sound effect
-/// of dropping the item on ground.
-extern sfx_id item_drop_sfx_id_from_item_drop_id[35];
+/// ItemDropSnds maps from item_drop_id to the sound effect of dropping the item
+/// on ground.
+extern sfx_id ItemDropSnds[35]; // alias: item_drop_sfx_id_from_item_drop_id
 
 /// address: 0x492E20
 ///
-/// item_place_sfx_id_from_item_drop_id maps from item_drop_id to the sound
-/// effect of playing the item in the inventory.
-extern sfx_id item_place_sfx_id_from_item_drop_id[35];
+/// ItemInvSnds maps from item_drop_id to the sound effect of playing the item
+/// in the inventory.
+///
+/// PSX ref (SLPS-01416): 0x800D1D3C
+/// PSX def: int ItemInvSnds[35]
+extern sfx_id ItemInvSnds[35]; // alias: item_place_sfx_id_from_item_drop_id
 
 /// address: 0x492EAC
 ///
-/// item_y specifies the current Y-coordinate used for validation of items on
+/// idoppely specifies the current Y-coordinate used for validation of items on
 /// ground.
-extern int item_y;
+///
+/// PSX ref (SLPS-01416): 0x800D1D3C
+/// PSX def: int idoppely
+extern int idoppely; // alias: item_y
 
 /// address: 0x492EB0
 ///
-/// griswold_premium_item_quality_lvl_delta maps from Griswold premium item
-/// number to a quality level delta as added to the base quality level.
-extern int griswold_premium_item_quality_lvl_delta[6];
+/// premiumlvladd maps from Griswold premium item number to a quality level
+/// delta as added to the base quality level.
+///
+/// PSX ref (SLPS-01416): 0x800D1D3C
+/// PSX def: int premiumlvladd[6]
+extern int premiumlvladd[6]; // alias: griswold_premium_item_quality_lvl_delta
 
 /// address: 0x492EC8
 ///
