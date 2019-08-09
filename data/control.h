@@ -2,35 +2,50 @@
 
 /// address: 0x483C2C
 ///
-/// spelicon_frame_from_spell_id maps from spell_id to spelicon.cel frame number.
-extern int8_t spelicon_frame_from_spell_id[37];
+/// SpellITbl maps from spell_id to spelicon.cel frame number.
+///
+/// PSX ref (SLPS-01416): 0x800CE324
+/// PSX def: char SpellITbl[37]
+extern int8_t SpellITbl[37]; // alias: spelicon_frame_from_spell_id
 
 /// address: 0x483C54
 ///
-/// panel_buttons maps from panel_button_id to the position and dimensions of a
+/// PanBtnPos maps from panel_button_id to the position and dimensions of a
 /// panel button.
-extern PanelButton panel_buttons[8];
+///
+/// PSX ref (easy-as-pie): 0x800BE180
+/// PSX def: int PanBtnPos[5][8]
+extern PanelButton PanBtnPos[8]; // alias: panel_buttons
 
 /// address: 0x483CF4
 ///
-/// button_hotkeys maps from panel_button_id to hotkey name.
-extern char *button_hotkeys[8];
+/// PanBtnHotKey maps from panel_button_id to hotkey name.
+///
+/// PSX ref (easy-as-pie): 0x800BE220
+/// PSX def: char *PanBtnHotKey[8]
+extern char *PanBtnHotKey[8]; // alias: button_hotkeys
 
 /// address: 0x483D14
 ///
-/// button_descriptions maps from panel_button_id to panel button description.
-extern char *button_descriptions[8];
+/// PanBtnStr maps from panel_button_id to panel button description.
+///
+/// PSX ref (easy-as-pie): 0x800BE240
+/// PSX def: unsigned long PanBtnStr[8]
+extern char *PanBtnStr[8]; // alias: button_descriptions
 
 /// address: 0x483D34
 ///
-/// attribute_inc_rects maps from attribute_id to the rectangle on screen used
-/// for attribute increment buttons.
-extern Rectangle_t attribute_inc_rects[4];
+/// ChrBtnsRect maps from attribute_id to the rectangle on screen used for
+/// attribute increment buttons.
+extern Rectangle_t ChrBtnsRect[4]; // alias: attribute_inc_rects
 
 /// address: 0x483D74
 ///
-/// spell_id_from_spellbook_pos maps from spellbook position to spell_id.
-extern spell_id spell_id_from_spellbook_pos[42];
+/// SpellPages maps from spellbook page number and position to spell_id.
+///
+/// PSX ref (SLPS-01416): 0x800CE34C
+/// PSX def: int SpellPages[5][5]
+extern spell_id SpellPages[6][7]; // alias: spell_id_from_spellbook_pos
 
 /// address: 0x483E1C
 ///
