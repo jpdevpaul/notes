@@ -6,7 +6,7 @@ Each global variable in the uninitialized data section has been categorised base
 |----------------------------|---------------|-------------|---------------------------------------------------------------|
 | _crt.cpp                   | `0x4B7930`    | `0x4B7933`  | N/A                                                           |
 | [appfat.cpp](appfat.h)     | `0x4B7934`    | `0x4B7A3F`  | ![100%](http://progressed.io/bar/100 "(268/268 bytes)")       |
-| [automap.cpp](automap.h)   | `0x4B7A40`    | `0x4B84CB`  | ![97%](http://progressed.io/bar/97 "(2632/2700 bytes)")       |
+| [automap.cpp](automap.h)   | `0x4B7A40`    | `0x4B84CB`  | ![100%](http://progressed.io/bar/100 "(2700/2700 bytes)")     |
 | [control.cpp](control.h)   | `0x4B84CC`    | `0x4B8C9B`  | ![2%](http://progressed.io/bar/2 "(56/2000 bytes)")           |
 | [cursor.cpp](cursor.h)     | `0x4B8C9C`    | `0x4B8CD7`  | ![6%](http://progressed.io/bar/6 "(4/60 bytes)")              |
 | [dead.cpp](dead.h)         | `0x4B8CD8`    | `0x4BD2FB`  | ![100%](http://progressed.io/bar/100 "(17956/17956 bytes)")   |
