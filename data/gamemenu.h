@@ -2,18 +2,22 @@
 
 /// address: 0x48E1B8
 ///
-/// SingleMenu contains the game menu items of the single player menu.
-extern MenuItem SingleMenu[6]; // alias: single_menu
+/// sgSingleMenu contains the game menu items of the single player menu.
+///
+/// assert name: sgSingleMenu
+extern MenuItem sgSingleMenu[6]; // alias: single_menu
 
 /// address: 0x48E200
 ///
-/// MultiMenu contains the game menu items of the multi player menu.
-extern MenuItem MultiMenu[5]; // alias: multi_menu
+/// sgMultiMenu contains the game menu items of the multi player menu.
+///
+/// assert name: sgMultiMenu
+extern MenuItem sgMultiMenu[5]; // alias: multi_menu
 
 /// address: 0x48E240
 ///
-/// OptionsMenu contains the game menu items of the options menu.
-extern MenuItem OptionsMenu[6]; // alias: options_menu
+/// spOptionsMenu contains the game menu items of the options menu.
+extern MenuItem spOptionsMenu[6]; // alias: options_menu
 
 /// address: 0x48E288
 ///
