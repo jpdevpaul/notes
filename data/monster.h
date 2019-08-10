@@ -1876,7 +1876,7 @@ extern int32_t offset_x[8];
 /// PSX def: char offset_y[8]
 extern int32_t offset_y[8];
 
-// Note: unused data of type int[16].
+// Note: unused data of type int[16] at 0x49DF14.
 
 /// address: 0x49DEF4
 ///

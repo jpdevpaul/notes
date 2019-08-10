@@ -23,7 +23,7 @@ extern CircleCoords *pCrawlTable[19]; // alias: delta_from_circle_radius
 /// PSX def: unsigned char vCrawlTable[30][23]
 extern Coord vCrawlTable[23][15];
 
-// Note: unused data of char[18][18] at 0x49463C.
+// Note: unused data of type char[18][18] at 0x49463C.
 
 /// address: 0x494780
 ///

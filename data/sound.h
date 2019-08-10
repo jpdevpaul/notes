@@ -40,7 +40,7 @@ extern track_id sgnMusicTrack; // alias: music_track_id
 /// PSX def: unsigned short sgszMusicTracks[6]
 extern char *sgszMusicTracks[6]; // alias: track_names
 
-// Note: unusd data at 0x4A22F4 of type Rect[2];
+// Note: unused data of type Rect[2] at 0x4A22F4.
 
 /// address: 0x4A22FC
 ///
