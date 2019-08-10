@@ -1,3 +1,5 @@
+#include "types.h"
+
 /// address: 0x4A1ABC
 ///
 /// WarpDropX maps from player number to Y-coordinate of the town portal

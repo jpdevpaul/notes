@@ -2576,6 +2576,72 @@ typedef struct {
 	uint32_t start_tc;
 } SoundFile;
 
+/// SpellData describes basic properties of spells.
+///
+/// PSX def:
+///    struct SpellData {
+///       unsigned char sName;
+///       unsigned char sManaCost;
+///       unsigned char sType;
+///       int sNameText;
+///       int sSkillText;
+///       int sBookLvl;
+///       int sStaffLvl;
+///       unsigned char sTargeted;
+///       unsigned char sTownSpell;
+///       int sMinInt;
+///       unsigned char sSFX;
+///       unsigned char sMissiles[3];
+///       unsigned char sManaAdj;
+///       unsigned char sMinMana;
+///       int sStaffMin;
+///       int sStaffMax;
+///       int sBookCost;
+///       int sStaffCost;
+///    };
+///
+/// size = 0x38
+typedef struct {
+	/// offset: 0000 (1 bytes)
+	spell_id spell_id : 8;
+	/// offset: 0001 (1 bytes)
+	uint8_t mana_cost_start;
+	/// offset: 0002 (1 bytes)
+	magic_type magic_type : 8;
+	// padding
+	/// offset: 0004 (4 bytes)
+	char *spell_name;
+	/// offset: 0008 (4 bytes)
+	char *skill_name;
+	/// offset: 000C (4 bytes)
+	int32_t quality_lvl;
+	/// offset: 0010 (4 bytes)
+	int32_t quality_lvl_staff;
+	/// offset: 0014 (4 bytes)
+	bool32_t targeted;
+	/// offset: 0018 (4 bytes)
+	bool32_t town_castable;
+	/// offset: 001C (1 bytes)
+	uint8_t mag_req;
+	/// offset: 0020 (1 bytes)
+	sfx_id sfx_id : 8;
+	/// offset: 0021 (3 bytes)
+	missile_id missile_ids[3];
+	/// offset: 0024 (1 bytes)
+	uint8_t mana_dec_per_spell_lvl;
+	/// offset: 0025 (1 bytes)
+	uint8_t mana_cost_min;
+	// padding
+	/// offset: 0028 (4 bytes)
+	uint32_t charges_min;
+	/// offset: 002C (4 bytes)
+	uint32_t charges_max;
+	/// offset: 0030 (4 bytes)
+	uint32_t book_price;
+	/// offset: 0034 (4 bytes)
+	uint32_t staff_price;
+} SpellData;
+
 /// SfxData contains the data associated with a sound effect.
 ///
 /// size = 0x9

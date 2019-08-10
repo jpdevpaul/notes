@@ -1,16 +1,12 @@
 #include "types.h"
 
-/* TODO: uncomment when the SpellData struct has been added to structs.h.
-
 /// address: 0x4A23C8
 ///
 /// spell_data contains the data related to each spell ID.
 ///
-/// References:
-///    * https://github.com/sanctuary/notes/blob/master/enums.h#spell_id
+/// PSX ref (SLPS-01416): 0x800DDB80
+/// PSX def: struct SpellData spelldata[37]
 extern SpellData spell_data[37];
-
-*/
 
 /// address: 0x4A2BE0
 ///
