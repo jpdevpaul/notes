@@ -2,60 +2,78 @@
 
 /// address: 0x4A1AE0
 ///
-/// quest_data contains the data related to each quest_id.
+/// questlist contains the data related to each quest_id.
 ///
-/// PSX ref: 0x800DD908
+/// PSX ref (SLPS-01416): 0x800DD908
 /// PSX def: QuestData questlist[16]
-extern QuestData quest_data[16];
+extern QuestData questlist[16]; // alias: quest_data
 
 /// address: 0x4A1C20
 ///
-/// quest_entrance_cursor_x_delta specifies a delta in X-coordinates from the
-/// quest entrance for which the hover text of the cursor will be visible.
-extern int8_t quest_entrance_cursor_x_delta[7];
+/// questxoff specifies a delta in X-coordinates from the quest entrance for
+/// which the hover text of the cursor will be visible.
+///
+/// PSX ref (easy-as-pie): 0x8012B488
+/// PSX def: char questxoff[7]
+extern int8_t questxoff[7]; // alias: quest_entrance_cursor_x_delta
 
 /// address: 0x4A1C28
 ///
-/// quest_entrance_cursor_y_delta specifies a delta in Y-coordinates from the
-/// quest entrance for which the hover text of the cursor will be visible.
-extern int8_t quest_entrance_cursor_y_delta[7];
+/// questyoff specifies a delta in Y-coordinates from the quest entrance for
+/// which the hover text of the cursor will be visible.
+///
+/// PSX ref (easy-as-pie): 0x8012B490
+/// PSX def: char questyoff[7]
+extern int8_t questyoff[7]; // alias: quest_entrance_cursor_y_delta
 
 /// address: 0x4A1C30
 ///
-/// quest_stairway_names specifies the names of quest levels for the hover text
-/// of the cursor.
+/// SetLevelName specifies the names of quest levels for the hover text of the
+/// cursor.
 ///
-/// PSX ref: 0x8010D6CC
+/// PSX ref (SLPS-01416): 0x8010D6CC
 /// PSX def: int SetLevelName[6]
-extern char *quest_stairway_names[5];
+extern char *SetLevelName[5]; // alias: quest_stairway_names
 
-/// address: 0x04A1C44
+/// address: 0x4A1C44
 ///
-/// rand_quest_id_group_1 is a quest group containing the three quests the
-/// Butcher, Ogden's Sign and Gharbad the Weak, which ensures that exactly one of
-/// these three quests appears in any single player game.
-extern int rand_quest_id_group_1[3];
-
-/// address: 0x04A1C50
-///
-/// rand_quest_id_group_2 is a quest group containing the three quests Halls of
-/// the Blind, the Magic Rock and Valor, which ensures that exactly one of these
+/// QuestGroup1 is a quest group containing the three quests the Butcher,
+/// Ogden's Sign and Gharbad the Weak, which ensures that exactly one of these
 /// three quests appears in any single player game.
-extern int rand_quest_id_group_2[3];
-
-/// address: 0x04A1C5C
 ///
-/// rand_quest_id_group_3 is a quest group containing the three quests Black
-/// Mushroom, Zhar the Mad and Anvil of Fury, which ensures that exactly one of
-/// these three quests appears in any single player game.
-extern int rand_quest_id_group_3[3];
+/// PSX ref (SLPS-01416): 0x800DDA1C
+/// PSX def: int QuestGroup1[3]
+extern quest_id QuestGroup1[3]; // alias: rand_quest_id_group_1
 
-/// address: 0x04A1C68
+/// address: 0x4A1C50
 ///
-/// rand_quest_id_group_4 is a quest group containing the two quests Lachdanan
-/// and Warlord of Blood, which ensures that exactly one of these two quests
-/// appears in any single player game.
-extern int rand_quest_id_group_4[2];
+/// QuestGroup2 is a quest group containing the three quests Halls of the Blind,
+/// the Magic Rock and Valor, which ensures that exactly one of these three
+/// quests appears in any single player game.
+///
+/// PSX ref (SLPS-01416): 0x800DDA28
+/// PSX def: int QuestGroup2[3]
+extern quest_id QuestGroup2[3]; // alias: rand_quest_id_group_2
+
+/// address: 0x4A1C5C
+///
+/// QuestGroup3 is a quest group containing the three quests Black Mushroom,
+/// Zhar the Mad and Anvil of Fury, which ensures that exactly one of these
+/// three quests appears in any single player game.
+///
+/// PSX ref (SLPS-01416): 0x800DDA34
+/// PSX def: int QuestGroup3[3]
+extern quest_id QuestGroup3[3]; // alias: rand_quest_id_group_3
+
+/// address: 0x4A1C68
+///
+/// QuestGroup4 is a quest group containing the two quests Lachdanan and Warlord
+/// of Blood, which ensures that exactly one of these two quests appears in any
+/// single player game.
+///
+/// PSX ref (SLPS-01416): 0x8011BA30
+/// PSX def: int QuestGroup4[2]
+extern quest_id QuestGroup4[2]; // alias: rand_quest_id_group_4
 
 /// address: 0x4A1C70
 ///
