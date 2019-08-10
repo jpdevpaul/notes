@@ -1,16 +1,19 @@
 /// address: 0x4A2D5C
 ///
-/// description_box_text_y_offset maps from line number to Y offset in pixels for
-/// text drawn in the description box.
-extern int description_box_text_y_offset[24];
+/// SStringYNorm maps from line number to Y offset in pixels for text drawn in
+/// the description box.
+///
+/// PSX ref (SLPS-01416): 0x800E3C60
+/// PSX def: int SStringYNorm[20]
+extern int SStringYNorm[24]; // alias: description_box_text_y_offset
 
 /// address: 0x4A2DBC
 ///
-/// towner_names maps from towner IDs to NPC names.
+/// talkname maps from towner IDs to NPC names.
 ///
-/// References:
-///    * https://github.com/sanctuary/notes/blob/master/enums.h#towner_id
-extern char *towner_names[9];
+/// PSX ref (SLPS-01416): 0x800DE404
+/// PSX def: int talkname[9]
+extern char *talkname[9]; // alias: towner_names
 
 /// address: 0x4A2DE0
 ///
