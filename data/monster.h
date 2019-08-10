@@ -1819,7 +1819,7 @@ extern char str_49DD3C[16];
 
 /// address: 0x49DD4C
 ///
-/// MWVel maps from monster animation frame num to monster velocity.
+/// MWVel maps from monster walk animation frame num to monster velocity.
 ///
 /// PSX ref (SLPS-01416): 0x801051F4
 /// PSX def: int MWVel[24][3]

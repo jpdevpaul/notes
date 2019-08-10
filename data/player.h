@@ -2,118 +2,132 @@
 
 /// address: 0x4A0EF8
 ///
-/// x_delta_from_start_location_tristram specifies the X-coordinate delta from
-/// the player start location in Tristram.
+/// plrxoff specifies the X-coordinate delta from the player start location in
+/// Tristram.
 ///
-/// PSX ref: 0x800DA348
+/// PSX ref (SLPS-01416): 0x800DA348
 /// PSX def: int plrxoff[9]
-extern int x_delta_from_start_location_tristram[9];
+extern int32_t plrxoff[9]; // alias: x_delta_from_start_location_tristram
 
 /// address: 0x4A0F1C
 ///
-/// y_delta_from_start_location_tristram specifies the Y-coordinate delta from
-/// the player start location in Tristram.
+/// plryoff specifies the Y-coordinate delta from the player start location in
+/// Tristram.
 ///
-/// PSX ref: 0x800DA36C
+/// PSX ref (SLPS-01416): 0x800DA36C
 /// PSX def: int plryoff[9]
-extern int y_delta_from_start_location_tristram[9];
+extern int32_t plryoff[9]; // alias: y_delta_from_start_location_tristram
 
 /// address: 0x4A0F40
 ///
-/// x_delta_from_player specifies the X-coordinate delta from a player, used for
-/// instanced when casting resurrect.
+/// plrxoff2 specifies the X-coordinate delta from a player, used for instanced
+/// when casting resurrect.
 ///
-/// PSX ref: 0x800DA390
+/// PSX ref (SLPS-01416): 0x800DA390
 /// PSX def: int plrxoff2[9]
-extern int x_delta_from_player[9];
+extern int32_t plrxoff2[9]; // alias: x_delta_from_player
 
 /// address: 0x4A0F64
 ///
-/// y_delta_from_player specifies the Y-coordinate delta from a player, used for
-/// instanced when casting resurrect.
+/// plryoff2 specifies the Y-coordinate delta from a player, used for instanced
+/// when casting resurrect.
 ///
-/// PSX ref: 0x800DA3B4
+/// PSX ref (SLPS-01416): 0x800DA3B4
 /// PSX def: int plryoff2[9]
-extern int y_delta_from_player[9];
+extern int32_t plryoff2[9]; // alias: y_delta_from_player
 
 /// address: 0x4A0F88
 ///
-/// action_frame_from_player_class specifies the frame of each animation for
-/// which an action is triggered, for each player class.
+/// PlrGFXAnimLens specifies the frame of each animation for which an action is
+/// triggered, for each player class.
 ///
-/// PSX ref: 0x800DA3D8
+/// PSX ref (SLPS-01416): 0x800DA3D8
 /// PSX def: char PlrGFXAnimLens[3][11]
-extern ActionFrame action_frame_from_player_class[3];
+extern ActionFrame PlrGFXAnimLens[3]; // alias: action_frame_from_player_class
+
+/// address: 0x4A0FAC
+///
+/// PWVel maps from player class to player velocity.
+extern int32_t PWVel[3][3];
+
+/// address: 0x4A0FAC
+///
+/// AnimLenFromClass maps from player class to total number of frames in player
+/// walk animation.
+extern int32_t AnimLenFromClass[3];
 
 /// address: 0x4A0FDC
 ///
-/// start_str_from_player_class maps from player_class to starting stat in
-/// strength.
+/// StrengthTbl maps from player_class to starting stat in strength.
 ///
-/// PSX ref: 0x800DA3FC
+/// PSX ref (SLPS-01416): 0x800DA3FC
 /// PSX def: int StrengthTbl[3]
-extern int start_str_from_player_class[3];
+extern int32_t StrengthTbl[3]; // alias: start_str_from_player_class
 
 /// address: 0x4A0FE8
 ///
-/// start_mag_from_player_class maps from player_class to starting stat in magic.
+/// MagicTbl maps from player_class to starting stat in magic.
 ///
-/// PSX ref: 0x800DA408
+/// PSX ref (SLPS-01416): 0x800DA408
 /// PSX def: int MagicTbl[3]
-extern int start_mag_from_player_class[3];
+extern int32_t MagicTbl[3]; // alias: start_mag_from_player_class
 
 /// address: 0x4A0FF4
 ///
-/// start_dex_from_player_class maps from player_class to starting stat in
-/// dexterity.
+/// DexterityTbl maps from player_class to starting stat in dexterity.
 ///
-/// PSX ref: 0x800DA414
+/// PSX ref (SLPS-01416): 0x800DA414
 /// PSX def: int DexterityTbl[3]
-extern int start_dex_from_player_class[3];
+extern int32_t DexterityTbl[3]; // alias: start_dex_from_player_class
 
 /// address: 0x4A1000
 ///
-/// start_vit_from_player_class maps from player_class to starting stat in
-/// vitality.
+/// VitalityTbl maps from player_class to starting stat in vitality.
 ///
-/// PSX ref: 0x800DA420
+/// PSX ref (SLPS-01416): 0x800DA420
 /// PSX def: int VitalityTbl[3]
-extern int start_vit_from_player_class[3];
+extern int32_t VitalityTbl[3]; // alias: start_vit_from_player_class
 
 /// address: 0x4A100C
 ///
-/// start_chance_to_block_bonus_from_player_class specifies the chance to block
-/// bonus of each player class.
+/// ToBlkTbl specifies the chance to block bonus of each player class.
 ///
-/// PSX ref: 0x800DA42C
+/// PSX ref (SLPS-01416): 0x800DA42C
 /// PSX def: int ToBlkTbl[3]
-extern int start_chance_to_block_bonus_from_player_class[3];
+extern int32_t ToBlkTbl[3]; // alias: start_chance_to_block_bonus_from_player_class
 
 /// address: 0x4A1018
 ///
-/// player_class_names2 specifies the name of each player class.
-extern char *player_class_names2[3];
+/// ClassNameTblUnused specifies the name of each player class.
+extern char *ClassNameTblUnused[3]; // alias: player_class_names2
 
 /// address: 0x4A1024
 ///
-/// max_stat_from_player_class maps from player_class to maximum stats.
+/// MaxStats maps from player_class to maximum stats.
 ///
-/// PSX ref: 0x800DA438
+/// PSX ref (SLPS-01416): 0x800DA438
 /// PSX def: int MaxStats[3][4]
-extern Stats max_stat_from_player_class[3];
+extern Stats MaxStats[3]; // alias: max_stat_from_player_class
 
 /// address: 0x4A1054
 ///
-/// exp_limit specifies the experience point limit of each level.
+/// ExpLvlsTbl specifies the experience point limit of each level.
 ///
-/// PSX ref: 0x800DA468
+/// PSX ref (SLPS-01416): 0x800DA468
 /// PSX def: long ExpLvlsTbl[51]
-extern int exp_limit[51];
+extern int32_t ExpLvlsTbl[51]; // alias: exp_limit
 
 /// address: 0x4A1120
 ///
-/// player_class_names specifies the name of each player class.
-extern char *player_class_names[3];
+/// ClassNameTbl specifies the name of each player class.
+extern char *ClassNameTbl[3]; // alias: player_class_names
+
+/// address: 0x4A112C
+///
+/// fix is an unused variable of PM_ChangeLightOff to compute light radius.
+///
+/// PSX def: static unsigned char fix[9]; // static local variable of PM_ChangeLightOff in PSX
+extern uint8_t fix[9];
 
 /// address: 0x4A1138
 ///

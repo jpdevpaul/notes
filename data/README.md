@@ -52,7 +52,7 @@ Each global variable in the data section has been categorised based on their ori
 | [palette.cpp](palette.h)   | `0x4A0D08`    | `0x4A0D6F`  | ![100%](http://progressed.io/bar/100 "(104/104 bytes)")     |
 | [path.cpp](path.h)         | `0x4A0D70`    | `0x4A0D7B`  | ![100%](http://progressed.io/bar/100 "(12/12 bytes)")       |
 | [pfile.cpp](pfile.h)       | `0x4A0D7C`    | `0x4A0EF7`  | ![100%](http://progressed.io/bar/100 "(380/380 bytes)")     |
-| [player.cpp](player.h)     | `0x4A0EF8`    | `0x4A1AAB`  | ![97%](http://progressed.io/bar/97 "(2933/2996 bytes)")     |
+| [player.cpp](player.h)     | `0x4A0EF8`    | `0x4A1AAB`  | ![100%](http://progressed.io/bar/100 "(2996/2996 bytes)")   |
 | [plrmsg.cpp](plrmsg.h)     | `0x4A1AAC`    | `0x4A1ABB`  | ![100%](http://progressed.io/bar/100 "(16/16 bytes)")       |
 | [portal.cpp](portal.h)     | `0x4A1ABC`    | `0x4A1ADF`  | ![100%](http://progressed.io/bar/100 "(36/36 bytes)")       |
 | [quests.cpp](quests.h)     | `0x4A1AE0`    | `0x4A1E07`  | ![100%](http://progressed.io/bar/100 "(808/808 bytes)")     |
