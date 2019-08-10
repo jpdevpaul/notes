@@ -923,6 +923,12 @@ typedef enum {
 	ITEM_TYPE_NONE         = -1,
 } item_type;
 
+/// Dungeon piece IDs for dungeon layout 1.
+typedef enum {
+	L1_PIECE_ID_NONE = 0,
+	// TODO: add l1_piece_id enums.
+} l1_piece_id;
+
 /// Tile IDs for dungeon layout 1.
 ///
 /// TODO: Figure out how to fix broken link. Requires graphics files, which may
