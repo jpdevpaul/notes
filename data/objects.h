@@ -2,22 +2,27 @@
 
 /// address: 0x49F288
 ///
-/// object_id_from_dun_object_id maps from dun_object_id to object_id.
-extern object_id object_id_from_dun_object_id[114];
+/// ObjTypeConv maps from dun_object_id to object_id.
+///
+/// PSX ref (SLPS-01416): 0x800D82EC
+/// PSX def: int ObjTypeConv[113]
+extern object_id ObjTypeConv[114]; // alias: object_id_from_dun_object_id
 
 /// address: 0x49F450
 ///
-/// object_data contains the data related to each object ID.
+/// AllObjects contains the data related to each object ID.
 ///
-/// PSX ref: 0x800D84B0
-/// PSX def: ObjDataStruct AllObjects[99]
-extern ObjectData object_data[99];
+/// PSX ref (SLPS-01416): 0x800D84B0
+/// PSX def: struct ObjDataStruct AllObjects[99]
+extern ObjectData AllObjects[99]; // alias: object_data
 
 /// address: 0x4A0554
 ///
-/// object_cel_name_from_object_graphic_id maps from object_graphic_id to object
-/// CEL name.
-extern char *object_cel_name_from_object_graphic_id[56];
+/// ObjMasterLoadList maps from object_graphic_id to object CEL name.
+///
+/// PSX ref (SLPS-01416): 0x801169F0
+/// PSX def: struct OBJ_LOAD_INFO ObjMasterLoadList[56]
+extern char *ObjMasterLoadList[56]; // alias: object_cel_name_from_object_graphic_id
 
 /// address: 0x4A0634
 ///
@@ -301,62 +306,65 @@ extern char str_4A0834[7];
 
 /// address: 0x4A083C
 ///
-/// barrel_x_delta specifies the X-coordinate delta between barrels.
+/// bxadd specifies the X-coordinate delta between barrels.
 ///
-/// PSX ref: 0x800D8BA8
+/// PSX ref (SLPS-01416): 0x800D8BA8
 /// PSX def: int bxadd[8]
-extern int barrel_x_delta[8];
+extern int32_t bxadd[8]; // alias: barrel_x_delta
 
 /// address: 0x4A085C
 ///
-/// barrel_y_delta specifies the Y-coordinate delta between barrels.
+/// byadd specifies the Y-coordinate delta between barrels.
 ///
-/// PSX ref: 0x800D8BC8
+/// PSX ref (SLPS-01416): 0x800D8BC8
 /// PSX def: int byadd[8]
-extern int barrel_y_delta[8];
+extern int32_t byadd[8]; // alias: barrel_y_delta
 
 /// address: 0x4A087C
 ///
-/// shrine_name_from_shrine_id maps from shrine_id to shrine name.
+/// shrinestrs maps from shrine_id to shrine name.
 ///
-/// PSX ref: 0x800D8BE8
+/// PSX ref (SLPS-01416): 0x800D8BE8
 /// PSX def: unsigned short shrinestrs[26]
-extern char *shrine_name_from_shrine_id[26];
+extern char *shrinestrs[26]; // alias: shrine_name_from_shrine_id
 
 /// address: 0x4A08E4
 ///
-/// dlvl_min_from_shrine_id specifies the minimum dungeon level on which each
-/// shrine will appear.
-extern int8_t dlvl_min_from_shrine_id[26];
+/// shrinemin specifies the minimum dungeon level on which each shrine will
+/// appear.
+extern uint8_t shrinemin[26]; // alias: dlvl_min_from_shrine_id
 
 /// address: 0x4A0900
 ///
-/// dlvl_max_from_shrine_id specifies the maximum dungeon level on which each
-/// shrine will appear.
-extern int8_t dlvl_max_from_shrine_id[26];
+/// shrinemax specifies the maximum dungeon level on which each shrine will
+/// appear.
+extern uint8_t shrinemax[26]; // alias: dlvl_max_from_shrine_id
 
 /// address: 0x4A091C
 ///
-/// shrine_game_type_from_shrine_id specifies the game type for which each shrine
-/// may appear.
+/// shrineavail specifies the game type for which each shrine may appear.
 ///
-/// PSX ref: 0x800D8C1C
+/// PSX ref (SLPS-01416): 0x800D8C1C
 /// PSX def: char shrineavail[26]
-extern int8_t shrine_game_type_from_shrine_id[26]; // TODO: define game_type enum
+// TODO: define game_type enum
+extern int8_t shrineavail[26]; // alias: shrine_game_type_from_shrine_id
 
 /// address: 0x4A0938
 ///
-/// book_name_from_book_id maps from book_id to book name.
+/// StoryBookName maps from book_id to book name.
 ///
-/// PSX ref: 0x800D8C38
+/// PSX ref (SLPS-01416): 0x800D8C38
 /// PSX def: unsigned short StoryBookName[9]
-extern char *book_name_from_book_id[9];
+extern char *StoryBookName[9]; // alias: book_name_from_book_id
 
 /// address: 0x4A095C
 ///
-/// narrator_book_from_player_class specifies the speech IDs of each dungeon type
-/// narrator book, for each player class.
-extern NarratorBook narrator_book_from_player_class[3];
+/// StoryText specifies the speech IDs of each dungeon type narrator book, for
+/// each player class.
+///
+/// PSX ref (SLPS-01416): 0x800E40B0
+/// PSX def: unsigned short StoryText[3][3]
+extern NarratorBook StoryText[3]; // alias: narrator_book_from_player_class
 
 /// address: 0x4A0980
 ///
