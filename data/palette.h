@@ -7,13 +7,16 @@ extern int gamma_correction;
 
 /// address: 0x4A0D0C
 ///
-/// coluor_cycling_enabled specifies whether colour cycling is enabled.
-extern bool32_t coluor_cycling_enabled;
+/// color_cycling_enabled specifies whether colour cycling is enabled.
+extern bool32_t color_cycling_enabled;
 
 /// address: 0x4A0D10
 ///
-/// palette_bright specifies whether the palette has max brightness.
-extern bool8_t palette_bright;
+/// sgbFadedIn specifies whether the palette has max brightness.
+///
+/// PSX ref (SLPS-01416): 0x8011BC65
+/// PSX def: unsigned char sgbFadedIn
+extern bool8_t sgbFadedIn; // alias: palette_bright
 
 /// address: 0x4A0D14
 ///
