@@ -2,34 +2,45 @@
 
 /// address: 0x4A22D4
 ///
-/// music_enabled specifies whether background music is enabled.
-extern bool8_t music_enabled;
+/// gbMusicOn specifies whether background music is enabled.
+///
+/// PSX ref (easy-as-pie): 0x8012B572
+/// PSX def: unsigned char gbMusicOn
+extern bool8_t gbMusicOn; // alias: music_enabled
 
 /// address: 0x4A22D5
 ///
-/// sound_enabled specifies whether sound effects are enabled.
-extern bool8_t sound_enabled;
+/// gbSoundOn specifies whether sound effects are enabled.
+///
+/// PSX ref (easy-as-pie): 0x8012B573
+/// PSX def: unsigned char gbSoundOn
+extern bool8_t gbSoundOn; // alias: sound_enabled
 
 /// address: 0x4A22D6
 ///
-/// flag_ds_noduplicates specifies that no duplicate audio channel should be
-/// used.
-extern bool8_t flag_ds_noduplicates;
+/// gbDupSounds specifies that no duplicate audio channel should be used.
+///
+/// PSX ref (SLPS-01416): 0x8011BB9A
+/// PSX def: unsigned char gbDupSounds
+extern bool8_t gbDupSounds; // alias: flag_ds_noduplicates
 
 /// address: 0x4A22D8
 ///
-/// music_track_id specifies the active background music track id.
-extern track_id music_track_id;
+/// sgnMusicTrack specifies the active background music track id.
+///
+/// PSX ref (SLPS-01416): 0x8011BBAC
+/// PSX def: int sgnMusicTrack
+extern track_id sgnMusicTrack; // alias: music_track_id
 
 /// address: 0x4A22DC
 ///
-/// track_names maps from track ID to track name.
-extern char *track_names[6];
-
-/// address: 0x4A22F4
+/// sgszMusicTracks maps from track ID to track name.
 ///
-/// track_unused is unused.
-extern int8_t track_unused[8];
+/// PSX ref (SLPS-01416): 0x800E389C
+/// PSX def: unsigned short sgszMusicTracks[6]
+extern char *sgszMusicTracks[6]; // alias: track_names
+
+// Note: unusd data at 0x4A22F4 of type Rect[2];
 
 /// address: 0x4A22FC
 ///

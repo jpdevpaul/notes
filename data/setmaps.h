@@ -8,9 +8,6 @@ extern Rect setmap_rects[32];
 /// address: 0x4A210C
 ///
 /// quest_level_names maps from quest level to quest level names.
-///
-/// References:
-///    * https://github.com/sanctuary/notes/blob/master/enums.h#quest_level
 extern char *quest_level_names[6];
 
 /// address: 0x4A2124
