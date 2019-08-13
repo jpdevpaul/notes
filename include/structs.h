@@ -2800,6 +2800,33 @@ typedef struct {
 
 /// UniqueItemData describes the properties and effects of a unique item.
 ///
+/// PSX def:
+///    struct UItemStruct {
+///       int UIName;
+///       char UIItemId;
+///       char UIMinLvl;
+///       char UINumPL;
+///       int UIValue;
+///       char UIPower1;
+///       int UIParam1;
+///       int UIParam2;
+///       char UIPower2;
+///       int UIParam3;
+///       int UIParam4;
+///       char UIPower3;
+///       int UIParam5;
+///       int UIParam6;
+///       char UIPower4;
+///       int UIParam7;
+///       int UIParam8;
+///       char UIPower5;
+///       int UIParam9;
+///       int UIParam10;
+///       char UIPower6;
+///       int UIParam11;
+///       int UIParam12;
+///    };
+///
 /// size = 0x54
 typedef struct {
 	/// offset: 0000 (4 bytes)
@@ -2810,9 +2837,10 @@ typedef struct {
 	int8_t quality_lvl;
 	/// offset: 0006 (1 bytes)
 	int8_t neffects;
+	// padding
 	/// offset: 0008 (4 bytes)
 	int32_t gold_price;
-	/// offset 000C (72 bytes)
+	/// offset: 000C (72 bytes)
 	ItemEffect effects[6];
 } UniqueItemData;
 

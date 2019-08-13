@@ -43,7 +43,7 @@ Each global variable in the read-only data section has been categorised based on
 | [plrmsg.cpp](plrmsg.h)     | `0x47F230`    | `0x47F237`  | ![100%](http://progressed.io/bar/100 "(8/8 bytes)")         |
 | [scrollrt.cpp](scrollrt.h) | `0x47F238`    | `0x47F24B`  | ![100%](http://progressed.io/bar/100 "(20/20 bytes)")       |
 | [sound.cpp](sound.h)       | `0x47F24C`    | `0x47F277`  | ![100%](http://progressed.io/bar/100 "(44/44 bytes)")       |
-| [talk.cpp](talk.h)         | `0x47F278`    | `0x4802AB`  | ![100%](http://progressed.io/bar/100 "(4148/4148 bytes)")   |
+| [textdat.cpp](textdat.h)   | `0x47F278`    | `0x4802AB`  | ![100%](http://progressed.io/bar/100 "(4148/4148 bytes)")   |
 | [towners.cpp](towners.h)   | `0x4802AC`    | `0x4802CF`  | ![100%](http://progressed.io/bar/100 "(36/36 bytes)")       |
 | [track.cpp](track.h)       | `0x4802D0`    | `0x4802D3`  | ![100%](http://progressed.io/bar/100 "(4/4 bytes)")         |
 | [wave.cpp](wave.h)         | `0x4802D4`    | `0x4802D7`  | ![100%](http://progressed.io/bar/100 "(4/4 bytes)")         |

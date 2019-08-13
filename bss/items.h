@@ -6,4 +6,4 @@
 /// PSX def: ItemStruct item[128]
 ///
 /// items contains the items on ground of the current game.
-extern Item items[128];
+extern Item item[128]; // alias: items
