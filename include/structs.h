@@ -1094,7 +1094,7 @@ typedef struct {
 	item_id id : 32;
 } Item;
 
-/// ItemData describes possible basic state a of game item (i.e. state before possibly applying
+/// ItemData describes possible basic state of a game item (i.e. state before possibly applying
 /// prefix, suffix, unique, effects or spells for books or staves)
 ///
 /// size = 0x4C
@@ -1104,6 +1104,7 @@ typedef struct {
 	/// offset: 0004 (1 byte)
 	item_class _class : 8;
 	/// offset: 0005 (1 byte)
+	// padding
 	item_equip_type equip_type : 8;
 	/// offset: 0008 (4 bytes)
 	item_inv_graphics_id inv_graphics_id : 32;
@@ -1111,6 +1112,7 @@ typedef struct {
 	item_type type : 8;
 	/// offset 000D (1 byte)
 	unique_base_item unique_base_item_id : 8;
+	// padding
 	/// offset: 0010 (4 bytes)
 	const char *name;
 	/// offset: 0014 (4 bytes)
