@@ -2,11 +2,11 @@
 
 /// address: 0x4A23C8
 ///
-/// spell_data contains the data related to each spell ID.
+/// spelldata contains the data related to each spell ID.
 ///
 /// PSX ref (SLPS-01416): 0x800DDB80
 /// PSX def: struct SpellData spelldata[37]
-extern SpellData spell_data[37];
+extern SpellData spelldata[37]; // alias: spell_data
 
 /// address: 0x4A2BE0
 ///

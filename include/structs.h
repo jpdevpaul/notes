@@ -1653,6 +1653,7 @@ typedef struct {
 	theme_id theme_id : 8;
 	/// offset: 0006 (1 bytes)
 	quest_id quest_id : 8;
+	// padding
 	/// offset: 0008 (4 bytes)
 	bool32_t animated;
 	/// offset: 000C (4 bytes)
@@ -1673,6 +1674,7 @@ typedef struct {
 	/// offset: 0025 (1 bytes)
 	/// TODO: define object_interact enum
 	int8_t object_interact;
+	// padding
 	/// offset: 0028 (4 bytes)
 	bool32_t possible_traphole;
 } ObjectData;
@@ -2456,8 +2458,11 @@ typedef struct {
 	dungeon_type dtype : 8;
 	/// offset: 0003 (1 bytes)
 	quest_id quest_id : 8;
+	/// offset: 0004 (1 bytes)
+	int8_t occurrence;
 	/// offset: 0005 (1 bytes)
 	quest_level quest_level : 8;
+	// padding
 	/// offset: 0008 (1 bytes)
 	bool8_t multiplayer;
 	/// offset: 000C (4 bytes)
