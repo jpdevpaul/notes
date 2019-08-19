@@ -11,6 +11,8 @@ extern l1_tile_id L5dungeon[80][80]; // alias: l1_tile_bit_map
 
 /// TODO: Define l1_flag enum.
 
+// TODO: verify that the name really is mydflags, and not dflags (or L5dflags).
+
 /// address: 0x527064
 ///
 /// mydflags contains flags used for dungeon generation of the Cathedral.
