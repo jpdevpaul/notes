@@ -33,7 +33,7 @@ extern bool32_t automapflag; // alias: automap_enabled
 ///
 /// PSX ref (SLPS-01416): 0x80120F68
 /// PSX def: unsigned char AmShiftTab[8]
-extern uint8_t AmShiftTab[32]
+extern uint8_t AmShiftTab[32];
 
 /// address: 0x4B7E6C
 ///
