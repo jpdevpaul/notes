@@ -237,7 +237,7 @@ extern char str_497D9C[7];
 ///
 /// PSX ref (SLPS-01416): 0x801029D8
 /// PSX def: int XDirAdd[8]
-int32_t XDirAdd[8];
+int32_t XDirAdd[8]; // alias: x_offset_from_dir
 
 /// address: 0x497DC4
 ///
@@ -245,7 +245,7 @@ int32_t XDirAdd[8];
 ///
 /// PSX ref (SLPS-01416): 0x801029F8
 /// PSX def: int YDirAdd[8]
-int32_t YDirAdd[8];
+int32_t YDirAdd[8]; // alias: y_offset_from_dir
 
 /// address: 0x497DE4
 ///

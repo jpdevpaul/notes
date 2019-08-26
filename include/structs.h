@@ -1333,7 +1333,7 @@ typedef struct {
 	/// offset: 000C (4 bytes)
 	bool32_t draw;
 	/// offset: 0010 (1 bytes)
-	int32_t type; // TODO: figure out what field is used for, add enum.
+	uint8_t type; // TODO: figure out what field is used for, add enum.
 	/// offset: 0011 (1 bytes)
 	/// Damage type of missile (used for resistance).
 	damage_type damage_type : 8;

@@ -386,11 +386,11 @@ extern uint8_t setlvltype;
 ///
 /// PSX ref (SLPS-01416): 0x8011C10E
 /// PSX def: unsigned char setlevel
-extern uint8_t setlevel;
+extern uint8_t setlevel; // alias: is_set_level
 
 /// address: 0x5CF320
 ///
-/// LvlViewY specifies the level viewpoint y-coordinate of the map.
+/// LvlViewY specifies the level viewpoint Y-coordinate of the map.
 ///
 /// PSX ref (SLPS-01416): 0x8011C130
 /// PSX def: int LvlViewY
@@ -398,7 +398,7 @@ extern int32_t LvlViewY; // alias: lvl_view_y
 
 /// address: 0x5CF324
 ///
-/// LvlViewX specifies the level viewpoint x-coordinate of the map.
+/// LvlViewX specifies the level viewpoint X-coordinate of the map.
 ///
 /// PSX ref (SLPS-01416): 0x8011C12C
 /// PSX def: int LvlViewX
@@ -406,7 +406,7 @@ extern int32_t LvlViewX; // alias: lvl_view_x
 
 /// address: 0x5CF328
 ///
-/// TODO: add docs.
+/// dmaxx specifies the maximum X-coordinate of the map.
 ///
 /// PSX ref (SLPS-01416): 0x8011C100
 /// PSX def: int dmaxx
@@ -414,7 +414,7 @@ extern int32_t dmaxx;
 
 /// address: 0x5CF32C
 ///
-/// TODO: add docs.
+/// dmaxy specifies the maximum Y-coordinate of the map.
 ///
 /// PSX ref (SLPS-01416): 0x8011C104
 /// PSX def: int dmaxy
@@ -422,23 +422,23 @@ extern int32_t dmaxy;
 
 /// address: 0x5CF330
 ///
-/// setpc_h specifies the height of the active miniset of the map.
+/// setpc_h specifies the height of the active set level of the map.
 ///
 /// PSX ref (SLPS-01416): 0x8011C0F0
 /// PSX def: int setpc_h
-extern int32_t setpc_h; // alias: set_height
+extern int32_t setpc_h; // alias: set_level_height
 
 /// address: 0x5CF334
 ///
-/// setpc_w specifies the width of the active miniset of the map.
+/// setpc_w specifies the width of the active set level of the map.
 ///
 /// PSX ref (SLPS-01416): 0x8011C0EC
 /// PSX def: int setpc_w
-extern int32_t setpc_w; // alias: set_width
+extern int32_t setpc_w; // alias: set_level_width
 
 /// address: 0x5CF338
 ///
-/// setpc_x specifies the active miniset x-coordinate of the map.
+/// setpc_x specifies the active set level X-coordinate of the map.
 ///
 /// PSX ref (SLPS-01416): 0x8011C0E4
 /// PSX def: int setpc_x
@@ -446,7 +446,7 @@ extern int32_t setpc_x; // alias: set_xx
 
 /// address: 0x5CF33C
 ///
-/// ViewX specifies the player viewpoint x-coordinate of the map.
+/// ViewX specifies the player viewpoint X-coordinate of the map.
 ///
 /// PSX ref (SLPS-01416): 0x8011C114
 /// PSX def: int ViewX
@@ -454,7 +454,7 @@ extern int32_t ViewX; // alias: view_x
 
 /// address: 0x5CF340
 ///
-/// ViewY specifies the player viewpoint y-coordinate of the map.
+/// ViewY specifies the player viewpoint Y-coordinate of the map.
 ///
 /// PSX ref (SLPS-01416): 0x8011C118
 /// PSX def: int ViewY
@@ -462,7 +462,7 @@ extern int32_t ViewY; // alias: view_y
 
 /// address: 0x5CF344
 ///
-/// setpc_y specifies the active miniset y-coordinate of the map.
+/// setpc_y specifies the active set level Y-coordinate of the map.
 ///
 /// PSX ref (SLPS-01416): 0x8011C0E8
 /// PSX def: int setpc_y
@@ -478,7 +478,7 @@ extern int8_t dMissile[112][112]; // alias: missile_num_map
 
 /// address: 0x5D2458
 ///
-/// TODO: add docs.
+/// dminx specifies the minimum X-coordinate of the map.
 ///
 /// PSX ref (SLPS-01416): 0x8011C0F8
 /// PSX def: int dminx
@@ -486,7 +486,7 @@ extern int32_t dminx;
 
 /// address: 0x5D245C
 ///
-/// TODO: add docs.
+/// dminy specifies the minimum Y-coordinate of the map.
 ///
 /// PSX ref (SLPS-01416): 0x8011C0FC
 /// PSX def: int dminy

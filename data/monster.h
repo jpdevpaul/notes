@@ -20,6 +20,10 @@ extern uint8_t MonstConvTbl[128];
 ///
 /// MonstAvailTbl maps from monster ID to monster availability mask.
 ///
+///    0b00: never avalible
+///    0b01: avalible in retail and shareware
+///    0b10: avalible in retail only
+///
 /// PSX ref (SLPS-01416): 0x8010C698
 /// PSX def: char MonstAvailTbl[112]
 extern uint8_t MonstAvailTbl[112];
