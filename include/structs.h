@@ -685,6 +685,31 @@ typedef struct {
 	DeltaMonster monsters[200];
 } DeltaLevel;
 
+/// A DeltaPortal represents a portal between two levels.
+///
+/// PSX def:
+///    typedef struct DPortal {
+///       unsigned char x;
+///       unsigned char y;
+///       unsigned char level;
+///       unsigned char ltype;
+///       unsigned char setlvl;
+///    } DPortal;
+///
+/// size = 0x5
+typedef struct {
+	/// offset: 0000 (1 bytes)
+	int8_t x;
+	/// offset: 0001 (1 bytes)
+	int8_t y;
+	/// offset: 0002 (1 bytes)
+	int8_t dlvl;
+	/// offset: 0003 (1 bytes)
+	dungeon_type dtype : 8;
+	/// offset: 0004 (1 bytes)
+	quest_level quest_lvl : 8;
+} DeltaPortal;
+
 /// 10 blocks for l1.min, l2.min and l3.min
 /// 16 blocks for l4.min and town.min
 const int nblocks = 10;
@@ -1367,6 +1392,7 @@ typedef struct {
 	/// offset: 0001 (1 bytes)
 	/// Number of animations.
 	int8_t nanims;
+	// align (2 bytes)
 	/// offset: 0004 (4 bytes)
 	/// CL2 image name.
 	char *cl2_name;
@@ -2363,26 +2389,42 @@ typedef struct {
 /// A Portal represents a portal between two levels.
 ///
 /// PSX def:
-///    typedef struct DPortal {
-///       unsigned char x;
-///       unsigned char y;
-///       unsigned char level;
-///       unsigned char ltype;
+///    typedef struct PortalStruct {
+///       int ltype;
+///       char x;
+///       char y;
+///       char level;
+///       char setlvlnum;
+///       unsigned char open;
 ///       unsigned char setlvl;
-///    } DPortal;
+///    } PortalStruct;
 ///
-/// size = 0x5
+/// size = 0x18
 typedef struct {
-	/// offset: 0000 (1 bytes)
-	int8_t x;
-	/// offset: 0001 (1 bytes)
-	int8_t y;
-	/// offset: 0002 (1 bytes)
-	int8_t dlvl;
-	/// offset: 0003 (1 bytes)
-	dungeon_type dtype : 8;
-	/// offset: 0004 (1 bytes)
-	quest_level quest_lvl : 8;
+	/// Portal is active.
+	///
+	/// offset: 0000 (4 bytes)
+	bool32_t active;
+	/// X-coordinate of portal.
+	///
+	/// offset: 0004 (4 bytes)
+	int32_t x;
+	/// Y-coordinate of portal.
+	///
+	/// offset: 0008 (4 bytes)
+	int32_t y;
+	/// Dungeon level or set level of portal.
+	///
+	/// offset: 000C (4 bytes)
+	int32_t level;
+	/// Dungeon type of portal.
+	///
+	/// offset: 0010 (4 bytes)
+	dungeon_type dtype : 32;
+	/// Portal opened at set level.
+	///
+	/// offset: 0014 (4 bytes)
+	bool32_t is_set_level;
 } Portal;
 
 /// Quest describes in-game state of a quest.

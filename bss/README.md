@@ -51,7 +51,7 @@ Each global variable in the uninitialized data section has been categorised base
 | [pfile.cpp](pfile.h)       | `0x6862E0`    | `0x68642F`  | ![100%](http://progressed.io/bar/100 "(336/336 bytes)")         |
 | [player.cpp](player.h)     | `0x686430`    | `0x69B7CF`  | ![99%](http://progressed.io/bar/99 "(86884/86944 bytes)")       |
 | [plrmsg.cpp](plrmsg.h)     | `0x69B7D0`    | `0x69BC97`  | ![0%](http://progressed.io/bar/0 "(0/1224 bytes)")              |
-| [portal.cpp](portal.h)     | `0x69BC98`    | `0x69BCFF`  | ![0%](http://progressed.io/bar/0 "(0/104 bytes)")               |
+| [portal.cpp](portal.h)     | `0x69BC98`    | `0x69BCFF`  | ![100%](http://progressed.io/bar/100 "(104/104 bytes)")         |
 | [quests.cpp](quests.h)     | `0x69BD00`    | `0x69BEF7`  | ![76%](http://progressed.io/bar/76 "(388/504 bytes)")           |
 | [scrollrt.cpp](scrollrt.h) | `0x69BEF8`    | `0x69EFAF`  | ![100%](http://progressed.io/bar/100 "(12472/12472 bytes)")     |
 | [sha1.cpp](sha1.h)         | `0x69EFB0`    | `0x69F0C3`  | ![100%](http://progressed.io/bar/100 "(276/276 bytes)")         |
