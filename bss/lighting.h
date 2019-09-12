@@ -21,10 +21,10 @@ extern Lighting lightings[32];
 /// lighting_disabled specifies whether light effects are disabled.
 extern bool32_t lighting_disabled;
 
+/// address: 0x642A14
+///
 /// lighting_max specifies the maximum number of light effects.
 ///
 /// PSX ref: 0x8011B918
 /// PSX def: char lightmax
-///
-/// address: 0x642A14
 extern int8_t lighting_max;
