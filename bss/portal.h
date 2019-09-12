@@ -1,6 +1,6 @@
 #include "types.h"
 
-/// address 0x69BC98
+/// address: 0x69BC98
 ///
 /// portal holds the in-game state of portals.
 ///
@@ -8,7 +8,7 @@
 /// PSX def: struct PortalStruct portal[4]
 extern Portal portal[4]; // alias: portals
 
-/// address 0x69BCF8
+/// address: 0x69BCF8
 ///
 /// portalindex specifies the current portal number (a portal array index).
 ///

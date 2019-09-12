@@ -10,7 +10,7 @@ extern int32_t light_table_index;
 /// screen_y_times_768 is a pre-computed table for y*768; 0, 768, 1536, ...
 extern int screen_y_times_768[1024];
 
-/// address 0x69CEFC
+/// address: 0x69CEFC
 ///
 /// +Infinity after initialization of scrollrt.cpp.
 extern float scrollrt_cpp_init_value;

@@ -16,9 +16,9 @@ extern Lighting visions[32];
 /// PSX def: LightListStruct2 LightList[80]
 extern Lighting lightings[32];
 
-/// lighting_disabled specifies whether light effects are disabled.
-///
 /// address: 0x646A28
+///
+/// lighting_disabled specifies whether light effects are disabled.
 extern bool32_t lighting_disabled;
 
 /// lighting_max specifies the maximum number of light effects.

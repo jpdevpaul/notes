@@ -1,6 +1,6 @@
 #include "types.h"
 
-/// address 0x525514
+/// address: 0x525514
 ///
 /// +Infinity after initialization of diablo.cpp.
 extern float diablo_cpp_init_value;

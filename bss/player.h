@@ -1,6 +1,6 @@
 #include "types.h"
 
-/// address 0x68643C
+/// address: 0x68643C
 ///
 /// +Infinity after initialization of player.cpp.
 extern float player_cpp_init_value;

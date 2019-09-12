@@ -5,7 +5,7 @@
 /// file_info contains information about the game executable and asset archives.
 extern FileInfo file_info;
 
-/// address 0x63497C
+/// address: 0x63497C
 ///
 /// +Infinity after initialization of init.cpp.
 extern float init_cpp_init_value;

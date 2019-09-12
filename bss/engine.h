@@ -1,6 +1,6 @@
 #include "types.h"
 
-/// address 0x52B968
+/// address: 0x52B968
 ///
 /// +Infinity after initialization of engine.cpp.
 extern float engine_cpp_init_value;

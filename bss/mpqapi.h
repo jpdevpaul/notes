@@ -1,6 +1,6 @@
 #include "types.h"
 
-/// address 0x659B00
+/// address: 0x659B00
 ///
 /// +Infinity after initialization of mpqapi.cpp.
 extern float mpqapi_cpp_init_value;

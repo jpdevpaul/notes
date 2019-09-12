@@ -7,12 +7,11 @@ extern float monster_cpp_init_value;
 
 /// address: 0x64CCE8
 ///
-/// monster_total_kills_from_monster_id tracks the total number of monsters
-/// killed per monster_id.
+/// monstkills tracks the total number of monsters killed per monster_id.
 ///
 /// PSX ref: 0x8010A240
 /// PSX def: short monstkills[190]
-extern int monster_total_kills_from_monster_id[200];
+extern int monstkills[200]; // alias: monster_total_kills_from_monster_id
 
 /// address: 0x64D008
 ///
@@ -26,7 +25,7 @@ extern int active_monster_nums[200];
 
 /// address: 0x64D330
 ///
-/// monsters contains the monsters of the current game.
+/// monsters holds the in-game state of each monster.
 ///
 /// PSX ref: 0x80105394
 /// PSX def: MonsterStruct monster[190]

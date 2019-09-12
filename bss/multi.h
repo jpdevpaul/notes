@@ -11,7 +11,7 @@ extern char game_pass[128];
 /// files.
 extern Hero heroes[4];
 
-/// address 0x678620
+/// address: 0x678620
 ///
 /// +Infinity after initialization of multi.cpp.
 extern float multi_cpp_init_value;

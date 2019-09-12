@@ -6,7 +6,7 @@
 /// "gendata/cut*.cel".
 extern uint8_t *cut_scene_cel;
 
-/// address 0x634CAC
+/// address: 0x634CAC
 ///
 /// +Infinity after initialization of interfac.cpp.
 extern float interfac_cpp_init_value;

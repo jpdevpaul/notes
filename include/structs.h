@@ -712,7 +712,7 @@ typedef struct {
 
 /// 10 blocks for l1.min, l2.min and l3.min
 /// 16 blocks for l4.min and town.min
-const int nblocks = 10;
+static const int nblocks = 10;
 
 /// A DPiece represents a dungeon piece, which specifies how to arrange frames of
 /// a level CEL file in order to form a miniature tile. A dungeon piece consists

@@ -1,6 +1,6 @@
 #include "types.h"
 
-/// address 0x65AB1C
+/// address: 0x65AB1C
 ///
 /// +Infinity after initialization of msg.cpp.
 extern float msg_cpp_init_value;

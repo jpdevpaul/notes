@@ -1,6 +1,6 @@
 #include "types.h"
 
-/// address 0x52A550
+/// address: 0x52A550
 ///
 /// +Infinity after initialization of effects.cpp.
 extern float effects_cpp_init_value;

@@ -6,7 +6,7 @@
 /// applied.
 extern PALETTEENTRY logical_palette[256];
 
-/// address 0x67DBCC
+/// address: 0x67DBCC
 ///
 /// +Infinity after initialization of palette.cpp.
 extern float palette_cpp_init_value;

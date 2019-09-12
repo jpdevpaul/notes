@@ -6,7 +6,7 @@
 /// (i.e. when the left mouse button is held down).
 extern bool8_t walk_tracking_active;
 
-/// address 0x6ABABC
+/// address: 0x6ABABC
 ///
 /// +Infinity after initialization of track.cpp.
 extern float track_cpp_init_value;

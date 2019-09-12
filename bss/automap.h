@@ -1,6 +1,6 @@
 #include "types.h"
 
-/// address 0x4B7A40
+/// address: 0x4B7A40
 ///
 /// automaptype maps from tile_id to automap type.
 ///
@@ -9,12 +9,12 @@
 // TODO: define automap_type enum.
 extern uint16_t automaptype[512]; // alias: automap_type_from_tile_id
 
-/// address 0x4B7E40
+/// address: 0x4B7E40
 ///
 /// TODO: add docs.
 extern int32_t MapX;
 
-/// address 0x4B7E44
+/// address: 0x4B7E44
 ///
 /// TODO: add docs.
 extern int32_t MapY;
@@ -27,7 +27,7 @@ extern int32_t MapY;
 /// PSX def: unsigned __int8 automapflag
 extern bool32_t automapflag; // alias: automap_enabled
 
-/// address 0x4B7E4C
+/// address: 0x4B7E4C
 ///
 /// TODO: add docs.
 ///
@@ -51,7 +51,7 @@ extern bool8_t automapview[40][40]; // alias: automap_discovered
 /// PSX def: int AutoMapScale
 extern int32_t AutoMapScale; // alias: automap_zoom_level
 
-/// address 0x4B84B0
+/// address: 0x4B84B0
 ///
 /// TODO: add docs.
 ///
@@ -59,7 +59,7 @@ extern int32_t AutoMapScale; // alias: automap_zoom_level
 /// PSX def: int AutoMapXOfs
 extern int32_t AutoMapXOfs;
 
-/// address 0x4B84B4
+/// address: 0x4B84B4
 ///
 /// TODO: add docs.
 ///
@@ -67,22 +67,22 @@ extern int32_t AutoMapXOfs;
 /// PSX def: int AutoMapYOfs
 extern int32_t AutoMapYOfs;
 
-/// address 0x4B84B8
+/// address: 0x4B84B8
 ///
 /// TODO: add docs.
 extern int32_t AutoMapPosBits;
 
-/// address 0x4B84BC
+/// address: 0x4B84BC
 ///
 /// TODO: add docs.
 extern int32_t AutoMapXPos;
 
-/// address 0x4B84C0
+/// address: 0x4B84C0
 ///
 /// TODO: add docs.
 extern int32_t AutoMapYPos;
 
-/// address 0x4B84C4
+/// address: 0x4B84C4
 ///
 /// TODO: add docs.
 ///
@@ -90,7 +90,7 @@ extern int32_t AutoMapYPos;
 /// PSX def: int AMPlayerX
 extern int32_t AMPlayerX;
 
-/// address 0x4B84C8
+/// address: 0x4B84C8
 ///
 /// TODO: add docs.
 ///

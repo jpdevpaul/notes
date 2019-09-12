@@ -43,7 +43,7 @@ extern HMODULE hDsound_dll;
 /// music_track specifies the current music track playing.
 extern void *music_track;
 
-/// address: 0x457278
+/// address: 0x69F100
 ///
 /// DSB is a audio channel used for playback of sounds.
 extern IDirectSoundBuffer *DSB;
