@@ -26,11 +26,12 @@ bool32_t __fastcall spell_can_cast(int player_num, int spell_id, int spell_type,
 
 /// address: 0x4575D5
 ///
-/// spell_cast casts the given spell.
+/// CastSpell casts the given spell ID of the specified spell level from the
+/// source to the destination coordinates.
 ///
 /// PSX ref: 0x80077538
 /// PSX def: void CastSpell__Fiiiiiiii(int id, int spl, int sx, int sy, int dx, int dy, int caster, int spllvl)
-void __fastcall spell_cast(int player_num, spell_id spell_id, int x, int y, int target_x, int target_y, int target_num, int spell_lvl);
+void __fastcall CastSpell(int player_num, spell_id spell_id, int x, int y, int target_x, int target_y, int target_num, int spell_lvl);
 
 /// address: 0x4576B1
 ///
