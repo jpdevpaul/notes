@@ -8,10 +8,10 @@ Each global variable in the uninitialized data section has been categorised base
 | [appfat.cpp](appfat.h)     | `0x4B7934`    | `0x4B7A3F`  | ![100%](http://progressed.io/bar/100 "(268/268 bytes)")         |
 | [automap.cpp](automap.h)   | `0x4B7A40`    | `0x4B84CB`  | ![100%](http://progressed.io/bar/100 "(2700/2700 bytes)")       |
 | [control.cpp](control.h)   | `0x4B84CC`    | `0x4B8C9B`  | ![2%](http://progressed.io/bar/2 "(56/2000 bytes)")             |
-| [cursor.cpp](cursor.h)     | `0x4B8C9C`    | `0x4B8CD7`  | ![6%](http://progressed.io/bar/6 "(4/60 bytes)")                |
+| [cursor.cpp](cursor.h)     | `0x4B8C9C`    | `0x4B8CD7`  | ![20%](http://progressed.io/bar/20 "(12/60 bytes)")             |
 | [dead.cpp](dead.h)         | `0x4B8CD8`    | `0x4BD2FB`  | ![100%](http://progressed.io/bar/100 "(17956/17956 bytes)")     |
 | [debug.cpp](debug.h)       | `0x4BD2FC`    | `0x525513`  | ![100%](http://progressed.io/bar/100 "(426520/426520 bytes)")   |
-| [diablo.cpp](diablo.h)     | `0x525514`    | `0x52574F`  | ![5%](http://progressed.io/bar/5 "(32/572 bytes)")              |
+| [diablo.cpp](diablo.h)     | `0x525514`    | `0x52574F`  | ![29%](http://progressed.io/bar/29 "(169/572 bytes)")           |
 | [doom.cpp](doom.h)         | `0x525750`    | `0x525763`  | ![20%](http://progressed.io/bar/20 "(4/20 bytes)")              |
 | [drlg_l1.cpp](drlg_l1.h)   | `0x525764`    | `0x5276C7`  | ![100%](http://progressed.io/bar/100 "(8036/8036 bytes)")       |
 | [drlg_l2.cpp](drlg_l2.h)   | `0x5276C8`    | `0x528377`  | ![0%](http://progressed.io/bar/0 "(0/3248 bytes)")              |
@@ -42,7 +42,7 @@ Each global variable in the uninitialized data section has been categorised base
 | [mpqapi.cpp](mpqapi.h)     | `0x659B00`    | `0x65AB17`  | ![100%](http://progressed.io/bar/100 "(4120/4120 bytes)")       |
 | [msg.cpp](msg.h)           | `0x65AB18`    | `0x67619F`  | ![99%](http://progressed.io/bar/99 "(112203/112264 bytes)")     |
 | [msgcmd.cpp](msgcmd.h)     | `0x6761A0`    | `0x6761B7`  | ![16%](http://progressed.io/bar/16 "(4/24 bytes)")              |
-| [multi.cpp](multi.h)       | `0x6761B8`    | `0x6796FF`  | ![39%](http://progressed.io/bar/39 "(5325/13640 bytes)")        |
+| [multi.cpp](multi.h)       | `0x6761B8`    | `0x6796FF`  | ![39%](http://progressed.io/bar/39 "(5337/13640 bytes)")        |
 | [nthread.cpp](nthread.h)   | `0x679700`    | `0x679767`  | ![3%](http://progressed.io/bar/3 "(4/104 bytes)")               |
 | [objects.cpp](objects.h)   | `0x679768`    | `0x67D7C7`  | ![98%](http://progressed.io/bar/98 "(16300/16480 bytes)")       |
 | [pack.cpp](pack.h)         | `0x67D7C8`    | `0x67D7CB`  | ![100%](http://progressed.io/bar/100 "(4/4 bytes)")             |

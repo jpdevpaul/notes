@@ -108,7 +108,7 @@ extern int8_t dPreLight[112][112];
 ///
 /// PSX ref (SLPS-01416): 0x8011C148
 /// PSX def: char TransVal
-extern int8_t TransVal; // alias: transparency_index
+extern int8_t TransVal; // alias: transparency_category
 
 /// address: 0x5A5594
 ///

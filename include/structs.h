@@ -762,6 +762,27 @@ typedef struct {
 	char *patch_mpq_path;
 } FileInfo;
 
+/// GameData holds the initial state of a network game.
+///
+/// PSX def:
+///    typedef struct _gamedata {
+///       unsigned long dwSeed;
+///       unsigned char bDiff;
+///    } _gamedata;
+///
+/// size = 0x8
+typedef struct {
+	/// offset: 0000 (4 bytes)
+	///
+	/// Initial game seed.
+	uint32_t seed;
+	/// offset: 0004 (4 bytes)
+	///
+	/// Difficulty level of the game.
+	uint8_t difficulty;
+	// padding (3 bytes)
+} GameData;
+
 /// GossipData specifies the speech IDs for the gossip related to each quest.
 ///
 /// size = 0x40

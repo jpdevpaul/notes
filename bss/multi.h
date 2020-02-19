@@ -11,10 +11,25 @@ extern char game_pass[128];
 /// files.
 extern Hero heroes[4];
 
+/// address: 0x678618
+///
+/// is_peer specifies for each player ID whether the player is a connected peer
+/// of the network game (as opposed to the host of the game). Once a peer
+/// disconnects from the network game their state is set to false.
+bool8_t is_peer[4];
+
 /// address: 0x678620
 ///
 /// +Infinity after initialization of multi.cpp.
 extern float multi_cpp_init_value;
+
+/// address: 0x678638
+///
+/// sgGameInitInfo holds the initial state of a network game.
+///
+/// PSX ref (SLPS-01416): 0x8011C868,
+/// PSX def: struct _gamedata sgGameInitInfo
+extern GameData sgGameInitInfo; // alias: game_init_info
 
 /// address: 0x679660
 ///

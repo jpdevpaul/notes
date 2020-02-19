@@ -14,6 +14,8 @@ typedef HANDLE HINSTANCE;
 typedef HANDLE HPALETTE;
 typedef HINSTANCE HMODULE;
 typedef int32_t HRESULT;
+typedef int BOOL;
+typedef BYTE BOOLEAN;
 /// size of pointer.
 typedef uint32_t LRESULT;
 typedef unsigned int UINT;
