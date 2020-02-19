@@ -2,19 +2,26 @@
 
 /// address: 0x452831
 ///
-/// restrict_is_os_supported reports whether the OS is Windows 2000 or newer.
-bool32_t restrict_is_os_supported();
+/// SystemSupported reports whether the OS is Windows 2000 or newer.
+///
+/// Return value:
+///    * ret: the OS is Windows 2000 or newer
+bool32_t SystemSupported(); // alias: restrict_is_os_supported
 
 /// address: 0x452885
 ///
-/// restrict_check_win_dir_write_access checks whether the process has write
-/// access to the windows directory. A return value of false states that the
-/// process has write access.
-bool32_t restrict_check_win_dir_write_access();
+/// RestrictedTest reports whether the process is restricted from writing to the
+/// Windows directory.
+///
+/// Return value:
+///    * ret: the process is restricted from writing to the Windows directory.
+bool32_t RestrictedTest(); // alias: restrict_check_win_dir_write_access
 
 /// address: 0x4528F7
 ///
-/// restrict_check_game_dir_write_access checks whether the process has write
-/// access to the game directory. A return value of false states that the
-/// process has write access.
-bool32_t restrict_check_game_dir_write_access();
+/// ReadOnlyTest reports whether the process has only read access to the game
+/// directory.
+///
+/// Return value:
+///    * ret: the process has only read access to the game directory.
+bool32_t ReadOnlyTest(); // alias: restrict_check_game_dir_write_access
