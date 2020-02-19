@@ -1,3 +1,5 @@
+#include "types.h"
+
 /// address: 0x430FDF
 ///
 /// j_monster_cpp_init initializes the C++ runtime of monster.cpp.
@@ -10,7 +12,13 @@ void monster_cpp_init();
 
 /// address: 0x430FEF
 ///
-/// TODO: add documentation.
+/// InitMonsterTRN initializes the colour translations of the given monster
+/// type.
+///
+/// Parameters:
+///    * monst:       index into Monsters array
+///    * has_special: monster has special attack
+void __fastcall InitMonsterTRN(int monst, bool32_t has_special);
 
 /// address: 0x43107B
 ///

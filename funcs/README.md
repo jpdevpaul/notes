@@ -25,7 +25,7 @@ Each function has been categorised based on their original source file, as summa
 | [encrypt.cpp](encrypt.h)   | `0x415F43`    | `0x4161FB`  | ![100%](http://progressed.io/bar/100 "(8/8 functions)")   |
 | [engine.cpp](engine.h)     | `0x4161FC`    | `0x41804D`  | ![66%](http://progressed.io/bar/66 "(38/57 functions)")   |
 | [error.cpp](error.h)       | `0x41804E`    | `0x4182AC`  | ![100%](http://progressed.io/bar/100 "(3/3 functions)")   |
-| [fault.cpp](fault.h)       | `0x4182AD`    | `0x418865`  | ![16%](http://progressed.io/bar/16 "(2/12 functions)")    |
+| [fault.cpp](fault.h)       | `0x4182AD`    | `0x418865`  | ![58%](http://progressed.io/bar/58 "(7/12 functions)")    |
 | [gamemenu.cpp](gamemenu.h) | `0x418866`    | `0x418C8A`  | ![0%](http://progressed.io/bar/0 "(0/23 functions)")      |
 | [gendung.cpp](gendung.h)   | `0x418C8B`    | `0x419E8A`  | ![36%](http://progressed.io/bar/36 "(8/22 functions)")    |
 | [gmenu.cpp](gmenu.h)       | `0x419E8B`    | `0x41A552`  | ![20%](http://progressed.io/bar/20 "(4/20 functions)")    |
@@ -40,7 +40,7 @@ Each function has been categorised based on their original source file, as summa
 | [mainmenu.cpp](mainmenu.h) | `0x427E0E`    | `0x428055`  | ![30%](http://progressed.io/bar/30 "(3/10 functions)")    |
 | [minitext.cpp](minitext.h) | `0x428056`    | `0x4283BF`  | ![100%](http://progressed.io/bar/100 "(6/6 functions)")   |
 | [missiles.cpp](missiles.h) | `0x4283C0`    | `0x430FDE`  | ![2%](http://progressed.io/bar/2 "(3/133 functions)")     |
-| [monster.cpp](monster.h)   | `0x430FDF`    | `0x43AD32`  | ![1%](http://progressed.io/bar/1 "(2/147 functions)")     |
+| [monster.cpp](monster.h)   | `0x430FDF`    | `0x43AD32`  | ![2%](http://progressed.io/bar/2 "(3/147 functions)")     |
 | [movie.cpp](movie.h)       | `0x43AD33`    | `0x43AE8F`  | ![100%](http://progressed.io/bar/100 "(4/4 functions)")   |
 | [mpqapi.cpp](mpqapi.h)     | `0x43AE90`    | `0x43BBA3`  | ![100%](http://progressed.io/bar/100 "(29/29 functions)") |
 | [msg.cpp](msg.h)           | `0x43BBA4`    | `0x43F848`  | ![19%](http://progressed.io/bar/19 "(26/133 functions)")  |
