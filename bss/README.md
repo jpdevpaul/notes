@@ -30,13 +30,13 @@ Each global variable in the uninitialized data section has been categorised base
 | [init.cpp](init.h)         | `0x634968`    | `0x634CA7`  | ![100%](http://progressed.io/bar/100 "(832/832 bytes)")         |
 | [interfac.cpp](interfac.h) | `0x634CA8`    | `0x634CB7`  | ![50%](http://progressed.io/bar/50 "(8/16 bytes)")              |
 | [inv.cpp](inv.h)           | `0x634CB8`    | `0x634CC3`  | ![100%](http://progressed.io/bar/100 "(12/12 bytes)")           |
-| [items.cpp](items.h)       | `0x634CC4`    | `0x6414E7`  | ![91%](http://progressed.io/bar/91 "(47104/51236 bytes)")       |
-| [lighting.cpp](lighting.h) | `0x6414E8`    | `0x646A2B`  | ![15%](http://progressed.io/bar/15 "(3333/21828 bytes)")        |
+| [items.cpp](items.h)       | `0x634CC4`    | `0x6414E7`  | ![94%](http://progressed.io/bar/94 "(48636/51236 bytes)")       |
+| [lighting.cpp](lighting.h) | `0x6414E8`    | `0x646A2B`  | ![15%](http://progressed.io/bar/15 "(3377/21828 bytes)")        |
 | [loadsave.cpp](loadsave.h) | `0x646A2C`    | `0x646A2F`  | ![100%](http://progressed.io/bar/100 "(4/4 bytes)")             |
 | [log.cpp](log.h)           | `0x646A30`    | `0x646CDF`  | ![0%](http://progressed.io/bar/0 "(4/688 bytes)")               |
 | [mainmenu.cpp](mainmenu.h) | `0x646CE0`    | `0x646CF3`  | ![20%](http://progressed.io/bar/20 "(4/20 bytes)")              |
 | [minitext.cpp](minitext.h) | `0x646CF4`    | `0x646D17`  | ![0%](http://progressed.io/bar/0 "(0/36 bytes)")                |
-| [missiles.cpp](missiles.h) | `0x646D18`    | `0x64CCDF`  | ![89%](http://progressed.io/bar/89 "(22000/24520 bytes)")       |
+| [missiles.cpp](missiles.h) | `0x646D18`    | `0x64CCDF`  | ![93%](http://progressed.io/bar/93 "(23004/24520 bytes)")       |
 | [monster.cpp](monster.h)   | `0x64CCE0`    | `0x659AF3`  | ![98%](http://progressed.io/bar/98 "(51736/52756 bytes)")       |
 | [movie.cpp](movie.h)       | `0x659AF4`    | `0x659AFF`  | ![100%](http://progressed.io/bar/100 "(12/12 bytes)")           |
 | [mpqapi.cpp](mpqapi.h)     | `0x659B00`    | `0x65AB17`  | ![100%](http://progressed.io/bar/100 "(4120/4120 bytes)")       |
@@ -56,7 +56,7 @@ Each global variable in the uninitialized data section has been categorised base
 | [scrollrt.cpp](scrollrt.h) | `0x69BEF8`    | `0x69EFAF`  | ![100%](http://progressed.io/bar/100 "(12472/12472 bytes)")     |
 | [sha1.cpp](sha1.h)         | `0x69EFB0`    | `0x69F0C3`  | ![100%](http://progressed.io/bar/100 "(276/276 bytes)")         |
 | [sound.cpp](sound.h)       | `0x69F0C4`    | `0x69F107`  | ![100%](http://progressed.io/bar/100 "(68/68 bytes)")           |
-| [stores.cpp](stores.h)     | `0x69F108`    | `0x6AA707`  | ![91%](http://progressed.io/bar/91 "(42696/46592 bytes)")       |
+| [stores.cpp](stores.h)     | `0x69F108`    | `0x6AA707`  | ![91%](http://progressed.io/bar/91 "(42700/46592 bytes)")       |
 | [sync.cpp](sync.h)         | `0x6AA708`    | `0x6AAA37`  | ![0%](http://progressed.io/bar/0 "(0/816 bytes)")               |
 | [themes.cpp](themes.h)     | `0x6AAA38`    | `0x6AAC13`  | ![84%](http://progressed.io/bar/84 "(400/476 bytes)")           |
 | [tmsg.cpp](tmsg.h)         | `0x6AAC14`    | `0x6AAC17`  | ![100%](http://progressed.io/bar/100 "(4/4 bytes)")             |

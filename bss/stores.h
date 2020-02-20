@@ -2,72 +2,81 @@
 
 /// address: 0x69F10C
 ///
-/// ndialogue_lines specifies the number of lines in the active store owner
-/// dialogue.
+/// storenumh specifies the number of lines in the active store owner dialogue.
 ///
-/// PSX ref: 0x8011C8A8
+/// PSX ref (easy-as-pie): 0x8012C1DC
 /// PSX def: int storenumh
-extern int ndialogue_lines;
+extern int storenumh; // alias: ndialogue_lines
 
 /// address: 0x69F118
 ///
-/// wirt_item contains the item for sale by Wirt.
+/// boyitem contains the item for sale by Wirt.
 ///
-/// PSX ref: 0x800E0AF8
-/// PSX def: ItemStruct _boyitem[2]
-extern Item wirt_item;
+/// PSX ref (easy-as-pie): 0x800E58C4
+/// PSX def: struct ItemStruct boyitem
+extern Item boyitem; // alias: wirt_item
 
 /// address: 0x69F290
 ///
-/// griswold_premium_items contains the premium items for sale by Griswold.
+/// premiumitem contains the premium items for sale by Griswold.
 ///
-/// PSX ref: 0x800DF508
-/// PSX def: ItemStruct _premiumitem[2][6]
-extern Item griswold_premium_items[6];
+/// PSX ref (easy-as-pie): 0x800E4954
+/// PSX def: struct ItemStruct premiumitem[6]
+extern Item premiumitem[6]; // alias: griswold_premium_items
+
+/// address: 0x69FB34
+///
+/// premiumlevel determines the level of the premium items sold by Griswold.
+///
+/// PSX ref (easy-as-pie): 0x8012B514
+/// PSX def: int premiumlevel
+extern int premiumlevel; // alias: griswold_premium_level
 
 /// address: 0x6A09F0
 ///
-/// player_items contains copies of player items for use by store owners in
+/// storehold contains copies of player items for use by store owners in
 /// dialogues.
 ///
-/// PSX ref: 0x800E1D88
-/// PSX def: ItemStruct storehold[48]
-extern Item player_items[48];
+/// PSX ref (easy-as-pie): 0x800E65D4
+/// PSX def: struct ItemStruct storehold[48]
+extern Item storehold[48]; // alias: player_items
 
 /// address: 0x6A4EF8
 ///
-/// adria_items contains the items for sale by Adria.
+/// witchitem contains the items for sale by Adria.
 ///
-/// PSX ref: 0x800DFA18
-/// PSX def: ItemStruct _witchitem[2][20]
-extern Item adria_items[20];
+/// PSX ref (easy-as-pie): 0x800E4CE4
+/// PSX def: struct ItemStruct witchitem[20]
+extern Item witchitem[20]; // alias: adria_items
 
 /// address: 0x6A6BBC
 ///
-/// ngriswold_premium_items specifies the number of premium items sold by
-/// Griswold.
-extern int ngriswold_premium_items;
+/// numpremium specifies the number of premium items sold by Griswold.
+///
+/// PSX ref (easy-as-pie): 0x8012B510
+/// PSX def: int numpremium
+extern int numpremium; // alias: ngriswold_premium_items
 
 /// address: 0x6A6BC0
 ///
-/// pepin_items contains the items for sale by Pepin.
+/// healitem contains the items for sale by Pepin.
 ///
-/// PSX ref: 0x800E0BD0
-/// PSX def: ItemStruct _healitem[2][20]
-extern Item pepin_items[20];
+/// PSX ref (easy-as-pie): 0x800E59F4
+/// PSX def: struct ItemStruct healitem[20]
+extern Item healitem[20]; // alias: pepin_items
 
 /// address: 0x6A8880
 ///
-/// item_base_gold represents the base gold item.
+/// golditem represents the base gold item.
 ///
-/// PSX ref: 0x800E1CB0
-/// PSX def: ItemStruct _golditem[2]
-extern Item item_base_gold;
+/// PSX ref (easy-as-pie): 0x800E595C
+/// PSX def: struct ItemStruct golditem
+extern Item golditem; // alias: item_base_gold
 
 /// address: 0x6A8A40
 ///
-/// griswold_basic_items contains the basic items for sale by Griswold.
+/// smithitem contains the basic items for sale by Griswold.
 ///
-/// PSX ref: 0x800DE428
-/// PSX def: ItemStruct _smithitem[2][20]
-extern Item griswold_basic_items[20];
+/// PSX ref (easy-as-pie): 0x800E3D74
+/// PSX def: struct ItemStruct smithitem[20]
+extern Item smithitem[20]; // alias: griswold_basic_items

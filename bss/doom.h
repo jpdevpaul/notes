@@ -2,4 +2,4 @@
 ///
 /// quest_doom_state tracks the progress of the Stars, after one hour (36000
 /// doom state ticks) doom is inevitable.
-extern int QuestDoomState; // alias: quest_doom_state
+extern int DoomQuestState;
