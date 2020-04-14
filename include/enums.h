@@ -2993,7 +2993,7 @@ typedef enum {
 	TALK_ID_GRISWOLD_BUY_PREMIUM      = 18,
 	TALK_ID_GOSSIP                    = 19,
 	TALK_ID_CAIN_SHOW_IDENTIFIED_ITEM = 20,
-	TALK_ID_ODGEN                     = 21,
+	TALK_ID_OGDEN                     = 21,
 	TALK_ID_FARNHAM                   = 22,
 	TALK_ID_GILLIAN                   = 23,
 } talk_id;

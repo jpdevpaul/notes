@@ -783,44 +783,6 @@ typedef struct {
 	// padding (3 bytes)
 } GameData;
 
-/// GossipData specifies the speech IDs for the gossip related to each quest.
-///
-/// size = 0x40
-typedef struct {
-	/// offset: 0000 (4 bytes)
-	speech_id the_magic_rock : 32;
-	/// offset: 0004 (4 bytes)
-	speech_id black_mushroom : 32;
-	/// offset: 0008 (4 bytes)
-	speech_id gharbad_the_weak : 32;
-	/// offset 000C (4 bytes)
-	speech_id zhar_the_mad : 32;
-	/// offset: 0010 (4 bytes)
-	speech_id lachdanan : 32;
-	/// offset: 0014 (4 bytes)
-	speech_id diablo : 32;
-	/// offset: 0018 (4 bytes)
-	speech_id the_butcher : 32;
-	/// offset 001C (4 bytes)
-	speech_id ogdens_sign : 32;
-	/// offset: 0020 (4 bytes)
-	speech_id halls_of_the_blind : 32;
-	/// offset: 0024 (4 bytes)
-	speech_id valor : 32;
-	/// offset: 0028 (4 bytes)
-	speech_id anvil_of_fury : 32;
-	/// offset 002C (4 bytes)
-	speech_id warlord_of_blood : 32;
-	/// offset: 0030 (4 bytes)
-	speech_id the_curse_of_king_leoric : 32;
-	/// offset: 0034 (4 bytes)
-	speech_id poisoned_water_supply : 32;
-	/// offset: 0038 (4 bytes)
-	speech_id the_chamber_of_bone : 32;
-	/// offset 003C (4 bytes)
-	speech_id archbishop_lazarus : 32;
-} GossipData;
-
 /// A HashEntry is an MPQ hash table entry.
 ///
 /// size = 0x10
@@ -2533,6 +2495,44 @@ typedef struct {
 	/// offset: 0010 (4 bytes)
 	char *name;
 } QuestData;
+
+/// QuestSpeechData specifies the speech IDs of a given towner for each quest.
+///
+/// size = 0x40
+typedef struct {
+	/// offset: 0000 (4 bytes)
+	speech_id the_magic_rock : 32;
+	/// offset: 0004 (4 bytes)
+	speech_id black_mushroom : 32;
+	/// offset: 0008 (4 bytes)
+	speech_id gharbad_the_weak : 32;
+	/// offset 000C (4 bytes)
+	speech_id zhar_the_mad : 32;
+	/// offset: 0010 (4 bytes)
+	speech_id lachdanan : 32;
+	/// offset: 0014 (4 bytes)
+	speech_id diablo : 32;
+	/// offset: 0018 (4 bytes)
+	speech_id the_butcher : 32;
+	/// offset 001C (4 bytes)
+	speech_id ogdens_sign : 32;
+	/// offset: 0020 (4 bytes)
+	speech_id halls_of_the_blind : 32;
+	/// offset: 0024 (4 bytes)
+	speech_id valor : 32;
+	/// offset: 0028 (4 bytes)
+	speech_id anvil_of_fury : 32;
+	/// offset 002C (4 bytes)
+	speech_id warlord_of_blood : 32;
+	/// offset: 0030 (4 bytes)
+	speech_id the_curse_of_king_leoric : 32;
+	/// offset: 0034 (4 bytes)
+	speech_id poisoned_water_supply : 32;
+	/// offset: 0038 (4 bytes)
+	speech_id the_chamber_of_bone : 32;
+	/// offset 003C (4 bytes)
+	speech_id archbishop_lazarus : 32;
+} QuestSpeechData;
 
 /// Rect specifies a rectangluar area of the map.
 ///

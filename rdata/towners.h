@@ -10,4 +10,4 @@
 ///
 /// PSX ref (SLPS-01416): 0x801112CC
 /// PSX def: int snSFX[3][3]
-extern sfx_id snSFX[3][3]; // alias: cow_sfx_id_from_class
+extern sfx_id snSFX[3][3]; // alias: cow_sfx_ids_from_class

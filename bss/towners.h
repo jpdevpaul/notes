@@ -2,8 +2,11 @@
 
 /// address: 0x6AAC18
 ///
-/// has_greeted specifies whether an NPC has recently greeted the player.
-extern bool32_t has_greeted;
+/// storeflag reports whether the towner most recently greeted has a store.
+///
+/// PSX ref: 0x8011B820
+/// PSX def: BOOL storeflag
+extern bool32_t storeflag; // alias: has_store
 
 /// address: 0x6AAC1C
 ///

@@ -58,7 +58,7 @@ extern int cowoffy[8]; // alias: cow_y_delta_from_direction
 ///
 /// PSX ref (SLPS-01416): 0x800CFBC0
 /// PSX def: int Qtalklist[11][16]
-extern GossipData Qtalklist[10]; // alias: gossip_data
+extern QuestSpeechData Qtalklist[10]; // alias: quest_speech_data
 
 /// address: 0x4B2DC0
 ///

@@ -4,7 +4,7 @@
 ///
 /// minitext_cleanup releases the resources of the quest textbox.
 ///
-/// PSX ref: 0x8004D95C
+/// PSX ref (SLPS-01416): 0x8004D95C
 /// PSX def: void FreeQuestText__Fv()
 void minitext_cleanup();
 
@@ -12,7 +12,7 @@ void minitext_cleanup();
 ///
 /// minitext_init loads the resources of the quest textbox.
 ///
-/// PSX ref: 0x8004D964
+/// PSX ref (SLPS-01416): 0x8004D964
 /// PSX def: void InitQuestText__Fv()
 void minitext_init();
 
@@ -20,7 +20,7 @@ void minitext_init();
 ///
 /// minitext_start_speech starts the given quest speech.
 ///
-/// PSX ref: 0x8004DC78
+/// PSX ref (SLPS-01416): 0x8004DC78
 /// PSX def: void InitQTextMsg__Fi(int m)
 void __fastcall minitext_start_speech(speech_id speech_id);
 

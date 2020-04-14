@@ -353,7 +353,7 @@ extern int8_t dItem[112][112]; // alias: item_num_map
 /// PSX def: unsigned char setlvlnum
 extern quest_level setlvlnum; // alias: quest_lvl
 
-/// address: 0x5CCB10
+/// address: 0x5CCB14
 ///
 /// level_frame_sizes specifies the size of each frame of the level cel (e.g.
 /// "levels/l1data/l1.cel"). Indexed by frame numbers starting at 1.

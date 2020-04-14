@@ -44,8 +44,9 @@ void __fastcall setmaps_load_transparency(char *dun_path);
 
 /// address: 0x456819
 ///
-/// setmaps_load_quest_level loads the map of the active quest level.
+/// LoadSetMap loads the set map of the current set level from the corresponding
+/// DUN file.
 ///
 /// PSX ref: 0x801556A8
 /// PSX def: void LoadSetMap__Fv()
-void setmaps_load_quest_level();
+void LoadSetMap(); // alias: setmaps_load_quest_level
