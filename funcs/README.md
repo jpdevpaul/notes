@@ -27,12 +27,12 @@ Each function has been categorised based on their original source file, as summa
 | [error.cpp](error.h)       | `0x41804E`    | `0x4182AC`  | ![100%](https://progress-bar.dev/100/ "(3/3 functions)")   |
 | [fault.cpp](fault.h)       | `0x4182AD`    | `0x418865`  | ![58%](https://progress-bar.dev/58/ "(7/12 functions)")    |
 | [gamemenu.cpp](gamemenu.h) | `0x418866`    | `0x418C8A`  | ![0%](https://progress-bar.dev/0/ "(0/23 functions)")      |
-| [gendung.cpp](gendung.h)   | `0x418C8B`    | `0x419E8A`  | ![36%](https://progress-bar.dev/36/ "(8/22 functions)")    |
+| [gendung.cpp](gendung.h)   | `0x418C8B`    | `0x419E8A`  | ![45%](https://progress-bar.dev/45/ "(10/22 functions)")   |
 | [gmenu.cpp](gmenu.h)       | `0x419E8B`    | `0x41A552`  | ![20%](https://progress-bar.dev/20/ "(4/20 functions)")    |
 | [help.cpp](help.h)         | `0x41A553`    | `0x41A7B2`  | ![100%](https://progress-bar.dev/100/ "(6/6 functions)")   |
 | [init.cpp](init.h)         | `0x41A7B3`    | `0x41B18F`  | ![63%](https://progress-bar.dev/63/ "(12/19 functions)")   |
 | [interfac.cpp](interfac.h) | `0x41B190`    | `0x41B813`  | ![100%](https://progress-bar.dev/100/ "(9/9 functions)")   |
-| [inv.cpp](inv.h)           | `0x41B814`    | `0x41F095`  | ![10%](https://progress-bar.dev/10/ "(4/40 functions)")    |
+| [inv.cpp](inv.h)           | `0x41B814`    | `0x41F095`  | ![12%](https://progress-bar.dev/12/ "(5/40 functions)")    |
 | [items.cpp](items.h)       | `0x41F096`    | `0x425442`  | ![12%](https://progress-bar.dev/12/ "(14/110 functions)")  |
 | [lighting.cpp](lighting.h) | `0x425443`    | `0x426563`  | ![0%](https://progress-bar.dev/0/ "(0/24 functions)")      |
 | [loadsave.cpp](loadsave.h) | `0x426564`    | `0x4279F1`  | ![34%](https://progress-bar.dev/34/ "(11/32 functions)")   |

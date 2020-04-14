@@ -1,3 +1,5 @@
+#include "types.h"
+
 /// address: 0x41B814
 ///
 /// inv_cleanup releases the resources used by the inventory.
@@ -148,7 +150,12 @@ void inv_draw_belt();
 
 /// address: 0x41ED29
 ///
-/// TODO: add documentation.
+/// PSX ref (SLPS-01416): 0x80160470
+/// PSX def: unsigned char UseInvItem__Fii(int pnum, int cii)
+///
+/// UseInvItem uses the specified item of the given player.
+// TODO: define enum for player_item_num
+bool32_t UseInvItem(int player_num, int player_item_num); // alias: inv_use_item
 
 /// address: 0x41EFA1
 ///
