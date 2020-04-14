@@ -35,7 +35,7 @@ Each global variable in the uninitialized data section has been categorised base
 | [loadsave.cpp](loadsave.h) | `0x646A2C`    | `0x646A2F`  | ![100%](https://progress-bar.dev/100/ "(4/4 bytes)")             |
 | [log.cpp](log.h)           | `0x646A30`    | `0x646CDF`  | ![0%](https://progress-bar.dev/0/ "(4/688 bytes)")               |
 | [mainmenu.cpp](mainmenu.h) | `0x646CE0`    | `0x646CF3`  | ![20%](https://progress-bar.dev/20/ "(4/20 bytes)")              |
-| [minitext.cpp](minitext.h) | `0x646CF4`    | `0x646D17`  | ![0%](https://progress-bar.dev/0/ "(0/36 bytes)")                |
+| [minitext.cpp](minitext.h) | `0x646CF4`    | `0x646D17`  | ![2%](https://progress-bar.dev/2/ "(1/36 bytes)")                |
 | [missiles.cpp](missiles.h) | `0x646D18`    | `0x64CCDF`  | ![93%](https://progress-bar.dev/93/ "(23004/24520 bytes)")       |
 | [monster.cpp](monster.h)   | `0x64CCE0`    | `0x659AF3`  | ![98%](https://progress-bar.dev/98/ "(51736/52756 bytes)")       |
 | [movie.cpp](movie.h)       | `0x659AF4`    | `0x659AFF`  | ![100%](https://progress-bar.dev/100/ "(12/12 bytes)")           |
@@ -52,7 +52,7 @@ Each global variable in the uninitialized data section has been categorised base
 | [player.cpp](player.h)     | `0x686430`    | `0x69B7CF`  | ![99%](https://progress-bar.dev/99/ "(86884/86944 bytes)")       |
 | [plrmsg.cpp](plrmsg.h)     | `0x69B7D0`    | `0x69BC97`  | ![0%](https://progress-bar.dev/0/ "(0/1224 bytes)")              |
 | [portal.cpp](portal.h)     | `0x69BC98`    | `0x69BCFF`  | ![100%](https://progress-bar.dev/100/ "(104/104 bytes)")         |
-| [quests.cpp](quests.h)     | `0x69BD00`    | `0x69BEF7`  | ![80%](https://progress-bar.dev/80/ "(404/504 bytes)")           |
+| [quests.cpp](quests.h)     | `0x69BD00`    | `0x69BEF7`  | ![80%](https://progress-bar.dev/80/ "(408/504 bytes)")           |
 | [scrollrt.cpp](scrollrt.h) | `0x69BEF8`    | `0x69EFAF`  | ![100%](https://progress-bar.dev/100/ "(12472/12472 bytes)")     |
 | [sha1.cpp](sha1.h)         | `0x69EFB0`    | `0x69F0C3`  | ![100%](https://progress-bar.dev/100/ "(276/276 bytes)")         |
 | [sound.cpp](sound.h)       | `0x69F0C4`    | `0x69F107`  | ![100%](https://progress-bar.dev/100/ "(68/68 bytes)")           |

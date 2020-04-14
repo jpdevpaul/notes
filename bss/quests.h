@@ -1,5 +1,13 @@
 #include "types.h"
 
+/// address: 0x69BD04
+///
+///    PSX ref (SLPS-01416): 0x8011BA29
+///    PSX def: BOOL questlog
+///
+/// questlog specifies whether to show the quest log window.
+extern bool32_t questlog; // alias: show_quest_log
+
 /// address: 0x69BD08
 ///
 /// quest_cel points to the contents of "data/quest.cel".
