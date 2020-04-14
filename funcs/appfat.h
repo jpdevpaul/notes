@@ -52,7 +52,8 @@ void __fastcall app_debug_msg(const char *pszFmt, va_list args); // alias: MsgBo
 /// Address in diablo.exe (v1.09b): 0x4019C7
 void pre_fatal_cleanup(); // alias: FreeDlg
 
-/// app_warning renders an in-game message box with the given text on screen.
+/// app_warning displays a warning message box based on the given formatted
+/// error message.
 ///
 ///    HF def: void __cdecl app_warning(const char *pszFmt,...)
 ///
