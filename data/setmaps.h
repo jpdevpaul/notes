@@ -2,8 +2,63 @@
 
 /// address: 0x4A208C
 ///
-/// setmap_rects specifies areas used for set maps.
-extern Rect setmap_rects[32];
+/// SkelKingTrans1 specifies transparent areas on the Skeleton King's Lair set
+/// map.
+///
+/// PSX ref (SLPS-01416): 0x8011BFC0
+/// PSX def: unsigned char SkelKingTrans1[8]
+extern Rect SkelKingTrans1[2]; // alias: setmaps_skeleton_kings_lair_trans1
+
+/// address: 0x4A2094
+///
+/// SkelKingTrans2 specifies transparent areas on the Skeleton King's Lair set
+/// map.
+///
+/// PSX ref (SLPS-01416): 0x8011BFC8
+/// PSX def: unsigned char SkelKingTrans2[8]
+extern Rect SkelKingTrans2[2]; // alias: setmaps_skeleton_kings_lair_trans2
+
+/// address: 0x4A209C
+///
+/// SkelKingTrans3 specifies transparent areas on the Skeleton King's Lair set
+/// map.
+///
+/// PSX ref (SLPS-01416): 0x800E3FC0
+/// PSX def: unsigned char SkelKingTrans3[20]
+extern Rect SkelKingTrans3[5]; // alias: setmaps_skeleton_kings_lair_trans3
+
+/// address: 0x4A20B0
+///
+/// SkelKingTrans4 specifies transparent areas on the Skeleton King's Lair set
+/// map.
+///
+/// PSX ref (SLPS-01416): 0x800E3FD4
+/// PSX def: unsigned char SkelKingTrans4[28]
+extern Rect SkelKingTrans4[7]; // alias: setmaps_skeleton_kings_lair_trans4
+
+/// address: 0x4A20CC
+///
+/// SkelChamTrans1 specifies transparent areas on the Bone Chamber set map.
+///
+/// PSX ref (SLPS-01416): 0x800E3FF0
+/// PSX def: unsigned char SkelChamTrans1[20]
+extern Rect SkelChamTrans1[5]; // alias: setmaps_bone_chamber_trans1
+
+/// address: 0x4A20E0
+///
+/// SkelChamTrans2 specifies transparent areas on the Bone Chamber set map.
+///
+/// PSX ref (SLPS-01416): 0x8011BFD0
+/// PSX def: unsigned char SkelChamTrans2[8]
+extern Rect SkelChamTrans2[2]; // alias: setmaps_bone_chamber_trans2
+
+/// address: 0x4A20E8
+///
+/// SkelChamTrans3 specifies transparent areas on the Bone Chamber set map.
+///
+/// PSX ref (SLPS-01416): 0x800E4004
+/// PSX def: unsigned char SkelChamTrans3[36]
+extern Rect SkelChamTrans3[9]; // alias: setmaps_bone_chamber_trans3
 
 /// address: 0x4A210C
 ///
