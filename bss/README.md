@@ -62,6 +62,6 @@ Each global variable in the uninitialized data section has been categorised base
 | [tmsg.cpp](tmsg.h)         | `0x6AAC14`    | `0x6AAC17`  | ![100%](https://progress-bar.dev/100/ "(4/4 bytes)")             |
 | [towners.cpp](towners.h)   | `0x6AAC18`    | `0x6ABAB7`  | ![100%](https://progress-bar.dev/100/ "(3744/3744 bytes)")       |
 | [track.cpp](track.h)       | `0x6ABAB8`    | `0x6ABAC7`  | ![100%](https://progress-bar.dev/100/ "(16/16 bytes)")           |
-| [trigs.cpp](trigs.h)       | `0x6ABAC8`    | `0x6ABB33`  | ![59%](https://progress-bar.dev/59/ "(64/108 bytes)")            |
+| [trigs.cpp](trigs.h)       | `0x6ABAC8`    | `0x6ABB33`  | ![59%](https://progress-bar.dev/59/ "(84/108 bytes)")            |
 | [wave.cpp](wave.h)         | `0x6ABB34`    | `0x6ABB37`  | ![100%](https://progress-bar.dev/100/ "(4/4 bytes)")             |
 | _crt.cpp                   | `0x6ABB38`    | `0x6ADFFF`  | N/A                                                              |
