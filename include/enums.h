@@ -75,6 +75,20 @@ typedef enum {
 	DAMAGE_TYPE_ACID      = 4,
 } damage_type;
 
+/// Dialogue IDs for error dialogues.
+typedef enum {
+	DIALOG_ID_DX_INIT_ERROR              = 104,
+	DIALOG_ID_OUT_OF_MEMORY_ERROR        = 105,
+	DIALOG_ID_FILE_NOT_FOUND_ERROR       = 106,
+	DIALOG_ID_DDRAW_DLL_NOT_FOUND_ERROR  = 107,
+	DIALOG_ID_DSOUND_DLL_NOT_FOUND_ERROR = 108,
+	DIALOG_ID_DISK_SPACE_ERROR           = 110,
+	DIALOG_ID_SWITCH_VIDEO_MODE_ERROR    = 111,
+	DIALOG_ID_INSERT_CD_ERROR            = 112,
+	DIALOG_ID_RESTRICTED_USER_ERROR      = 113,
+	DIALOG_ID_READ_ONLY_DIRECTORY_ERROR  = 114,
+} dialog_id;
+
 /// Directions.
 ///
 /// # Map layout
@@ -3019,20 +3033,6 @@ typedef enum {
 	THEME_ID_WEAPON_RACK        = 16,
 	THEME_ID_NONE               = -1,
 } theme_id;
-
-/// Template IDs for error windows.
-typedef enum {
-	TEMPLATE_ID_DX_INIT_ERROR              = 104,
-	TEMPLATE_ID_OUT_OF_MEMORY_ERROR        = 105,
-	TEMPLATE_ID_FILE_NOT_FOUND_ERROR       = 106,
-	TEMPLATE_ID_DDRAW_DLL_NOT_FOUND_ERROR  = 107,
-	TEMPLATE_ID_DSOUND_DLL_NOT_FOUND_ERROR = 108,
-	TEMPLATE_ID_DISK_SPACE_ERROR           = 110,
-	TEMPLATE_ID_SWITCH_VIDEO_MODE_ERROR    = 111,
-	TEMPLATE_ID_INSERT_CD_ERROR            = 112,
-	TEMPLATE_ID_RESTRICTED_USER_ERROR      = 113,
-	TEMPLATE_ID_READ_ONLY_DIRECTORY_ERROR  = 114,
-} template_id;
 
 /// Text colours.
 typedef enum {
